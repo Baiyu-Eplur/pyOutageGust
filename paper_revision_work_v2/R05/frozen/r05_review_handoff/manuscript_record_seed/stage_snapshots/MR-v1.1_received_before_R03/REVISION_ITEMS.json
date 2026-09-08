@@ -1,0 +1,1668 @@
+{
+  "version": "MR-v1.1",
+  "checkpoint": "R02_received_before_R03",
+  "items": [
+    {
+      "id": "MR01",
+      "title": "事件时间与天气来自后续阶段",
+      "tags": [
+        "C01",
+        "T02",
+        "T03",
+        "T07",
+        "L02",
+        "L05",
+        "L08"
+      ],
+      "locations": [
+        "D-P017",
+        "D-P039",
+        "D-P054",
+        "D-P102",
+        "A-P060"
+      ],
+      "sources": [
+        "SRC01 §2主干、§4 C01",
+        "SRC02 第3段及时间/并列条目",
+        "SRC03 §3.1及R02提示词",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "H0主E0的8,199/60,437为旧样本局部证据。R02全237,901阶段→135,025事件，代表UTC时刻改变12,886、天气小时12,018、任一天气值或缺失状态11,227；分母不同，不直接作变化率比较。step0_build_sample已读取哈希校验R02主表；step2有意停止等待R03。全量行序扰动203字段一致，15项针对性检查据报告通过；不是本环境重跑。",
+      "action": "§2新增事件时间基准和逐字段来源，天气/年月/分折/风暴归属均依规定时间重新构建。附录B写规则与并列处理。摘要、表1/3/4、所有相关图、附录系数和风暴数字登记受影响待重算。A-P060“weather predictors refer to incident onset”不能沿用为已证实旧实现。 本轮可据报告明确方法措辞为最早记录代理；记录真实生成者r02_events.py与step0入口。主文不详述审计次数，数值结果仍标H0。",
+      "story_impact": "数据重构是证据链前提；不能以旧系数能复现为输入正确证明。",
+      "release_condition": "输入层据R02报告推进完成；R03核对消费身份并修复下游，R04重估、R05复审，V检验科学主张。",
+      "english": "Weather covariates were indexed to the earliest recorded start time under the incident-level reconstruction rule. This timestamp serves as a proxy for event onset.",
+      "decision_status": "R02规则/输入/实际入口修复据报告通过；模型待R04",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR01",
+          "title": "事件时间与天气来自后续阶段",
+          "tags": [
+            "C01",
+            "T02",
+            "T03",
+            "T07",
+            "L02",
+            "L05",
+            "L08"
+          ],
+          "locations": [
+            "D-P017",
+            "D-P039",
+            "D-P054",
+            "D-P102",
+            "A-P060"
+          ],
+          "sources": [
+            "SRC01 §2主干、§4 C01",
+            "SRC02 第3段及时间/并列条目",
+            "SRC03 §3.1及R02提示词"
+          ],
+          "evidence": "H0主E0有8199/60437事件所选时间晚于最早记录；天气小时不同7810、日期不同2225，二者不是同一数量。旧代码按原行序drop_duplicates，天气按阶段开始匹配。报告转引v3_validation_pipeline.py原第64行；本环境未读其源码。",
+          "action": "§2新增事件时间基准和逐字段来源，天气/年月/分折/风暴归属均依规定时间重新构建。附录B写规则与并列处理。摘要、表1/3/4、所有相关图、附录系数和风暴数字登记受影响待重算。A-P060“weather predictors refer to incident onset”不能沿用为已证实旧实现。",
+          "story_impact": "数据重构是证据链前提；不能以旧系数能复现为输入正确证明。",
+          "release_condition": "R02实际入口修复及旧新对照；R04重估，R05基线验收；正式科学主张再经V。",
+          "english": "Weather covariates were indexed to the earliest recorded start time under the incident-level reconstruction rule. This timestamp serves as a proxy for event onset.",
+          "decision_status": "规则方向明确；候选完成时措辞待R02事实确认",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR02",
+      "title": "时区、并列和跨边界规则",
+      "tags": [
+        "C01",
+        "T02",
+        "T03",
+        "T07",
+        "L02",
+        "L05",
+        "L08"
+      ],
+      "locations": [
+        "D-P016",
+        "D-P017",
+        "D-P051",
+        "A-P013",
+        "A-P027",
+        "A-P060"
+      ],
+      "sources": [
+        "SRC02 时间/并列/35跨界事件条目",
+        "SRC03 §3.1",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "R02冻结UTC [2021-04-01T00:00Z,2024-04-01T00:00Z)，后期自2023-09-30T00:00Z；London并列对照未回传具体表值。UTC日期/年/月/时期分别变2,802/12/95/1。最早同刻24,893事件，Spatial Coordinates、Cause Code、licence_area、regulatory_year、substation、SiteFunctionalLocation六项无冲突；稳定源键raw SHA256:原始1-based行号，先赋键再排序。完整阶段先聚合、跨研究终点恢复保留。",
+      "action": "§2及附录B明确UTC分析日历、半开研究窗、记录时间代理、稳定并列规则和六字段核查范围；业务onset留空不作真值。R03读取现有UTC/London与风暴边界表，给差异、窗口时区和UNIQUE_ANY；不擅改London主口径。旧32跨时段与35跨恢复边界仍是不同历史量，不能互换。",
+      "story_impact": "明确事件范围和时间排序，避免读者把记录起始或日级分组当真实物理独立过程。",
+      "release_condition": "R03补齐既有日历表可读摘要和风暴窗口定义；如有已证实错误建立输入补丁版本；最终成员/图3/过程分析由当前产物生成。",
+      "english": "",
+      "decision_status": "UTC分析日历和并列规则已实施；业务日历与边界量化仍有待证",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR02",
+          "title": "时区、并列和跨边界规则",
+          "tags": [
+            "C01",
+            "T02",
+            "T03",
+            "T07",
+            "L02",
+            "L05",
+            "L08"
+          ],
+          "locations": [
+            "D-P016",
+            "D-P017",
+            "D-P051",
+            "A-P013",
+            "A-P027",
+            "A-P060"
+          ],
+          "sources": [
+            "SRC02 时间/并列/35跨界事件条目",
+            "SRC03 §3.1"
+          ],
+          "evidence": "所有原时间含偏移；+01为128323行、+00为109578行。最早时刻并列24893事件，6项metadata冲突为0；6字段名称未在摘要列出。35事件跨2024-04恢复边界。",
+          "action": "方法分开定义UTC绝对时间、业务日历、天气小时和研究截止；完整阶段先重构、再按事件起始纳入。附录给稳定raw身份+原行号并列规则及6字段范围。重核原32跨时段事件等H0数量；不能把不同边界的32和35当矛盾或互相替换。",
+          "story_impact": "明确事件范围和时间排序，避免读者把记录起始或日级分组当真实物理独立过程。",
+          "release_condition": "R02解析/边界/并列检查；当前源码与实际合同路径随报告补齐。",
+          "english": "",
+          "decision_status": "明确修正方向；结果部分待重算",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR03",
+      "title": "未决事件身份与非重复记录",
+      "tags": [
+        "C01",
+        "T03",
+        "L05",
+        "L11"
+      ],
+      "locations": [
+        "D-P016",
+        "D-P023",
+        "D-P029",
+        "D-P038",
+        "A-P024",
+        "A-P025",
+        "A-P027"
+      ],
+      "sources": [
+        "SRC02 两个FREP事件条目",
+        "SRC03 §3.2",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "FREP-338321-Z跨2022-11-04至2023-05-11，cause98/71、MEI59/41；旧ID聚合B4508.933333h/C1，最早天气缺失。FREP-314454-J两行共享stage1/unique_identifier但cause71/87不同。全源完全重复行0。 R02明确两个ID全阶段原因冲突为unresolved，按R01不进入主原因候选；所有源行及原ID公式C/D保留，不拆分不去重。4508.933333h不是已确认连续约188天失电。",
+      "action": "内部保留ID和完整时间线；正式方法/附录B记录身份与原因冲突、模型资格和数量。原始保留与模型纳入分开。不可称188天连续失电，不自动拆分或按unique_identifier去重。模型资格若未决则留状态，别在正文写“全部事件已验证”。 将“资格待明确”更新为报告已明确排除主原因候选；区分记录保留、公式可算、模型资格和业务身份四层。",
+      "story_impact": "同ID可计算跨度不等于真实单次停电；避免用异常长事件夸大极端恢复故事。",
+      "release_condition": "候选资格据报告已执行；R03对账确认实际消费，原ID业务关系仍需源证据，不能标科学关闭。",
+      "english": "",
+      "decision_status": "保留原始记录；两冲突ID排除主原因候选已报告实施，业务身份仍未决",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR03",
+          "title": "未决事件身份与非重复记录",
+          "tags": [
+            "C01",
+            "T03",
+            "L05",
+            "L11"
+          ],
+          "locations": [
+            "D-P016",
+            "D-P023",
+            "D-P029",
+            "D-P038",
+            "A-P024",
+            "A-P025",
+            "A-P027"
+          ],
+          "sources": [
+            "SRC02 两个FREP事件条目",
+            "SRC03 §3.2"
+          ],
+          "evidence": "FREP-338321-Z跨2022-11-04至2023-05-11，cause98/71、MEI59/41；旧ID聚合B4508.933333h/C1，最早天气缺失。FREP-314454-J两行共享stage1/unique_identifier但cause71/87不同。全源完全重复行0。",
+          "action": "内部保留ID和完整时间线；正式方法/附录B记录身份与原因冲突、模型资格和数量。原始保留与模型纳入分开。不可称188天连续失电，不自动拆分或按unique_identifier去重。模型资格若未决则留状态，别在正文写“全部事件已验证”。",
+          "story_impact": "同ID可计算跨度不等于真实单次停电；避免用异常长事件夸大极端恢复故事。",
+          "release_condition": "R02按冻结资格规则处理并记录；实质未决继续限制解释，不凭本摘要填规则。",
+          "english": "",
+          "decision_status": "明确修正方向；结果部分待重算",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR04",
+      "title": "客户影响与恢复跨度的构造及验证边界",
+      "tags": [
+        "T03",
+        "L05",
+        "C01"
+      ],
+      "locations": [
+        "D-P007",
+        "D-P023",
+        "D-P025",
+        "D-P028",
+        "D-P030",
+        "A-P003",
+        "A-P018",
+        "A-P020",
+        "A-P023",
+        "A-P025"
+      ],
+      "sources": [
+        "SRC01 §2结果变量、§3.1",
+        "SRC02 契约摘要",
+        "SRC07既有修订",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "R02全事件C完全一致，D/A最大机器浮点误差约6.82e−13/1.14e−13h。D明确映射duration_B，兼容Duration(hours)为加权A；C为非再次中断阶段客户之和，空有效集合为缺失。缺失C候选资格的nullable布尔问题已修复复测。H0的1.97及93.02/47.13不能不经当前样本计算就复用。",
+      "action": "保留公式1/2的已修正含义，明确D为记录首末跨度，阶段不等同维修动作。重算最终样本上聚合/最早客户对照；审查#10最早客户规则与#9继承天气的不同。500核对可保留作实现检查，但源语义/特殊停钟仍另证。不可用C×D替代实际客户累计负担。",
+      "story_impact": "两后果是不同工程性能维度；方法贡献以可靠定义和可追溯重构体现，不能宣称已识别全部中断负担。",
+      "release_condition": "R02输入实现已报告检查通过；R04重算当前样本统计，真实客户、停钟/视同恢复和阶段完整性仍需据证限制解释。",
+      "english": "The restoration outcome is the elapsed span between the earliest recorded start and the latest recorded end within an incident. It is distinct from customer-weighted interruption duration and customer minutes lost.",
+      "decision_status": "完整阶段C/D/A输入一致性已报告通过；业务解释仍受限",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR04",
+          "title": "客户影响与恢复跨度的构造及验证边界",
+          "tags": [
+            "T03",
+            "L05",
+            "C01"
+          ],
+          "locations": [
+            "D-P007",
+            "D-P023",
+            "D-P025",
+            "D-P028",
+            "D-P030",
+            "A-P003",
+            "A-P018",
+            "A-P020",
+            "A-P023",
+            "A-P025"
+          ],
+          "sources": [
+            "SRC01 §2结果变量、§3.1",
+            "SRC02 契约摘要",
+            "SRC07既有修订"
+          ],
+          "evidence": "全量C/A/B按原公式复现；C完全一致，A/B仅约1e-13h误差。模型D为B，兼容Duration(hours)列仍对应A。空有效客户集合记缺失。1.97、93.02/47.13和500样本核对属于H0证据。",
+          "action": "保留公式1/2的已修正含义，明确D为记录首末跨度，阶段不等同维修动作。重算最终样本上聚合/最早客户对照；审查#10最早客户规则与#9继承天气的不同。500核对可保留作实现检查，但源语义/特殊停钟仍另证。不可用C×D替代实际客户累计负担。",
+          "story_impact": "两后果是不同工程性能维度；方法贡献以可靠定义和可追溯重构体现，不能宣称已识别全部中断负担。",
+          "release_condition": "R02输入与字段检查；R04样本相关统计；特殊业务语义未解则保持明确限制。",
+          "english": "The restoration outcome is the elapsed span between the earliest recorded start and the latest recorded end within an incident. It is distinct from customer-weighted interruption duration and customer minutes lost.",
+          "decision_status": "明确修正方向；结果部分待重算",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR05",
+      "title": "天气产品、缓存、时间窗与39.4m/s叙事",
+      "tags": [
+        "C01",
+        "T02",
+        "L02"
+      ],
+      "locations": [
+        "D-P006",
+        "D-P017",
+        "D-P040",
+        "D-P103",
+        "D-P138"
+      ],
+      "sources": [
+        "SRC01 §2天气、§5输入语义",
+        "SRC02 定向天气条目",
+        "SRC03 §3.4",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "129,414可查询事件、82,621键、122,948键×小时；目录75,983文件，所需现存74,896。121,178事件四天气值完整且缓存小时/窗口通过；实际v3-only完整来源0，四模型候选均为strict。检查精确小时唯一，(t−24h,t]24唯一完整有限非负雨量小时，无nearest/补零/后续阶段替换。请求ms/mm/GMT是代码证据；响应单位metadata及历史model仍未决，全部historical_model_unresolved，无新请求。",
+      "action": "撤回未经项目来源支持的ERA5、现场peak observed和本项目必为3秒瞬时阵风等确定说法。可按实际证据称历史API提供的阵风变量/代理，明确产品来源限制。附录列数值/缓存/产品来源三种状态、floor与降水窗口、坐标处理。39.4和Eunice事件/客户/时长须修复匹配后重核；一般风工程引用不证明缓存产品。 将旧20定向行作为历史证据，现可描述R02全量检查范围；分列事件/键/文件分母，不将数值与窗口通过写为产品来源已证实。",
+      "story_impact": "阵风作为危险性代理服务事件后果分析，不能把分辨率未明的代理最低点提升为资产损伤阈值。",
+      "release_condition": "R03从既有天气表补各缺失状态与分母；R04重算风暴数值。产品若无法溯源继续限定代理来源，不以现默认产品追认。",
+      "english": "Gust covariates were obtained from the Open-Meteo historical API. The archived request configuration does not identify a specific underlying model.",
+      "decision_status": "全量缓存小时/窗口核查已报告完成；历史产品/阵风时间语义/响应单位未决",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR05",
+          "title": "天气产品、缓存、时间窗与39.4m/s叙事",
+          "tags": [
+            "C01",
+            "T02",
+            "L02"
+          ],
+          "locations": [
+            "D-P006",
+            "D-P017",
+            "D-P040",
+            "D-P103",
+            "D-P138"
+          ],
+          "sources": [
+            "SRC01 §2天气、§5输入语义",
+            "SRC02 定向天气条目",
+            "SRC03 §3.4"
+          ],
+          "evidence": "请求wind_gusts_10m、ms、GMT、未指定models；0.1度用于请求/缓存坐标。20定向行16有缓存/14文件，4缺缓存，attrs空；不能据此确定历史产品或全量缺失率。",
+          "action": "撤回未经项目来源支持的ERA5、现场peak observed和本项目必为3秒瞬时阵风等确定说法。可按实际证据称历史API提供的阵风变量/代理，明确产品来源限制。附录列数值/缓存/产品来源三种状态、floor与降水窗口、坐标处理。39.4和Eunice事件/客户/时长须修复匹配后重核；一般风工程引用不证明缓存产品。",
+          "story_impact": "阵风作为危险性代理服务事件后果分析，不能把分辨率未明的代理最低点提升为资产损伤阈值。",
+          "release_condition": "R01已有请求定位；R02全量对齐/可用性；来源若仍无法恢复需据实限定，不能用当前默认产品补历史。",
+          "english": "Gust covariates were obtained from the Open-Meteo historical API. The archived request configuration does not identify a specific underlying model.",
+          "decision_status": "撤回过强来源说法方向明确；最终描述按R02证据",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR06",
+      "title": "gap定义从全国差值改为LAD内LSOA极差",
+      "tags": [
+        "C06",
+        "T01",
+        "L01"
+      ],
+      "locations": [
+        "D-P018",
+        "D-P040",
+        "D-P041",
+        "D-T02",
+        "A-T02"
+      ],
+      "sources": [
+        "SRC01 §3.3矩阵秩/仿射残差",
+        "SRC02 gap条目",
+        "SRC03 §2/§3.3",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "H0设计矩阵26/28列满秩，实际gap对rate仿射拟合残差最大约0.161。R01报告原gap为LAD内LSOA rate极差，比例存储，.217对应21.7个百分点。 R02再次确认普通LAD为区内LSOA rate极差；Buck旧极差均值.1875只是代理，不是合并区极差。工作簿/列名仍需本地原产物定位。",
+      "action": "改正文§2.1/§2.4、表2、附录A2中“local minus national”的全部定义。区分输入比例尺度与展示百分点；不要直接乘100入模而不改系数说明。关闭“实际精确共线”猜测，保留源工作簿/列/单位的证据定位要求。 表2与附录A2须写普通定义及Buck例外，不能用通用极差定义覆盖历史均值代理。",
+      "story_impact": "从平均剥夺程度转向区内差异两个不同描述量；不把二者当独立因果社会机制或资产测量。",
+      "release_condition": "可以形成确定方向的文字修订；本地原源字段/工作表路径需在台账补齐。新系数仍待R04。",
+      "english": "The deprivation gap is the range of LSOA-level income-deprivation rates within an LAD, stored on the proportion scale.",
+      "decision_status": "普通LAD的gap定义/比例单位明确；Buck例外已确认",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR06",
+          "title": "gap定义从全国差值改为LAD内LSOA极差",
+          "tags": [
+            "C06",
+            "T01",
+            "L01"
+          ],
+          "locations": [
+            "D-P018",
+            "D-P040",
+            "D-P041",
+            "D-T02",
+            "A-T02"
+          ],
+          "sources": [
+            "SRC01 §3.3矩阵秩/仿射残差",
+            "SRC02 gap条目",
+            "SRC03 §2/§3.3"
+          ],
+          "evidence": "H0设计矩阵26/28列满秩，实际gap对rate仿射拟合残差最大约0.161。R01报告原gap为LAD内LSOA rate极差，比例存储，.217对应21.7个百分点。",
+          "action": "改正文§2.1/§2.4、表2、附录A2中“local minus national”的全部定义。区分输入比例尺度与展示百分点；不要直接乘100入模而不改系数说明。关闭“实际精确共线”猜测，保留源工作簿/列/单位的证据定位要求。",
+          "story_impact": "从平均剥夺程度转向区内差异两个不同描述量；不把二者当独立因果社会机制或资产测量。",
+          "release_condition": "可以形成确定方向的文字修订；本地原源字段/工作表路径需在台账补齐。新系数仍待R04。",
+          "english": "The deprivation gap is the range of LSOA-level income-deprivation rates within an LAD, stored on the proportion scale.",
+          "decision_status": "定义修正方向明确；原源定位待补入证据表",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR07",
+      "title": "Moran的计算层级与未知空间权重",
+      "tags": [
+        "T01",
+        "L01"
+      ],
+      "locations": [
+        "D-P018",
+        "D-T02",
+        "A-T02",
+        "A-P011"
+      ],
+      "sources": [
+        "SRC02 Moran条目及未决项",
+        "SRC03 §2/§3.3",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "R01报告Moran指LAD内LSOA剥夺聚集；具体空间权重未核实。当前A-P011写across neighbouring districts。 R02明确Buck .30为四旧区Moran简单平均，不能当新边界Moran；后续需匹配LSOA及权重重建。",
+      "action": "改为LAD内LSOA层面的聚集指标；明确不是中断残差Moran，也不识别LAD间效应。附录列来源和权重未决范围，不能猜邻接/距离/标准化方式，不能将proxy值当新LAD重算值。",
+      "story_impact": "区域量是背景描述，不能以空间术语暗示估计了网络拓扑或故障传播。",
+      "release_condition": "层级措辞按R01已报告定义修正；权重和合并地区重建分别待证。",
+      "english": "The Moran statistic summarises the spatial clustering of LSOA-level income deprivation within an LAD.",
+      "decision_status": "普通LAD计算层级明确；空间权重及Buck合并区Moran仍未决",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR07",
+          "title": "Moran的计算层级与未知空间权重",
+          "tags": [
+            "T01",
+            "L01"
+          ],
+          "locations": [
+            "D-P018",
+            "D-T02",
+            "A-T02",
+            "A-P011"
+          ],
+          "sources": [
+            "SRC02 Moran条目及未决项",
+            "SRC03 §2/§3.3"
+          ],
+          "evidence": "R01报告Moran指LAD内LSOA剥夺聚集；具体空间权重未核实。当前A-P011写across neighbouring districts。",
+          "action": "改为LAD内LSOA层面的聚集指标；明确不是中断残差Moran，也不识别LAD间效应。附录列来源和权重未决范围，不能猜邻接/距离/标准化方式，不能将proxy值当新LAD重算值。",
+          "story_impact": "区域量是背景描述，不能以空间术语暗示估计了网络拓扑或故障传播。",
+          "release_condition": "层级措辞按R01已报告定义修正；权重和合并地区重建分别待证。",
+          "english": "The Moran statistic summarises the spatial clustering of LSOA-level income deprivation within an LAD.",
+          "decision_status": "层级修正方向明确；权重不能填定",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR08",
+      "title": "Buckinghamshire历史代理及后续重建决定",
+      "tags": [
+        "T01",
+        "T11",
+        "L01",
+        "L12",
+        "C10"
+      ],
+      "locations": [
+        "D-P018",
+        "D-P041",
+        "D-P087",
+        "D-P089",
+        "A-T02",
+        "A-P013",
+        "A-T08",
+        "A-T09"
+      ],
+      "sources": [
+        "SRC02 Buckinghamshire条目/作者决定",
+        "SRC03 §3.3",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "C10标题“Buck旧区简单均值proxy”，关联T01/L01。四旧LAD E07000004–E07000007索取2021人口时oldcode_2021_population_rows=0，进入简单平均分支写入E06000060。证据由SRC10 §4指向checks/buckinghamshire_lineage.json、buckinghamshire_original_indicators.csv、H0 Buckinghamshire_combination.py和GVA crosswalk。工作簿SHA256=6eb516a87654078ee69d4df55c8bc749b5da5de117f996f262c0c762bc20b38f。R02保留rate=.06325/gap=.1875/Moran=.30及regional_proxy_flag/legacy_arithmetic_crosswalk。候选主E/R各1,151，天气E/R各293；H0为1,151/1,146/293/292。",
+      "action": "数据§2.1/§2.4、表2/附录A2写明Buck历史区域代理及简单均值根因；地图/区域系数解释标该例外。普通LAD的gap和Moran定义不能直接套该代理。后续按既有作者决定用匹配年份、边界、收入分子分母和空间权重重建LSOA并比较，不能靠换一套旧区人口权重就宣布gap/Moran已正确。",
+      "story_impact": "控制变量实际含义和地理可比性影响解释，不能因只一地区或n比例小就忽略。",
+      "release_condition": "R02代理保留/标记据报告已实现；R03补真实源表列与身份；LSOA重建及影响对照未执行，继续作为已决定后续任务，区域结论需据其结果或明确限制裁决。",
+      "english": "For Buckinghamshire, the current analysis retains an explicitly labelled historical proxy formed by averaging the corresponding values for four predecessor districts.",
+      "decision_status": "C10来源已识别、代理保留已实施；LSOA重建对照尚未完成",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR08",
+          "title": "Buckinghamshire历史代理及后续重建决定",
+          "tags": [
+            "T01",
+            "T11",
+            "L01",
+            "L12"
+          ],
+          "locations": [
+            "D-P018",
+            "D-P041",
+            "D-P087",
+            "D-P089",
+            "A-T02",
+            "A-P013",
+            "A-T08",
+            "A-T09"
+          ],
+          "sources": [
+            "SRC02 Buckinghamshire条目/作者决定",
+            "SRC03 §3.3"
+          ],
+          "evidence": "四旧区简单平均rate .06325/gap .1875/Moran .30。H0主E/R1151/1146、天气293/292受影响。作者已决定暂保留显式历史代理，后续LSOA重建对照。C10是否对应该问题未提供，不能自行编号。",
+          "action": "主文简述存在历史地区代理，附录A2增加例外和来源；图6及区域解释注明代理范围。保留数值身份、重新统计新成员。未来rate按正式分子/分母、gap按合并LSOA极差、Moran按合并值及权重分别重建；不把旧指标平均称等价官方新LAD统计。",
+          "story_impact": "控制变量实际含义和地理可比性影响解释，不能因只一地区或n比例小就忽略。",
+          "release_condition": "PD03沿用；R02标记与计数，后续按已决定路线重建/对照；若不足应收窄区域解释。",
+          "english": "For Buckinghamshire, the current analysis retains an explicitly labelled historical proxy formed by averaging the corresponding values for four predecessor districts.",
+          "decision_status": "已有作者决定（由SRC02转述）；重建尚未完成",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR09",
+      "title": "原因共识、分组来源与天气归因措辞",
+      "tags": [
+        "T03",
+        "T06",
+        "L11",
+        "C01"
+      ],
+      "locations": [
+        "D-P038",
+        "D-P096",
+        "D-P097",
+        "A-P005",
+        "A-P007",
+        "A-T01",
+        "A-P070"
+      ],
+      "sources": [
+        "SRC01 §2/§5",
+        "SRC02 原因独立共识/冲突",
+        "SRC03两事件及R02规则",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "R02原因独立于所选天气行，取全阶段共识，原因组变化2；两个冲突ID为unresolved并排除主原因候选。最早同刻六项metadata无冲突不否认更晚阶段原因可能冲突。完整官方代码释义及信息可用时点未随报告提供。",
+      "action": "表A1加入原码释义/来源/映射和冲突处理，不把表内实施代码等同官方物理原因认证。§4.3“identifies weather as the direct cause”收窄为记录代码分类；R02后报告共识、冲突、未知的数量及资格。重算原因支持分布和所有天气人群比较。",
+      "story_impact": "总体与天气人群是不同观察对象；不将原因选择当随机分组，不把支持变化识别为唯一机制。",
+      "release_condition": "R03核对原因合同和候选资格；R04/V02更新比较；回顾性原因分组不自动是气象因果归因。",
+      "english": "The weather-attributed subset is defined by the prespecified analytical grouping of recorded Cause Codes; conflicting assignments are handled under the documented incident-level rule.",
+      "decision_status": "全阶段原因共识已实施；代码释义与信息时点仍需完整来源",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR09",
+          "title": "原因共识、分组来源与天气归因措辞",
+          "tags": [
+            "T03",
+            "T06",
+            "L11",
+            "C01"
+          ],
+          "locations": [
+            "D-P038",
+            "D-P096",
+            "D-P097",
+            "A-P005",
+            "A-P007",
+            "A-T01",
+            "A-P070"
+          ],
+          "sources": [
+            "SRC01 §2/§5",
+            "SRC02 原因独立共识/冲突",
+            "SRC03两事件及R02规则"
+          ],
+          "evidence": "原因不应随代表天气行任意变换；两ID有原因冲突。R01称已产出原因契约，但摘要未提供完整官方代码释义及冲突规则。",
+          "action": "表A1加入原码释义/来源/映射和冲突处理，不把表内实施代码等同官方物理原因认证。§4.3“identifies weather as the direct cause”收窄为记录代码分类；R02后报告共识、冲突、未知的数量及资格。重算原因支持分布和所有天气人群比较。",
+          "story_impact": "总体与天气人群是不同观察对象；不将原因选择当随机分组，不把支持变化识别为唯一机制。",
+          "release_condition": "R02实际分类/资格；官方释义未完全提供则保持边界；R04/V02更新相关结果。",
+          "english": "The weather-attributed subset is defined by the prespecified analytical grouping of recorded Cause Codes; conflicting assignments are handled under the documented incident-level rule.",
+          "decision_status": "明确修正方向；结果部分待重算",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR10",
+      "title": "样本流、p99与极端恢复总体",
+      "tags": [
+        "C03",
+        "C05",
+        "T03",
+        "T04",
+        "L04",
+        "L11"
+      ],
+      "locations": [
+        "D-P002",
+        "D-P032",
+        "D-T01",
+        "D-P038",
+        "D-P039",
+        "D-P097",
+        "A-T03"
+      ],
+      "sources": [
+        "SRC01 §3.2及C03",
+        "SRC02 H0样本及48条差异",
+        "SRC03 R02样本流要求",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "H0主E/R为60,437/59,834，R02候选各60,436：E共同60,436/进0/退1，R共同59,834/进602/退0。天气H0 E/R9,857/9,758，候选均9,857：E进退0，R进99/退0。strict同候选，实际v3-only0。恢复候选保留全有效D，新增人数同时受取消旧截尾影响；不能全归因时间修复。R1_compat只是本地成员诊断，未出模型。",
+      "action": "§2.4按实际处理顺序给唯一事件与逐步排除，目标可用/尾部/原因/天气/区域分别计数。区分真实长尾、无效和右删失；新留出训练内p99与测试总体分开。表1、图2及极端叙事全部用最终声明总体。旧N与截止只作H0对照，不作为修复目标。 R03补602/99固定顺序转移原因和重叠标志；正文候选样本流与最终每模型/折训练数分开，不能直接换旧系数表n。",
+      "story_impact": "研究“极端恢复”必须有真实长尾证据；筛掉最长1%之后的结论不能无条件覆盖全事件。",
+      "release_condition": "R03冻结训练尾部、全有效测试总体、共同日期fold及比较成员；R04实际拟合/OOF后更新数字，V01检验长尾稳健性。",
+      "english": "",
+      "decision_status": "R02全有效目标候选及转移计数明确；训练尾部/比较仍待R03/R04",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR10",
+          "title": "样本流、p99与极端恢复总体",
+          "tags": [
+            "C03",
+            "C05",
+            "T03",
+            "T04",
+            "L04",
+            "L11"
+          ],
+          "locations": [
+            "D-P002",
+            "D-P032",
+            "D-T01",
+            "D-P038",
+            "D-P039",
+            "D-P097",
+            "A-T03"
+          ],
+          "sources": [
+            "SRC01 §3.2及C03",
+            "SRC02 H0样本及48条差异",
+            "SRC03 R02样本流要求"
+          ],
+          "evidence": "H0基础60453，E60437/R59834、天气9857/9758；天气R比主R中的天气9806额外排48条。主/天气p99分别192.083333/142.844667h；早期后期各自p99相加比合并重算少2条有实现解释。",
+          "action": "§2.4按实际处理顺序给唯一事件与逐步排除，目标可用/尾部/原因/天气/区域分别计数。区分真实长尾、无效和右删失；新留出训练内p99与测试总体分开。表1、图2及极端叙事全部用最终声明总体。旧N与截止只作H0对照，不作为修复目标。",
+          "story_impact": "研究“极端恢复”必须有真实长尾证据；筛掉最长1%之后的结论不能无条件覆盖全事件。",
+          "release_condition": "R02候选样本流；R03/R04冻结且运行比较口径；V01长尾敏感性。",
+          "english": "",
+          "decision_status": "明确修正方向；结果部分待重算",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR11",
+      "title": "标准化、固定效应、VIF与系数尺度",
+      "tags": [
+        "C06",
+        "C09",
+        "T01",
+        "T11",
+        "L01"
+      ],
+      "locations": [
+        "D-P040",
+        "D-P041",
+        "D-P057",
+        "D-P060",
+        "D-P061",
+        "D-P064",
+        "A-P065"
+      ],
+      "sources": [
+        "SRC01 §2模型/推断、C06/C09",
+        "SRC02保持部分标准化"
+      ],
+      "evidence": "标准化天气四列和恢复客户列；区域保留原尺度、人口取log。年月为两套加性哑变量，均值模型无LAD固定效应；LAD是协方差聚类。旧VIF未含年月哑变量，step26生产者未定位。",
+      "action": "将Continuous predictors are standardised具体化到变量清单；表2/A2增加单位/变换。VIF说明诊断列集合、截距与编码，删去不必要的阈值辩护；不外推“所有列<4”。保留已正确写明的年月加性、协方差不改OLS系数。",
+      "story_impact": "避免把不同尺度的系数直接比较成工程重要性；保留原规格便于修复对照，而非迎合旧文字改全部标准化。",
+      "release_condition": "措辞方向明确；R03补生产者/合同，R04更新诊断和系数。",
+      "english": "Weather predictors were standardised, as was log(1 + affected customers) in the recovery model. Regional covariates retained their specified original or log-transformed scales.",
+      "decision_status": "明确修正方向；结果部分待重算",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R01_received_before_R02",
+      "last_reviewed_checkpoint": "R02_received_before_R03",
+      "r02_review_note": "已检查SRC09/SRC10；R02未估计模型或修复本项下游统计/图表接口，本项判断和生效条件不变，继续按R03/R04/V执行。"
+    },
+    {
+      "id": "MR12",
+      "title": "合并OOF R²与平均折R²",
+      "tags": [
+        "C02",
+        "T06",
+        "T07",
+        "T09",
+        "L07",
+        "L10"
+      ],
+      "locations": [
+        "D-P054",
+        "D-P084",
+        "D-P086",
+        "D-P101",
+        "D-T04"
+      ],
+      "sources": [
+        "SRC01 §3.3评分表、C02",
+        "SRC02 pooled OOF契约"
+      ],
+      "evidence": "实际先拼接OOF后评分。H0天气R pooled .215581756，简单平均折 .161713733，差5.3868个百分点；主R .110536591/.107366738。不是同一指标两个名称。",
+      "action": "§3.2写明确的合并OOF定义：1−Σ(y−ŷOOF)^2/Σ(y−ȳeval)^2；所有图题/正文改相同名称。逐折评分可另报告，不冒充独立实验。对预测基准另写训练内估计；评分分母的评估均值不等于用评估均值作训练预测器。",
+      "story_impact": "预测比较需要共同评分规则；不根据哪种值更大选择指标，也不将百分点误写为客户/小时变化比例。",
+      "release_condition": "R03评分接口；R04/V02产生当前预测；定义可先记录，不将H0数值替换成未经运行的新结果。",
+      "english": "Out-of-fold predictions were pooled across folds, and R-squared was calculated from the pooled residual sum of squares and the total sum of squares of the corresponding evaluation sample.",
+      "decision_status": "明确修正方向；结果部分待重算",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R01_received_before_R02",
+      "last_reviewed_checkpoint": "R02_received_before_R03",
+      "r02_review_note": "已检查SRC09/SRC10；R02未估计模型或修复本项下游统计/图表接口，本项判断和生效条件不变，继续按R03/R04/V执行。"
+    },
+    {
+      "id": "MR13",
+      "title": "贡献排序反转的配对条件与分支",
+      "tags": [
+        "C02",
+        "C03",
+        "T06",
+        "L07",
+        "L11"
+      ],
+      "locations": [
+        "D-P002",
+        "D-P010",
+        "D-P084",
+        "D-P094",
+        "D-P097",
+        "D-T04",
+        "D-P100",
+        "D-P108",
+        "D-P119"
+      ],
+      "sources": [
+        "SRC01 C02/C03",
+        "SRC05 L07",
+        "SRC06 T06"
+      ],
+      "evidence": "H0同一样本内部嵌套比较已配对，但主/天气另算p99和分折。1.43对1.28个百分点来自不同加入条件，不应随意挑端点代表独有贡献差；范围是加入顺序而非区间。",
+      "action": "主比较用共同B、完整gust组G、客户组K的四模型。G按规格包含gust、平方及gust×pressure，K包含标准化log(1+C)及平方，P主效应留在B。I_G=R²(BGK)−R²(BK)，I_K=R²(BGK)−R²(BG)，Δ=I_G−I_K。主/天气共享全局过程划分，重叠样本联合处理。表4/图5/8改为配对差与不确定性加另列顺序。摘要/结论按稳定反转、接近且点反转、无稳定反转三路写。",
+      "story_impact": "研究重点是特定信息条件下的增量，而非风或客户的因果份额和普遍支配地位。",
+      "release_condition": "R03/R04口径修复后，V02配对推断和支持检查；分支由结果决定。",
+      "english": "",
+      "decision_status": "核心结论条件于新结果",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R01_received_before_R02",
+      "last_reviewed_checkpoint": "R02_received_before_R03",
+      "r02_review_note": "已检查SRC09/SRC10；R02未估计模型或修复本项下游统计/图表接口，本项判断和生效条件不变，继续按R03/R04/V执行。"
+    },
+    {
+      "id": "MR14",
+      "title": "日分组与完整天气过程依赖",
+      "tags": [
+        "C01",
+        "C03",
+        "C05",
+        "T07",
+        "L08"
+      ],
+      "locations": [
+        "D-P011",
+        "D-P051",
+        "D-P054",
+        "D-P102",
+        "D-P105",
+        "D-P114",
+        "A-P057",
+        "A-P060"
+      ],
+      "sources": [
+        "SRC01 C01/C03/C05及历史#9–#19",
+        "SRC05 L08",
+        "SRC06 T07",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "旧主/天气日期折分不能对应；窗口在2月17/19重叠。七个名字不等于七个独立过程。早期开发用过后来时段，#19为后期重新拟合不是早期模型预测后期。 R02采用UTC冻结日历并产London并列对照，窗口重叠单列UNIQUE_ANY；具体日历/风暴差异表未回传，不能填0。step2尚未开启新折分。",
+      "action": "方法明确回顾性日期诊断与最终完整过程/块评价的区别；合并相关风暴窗口、处理跨边界恢复，报告事件/过程权重。图3统一earlier/later标签，避免保留confirmation后反复免责。保留开发事实，不能因新划分锁定就恢复独立确认身份。",
+      "story_impact": "工程过程和恢复资源可能跨日，验证单元应对应问题；不强制取得全新外部数据才允许回顾性研究完成。",
+      "release_condition": "R03补日历/窗口小表并统一全局日期fold；R04日级诊断，V00/V02完整过程方案和结果；历史开发限制继续保留。",
+      "english": "",
+      "decision_status": "UTC事件时间与重叠成员接口已推进；fold与完整过程评价仍待修",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR14",
+          "title": "日分组与完整天气过程依赖",
+          "tags": [
+            "C01",
+            "C03",
+            "C05",
+            "T07",
+            "L08"
+          ],
+          "locations": [
+            "D-P011",
+            "D-P051",
+            "D-P054",
+            "D-P102",
+            "D-P105",
+            "D-P114",
+            "A-P057",
+            "A-P060"
+          ],
+          "sources": [
+            "SRC01 C01/C03/C05及历史#9–#19",
+            "SRC05 L08",
+            "SRC06 T07"
+          ],
+          "evidence": "旧主/天气日期折分不能对应；窗口在2月17/19重叠。七个名字不等于七个独立过程。早期开发用过后来时段，#19为后期重新拟合不是早期模型预测后期。",
+          "action": "方法明确回顾性日期诊断与最终完整过程/块评价的区别；合并相关风暴窗口、处理跨边界恢复，报告事件/过程权重。图3统一earlier/later标签，避免保留confirmation后反复免责。保留开发事实，不能因新划分锁定就恢复独立确认身份。",
+          "story_impact": "工程过程和恢复资源可能跨日，验证单元应对应问题；不强制取得全新外部数据才允许回顾性研究完成。",
+          "release_condition": "R02时间/成员；V00/V02方案与结果；历史限定可确定记录。",
+          "english": "",
+          "decision_status": "明确修正方向；结果部分待重算",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR15",
+      "title": "图9暴露侧多做一次log1p",
+      "tags": [
+        "C04",
+        "T09",
+        "L10"
+      ],
+      "locations": [
+        "D-P061",
+        "D-P103",
+        "D-P105",
+        "D-P106",
+        "A-P091"
+      ],
+      "sources": [
+        "SRC01 C04"
+      ],
+      "evidence": "step13及figure9从pred=exp(η)再算log1p(pred)，得到log(1+expη)而非η。H0确定性对照相关.179335982→.179728832；log MAE1.717499382→1.690321118；平均位移.116592479。",
+      "action": "图9横轴log(1+C)、纵轴直接η，图数据和MAE共同修代码。正文观察值分组的偏差解释需重审；旧相关接近不代表尺度正确。不要把这一步修复称smearing校准，也不把H0修正值当新事件匹配后的结果。",
+      "story_impact": "先保证预测与观察同尺度，再讨论工程误差。",
+      "release_condition": "R03生产者修复、R04当前版本重生图；V03才评价留出校准。",
+      "english": "",
+      "decision_status": "明确修正方向；结果部分待重算",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R01_received_before_R02",
+      "last_reviewed_checkpoint": "R02_received_before_R03",
+      "r02_review_note": "已检查SRC09/SRC10；R02未估计模型或修复本项下游统计/图表接口，本项判断和生效条件不变，继续按R03/R04/V执行。"
+    },
+    {
+      "id": "MR16",
+      "title": "图9恢复样本混合与窗口重复",
+      "tags": [
+        "C05",
+        "T04",
+        "T07",
+        "T09",
+        "L04",
+        "L08",
+        "L10"
+      ],
+      "locations": [
+        "D-P102",
+        "D-P103",
+        "D-P105",
+        "D-P106",
+        "D-P107",
+        "D-P108"
+      ],
+      "sources": [
+        "SRC01 C05",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "恢复风暴评价含训练时p99删掉的长事件，七窗口分别1/2/22/9/3/5/7条不在拟合样本。窗口重叠不能直接相加为独立事件数。当前图题称所有事件also contributed to fitting不准确。 R02明确重叠风暴使用UNIQUE_ANY；尚无新模型训练成员或留出预测，旧每窗口1/2/22/9/3/5/7只是H0。",
+      "action": "先输出训练/评价成员及唯一事件数。描述图题改为拟合内与额外尾部混合的事实，最终若以V过程评价替换则按新身份写。不要通过删除长尾把现有图包装成纯训练内，也不能据部分未训练点称独立风暴留出。重算27日、8.15%、14.72%等组成。 R03逐事件输出窗口、训练资格、尾部及预测来源；不能仅因候选不再截尾而把旧混合图认证为独立验证。",
+      "story_impact": "风暴章节的任务是过程表现及范围，不是排序反转的第二份独立证明。",
+      "release_condition": "R02成员、R03标记、R04描述更新；V02/V03替换为合格评价后再定正文地位。",
+      "english": "",
+      "decision_status": "R02已提供唯一联合窗口口径；模型训练/预测身份仍待R03/R04",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR16",
+          "title": "图9恢复样本混合与窗口重复",
+          "tags": [
+            "C05",
+            "T04",
+            "T07",
+            "T09",
+            "L04",
+            "L08",
+            "L10"
+          ],
+          "locations": [
+            "D-P102",
+            "D-P103",
+            "D-P105",
+            "D-P106",
+            "D-P107",
+            "D-P108"
+          ],
+          "sources": [
+            "SRC01 C05"
+          ],
+          "evidence": "恢复风暴评价含训练时p99删掉的长事件，七窗口分别1/2/22/9/3/5/7条不在拟合样本。窗口重叠不能直接相加为独立事件数。当前图题称所有事件also contributed to fitting不准确。",
+          "action": "先输出训练/评价成员及唯一事件数。描述图题改为拟合内与额外尾部混合的事实，最终若以V过程评价替换则按新身份写。不要通过删除长尾把现有图包装成纯训练内，也不能据部分未训练点称独立风暴留出。重算27日、8.15%、14.72%等组成。",
+          "story_impact": "风暴章节的任务是过程表现及范围，不是排序反转的第二份独立证明。",
+          "release_condition": "R02成员、R03标记、R04描述更新；V02/V03替换为合格评价后再定正文地位。",
+          "english": "",
+          "decision_status": "明确修正方向；结果部分待重算",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR17",
+      "title": "曲线、地图与参考人群的数学含义",
+      "tags": [
+        "C07",
+        "T09",
+        "L10"
+      ],
+      "locations": [
+        "D-P061",
+        "D-P077",
+        "D-P079",
+        "D-P087",
+        "D-P089",
+        "D-P093",
+        "A-P091",
+        "A-P092"
+      ],
+      "sources": [
+        "SRC01 C07",
+        "SRC02 图参考顺序",
+        "SRC03区分参考要求"
+      ],
+      "evidence": "R0c曲线客户z约0但z²均值.999983287；地图两项皆0。仅该参考差让曲线水平相对z=0情景约乘.672957。不同参考不影响同一曲线的极值比或顶点，但影响水平。",
+      "action": "具体场景从原变量生成一致设计行；平均参考由个体一致设计行平均。图题说明固定情景或参考人群、压力和反变换顺序。不能一律把平方均值改0，也不能把平均η、exp平均η、平均expη都称平均后果。不同图若确有不同目的允许不同参考并解释。",
+      "story_impact": "工程量级必须能回答“对什么事件/人群、在什么条件下”的问题。",
+      "release_condition": "R01已定参考需读取细则；R03统一接口，R04重生图，V03给场景证据。",
+      "english": "",
+      "decision_status": "明确修正方向；结果部分待重算",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R01_received_before_R02",
+      "last_reviewed_checkpoint": "R02_received_before_R03",
+      "r02_review_note": "已检查SRC09/SRC10；R02未估计模型或修复本项下游统计/图表接口，本项判断和生效条件不变，继续按R03/R04/V执行。"
+    },
+    {
+      "id": "MR18",
+      "title": "二次形状、GLM与三阶反向线索",
+      "tags": [
+        "T05",
+        "T11",
+        "L06"
+      ],
+      "locations": [
+        "D-P010",
+        "D-P044",
+        "D-P046",
+        "D-P048",
+        "D-P066",
+        "D-P068",
+        "D-P118",
+        "A-P094"
+      ],
+      "sources": [
+        "SRC01历史#38–#43",
+        "SRC02 E0三阶OOF增量",
+        "SRC05 L06",
+        "SRC06 T05/T11"
+      ],
+      "evidence": "旧E0三阶项OOF增量约.001441，原代码核查明确其为反向证据。正二次项和相同二次预测子的GLM只支持指定形式内曲率，不充分验证U形或最低点稳定。",
+      "action": "§3先说估计目标与候选形状，§4.1先比较线性/二次/一种样条、损失、支持量和影响过程。读取旧三阶完整设置；修正输入上重估保留检查或用预定灵活形式回答同一形状问题。不能因输入修复就删除反向记录，也不能直接沿用旧增量为B1。",
+      "story_impact": "模型形式是待检验假设，允许论文结果变成“无稳定最低点”或“简单形式足够”。",
+      "release_condition": "R04标记旧检查与重算覆盖；V01定稿；摘要主张CL02条件决策。",
+      "english": "",
+      "decision_status": "条件于修正输入的形状证据",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R01_received_before_R02",
+      "last_reviewed_checkpoint": "R02_received_before_R03",
+      "r02_review_note": "已检查SRC09/SRC10；R02未估计模型或修复本项下游统计/图表接口，本项判断和生效条件不变，继续按R03/R04/V执行。"
+    },
+    {
+      "id": "MR19",
+      "title": "最低点与物理单位不确定性",
+      "tags": [
+        "C08",
+        "T10",
+        "L09"
+      ],
+      "locations": [
+        "D-P002",
+        "D-P071",
+        "D-P073",
+        "D-P075",
+        "D-P079",
+        "D-P118",
+        "D-P120",
+        "A-P076",
+        "A-P080",
+        "A-P083",
+        "A-P086"
+      ],
+      "sources": [
+        "SRC01 C08",
+        "SRC04 M03/M05（解释需结合SRC07）",
+        "SRC07既有校准",
+        "SRC06 T10"
+      ],
+      "evidence": "H0均压最低点10.694m/s，压力±1SD为9.656/11.732。旧Bootstrap各次重估尺度；#43仍缺β3和pressure均值/SD，不能恢复固定物理压力区间。图4脚本仍硬编码9.20–12.06。",
+      "action": "先修脚本停止旧区间回填。若保留最低点，固定p0，每次配套β1/β2/β3及gust/pressure尺度换回物理值再汇总，并报告β2≤0/越界/失败，明确条件范围。若形状/位置不稳则撤出摘要，附录只留合格描述与必要公式，不继续论证旧Delta差异成因。",
+      "story_impact": "最低点是条件拟合特征；科学投入与其最终地位一致，不能当损伤或操作阈值。",
+      "release_condition": "R03接口；V01决定地位；V03条件补区间；W用新结果。",
+      "english": "",
+      "decision_status": "最低点地位待结果；旧区间撤回不得回归",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R01_received_before_R02",
+      "last_reviewed_checkpoint": "R02_received_before_R03",
+      "r02_review_note": "已检查SRC09/SRC10；R02未估计模型或修复本项下游统计/图表接口，本项判断和生效条件不变，继续按R03/R04/V执行。"
+    },
+    {
+      "id": "MR20",
+      "title": "分时段系数、尺度和CV汇总身份",
+      "tags": [
+        "C08",
+        "T11",
+        "L08",
+        "L09"
+      ],
+      "locations": [
+        "D-P055",
+        "D-P111",
+        "D-P112",
+        "D-P114",
+        "D-P115",
+        "A-P061",
+        "A-P063",
+        "A-P089"
+      ],
+      "sources": [
+        "SRC01 历史#19/C08",
+        "SRC04时段核实",
+        "SRC07既有修订"
+      ],
+      "evidence": "H0开发R点.0660是重叠CV逆方差汇总，后期约.064、合并.079237不同估计身份；旧名义.0587–.0732不可当独立拟合区间。后期#19是重新拟合，独有样本内贡献。",
+      "action": "保留正式时间比较需同目标/规格的早晚完整拟合及共同物理参考；标准化二次系数的物理曲率β2/sv²另行说明。原CV汇总若保留只作历史描述，不和其余三行组成四份独立验证。图10旧区间生成代码同步禁用。",
+      "story_impact": "区分样本稳定性与真正未来泛化，避免一正一不显著证明不同或多次同号证明独立重复。",
+      "release_condition": "R03生产规则；R04可比拟合，后续过程推断V；不保留图则内部归档。",
+      "english": "",
+      "decision_status": "明确修正方向；结果部分待重算",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R01_received_before_R02",
+      "last_reviewed_checkpoint": "R02_received_before_R03",
+      "r02_review_note": "已检查SRC09/SRC10；R02未估计模型或修复本项下游统计/图表接口，本项判断和生效条件不变，继续按R03/R04/V执行。"
+    },
+    {
+      "id": "MR21",
+      "title": "阶段组成、缺首阶段与客户—跨度关系",
+      "tags": [
+        "T03",
+        "T11",
+        "L05",
+        "L11"
+      ],
+      "locations": [
+        "D-P032",
+        "D-P036",
+        "D-P080",
+        "D-P121",
+        "A-P027",
+        "A-P035",
+        "A-P044",
+        "A-P048",
+        "A-P050",
+        "A-P052",
+        "A-P054",
+        "A-P055"
+      ],
+      "sources": [
+        "SRC01 §5其余科学实验",
+        "SRC02契约及未决",
+        "SRC05 L05/L11",
+        "SRC07既有修订",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "缺首阶段H0 E8817/60437、R8671/59834、天气2593/9857和2578/9758；不是全源10.56%。附录D混有开发n47840与合并n59834，阶段数又不等同维修动作且最终值事后形成。 R02保留跨研究终点全阶段，并修复缺C资格的nullable处理；摘要未给新样本缺首阶段比例，不用H0比例补入。",
+      "action": "更新最终样本阶段质量比例；排除/单列质量敏感性依据合同。D表、图、分箱用同一目标或清楚区分；给稀疏格n和完整导数/范围判断。保留非单调与组成关联，不把线性项符号等同全域单调，不把阶段控制当必然正确的因果调整。",
+      "story_impact": "阶段数据解释工程流程的边界要真实；不能把分层结果写成优先调度或唯一中介机制。",
+      "release_condition": "R03核对现有质量标记摘要；R04当前保留材料重算，V01质量敏感性和V03工程解释。",
+      "english": "",
+      "decision_status": "完整阶段保留、输入资格检查已推进；质量比例/阶段关联待重算",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR21",
+          "title": "阶段组成、缺首阶段与客户—跨度关系",
+          "tags": [
+            "T03",
+            "T11",
+            "L05",
+            "L11"
+          ],
+          "locations": [
+            "D-P032",
+            "D-P036",
+            "D-P080",
+            "D-P121",
+            "A-P027",
+            "A-P035",
+            "A-P044",
+            "A-P048",
+            "A-P050",
+            "A-P052",
+            "A-P054",
+            "A-P055"
+          ],
+          "sources": [
+            "SRC01 §5其余科学实验",
+            "SRC02契约及未决",
+            "SRC05 L05/L11",
+            "SRC07既有修订"
+          ],
+          "evidence": "缺首阶段H0 E8817/60437、R8671/59834、天气2593/9857和2578/9758；不是全源10.56%。附录D混有开发n47840与合并n59834，阶段数又不等同维修动作且最终值事后形成。",
+          "action": "更新最终样本阶段质量比例；排除/单列质量敏感性依据合同。D表、图、分箱用同一目标或清楚区分；给稀疏格n和完整导数/范围判断。保留非单调与组成关联，不把线性项符号等同全域单调，不把阶段控制当必然正确的因果调整。",
+          "story_impact": "阶段数据解释工程流程的边界要真实；不能把分层结果写成优先调度或唯一中介机制。",
+          "release_condition": "R02质量标记；R04当前保留材料；V01质量敏感性、V03补工程解释。",
+          "english": "",
+          "decision_status": "明确修正方向；结果部分待重算",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR22",
+      "title": "最终客户数与可用信息时点",
+      "tags": [
+        "T08",
+        "L03"
+      ],
+      "locations": [
+        "D-P007",
+        "D-P012",
+        "D-P040",
+        "D-P058",
+        "D-P080",
+        "D-P094",
+        "D-P119",
+        "D-P124",
+        "A-P003",
+        "A-P052"
+      ],
+      "sources": [
+        "SRC02最终C/原因契约",
+        "SRC05 L03",
+        "SRC06 T08",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "C沿完整阶段聚合，阶段数和原因可能事后形成；最早阶段客户记录也不自动是故障开始时已知初始客户估计。 R02业务onset留空；时间来自最早记录而C和原因仍由全阶段构造，不能称所有协变量在故障起点可用。",
+      "action": "方法新增变量可用时间表；恢复模型命名为以最终规模为条件的回顾性分析。明确天气历史数据也不等于当时预报。只有另选初期预测目标且有可信输入才拟合新信息集；贡献差不能推成预部署资源变量优先级。",
+      "story_impact": "同一公式在事后解释和初期预测中承担不同任务，工程用途由信息时点限定。",
+      "release_condition": "R01已产时间表需补路径细则；V03核实用途；候选命名无需等显著结果。",
+      "english": "The recovery analysis conditions on final reconstructed customer impact and is therefore retrospective; it does not evaluate a forecast available at incident onset.",
+      "decision_status": "记录起始代理与事后完整客户数区分明确；可用时点未获业务认证",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR22",
+          "title": "最终客户数与可用信息时点",
+          "tags": [
+            "T08",
+            "L03"
+          ],
+          "locations": [
+            "D-P007",
+            "D-P012",
+            "D-P040",
+            "D-P058",
+            "D-P080",
+            "D-P094",
+            "D-P119",
+            "D-P124",
+            "A-P003",
+            "A-P052"
+          ],
+          "sources": [
+            "SRC02最终C/原因契约",
+            "SRC05 L03",
+            "SRC06 T08"
+          ],
+          "evidence": "C沿完整阶段聚合，阶段数和原因可能事后形成；最早阶段客户记录也不自动是故障开始时已知初始客户估计。",
+          "action": "方法新增变量可用时间表；恢复模型命名为以最终规模为条件的回顾性分析。明确天气历史数据也不等于当时预报。只有另选初期预测目标且有可信输入才拟合新信息集；贡献差不能推成预部署资源变量优先级。",
+          "story_impact": "同一公式在事后解释和初期预测中承担不同任务，工程用途由信息时点限定。",
+          "release_condition": "R01已产时间表需补路径细则；V03核实用途；候选命名无需等显著结果。",
+          "english": "The recovery analysis conditions on final reconstructed customer impact and is therefore retrospective; it does not evaluate a forecast available at incident onset.",
+          "decision_status": "明确修正方向；结果部分待重算",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR23",
+      "title": "工程量级、误差与校准",
+      "tags": [
+        "C04",
+        "C05",
+        "C07",
+        "T09",
+        "L10"
+      ],
+      "locations": [
+        "D-P061",
+        "D-P077",
+        "D-P090",
+        "D-P103",
+        "D-P106",
+        "D-P107",
+        "D-P122",
+        "A-P091",
+        "A-P092"
+      ],
+      "sources": [
+        "SRC01 C04/C05/C07",
+        "SRC05 L10",
+        "SRC06 T09"
+      ],
+      "evidence": "原图4/6为expη无反变换校正；暴露不减1。按真实值分组的收缩和相关系数不能替代校准；全样本残差因子10.46/2.20不证明条件均值校正。",
+      "action": "用V留出预测给训练基准、同尺度误差、按预测值分组校准和支持内场景。若声称原尺度算术均值，使用训练内且经检验的反变换/均值模型；否则明确exp拟合log量。不能让corr小差异掩盖C04尺度错误，或用观测值分组证明低风险失准。",
+      "story_impact": "统计发现应提供读者可理解的量级，同时承认误差与后果定义；不强制复杂决策优化。",
+      "release_condition": "R03/R04修尺度；V03工程表和校准；W据实际目标写。",
+      "english": "",
+      "decision_status": "明确修正方向；结果部分待重算",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R01_received_before_R02",
+      "last_reviewed_checkpoint": "R02_received_before_R03",
+      "r02_review_note": "已检查SRC09/SRC10；R02未估计模型或修复本项下游统计/图表接口，本项判断和生效条件不变，继续按R03/R04/V执行。"
+    },
+    {
+      "id": "MR24",
+      "title": "图6/7是否推进主问题",
+      "tags": [
+        "T09",
+        "T14",
+        "L10",
+        "L12"
+      ],
+      "locations": [
+        "D-P087",
+        "D-P089",
+        "D-P090",
+        "D-P092",
+        "D-P093"
+      ],
+      "sources": [
+        "SRC01 C07",
+        "SRC05 L10/L12",
+        "SRC07图尺度修复"
+      ],
+      "evidence": "当前地图拟合面相关−.780/−.758及网格max/min2.79/2.37/5.99均依参考/样本。网格比不是端点比、因果重要性或原尺度均值倍数，地图又含历史区域代理。",
+      "action": "先判断是否推动CL05。若保留，更新来源/场景/支持及当前数值，图题精确定义；若只重复重要性排名或引出不必要机制推测，移附录或删除。保留内部图数据与旧解释变更史。",
+      "story_impact": "主文图表围绕工程问题；不为原有图数与外观保留无法支撑论证的对照。",
+      "release_condition": "R04当前图；V03量级证据；V04/W作者定去留。",
+      "english": "",
+      "decision_status": "结构建议待审，数值条件于重算",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R01_received_before_R02",
+      "last_reviewed_checkpoint": "R02_received_before_R03",
+      "r02_review_note": "已检查SRC09/SRC10；R02未估计模型或修复本项下游统计/图表接口，本项判断和生效条件不变，继续按R03/R04/V执行。"
+    },
+    {
+      "id": "MR25",
+      "title": "生产者、旧图回填与数字单一来源",
+      "tags": [
+        "C08",
+        "C09",
+        "T11",
+        "T14",
+        "L12"
+      ],
+      "locations": [
+        "D-P041",
+        "D-P048",
+        "D-P079",
+        "D-P114",
+        "A-P065",
+        "A-P094"
+      ],
+      "sources": [
+        "SRC01 C08/C09",
+        "SRC02环境/保护复核",
+        "SRC08 R03–R05",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "旧读取/构建函数有覆盖副作用，图4/10会回填撤回内容；step26/27/28生产者缺口；旧.venv失效而审计环境可用。当前Word像素未在新审计核对。 R02确定生产者scripts/event_input_repair/r02_events.py、I/O运行器code/run_r02.py；step0读取R02主表且缺失/哈希错不回退，v9导入mkdir已移除，step1仅查LAD覆盖，step2明确停止。保护549历史对象仅有意改v9活动代码，另548哈希一致；不是所有生产脚本已修。",
+      "action": "修订台账登记每图表的活动生产者、输入/模型版本与最终Word嵌入身份。旧图/系数禁自动回填。保留结果若缺生产者就重建可证实方法或暂撤；不在论文中罗列路径/环境修复史，正式附录给当前可复现配置。 R03在新fold/tail/评分契约接入真实调用链后解除step2阻断，禁止只删guard或重启旧生成器。R02已通过的无关全量保护核查不为扩报告重复运行。",
+      "story_impact": "正文正确措辞必须与再次运行能生成的内容一致，技术修复服务科学可复现。",
+      "release_condition": "R03代码、R04产物、R05复审，W01再核代码—图表—Word一致。",
+      "english": "",
+      "decision_status": "R02活动输入入口已修；下游step2与生产者问题进入R03",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR25",
+          "title": "生产者、旧图回填与数字单一来源",
+          "tags": [
+            "C08",
+            "C09",
+            "T11",
+            "T14",
+            "L12"
+          ],
+          "locations": [
+            "D-P041",
+            "D-P048",
+            "D-P079",
+            "D-P114",
+            "A-P065",
+            "A-P094"
+          ],
+          "sources": [
+            "SRC01 C08/C09",
+            "SRC02环境/保护复核",
+            "SRC08 R03–R05"
+          ],
+          "evidence": "旧读取/构建函数有覆盖副作用，图4/10会回填撤回内容；step26/27/28生产者缺口；旧.venv失效而审计环境可用。当前Word像素未在新审计核对。",
+          "action": "修订台账登记每图表的活动生产者、输入/模型版本与最终Word嵌入身份。旧图/系数禁自动回填。保留结果若缺生产者就重建可证实方法或暂撤；不在论文中罗列路径/环境修复史，正式附录给当前可复现配置。",
+          "story_impact": "正文正确措辞必须与再次运行能生成的内容一致，技术修复服务科学可复现。",
+          "release_condition": "R03代码、R04产物、R05复审，W01再核代码—图表—Word一致。",
+          "english": "",
+          "decision_status": "明确修正方向；结果部分待重算",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR26",
+      "title": "主线、章节及修复历史分工",
+      "tags": [
+        "T14",
+        "L12"
+      ],
+      "locations": [
+        "D-P002",
+        "D-P010",
+        "D-P013",
+        "D-P048",
+        "D-P055",
+        "D-P074",
+        "D-P075",
+        "D-P118",
+        "D-P123",
+        "A-P056",
+        "A-P078",
+        "A-P086",
+        "A-P094"
+      ],
+      "sources": [
+        "SRC05 L12/建议叙事",
+        "SRC08工作定位",
+        "USER-PD02本轮记录要求",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "当前多次解释旧错误、未提供材料与非独立，摘要仍押最低点和反转。修复史有内部追溯价值，但不能代替工程发现与最终方法。 R02说明输入修复实质影响时间/天气及成员，但没有新拟合结果。工程叙事以可靠事件后果与可比评价推进，不能用测试通过取代核心发现。",
+      "action": "按本台账§2–§4重排职责。正式方法集中交代真实开发限制；结果接受CL分支；内部保存旧百分比、复现误差、旧区间和缺材料历史。正式附录用最终合格证据替换“supplied revision/still required”等过程句，不以删除过程句隐藏仍保留主张的缺证。 MR-v1.1同步更新逐章/附录方案和R02稿件影响表；六章建议仍未冒称作者单独确认。",
+      "story_impact": "每轮增加台账与变更历史，不把主文叠成审查日志。六章方案/图去留需作者审阅，不能冒称已决定。",
+      "release_condition": "当前可记录方案；R/V持续更新，V04作结果裁决，W落实。",
+      "english": "",
+      "decision_status": "同步记录持续执行；故事不预押最低点/反转，章节重组仍是建议",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR26",
+          "title": "主线、章节及修复历史分工",
+          "tags": [
+            "T14",
+            "L12"
+          ],
+          "locations": [
+            "D-P002",
+            "D-P010",
+            "D-P013",
+            "D-P048",
+            "D-P055",
+            "D-P074",
+            "D-P075",
+            "D-P118",
+            "D-P123",
+            "A-P056",
+            "A-P078",
+            "A-P086",
+            "A-P094"
+          ],
+          "sources": [
+            "SRC05 L12/建议叙事",
+            "SRC08工作定位",
+            "USER-PD02本轮记录要求"
+          ],
+          "evidence": "当前多次解释旧错误、未提供材料与非独立，摘要仍押最低点和反转。修复史有内部追溯价值，但不能代替工程发现与最终方法。",
+          "action": "按本台账§2–§4重排职责。正式方法集中交代真实开发限制；结果接受CL分支；内部保存旧百分比、复现误差、旧区间和缺材料历史。正式附录用最终合格证据替换“supplied revision/still required”等过程句，不以删除过程句隐藏仍保留主张的缺证。",
+          "story_impact": "每轮增加台账与变更历史，不把主文叠成审查日志。六章方案/图去留需作者审阅，不能冒称已决定。",
+          "release_condition": "当前可记录方案；R/V持续更新，V04作结果裁决，W落实。",
+          "english": "",
+          "decision_status": "记录规则已获明确授权；具体重组为待审建议",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR27",
+      "title": "文献、数据来源及术语引用",
+      "tags": [
+        "T01",
+        "T02",
+        "T03",
+        "T14",
+        "L02",
+        "L11",
+        "L12"
+      ],
+      "locations": [
+        "D-P006",
+        "D-P008",
+        "D-P016",
+        "D-P017",
+        "D-P018",
+        "D-P136",
+        "D-P138",
+        "D-P142",
+        "A-P007",
+        "A-T02"
+      ],
+      "sources": [
+        "SRC01未核实源定义",
+        "SRC02未决model/权重/业务语义",
+        "SRC05来源边界",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "本轮源报告有实际工作簿/请求线索，但未收到全部原产物；Word参考文献仍有date/URL unverified，官方代码释义/天气产品/权重部分未明。 R02补Buck工作簿SHA、旧码缺人口根因及请求单位配置；缓存响应单位、历史产品、空间权重和LAD跨版兼容尚未证实。",
+      "action": "建立主张—原始来源表，不把审计报告当最终官方来源。文献对照记录分析单位、后果、信息时点、验证单元、工程目的，避免无依据“首次”。引用核实到内容及元数据；取不到来源则明确收窄对应主张，不编引文。 本次没有新增外部文献核查；报告路径作为证据线索，与已直接读取的源内容分开登记。",
+      "story_impact": "研究贡献靠与同类问题的实质比较，不靠数学复杂度或数据来自英国自动成立。",
+      "release_condition": "R阶段补实际来源路径；W前完成保留主张引用核实；本轮未新增外部文献核查。",
+      "english": "",
+      "decision_status": "新增区域来源线索和报告身份；保留来源/术语仍需原证据",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR27",
+          "title": "文献、数据来源及术语引用",
+          "tags": [
+            "T01",
+            "T02",
+            "T03",
+            "T14",
+            "L02",
+            "L11",
+            "L12"
+          ],
+          "locations": [
+            "D-P006",
+            "D-P008",
+            "D-P016",
+            "D-P017",
+            "D-P018",
+            "D-P136",
+            "D-P138",
+            "D-P142",
+            "A-P007",
+            "A-T02"
+          ],
+          "sources": [
+            "SRC01未核实源定义",
+            "SRC02未决model/权重/业务语义",
+            "SRC05来源边界"
+          ],
+          "evidence": "本轮源报告有实际工作簿/请求线索，但未收到全部原产物；Word参考文献仍有date/URL unverified，官方代码释义/天气产品/权重部分未明。",
+          "action": "建立主张—原始来源表，不把审计报告当最终官方来源。文献对照记录分析单位、后果、信息时点、验证单元、工程目的，避免无依据“首次”。引用核实到内容及元数据；取不到来源则明确收窄对应主张，不编引文。",
+          "story_impact": "研究贡献靠与同类问题的实质比较，不靠数学复杂度或数据来自英国自动成立。",
+          "release_condition": "R阶段补实际来源路径；W前完成保留主张引用核实；本轮未新增外部文献核查。",
+          "english": "",
+          "decision_status": "明确修正方向；结果部分待重算",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR28",
+      "title": "C10编号缺口已闭合，科学问题转由MR08跟踪",
+      "tags": [
+        "C10",
+        "T01",
+        "L01"
+      ],
+      "locations": [
+        "D-P018",
+        "A-T02"
+      ],
+      "sources": [
+        "SRC02末段C01–C10表述",
+        "SRC03提示词A项",
+        "SRC09 R02返回摘要",
+        "SRC10 R02报告（相关小节）",
+        "SRC11 本轮审阅与R03指令"
+      ],
+      "evidence": "SRC09及SRC10 §4明示C10“Buck旧区简单均值proxy”、T01/L01、四旧码2021人口缺失触发平均分支、代理数值及证据路径。上一版“C10身份未知”已被新报告替代；本环境仍未读取完整contracts/原产物。",
+      "action": "删除当前待办中“请提供C10标题”重复请求，MR28保留历史编号及来源；C10实际科学修订汇入MR08/MR06/MR07。R03只补必要原表/列/代码身份与未决定义，不再猜C10含义。",
+      "story_impact": "编号衔接完整使区域解释可追溯；识别根因不等于重建合并区统计量。",
+      "release_condition": "编号追踪已完成；C10科学问题按MR08的重建/对照条件关闭。",
+      "english": "",
+      "decision_status": "编号/标题缺口已闭合；不代表区域代理科学问题关闭",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "history": [
+        {
+          "id": "MR28",
+          "title": "C10及本地细则尚未回传",
+          "tags": [
+            "C10",
+            "T14",
+            "L12"
+          ],
+          "locations": [
+            "D-P018",
+            "A-T02"
+          ],
+          "sources": [
+            "SRC02末段C01–C10表述",
+            "SRC03提示词A项"
+          ],
+          "evidence": "摘要提C01–C10，但没有C10标题、根因和证据。contracts/UNRESOLVED_DEFINITIONS.md与R00/R01详报未附。本条Word位置仅为若C10涉及区域时的候选，不是已确定影响。",
+          "action": "下一份本地报告附C10原条目、所有未决定义的最低缺件及合同索引；不能擅自将C10命名为Buckinghamshire问题。本台账先保留未定映射槽，收到证据再追加入具体章节改法。",
+          "story_impact": "避免跨上下文时把猜测变成一个已确认问题，保留信息缺口本身。",
+          "release_condition": "R02返回补齐后更新；不阻止其他已确定修复。",
+          "english": "",
+          "decision_status": "待澄清；候选定位不可直接用于改稿",
+          "word_status": "尚未写入Word",
+          "checkpoint": "R01_received_before_R02"
+        }
+      ],
+      "evidence_level": "reported_by_local_audit; reviewed_report_this_turn; underlying_artifacts_not_read_here",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    },
+    {
+      "id": "MR29",
+      "title": "LAD21定位与LAD23人口/区域连接的边界兼容",
+      "tags": [
+        "T01",
+        "L01",
+        "新增来源兼容性条目"
+      ],
+      "locations": [
+        "D-P018",
+        "D-P041",
+        "A-P013",
+        "A-T02"
+      ],
+      "sources": [
+        "SRC10 §4、§6",
+        "SRC11 §1.3及R03-B.5"
+      ],
+      "evidence": "R02人口lookup唯一键，many_to_one合并保持135,025事件；选中LAD缺失5,762，其中151有可查询坐标，使用2021边界唯一within匹配未新增。报告明确LAD21/23同码完整边界兼容未验证；唯一键和无多配不能证明地理范围一致。",
+      "action": "§2.1/§2.4与附录A来源字典分别登记定位边界年份、LAD键版本、人口年份和跨版对应依据；R03从现有lookup/边界元数据列已证实变化、未决码及受影响候选数。只对证实错配作版本化修复，不任意借LAD或以同码宣称边界相同。",
+      "story_impact": "区域条件关联需要可解释的空间连接；未核实兼容范围时收窄精细地域比较及地图结论，不夸大成全体已错配。",
+      "release_condition": "本地源对照足以确认使用范围内的兼容，或明确未决范围与受影响样本及后续修复/限制；若改输入需补丁版本并重算依赖，最终区域主张经证据裁决。",
+      "english": "The geographical vintages used for spatial assignment and population linkage were documented separately; unresolved boundary compatibility was retained as a limitation.",
+      "decision_status": "新增待核条目；先定向查现有来源，不默认改变边界口径",
+      "word_status": "尚未写入Word",
+      "checkpoint": "R02_received_before_R03",
+      "evidence_level": "reported_by_local_audit; compatibility_not_verified",
+      "last_reviewed_checkpoint": "R02_received_before_R03"
+    }
+  ]
+}

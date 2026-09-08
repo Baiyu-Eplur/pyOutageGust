@@ -1,0 +1,9 @@
+{
+  "scored_utc": "2026-09-07T12:06:58.760696+00:00",
+  "selection_lock_sha256": "b1ab47c919192b7b94fd7fdf41b280ac4366da10dbbb8379bd76978c2ee0b151",
+  "predictions_sha256": "e249f8bd831a850815d68e150b10d03d74f8cc9cdee5c43afe88e60723410ff3",
+  "metrics_sha256": "1bd51eace55a90d906e973366c14de7eb46f8a73631cba7ce2d094187de5974a",
+  "P4_P5_same_fit": true,
+  "Henk_not_updated_after_Ciaran": true,
+  "score_calls": 1
+}

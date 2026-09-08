@@ -1,0 +1,177 @@
+{
+  "target": "E0",
+  "n": 60437,
+  "gust_p90": 16.799999237060547,
+  "ushape_knot": 13.5,
+  "softplus_full_sample": {
+    "b": 5.0,
+    "c": 14.733804886335424,
+    "n_converged_starts": 16,
+    "n_starts": 16
+  },
+  "softplus_fold_diagnostics": [
+    {
+      "fold": 0,
+      "b": 5.0,
+      "c": 14.924814052134828,
+      "n_converged_starts": 9,
+      "n_starts": 9
+    },
+    {
+      "fold": 1,
+      "b": 5.0,
+      "c": 14.707192503777717,
+      "n_converged_starts": 9,
+      "n_starts": 9
+    },
+    {
+      "fold": 2,
+      "b": 5.0,
+      "c": 15.003346353459914,
+      "n_converged_starts": 9,
+      "n_starts": 9
+    },
+    {
+      "fold": 3,
+      "b": 5.0,
+      "c": 14.662970923550692,
+      "n_converged_starts": 9,
+      "n_starts": 9
+    },
+    {
+      "fold": 4,
+      "b": 5.0,
+      "c": 14.533203554084952,
+      "n_converged_starts": 9,
+      "n_starts": 9
+    }
+  ],
+  "metrics_full": {
+    "quad": {
+      "rmse_log": 1.988429108936633,
+      "mae_log": 1.690363715724271,
+      "r2_log": 0.02999495827673515,
+      "rmse_raw_naive_exp": 418.8717314261909,
+      "mae_raw_naive_exp": 92.77998880637021,
+      "n": 60437
+    },
+    "spline4": {
+      "rmse_log": 1.985366976029477,
+      "mae_log": 1.6877163833403188,
+      "r2_log": 0.03298022665956524,
+      "rmse_raw_naive_exp": 418.99548092444564,
+      "mae_raw_naive_exp": 92.6220087353898,
+      "n": 60437
+    },
+    "ushape": {
+      "rmse_log": 1.9851008029817259,
+      "mae_log": 1.6878333068817366,
+      "r2_log": 0.03323950098949713,
+      "rmse_raw_naive_exp": 419.06158844835636,
+      "mae_raw_naive_exp": 92.61333566266161,
+      "n": 60437
+    },
+    "softplus": {
+      "rmse_log": 1.9870226217841584,
+      "mae_log": 1.6906486166384254,
+      "r2_log": 0.03136671160088966,
+      "rmse_raw_naive_exp": 419.10014813635314,
+      "mae_raw_naive_exp": 92.63049303879932,
+      "n": 60437
+    }
+  },
+  "metrics_high_gust": {
+    "quad": {
+      "rmse_log": 2.209392400646244,
+      "mae_log": 1.9046901826981135,
+      "r2_log": 0.03031762257633508,
+      "rmse_raw_naive_exp": 468.720967166008,
+      "mae_raw_naive_exp": 162.80757770648077,
+      "n": 5996
+    },
+    "spline4": {
+      "rmse_log": 2.1832762356328734,
+      "mae_log": 1.9084167364734181,
+      "r2_log": 0.053106432100754386,
+      "rmse_raw_naive_exp": 469.7892489627917,
+      "mae_raw_naive_exp": 161.42292421168523,
+      "n": 5996
+    },
+    "ushape": {
+      "rmse_log": 2.1813271109546033,
+      "mae_log": 1.904833275170824,
+      "r2_log": 0.05479636006585775,
+      "rmse_raw_naive_exp": 470.3585416795463,
+      "mae_raw_naive_exp": 161.31586054325726,
+      "n": 5996
+    },
+    "softplus": {
+      "rmse_log": 2.1824683003725927,
+      "mae_log": 1.9054811439192934,
+      "r2_log": 0.05380711040878183,
+      "rmse_raw_naive_exp": 470.4314703063746,
+      "mae_raw_naive_exp": 161.33379818754776,
+      "n": 5996
+    }
+  },
+  "paired_ci_vs_quad": {
+    "spline4": {
+      "rmse_diff_point": -0.0030621329071560677,
+      "rmse_diff_ci95": [
+        -0.007887910305511992,
+        4.271747520941389e-05
+      ],
+      "mae_diff_point": -0.0026473323839522056,
+      "mae_diff_ci95": [
+        -0.004706437424559629,
+        -0.0008587671030114707
+      ]
+    },
+    "ushape": {
+      "rmse_diff_point": -0.0033283059549071847,
+      "rmse_diff_ci95": [
+        -0.008449798750796421,
+        -0.00021707621852137268
+      ],
+      "mae_diff_point": -0.002530408842534415,
+      "mae_diff_ci95": [
+        -0.004630021283329616,
+        -0.0009334266682050456
+      ]
+    },
+    "softplus": {
+      "rmse_diff_point": -0.0014064871524746003,
+      "rmse_diff_ci95": [
+        -0.006835217488439594,
+        0.0019616260848000604
+      ],
+      "mae_diff_point": 0.00028490091415434016,
+      "mae_diff_ci95": [
+        -0.001969840603056916,
+        0.002166384115396097
+      ]
+    }
+  },
+  "complexity": {
+    "quad": {
+      "n_gust_params": 2,
+      "n_hyperparams": 0,
+      "note": "linear+quadratic, no tuning"
+    },
+    "spline4": {
+      "n_gust_params": 4,
+      "n_hyperparams": 1,
+      "note": "df=4 fixed a priori (not tuned per fold)"
+    },
+    "ushape": {
+      "n_gust_params": 4,
+      "n_hyperparams": 1,
+      "note": "knot=13.500 m/s chosen by full-sample grid search, fixed across folds"
+    },
+    "softplus": {
+      "n_gust_params": 3,
+      "n_hyperparams": 2,
+      "note": "b,c refit per fold via 16-start Nelder-Mead (nonconvex)"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "event_hash_matches_manifest": true,
+  "event_rows": 135025,
+  "unique_event_ids": 135025,
+  "duplicate_event_ids": 0,
+  "unresolved_event_identity_n": 2,
+  "zero_C_in_E_parent_n": 8979,
+  "negative_C_in_E_parent_n": 0,
+  "nonpositive_D_in_R_parent_n": 0,
+  "window_days_sum": 27.0,
+  "window_union_days": 25,
+  "protected_groups": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5"
+  ],
+  "max_protected_groups_per_event": 1,
+  "multi_named_membership_events": 702,
+  "utc_london_membership_difference_events": 6,
+  "storm_union_unique_events": 7300,
+  "time_min": "2021-04-01 00:07:00+00:00",
+  "time_max": "2024-03-31 23:54:00+00:00",
+  "max_end": "2024-04-25 11:23:00+00:00",
+  "stage_a_pass": true
+}

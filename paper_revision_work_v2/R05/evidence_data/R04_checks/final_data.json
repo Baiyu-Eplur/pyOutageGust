@@ -1,0 +1,35 @@
+{
+  "fits": 0,
+  "R1_reload_checked": [
+    {
+      "group": "main",
+      "target": "E0",
+      "n": 60436,
+      "all_archives_and_OOF_passed": true
+    },
+    {
+      "group": "main",
+      "target": "R0c",
+      "n": 59832,
+      "all_archives_and_OOF_passed": true
+    },
+    {
+      "group": "weather",
+      "target": "E0",
+      "n": 9857,
+      "all_archives_and_OOF_passed": true
+    },
+    {
+      "group": "weather",
+      "target": "R0c",
+      "n": 9758,
+      "all_archives_and_OOF_passed": true
+    }
+  ],
+  "numeric_slots": 950,
+  "cell_bindings": 182,
+  "unmapped_legacy_slots": 0,
+  "Word_modified": false,
+  "paragraph_bindings": 64,
+  "requires_sentence_rewrite_slots": 65
+}

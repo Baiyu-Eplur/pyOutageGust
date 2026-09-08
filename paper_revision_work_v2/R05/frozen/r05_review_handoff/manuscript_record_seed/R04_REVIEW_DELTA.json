@@ -1,0 +1,1019 @@
+{
+  "version": "MR-v1.4-R04-review",
+  "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+  "base_version": "MR-v1.3-R04",
+  "base_revision_items_sha256": "da07fafb9981b6a826beb5c904c01d32674b8261262e0cc59661ac563048d553",
+  "stage_authorization": "handoff instruction for R05 only; this review does not mark R05 completed",
+  "merge_policy": "preserve author decisions and histories; merge by stable MR/CL/review ids; keep newer local edits and resolve content conflicts explicitly",
+  "findings": [
+    {
+      "id": "RV04-F01",
+      "title": "6个分期双向协方差的非半正定条件及消费者",
+      "mrs": [
+        "MR11",
+        "MR20",
+        "MR25"
+      ],
+      "status": "directly_observed_in_returned_check_json; actual_matrix_and_consumer_audit_pending_R05",
+      "sources": [
+        "R04/checks/period_covariance_acceptance.json",
+        "R04/src/calendar_repair.py",
+        "R04/tables/period_comparison.csv"
+      ],
+      "action": "核实矩阵条件、有效k、变换方差和实际推断消费者；图10是点估计，现有物理SE来自LAD；不得直接判定全部模型错误或默默PSD修正。"
+    },
+    {
+      "id": "RV04-F02",
+      "title": "最小阶段编号比较的并列选择及有效分母",
+      "mrs": [
+        "MR04",
+        "MR21"
+      ],
+      "status": "potential_issue_to_verify; comparator_bug_not_confirmed",
+      "sources": [
+        "R04/src/report_data.py",
+        "R04/tables/customer_aggregation_comparison.json"
+      ],
+      "action": "核实阶段数值类型、并列客户冲突、最小编号大于1、最早时刻客户字段及三个有效n；共同人口比较，必要时最小修复比较生产者。"
+    },
+    {
+      "id": "RV04-F03",
+      "title": "最终图表的可重复生成顺序",
+      "mrs": [
+        "MR15",
+        "MR17",
+        "MR20",
+        "MR21",
+        "MR25"
+      ],
+      "status": "multiple_consumer_versions_observed; local_release_entry_not_confirmed_here",
+      "sources": [
+        "R04/src/figures.py",
+        "R04/src/final_data.py",
+        "R04/src/product_complete.py",
+        "R04/src/artifact_acceptance.py",
+        "R04/figures/FIGURE_MANIFEST.json"
+      ],
+      "action": "验证或补充最终消费者入口，在新目录由既有档案重建12组当前图表，防止初始渲染器恢复旧版本；原则上零拟合。"
+    },
+    {
+      "id": "RV04-F04",
+      "title": "数字槽位与整句语义迁移",
+      "mrs": [
+        "MR25",
+        "MR26"
+      ],
+      "status": "declared_R04_mapping_limit; semantic_migration_pending",
+      "sources": [
+        "R04/tables/ALL_MANUSCRIPT_NUMERIC_SLOTS.csv",
+        "R04/tables/CURRENT_NUMERIC_BINDINGS.csv",
+        "R04/tables/CURRENT_PARAGRAPH_NUMERIC_BINDINGS.csv"
+      ],
+      "action": "审查182表格和64段落绑定；65个组合槽位对应11段，逐段候选改写，所有其他经验性数字有明确处置；不改Word。"
+    },
+    {
+      "id": "RV04-F05",
+      "title": "天气R0c两种R²差异的折级分解",
+      "mrs": [
+        "MR12",
+        "MR13"
+      ],
+      "status": "score_gap_confirmed; not_itself_a_scoring_error",
+      "sources": [
+        "R04/tables/core_metrics.csv"
+      ],
+      "action": "从已有OOF核SSE/SST分解及每折n/均值，解释0.237571与0.165545；不按分数择优改指标。"
+    },
+    {
+      "id": "RV04-F06",
+      "title": "区域与天气来源的未闭合条件",
+      "mrs": [
+        "MR05",
+        "MR06",
+        "MR07",
+        "MR08",
+        "MR27",
+        "MR29"
+      ],
+      "status": "preexisting_scientific_and_source_conditions_remain_open",
+      "sources": [
+        "DECISIONS.md",
+        "manuscript_record/REVISION_ITEMS.json"
+      ],
+      "action": "保留Buck已决定重建并对照，盘点LSOA/年份/权重依赖；区分键连接与边界兼容，缓存代理与真实onset/产品语义。"
+    }
+  ],
+  "items": [
+    {
+      "target_mr": "MR01",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "当前结果实际消费冻结输入；本轮未从原始数据独立重构。",
+      "action": "R05追踪输入→完整档案→消费者，方法保留最早记录时间代理。",
+      "release_condition": "核心链本地验收；真实onset仍需来源。",
+      "findings": [],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P017",
+        "D-P039",
+        "D-P054",
+        "D-P102",
+        "A-P060"
+      ],
+      "claim_ids": [
+        "CL01"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR02",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "聚合风暴统计比例已算术复核；25唯一UTC日不同27累计窗口日。",
+      "action": "方法、风暴段、图3/9同步更新日历及去重定义。",
+      "release_condition": "R05核实际成员；跨日依赖/业务日历交后续协议。",
+      "findings": [],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P016",
+        "D-P017",
+        "D-P051",
+        "A-P013",
+        "A-P027",
+        "A-P060"
+      ],
+      "claim_ids": [
+        "CL01",
+        "CL04"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR03",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "没有返回足以解决未决业务身份的新源证据。",
+      "action": "保持原始ID和冲突记录，不以正式重跑消除身份不确定性。",
+      "release_condition": "所涉源记录/业务定义；不泛化阻止所有无关分析。",
+      "findings": [],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P016",
+        "D-P023",
+        "D-P029",
+        "D-P038",
+        "A-P024",
+        "A-P025",
+        "A-P027"
+      ],
+      "claim_ids": [
+        "CL01"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR04",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "两均值之比算术吻合；最早时刻有效n未单列，最小编号并列客户冲突未见专门验收。",
+      "action": "执行F02；附录B.1及摘要/正文消歧最小可用编号与最早时刻，检查后再写精确比值。",
+      "release_condition": "F02本地记录选择/共同有效人口通过；初期信息不据此确认。",
+      "findings": [
+        "RV04-F02"
+      ],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P007",
+        "D-P023",
+        "D-P025",
+        "D-P028",
+        "D-P030",
+        "A-P003",
+        "A-P018",
+        "A-P020",
+        "A-P023",
+        "A-P025"
+      ],
+      "claim_ids": [
+        "CL01"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR05",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "39.4m/s来自既有天气代理；新B1没有自动补全产品/真实onset证明。",
+      "action": "方法和风暴背景区分缓存/产品值与现场实测；R05列具体来源缺口。",
+      "release_condition": "历史产品、时区/时间窗及源语义证据。",
+      "findings": [
+        "RV04-F06"
+      ],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P006",
+        "D-P017",
+        "D-P040",
+        "D-P103",
+        "D-P138"
+      ],
+      "claim_ids": [
+        "CL01",
+        "CL02"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR06",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "gap的新定义未因重跑改变。",
+      "action": "保持LAD内LSOA极差；D-P041不能继续说与全国平均之差。",
+      "release_condition": "区域变量源定义及Buck重建对照。",
+      "findings": [
+        "RV04-F06"
+      ],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P018",
+        "D-P040",
+        "D-P041",
+        "D-T02",
+        "A-T02"
+      ],
+      "claim_ids": [
+        "CL01",
+        "CL05"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR07",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "当前模型消费Moran，但原空间权重来源仍未获得。",
+      "action": "附录A将空间权重/层级作为独立来源条目。",
+      "release_condition": "按实际材料重建或核实；不从地图推机制。",
+      "findings": [
+        "RV04-F06"
+      ],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P018",
+        "D-T02",
+        "A-T02",
+        "A-P011"
+      ],
+      "claim_ids": [
+        "CL05",
+        "CL06"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR08",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "D03要求保留代理、后续LSOA重建并对照；尚未完成。",
+      "action": "R05材料盘点和最小方案，V00明确先后依赖；不能改成可选T12。",
+      "release_condition": "完成原决定所需重建及对照，再审相关估计/地图。",
+      "findings": [
+        "RV04-F06"
+      ],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P018",
+        "D-P041",
+        "D-P087",
+        "D-P089",
+        "A-T02",
+        "A-P013",
+        "A-T08",
+        "A-T09"
+      ],
+      "claim_ids": [
+        "CL05",
+        "CL06"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR09",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "六原因合并人口n117108；一个恢复模型全拟合+5OOF，非6个独立模型。",
+      "action": "附录C按实际人口/尾部与模型数说明；折显著次数只作描述。",
+      "release_condition": "标签官方来源和样本限制的科学含义仍有限。",
+      "findings": [],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P038",
+        "D-P096",
+        "D-P097",
+        "A-P005",
+        "A-P007",
+        "A-T01",
+        "A-P070"
+      ],
+      "claim_ids": [
+        "CL01",
+        "CL03"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR10",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "B1主/天气E/R各自共用n60436/9857；旧全局p99分支R1人口不同。",
+      "action": "摘要、样本流、表1与尾部段整体改写；不按OOF表现选择删尾。",
+      "release_condition": "R05成员核对；尾部敏感性在共同V协议上做。",
+      "findings": [],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P002",
+        "D-P032",
+        "D-T01",
+        "D-P038",
+        "D-P039",
+        "D-P097",
+        "A-T03"
+      ],
+      "claim_ids": [
+        "CL01",
+        "CL03"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR11",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "分期6个双向矩阵有实质负特征值，但当前物理项SE使用LAD；主/天气VIF不同。",
+      "action": "执行F01，分开矩阵、消费者、物理q和2q；改D-P041/116与附录F/H。",
+      "release_condition": "R05局部推断适用范围明确；更广推断比较交V。",
+      "findings": [
+        "RV04-F01"
+      ],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P040",
+        "D-P041",
+        "D-P057",
+        "D-P060",
+        "D-P061",
+        "D-P064",
+        "A-P065"
+      ],
+      "claim_ids": [
+        "CL02",
+        "CL05"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR12",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "R1/B1共24行SSE/SST→pooled R²吻合；天气R0c与mean-fold相差0.072025503。",
+      "action": "执行F05；正文保留pooled主指标，附每折和mean-fold，解释分母/折间项。",
+      "release_condition": "本地OOF成员及SST分解，不用已确认算术掩盖评估身份。",
+      "findings": [
+        "RV04-F05"
+      ],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P054",
+        "D-P084",
+        "D-P086",
+        "D-P101",
+        "D-T04"
+      ],
+      "claim_ids": [
+        "CL03",
+        "CL04"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR13",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "30项嵌套增量算术吻合；主G|K<K|G、天气相反；天气E0增量+0.382246pp。",
+      "action": "撤去天气E负增量故事；用G|K符号并注明条件，不以斜杠表达除法；排序是点估计。",
+      "release_condition": "配对不确定性、共同过程及跨组支持仍待V。",
+      "findings": [
+        "RV04-F05"
+      ],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P002",
+        "D-P010",
+        "D-P084",
+        "D-P094",
+        "D-P097",
+        "D-T04",
+        "D-P100",
+        "D-P108",
+        "D-P119"
+      ],
+      "claim_ids": [
+        "CL03"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR14",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "日期OOF的身份与完整天气过程留出不同，窗口有跨日重叠。",
+      "action": "风暴/后期段均保留回顾性身份；V00计划完整过程单元。",
+      "release_condition": "V02过程依赖评价；不把现有分折当该验证已做。",
+      "findings": [],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P011",
+        "D-P051",
+        "D-P054",
+        "D-P102",
+        "D-P105",
+        "D-P114",
+        "A-P057",
+        "A-P060"
+      ],
+      "claim_ids": [
+        "CL04"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR15",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "当前图9尺度身份据R04档案检查通过；旧初始/最终图消费者仍需入口核实。",
+      "action": "F03确保重生成保持η与ln(1+C)尺度一致；预测身份分面。",
+      "release_condition": "R05消费者复现；工程误差/校准待V。",
+      "findings": [
+        "RV04-F03"
+      ],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P061",
+        "D-P103",
+        "D-P105",
+        "D-P106",
+        "A-P091"
+      ],
+      "claim_ids": [
+        "CL04",
+        "CL05"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR16",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "主4452/60436=7.366470%，客户745372/5622103=13.257886%，聚合比例吻合。",
+      "action": "统一25唯一日/27累计日；主、天气、全主表三种分母明确，图9不当完整过程验证。",
+      "release_condition": "R05核原始窗口成员及当前预测档案；V过程验证。",
+      "findings": [],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P102",
+        "D-P103",
+        "D-P105",
+        "D-P106",
+        "D-P107",
+        "D-P108"
+      ],
+      "claim_ids": [
+        "CL04"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR17",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "重点目视图4，exp(meanη)含义与轴一致；E侧不是直接算术客户均值。",
+      "action": "F03重建后核图4/6/7数学量，E若未减1就对应1+C指数化拟合；图6/7参考不同。",
+      "release_condition": "参考支持和工程校准待V，不能从全局残差均值直接补smearing。",
+      "findings": [
+        "RV04-F03"
+      ],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P061",
+        "D-P077",
+        "D-P079",
+        "D-P087",
+        "D-P089",
+        "D-P093",
+        "A-P091",
+        "A-P092"
+      ],
+      "claim_ids": [
+        "CL05"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR18",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "三阶配对增量E0 0.001931639、R0c 0.000498187由表格复算吻合；4GLM已生成。",
+      "action": "正二次项与小幅三阶改进并列；D-P048从仅待材料改为现有有界证据，警告/无GLM OOF透明。",
+      "release_condition": "V01线性/二次/样条等固定可比协议；不能认定已证明稳健U形。",
+      "findings": [],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P010",
+        "D-P044",
+        "D-P046",
+        "D-P048",
+        "D-P066",
+        "D-P068",
+        "D-P118",
+        "A-P094"
+      ],
+      "claim_ids": [
+        "CL02"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR19",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "8个R1/B1均值气压条件点和q代数换算吻合；主E10.807545无新CI。",
+      "action": "正文/摘要/附录H更新条件点、固定p及各自μ/σ；支持内点不等于稳定阈值。",
+      "release_condition": "若保留核心最低点地位，在V协议中取得形状/合格区间证据。",
+      "findings": [],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P002",
+        "D-P071",
+        "D-P073",
+        "D-P075",
+        "D-P079",
+        "D-P118",
+        "D-P120",
+        "A-P076",
+        "A-P080",
+        "A-P083",
+        "A-P086"
+      ],
+      "claim_ids": [
+        "CL02"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR20",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "图10确为全拟合物理q点估计；等价基已验收；主E物理q约翻倍，天气早E无支持内最低点。",
+      "action": "保持编码已修复与时间稳定性待证两个状态；执行F01/F03；改旧CV加权句。",
+      "release_condition": "R05协方差消费者核清；V时间稳定性及推断。",
+      "findings": [
+        "RV04-F01",
+        "RV04-F03"
+      ],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P055",
+        "D-P111",
+        "D-P112",
+        "D-P114",
+        "D-P115",
+        "A-P061",
+        "A-P063",
+        "A-P089"
+      ],
+      "claim_ids": [
+        "CL02",
+        "CL04"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR21",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "当前D1主pooled21.451→17.639→15.846→11.708小时，目视/JSON一致；分层未全单调。",
+      "action": "附录D用中性标题并整段重写；F02核缺首阶段/编号；旧开发期/全期对应物分开。",
+      "release_condition": "记录质量、缺首阶段排除及尾部共同敏感性待V。",
+      "findings": [
+        "RV04-F02",
+        "RV04-F03"
+      ],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P032",
+        "D-P036",
+        "D-P080",
+        "D-P121",
+        "A-P027",
+        "A-P035",
+        "A-P044",
+        "A-P048",
+        "A-P050",
+        "A-P052",
+        "A-P054",
+        "A-P055"
+      ],
+      "claim_ids": [
+        "CL01",
+        "CL06"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR22",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "K使用最终聚合客户数；新点排序没有改变它的信息时点。",
+      "action": "在摘要、方法、信息贡献与Discussion说明事后比较；初期模型仅在选定用途时做。",
+      "release_condition": "真实可用信息时点及工程应用证据。",
+      "findings": [],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P007",
+        "D-P012",
+        "D-P040",
+        "D-P058",
+        "D-P080",
+        "D-P094",
+        "D-P119",
+        "D-P124",
+        "A-P003",
+        "A-P052"
+      ],
+      "claim_ids": [
+        "CL03",
+        "CL05"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR23",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "现有误差/残差诊断不是条件算术均值校准；exp残差均值仅诊断。",
+      "action": "写清log/exp/客户/小时四层；将场景误差和校准最小方案交V03。",
+      "release_condition": "有支持的工程场景、留出误差和可解释基准。",
+      "findings": [],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P061",
+        "D-P077",
+        "D-P090",
+        "D-P103",
+        "D-P106",
+        "D-P107",
+        "D-P122",
+        "A-P091",
+        "A-P092"
+      ],
+      "claim_ids": [
+        "CL05"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR24",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "图6/7已生成，但是否占据正文核心仍是结构问题。",
+      "action": "作为补充参考量级保留候选，迁附录或保留正文待作者；不自行删除。",
+      "release_condition": "作者图件职责决定及区域来源/工程证据。",
+      "findings": [],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P087",
+        "D-P089",
+        "D-P090",
+        "D-P092",
+        "D-P093"
+      ],
+      "claim_ids": [
+        "CL05",
+        "CL06"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR25",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "包清单218/218、来源44/44、台账96/96哈希吻合；381项B1仅77项随包可验。",
+      "action": "F03/F04补当前消费者复现与完整数字迁移；950槽位不等于全稿语义关闭；生产164/尝试166分清。",
+      "release_condition": "R05本地完整档案/最终消费者/迁移图通过；Word留待W。",
+      "findings": [
+        "RV04-F01",
+        "RV04-F03",
+        "RV04-F04"
+      ],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P041",
+        "D-P048",
+        "D-P079",
+        "D-P114",
+        "A-P065",
+        "A-P094"
+      ],
+      "claim_ids": [
+        "CL01",
+        "CL02",
+        "CL03",
+        "CL04",
+        "CL05"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR26",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "完整MR-v1.3已返回；本轮基于它更新全部29MR/6CL，保存历史，不再是局部补丁。",
+      "action": "当前台账单独呈现最新action；六章方案待审；反向证据、逐章/段落/附录修改持久记录。",
+      "release_condition": "R05完整迁移与V证据后作者决定结构，再W落实。",
+      "findings": [
+        "RV04-F04"
+      ],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P002",
+        "D-P010",
+        "D-P013",
+        "D-P048",
+        "D-P055",
+        "D-P074",
+        "D-P075",
+        "D-P118",
+        "D-P123",
+        "A-P056",
+        "A-P078",
+        "A-P086",
+        "A-P094"
+      ],
+      "claim_ids": [
+        "CL01",
+        "CL02",
+        "CL03",
+        "CL04",
+        "CL05"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR27",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "正式拟合没有生成新的官方数据字典、气象产品或引用证据。",
+      "action": "来源问题逐项绑定受影响句，文献/定义数字不机械替换。",
+      "release_condition": "R05可做来源核实和缺口清单；W最终引用检查。",
+      "findings": [
+        "RV04-F06"
+      ],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P006",
+        "D-P008",
+        "D-P016",
+        "D-P017",
+        "D-P018",
+        "D-P136",
+        "D-P138",
+        "D-P142",
+        "A-P007",
+        "A-T02"
+      ],
+      "claim_ids": [
+        "CL01",
+        "CL05"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR28",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "C10编号缺口闭合的历史状态保留，不是Buck科学重建完成。",
+      "action": "代码编号历史与MR08科学决定分开更新。",
+      "release_condition": "MR08重建对照仍须落实。",
+      "findings": [],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P018",
+        "A-T02"
+      ],
+      "claim_ids": [
+        "CL05",
+        "CL06"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    },
+    {
+      "target_mr": "MR29",
+      "review_id": "RV-R04-COMPLETE-PACKAGE-20260905",
+      "version": "MR-v1.4-R04-review",
+      "evidence_received_and_reviewed": "113可连接码与主111/天气105模型覆盖不同；无新增边界等价证明。",
+      "action": "附录A记录实际年份/键/几何覆盖，R05盘点兼容证据和敏感性依赖。",
+      "release_condition": "LAD21/23边界兼容及指标年界匹配。",
+      "findings": [
+        "RV04-F06"
+      ],
+      "source_ids": [
+        "SRC39",
+        "SRC40",
+        "SRC41",
+        "SRC42"
+      ],
+      "locations": [
+        "D-P018",
+        "D-P041",
+        "A-P013",
+        "A-T02"
+      ],
+      "claim_ids": [
+        "CL01",
+        "CL05"
+      ],
+      "Word_status": "尚未写入Word",
+      "evidence_level": "supplied_R04_materials_reviewed; selected_arithmetic_and_hashes_independently_checked; raw_project_not_rerun_here"
+    }
+  ],
+  "chapter_plan": "R04_REVIEW_WRITING_IMPACT.md",
+  "Word_modified": false
+}

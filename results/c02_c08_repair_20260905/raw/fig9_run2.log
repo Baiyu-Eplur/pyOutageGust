@@ -1,0 +1,51 @@
+[corrected-sample] Loading OLD-style event table and applying C01 corrections (Step1+Step2 outputs)...
+[corrected-sample] Corrected matched sample: 121313 events (12269 weather-corrected, 617 weather-nulled).
+[v16-clean] Building weather-matched sample (command #9 Step0)...
+[v16-clean] Excluding locked_temporal_test date block (>= 2023-09-30) BEFORE fold construction...
+[v16-clean] Weather-matched sample: 121313 -> 97664 after locked-window exclusion (23649 removed, 19.49%).
+[v3_validation] Step 1: checking LAD21CD coverage in the weather-matched sample...
+[v3_validation] Step 1 done: gap-filled 112 events, 112 still missing.
+[v3_validation] Step 2: building GroupKFold(date, 5) folds...
+[v3_validation] Step 2 done: 0 dates crossing folds (expect 0).
+[v16-clean] Clean complete-predictor sample: n=94383.
+[v16-clean] Verified: max date in clean sample = 2023-09-29 00:00:00 (< 2023-09-30 00:00:00).
+[v16-clean] Clean weather_natural+technical_asset sample: n=48339.
+[v16-clean] Clean E0' n=48324; clean R0c'_B n=47841 (p99 cap=194.79h).
+[v19] Building weather-matched sample (command #9 Step0)...
+[v19] Restricting to the locked_temporal_test date block [2023-09-30, 2024-03-31]...
+[v19] Weather-matched sample: 121313 -> 23649 in locked window.
+[v3_validation] Step 1: checking LAD21CD coverage in the weather-matched sample...
+[v3_validation] Step 1 done: gap-filled 25 events, 25 still missing.
+[v19] Holdout complete-predictor sample: n=22913.
+[v19] Verified: holdout date range [2023-09-30 00:00:00, 2024-03-31 00:00:00] within locked window.
+[v19] Holdout weather_natural+technical_asset sample: n=12114.
+[v19] Holdout E0 n=12113; holdout R0c n=11991 (p99 cap=167.39h).
+[corrected-sample] CORRECTED final combined sample: WT n=60453, E0 n=60437, R0c n=59834 (p99 cap=192.08h)
+[fig9-final] R0c training-sample p99 cap (max duration_B actually used in fitting): 192.08h
+[fig9-final] Refitting E0/R0c final models (deterministic, on corrected data)...
+[fig9-final] Arwen: E0 n=270, R0c n=270 (1 excluded by p99 truncation, i.e. duration_B > 192.1h)
+[fig9-final] Dudley: E0 n=291, R0c n=291 (3 excluded by p99 truncation, i.e. duration_B > 192.1h)
+[fig9-final] Eunice: E0 n=1659, R0c n=1659 (23 excluded by p99 truncation, i.e. duration_B > 192.1h)
+[fig9-final] Franklin: E0 n=1132, R0c n=1132 (7 excluded by p99 truncation, i.e. duration_B > 192.1h)
+[fig9-final] Babet: E0 n=509, R0c n=509 (3 excluded by p99 truncation, i.e. duration_B > 192.1h)
+[fig9-final] Ciaran: E0 n=576, R0c n=576 (4 excluded by p99 truncation, i.e. duration_B > 192.1h)
+[fig9-final] Henk: E0 n=494, R0c n=494 (7 excluded by p99 truncation, i.e. duration_B > 192.1h)
+[fig9-final] R0c fit statistics split by training-range status:
+      storm                     subset    n  pearson_r     pearson_p      mae
+      Arwen          in_training_range  269   0.248059  3.888643e-05 0.794436
+      Arwen excluded_by_p99_truncation    1        NaN           NaN      NaN
+     Dudley          in_training_range  288   0.101413  8.579885e-02 1.100825
+     Dudley excluded_by_p99_truncation    3  -0.961678  1.768141e-01 4.243011
+     Eunice          in_training_range 1636   0.209617  1.059019e-17 1.511431
+     Eunice excluded_by_p99_truncation   23  -0.244770  2.603162e-01 2.934045
+   Franklin          in_training_range 1125   0.270755  2.363359e-20 1.570376
+   Franklin excluded_by_p99_truncation    7  -0.818033  2.453186e-02 3.809907
+      Babet          in_training_range  506   0.305545  2.144582e-12 0.859635
+      Babet excluded_by_p99_truncation    3  -0.380676  7.513829e-01 4.971090
+     Ciaran          in_training_range  572   0.358961  7.760397e-19 0.955906
+     Ciaran excluded_by_p99_truncation    4   0.487438  5.125616e-01 5.146261
+       Henk          in_training_range  487   0.194454  1.549646e-05 1.030249
+       Henk excluded_by_p99_truncation    7  -0.279164  5.443257e-01 4.481959
+FULL_SAMPLE          in_training_range 4883   0.377769 1.902327e-165 1.280688
+FULL_SAMPLE excluded_by_p99_truncation   48  -0.382201  7.345040e-03 3.708738
+[fig9-final] Saved Figure_9_storm_validation (final, C01+C04+C05 corrected).

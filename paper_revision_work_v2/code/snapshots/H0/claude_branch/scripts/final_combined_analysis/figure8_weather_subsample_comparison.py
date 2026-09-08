@@ -1,0 +1,94 @@
+"""Command #37 Figure 8: main-specification vs weather_natural-subsample
+comparison of marginal OOS R^2 contribution, highlighting command #25's
+finding that the recovery model's gust contribution overtakes customers_v2
+in the weather_natural subsample. Numbers read directly from existing CSVs
+(command #21's raw/step2_*, command #25's raw/step17_*) -- no new computation."""
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+sys.path.insert(0, str(Path(__file__).parent))
+from figure_style import apply_style, mm_to_in, save_fig, panel_label, DOUBLE_COL_MM  # noqa: E402
+
+RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\raw")
+OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\figures")
+OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def log_step(msg):
+    print(f"[fig8] {msg}", flush=True)
+
+
+def main():
+    apply_style()
+    e0_main = pd.read_csv(RAW_DIR / "step2_E0_variance_decomposition.csv")
+    e0_wn = pd.read_csv(RAW_DIR / "step17_E0_variance_decomposition.csv")
+    r0c_main = pd.read_csv(RAW_DIR / "step2_R0c_order_gust_then_customers.csv")
+    r0c_wn = pd.read_csv(RAW_DIR / "step17_R0c_order_gust_then_customers.csv")
+
+    e0_main_gust = e0_main.loc[e0_main["step"] == "gust", "r2_oos_5fold_increment"].iloc[0] * 100
+    e0_wn_gust = e0_wn.loc[e0_wn["step"] == "gust", "r2_oos_5fold_increment"].iloc[0] * 100
+    r0c_main_gust = r0c_main.loc[r0c_main["step"] == "gust", "r2_oos_5fold_increment"].iloc[0] * 100
+    r0c_wn_gust = r0c_wn.loc[r0c_wn["step"] == "gust", "r2_oos_5fold_increment"].iloc[0] * 100
+    r0c_main_cust = r0c_main.loc[r0c_main["step"] == "customers", "r2_oos_5fold_increment"].iloc[0] * 100
+    r0c_wn_cust = r0c_wn.loc[r0c_wn["step"] == "customers", "r2_oos_5fold_increment"].iloc[0] * 100
+    log_step(f"E0 gust: main={e0_main_gust:.4f}, wn={e0_wn_gust:.4f}")
+    log_step(f"R0c gust: main={r0c_main_gust:.4f}, wn={r0c_wn_gust:.4f}; "
+              f"customers: main={r0c_main_cust:.4f}, wn={r0c_wn_cust:.4f}")
+
+    fig_w = mm_to_in(DOUBLE_COL_MM)
+    fig, axes = plt.subplots(1, 2, figsize=(fig_w, fig_w * 0.45))
+
+    # ---- (a) E0: gust marginal contribution, main vs weather_natural ----
+    ax = axes[0]
+    labels_a = ["Main spec.\n(n=60,437)", "weather_natural\n(n=9,857)"]
+    vals_a = [e0_main_gust, e0_wn_gust]
+    bars = ax.bar(labels_a, vals_a, color=["#1b9e77", "#66c2a5"], width=0.5)
+    for b, v in zip(bars, vals_a):
+        va = "bottom" if v >= 0 else "top"
+        offset = 0.05 if v >= 0 else -0.05
+        ax.text(b.get_x() + b.get_width() / 2, v + offset, f"{v:.2f}pp", ha="center", va=va, fontsize=9)
+    ax.set_ylim(-0.35, 1.25)
+    ax.axhline(0, color="#888888", linewidth=0.6)
+    ax.set_ylabel("Gust marginal OOS R\u00b2 (pp)")
+    ax.text(0.95, 0.95, "E0 (exposure)", transform=ax.transAxes, fontsize=9,
+             va="top", ha="right", color="#444444")
+    panel_label(ax, "(a)")
+
+    # ---- (b) R0c: gust vs customers marginal contribution, main vs weather_natural ----
+    ax = axes[1]
+    x = np.arange(2)
+    width = 0.36
+    gust_bars = [r0c_main_gust, r0c_wn_gust]
+    cust_bars = [r0c_main_cust, r0c_wn_cust]
+    ax.bar(x - width / 2, gust_bars, width, label="Gust", color="#1b9e77")
+    ax.bar(x + width / 2, cust_bars, width, label="Affected customers", color="#7570b3")
+    for xi, v in zip(x - width / 2, gust_bars):
+        ax.text(xi, v + 0.1, f"{v:.2f}", ha="center", va="bottom", fontsize=9)
+    for xi, v in zip(x + width / 2, cust_bars):
+        ax.text(xi, v + 0.1, f"{v:.2f}", ha="center", va="bottom", fontsize=9)
+    ax.set_xticks(x)
+    ax.set_xticklabels(["Main spec.\n(n=59,834)", "weather_natural\n(n=9,758)"])
+    ax.set_ylabel("Marginal OOS R\u00b2 (pp)")
+    ax.legend(frameon=False, loc="upper left")
+    ax.text(0.95, 0.95, "R0c (recovery)", transform=ax.transAxes, fontsize=9,
+             va="top", ha="right", color="#444444")
+    panel_label(ax, "(b)")
+
+    for ax in axes:
+        ax.spines["top"].set_visible(False)
+        ax.spines["right"].set_visible(False)
+
+    plt.tight_layout()
+    save_fig(fig, OUT_DIR, "Figure_8_weather_subsample_comparison")
+    plt.close(fig)
+    log_step("Saved Figure_8_weather_subsample_comparison.")
+
+
+if __name__ == "__main__":
+    main()

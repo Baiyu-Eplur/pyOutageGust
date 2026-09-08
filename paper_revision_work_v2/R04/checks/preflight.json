@@ -1,0 +1,22 @@
+{
+  "timestamp_utc": "2026-09-05T21:22:31.182717+00:00",
+  "previous_artifacts_verified": 8637,
+  "source_map": {
+    "RV03-S01": "SRC12",
+    "RV03-S02": "SRC20",
+    "RV03-S03": "SRC24",
+    "RV03-S04": "SRC25",
+    "RV03-S05": "SRC26"
+  },
+  "review_items_merged": 29,
+  "identities": {
+    "event_sha": "8ac332cdb59d5eb961a01146757665a2600ebaada4265c8ac1ac30218c6f066d",
+    "manifest_sha": "950d38b0b1a1d9f334803ef973838a69f2b4d0ecfe4ed5fc539f13a66d290fb1",
+    "fold_sha": "4493523c51e67cc22e5a2636d0e4dc867861c8b2f427f64989015607ed15d876",
+    "formal_config_file_sha": "6a4857760612617b21cc9fe3f0c5b237aaa8c3a198ebe80ff2eec417a125ed43",
+    "formal_config_canonical_sha": "4acf04e7a41e920560b4816351b5c893f16ad4d1c1d8f48cdcecef2a3db94231",
+    "code_identity": "859a02e917d71b4b51333b4db452403a97f1e6c479b6faf654d79f988c553846"
+  },
+  "R03_core_reuse": "frozen local copied source/runtime; do not recopy libraries",
+  "no_models_yet": true
+}

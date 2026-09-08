@@ -1,0 +1,12 @@
+run_id: "X01_20260906_001"
+seed: 20260906
+outer_folds: 5
+inner_folds: 3
+block_days: 14
+purge_hours: 48
+bootstrap_oof: 1000
+bootstrap_refits: 200
+controls: ["pressure_msl_0h", "temperature_0h", "precipitation_24h_sum", "log_population", "income_deprivation_rate", "deprivation_gap_pct", "morans_i", "urban_binary", "calendar_sin", "calendar_cos", "calendar_trend", "cause_asset"]
+models: {"M00": "no gust", "M01": "linear predictor", "M02": "quadratic predictor", "M03": "free cubic spline", "M04": "monotone cubic spline", "M05": "Softplus", "M06": "lognormal CDF", "M07": "Logistic", "M08": "Gompertz"}
+input_sha256: "8ac332cdb59d5eb961a01146757665a2600ebaada4265c8ac1ac30218c6f066d"
+completed_at_start: "X01-A contract frozen before fitting"

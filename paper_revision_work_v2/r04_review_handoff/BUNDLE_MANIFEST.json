@@ -1,0 +1,45 @@
+{
+  "review_id": "RV-R03-20260905",
+  "files": [
+    {
+      "path": "R03反馈_论文修订台账增量.md",
+      "size_bytes": 30487,
+      "sha256": "f470198a93c15e0f02dc7a17dc1f23a7a65f11da9602b2baf7fe4a95e25eed9e"
+    },
+    {
+      "path": "R03审阅与R04执行指令.md",
+      "size_bytes": 21726,
+      "sha256": "7cbf340dd2a70b26e4f92a00a1554f265dc56830b4ebcfae79ec9364e51f743d"
+    },
+    {
+      "path": "REVIEW_CHANGELOG.md",
+      "size_bytes": 939,
+      "sha256": "cacaf306b40c54bc7189c9bcb3261a3e4e3eb30c21e3f957f138716c92bdd173"
+    },
+    {
+      "path": "REVISION_REVIEW_PATCH.json",
+      "size_bytes": 33264,
+      "sha256": "dd8e9e155dbb65cd8eaa6a0357000b40f614af51c201335d36919bf52f324805"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "size_bytes": 1813,
+      "sha256": "40195ba8be588d081e55be69e3231999d6b55be87a1518f4599bca12f01421c0"
+    },
+    {
+      "path": "START_HERE.md",
+      "size_bytes": 1741,
+      "sha256": "ff6450b369e892dcfd5483f38fe198896db1bee3621decb2d28a639a0a1f8c71"
+    },
+    {
+      "path": "evidence/RV03-S01_R03_report.md",
+      "size_bytes": 11215,
+      "sha256": "78448761ec44c160360faaaebe9bd4c959c1992e282b38006475b9807a0d6702"
+    },
+    {
+      "path": "evidence/RV03-S02_R04_READINESS.md",
+      "size_bytes": 4004,
+      "sha256": "5ff4d7101fb80175352d997b445c476a7ac293ac94165238f41a1f5a9f8db739"
+    }
+  ]
+}

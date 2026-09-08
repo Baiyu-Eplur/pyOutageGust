@@ -1,0 +1,1416 @@
+[
+  {
+    "id": "A-P001",
+    "type": "paragraph",
+    "style": "1",
+    "math": false,
+    "drawing": false,
+    "text": "Appendix A. Variable definitions and data dictionary"
+  },
+  {
+    "id": "A-P002",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "A.1 Outcome variables"
+  },
+  {
+    "id": "A-P003",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": true,
+    "drawing": false,
+    "text": "Affected customers (Ci) and restoration span (Di) follow Equations 1 and 2. Customer counts sum eligible non-re-interruption stages; the span uses start and end timestamps from all stages, including re-interruptions. The span is not customer minutes lost or customer-weighted average interruption duration. Boundary cases assigned missing customer counts are excluded as described in Appendix B.4. The recovery model uses standardised ln1+Ci and its square as predictors, rather than raw customer counts and their square."
+  },
+  {
+    "id": "A-P004",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "A.2 Cause Code categories"
+  },
+  {
+    "id": "A-P005",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "UKPN records a numeric or short alphanumeric Cause Code for each incident. This paper groups these codes into six categories for analysis. Table A1 reports the original codes assigned to each category."
+  },
+  {
+    "id": "A-P006",
+    "type": "paragraph",
+    "style": "af1",
+    "math": false,
+    "drawing": false,
+    "text": "Table A1. Cause Code categories and their constituent original codes."
+  },
+  {
+    "id": "A-T01",
+    "type": "table",
+    "rows": [
+      [
+        "Category",
+        "Original codes"
+      ],
+      [
+        "Weather-related",
+        "01, 02, 03, 04, 05, 06, 07, 10, 18, 21, 23, 24, 25, 30, 32, 33"
+      ],
+      [
+        "Asset-related",
+        "14, 15, 16, 17, 19, 22, 26, 64, 67, 70, 71, 72, 73, 76, 77, 78, 90, A1, A2"
+      ],
+      [
+        "Third-party",
+        "39, 40, 41, 42, 43, 44, 45, 48, 49, 50, 53, 54, 55, 56, 57, 58"
+      ],
+      [
+        "Human error",
+        "60, 61, 62, 63, 65, 66, 68, 69, 81, 82, 83, 84"
+      ],
+      [
+        "External or customer",
+        "74, 80, 85, 86, 87, 88, 89"
+      ],
+      [
+        "No fault found or unknown",
+        "75, 97, 98, 99, D, X"
+      ]
+    ]
+  },
+  {
+    "id": "A-P007",
+    "type": "paragraph",
+    "style": "af",
+    "math": false,
+    "drawing": false,
+    "text": "These categories are analytical groupings constructed for this paper. A complete documentary mapping from the original codes to official descriptive names was not located in the project records reviewed for this revision. The assignments in Table A1 are retained as the implemented grouping, but their documentary provenance remains a limitation. “Weather-related” therefore refers to this grouping of recorded codes, rather than to independently verified physical causation for every incident."
+  },
+  {
+    "id": "A-P008",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "A.3 Regional covariates"
+  },
+  {
+    "id": "A-P009",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "Table A2 reports the source, computation, and granularity of each regional covariate."
+  },
+  {
+    "id": "A-P010",
+    "type": "paragraph",
+    "style": "af1",
+    "math": false,
+    "drawing": false,
+    "text": "Table A2. Regional covariate sources."
+  },
+  {
+    "id": "A-T02",
+    "type": "table",
+    "rows": [
+      [
+        "Variable",
+        "Source",
+        "Computation",
+        "Granularity"
+      ],
+      [
+        "Log population",
+        "ONS population estimates, detailed time series",
+        "Annual Local Authority District population estimates",
+        "LAD by year"
+      ],
+      [
+        "Income deprivation rate",
+        "English Indices of Deprivation 2019, income deprivation domain",
+        "Official LAD-level rate, used as published",
+        "LAD, single cross-section"
+      ],
+      [
+        "Deprivation gap",
+        "English Indices of Deprivation 2019",
+        "Official LAD-level gap between local and national income deprivation, used as published",
+        "LAD, single cross-section"
+      ],
+      [
+        "Moran’s I",
+        "English Indices of Deprivation 2019",
+        "Official LAD-level spatial clustering statistic for income deprivation, used as published",
+        "LAD, single cross-section"
+      ],
+      [
+        "Urban-rural indicator",
+        "English Indices of Deprivation 2019, rural-urban classification",
+        "Binary indicator, coded 1 where the underlying text classification contains “urban”",
+        "LAD"
+      ]
+    ]
+  },
+  {
+    "id": "A-P011",
+    "type": "paragraph",
+    "style": "af",
+    "math": false,
+    "drawing": false,
+    "text": "Moran’s I, as used in this paper, is a published statistic describing the spatial clustering of income deprivation across neighbouring districts. It is not a spatial autocorrelation term computed on outage outcomes, and the two should not be conflated. Income deprivation rate, the deprivation gap, and Moran’s I are all drawn from the same underlying deprivation dataset and are moderately to highly correlated with one another at the district level, as would be expected of related measures of the same underlying construct."
+  },
+  {
+    "id": "A-P012",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "A.4 Geographic boundaries"
+  },
+  {
+    "id": "A-P013",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "Local Authority District boundaries follow the December 2021 generalised boundary product published by the Office for National Statistics, in the British National Grid coordinate system (EPSG:27700). All geographic figures in this paper are projected to this coordinate system."
+  },
+  {
+    "id": "A-P014",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "A.5 Open items in the data dictionary"
+  },
+  {
+    "id": "A-P015",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "Two aspects of the underlying data could not be confirmed at the level of an official data dictionary or regulatory documentation. First, the exact meaning of incidents recorded with zero affected customers has not been confirmed. Candidate explanations, such as brief voltage disturbances or automatic reclosure events that do not correspond to a sustained loss of supply, remain plausible but unverified. This limitation is also noted in Section 5. Second, a separate field recording whether an incident was linked to an officially designated exceptional event is present in the underlying data, but is populated for only a small fraction of incidents and was not examined further in this paper."
+  },
+  {
+    "id": "A-P016",
+    "type": "paragraph",
+    "style": "1",
+    "math": false,
+    "drawing": false,
+    "text": "Appendix B. Data reconstruction: full evidence chain"
+  },
+  {
+    "id": "A-P017",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "B.1 Comparison against the earliest-stage convention"
+  },
+  {
+    "id": "A-P018",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "Within the final analysis sample (n = 60,437), the mean of affected customers computed by aggregating across stages, following Equation 1, is 93.02. The mean computed using only the customer count reported in the earliest stage of each incident, the convention used when an incident is treated as equivalent to its first recorded stage, is 47.13. The two figures differ by a factor of 1.97 within the same sample."
+  },
+  {
+    "id": "A-P019",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "B.2 Choice of restoration duration measure"
+  },
+  {
+    "id": "A-P020",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "Two candidate measures of restoration duration were considered before settling on the definition used throughout this paper. The first, referred to during development as a customer-weighted average stage duration, weights each stage’s duration by the number of customers affected at that stage. The second is the total incident span defined in Equation 2. Across the full reconstructed dataset (n = 135,025), the customer-weighted measure differs from the earliest-stage convention for 30.6 percent of incidents (those with more than one restoration stage), with a median relative difference of 54.3 percent among this subset."
+  },
+  {
+    "id": "A-P021",
+    "type": "paragraph",
+    "style": "af",
+    "math": false,
+    "drawing": false,
+    "text": "The historical comparison found strong dependence associated with the customer-weighted construction and motivated adopting the total incident span. This comparison was conducted before temporal separation and was not repeated on the separated samples. It is reported as part of the outcome-choice history, not as independent validation or proof that all customer–duration dependence is mechanical. The final models use the span measure throughout."
+  },
+  {
+    "id": "A-P022",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "B.3 Manual cross-check"
+  },
+  {
+    "id": "A-P023",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": true,
+    "drawing": false,
+    "text": "A sample of 500 incidents (250 drawn from incidents with a single restoration stage and 250 from incidents with more than one stage, using a fixed random seed) was independently reconstructed directly from the underlying stage-level fields, without reference to any pre-aggregated columns in the dataset. Affected customers matched exactly for all 500 incidents. Restoration duration matched to within floating-point precision (maximum absolute difference on the order of 10−15 hours) for all 500 incidents."
+  },
+  {
+    "id": "A-P024",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "B.4 Boundary cases"
+  },
+  {
+    "id": "A-P025",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "Sixty-nine incidents in the reconstructed data have every recorded stage flagged as a re-interruption. The implementation assigns their affected-customer count as missing and excludes them from both models. Although an empty sum is conventionally zero, missingness here is an explicit data-quality rule: the recorded stages do not establish an eligible initial customer count."
+  },
+  {
+    "id": "A-P026",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "B.5 Incidents with an apparently missing first stage"
+  },
+  {
+    "id": "A-P027",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "For 14,264 of the 135,025 reconstructed incidents (10.56 percent), the lowest recorded stage number is at least 2. This pattern is spread through the study period rather than concentrated at its boundaries. That distribution alone cannot determine whether stage numbering conventions or incomplete records explain the pattern. These incidents were retained without adjustment. A comparison excluding them has not been completed and remains a sensitivity check."
+  },
+  {
+    "id": "A-P028",
+    "type": "paragraph",
+    "style": "1",
+    "math": false,
+    "drawing": false,
+    "text": "Appendix C. Sample restriction: full six-category comparison"
+  },
+  {
+    "id": "A-P029",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "Appendix F reports the non-calendar coefficient sets for the two-category combined-sample models. A corresponding full six-category coefficient table was not saved in the available project outputs. Table C1 therefore reports only the five-fold gust summaries actually available for the six-category and two-category recovery samples. This is a retrospective sample-sensitivity comparison."
+  },
+  {
+    "id": "A-P030",
+    "type": "paragraph",
+    "style": "af1",
+    "math": false,
+    "drawing": false,
+    "text": "Table C1. Gust coefficients, six-category sample versus the two-category main specification."
+  },
+  {
+    "id": "A-T03",
+    "type": "table",
+    "rows": [
+      [
+        "Term",
+        "Six categories (n = 116,064)",
+        "Main specification (n = 59,834)"
+      ],
+      [
+        "Linear term, same sign across folds",
+        "5/5",
+        "5/5"
+      ],
+      [
+        "Linear term, significant folds",
+        "5/5",
+        "0/5"
+      ],
+      [
+        "Linear term, mean coefficient",
+        "0.0257",
+        "0.0002"
+      ],
+      [
+        "Quadratic term, same sign across folds",
+        "5/5",
+        "5/5"
+      ],
+      [
+        "Quadratic term, significant folds",
+        "5/5",
+        "5/5"
+      ],
+      [
+        "Quadratic term, mean coefficient",
+        "0.0608",
+        "0.0792"
+      ],
+      [
+        "Quadratic term, coefficient of variation",
+        "19.82%",
+        "12.5%"
+      ]
+    ]
+  },
+  {
+    "id": "A-P031",
+    "type": "paragraph",
+    "style": "af",
+    "math": false,
+    "drawing": false,
+    "text": "Restricting the sample retains positive quadratic terms of the same broad order, significant in all five folds, while the linear term becomes small and non-significant in those folds. The comparison demonstrates dependence on sample definition; it does not establish why the coefficients differ or verify the underlying code classifications."
+  },
+  {
+    "id": "A-P032",
+    "type": "paragraph",
+    "style": "1",
+    "math": false,
+    "drawing": false,
+    "text": "Appendix D. The apparent non-monotonic relationship between affected customers and restoration duration"
+  },
+  {
+    "id": "A-P033",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "This appendix examines how the observed customer–duration association changes when incidents are grouped by restoration-stage count and when a stage-count control is added. Linear or rank correlations close to zero would not establish independence. The analyses below distinguish descriptive composition patterns from causal explanations."
+  },
+  {
+    "id": "A-P034",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "D.1 Number of restoration stages"
+  },
+  {
+    "id": "A-P035",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": true,
+    "drawing": false,
+    "text": "Restoration-stage counts, denoted nstages, range from one to several hundred. Table D1 and the original within-subset summaries in Sections D.2–D.3, together with Table D2, use the earlier-period recovery sample (n = 47,840). Figure D1 in Section D.4 instead uses the final combined recovery sample (n = 59,834). In that final sample, stage groups 1, 2, 3–4 and at least 5 contain 35,599, 9,348, 7,907 and 6,980 incidents respectively. These distinct sample bases must not be combined as if they were one analysis."
+  },
+  {
+    "id": "A-P036",
+    "type": "paragraph",
+    "style": "af1",
+    "math": false,
+    "drawing": false,
+    "text": "Table D1. Restoration-stage distribution in the earlier-period recovery sample (n = 47,840)."
+  },
+  {
+    "id": "A-T04",
+    "type": "table",
+    "rows": [
+      [
+        "Stages",
+        "n",
+        "Share"
+      ],
+      [
+        "1",
+        "28,328",
+        "59.2%"
+      ],
+      [
+        "2",
+        "7,563",
+        "15.8%"
+      ],
+      [
+        "3–4",
+        "6,361",
+        "13.3%"
+      ],
+      [
+        "5–9",
+        "4,786",
+        "10.0%"
+      ],
+      [
+        "10+",
+        "802",
+        "1.7%"
+      ]
+    ]
+  },
+  {
+    "id": "A-P037",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "D.2 Relationship within incidents with a single stage"
+  },
+  {
+    "id": "A-P038",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "Among incidents with exactly one restoration stage (59.2 percent of the sample), affected customers and restoration duration show a monotonic negative relationship: mean restoration duration falls from 11.45 hours in the lowest range of affected customers to 3.80 hours in the highest range, with the two lowest ranges close to one another and the decline concentrated at higher values of affected customers."
+  },
+  {
+    "id": "A-P039",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "D.3 Relationship within incidents with more than one stage"
+  },
+  {
+    "id": "A-P040",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "In the earlier-period investigation, the grouped customer–duration relationship was also reported as decreasing within multi-stage subsets, using bins defined separately within each subset. Such grouped summaries should not be read as proof that the fitted derivative is negative at every customer value. Section D.4 uses a common binning and the larger combined sample, which exposes differences in support across stage strata."
+  },
+  {
+    "id": "A-P041",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "D.4 Source of the apparent non-monotonic pattern in the pooled sample"
+  },
+  {
+    "id": "A-P042",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "Without stage stratification, mean duration rises and then falls across customer bins. The mix of stage counts also changes across those bins: multi-stage incidents tend to involve more customers and longer spans. This supports a descriptive composition account of the pooled pattern, but does not prove that stage count is its sole cause or that a direct customer-scale effect is absent."
+  },
+  {
+    "id": "A-P043",
+    "type": "paragraph",
+    "style": "af",
+    "math": false,
+    "drawing": false,
+    "text": "Figure D1 applies common affected-customer quartile bins from the final combined recovery sample (n = 59,834) to every stage stratum. These bins differ from the subset-specific bins used in the earlier-period summaries in Sections D.2 and D.3. Panel (a) shows stratum-specific means and panel (b) the pooled means, using the same combined-sample bin boundaries."
+  },
+  {
+    "id": "A-P044",
+    "type": "paragraph",
+    "style": "af",
+    "math": false,
+    "drawing": false,
+    "text": "In Figure D1a, three of the four strata (single-stage, two-stage, and three-to-four-stage incidents) decline from the first bin onward, with the three-to-four-stage stratum showing the steepest decline, from 40.6 hours in the lowest bin to 9.4 hours in the highest. The stratum of five or more stages does not show a clean decline under this shared binning: mean duration rises from the lowest to the second bin before levelling off and then declining slightly. The lowest two bins for this stratum contain only 22 and 18 incidents respectively, because multi-stage incidents rarely fall into the lowest customer bins, and these sparse cells limit interpretation. The earlier-period, subset-specific binning in Section D.3 showed a mild decline, but it uses a different sample and cannot establish that the present rise is solely a small-sample artefact. In Figure D1b, the pooled relationship rises from 11.65 hours in the lowest bin to a peak of 14.19 hours in the second bin, before declining to 9.87 hours in the highest bin. No stratum in Figure D1a shows a comparable rise over the same two bins, other than the small-sample pattern noted above."
+  },
+  {
+    "id": "A-P045",
+    "type": "paragraph",
+    "style": "af",
+    "math": false,
+    "drawing": true,
+    "text": ""
+  },
+  {
+    "id": "A-P046",
+    "type": "paragraph",
+    "style": "af1",
+    "math": false,
+    "drawing": false,
+    "text": "Figure D1. Mean restoration duration by affected-customers quartile bin (computed on the full sample). (a) By number of restoration stages. (b) Pooled across all incidents, without separating by stage count."
+  },
+  {
+    "id": "A-P047",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "D.5 Regression evidence"
+  },
+  {
+    "id": "A-P048",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "Table D2 reports the coefficients on affected customers in the recovery model, with and without a control for the logarithm of the number of restoration stages, estimated on the development sample described in Section D.1 (n = 47,840). These coefficients differ from the corresponding uncontrolled coefficients reported for the final combined sample in Table F2 (n = 59,834, affected customers coefficients of 0.339 and -0.396), because the two tables use different samples under an otherwise identical specification, not because of any difference in method."
+  },
+  {
+    "id": "A-P049",
+    "type": "paragraph",
+    "style": "af1",
+    "math": false,
+    "drawing": false,
+    "text": "Table D2. Coefficients on standardised log(1 + affected customers) and its square, with and without log(stage count), earlier-period recovery sample (n = 47,840)."
+  },
+  {
+    "id": "A-T05",
+    "type": "table",
+    "rows": [
+      [
+        "Term",
+        "Without control",
+        "With control for log(stages)"
+      ],
+      [
+        "Linear term",
+        "+0.307 (p < 0.001)",
+        "-0.236 (p < 0.001)"
+      ],
+      [
+        "Quadratic term",
+        "-0.381 (p < 0.001)",
+        "-0.301 (p < 0.001)"
+      ],
+      [
+        "log(stages)",
+        "—",
+        "+0.971 (p < 0.001)"
+      ]
+    ]
+  },
+  {
+    "id": "A-P050",
+    "type": "paragraph",
+    "style": "af",
+    "math": true,
+    "drawing": false,
+    "text": "Adding log(stage count) changes the linear customer coefficient from +0.307 to -0.236 and reduces the magnitude of the negative quadratic coefficient by approximately 21 percent. For the standardised log-customer predictor X, the fitted slope is a+2bX, so the linear coefficient alone does not establish monotonicity over its observed support. The change is consistent with sensitivity to stage composition; a full derivative-based comparison would require the relevant scaling and covariate range."
+  },
+  {
+    "id": "A-P051",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "D.6 Interpretation"
+  },
+  {
+    "id": "A-P052",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "The stratified means and the regression with a stage control show that the pooled customer–duration pattern depends on restoration-stage composition. Stage count is positively associated with duration, but additional records within the same time window would not necessarily lengthen the span. Stage count may itself reflect fault complexity and restoration sequencing, so it is not automatically a pre-existing confounder. These checks do not identify crew prioritisation, prove that composition is the only explanation or rule out mediation. Gust curvature was reported to remain positive when the stage control was added; this is a sensitivity observation on related data."
+  },
+  {
+    "id": "A-P053",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "D.7 The same investigation within the weather-attributed subsample"
+  },
+  {
+    "id": "A-P054",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "This section describes the reported weather-attributed recovery subset from the final combined sample, rather than the earlier-period-only regression basis of Table D2. Its reported multi-stage share is 49.7 percent. For the final combined recovery sample, the stage counts given in Section D.1 imply a multi-stage share of approximately 40.5 percent. The weather-subset single-stage customer–duration pattern was reported as decreasing in grouped summaries."
+  },
+  {
+    "id": "A-P055",
+    "type": "paragraph",
+    "style": "af",
+    "math": false,
+    "drawing": false,
+    "text": "In the weather-attributed subset, the linear customer coefficient is already negative without a stage control and becomes more negative after adding it. This differs from the earlier-period main-sample sign reversal in Table D2. The findings indicate sensitivity to sample and conditioning, but do not fully identify its source. The available local audit does not provide a new full coefficient table for this subset; no additional numerical estimates are inferred here."
+  },
+  {
+    "id": "A-P056",
+    "type": "paragraph",
+    "style": "1",
+    "math": false,
+    "drawing": false,
+    "text": "Appendix E. Development history and retrospective sample separation"
+  },
+  {
+    "id": "A-P057",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "Early analyses used records that included the period later designated as the confirmation sample (30 September 2023 to 31 March 2024; 184 days). The local audit identifies analysis steps 9–14 as preceding temporal separation: outcome reconstruction checks; choice between customer-weighted duration and total span; the initial fitted-minimum analysis; Cause Code restriction; the supporting linear/quadratic-term comparison; and the initial predictive-contribution analysis. These decisions therefore used information from both periods. Subsequent separation corrected record allocation but did not restore an untouched confirmation sample. Table E1 reports the record overlap at successive construction stages."
+  },
+  {
+    "id": "A-P058",
+    "type": "paragraph",
+    "style": "af1",
+    "math": false,
+    "drawing": false,
+    "text": "Table E1. Records assigned to the later period when the earlier-period sample was reconstructed."
+  },
+  {
+    "id": "A-T06",
+    "type": "table",
+    "rows": [
+      [
+        "Stage",
+        "Before separation",
+        "Earlier-period subset",
+        "Later-period records",
+        "Share reassigned"
+      ],
+      [
+        "Full reconstructed dataset",
+        "135,025",
+        "109,250",
+        "25,775",
+        "19.09%"
+      ],
+      [
+        "After Cause Code restriction",
+        "66,079",
+        "53,114",
+        "12,965",
+        "19.63%"
+      ],
+      [
+        "After weather matching",
+        "62,927",
+        "50,345",
+        "12,582",
+        "20.00%"
+      ]
+    ]
+  },
+  {
+    "id": "A-P059",
+    "type": "paragraph",
+    "style": "af",
+    "math": false,
+    "drawing": false,
+    "text": "Approximately one fifth of records at each construction stage were assigned to the later period. Subsequent Cause Code and predictive-contribution analyses were repeated on final data, including combined samples; such re-estimation checks numerical reproducibility but is not independent confirmation. The historical customer-weighted-duration comparison was not repeated on separated data."
+  },
+  {
+    "id": "A-P060",
+    "type": "paragraph",
+    "style": "af",
+    "math": false,
+    "drawing": false,
+    "text": "Thirty-two incidents (approximately 0.03 percent of the reconstructed earlier-period sample) start before the temporal boundary and end after it. They were retained in the earlier period according to start date. Their weather predictors refer to incident onset, but their eventual recovery outcomes may extend into the later period; the assignment rule does not by itself make outcomes independent across that boundary."
+  },
+  {
+    "id": "A-P061",
+    "type": "paragraph",
+    "style": "af",
+    "math": false,
+    "drawing": false,
+    "text": "Table E2 records the exposure minimum through the historical sequence. All physical point estimates refer to the mean-pressure reference used in the corresponding fit."
+  },
+  {
+    "id": "A-P062",
+    "type": "paragraph",
+    "style": "af1",
+    "math": false,
+    "drawing": false,
+    "text": "Table E2. Historical exposure fitted minima and reported standardised bootstrap intervals."
+  },
+  {
+    "id": "A-T07",
+    "type": "table",
+    "rows": [
+      [
+        "Sample",
+        "n",
+        "Point estimate (m/s)",
+        "Coefficient of variation across folds",
+        "Reported z-interval includes zero?"
+      ],
+      [
+        "Before temporal separation",
+        "approx. 60,453",
+        "10.69",
+        "38.6%",
+        "Yes"
+      ],
+      [
+        "Earlier-period exposure sample",
+        "48,323",
+        "12.13",
+        "22.0%",
+        "No"
+      ],
+      [
+        "Final combined exposure sample",
+        "60,437",
+        "10.69",
+        "—",
+        "Yes"
+      ]
+    ]
+  },
+  {
+    "id": "A-P063",
+    "type": "paragraph",
+    "style": "af",
+    "math": false,
+    "drawing": false,
+    "text": "The sequence is 10.69 m/s before separation, 12.13 m/s in the earlier-period exposure sample, and 10.69 m/s after recombining the final data. The repeated rounded value is not a second independent confirmation. A local audit gives the final full-precision point estimate as 10.694 m/s. The interval-crossing entries reproduce historical reports on their standardised scales; they do not provide a harmonised physical-unit confidence interval across samples. Appendix H explains the additional conversion required for the final bootstrap output."
+  },
+  {
+    "id": "A-P064",
+    "type": "paragraph",
+    "style": "1",
+    "math": false,
+    "drawing": false,
+    "text": "Appendix F. Full robustness results under single and two-way clustering"
+  },
+  {
+    "id": "A-P065",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "Tables F1 and F2 report the non-calendar coefficient sets for the final combined exposure sample (n = 60,437) and recovery sample (n = 59,834), under LAD and LAD-and-date clustered standard errors. Additive year and month indicators are included in both fits but their individual coefficients are not reproduced here. Point estimates are identical under the two covariance estimators. The development-only customer coefficients in Table D2 use a different sample and are not expected to match Table F2 numerically."
+  },
+  {
+    "id": "A-P066",
+    "type": "paragraph",
+    "style": "af1",
+    "math": false,
+    "drawing": false,
+    "text": "Table F1. Final combined exposure model (n = 60,437): non-calendar coefficients and clustered standard errors."
+  },
+  {
+    "id": "A-T08",
+    "type": "table",
+    "rows": [
+      [
+        "Term",
+        "Coefficient",
+        "SE (LAD)",
+        "p (LAD)",
+        "SE (two-way)",
+        "p (two-way)"
+      ],
+      [
+        "Intercept",
+        "3.321",
+        "1.045",
+        "0.0015",
+        "1.049",
+        "0.0015"
+      ],
+      [
+        "Gust (linear)",
+        "-0.032",
+        "0.014",
+        "0.022",
+        "0.022",
+        "0.142"
+      ],
+      [
+        "Gust (squared)",
+        "0.103",
+        "0.009",
+        "<0.001",
+        "0.031",
+        "<0.001"
+      ],
+      [
+        "Precipitation",
+        "0.049",
+        "0.011",
+        "<0.001",
+        "0.016",
+        "0.003"
+      ],
+      [
+        "Temperature",
+        "-0.009",
+        "0.020",
+        "0.660",
+        "0.041",
+        "0.829"
+      ],
+      [
+        "Pressure",
+        "-0.084",
+        "0.011",
+        "<0.001",
+        "0.022",
+        "<0.001"
+      ],
+      [
+        "Gust × pressure",
+        "-0.041",
+        "0.009",
+        "<0.001",
+        "0.025",
+        "0.102"
+      ],
+      [
+        "Urban indicator",
+        "-0.158",
+        "0.077",
+        "0.039",
+        "0.077",
+        "0.040"
+      ],
+      [
+        "Log population",
+        "-0.079",
+        "0.089",
+        "0.375",
+        "0.089",
+        "0.375"
+      ],
+      [
+        "Income deprivation rate",
+        "-3.203",
+        "0.905",
+        "<0.001",
+        "0.916",
+        "<0.001"
+      ],
+      [
+        "Deprivation gap",
+        "0.178",
+        "0.548",
+        "0.745",
+        "0.545",
+        "0.743"
+      ],
+      [
+        "Moran’s I",
+        "-0.027",
+        "0.241",
+        "0.909",
+        "0.240",
+        "0.909"
+      ],
+      [
+        "Year and month fixed effects",
+        "Included; coefficients omitted",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "id": "A-P067",
+    "type": "paragraph",
+    "style": "af1",
+    "math": false,
+    "drawing": false,
+    "text": "Table F2. Final combined recovery model (n = 59,834): non-calendar coefficients and clustered standard errors."
+  },
+  {
+    "id": "A-T09",
+    "type": "table",
+    "rows": [
+      [
+        "Term",
+        "Coefficient",
+        "SE (LAD)",
+        "p (LAD)",
+        "SE (two-way)",
+        "p (two-way)"
+      ],
+      [
+        "Intercept",
+        "1.678",
+        "0.259",
+        "<0.001",
+        "0.268",
+        "<0.001"
+      ],
+      [
+        "Gust (linear)",
+        "0.000",
+        "0.009",
+        "0.982",
+        "0.017",
+        "0.991"
+      ],
+      [
+        "Gust (squared)",
+        "0.079",
+        "0.006",
+        "<0.001",
+        "0.008",
+        "<0.001"
+      ],
+      [
+        "Precipitation",
+        "0.050",
+        "0.006",
+        "<0.001",
+        "0.009",
+        "<0.001"
+      ],
+      [
+        "Temperature",
+        "-0.073",
+        "0.010",
+        "<0.001",
+        "0.018",
+        "<0.001"
+      ],
+      [
+        "Pressure",
+        "-0.039",
+        "0.008",
+        "<0.001",
+        "0.015",
+        "0.009"
+      ],
+      [
+        "Gust × pressure",
+        "0.025",
+        "0.009",
+        "0.007",
+        "0.016",
+        "0.105"
+      ],
+      [
+        "Urban indicator",
+        "0.136",
+        "0.037",
+        "<0.001",
+        "0.037",
+        "<0.001"
+      ],
+      [
+        "Log population",
+        "0.014",
+        "0.023",
+        "0.525",
+        "0.023",
+        "0.527"
+      ],
+      [
+        "Income deprivation rate",
+        "0.160",
+        "0.541",
+        "0.768",
+        "0.543",
+        "0.769"
+      ],
+      [
+        "Deprivation gap",
+        "-0.176",
+        "0.466",
+        "0.706",
+        "0.462",
+        "0.704"
+      ],
+      [
+        "Moran’s I",
+        "0.262",
+        "0.126",
+        "0.037",
+        "0.124",
+        "0.034"
+      ],
+      [
+        "Standardised log(1 + customers)",
+        "0.339",
+        "0.020",
+        "<0.001",
+        "0.023",
+        "<0.001"
+      ],
+      [
+        "Squared standardised log(1 + customers)",
+        "-0.396",
+        "0.021",
+        "<0.001",
+        "0.023",
+        "<0.001"
+      ],
+      [
+        "Year and month fixed effects",
+        "Included; coefficients omitted",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  },
+  {
+    "id": "A-P068",
+    "type": "paragraph",
+    "style": "af",
+    "math": false,
+    "drawing": false,
+    "text": "Both quadratic gust terms remain significant under LAD-and-date clustering. The exposure linear term and both gust-pressure interactions lose significance relative to LAD clustering, while the recovery linear term remains non-significant under both. These changes concern uncertainty around the same combined-sample coefficients. Analyses on earlier versions of overlapping records are not counted as independent corroboration."
+  },
+  {
+    "id": "A-P069",
+    "type": "paragraph",
+    "style": "1",
+    "math": false,
+    "drawing": false,
+    "text": "Appendix G. Cause Code assignment and gust speed"
+  },
+  {
+    "id": "A-P070",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "Appendix G describes the association between gust conditions and membership of the analytical weather-related Cause Code group. This bears on covariate support for the exposure comparison in Section 4.3; it does not identify why any particular incident received its code."
+  },
+  {
+    "id": "A-P071",
+    "type": "paragraph",
+    "style": "af",
+    "math": false,
+    "drawing": false,
+    "text": "The supplied cause-distribution summaries group incidents by gust decile. The weather-related share rises from 6.89 percent in the lowest decile to 56.10 percent in the highest, increasing across all nine adjacent comparisons (Table G1). These are unadjusted group proportions; they do not compare otherwise identical incidents."
+  },
+  {
+    "id": "A-P072",
+    "type": "paragraph",
+    "style": "af1",
+    "math": false,
+    "drawing": false,
+    "text": "Table G1. Share of incidents assigned to the weather-related Cause Code category, by gust decile."
+  },
+  {
+    "id": "A-T10",
+    "type": "table",
+    "rows": [
+      [
+        "Gust decile",
+        "Share weather-related"
+      ],
+      [
+        "Lowest",
+        "6.89%"
+      ],
+      [
+        "2nd",
+        "8.07%"
+      ],
+      [
+        "3rd",
+        "9.55%"
+      ],
+      [
+        "4th",
+        "9.74%"
+      ],
+      [
+        "5th",
+        "10.64%"
+      ],
+      [
+        "6th",
+        "11.05%"
+      ],
+      [
+        "7th",
+        "12.78%"
+      ],
+      [
+        "8th",
+        "15.74%"
+      ],
+      [
+        "9th",
+        "23.30%"
+      ],
+      [
+        "Highest",
+        "56.10%"
+      ]
+    ]
+  },
+  {
+    "id": "A-P073",
+    "type": "paragraph",
+    "style": "af",
+    "math": false,
+    "drawing": false,
+    "text": "In the full combined exposure sample, 63.70 percent of incidents have gust below the fitted reference value of 10.69 m/s; the corresponding proportion within the weather-attributed exposure subset is 36.83 percent. Thus the within-subset share below that value is approximately 57.8 percent of the full-sample share. This is a comparison of two within-sample proportions, not the proportion of all low-gust incidents belonging to each group. The change documents reduced low-gust support and is consistent with a support-related explanation for the negative predictive increment. It does not establish that selection is the sole cause or that the recovery model is unaffected."
+  },
+  {
+    "id": "A-P074",
+    "type": "paragraph",
+    "style": "1",
+    "math": false,
+    "drawing": false,
+    "text": "Appendix H. Audit of fitted minima, reference scales and displayed predictions"
+  },
+  {
+    "id": "A-P075",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "H.1 Conditional exposure minima"
+  },
+  {
+    "id": "A-P076",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": true,
+    "drawing": false,
+    "text": "The local implementation audit reproduced the final exposure coefficients at full precision: β1=−0.032325899095631154, β2=0.10276170747389514 and β3=−0.0408384359554068. The corresponding gust mean and standard deviation are 9.87229677581956 and 5.222713076874045 m/s. Table H1 evaluates G*P=−β1+β3P/2β2 and converts the point estimates to physical gust units using that fit’s scaling. These deterministic evaluations add no new model fit or independent validation."
+  },
+  {
+    "id": "A-P077",
+    "type": "paragraph",
+    "style": "af1",
+    "math": false,
+    "drawing": false,
+    "text": "Table H1. Conditional exposure fitted minima using the final combined-sample coefficients."
+  },
+  {
+    "id": "A-T11",
+    "type": "table",
+    "rows": [
+      [
+        "Standardised pressure",
+        "Minimum, standardised gust",
+        "Minimum, m/s"
+      ],
+      [
+        "-1",
+        "-0.041419",
+        "9.656"
+      ],
+      [
+        "0",
+        "0.157286",
+        "10.694"
+      ],
+      [
+        "+1",
+        "0.355990",
+        "11.732"
+      ]
+    ]
+  },
+  {
+    "id": "A-P078",
+    "type": "paragraph",
+    "style": "af",
+    "math": true,
+    "drawing": false,
+    "text": "The earlier 19–48 percent calculation divided values of the gust-only log-scale component, β1z+β2z2, at z=+k and z=−k for k=1,2,3. It was centred on the sample mean and was not a percentage difference in customer predictions. Because the component omits the intercept and other predictors, its ratio is not an invariant response-scale contrast. Those percentages are not used as a substantive result. Evaluations at matched distances from the actual quadratic vertex agree to floating-point precision, as required algebraically."
+  },
+  {
+    "id": "A-P079",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "H.2 Day-bootstrap diagnostics and physical-unit conversion"
+  },
+  {
+    "id": "A-P080",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": true,
+    "drawing": false,
+    "text": "The audit deterministically reproduced 500 day-bootstrap fits using seed 20260826. Sorted standardised minima matched the archived output to a maximum difference of 5.55×10−17. Table H2 gives the reported diagnostics. A positive coefficient in every resample is a sign-stability observation; it is not evidence that every resample has a statistically significant coefficient."
+  },
+  {
+    "id": "A-P081",
+    "type": "paragraph",
+    "style": "af1",
+    "math": false,
+    "drawing": false,
+    "text": "Table H2. Diagnostics from the reproduced 500 day-bootstrap fits."
+  },
+  {
+    "id": "A-T12",
+    "type": "table",
+    "rows": [
+      [
+        "Statistic",
+        "Reported value"
+      ],
+      [
+        "Quadratic coefficient: mean",
+        "0.10504"
+      ],
+      [
+        "Quadratic coefficient: standard deviation",
+        "0.01944"
+      ],
+      [
+        "Quadratic coefficient: minimum / maximum",
+        "0.03659 / 0.16138"
+      ],
+      [
+        "Quadratic coefficient: non-positive draws",
+        "0 / 500"
+      ],
+      [
+        "Standardised minimum: mean / standard deviation",
+        "0.1608 / 0.1397"
+      ],
+      [
+        "Standardised minimum: skewness / excess kurtosis",
+        "-0.519 / 1.144"
+      ],
+      [
+        "Standardised minimum: 2.5th / 97.5th percentiles",
+        "-0.1281 / 0.4189"
+      ],
+      [
+        "Between-resample SD of gust mean, m/s",
+        "0.339"
+      ],
+      [
+        "Between-resample SD of gust SD, m/s",
+        "0.460"
+      ]
+    ]
+  },
+  {
+    "id": "A-P082",
+    "type": "paragraph",
+    "style": "af",
+    "math": false,
+    "drawing": false,
+    "text": "The empirical ratio distribution is asymmetric, but the diagnostics do not isolate the causes of its difference from a Delta approximation. In particular, the denominator does not approach zero in the reported draws. Resample-specific scaling also changes the reference coordinates. Re-estimating scaling is not automatically more conservative: its effect depends on the joint distribution and the precise estimand."
+  },
+  {
+    "id": "A-P083",
+    "type": "paragraph",
+    "style": "af",
+    "math": true,
+    "drawing": false,
+    "text": "For a common physical pressure reference p0, each resample b should first express that reference on its own pressure scale and then convert its fitted minimum back to physical gust:"
+  },
+  {
+    "id": "A-P084",
+    "type": "paragraph",
+    "style": "af",
+    "math": true,
+    "drawing": false,
+    "text": "Pbp0=p0−pbsp,b."
+  },
+  {
+    "id": "A-P085",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": true,
+    "drawing": false,
+    "text": "vb*p0=vb−sv,bβ1b+β3bPbp02β2b."
+  },
+  {
+    "id": "A-P086",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": true,
+    "drawing": false,
+    "text": "The percentile interval must then be computed from the physical-unit values vb*p0. Alternatively, a minimum at each resample’s own mean pressure is a different reference convention and must be named as such. The summary supplied for this revision does not contain the complete paired pressure-scaling quantities needed to verify a common-reference interval. Accordingly, the former 9.2–12.1 m/s band is not retained as a validated physical-unit interval."
+  },
+  {
+    "id": "A-P087",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "H.3 Temporal scaling and development-fold summaries"
+  },
+  {
+    "id": "A-P088",
+    "type": "paragraph",
+    "style": "af1",
+    "math": false,
+    "drawing": false,
+    "text": "Table H3. Reported gust scaling in the separate temporal samples."
+  },
+  {
+    "id": "A-T13",
+    "type": "table",
+    "rows": [
+      [
+        "Margin",
+        "Period",
+        "Mean, m/s",
+        "SD, m/s"
+      ],
+      [
+        "Exposure",
+        "Earlier",
+        "9.648",
+        "5.212"
+      ],
+      [
+        "Exposure",
+        "Later",
+        "10.766",
+        "5.169"
+      ],
+      [
+        "Recovery",
+        "Earlier",
+        "9.650",
+        "5.207"
+      ],
+      [
+        "Recovery",
+        "Later",
+        "10.773",
+        "5.172"
+      ]
+    ]
+  },
+  {
+    "id": "A-P089",
+    "type": "paragraph",
+    "style": "af",
+    "math": true,
+    "drawing": false,
+    "text": "For a quadratic coefficient estimated on standardised gust, its raw-wind curvature coefficient is β2/sv2. The small differences in SD limit, but do not eliminate, scaling effects on comparisons. These whole-period values do not supply the separate scaling of every training fold. The development recovery point in Figure 10, 0.0660, is an inverse-variance-weighted summary of overlapping cross-validation fits. The archived nominal interval of 0.0587–0.0732 is not used for inference, because treating those fits as independent would omit their covariance. A full-development-sample fit or a covariance-aware resampling procedure is needed for a directly comparable interval."
+  },
+  {
+    "id": "A-P090",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "H.4 Exponentiated fitted values and retransformation"
+  },
+  {
+    "id": "A-P091",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": true,
+    "drawing": false,
+    "text": "The audited plotting scripts for Figures 4 and 6 calculate expη without a retransformation correction. For exposure, η predicts ln1+C and the plotting code does not subtract one. The plotted quantities are therefore not arithmetic-mean customer counts or durations. The local audit reports global residual factors n−1i​expεi of 10.46 for exposure and 2.20 for recovery. These are full-sample diagnostics, not proof that the true conditional means are exactly those multiples of the plotted curves."
+  },
+  {
+    "id": "A-P092",
+    "type": "paragraph",
+    "style": "af",
+    "math": true,
+    "drawing": false,
+    "text": "For example, ED∣X=expηXEexpε∣X. A single global factor is an adequate conditional correction only under additional assumptions about the residual distribution across covariates. If the target is customer count rather than 1+C, subtraction of one is also required after retransformation. A constant multiplicative factor cancels in ratios of the same positive transformed quantity, but subtraction of one does not; nor must a covariate-dependent factor cancel. The existing figure ratios are retained only on their explicitly stated exponentiated-log scale."
+  },
+  {
+    "id": "A-P093",
+    "type": "paragraph",
+    "style": "2",
+    "math": false,
+    "drawing": false,
+    "text": "H.5 Material still required for additional analyses"
+  },
+  {
+    "id": "A-P094",
+    "type": "paragraph",
+    "style": "FirstParagraph",
+    "math": false,
+    "drawing": false,
+    "text": "Complete residual plots and alternative-distribution coefficient tables were reported to exist in the local project but were not included in the material supplied for this revision. They are not reproduced or assigned a figure number here. A common-reference physical bootstrap interval, a directly comparable temporal fit, and out-of-sample storm ablations also remain to be supplied. These omissions are not represented as completed validation."
+  }
+]

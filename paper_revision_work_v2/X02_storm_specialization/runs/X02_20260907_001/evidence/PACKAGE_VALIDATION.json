@@ -1,0 +1,7 @@
+{
+  "prepared_utc": "2026-09-07T12:44:05.405350+00:00",
+  "required_artifacts_present": true,
+  "acceptance_pass": true,
+  "validation_method": "After these frozen members are zipped, ZipFile.testzip and full temporary extraction are executed; the resulting ZIP hash and size are stored in the sibling RETURN_PACKAGE_X02.receipt.json to avoid self-referential hashing.",
+  "source_data_packaged": false
+}

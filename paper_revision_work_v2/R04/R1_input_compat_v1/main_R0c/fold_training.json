@@ -1,0 +1,102 @@
+[
+  {
+    "fold": 0,
+    "training": {
+      "tail_policy": "all_valid",
+      "threshold_hours": null,
+      "quantile": null,
+      "algorithm": "numpy.quantile(method=linear)",
+      "comparison": "D <= training_threshold",
+      "reference_population": "main_training_R0c_eligible",
+      "reference_n": 47868,
+      "reference_ids_sha256": "a3cbdfcaca8be2c9b529ef4f60a0f6bff9d83eae38439b16c7e5dfb8617627b2",
+      "retained_n": 47868,
+      "retained_ids_sha256": "a3cbdfcaca8be2c9b529ef4f60a0f6bff9d83eae38439b16c7e5dfb8617627b2",
+      "evaluation": "all valid test IDs; never trimmed using test D"
+    },
+    "evaluation_n": 11964,
+    "evaluation_ids_sha256": "3d38483ac915611f475f0f0bb97ef05bb764d75b744815ce15e511bd88f2df44",
+    "scaler_sha256": "d8ab90ea67b86fbadee1ec7b213ef1fed36232f8bd2211faad112a23c158a04c",
+    "training_mean_target": 1.627344763565853
+  },
+  {
+    "fold": 1,
+    "training": {
+      "tail_policy": "all_valid",
+      "threshold_hours": null,
+      "quantile": null,
+      "algorithm": "numpy.quantile(method=linear)",
+      "comparison": "D <= training_threshold",
+      "reference_population": "main_training_R0c_eligible",
+      "reference_n": 47869,
+      "reference_ids_sha256": "1ffe496dc77b5c6f9ee109fd4d228fcaf8a9c1f3d4d6bafb016102ae988756ed",
+      "retained_n": 47869,
+      "retained_ids_sha256": "1ffe496dc77b5c6f9ee109fd4d228fcaf8a9c1f3d4d6bafb016102ae988756ed",
+      "evaluation": "all valid test IDs; never trimmed using test D"
+    },
+    "evaluation_n": 11963,
+    "evaluation_ids_sha256": "d36aad119319e36a177134a54056930fc04f98a8a8e3546160437933ecbf77b8",
+    "scaler_sha256": "9ed43cccfda41deca4128ea4e22825c52210cc5918041151704a671e0339892c",
+    "training_mean_target": 1.6539945529234583
+  },
+  {
+    "fold": 2,
+    "training": {
+      "tail_policy": "all_valid",
+      "threshold_hours": null,
+      "quantile": null,
+      "algorithm": "numpy.quantile(method=linear)",
+      "comparison": "D <= training_threshold",
+      "reference_population": "main_training_R0c_eligible",
+      "reference_n": 47855,
+      "reference_ids_sha256": "d52128d821e0158854c10a9671a02360073eecbc8416014ffe331dcf93e48aa0",
+      "retained_n": 47855,
+      "retained_ids_sha256": "d52128d821e0158854c10a9671a02360073eecbc8416014ffe331dcf93e48aa0",
+      "evaluation": "all valid test IDs; never trimmed using test D"
+    },
+    "evaluation_n": 11977,
+    "evaluation_ids_sha256": "fa0c63d9395d5789712db4802e0fbc7953394160327c337773a680b3e5d7e33c",
+    "scaler_sha256": "010aa484e85900f087f7b6147f4c9a4ac6873200d00c3dfcc713deacc001f12d",
+    "training_mean_target": 1.6690564090814146
+  },
+  {
+    "fold": 3,
+    "training": {
+      "tail_policy": "all_valid",
+      "threshold_hours": null,
+      "quantile": null,
+      "algorithm": "numpy.quantile(method=linear)",
+      "comparison": "D <= training_threshold",
+      "reference_population": "main_training_R0c_eligible",
+      "reference_n": 47868,
+      "reference_ids_sha256": "08b49bf07f10e9abf592cfe96778b7b2ccaa6aa0c274dde2e27179d27fe0cf77",
+      "retained_n": 47868,
+      "retained_ids_sha256": "08b49bf07f10e9abf592cfe96778b7b2ccaa6aa0c274dde2e27179d27fe0cf77",
+      "evaluation": "all valid test IDs; never trimmed using test D"
+    },
+    "evaluation_n": 11964,
+    "evaluation_ids_sha256": "2c9a8fb8502bb364eef6c281df8f1515953cedc1962a9950d2576fb2f2257442",
+    "scaler_sha256": "8e75f43866d1fe7cdc88679db052d6b57c01efa3ea796d8cd1219a71bfa7298f",
+    "training_mean_target": 1.662048804863779
+  },
+  {
+    "fold": 4,
+    "training": {
+      "tail_policy": "all_valid",
+      "threshold_hours": null,
+      "quantile": null,
+      "algorithm": "numpy.quantile(method=linear)",
+      "comparison": "D <= training_threshold",
+      "reference_population": "main_training_R0c_eligible",
+      "reference_n": 47868,
+      "reference_ids_sha256": "2ad03f5581001cb9d015ac4445b7bbe562e62b26a7abf918b4892901458aedc5",
+      "retained_n": 47868,
+      "retained_ids_sha256": "2ad03f5581001cb9d015ac4445b7bbe562e62b26a7abf918b4892901458aedc5",
+      "evaluation": "all valid test IDs; never trimmed using test D"
+    },
+    "evaluation_n": 11964,
+    "evaluation_ids_sha256": "45e2db96e63b5d8ef62bceb5b12543c48ce89ef66396c7be1e4784c7857ea4f9",
+    "scaler_sha256": "64d8968e4c119970860be9434405a2a0d23785f50bc1c96abfeb775b57e2f2c2",
+    "training_mean_target": 1.666014716406228
+  }
+]

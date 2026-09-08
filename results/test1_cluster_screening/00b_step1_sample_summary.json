@@ -1,0 +1,9 @@
+{
+  "n0_before_filter": 62928,
+  "n1_after_filter": 62928,
+  "dropped_pct": 0.0,
+  "log1p_customers_mean": 1.583686759356032,
+  "log1p_customers_std": 1.581978898984448,
+  "log1p_duration_mean": 1.7625048586907903,
+  "log1p_duration_std": 1.0778741345861642
+}

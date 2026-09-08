@@ -1,0 +1,69 @@
+{
+  "completed_utc": "2026-09-07T12:35:44.545135+00:00",
+  "checks": [
+    {
+      "check": "independent_time_metric_max_abs_diff",
+      "value": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "check": "independent_fivefold_metric_max_abs_diff",
+      "value": 2.6645352591003757e-15,
+      "pass": true
+    },
+    {
+      "check": "time_prediction_unique_keys",
+      "value": 0,
+      "pass": true
+    },
+    {
+      "check": "fivefold_prediction_unique_keys",
+      "value": 0,
+      "pass": true
+    },
+    {
+      "check": "fivefold_complete_4452_each",
+      "value": "min=4452,max=4452",
+      "pass": true
+    },
+    {
+      "check": "model_and_fit_id_hashes",
+      "value": 0,
+      "pass": true
+    },
+    {
+      "check": "fit_test_id_intersections",
+      "value": 0,
+      "pass": true
+    },
+    {
+      "check": "held_buffer_intersections",
+      "value": 0,
+      "pass": true
+    },
+    {
+      "check": "time_path_label_cutoff_violations",
+      "value": 0,
+      "pass": true
+    },
+    {
+      "check": "forbidden_feature_violations",
+      "value": 0,
+      "pass": true
+    },
+    {
+      "check": "X02_instruction_package_unchanged",
+      "value": 0,
+      "pass": true
+    }
+  ],
+  "feature_violations": [],
+  "all_required_checks_pass": true,
+  "rolling_F1_synthetic_test": "not applicable: F1 not implemented and explicitly skipped; no rolling feature enters a model",
+  "known_limitations": [
+    "business onset/timezone unverified",
+    "weather observed archive is not verified forecast-time information",
+    "event identity is record-level, not certified physical fault",
+    "five historical process groups are few and previously seen"
+  ]
+}

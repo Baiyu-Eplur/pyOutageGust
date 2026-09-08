@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "stage_rows": 237901,
+  "events": 135025,
+  "compared_columns": 203,
+  "random_seed": 20260905,
+  "stable_id": "raw SHA256 + original 1-based source_row_number",
+  "comparison": "all constructed columns exact, not just selected time"
+}

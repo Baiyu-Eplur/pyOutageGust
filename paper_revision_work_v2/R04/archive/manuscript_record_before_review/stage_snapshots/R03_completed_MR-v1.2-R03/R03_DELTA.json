@@ -1,0 +1,1090 @@
+{
+  "version": "MR-v1.2-R03",
+  "checkpoint": "R03_completed_before_R04",
+  "updates": [
+    {
+      "id": "MR01",
+      "title": "事件时间与天气来自后续阶段",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "新独立入口实际校验R02 manifest/主表SHA、135025唯一ID和版本；step2已连接共同日期fold。原v9不再接管，代码引用均已复制。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P017",
+        "D-P039",
+        "D-P054",
+        "D-P102",
+        "A-P060"
+      ],
+      "concrete_revision": "数据§2和附录B登记最早记录代理与实际版本；将“下游接口待接入”改为R03实现已检查，正式结果仍待R04。",
+      "claim_ids": [
+        "CL01"
+      ],
+      "release_condition": "输入消费检查完成；真实onset仍未证，R04重估后才能改数字。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR02",
+      "title": "时区、并列和跨边界规则",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "UTC/London全事件日期/研究窗/时期差异1845/2/2；主768/0/0、天气105/0/0。UNIQUE_ANY UTC7300/London7298，成员差6，重叠702；窗口总成员8002。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P016",
+        "D-P017",
+        "D-P051",
+        "A-P013",
+        "A-P027",
+        "A-P060"
+      ],
+      "concrete_revision": "§2及附录B/E补UTC半开窗、风暴结束日包含全天、源时区未知的分析解释及并列差异；不将七名称当七独立过程。",
+      "claim_ids": [
+        "CL01",
+        "CL04"
+      ],
+      "release_condition": "定向计数已提供；业务时区/完整过程独立性仍需来源与V协议。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR03",
+      "title": "未决事件身份与非重复记录",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "两冲突ID在R02读取后仍保留；候选主原因均排除；无新拆并、删除或业务身份认证。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P016",
+        "D-P023",
+        "D-P029",
+        "D-P038",
+        "A-P024",
+        "A-P025",
+        "A-P027"
+      ],
+      "concrete_revision": "沿用两ID记录保留/公式可算/候选排除/业务未决四层说明，不称188天连续失电。",
+      "claim_ids": [
+        "CL01"
+      ],
+      "release_condition": "资格已核对，真实ID关系仍需源证据。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR04",
+      "title": "客户影响与恢复跨度的构造及验证边界",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "实际目标函数E0=ln(1+C)，R0c=ln(duration_B_full_span_hours)；兼容Duration(hours)未进入恢复目标。R02聚合证据复用，不重复全阶段重算。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P007",
+        "D-P023",
+        "D-P025",
+        "D-P028",
+        "D-P030",
+        "A-P003",
+        "A-P018",
+        "A-P020",
+        "A-P023",
+        "A-P025"
+      ],
+      "concrete_revision": "维持C/D/A区别及完整阶段构造；正式描述比值从R04当前总体生成，不把smoke用于表1。",
+      "claim_ids": [
+        "CL01"
+      ],
+      "release_condition": "实现与消费通过；客户语义/停钟限制和正式描述数值仍待。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR05",
+      "title": "天气产品、缓存、时间窗与39.4m/s叙事",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "现有表分解不可查询5611、缺文件事件8236、四值/窗口完整121178；可读无效0，四候选v3-only0；129414事件/82621键/122948键小时/74896所需文件分母分开。未重扫缓存或请求API。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P006",
+        "D-P017",
+        "D-P040",
+        "D-P103",
+        "D-P138"
+      ],
+      "concrete_revision": "数据来源及附录A增加可读状态分母；保留历史model/gust语义/响应单位metadata未知，不能认定3秒或特定再分析产品。",
+      "claim_ids": [
+        "CL01",
+        "CL02"
+      ],
+      "release_condition": "状态对账完成；产品来源和风暴正式量级待源证据/R04。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR06",
+      "title": "gap定义从全国差值改为LAD内LSOA极差",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "源工作簿副本SHA及Rankings for all indicators表/列核对；rate和gap以比例存储；Buck gap=.1875仍只是旧极差均值。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P018",
+        "D-P040",
+        "D-P041",
+        "D-T02",
+        "A-T02"
+      ],
+      "concrete_revision": "表2/附录A2区分普通LAD区内LSOA极差与Buck例外；输入尺度不乘100，展示单位单列。",
+      "claim_ids": [
+        "CL01",
+        "CL05"
+      ],
+      "release_condition": "源表列定位完成；新系数待R04，代理重建待MR08。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR07",
+      "title": "Moran的计算层级与未知空间权重",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "工作簿Moran列及Buck旧均值副本已登记；没有取得可认证空间权重的新材料。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P018",
+        "D-T02",
+        "A-T02",
+        "A-P011"
+      ],
+      "concrete_revision": "沿用LAD内LSOA聚集层级；空间权重未知和合并区proxy例外不能删。",
+      "claim_ids": [
+        "CL05",
+        "CL06"
+      ],
+      "release_condition": "层级定义不变；权重及合并区重建继续待证。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR08",
+      "title": "Buckinghamshire历史代理及后续重建决定",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "冻结Buck工作簿/原代码引用与lineage：四旧码2021人口缺失触发简单均值；.06325/.1875/.30和标记保留；候选主各1151、天气各293。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P018",
+        "D-P041",
+        "D-P087",
+        "D-P089",
+        "A-T02",
+        "A-P013",
+        "A-T08",
+        "A-T09"
+      ],
+      "concrete_revision": "数据/附录A及图6解释保留proxy；按用户明确决定后续匹配年份/边界/分子分母/权重重建LSOA对照。",
+      "claim_ids": [
+        "CL05",
+        "CL06"
+      ],
+      "release_condition": "来源/标记检查完成；LSOA重建未执行，科学问题开放。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR09",
+      "title": "原因共识、分组来源与天气归因措辞",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "R02原因共识资格由新入口消费；两冲突ID主候选排除，天气子组仍取记录共识分类。无新官方原因语义证据。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P038",
+        "D-P096",
+        "D-P097",
+        "A-P005",
+        "A-P007",
+        "A-T01",
+        "A-P070"
+      ],
+      "concrete_revision": "原因表保持全阶段共识/冲突规则，天气原因写记录分类；四组共同fold不等于气象因果认证。",
+      "claim_ids": [
+        "CL01",
+        "CL03"
+      ],
+      "release_condition": "候选检查完成；正式原因支持/比较待R04/V02。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR10",
+      "title": "样本流、p99与极端恢复总体",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "互斥归因按天气→人口→原因→目标→旧截尾→其他，602/99全为旧H0尾部限制取消；重叠时间/天气改变标志各85/14。主all_valid，备选主训练R0c p99共享给天气；全部有效测试长尾保留。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P002",
+        "D-P032",
+        "D-T01",
+        "D-P038",
+        "D-P039",
+        "D-P097",
+        "A-T03"
+      ],
+      "concrete_revision": "样本节/表1/附录C把候选恢复、训练规则和测试总体分开，写实际互斥归因与可重叠边际数，R1_compat只作诊断。",
+      "claim_ids": [
+        "CL01",
+        "CL03"
+      ],
+      "release_condition": "尾部/成员/fold实现已验；R04正式人数/结果，V01长尾稳健性。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR11",
+      "title": "标准化、固定效应、VIF与系数尺度",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "部分训练标准化ddof1、区域原尺度/人口log、年月加性、未知类别报错已实现。VIF重建含完整日历/平方/交互，与旧VIF列集合不同；满秩另查。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P040",
+        "D-P041",
+        "D-P057",
+        "D-P060",
+        "D-P061",
+        "D-P064",
+        "A-P065"
+      ],
+      "concrete_revision": "方法/表2/附录F明确列清单、尺度和VIF样本/截距；不写全部VIF<4，不把LAD聚类称固定效应。",
+      "claim_ids": [
+        "CL02",
+        "CL05"
+      ],
+      "release_condition": "代码和smoke通过；R04出正式诊断/系数；图10日历例外见MR20。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR12",
+      "title": "合并OOF R²与平均折R²",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "评分保存事件唯一完整OOF、n/SSE/SST/尺度/身份，pooled与五折不加权mean分别输出；负R²和常量未定义手算测试通过。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P054",
+        "D-P084",
+        "D-P086",
+        "D-P101",
+        "D-T04"
+      ],
+      "concrete_revision": "方法公式和图5/表4标题统一pooled，逐折结果另列；评分评估均值与训练均值预测基准分开。",
+      "claim_ids": [
+        "CL03",
+        "CL04"
+      ],
+      "release_condition": "R03实现通过；当前正式OOF点结果仍待R04，不沿用H0数值。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR13",
+      "title": "贡献排序反转的配对条件与分支",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "主/天气共用基础日期映射，同目标组内control/G/K/GK训练/评价配对；条件G|K和K|G及相对control增量已在小样本完整OOF输出。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P002",
+        "D-P010",
+        "D-P084",
+        "D-P094",
+        "D-P097",
+        "D-T04",
+        "D-P100",
+        "D-P108",
+        "D-P119"
+      ],
+      "concrete_revision": "方法和表4/图5/8说明G含平方/气压交互、K含平方、共同资格；组间分母不同；保持三种排序结果分支。",
+      "claim_ids": [
+        "CL03"
+      ],
+      "release_condition": "接口通过；R04点估计、V02配对不确定性和支持检查后决定排序主张。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR14",
+      "title": "日分组与完整天气过程依赖",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "1096日期一次固定5折，所有主/天气同日期同折；24个完整候选设计/转换通过，无拟合。风暴重叠与UTC/London差异已量化。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P011",
+        "D-P051",
+        "D-P054",
+        "D-P102",
+        "D-P105",
+        "D-P114",
+        "A-P057",
+        "A-P060"
+      ],
+      "concrete_revision": "方法/附录E区分日期OOF诊断与过程留出；图3历史earlier/later身份不改成独立确认。",
+      "claim_ids": [
+        "CL04"
+      ],
+      "release_condition": "R03日期规则已实现；R04日级诊断、V00/V02过程划分与推断待执行。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR15",
+      "title": "图9暴露侧多做一次log1p",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "新共同预测/图9路径直接输出η，η=0为0；不再ln(1+expη)。逐事件目标尺度和版本保存。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P061",
+        "D-P103",
+        "D-P105",
+        "D-P106",
+        "A-P091"
+      ],
+      "concrete_revision": "图9轴、误差和方法用ln(1+C)观察值与η，禁止旧H0修正小数或smoke数字冒充当前风暴结果。",
+      "claim_ids": [
+        "CL04",
+        "CL05"
+      ],
+      "release_condition": "代码检查通过；R04新描述数据/图，V03留出校准仍待。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR16",
+      "title": "图9恢复样本混合与窗口重复",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "风暴表唯一联合ID、window_list、对应fold、fit成员/尾部/阈值和full/OOF来源逐行保存并验证无日期泄漏；真正过程留出标签被拒绝。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P102",
+        "D-P103",
+        "D-P105",
+        "D-P106",
+        "D-P107",
+        "D-P108"
+      ],
+      "concrete_revision": "图9图题按新运行区分全样本描述与日期OOF，UNIQUE_ANY与窗口总人数分别写；不删测试长尾伪造纯拟合内样本。",
+      "claim_ids": [
+        "CL04"
+      ],
+      "release_condition": "接口和smoke通过；R04当前成员图、V02/V03合格过程评价。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR17",
+      "title": "曲线、地图与参考人群的数学含义",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "场景从raw生成平方/交互；图4逐人完整设计后平均，图6原天气/客户中心+共同日历、缺年不补；meanη/expmeanη/meanexpη独立保存。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P061",
+        "D-P077",
+        "D-P079",
+        "D-P087",
+        "D-P089",
+        "D-P093",
+        "A-P091",
+        "A-P092"
+      ],
+      "concrete_revision": "图4/6/7图题及附录H写参考人群、气压、calendar权重和聚合顺序，允许合法参考差异而不混称平均后果。",
+      "claim_ids": [
+        "CL05"
+      ],
+      "release_condition": "实现/存取检查通过；R04正式产物、V03场景解释待。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR18",
+      "title": "二次形状、GLM与三阶反向线索",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "本轮修复二次生产接口，未拟合正式GLM/三阶/样条；H0的E0三阶反向线索完整保留，生产者表列未迁移分支。",
+      "judgment_change": "原科学判断/限制保持，已记录本轮检查范围",
+      "locations": [
+        "D-P010",
+        "D-P044",
+        "D-P046",
+        "D-P048",
+        "D-P066",
+        "D-P068",
+        "D-P118",
+        "A-P094"
+      ],
+      "concrete_revision": "结果4.1继续先形状/支持/损失，再决定最低点地位；不因程序通过关闭二次充分性问题。",
+      "claim_ids": [
+        "CL02"
+      ],
+      "release_condition": "R04保留项迁移范围需明确，V01形状比较后裁决CL02。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR19",
+      "title": "最低点与物理单位不确定性",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "最低点接口保存β1/β2/β3、gust/pressure训练均值SD、固定物理气压、曲率/支持/失败；无区间、无旧Bootstrap读取。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P002",
+        "D-P071",
+        "D-P073",
+        "D-P075",
+        "D-P079",
+        "D-P118",
+        "D-P120",
+        "A-P076",
+        "A-P080",
+        "A-P083",
+        "A-P086"
+      ],
+      "concrete_revision": "附录H保留条件顶点公式，图4不填9.20–12.06；曲率非正/顶点越界写不可用；摘要是否保留等科学结果。",
+      "claim_ids": [
+        "CL02"
+      ],
+      "release_condition": "R03接口通过；R04点估计，V01/V03决定形状地位与条件区间。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR20",
+      "title": "分时段系数、尺度和CV汇总身份",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "新增发现：later完整候选12113事件，E设计rank18/19、R20/21，年份2024与Jan–Mar月份组合精确相关。开发期48323满秩。新时期生产器隔离后期，禁旧CV逆方差区间；各期物理系数使用自身scaler。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P055",
+        "D-P111",
+        "D-P112",
+        "D-P114",
+        "D-P115",
+        "A-P061",
+        "A-P063",
+        "A-P089"
+      ],
+      "concrete_revision": "图10后期暂不生成；方法/附录E/H记录当前编码冗余，下一步验证等价满秩日历基或保留隔离，不默删项/拼旧系数。",
+      "claim_ids": [
+        "CL02",
+        "CL04"
+      ],
+      "release_condition": "当前图10后期阻断；全时期核心不受影响；R04前记录参数基方案，正式时期点估计/推断未执行。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR21",
+      "title": "阶段组成、缺首阶段与客户—跨度关系",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "step27最小重建raw ln(n_stages)前后模型及单阶段分箱；step42公共客户四分位/阶段1,2,3–4,5+构成已小试。当前全量阶段科学分析未运行。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P032",
+        "D-P036",
+        "D-P080",
+        "D-P121",
+        "A-P027",
+        "A-P035",
+        "A-P044",
+        "A-P048",
+        "A-P050",
+        "A-P052",
+        "A-P054",
+        "A-P055"
+      ],
+      "concrete_revision": "附录D说明当前同一人群/公共分箱/各格n，旧9806、47840、59834不混；阶段控制不证明机制或唯一中介。",
+      "claim_ids": [
+        "CL01",
+        "CL06"
+      ],
+      "release_condition": "生产接口可用；R04新描述及V01质量/组成检验仍待。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR22",
+      "title": "最终客户数与可用信息时点",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "新恢复模型仍使用全阶段最终C，标准化在训练内估计；没有新增初期信息集或当时预报模型。",
+      "judgment_change": "原科学判断/限制保持，已记录本轮检查范围",
+      "locations": [
+        "D-P007",
+        "D-P012",
+        "D-P040",
+        "D-P058",
+        "D-P080",
+        "D-P094",
+        "D-P119",
+        "D-P124",
+        "A-P003",
+        "A-P052"
+      ],
+      "concrete_revision": "沿用回顾性最终规模条件分析命名及变量可用时间表；不将新OOF误称故障起点预测。",
+      "claim_ids": [
+        "CL03",
+        "CL05"
+      ],
+      "release_condition": "信息边界不变；V03用途核实，新增部署问题不自动纳入。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR23",
+      "title": "工程量级、误差与校准",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "指数拟合量、η误差和训练均值基准接口已修；没有smearing、留出校准或正式工程场景不确定性实验。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P061",
+        "D-P077",
+        "D-P090",
+        "D-P103",
+        "D-P106",
+        "D-P107",
+        "D-P122",
+        "A-P091",
+        "A-P092"
+      ],
+      "concrete_revision": "方法/图4/6/7/9解释expη非经认证算术均值；工程误差与校准等V，不能用smoke展示量级。",
+      "claim_ids": [
+        "CL05"
+      ],
+      "release_condition": "代码层通过；R04指定量，V03留出误差/场景证据。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR24",
+      "title": "图6/7是否推进主问题",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "图6新共同日历/冻结人口参考与图7网格指数比生产已小试；proxy和LAD兼容未决随输出保存；地图几何与正式渲染尚未生成。",
+      "judgment_change": "原科学判断/限制保持，已记录本轮检查范围",
+      "locations": [
+        "D-P087",
+        "D-P089",
+        "D-P090",
+        "D-P092",
+        "D-P093"
+      ],
+      "concrete_revision": "图6/7去留仍按是否推进CL05；若保留明确参考/支持/网格含义，不能拿旧地图相关/旧倍数回填。",
+      "claim_ids": [
+        "CL05",
+        "CL06"
+      ],
+      "release_condition": "R04产物和V03量级证据后，V04/W决定去留；本轮未替作者确定保留。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR25",
+      "title": "生产者、旧图回填与数字单一来源",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "R02之后隔离审查已恢复原v9；本轮新CLI/src连接R02，94源引用副本和7711运行文件冻结。17测试及720事件smoke通过；step26/27/28最小重建，缺新结果明确失败；原代码/数据/Word未改。LOG同期仅追加，另有证据。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P041",
+        "D-P048",
+        "D-P079",
+        "D-P114",
+        "A-P065",
+        "A-P094"
+      ],
+      "concrete_revision": "当前生产者表替换旧v9接管状态；旧H0、失败smoke、成功smoke、正式B1身份分开。Word嵌图仅后续新版本；不可说R03修了所有历史82脚本。",
+      "claim_ids": [
+        "CL01",
+        "CL02",
+        "CL03",
+        "CL04",
+        "CL05"
+      ],
+      "release_condition": "R03代码与隔离检查完成（LOG追加单列）；R04产物/渲染、R05与W01一致性复核。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR26",
+      "title": "主线、章节及修复历史分工",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "R03完成输入对账/生产接口/小试但无科学验证；新增图10参数基阻断，完整原MR-v1.1已取得并保留合并。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P002",
+        "D-P010",
+        "D-P013",
+        "D-P048",
+        "D-P055",
+        "D-P074",
+        "D-P075",
+        "D-P118",
+        "D-P123",
+        "A-P056",
+        "A-P078",
+        "A-P086",
+        "A-P094"
+      ],
+      "concrete_revision": "继续事件后果→重构→可比评价→工程解释；数据方法可更新实现依据，摘要/发现仍等R04/V；六章结构仍是建议。",
+      "claim_ids": [
+        "CL01",
+        "CL02",
+        "CL03",
+        "CL04",
+        "CL05"
+      ],
+      "release_condition": "当前写作方案可记录，R/V不断更新，W才落稿；本轮所有MR未写Word。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR27",
+      "title": "文献、数据来源及术语引用",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "已读本地工作簿表名/字段及DBF版本元数据并复制保存；没有新增外部文献核查，历史天气产品、空间权重/边界等价仍缺来源。",
+      "judgment_change": "原科学判断/限制保持，已记录本轮检查范围",
+      "locations": [
+        "D-P006",
+        "D-P008",
+        "D-P016",
+        "D-P017",
+        "D-P018",
+        "D-P136",
+        "D-P138",
+        "D-P142",
+        "A-P007",
+        "A-T02"
+      ],
+      "concrete_revision": "附录A/引用来源表区分直接读取本地证据、旧报告与未知官方定义；不把R03报告作最终官方来源。",
+      "claim_ids": [
+        "CL01",
+        "CL05"
+      ],
+      "release_condition": "本地来源已补；保留主张的原始引用核实仍需后续，不编DOI/语义。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR28",
+      "title": "C10编号缺口已闭合，科学问题转由MR08跟踪",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "C10“Buck旧区简单均值proxy”的编号/源表/代码身份再核对；不再存在标题缺口。",
+      "judgment_change": "原科学判断/限制保持，已记录本轮检查范围",
+      "locations": [
+        "D-P018",
+        "A-T02"
+      ],
+      "concrete_revision": "保留MR28已关闭的编号问题与历史；区域科学问题继续归MR08，不把编号闭合当LSOA重建完成。",
+      "claim_ids": [
+        "CL05",
+        "CL06"
+      ],
+      "release_condition": "编号闭合保持，科学条件仍由MR08控制。",
+      "word_status": "尚未写入Word"
+    },
+    {
+      "id": "MR29",
+      "title": "LAD21定位与LAD23人口/区域连接的边界兼容",
+      "stage": "R03",
+      "source_ids": [
+        "SRC12",
+        "SRC13",
+        "SRC14",
+        "SRC15",
+        "SRC16",
+        "SRC17",
+        "SRC18",
+        "SRC19",
+        "SRC20",
+        "SRC21",
+        "SRC22",
+        "SRC23"
+      ],
+      "evidence": "113非空LAD21代码均在LAD23人口键中，候选111；本地缺明确跨版等价来源，113码全部兼容未决；已证实实际错配数量未提供。缺LAD5762/其中可用坐标151未变。",
+      "judgment_change": "代码/对账层推进；科学主张未关闭",
+      "locations": [
+        "D-P018",
+        "D-P041",
+        "A-P013",
+        "A-T02"
+      ],
+      "concrete_revision": "数据2.1/2.4和附录A分别写定位边界、人口键/年及跨版证据缺口；区域图收窄，不报告0错配或全错配，不强制换版。",
+      "claim_ids": [
+        "CL01",
+        "CL05"
+      ],
+      "release_condition": "已给定向范围；补可靠跨版证据后才判断补丁需求，代理口径代码可继续。",
+      "word_status": "尚未写入Word"
+    }
+  ],
+  "claim_states": {
+    "CL01": "R03输入消费/资格/尺度与对账检查通过；真实onset/业务语义仍有限制",
+    "CL02": "最低点/尺度接口已修；正式形状及区间仍待R04/V；图10后期编码阻断",
+    "CL03": "共同fold/尾部/配对评分接口与smoke通过；无正式增量或稳定反转证据",
+    "CL04": "唯一窗口和full/OOF身份已修；日期诊断不等于完整过程验证，V未执行",
+    "CL05": "原变量场景/参考/指数尺度实现已查；无正式工程量级或校准证据",
+    "CL06": "阶段/区域描述生产已小试；因果或机制识别仍不具备"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "raw_source_columns_exact": {
+    "Incident Reference": true,
+    "Restoration Stage": true,
+    "Start Date and Time": true,
+    "End Date and Time": true,
+    "Number of Customers Restored": true,
+    "Re-interruption Stage": true,
+    "MEI code": true,
+    "Cause Code": true,
+    "Continued Cause Code": true,
+    "Damage to the Network": true,
+    "Exceptional Event?": true,
+    "incident_count": true,
+    "Whether or not this incident was excluded from the IIS": true,
+    "ee_coding_only_for_additional_incidents": true,
+    "licence_area": true,
+    "regulatory_year": true,
+    "unique_identifier": true,
+    "substation": true,
+    "SiteFunctionalLocation": true,
+    "Spatial Coordinates": true
+  },
+  "aggregate_checks": {
+    "customers_v2_event_excl_reinterruptions": {
+      "stage_rows_compared": 237901,
+      "mismatch_rows": 0,
+      "max_abs_difference": 0.0
+    },
+    "duration_B_full_span_hours": {
+      "stage_rows_compared": 237901,
+      "mismatch_rows": 0,
+      "max_abs_difference": 6.821210263296962e-13
+    },
+    "duration_A_customer_weighted_hours": {
+      "stage_rows_compared": 237901,
+      "mismatch_rows": 0,
+      "max_abs_difference": 1.1368683772161603e-13
+    }
+  },
+  "first_source_not_earliest_events": 12886,
+  "cause_inconsistent_incidents": 2,
+  "sample_flow": {
+    "raw_rows": 237901,
+    "v3_selected_rows": 237901,
+    "unique_incidents": 135025,
+    "weather_matched_events": 121313,
+    "complete_predictor_events_to_end": 117298,
+    "main_base": 60453,
+    "main_E0": 60437,
+    "main_R0c": 59834,
+    "weather_E0": 9857,
+    "weather_R0c": 9758,
+    "main_duration_p99": 192.0833333333333,
+    "weather_duration_p99": 142.84466666666685,
+    "weather_events_in_main_R0c": 9806,
+    "weather_only_additional_tail_exclusions": 48,
+    "development": {
+      "base": 48338,
+      "E0": 48323,
+      "R0c": 47840,
+      "p99": 194.79583333333224
+    },
+    "later": {
+      "base": 12115,
+      "E0": 12114,
+      "R0c": 11992,
+      "p99": 167.36533333333452
+    }
+  },
+  "sample_quality": [
+    {
+      "sample": "main_E0",
+      "n": 60437,
+      "zero_customers": 8979,
+      "minimum_stage_ge2": 8817,
+      "first_source_row_not_earliest_start": 8199,
+      "weather_hour_not_first_source_hour": 0,
+      "24h_window_not_24_rows": 0
+    },
+    {
+      "sample": "main_R0c",
+      "n": 59834,
+      "zero_customers": 8661,
+      "minimum_stage_ge2": 8671,
+      "first_source_row_not_earliest_start": 8113,
+      "weather_hour_not_first_source_hour": 0,
+      "24h_window_not_24_rows": 0
+    },
+    {
+      "sample": "weather_E0",
+      "n": 9857,
+      "zero_customers": 572,
+      "minimum_stage_ge2": 2593,
+      "first_source_row_not_earliest_start": 1074,
+      "weather_hour_not_first_source_hour": 0,
+      "24h_window_not_24_rows": 0
+    },
+    {
+      "sample": "weather_R0c",
+      "n": 9758,
+      "zero_customers": 548,
+      "minimum_stage_ge2": 2578,
+      "first_source_row_not_earliest_start": 1060,
+      "weather_hour_not_first_source_hour": 0,
+      "24h_window_not_24_rows": 0
+    }
+  ],
+  "input_sha256": {
+    "raw": "2c9c0b20c4650b7d765c5c05de37e4bd189206ddabea7019c9437337750daaba",
+    "v3": "0aad744eabd2e86f186cdb6072964fcea4492afaf34b8deaa94c51ce553dd16f"
+  }
+}

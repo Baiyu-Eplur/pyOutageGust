@@ -1,0 +1,9 @@
+group,target,period,n,gust_mean,gust_sd,model
+main,E0,development,48323,9.690894608982568,5.274015917517526,D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R04\periods_v2\main_E0_development.json
+main,E0,later,12113,10.785197727308988,5.212870179442403,D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R04\periods_v2\main_E0_later.json
+main,R0c,development,48323,9.690894608982568,5.274015917517526,D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R04\periods_v2\main_R0c_development.json
+main,R0c,later,12113,10.785197727308988,5.212870179442403,D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R04\periods_v2\main_R0c_later.json
+weather,E0,development,7750,14.080812910879812,7.492406254171459,D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R04\periods_v2\weather_E0_development.json
+weather,E0,later,2107,15.513194120462098,6.305795317475025,D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R04\periods_v2\weather_E0_later.json
+weather,R0c,development,7750,14.080812910879812,7.492406254171459,D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R04\periods_v2\weather_R0c_development.json
+weather,R0c,later,2107,15.513194120462098,6.305795317475025,D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R04\periods_v2\weather_R0c_later.json

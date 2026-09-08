@@ -1,0 +1,4 @@
+population,n,minimum_stage_gt1_n,minimum_stage_gt1_pct,min_stage_tie_n,min_stage_tie_customer_conflict_n,earliest_time_tie_n,earliest_tie_customer_conflict_n,different_selected_record_n,different_selected_customer_n,R02_earliest_field_mismatch_n
+event_master,135025,14264,10.56396963525273,1,0,24893,21056,19701,17013,0
+main,60436,8817,14.588986696670858,0,0,15249,13266,12823,11286,0
+weather,9857,2593,26.306178350410875,0,0,3528,3411,2794,2668,0

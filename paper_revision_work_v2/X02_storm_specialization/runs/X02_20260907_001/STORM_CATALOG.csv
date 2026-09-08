@@ -1,0 +1,8 @@
+storm_name,start_utc,end_exclusive_utc,window_days,protected_group,role,calendar,date_source,endpoint,n_E_log,n_R_log,n_R_C_log
+Arwen,2021-11-25 00:00:00+00:00,2021-11-29 00:00:00+00:00,4.0,P1,development,UTC_declared_proxy,"frozen R01/old step10 dates, business timezone not independently confirmed",start inclusive/end next-day exclusive,270,270,270
+Dudley,2022-02-15 00:00:00+00:00,2022-02-18 00:00:00+00:00,3.0,P2,development,UTC_declared_proxy,"frozen R01/old step10 dates, business timezone not independently confirmed",start inclusive/end next-day exclusive,291,291,291
+Eunice,2022-02-17 00:00:00+00:00,2022-02-20 00:00:00+00:00,3.0,P2,development,UTC_declared_proxy,"frozen R01/old step10 dates, business timezone not independently confirmed",start inclusive/end next-day exclusive,1659,1659,1659
+Franklin,2022-02-19 00:00:00+00:00,2022-02-23 00:00:00+00:00,4.0,P2,development,UTC_declared_proxy,"frozen R01/old step10 dates, business timezone not independently confirmed",start inclusive/end next-day exclusive,1132,1132,1132
+Babet,2023-10-17 00:00:00+00:00,2023-10-23 00:00:00+00:00,6.0,P3,development,UTC_declared_proxy,"frozen R01/old step10 dates, business timezone not independently confirmed",start inclusive/end next-day exclusive,509,509,509
+Ciaran,2023-10-31 00:00:00+00:00,2023-11-04 00:00:00+00:00,4.0,P4,time_test,UTC_declared_proxy,"frozen R01/old step10 dates, business timezone not independently confirmed",start inclusive/end next-day exclusive,576,576,576
+Henk,2024-01-01 00:00:00+00:00,2024-01-04 00:00:00+00:00,3.0,P5,time_test,UTC_declared_proxy,"frozen R01/old step10 dates, business timezone not independently confirmed",start inclusive/end next-day exclusive,494,494,494

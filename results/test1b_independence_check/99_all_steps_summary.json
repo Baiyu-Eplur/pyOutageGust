@@ -1,0 +1,106 @@
+{
+  "step1_sample_summary": {
+    "n0_before_filter": 62928,
+    "n_full_sample": 62928,
+    "n_customers_gt0_subset": 53492,
+    "n_customers_eq0_excluded": 9436,
+    "pct_customers_eq0": 14.99491482329011,
+    "full_sample": {
+      "log1p_customers_mean": 1.583686759356032,
+      "log1p_customers_std": 1.581978898984448,
+      "log1p_duration_mean": 1.7625048586907903,
+      "log1p_duration_std": 1.0778741345861642
+    },
+    "customers_gt0_subset": {
+      "log1p_customers_mean": 1.863049435294182,
+      "log1p_customers_std": 1.5568103753918143,
+      "log1p_duration_mean": 1.851276807955473,
+      "log1p_duration_std": 0.9818228799020206
+    }
+  },
+  "spearman": [
+    {
+      "sample": "full",
+      "n": 62928,
+      "spearman_rho": -0.15311694743636375,
+      "p_value": 0.0,
+      "effect_size_label": "weak"
+    },
+    {
+      "sample": "customers_gt0",
+      "n": 53492,
+      "spearman_rho": -0.5079292426056965,
+      "p_value": 0.0,
+      "effect_size_label": "strong"
+    }
+  ],
+  "distance_correlation": [
+    {
+      "sample": "full",
+      "n": 62928,
+      "distance_correlation_avl_exact": 0.37524073870027613,
+      "n_permutations": 500,
+      "perm_p_value": 0.001996007984031936,
+      "null_mean": 0.006278711473142257,
+      "null_std": 0.0014981467796152893,
+      "null_max": 0.014488752018699123,
+      "elapsed_sec": 50.83175039291382,
+      "method_note": "exact AVL O(n log n) algorithm on full n (no subsampling); custom permutation null since dcor built-in test uses naive O(n^2) distances"
+    },
+    {
+      "sample": "customers_gt0",
+      "n": 53492,
+      "distance_correlation_avl_exact": 0.5185503372644352,
+      "n_permutations": 500,
+      "perm_p_value": 0.001996007984031936,
+      "null_mean": 0.00669444301824772,
+      "null_std": 0.0016541814742764786,
+      "null_max": 0.01359950125345063,
+      "elapsed_sec": 42.56108069419861,
+      "method_note": "exact AVL O(n log n) algorithm on full n (no subsampling); custom permutation null since dcor built-in test uses naive O(n^2) distances"
+    }
+  ],
+  "mutual_information": [
+    {
+      "sample": "full",
+      "n": 62928,
+      "mutual_info_knn": 0.399286233466114,
+      "n_permutations": 500,
+      "perm_p_value": 0.001996007984031936,
+      "z_score_vs_null": 268.4943059662954,
+      "null_mean": 0.0009360509748602794,
+      "null_std": 0.0014836448060140963,
+      "elapsed_sec": 150.4116449356079
+    },
+    {
+      "sample": "customers_gt0",
+      "n": 53492,
+      "mutual_info_knn": 0.2108662141606974,
+      "n_permutations": 500,
+      "perm_p_value": 0.001996007984031936,
+      "z_score_vs_null": 107.06244992589785,
+      "null_mean": 0.0013942236852284272,
+      "null_std": 0.0019565402306826792,
+      "elapsed_sec": 124.75170636177063
+    }
+  ],
+  "kruskal_wallis": [
+    {
+      "sample": "full",
+      "n_groups": 6,
+      "n_total": 62928,
+      "H_statistic": 19554.552488471676,
+      "p_value": 0.0,
+      "epsilon_squared_effect_size": 0.31069502699328816
+    },
+    {
+      "sample": "customers_gt0",
+      "n_groups": 5,
+      "n_total": 53492,
+      "H_statistic": 14823.738498285262,
+      "p_value": 0.0,
+      "epsilon_squared_effect_size": 0.2770717837658732
+    }
+  ],
+  "total_elapsed_sec": 370.03706550598145
+}

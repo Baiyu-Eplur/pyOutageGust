@@ -1,0 +1,14 @@
+{
+  "reports\\R04_report.md": "SRC27",
+  "tables\\H0_R1_B1_COMPARISON.md": "SRC28",
+  "tables\\NUMERIC_LEDGER.md": "SRC29",
+  "tables\\RETAINED_ANALYSIS_COVERAGE.md": "SRC30",
+  "R04\\CALENDAR_BASIS_REPAIR.md": "SRC31",
+  "R04\\checks\\core_actual_acceptance.json": "SRC32",
+  "R04\\checks\\calendar_equivalence.json": "SRC33",
+  "R04\\checks\\R1_acceptance.json": "SRC34",
+  "R04\\checks\\supplement_execution.json": "SRC35",
+  "R04\\checks\\final_isolation.json": "SRC36",
+  "R04\\figures\\FIGURE_MANIFEST.json": "SRC37",
+  "R04\\tables\\customer_aggregation_comparison.json": "SRC38"
+}

@@ -1,0 +1,1 @@
+R05 numerical and covariance audit passed; zero fits

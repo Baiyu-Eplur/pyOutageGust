@@ -1,0 +1,26 @@
+{
+  "latest_successful_run": "R03_smoke_v4",
+  "code_identity": "859a02e917d71b4b51333b4db452403a97f1e6c479b6faf654d79f988c553846",
+  "runs": [
+    {
+      "run_id": "R03_smoke_v1",
+      "status": "success_initial_interfaces"
+    },
+    {
+      "run_id": "R03_smoke_v2",
+      "status": "failed_calendar_rank; partial_outputs_do_not_use"
+    },
+    {
+      "run_id": "R03_smoke_v3",
+      "status": "success_with_isolated_period_branch"
+    },
+    {
+      "run_id": "R03_smoke_v4",
+      "status": "release_success_with_isolated_period_branch"
+    }
+  ],
+  "all_purposes": "non_inferential_smoke",
+  "formal_runs": 0,
+  "bootstrap_runs": 0,
+  "Word_modified": false
+}

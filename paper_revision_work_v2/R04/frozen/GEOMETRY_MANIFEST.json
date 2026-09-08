@@ -1,0 +1,27 @@
+[
+  {
+    "original": "D:\\Pyprogramme\\STST2603\\data\\Local_Authority_Districts_December_2021_UK_BGC_2022\\LAD_DEC_2021_UK_BGC.shp",
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\frozen\\geometry\\LAD_DEC_2021_UK_BGC.shp",
+    "sha256": "c2972210e6ed58eac9b4162110391d016b9946458320bac67af84369bf8326fe"
+  },
+  {
+    "original": "D:\\Pyprogramme\\STST2603\\data\\Local_Authority_Districts_December_2021_UK_BGC_2022\\LAD_DEC_2021_UK_BGC.shx",
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\frozen\\geometry\\LAD_DEC_2021_UK_BGC.shx",
+    "sha256": "82d3bcdb178f0ed91989e84e689e298dfb5e317c98a9a38839da0156561bc3a4"
+  },
+  {
+    "original": "D:\\Pyprogramme\\STST2603\\data\\Local_Authority_Districts_December_2021_UK_BGC_2022\\LAD_DEC_2021_UK_BGC.dbf",
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\frozen\\geometry\\LAD_DEC_2021_UK_BGC.dbf",
+    "sha256": "4bc7e07eef4ff0eb020f82e7a7b7288822dd5a9fbca2e9e0063444a350600d41"
+  },
+  {
+    "original": "D:\\Pyprogramme\\STST2603\\data\\Local_Authority_Districts_December_2021_UK_BGC_2022\\LAD_DEC_2021_UK_BGC.prj",
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\frozen\\geometry\\LAD_DEC_2021_UK_BGC.prj",
+    "sha256": "78799974d480d1c5048a850e8590cb080ddf9b485494228c276146105d151015"
+  },
+  {
+    "original": "D:\\Pyprogramme\\STST2603\\data\\Local_Authority_Districts_December_2021_UK_BGC_2022\\LAD_DEC_2021_UK_BGC.cpg",
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\frozen\\geometry\\LAD_DEC_2021_UK_BGC.cpg",
+    "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+  }
+]

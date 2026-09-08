@@ -1,0 +1,129 @@
+{
+  "E0": {
+    "label": "E0 (exposure)",
+    "beta1": -0.032325899095631154,
+    "beta2": 0.10276170747389514,
+    "turning_point_z": 0.15728572388621997,
+    "turning_point_ms": 10.693754982765721,
+    "gust_mean": 9.87229677581956,
+    "gust_sd": 5.222713076874045,
+    "z_at_zero_gust": -1.8902621358875098,
+    "rows": [
+      {
+        "k": 1,
+        "z_pos": 1,
+        "z_neg": -1,
+        "eta_pos": 0.07043580837826399,
+        "eta_neg": 0.1350876065695263,
+        "exp_eta_pos": 1.0729756911703334,
+        "exp_eta_neg": 1.1446370576849254,
+        "delta_antisymmetric": -0.0646517981912623,
+        "sym_component": 0.10276170747389514,
+        "eta_pos_over_neg_ratio": 0.5214083672584161,
+        "asymmetry_share_of_pure_quadratic": 0.31457144777243984,
+        "gust_ms_pos": 15.095009852693604,
+        "gust_ms_neg": 4.6495836989455155,
+        "gust_neg_physically_valid": true
+      },
+      {
+        "k": 2,
+        "z_pos": 2,
+        "z_neg": -2,
+        "eta_pos": 0.34639503170431823,
+        "eta_neg": 0.4756986280868429,
+        "exp_eta_pos": 1.413961064957187,
+        "exp_eta_neg": 1.6091379938803425,
+        "delta_antisymmetric": -0.12930359638252464,
+        "sym_component": 0.41104682989558056,
+        "eta_pos_over_neg_ratio": 0.7281816916257342,
+        "asymmetry_share_of_pure_quadratic": 0.15728572388622,
+        "gust_ms_pos": 20.31772292956765,
+        "gust_ms_neg": -0.5731293779285291,
+        "gust_neg_physically_valid": false
+      },
+      {
+        "k": 3,
+        "z_pos": 3,
+        "z_neg": -3,
+        "eta_pos": 0.8278776699781628,
+        "eta_neg": 1.0218330645519498,
+        "exp_eta_pos": 2.2884567222804377,
+        "exp_eta_neg": 2.778282870971346,
+        "delta_antisymmetric": -0.19395539457378697,
+        "sym_component": 0.9248553672650563,
+        "eta_pos_over_neg_ratio": 0.8101887663433245,
+        "asymmetry_share_of_pure_quadratic": 0.10485714925747999,
+        "gust_ms_pos": 25.540436006441695,
+        "gust_ms_neg": -5.795842454802575,
+        "gust_neg_physically_valid": false
+      }
+    ]
+  },
+  "R0c": {
+    "label": "R0c (recovery)",
+    "beta1": 0.0001979069022939746,
+    "beta2": 0.07923745080615863,
+    "turning_point_z": -0.001248821739470905,
+    "turning_point_ms": 9.86871719712953,
+    "gust_mean": 9.875234820350876,
+    "gust_sd": 5.2190180674673785,
+    "z_at_zero_gust": -1.8921633710961667,
+    "rows": [
+      {
+        "k": 1,
+        "z_pos": 1,
+        "z_neg": -1,
+        "eta_pos": 0.0794353577084526,
+        "eta_neg": 0.07903954390386465,
+        "exp_eta_pos": 1.0826755706374536,
+        "exp_eta_neg": 1.0822471175001322,
+        "delta_antisymmetric": 0.0003958138045879467,
+        "sym_component": 0.07923745080615863,
+        "eta_pos_over_neg_ratio": 1.0050077946435187,
+        "asymmetry_share_of_pure_quadratic": 0.0024976434789417946,
+        "gust_ms_pos": 15.094252887818254,
+        "gust_ms_neg": 4.6562167528834975,
+        "gust_neg_physically_valid": true
+      },
+      {
+        "k": 2,
+        "z_pos": 2,
+        "z_neg": -2,
+        "eta_pos": 0.3173456170292225,
+        "eta_neg": 0.31655398942004653,
+        "exp_eta_pos": 1.3734771870082856,
+        "exp_eta_neg": 1.372390334794345,
+        "delta_antisymmetric": 0.0007916276091759489,
+        "sym_component": 0.3169498032246345,
+        "eta_pos_over_neg_ratio": 1.0025007664905006,
+        "asymmetry_share_of_pure_quadratic": 0.0012488217394709849,
+        "gust_ms_pos": 20.31327095528563,
+        "gust_ms_neg": -0.562801314583881,
+        "gust_neg_physically_valid": false
+      },
+      {
+        "k": 3,
+        "z_pos": 3,
+        "z_neg": -3,
+        "eta_pos": 0.7137307779623095,
+        "eta_neg": 0.7125433365485457,
+        "exp_eta_pos": 2.0415938012911914,
+        "exp_eta_neg": 2.0391709670330096,
+        "delta_antisymmetric": 0.0011874414137638123,
+        "sym_component": 0.7131370572554276,
+        "eta_pos_over_neg_ratio": 1.0016664830794932,
+        "asymmetry_share_of_pure_quadratic": 0.000832547826313912,
+        "gust_ms_pos": 25.532289022753012,
+        "gust_ms_neg": -5.7818193820512604,
+        "gust_neg_physically_valid": false
+      }
+    ]
+  },
+  "observed_gust_percentiles_E0_sample": {
+    "p1": 2.2,
+    "p50": 8.9,
+    "p95": 19.8,
+    "p99": 27.2,
+    "max": 39.4
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "schema_version": "2.0",
+  "active_phase": "R",
+  "active_stage": "R02",
+  "baseline": "H0 preserved; R02 input rebuilt; R1/B1 models not run",
+  "project_root": "D:\\Pyprogramme\\STST2603\\claude_branch",
+  "last_updated": "2026-09-05T17:00:45.240084+00:00",
+  "stages": {
+    "R00": {
+      "execution_status": "completed",
+      "report": "reports/R00_report.md",
+      "inputs": [
+        "results/code_audit_20260905"
+      ],
+      "outputs": [
+        "inventory/"
+      ],
+      "blockers": []
+    },
+    "R01": {
+      "execution_status": "completed",
+      "report": "reports/R01_report.md",
+      "inputs": [
+        "reports/R00_report.md",
+        "inventory/large_input_identity.json"
+      ],
+      "outputs": [
+        "contracts/",
+        "checks/",
+        "reports/R01_report.md"
+      ],
+      "blockers": [],
+      "unresolved_definitions": "contracts/UNRESOLVED_DEFINITIONS.md"
+    },
+    "R02": {
+      "execution_status": "completed",
+      "report": "reports/R02_report.md",
+      "inputs": [
+        "R02/R00_R01审阅与R02执行指令.md",
+        "contracts/",
+        "inventory/large_input_identity.json"
+      ],
+      "outputs": [
+        "R02/data/EVENT_MANIFEST.json",
+        "R02/checks/",
+        "tables/R02_SAMPLE_FLOW.md",
+        "reports/R02_report.md"
+      ],
+      "blockers": [],
+      "repair_status": "targeted_checks_passed",
+      "models_reestimated": false
+    },
+    "R03": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "R04": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "R05": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "V00": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "V01": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "V02": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "V03": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "V04": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "W00": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "W01": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    }
+  },
+  "issue_ledger": "ISSUE_LEDGER.md",
+  "decisions": "DECISIONS.md",
+  "artifact_manifest": "ARTIFACT_MANIFEST.json",
+  "invalidated_outputs": [
+    {
+      "scope": "All retained H0 model/OOF/figure numerical outputs depending on first-row input",
+      "status": "historical_only_not_valid_for_corrected_input",
+      "reason": "R02 inputs rebuilt; retained H0 model/OOF/figures are historical and require R03/R04 generation before use with corrected inputs"
+    }
+  ]
+}

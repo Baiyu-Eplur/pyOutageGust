@@ -1,0 +1,178 @@
+{
+  "schema_version": "2.0",
+  "active_phase": "R",
+  "active_stage": "R05",
+  "baseline": "R04_B1_all_valid_v1 unchanged; R05 completed conditional_for_V; V/W not started",
+  "project_root": "D:\\Pyprogramme\\STST2603\\claude_branch",
+  "last_updated": "2026-09-05T23:31:25.148819+00:00",
+  "stages": {
+    "R00": {
+      "execution_status": "completed",
+      "report": "reports/R00_report.md",
+      "inputs": [
+        "results/code_audit_20260905"
+      ],
+      "outputs": [
+        "inventory/"
+      ],
+      "blockers": []
+    },
+    "R01": {
+      "execution_status": "completed",
+      "report": "reports/R01_report.md",
+      "inputs": [
+        "reports/R00_report.md",
+        "inventory/large_input_identity.json"
+      ],
+      "outputs": [
+        "contracts/",
+        "checks/",
+        "reports/R01_report.md"
+      ],
+      "blockers": [],
+      "unresolved_definitions": "contracts/UNRESOLVED_DEFINITIONS.md"
+    },
+    "R02": {
+      "execution_status": "completed",
+      "report": "reports/R02_report.md",
+      "inputs": [
+        "R02/R00_R01审阅与R02执行指令.md",
+        "contracts/",
+        "inventory/large_input_identity.json"
+      ],
+      "outputs": [
+        "R02/data/EVENT_MANIFEST.json",
+        "R02/checks/",
+        "tables/R02_SAMPLE_FLOW.md",
+        "reports/R02_report.md"
+      ],
+      "blockers": [],
+      "repair_status": "targeted_checks_passed",
+      "models_reestimated": false,
+      "isolation_review": {
+        "status": "completed",
+        "report": "reports/R02_ISOLATION_REVIEW.md",
+        "original_code_restored": true,
+        "numeric_inputs_changed": false
+      }
+    },
+    "R03": {
+      "execution_status": "completed",
+      "report": "reports/R03_report.md",
+      "inputs": [
+        "R03/frozen/evidence/SRC11_R03_instruction.txt",
+        "R02/data/EVENT_MANIFEST.json",
+        "paper_manuscript_record/"
+      ],
+      "outputs": [
+        "R03/",
+        "manuscript_record/",
+        "reports/R03_report.md",
+        "tables/R03_INPUT_ACCEPTANCE.md",
+        "code/PRODUCTION_CHANGELOG.md"
+      ],
+      "blockers": [],
+      "models_reestimated": false,
+      "small_fits_only": true,
+      "latest_smoke": "R03_smoke_v4",
+      "tests_passed": 17,
+      "ledger_version": "MR-v1.2-R03",
+      "isolated_blocked_products": [
+        "figure10 later: rank deficient calendar encoding",
+        "final figure/table rendering and six-cause/GLM/cubic branches not generated"
+      ],
+      "original_log_observation": "original bytes exact prefix preserved; concurrent append is not R03 evidence"
+    },
+    "R04": {
+      "execution_status": "completed_with_declared_coverage_gaps",
+      "report": "reports/R04_report.md",
+      "inputs": [
+        "R03/configs/R04_primary.json",
+        "r04_review_handoff/",
+        "R02/data/R02_event_master.parquet"
+      ],
+      "outputs": [
+        "R04/",
+        "baseline/B1_MANIFEST.json",
+        "manuscript_record/",
+        "RETURN_PACKAGE_R04.zip"
+      ],
+      "blockers": [],
+      "readiness": "R03/R04_READINESS.md",
+      "ledger_version": "MR-v1.3-R04",
+      "models_reestimated": true,
+      "production_fits": 164,
+      "word_modified": false,
+      "remaining": "R05 review of numeric semantic slots, figure1 decorations and old appendix responsibilities; scientific V not run"
+    },
+    "R05": {
+      "execution_status": "completed",
+      "acceptance": "conditional_for_V",
+      "report": "reports/R05_PROJECT_REVIEW.md",
+      "new_fits": 0,
+      "Word_modified": false
+    },
+    "V00": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "V01": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "V02": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "V03": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "V04": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "W00": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "W01": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    }
+  },
+  "issue_ledger": "ISSUE_LEDGER.md",
+  "decisions": "DECISIONS.md",
+  "artifact_manifest": "ARTIFACT_MANIFEST.json",
+  "invalidated_outputs": [
+    {
+      "scope": "All retained H0 model/OOF/figure numerical outputs depending on first-row input",
+      "status": "historical_only_not_valid_for_corrected_input",
+      "reason": "R02 inputs rebuilt; retained H0 model/OOF/figures are historical and require R03/R04 generation before use with corrected inputs"
+    }
+  ],
+  "revision_entry": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\cli.py",
+  "historical_code_policy": "read_only_H0_restored",
+  "isolation_policy": "ISOLATION_POLICY.md"
+}

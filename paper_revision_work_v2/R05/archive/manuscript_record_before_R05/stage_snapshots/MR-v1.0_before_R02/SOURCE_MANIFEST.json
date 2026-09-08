@@ -1,0 +1,118 @@
+{
+  "checkpoint": "R01_received_before_R02",
+  "date": "2026-09-05",
+  "sources": [
+    {
+      "source_id": "SRC01",
+      "original_name": "代码流程核查与研究推进脉络.md",
+      "path": "evidence/SRC01_code_audit_20260905.md",
+      "role": "初步代码核查；已读报告，未在本环境读取其全部本地底层产物",
+      "size_bytes": 23349,
+      "sha256": "2479a2d139045dfdcc3f7a52909682e61bca1fb74617c645e57bc6c31f505b55"
+    },
+    {
+      "source_id": "SRC02",
+      "original_name": "RETURN_TO_CHATGPT.md",
+      "path": "evidence/SRC02_R00_R01_return_20260905.md",
+      "role": "R00–R01返回摘要；本轮S0-1按上下文对应R00–R01，不作为另一次独立审计",
+      "size_bytes": 3654,
+      "sha256": "0da24b04b188f17f7451528fe759dd56d81d7711d25faad951997639c5c37850"
+    },
+    {
+      "source_id": "SRC03",
+      "original_name": "R00_R01审阅与R02执行指令.md",
+      "path": "evidence/SRC03_R00_R01_review_R02.md",
+      "role": "本对话已给出的R00–R01审阅与下一步指令；是分析意见，不是新实验",
+      "size_bytes": 15425,
+      "sha256": "2edead79992d5b25ad08ea42b464fa82d350be50a514c50455422c41992b2f45"
+    },
+    {
+      "source_id": "SRC04",
+      "original_name": "50_数学审查本地核实.md",
+      "path": "evidence/SRC04_local_mathematical_audit.md",
+      "role": "早期本地数值核实；其中部分数学解释已被后续审查纠正",
+      "size_bytes": 35968,
+      "sha256": "866310ac63024196065780e7715369be23b7b6065b300d9025d50424906daf17"
+    },
+    {
+      "source_id": "SRC05",
+      "original_name": "最终逻辑审查_工程统计视角.md",
+      "path": "evidence/SRC05_logic_review.md",
+      "role": "L01–L12原逻辑审查；部分疑点已由SRC01/SRC02更新",
+      "size_bytes": 23407,
+      "sha256": "5424932ffa934adcf46dd6c81b9910fbd36e09f759ddf304c639be56b76cd59d"
+    },
+    {
+      "source_id": "SRC06",
+      "original_name": "补充实验与计算_人工确认清单.md",
+      "path": "evidence/SRC06_validation_worklist.md",
+      "role": "T01–T14原补证清单",
+      "size_bytes": 20569,
+      "sha256": "8cf39a22f47a4518b114ae76648d0628c2fd1d7fe63d175e3833953bd145f267"
+    },
+    {
+      "source_id": "SRC07",
+      "original_name": "修订审查与待补分析.md",
+      "path": "evidence/SRC07_previous_revision_log.md",
+      "role": "原Word→用户Markdown→当前Word的既有修订记录",
+      "size_bytes": 38014,
+      "sha256": "6c0a485a7b5ef6447f392cd15ec5c639803f7b909c4b9ea928c03926437599ae"
+    },
+    {
+      "source_id": "SRC08",
+      "original_name": "本地Codex接管_分步计划与提示词.md",
+      "path": "evidence/SRC08_execution_plan_before_ledger.md",
+      "role": "加入本台账前的v2执行计划快照",
+      "size_bytes": 66367,
+      "sha256": "41c5158b05bdb74f8720861fb88870feb657f868bc9f85fa919f236fac209241"
+    },
+    {
+      "source_id": "DOC01",
+      "original_name": "Draft_revised.docx",
+      "path": "evidence/DOC01_main_baseline.docx",
+      "role": "当前正文基线；本轮只读、未修改",
+      "size_bytes": 1119751,
+      "sha256": "196cef4abcdf4e6723b55035049c08de75613c3cc5a56314b264490f70e5926c"
+    },
+    {
+      "source_id": "DOC02",
+      "original_name": "Appendix_revised.docx",
+      "path": "evidence/DOC02_appendix_baseline.docx",
+      "role": "当前附录基线；本轮只读、未修改",
+      "size_bytes": 120515,
+      "sha256": "55f5c4f30fc75473d9da354b2819d3f8298904b8be94104ca3e107276696af8c"
+    },
+    {
+      "source_id": "OLD01",
+      "original_name": "Draft(2).docx",
+      "path": "evidence/OLD01_original_main.docx",
+      "role": "最初正文，用于历史追溯",
+      "size_bytes": 1463689,
+      "sha256": "bd9169585a1e894610b17b8ecfc82f2eb3021a6b889716f62072a989cbb199e7"
+    },
+    {
+      "source_id": "OLD02",
+      "original_name": "Appendix(6).docx",
+      "path": "evidence/OLD02_original_appendix.docx",
+      "role": "最初附录，用于历史追溯",
+      "size_bytes": 124631,
+      "sha256": "317459a9d4e93cf399e03ccea688a053e02af0c522c469376956c953fb62bc5b"
+    },
+    {
+      "source_id": "OLD03",
+      "original_name": "Paper1_Introduction_draft (6).md",
+      "path": "evidence/OLD03_user_main_revision.md",
+      "role": "用户前期措辞修改稿",
+      "size_bytes": 86586,
+      "sha256": "bbd8afd44085dde4c3c8c9a086e106b1c8c6fa199b300cc478f8d0997d8ace46"
+    },
+    {
+      "source_id": "OLD04",
+      "original_name": "Paper1_Appendices (1).md",
+      "path": "evidence/OLD04_user_appendix_revision.md",
+      "role": "用户前期措辞修改附录",
+      "size_bytes": 27456,
+      "sha256": "366477c8751d95150e6ae54fa175f6f4a408a046db7a783611957e59da1146b8"
+    }
+  ]
+}

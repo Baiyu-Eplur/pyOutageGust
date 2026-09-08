@@ -1,0 +1,12 @@
+{
+  "package": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\X02_storm_specialization\\RETURN_PACKAGE_X02.zip",
+  "sha256": "1c1a81cd0664f33d1c1db1c6eda2365b74356acfa9f331b65c33ca873c3e7aac",
+  "bytes": 257715972,
+  "zip_member_count": 696,
+  "testzip_bad_member": null,
+  "extract_test": "passed",
+  "required_artifacts_present": true,
+  "run_manifest_sha256": "a1b517b87056e91f2394c1b2ca8ac0ff4f31c8da5d5418f42c02f554b955d622",
+  "source_package_unchanged": true,
+  "in_package_terminal_state": "X02-F completed"
+}

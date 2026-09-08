@@ -1,0 +1,10 @@
+{
+  "active_revision_entry": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\event_input_repair\\r02_input_pipeline.py",
+  "sha256": "ecdef9a5e4d22467f0e1981544ac71e51743b68d0b0a458eac123546f75b3350",
+  "historical_entry": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\v3_validation\\v3_validation_pipeline.py",
+  "historical_entry_status": "restored_byte_exact_H0_do_not_use_for_repaired_analysis",
+  "event_manifest": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R02\\data\\EVENT_MANIFEST.json",
+  "isolation_audit": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R02_isolation_audit",
+  "status": "validated",
+  "validation": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R02_isolation_audit\\validation.json"
+}

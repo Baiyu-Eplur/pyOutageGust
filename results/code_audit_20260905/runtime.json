@@ -1,0 +1,10 @@
+{
+  "executable": "C:\\Users\\haoya\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.4.3",
+  "pandas": "3.0.1",
+  "scipy": "1.17.1",
+  "statsmodels": "0.14.6",
+  "sklearn": "1.8.0",
+  "project_package_path": "D:\\Pyprogramme\\STST2603\\.venv\\Lib\\site-packages"
+}

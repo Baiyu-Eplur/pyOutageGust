@@ -1,0 +1,20 @@
+test_calendar_boundaries_include_full_end_day (test_r02_events.EventRules.test_calendar_boundaries_include_full_end_day) ... ok
+test_cross_boundary_end_retained_in_D (test_r02_events.EventRules.test_cross_boundary_end_retained_in_D) ... ok
+test_missing_C_is_false_eligibility_with_explicit_reason (test_r02_events.EventRules.test_missing_C_is_false_eligibility_with_explicit_reason) ... ok
+test_no_offset_not_silently_localized (test_r02_events.EventRules.test_no_offset_not_silently_localized) ... ok
+test_population_uses_new_year_and_unique_keys (test_r02_events.EventRules.test_population_uses_new_year_and_unique_keys) ... ok
+test_repeat_and_empty_customer_set (test_r02_events.EventRules.test_repeat_and_empty_customer_set) ... ok
+test_shuffle_stable_absolute_time_and_ties (test_r02_events.EventRules.test_shuffle_stable_absolute_time_and_ties) ... ok
+test_sourceid_and_cause_conflicts_preserve_stages (test_r02_events.EventRules.test_sourceid_and_cause_conflicts_preserve_stages) ... ok
+test_tied_coordinate_conflict_not_weather_tiebreak (test_r02_events.EventRules.test_tied_coordinate_conflict_not_weather_tiebreak) ... ok
+test_absent_exact_hour_never_uses_nearest (test_r02_events.WeatherRules.test_absent_exact_hour_never_uses_nearest) ... ok
+test_duplicate_hour_is_not_24_valid_hours (test_r02_events.WeatherRules.test_duplicate_hour_is_not_24_valid_hours) ... ok
+test_exact_hour_and_rain_window (test_r02_events.WeatherRules.test_exact_hour_and_rain_window) ... ok
+test_invalid_readable_cache_not_hidden_by_v3_fallback (test_r02_events.WeatherRules.test_invalid_readable_cache_not_hidden_by_v3_fallback) ... ok
+test_missing_earliest_weather_does_not_borrow_later (test_r02_events.WeatherRules.test_missing_earliest_weather_does_not_borrow_later) ... ok
+test_v3_only_preserved_and_explicitly_unverified (test_r02_events.WeatherRules.test_v3_only_preserved_and_explicitly_unverified) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 1.484s
+
+OK

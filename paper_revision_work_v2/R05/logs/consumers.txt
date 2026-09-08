@@ -1,0 +1,2 @@
+Writing and semantic audit complete 90 963
+Single consumer entry passed: graphics plus 246 current semantic bindings, zero fits

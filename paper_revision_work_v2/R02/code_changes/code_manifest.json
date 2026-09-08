@@ -1,0 +1,32 @@
+[
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\v3_validation\\v3_validation_pipeline.py",
+    "sha256": "c6421fd3a4f37cae278fc4553149295f431173f912cb348793b84c6c2c2175e4",
+    "H0_snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\v3_validation\\v3_validation_pipeline.py",
+    "change": "modified"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\event_input_repair\\r02_events.py",
+    "sha256": "31c12f44966197b454b39d03347eab17e3377112aaf8026503c0c8622112f686",
+    "H0_snapshot": null,
+    "change": "new"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\event_input_repair\\test_r02_events.py",
+    "sha256": "e334011c861159c35e311e0eec8f40d246a7cc849dfd6910eda8f250b9b48d2a",
+    "H0_snapshot": null,
+    "change": "new"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\run_r02.py",
+    "sha256": "28f6667056ca3d02a0da1f7b95f235bb2f6f44ad7ea386347415eef7d989e0e3",
+    "H0_snapshot": null,
+    "change": "new"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\check_r02.py",
+    "sha256": "8b79587f299bb01bf0cc449d2c72701933f5a98eb652f72894dafe45b34e3975",
+    "H0_snapshot": null,
+    "change": "new"
+  }
+]

@@ -1,0 +1,576 @@
+# 工作日志
+
+## 2026-08-23（会话 1：初始化）
+
+- 阅读 `项目研究框架与数据结果说明.md`，充分理解主线研究框架（UKPN 2021-2024 停电事件 × Open-Meteo 天气 × LAD 社会经济属性；暴露 = log(customers_restored)，恢复 = log(Duration)；阵风一次+二次项非线性 log-OLS；v6 论文样本内 R²≈0.04-0.05）。
+- 排查主线最新进展，发现 codex 在过去 1-2 天内完成了一轮很深的审计与重构：
+  - `audit_step0` 系列：对数据/研究流程的独立只读审计，提出多个未决问题（Q1-Q12），核心质疑包括：一行是否真的是独立停电事件（还是恢复阶段/re-interruption 记录）、customers/duration 的事件级定义是否正确、天气窗口是否确实是事发前回看窗口、样本切分是否存在信息泄漏等。
+  - `analysis_step1`–`analysis_step4d_top3`：基于审计结论重构了 incident-level 结果变量（primary exposure = 有效 N 阶段客户数之和且持续≥3分钟；primary recovery = 最早有效 Stage Start 到最晚有效 Stage End），并建立了按日期/站点/LAD 的固定交叉验证切分。
+  - 关键发现：严格样本外验证下，阵风非线性模型的 out-of-fold R² 几乎为零（暴露侧 log R²≈0.015-0.02，恢复侧≈0.005-0.01；按最大类 cause code 71 分层后暴露侧 R²≈0.0005）；特征模块 M1-M5 均未通过准入标准；唯一有提升的 M6 被标记为疑似泄漏（diagnostic_only）。
+- 与用户确认：这基本上就是主线卡住的瓶颈，但用户表示还有其他顾虑（待用户进一步说明）。
+- 用户决策：
+  1. 分支方向：不再深挖旧框架为什么失效，直接探索新的建模范式；
+  2. 分支位置：`STST2603/claude_branch/`（项目内部子目录，严格只写入此处）；
+  3. 数据起点：从原始 `data/ukpn-iis.csv` 等原始数据独立重新构建，不复用 codex 的中间产物（`analysis_step1/2` 等），以便交叉验证 codex 结论本身是否可靠。
+- 已创建本分支目录结构（README、LOG、docs/data/scripts/results 子目录）。
+- 待办：向用户征询（a）除 R² 崩塌外的其他顾虑具体是什么；（b）用户已有的具体建模思路/假设，以便整理成可执行方案。
+
+## 2026-08-23（会话 1 续：新思路评估）
+
+- 用户提出新思路"解耦形态、剥离干扰、分层归因"三阶段框架：① 在 (duration, customers) 二维空间上无监督聚类出破坏形态；② 用天气+区域变量判别形态归属；③ 在形态内部（或复合指标下）重新拟合阵风弹性。
+- 已完成方法论定位、文献支撑检索与风险评估，写入 `docs/01_研究思路评估与测试计划.md`：
+  - 方法论上这是一个 sequential finite mixture regression（顺序化有限混合模型），不是修补旧框架，是更换估计量（连续弹性 → 形态转换概率）。
+  - 检索到三类支撑文献：(1) Yuan et al. *Nat. Commun.* 2022 发现停电 duration 与 customers 近似独立，支持二维联合聚类而非合并成单一严重度；(2) Dobson/Carreras 级联故障重尾/自组织临界文献，支持"少数长尾事件应作为独立形态"；(3) 电网风致故障的 fragility curve/易损性曲线工程传统，支持"阈值/体制转换"式建模而非连续函数。
+  - 识别三个必须先处理的风险：A）聚类标签与回归目标同源导致的循环论证/信息泄漏，须用严格样本外纪律（借用 codex 的 date/site/LAD folds 设计原则）处理；B）audit_step0 提出的 Q1-Q6（行是否为独立事件、customers/duration 定义、customers=0 含义）仍未解决，聚类前必须先解决，否则形态可能只是记录结构的伪影；C）极端偏态导致长尾形态样本量可能不足，且 79.6% 事件为同一 cause code（资产老化），遗漏变量问题不会因换框架而消失。
+  - 初步可行性判断：**有条件可行，建议先测试再全面投入**。
+  - 设计了预注册的 Test 1（聚类有效性：dip test/GMM BIC/ARI 稳健性）、Test 2（形态样本外可判别性：按日期分组 CV，候选模型 vs 边际频率基线，阈值参照 codex 现有晋级规则）、Test 3（组内弹性是否优于 pooled 模型），并给出每个测试不通过时的备选路径。
+- 文档已发送用户并写入 `claude_branch/docs/01_研究思路评估与测试计划.md`。
+- 待办：等待用户确认是否执行 Test 1-3、补充"其他顾虑"的具体内容、确认天气数据处理方式（复用现有匹配 vs 完全独立重做）。
+
+## 2026-08-23（会话 1 续：生成交接文档）
+
+- 用户说明：后续方案设计与执行指令发布改由 Claude Code 网页端负责；本会话（Cowork/project）之后只负责接收指令、执行、生成回执。
+- 已生成 `claude_branch/HANDOFF_交接文档.md`，完整记录：项目背景、主线瓶颈（含具体数值：out-of-fold R² 约 0.0005-0.02，M1-M5 未通过晋级、M6 疑似泄漏）、audit_step0 的 Q1-Q12 未决问题、分支隔离规则、用户新思路三阶段框架、已完成的方法论评估与文献支撑、已识别的三个风险（循环论证/事件定义未解决/长尾样本量与遗漏变量）、已设计的 Test 1-3 计划、用户已做出的决策、尚待确认事项清单（其他顾虑未说明、天气数据处理方式未最终确认、D:\Uob\weatherMath 角色未知）、本会话的能力限制（无 device_bash，需经云端沙箱执行）、给网页端的下一步建议。
+- 本会话下一步：等待网页端 Claude Code 设计好具体执行指令后，在此基础上执行并回执。
+
+## 2026-08-23（作命令 #1：检验阵风系数在样本外交叉验证中的稳定性 —— 已执行，生成回执）
+
+- 收到网页端设计的"作命令 #1"，标注执行方为"桌面端 Claude Code（本机执行）"。`ListAgents` 确认当前没有其他本机 Claude Code 会话在运行，因此由本 Cowork 分支会话直接执行：经设备桥只读拉取所需文件到云端沙箱镜像计算，输出只写回 `claude_branch/`，未触碰主线任何目录，效果等同"本机执行"。此差异已记录在 `docs/02_系数明细盘点.md` 开头，供网页端与用户知悉。
+- **Step 1 盘点结论**：`analysis_step2`（只有切分，无系数）、`analysis_step3`（`03_screening_coefficients.csv` 只有单次全样本拟合的系数，覆盖重构口径 E1/R1/E2/E3/R2，**不含 legacy 口径 E0/R0**；`03_fold_metrics.csv` 有逐折指标但无系数）、`analysis_step4`（`04_feature_stability.csv` 有 10 折聚合后的系数稳定性摘要，但只覆盖重构口径 BASE/M1-M6，无 legacy 口径，且是聚合值非逐折原始值）、`analysis_step4d_top3`（`top3_cause_gust_coefficients.csv` 有逐折系数但无 SE/p 值，且只覆盖三大 Cause Code 分层子样本，非全样本）。**结论：与 v6 论文完全对应的 legacy 规格（E0/R0）在现有产出中没有任何逐折系数+SE+p值表，需要 Path B 最小化重跑补齐。**
+- **Step 2（路径 B）**：新增 `claude_branch/scripts/borrowed_from_main/coef_fold_stability_E0_R0.py`，逐字段照搬 `run_baseline_models.py` 的 `load_screening_only`/`prep_base`/`make_samples`/`design_train_valid`（逻辑未改，仅改 ROOT 指向只读镜像），新增对 E0/R0 逐折（5 折）拟合 + LAD 聚类稳健 SE + 95% CI + p 值的导出。已在云端沙箱安装 statsmodels/pyarrow 并成功运行，legacy 联合样本 n=9,122（`screening_development` 角色内）。
+- **Step 3 关键发现**（完整表格见 `results/oof_coef_stability/03_阵风系数样本外稳定性报告.md`）：
+  - 暴露模型（E0）：阵风一次项与二次项在 5/5 折同号、5/5 折 p<0.05、折间变异系数 <10%——**判定"稳健"**。
+  - 恢复模型（R0）：一次项 5/5 折同号但只 1/5 折显著（偏弱但存在）；**二次项 4/5 折为正、1/5 折为负（符号翻转），只有 1/5 折显著（且恰是符号相反的那一折）——判定"不稳健/证据不足"**。
+  - **核心结论：v6 论文把暴露和恢复两侧的阵风凸性并列表述，但样本外重采样显示只有暴露侧稳健，恢复侧的二次项本身在折间就不稳定，不足以支撑"恢复曲线也存在稳定的高阵风加速"。** 这与主线"整体 R² 归零"的发现是两件独立又相互印证的事：暴露侧"效应真实存在但解释力小"，恢复侧则连"效应是否稳定存在"都存疑。
+  - 重要限定：本测试基于 `screening_development` 子集（n=9,122，全样本 44,821 的约 20%），样本量偏小可能放大恢复侧的折间波动，建议 `expansion_pool` 解锁后复测以排除小样本效应（已记录为未决问题，不在本命令授权范围内执行）。
+- **产出文件**（均已发送用户并写入 `claude_branch/`）：
+  - `claude_branch/docs/02_系数明细盘点.md`
+  - `claude_branch/scripts/borrowed_from_main/coef_fold_stability_E0_R0.py`
+  - `claude_branch/results/oof_coef_stability/raw_fold_coefs.csv`
+  - `claude_branch/results/oof_coef_stability/03_阵风系数样本外稳定性报告.md`
+- 验收标准逐项确认：Step1 盘点明确回答了"分折系数明细是否已存在"（部分存在但不满足本命令粒度要求，已详列）；路径 B 脚本只新增了系数导出逻辑，未改变原有拟合/筛选/标准化设定；暴露和恢复两个模型都给出了稳定性判定；标准误明确标注为 LAD 聚类（与 v6 一致）；未遇到无法获取的中间产物，未发生"卡点"。
+
+## 2026-08-23（工作命令 #2：Test 1 快速摸底——(duration, customers) 二维结果空间聚类有效性检验 —— 已执行，生成回执）
+
+- 同样确认无独立本机 Claude Code 会话在跑，由本会话经设备桥/云端沙箱等效执行，路径差异已记录在 `results/test1_cluster_screening/00_数据盘点.md` 开头。
+- **数据源替换（已披露）**：命令指定的 `data/new/ukpn_master_with_lad_features_updated.csv`（303MB）经 `device_stage_files` **两次尝试均失败**（upload failed，疑似体积超出传输预算）。按"不重复同一失败调用"的原则，改用云端沙箱已有的 `analysis_step2/02_incident_analysis_master_v1_1.parquet`（62,928 行全量）中原样保留的 `Number of Customers Restored` / `Duration (hours)` 两列。**已做一致性交叉验证**：与 codex 独立算出的 `customers_affected_legacy`/`legacy_duration_hours` 逐行比较，customers 100% 相等、duration 在浮点误差内 100% 相等——确认替代数据源数值上完全等价于命令指定的 master CSV。
+- **Step 0 盘点**：n=62,928，customers/duration 均 0 缺失、0 负值；customers=0 占比 15.00%（9,436 行，与此前主线审计数字一致）；LAD 113 个、substation 794 个、事件日期 1,096 天（2021-04-01 至 2024-03-31）。
+- **Step 1**：log1p 变换后无需丢弃任何行（dropped_pct=0%）。
+- **Step 2**：diptest 包正常安装可用（未降级用替代方法）；两个边际变量 dip test p≈0，但在 n=62,928 下属于大样本机械显著，弱证据；2D KDE 找到 6 个局部极大值，但只有 1 个强主峰（密度 0.543），其余 5 个次级峰密度均不到主峰的 18%。
+- **Step 3**：GMM k=2..6 的 BIC/ICL 在测试范围内单调改善、无内部最优点/平台期（k=6 最优，测试上限），提示"用更多高斯分量逼近偏态形状"而非"发现固定数量真实子群体"。
+- **Step 4**：k=6 下 GMM vs K-means 的 ARI 仅 0.338，明显低于测试计划预设的 >0.5 可信门槛——两种算法划分结果实质不一致。
+- **Step 5**：6 个类别全部通过 n≥1000/日期≥100/LAD≥30 门槛（样本量不是限制因素）；其中一类的 customers 均值恰为 0（对应 15% 的 customers=0 点质量，呼应未决 Q5）。
+- **关键定性证据（散点图 `figures/02_gmm_clusters_scatter.png`）**：6 个"类别"在原始散点图上呈现为几乎与纵轴平行的竖直条带，精确对应 customers 的离散小整数取值（0,1,2,3…），每条内部 duration 覆盖全范围、无系统差异——**直接说明当前"聚类"本质是按 customers 离散取值切竖条，不是真正的二维联合破坏形态**，是本次最直观的负面证据。
+- **Step 6 结论：B（证据不足/模糊）**，且结合竖条证据已比较接近"结构是伪影"，但 dip test/BIC 仍有非平凡信号，未强到可判 C。建议：①诊断性追加 HDBSCAN/copula-秩变换等更适应偏态和离散取值的方法，看 ARI 能否回升；②或直接转向连续复合严重度指标 + 分位数回归/GAM 的备选路径（见 `docs/01` 第4.3节）。重申：本次结论基于粗糙去重口径，尚未解决 Q1-Q6，即使判 A/B 倾向继续，正式测试仍须用独立重建数据重复本流程。
+- **产出文件**（均已发送用户并写入 `claude_branch/`）：`results/test1_cluster_screening/`下 00_数据盘点.md、00b_step1_sample_summary.json、01_双峰性检验结果.csv、01b_2d_kde_peaks.json、02_gmm_bic_icl.csv、03_kmeans_ari_对照.csv、04_类别样本量检查.csv、05_Test1摸底结论.md、99_all_steps_summary.json、figures/01_2d_kde.png、figures/02_gmm_clusters_scatter.png；脚本 `scripts/test1/test1_step0_inventory.py`、`scripts/test1/test1_full_pipeline.py`（全新分析，未照搬主线代码，故未放入 borrowed_from_main/）。
+- 验收标准逐项确认：Step0 给出了实际列名（未凭经验假设）和样本量；双峰性检验方法未降级（diptest 正常可用），若曾降级也会如实说明；GMM 与 K-means 的 ARI 对照已做，未只凭单一方法下结论；最终结论是 A/B/C 三选一（B）且每条依据都可追溯到具体数字；报告末尾重申了"粗糙去重口径、非最终结论"的限制。
+
+## 2026-08-23（工作命令 #3：检验 log1p(customers) 与 log1p(duration) 的统计独立性 —— 已执行，生成回执）
+
+- 同样确认无独立本机 Claude Code 会话在跑，由本会话经设备桥/云端沙箱等效执行。**数据源**按命令明确指示直接复用命令 #2 已验证过的替代数据源（`analysis_step2/02_incident_analysis_master_v1_1.parquet` 的 `Number of Customers Restored`/`Duration (hours)` 两列，62,928 行全量），未重新尝试传输此前两次失败的 303MB CSV。
+- **Step 1**：全样本 n=62,928；customers>0 子集 n=53,492（剔除 customers=0 的 9,436 行，占 14.99%），两套样本均已计算 log1p 变换并全程并行报告。
+- **Step 2（Spearman）**：全样本 ρ=-0.153（弱，按用户给定基准）；customers>0 子集 ρ=-0.508（**强**）；两者 p≈0（n 很大，需看效应量非 p 值）。
+- **Step 3（距离相关）**：发现 dcor 包内置的置换检验函数 `distance_covariance_test` 即使对一维输入也会构造朴素 O(n²) 距离矩阵，在 n=62,928 时实测触发 29.5GB 内存分配错误（已验证并放弃）。改用 `dcor.distance_correlation(method='avl')`（精确 O(n log n) 一维快速算法，非近似非子采样）计算全量精确值，并自制 500 次置换检验：全样本 dc=0.375（p=0.002），子集 dc=0.519（p=0.002），与 Spearman 的相对大小顺序一致。
+- **Step 4（互信息）**：k-NN 估计 + 500 次置换检验：全样本 MI=0.399（z=268.5），子集 MI=0.211（z=107.1）——z 分数达百倍量级，是四项指标中信号最强的一项，直接排除"只是大样本机械显著性"的解释。
+- **Step 5（分层 Kruskal-Wallis，强制执行）**：按 customers 分箱（0/1/2-3/4-10/11-50/51+）比较 duration 分布，全样本 ε²=0.311、子集 ε²=0.277（均为"大"效应量）。明细显示 duration 中位数从 customers=1（2.200）开始随分箱单调递减到 51+（0.734）——**处处单调、局部检查未发现被全局统计量掩盖的额外结构**；但 customers=0 是例外（中位数 0.693，低于 51+，不落在同一条单调曲线上），呼应主线未决 Q5（customers=0 含义不明）。
+- **Step 6（可视化）**：hexbin 与小提琴图均直观确认"customers 越大、duration 分布越窄越靠下"的弧形/单调收缩形状。
+- **Step 7 结论：C（系统性依赖，不满足近似独立）**——四种方法（Spearman/距离相关/互信息/分层KW）全部给出中等以上效应量且方向、形状一致，与 Yuan et al. (2022) 美国数据"近似独立"的发现相反。**关键综合判断**：结合命令 #2 的"竖条伪影"发现（GMM 聚类退化为沿 customers 离散取值切竖条，竖条内部无系统差异），本次 C 结论并不矛盾，而是互相印证——说明 customers 与 duration 之间存在的是**一条真实、连续、单调的负向关系，而非若干离散的联合形态**；这解释了为什么 GMM 硬聚类只能沿 customers 一个维度切分。
+- **建议**：不建议投入独立重建数据后再做正式离散聚类（大概率仍退化为沿曲线切分）；建议三阶段框架第一阶段改为"连续条件建模"（log1p(duration) 对 log1p(customers) 的样条/二次项 + 天气/社会经济协变量做分位数回归或 GAM），与命令 #2 报告给出的备选路径完全一致；customers=0 需作为单独类别/指示变量处理，不能并入连续关系一并建模。
+- **产出文件**（均已发送用户并写入 `claude_branch/`）：`results/test1b_independence_check/` 下 00_step1_sample_summary.json、01_spearman.csv、02_distance_correlation.csv、03_mutual_information.csv、04_kruskal_wallis_stratified.csv、04b_stratified_duration_by_customer_bin_detail.csv、99_all_steps_summary.json、05_独立性检验综合结论.md、figures/01_hexbin_full_vs_subset.png、figures/02_violin_duration_by_customer_bin.png；脚本 `scripts/test1b/test1b_independence_pipeline.py`。
+- 验收标准逐项确认：未在子集上偷偷跑朴素算法后冒充全样本结果（已明确披露 dcor 内置函数的 O(n²) 崩溃并改用快速精确算法+自制置换检验，全部在全量 n 上计算）；每项统计量都同时报告了显著性与效应量；全样本与 customers>0 子集均已并行报告；Step 5 分层检查在全局结果已经很清晰的情况下仍强制执行，并发现了 customers=0 的例外模式；最终结论为 A/B/C 三选一（C）且给出了具体的下一步建议。
+
+## 2026-08-24（工作命令 #4：控制 customers（调度优先级代理变量）后，重新检验阵风—恢复时长系数的样本外稳定性 —— 已执行，生成回执）
+
+- 同样确认无独立本机 Claude Code 会话在跑，由本会话经设备桥/云端沙箱等效执行。
+- **Step 1 复现校验（先决条件）：已通过。** 复制命令 #1 脚本为 `scripts/borrowed_from_main/coef_fold_stability_R0_custadj.py`，其中 `load_screening_only`/`prep_base`/`complete_predictors`/`make_samples`/`design_train_valid`/`fit_fold_legacy` 六个函数逐字段未改动，重新拟合原始 R0_legacy_log_OLS，与命令 #1 的 `raw_fold_coefs.csv` 逐折逐项核对：系数/SE/p 值最大绝对差均 ~1e-16（浮点误差量级），每折 n_train/n_valid 完全一致，样本仍为 legacy 联合样本 n=9,122。
+- **Step 2**：新增 `log1p(customers_affected_legacy)` 一次+二次项（标准化方式与阵风项一致：训练折 z-score），拟合新规格 `R0c_legacy_log_OLS_custadj`，5 折逐折导出阵风与 customers 各项系数/SE/CI/p 值。
+- **Step 3（共线性）**：阵风与 customers 各项训练折内相关系数很低（0.03-0.12），VIF 全部在 2-5.1 之间，远低于常用的>10 门槛——后续变化不能用共线性伪装解释。
+- **Step 4/5（核心发现，控制前后对比）**：**一次项和二次项朝相反方向变化，不是命令背景设想的"整体变稳健"或"整体依然不稳健"两种简单结局之一：**
+  - **阵风一次项**：控制前 5/5 折同号（全正）、1/5 折显著（"偏弱但存在"）→ 控制后符号翻转（3正2负）、0/5 折显著——**判定从"偏弱但存在"退化为"不稳健/证据不足"**。
+  - **阵风二次项**：控制前符号翻转（4正1负，且唯一显著的恰是反号那折）、1/5 折显著（"不稳健/证据不足"）→ 控制后 5/5 折同号（全正）、4/5（80%）折显著、变异系数从33.7降到0.47——**判定从"不稳健/证据不足"变为"稳健"，达到预设门槛**。
+  - customers 项本身（附带发现）：一次项 5 折全负全显著（p<1e-74），与命令#3发现的负向单调关系方向一致，是本次拟合中最稳健的一项。
+- **因果解读（按命令要求，原样保留边界说明）**：控制后系数回答的是"剔除customers/调度优先级渠道之后阵风是否还有净的直接效应"，不是总效应。据此，阵风二次项变稳健，说明"极端阵风存在不通过'影响规模→调度优先级'的独立恢复延迟机制"（如恶劣天气让抢修本身更慢更危险）；阵风一次项消失，说明原本微弱的线性信号很大程度上是通过customers渠道传导的，剥离后没有独立信号。
+- **下一步建议**：正式框架应保留阵风二次项并以customers为核心控制变量、报告条件效应（建议后续用中介分析把总效应分解为经由customers的间接效应+直接效应）；不建议为让线性项变稳健而继续找"遗漏中介渠道"；customers本身应作为恢复时长模型的核心协变量而非只是阵风研究的控制变量；建议在expansion_pool解锁后用同一规格复测确认此"一次项变差、二次项变好"的分化模式是否在更大样本下依然成立。
+- **产出文件**（均已发送用户并写入 `claude_branch/`）：`scripts/borrowed_from_main/coef_fold_stability_R0_custadj.py`；`results/gust_duration_customer_adjusted/` 下 00_step1_repro_check.csv、raw_fold_coefs_R0c.csv、02_共线性诊断_VIF.csv、02a_gust_customers_correlation.csv、03_控制前后对比表.csv、03b_控制前后稳定性汇总.csv、04_控制customers后的阵风系数稳定性报告.md。
+- 验收标准逐项确认：Step1复现校验先行通过（浮点误差量级）才继续；每折n_train/n_valid与命令#1完全一致；对比表"控制前"数值直接复用命令#1的raw_fold_coefs.csv、未重新计算；报告包含因果解读边界的实质内容并结合本次结果具体展开；本次结果是"一次项变差、二次项变好"的分化模式，不是单一方向，下一步建议已分别针对两项给出。
+
+## 2026-08-24（工作命令 #5：扩样本（screening_development + expansion_pool）复现"阵风一次项消失/二次项显现"模式稳健性验证 —— 已执行，生成回执）
+
+- 同样确认无独立本机 Claude Code 会话在跑，由本会话经设备桥/云端沙箱等效执行。全程未读取 `locked_temporal_test`（2023-09-30 之后）任何数据，均按 `split_manifest` 的角色标签筛选，未按日期自行猜测。
+- **Step 0 盘点关键发现**：`expansion_pool`（37,529行）没有命令#1/#4用的 `screen_date_cv_fold`（该列全缺失），须新构造合并折；同时**纠正了命令背景的一个假设**——`02_split_quality_report.md` 的四项"不跨折"检查实际分别对应四个不同折字段（date→screen_date_cv_fold、week→screen_week_cv_fold、site→pretest_substation_cv_fold、lad→pretest_lad_cv_fold），不是全部同时对 screen_date_cv_fold 成立；实测该折下113个LAD全部跨折、785个变电站769个跨折，只有incident_date本身不跨折。因此新构造的合并折**只按日期分组**，未额外强加"站点/LAD不跨折"（那样是凭空加严）。
+- **Step 1**：因无源码可读，改用sklearn `GroupKFold`（分组=incident_date，5折）构造合并样本折，已披露这不是原算法的逐行复现而是等价约束的标准替代方案。强制自查：0/912个日期跨折（通过）；变电站744/747跨折、LAD111/111跨折（均属原方法学允许的行为，非失败）；构造过程未使用customers/duration，outcome-blind。折分配保存为parquet。
+- **Step 2**：合并样本上重新计算legacy定义与p99阈值：p99从命令#1的86.67小时升至114.27小时（+31.8%，样本更大导致长尾分位数自然抬升，属正常现象）；最终样本量从9,122增至36,124（约3.96倍，与两角色合计占比大致吻合）。
+- **Step 3**：逐折拟合E0/R0/R0c三个模型，导出格式与命令#1/#4一致。
+- **Step 4/5（核心发现）：判定为 B（部分复现）**。方向性一致的部分：控制customers后，两个样本里阵风一次项都在变差、二次项都在变好或维持很强，这个方向性模式在大样本下复现。**未完全复现的部分**：①大样本下阵风一次项控制后只是从"稳健"(5/5同号5/5显著)变弱为"偏弱但存在"(5/5同号3/5显著)，**没有像小样本那样符号翻转、完全消失**；②大样本下阵风二次项**控制前就已经是"稳健"**(5/5同号4/5显著)，不是小样本描述的"控制前不稳健"，控制后只是"更强"而非"从无到有"。**关键洞察**：小样本下观察到的"控制前两项都脆弱"很大程度上可能是统计功效（n=9,122太小、折间标准误大）问题，而非仅仅是"customers是关键遗漏变量"本身导致——大样本下即使不控制customers两项也已经稳健。p99阈值差异不太可能是主因（标准误降幅与样本量4倍增长的平方根量级吻合，更能解释稳健性判定变化）。
+- **建议**：暂缓直接推进正式Baron-Kenny中介效应分解，先做两项诊断——①分离"样本量效应"与"控制customers效应"各自的贡献；②修正二次项的因果叙事，从"控制后才从无到有被揭示"改为"本身稳健、控制后进一步分离出更纯净的直接效应、一次项相应减弱"，更审慎、更站得住脚。
+- **产出文件**（均已发送用户并写入 `claude_branch/`）：`scripts/borrowed_from_main/coef_fold_stability_expansion_validation.py`；`results/expansion_pool_validation/` 下 00_盘点.md、00b_step1_2_summary.json、01_合并样本cv折.parquet、02_大样本逐折系数.csv、02a/02b共线性诊断（附带产出）、03_三方对比表.csv、04_扩样本验证综合结论.md。
+- 验收标准逐项确认：全程未使用locked_temporal_test数据；新折构造通过日期不跨折自查且outcome-blind，站点/LAD跨折已如实说明是原方法学允许而非自查失败；p99阈值在合并样本上重新计算未沿用旧值；三方对比表包含全部四组、小样本两组直接复用历史文件；最终结论A/B/C三选一（B）并说明了未完全复现的具体部分、可能原因及是否建议推进正式中介分解（建议先诊断，暂不直接推进）。
+
+## 2026-08-24（工作命令 #6·修正版：完整回溯 master 数据集（用户自建管线）的生成链路，定位 customers/duration 计算逻辑与已解决的 LAD 合并逻辑 —— 已执行，生成回执）
+
+- 同样确认无独立本机 Claude Code 会话在跑，由本会话经设备桥直接浏览 `D:\Pyprogramme\STST2603` 全目录（首次大量使用 `device_list_dir`/`device_stage_files` 遍历根目录及子目录，而非局限于此前命令使用的 `analysis_step*`/`audit_step0*` 子集）完成，纯只读考古/文档，未生成或修改任何数据。
+- **重要前提纠正（用户在下达本命令时明确说明）**：本命令要核实的 master 数据集是**用户自己**用 Python 代码合并多个原始数据库构建的，不是 codex 的独立重构（`analysis_step1` 等是 codex 平行的独立工作，非本命令追溯对象）；customers/duration 的计算方法学与官方 Ofgem CIt/CMLt 公式确有差异（是本命令要精确定位的唯一待修改点）；LAD 行政区划合并等逻辑已经解决过真实困难问题（如2020年白金汉郡单一管理区改革），必须原样复用不可重新实现。
+- **Step 0 关键发现**：此前命令#1-5均未实际读取过 `项目研究框架与数据结果说明.md` 正文（只在会话最早期笼统"读过"，之后全部聚焦codex的analysis_step*线）。本次通读发现该文档第124-138行已给出完整九步链路表，为Step1-2提供了可核实的起点（而非从零翻找）；同时发现该文档遗漏了三个关键细节：filter.py具体去重机制、customers全程未被重新计算、`data_merged/`目录下存在同名但不同内容的文件。
+- **Step 1-2（脚本清单+链路图）**：实际打开全部脚本代码核实（非猜测文件名），确认用户自建的9步主链全部脚本直接放在STST2603根目录（非独立scripts/子目录），依次为：`filter.py`→`main1.py`→`match_lad.py`→`poppulation_merge.py`→`Buckinghamshire_combination.py`→`GVA_new.py`/`GVA_merge_with_crosswalk.py`→`LAD_AreaSummary.py`/`LAD_urban_Summary.py`/`LAD_DNO.py`→`LAD_GeoMerge.py`→`data_arrange.py`，最终输出`data/new/ukpn_master_with_lad_features_updated.csv`（303MB，62,928行×374列）。链路已完整追溯至最原始文件（ukpn-iis.csv、Open-Meteo API、LAD/BUA/DNO shapefile、ONS/GOV.UK excel表），4处断点如实记录（见下）。
+- **⚠️ 重大发现：`data_merged/ukpn_master_with_lad_features_updated.csv`（371MB，mtime更早）与当前主链真正输出`data/new/`下同名文件（303MB）大小不同、生成脚本未查到来源**——明确判定`data_merged/`版本为遗留产物，**不应在任何后续工作中引用**，权威文件统一为`data/new/`版本。
+- **Step 3（核心，代码级精确记录）**：确认customers（`Number of Customers Restored`）与duration（起止时间差）计算逻辑的根本问题**唯一**指向`filter.py`中`df_filtered.drop_duplicates(subset=[incident_col], keep="first")`一行——按Incident Reference分组排序后只保留时间最早一条Restoration Stage记录，其余全部丢弃（原始237,901行对约62,928-66,080个唯一incident，约3.6阶段/incident，此比例交叉引用codex独立完成的`audit_reinterruption_stage`只读审计报告，因原始ukpn-iis.csv两次传输沙箱失败未能本命令自行验证）。全库grep确认customers字段自`filter.py`起至`data_arrange.py`止从未被任何脚本重新计算/聚合过。LAD合并三处逻辑（`match_lad.py`空间连接、`Buckinghamshire_combination.py`人口加权crosswalk、`LAD_GeoMerge.py`最终合并）逐行核实记录，代码摘录精确到函数级。
+- **Step 4（与官方公式对照）**：**披露前置依据缺失**——命令要求对照的`claude_branch/docs/Q1-Q5事件定义_Ofgem监管文件核实记录.md`在设备上实际不存在（已用device_list_dir核实该目录只有另外两个文件）。采用命令原文对官方公式的转述+codex审计报告交叉引用做best-effort对照，明确建议网页端/用户后续补充该缺失文件。差异定位结论：customers跨阶段求和"完全没有发生"（非"求和错误"）；customers排除重复中断"不适用"（多阶段数据已被丢弃，问题被绕过）；duration按客户数加权"完全缺失"，当前值只是单阶段起止时间差。改动规模判定为"中等偏大"——需在filter.py的dedup之前新增聚合步骤（引入目前完全未读取的Re-interruption Stage字段），并简化data_arrange.py的duration计算，但LAD及以下全部361列下游特征逻辑不受影响。
+- **Step 5**：确认无任何脚本对customers=0做特殊处理（无过滤、无标记、无替换）——当前customers=0记录是原始字段自然值的透传，与Cause Code筛选无关（Cause Code筛选发生在incident级别，不影响进入分析的incident的customers具体取值）。
+- **Step 6（综合复用地图）**：明确三分类——(a) 应原样复用：`match_lad.py`空间连接、`Buckinghamshire_combination.py`+`GVA_merge_with_crosswalk.py`的人口加权crosswalk（用户点名"已解决"的核心逻辑）、LAD地理/DNO三步子链、人口/GVA合并、`filter.py`的Cause Code分类本身；(b) 唯一需修改：`filter.py`的dedup步骤（需插入官方口径聚合逻辑）+`data_arrange.py`的duration计算；(c) 遗留断点：缺失的Q1-Q5文档、无法传输沙箱的原始ukpn-iis.csv、`data_merged/`同名文件来源不明、`D:\Uob\weatherMath`不可访问（判断为codex分析镜像、未主动申请授权）、main1.py天气缓存导致的重跑成本。
+- **产出文件**（均已发送用户并写入 `claude_branch/results/pipeline_archaeology/`）：`00_项目框架说明摘录.md`、`01_相关脚本清单.md`、`02_数据链路图.md`、`03_脚本详细文档.md`、`04_与官方公式差异定位.md`、`05_customers为0情况说明.md`、`06_综合结论_复用地图.md`。
+- 验收标准逐项确认：Step0明确说明了该框架文档此前未被深入利用及本次读取发现的新信息；Step2数据链路图已追溯到最原始非脚本产出文件，4处断点/不确定之处已如实列出（未强行"补全"）；Step3对customers/duration计算逻辑的记录精确到代码片段级（非"大致这样算"的模糊描述），LAD合并逻辑同等精度记录；Step4给出了具体可操作的差异清单（哪个函数/哪段逻辑需要改，改动规模判断），并如实披露了因缺失前置文档导致的三个未决歧义点；Step6复用地图清晰区分了"复用"与"需修改"两类，未混为一谈。
+
+## 2026-08-24（工作命令 #7：重建完整master数据集——事件级聚合（Ofgem官方口径）+ 取消预筛选 —— 已执行，遇到关键阻塞点，如实报告）
+
+- 同样确认无独立本机 Claude Code 会话在跑，由本会话经设备桥/云端沙箱直接执行。
+- **Step 0（关键阻塞点，未自行绕过）**：按命令要求第三次尝试 `device_stage_files` 传输 `data/ukpn-iis.csv`（44,289,889字节），**再次失败**，错误信息与前两次相同（generic "upload failed"，工具未提供更细节诊断）。本次会话确认无 `device_bash` 权限可分块读取；搜索项目全目录未发现任何现成的原始阶段级数据子集。**按命令明确指示，未用codex审计报告顶替这一核心计算**，而是将此列为需要网页端/用户决策的阻塞点。过程中发现 codex 自己在 `audit_step0e/outcome_builder.py` 里也将同类事件级聚合规则显式禁用（`NotImplementedError('Rule disabled pending written UKPN field-definition confirmation.')`），且其独立审计 `audit_step0b/00b_raw_stage_audit_report.md` 的最终决策门（D10）结论为"尚不具备安全进入第1步的条件"——codex独立得出了与本命令相似的谨慎结论。同时发现 `audit_step0e/00e_canonical_stage_rows.parquet` 是一份逐行保留、哈希可校验、且已与当前62,928行最终主数据文件100%交叉匹配的原始文件规范化副本，理论上可作为替代计算底稿，但**是否采用需要网页端/用户明确决策**，本命令未擅自使用。
+- **Step 1（字段验证，可在不依赖原始数据执行的前提下完成）**：通过阅读codex两个独立脚本（`audit_reinterruption_stage.py`、`canonicalise_stage_data.py`）的源代码确认原始字段确切名称：`Incident Reference`/`Restoration Stage`/`Re-interruption Stage`（**注意不是命令原文假设的"Re-interruption"**）/`Start Date and Time`/`End Date and Time`/`Number of Customers Restored`/`Cause Code`/`MEI code`/`Spatial Coordinates`（后两者为此前命令#6未记录的新发现字段）。`Re-interruption Stage`确切取值分布（基于codex对全部237,901行的实际统计）：N 91.33%、Y 8.63%、0 0.041%（仅RIIO-ED1）、1 0.0008%（同上）。原始数据唯一Incident Reference数=135,025（远多于当前62,928，因为当前数据已经过Cause Code筛选）；约30.4%事故有2条及以上阶段记录，最多达125条。
+- **Step 2**：九步主链12个脚本全部用`cp -p`原样复制到`claude_branch/scripts/pipeline_v2/`（文件名加_v2后缀），复制前后SHA256哈希逐一核对完全一致。
+- **Step 3（代码已完成，未在真实数据上执行）**：`filter_v2.py`完整实现规则1（取消Cause Code预筛选,保留分类标签）+ 规则2（customers_v2=排除Re-interruption='Y'阶段后求和；duration_A=客户数加权平均时长，含重复中断阶段；duration_B=全部阶段最晚End−最早Start；all_stages_are_reinterruption边界标记）。用codex已公开的匿名化示例（CASE_03/13）+手工构造案例做了合成数据自测，4个测试用例全部assert通过，证明聚合逻辑本身无明显bug，但**明确标注尚未在真实数据上执行过**。`data_arrange_v2.py`相应调整：不再自算单阶段Duration，改为透传filter_v2.py的duration_A/duration_B。
+- **Step 4（因Step0阻塞无法用真实数据完成，未伪造/未用间接数据顶替）**：详细说明了一旦阻塞解除后应如何执行新旧customers/duration差异对比、边界情况统计、Cause Code一致性检查，并引用codex已独立算出的全量口径参考基准（如"全部阶段求和"定义与当前值相等仅41.9%，中位数绝对差30）作为未来结果是否合理的参照,而非本命令自己的计算结果。
+- **Step 5**：完整方法论证据链文档，逐条对应官方CIt/CMLt公式转述（跨阶段求和排除重复中断；跨阶段加权求和含重复中断）与`filter.py`/`filter_v2.py`具体代码位置，并记录了'0'/'1' legacy编码归类、duration_B未实现3/18小时完成规则等待确认事项。
+- **Step 6**：基于codex已独立算出的聚合计数估算，取消Cause Code筛选后新增事件数量级约6.5-7万个（现有62,928的约104%，推算基于main1.py现有95.23%保留率，已标注为未验证假设）；天气缓存命中率因无device_bash查询能力无法精确验证，定性推理预期接近0%；完整重跑耗时因缺乏实测数据无法给出具体数字，建议先做100个事件规模的计时测试。
+- **LAD零改动校验**：`match_lad.py`/`Buckinghamshire_combination.py`/`LAD_GeoMerge.py`及LAD地理子链三脚本，连同`main1.py`/`poppulation_merge.py`/`GVA_new.py`/`GVA_merge_with_crosswalk.py`共10个脚本，复制前后哈希完全一致，确认零改动；只有`filter.py`→`filter_v2.py`与`data_arrange.py`→`data_arrange_v2.py`按命令授权做了有意修改。
+- **产出文件**（均已发送用户并写入 `claude_branch/`）：`scripts/pipeline_v2/`下12个_v2脚本+哈希校验文件+README；`results/pipeline_v2_output/`下 00_原始字段验证.md、01_新版基础表校验.md、02_重建方法论与证据链.md、03_下游重跑规模评估.md、synthetic_smoke_test/（合成数据自测脚本+产出）。
+- **给网页端/用户的决策请求（写在00_原始字段验证.md末尾）**：(1)是否继续尝试解决原始文件传输问题；(2)是否授权使用codex的`audit_step0e/00e_canonical_stage_rows.parquet`规范化副本作为Step3/4的计算底稿；(3)`Re-interruption Stage`的'0'/'1' legacy编码应如何归类。
+- 验收标准逐项确认：Step0明确报告了具体错误信息（"upload failed"，与前两次相同）及已尝试的替代方案（检查device_bash、搜索现有子集、检索codex已有脚本），且**未自行决定用间接来源顶替核心计算**，将其作为阻塞点上报；Step1字段确认均可追溯到codex脚本源代码字符串本身，未凭空假设；规则2四种计算（customers_v2/duration_A/duration_B/边界标记）全部实现并通过合成数据验证；LAD三处脚本逐一给出复制前后哈希对照；Step4虽无法用真实数据但给出了完整的、可直接执行的校验规格，未回避"新旧差异对比"这一要求；Step5证据链逐条对应官方条款原文与具体代码位置；Step6虽部分数字无法精确给出，但对能给出的部分（新增事件数量级）给出了具体数字和明确的假设标注，对无法给出的部分（重跑耗时）提供了可执行的下一步验证方法而非空泛的"需要评估"。
+
+## 2026-08-24（工作命令 #8：审查 ukpn_full_stage_dataset_v3.csv，制定过滤/合并/筛选方案 —— 已执行，生成回执）
+
+- **执行方式变化（重要）**：本命令首次明确标注"交给 Claude Code 桌面端本地直接执行"，本会话确认 `D:\Pyprogramme\STST2603\.venv`（Python 3.12.6，pandas 3.0.1/numpy 2.4.3/scipy/statsmodels/sklearn 齐全）可用，全程用本机文件系统+本机Python直接读写 `rebuild_v3_full_stage/`（用户自建的独立目录，与 `claude_branch/` 平级，不在此前的隔离规则约束范围内，本次只读访问）和 `data/new/ukpn_master_with_lad_features_updated.csv`（只读对照），**未经设备桥/云端沙箱**，命令#6/#7反复遇到的原始文件传输失败问题本次未出现。产出全部写入 `claude_branch/results/v3_dataset_audit/`，未修改任何源文件，未执行任何实际筛选/过滤/合并操作。
+- **Step 0（粒度确认）**：`ukpn_full_stage_dataset_v3.csv`（237,901行×384列，1.03GB）用实际数据核实为**阶段级**（唯一Incident Reference=135,025，行数/事件数比≈1.76），非事件级；但已内置事件级聚合列（广播到每个阶段行），实际列名：`customers_v2_event_excl_reinterruptions`（排除重复中断阶段后求和）、`duration_A_customer_weighted_hours`（客户数加权平均阶段时长）、`duration_B_full_span_hours`（事件总跨度）、`all_stages_are_reinterruption`（边界标记）、`cause_group_official`（六分类）等。
+- **Step 1（与网页端验证逻辑交叉核对）**：500个事件抽样（多阶段/单阶段各250个），独立从阶段级原始列重算customers/duration_A/duration_B后与数据集自带列比对，0处实质不一致（浮点误差量级）。三项预期逻辑（customers排除重复中断阶段、duration双口径并存、Re-interruption Stage旧式'0'/'1'编码归一化）**全部核实通过**。**唯一需网页端知悉的实现细节**：duration_A的加权分母使用全部阶段（含重复中断阶段）的原始客户数，未排除重复中断阶段——只有customers_v2字段本身排除了，如实记录未评判对错，留待网页端判断是否需要修正。
+- **Step 2（数据质量全面审查，核心发现）**：
+  - Cause Code "97"占比：阶段级23.43%（与预期"约23%"吻合），事件级（近似旧filter.py去重口径）30.43%；cause_group_official六分类中weather_natural+technical_asset合计66,078个事件（48.9%），量级接近但不等于旧口径62,928。
+  - customers新旧口径对比（事件级）：旧口径（仅取最早阶段）均值41.18，新口径customers_v2（跨阶段求和排除重复中断）均值75.56，约1.8倍，p99从597升至1,114，符合"旧口径系统性低估多阶段事件"的预期。
+  - duration三口径对比：**duration_A存在9.37%（12,650个事件）缺失，主因是customers_v2=0（约12,648个，多为Cause Code 97一类事件）导致加权分母为0**；duration_B无缺失。多阶段事件（41,081个，占30.6%）上duration_A与duration_B差异显著——相对差异中位数54.3%，84.0%的多阶段事件相对差异超过10%，68.7%绝对差异超过1小时；单阶段事件两口径恒等。
+  - **69个边界事件、10.56%疑似缺失起始阶段两项关键数字均与命令背景给出的预期精确吻合**（69个边界事件精确匹配；缺失起始阶段14,264个事件/10.564%，与预期10.56%一致），未发现口径不一致问题。
+  - 天气匹配（新增72,097个不在旧62,928之列的事件）：81.0%（58,386个）已在现有缓存命中，仅11.2%（8,100个）需新发API请求，7.8%（5,611个）坐标/时间本身无效发新请求也无法解决；旧62,928个事件在新数据集中几乎100%命中缓存（62,927/62,928）。
+- **Step 3（六条过滤/合并/筛选方案建议，均附理由，未下最终结论）**：①Cause Code筛选建议保留全量、下游按需筛选（不在数据构建层限定weather_natural+technical_asset），理由是一次重建可支持多组对照分析；②customers=0/No Fault Found记录建议保留+新增显式标记列（不排除，处理权留给具体分析）；③10.56%缺失起始阶段事件建议默认保留+新增标记列，供后续必做的敏感性分析（对比含/剔除两版本关键系数是否稳健）；④69个边界事件建议暴露侧排除（customers_v2定义域边界，非数据缺陷）、恢复侧保留（duration两口径对其大多可计算）；⑤天气API补齐建议现在就着手处理8,100个缓存未命中事件（工作量小，占总量6.0%，可与后续分析并行，不必等待方法论定案）；⑥duration_A vs duration_B暂不下结论选哪个，已提供完整量化差异供后续决策，并提示duration_A的9.37%缺失集中在customers=0事件、且其加权口径的实现细节（未排除重复中断阶段）需网页端先确认是否需要修正。
+- **产出文件**（均写入 `claude_branch/results/v3_dataset_audit/`）：`00_数据集粒度确认.md`、`01_与网页端验证逻辑交叉核对.md`、`02_数据质量审查.md`、`03_过滤合并筛选方案建议.md`、`04_综合摘要.md`；`raw/`下全部原始JSON统计结果+`missing_pct_all_columns.csv`（384列完整缺失比例）+`old_master_incident_refs.csv`；脚本 `claude_branch/scripts/v3_audit/audit_v3_dataset.py`。
+- 验收标准逐项确认：Step0明确判断为阶段级，未含糊；Step2四项关键数字（135,025事件、69个边界情况、10.56%缺失起始阶段、约23%Cause Code 97占比）均已与预期逐一对照且全部吻合；Step3六条方案建议全部给出且均附具体理由；全程未执行任何实际筛选/过滤/合并操作；本机直接执行未使用设备桥/云端沙箱，未遇到此前的传输失败问题。
+
+## 2026-08-24（工作命令 #9：用 customers_v2/duration_A/duration_B 重新验证阵风系数稳定性，对照 legacy 结果 —— 已执行，生成回执）
+
+- 本机 `.venv` 直接执行，未经设备桥，只读访问 `rebuild_v3_full_stage/` 及 `data/Local_Authority_Districts_December_2021_UK_BGC_2022/`（仅Step1残余LAD补齐用到），产出全部写入 `claude_branch/results/v3_validation/`。
+- **Step 0（样本构建）**：135,025个事件中筛出天气匹配（`matched`）的121,313个（89.84%，与命令#8数字一致），不做Cause Code筛选，六分类分布已记录。明确指出本次样本与legacy样本（n=9,122，codex独立重构、限定weather_natural+technical_asset两组）在数据来源、Cause Code范围、样本规模三个维度都不同，后续对比不是严格单变量对照实验。
+- **⚠️ Step 1（重要发现，已如实报告并调整执行范围）**：命令背景假设"新增约7万多个事件目前没有LAD归属，需要复用match_lad.py补做"与实测不符——实测121,313个天气匹配事件里LAD21CD缺失仅137个（0.113%），新增事件（不在旧62,928之列）本身LAD缺失率仅0.096%，说明用户自建的`rebuild_v3_full_stage`管线早已对全部237,901行跑过完整的空间连接+人口+GVA+剥夺指数+城乡分类合并，不是"只有旧事件有归属"。据此把本步骤实际工作范围从"7万多个新事件"调整为"137个真正缺失的事件"，仍用`match_lad_v3.py`同款`sjoin(predicate="within")`逻辑补齐尝试，结果137个全部判定"落在边界外"（0个补齐成功），推测与该predicate对边界线附近点过严有关，未做超出"复用核心逻辑"授权范围的修复（如换predicate或加缓冲区）；137个事件占比0.11%，对样本量影响可忽略。
+- **Step 2（交叉验证折）**：`GroupKFold`（分组=incident_date_utc，5折，outcome-blind）对121,313个事件构造新折，0个日期跨折（通过），5折样本量高度均衡（24,229–24,273）。
+- **Step 3（E0'，customers_v2，log1p，n=117,235）**：阵风一次项、二次项均5/5折同号、5/5折显著，与legacy E0"稳健"判定的基础门槛一致；但折间变异系数（一次项18.28%、二次项12.55%）明显高于legacy（7-8%），超过命令#1原本使用的<10%门槛，系数量级也缩小约40-47%——**判断为"方向/显著性稳健性保留，但数值精度弱于legacy"，不是简单的"一样稳健"**，样本量扩大12.9倍+Cause Code范围扩大+DV从log改log1p三因素叠加、无法分离贡献。
+- **Step 4（R0'_A/R0'_B，duration_A/duration_B，未控制customers）——本次最重要的正面发现**：legacy R0（n=9,122）二次项此前几乎不可解释（4/5折同号、1/5折显著、CV高达3370%）；用duration_A（n=105,555，因duration_A缺失9.10%+p99截尾）和duration_B（n=116,125，无缺失）重新拟合，**两个口径下阵风一次项、二次项全部变为5/5折同号、5/5折显著**（duration_A：CV 10.15%/27.04%；duration_B：CV 23.93%/16.40%），不再出现legacy的符号翻转和近零均值现象。已披露此改善无法排除是"customers_v2/duration重新定义"与"样本量扩大12倍"共同作用的结果，命令#9的样本设计无法把二者贡献分离。
+- **Step 5（R0c'_A/R0c'_B，控制customers_v2后）——发现duration_A与duration_B实质性分化**：duration_A（R0c'_A）复现了legacy R0c"控制后一次项弱化为不显著（5/5折同号但0/5折显著，CV58.03%）、二次项保持/增强为稳健（5/5·5/5，CV14.03%）"的定性模式；duration_B（R0c'_B）**没有复现这一模式**——控制customers_v2后阵风一次项依然5/5折显著（CV26.91%），说明该口径下"阵风对恢复时长存在不经过customers渠道的独立直接效应"这一发现比legacy框架更强。两个口径下customers_v2二次项系数符号相反（duration_A为正0.067，duration_B为负-0.054，folds内部都很一致），指向duration_A/duration_B与customers_v2的非线性关系结构本身不同，呼应命令#8已发现的"两口径在多阶段事件上差异中位数达54%"。
+- **Step 6（综合判断）**：①暴露侧E0'与legacy E0"部分一致部分弱化"，非简单稳健/不稳健二元判断；②duration_A更贴近复现legacy"customers是关键中介渠道"的叙事，duration_B支持"阵风存在独立直接效应"这一另一假说，两者概念不同，未强行判定谁对谁错，指出需结合研究问题定义（"客户体验时长"vs"抢修总耗时"）做选择，duration_B覆盖全部事件无缺失、duration_A有9.1-9.37%缺失；③总体判断为**值得投入后续天气API补齐（8,100个，命令#8已确认工作量仅占6.0%）+完整下游合并**，未发现阻断性新问题，但duration_A/duration_B的选择需要网页端/用户尽快定案（或明确保留两版本做稳健性对照），且E0'精度下降的具体归因（样本量/Cause Code范围/DV变换）需要后续等样本量对照实验才能分离。
+- **产出文件**（均写入 `claude_branch/results/v3_validation/`）：`00_样本构建.md`、`01_LAD空间归属核查.md`、`02_交叉验证折构造.md`、`03_E0prime暴露模型结果.md`、`04_R0prime恢复模型结果.md`、`05_R0cprime控制customers后模型结果.md`、`06_综合对比与判断.md`；`raw/`下全部JSON统计结果+`E0_prime_fold_coefs.csv`/`R0_prime_A_fold_coefs.csv`/`R0_prime_B_fold_coefs.csv`/`R0c_prime_A_fold_coefs.csv`/`R0c_prime_B_fold_coefs.csv`/`all_v3_fold_coefs.csv`/`stability_summary_v3.csv`；脚本 `claude_branch/scripts/v3_validation/v3_validation_pipeline.py`。
+- 验收标准逐项确认：Step1的LAD空间归属最终只做了点落区匹配（对137个残余缺失事件），未做完整下游合并（本身已存在，如实报告了这一与命令背景不符的发现）；Step3-5全部模型均报告了折间系数稳定性（同号折数/显著折数/折间CV），未只报告单次拟合点估计；Step6对比表包含legacy和全部新口径版本，且对duration_A vs duration_B给出了明确初步判断依据（未强行下最终结论）；R0'_A由于duration_A缺失已明确报告实际样本量（105,555，比协变量完备样本少11,743，其中10,676为缺失、约1,067为p99截尾，两部分分别说明未隐瞒）。
+
+## 2026-08-24（工作命令 #10：受控对照实验——分离"样本量效应"与"customers/duration重新定义效应" —— 已执行，生成回执）
+
+- 本机 `.venv` 直接执行。核心方法：通过重跑命令#9脚本（`v3_validation_pipeline.py`）的确定性Step0-2函数（无随机种子依赖，`GroupKFold`不shuffle），逐行复现命令#9的121,313事件样本→117,298完备协变量样本→5折切分，未引入任何新样本筛选差异；核实并严格复用 `filter.py` 源码确认的去重逻辑（按`[Incident Reference, Start Date and Time]`稳定排序、`keep="first"`），在同一批117,298个事件上构造 `customers_naive`/`duration_naive`（100%可计算，无缺失）。
+- **Step 2（naive模型拟合）**：E0_naive（n=117,298）、R0_naive（n=116,125，p99截尾102.70h）、R0c_naive（n=116,125）逐折拟合结果——阵风一次项/二次项在E0_naive、R0_naive（未控制customers）中全部5/5折同号、5/5折显著；**关键发现：R0c_naive控制customers_naive后，阵风一次项依然5/5折显著（CV18.88%），未出现legacy R0c/命令#9 R0c'_A那种"控制后显著性消失"的弱化现象**。
+- **Step 3（三方对比+量化拆解，核心结论）**：二次项CV从legacy的3370%降到naive-大样本（n=116,125）的22.77%，降幅占总降幅（相对duration_A/B）的**99.85%**；一次项CV从legacy44.46%降到naive-大样本13.26%，降幅占比约**91%**。customers_v2/duration_A或duration_B相对naive-大样本的边际贡献很小且方向不一致（duration_A：一次项CV-3.11pp改善但二次项+4.27pp变差；duration_B：二次项CV-6.37pp改善但一次项+10.67pp变差）。**明确结论：命令#9观察到的"从不稳健变稳健"改善，绝大部分是样本量效应（含Cause Code范围扩大），customers_v2/duration重新定义本身在"折间系数稳定性"这一指标上的独立贡献很小**——与命令#5"n=9,122→36,124本身就能让R0变稳健"的既有教训完全一致，本命令进一步量化确认了这一效应在n=116,125下依然主导。已明确声明这**不否定**customers_v2/duration_A/duration_B在"数值本身是否准确反映真实事件规模"这个更根本问题上的价值（命令#8已证实customers_naive系统性低估多阶段事件规模）。
+- **Step 4（构造关联性检验，重大发现）**：`duration_A`的加权分母（`event_customer_weight_denominator`）与`customers_v2`的相关系数达到Pearson r=0.962（原始值）/0.993（log空间）、Spearman ρ=0.997/0.996，**远超命令预设的>0.8警戒线**，证实duration_A与customers_v2存在构造层面的强机械关联（共享同一份底层阶段客户数据）；相比之下`duration_B`与`customers_v2`的相关性弱得多（log空间Spearman仅-0.099，约为前者的1/5），duration_B构造上不依赖客户数加权，与customers_v2没有直接数学关联。
+- **Step 5（综合判断，重要修正命令#9的因果解读）**：通过三条互相印证的证据（构造相关系数>0.96；反事实证据——naive customers/duration在同样大样本下控制后一次项**未**消失；duration_B控制后同样**未**消失，只有duration_A表现出消失），**判断duration_A"控制customers后阵风一次项消失"这一发现很大程度上是构造层面的机械共线导致的统计假象，而非命令#9原本认为的干净因果中介证据**——命令#9"阵风一次项消失=效应主要经由customers渠道传导"的解读需要下调置信度。**据此更新duration_A vs duration_B的选择建议：正式分析建议以duration_B为阵风-恢复关系因果解读（含controlled模型）的主口径，duration_A可保留作为"客户体验视角"的补充描述性统计量，但不建议在其基础上做customers中介效应的因果表述。**
+- **产出文件**（均写入 `claude_branch/results/v3_controlled_comparison/`）：`00_naive变量构造.md`、`01_naive模型拟合结果.md`、`02_三方对比与样本量效应拆解.md`、`04_构造关联性检验.md`、`05_综合判断.md`；`raw/`下全部JSON+CSV原始结果；脚本 `claude_branch/scripts/v3_controlled_comparison/controlled_comparison_pipeline.py`（通过`importlib`直接复用命令#9脚本的Step0-2函数及拟合基础设施，避免重复实现引入不一致）。
+- 验收标准逐项确认：naive变量构造严格复用filter.py确认过的排序+去重逻辑，未引入新规则；Step2-3全部在与命令#9完全相同的样本/折上对比，未引入新筛选差异；Step3给出了具体的数值拆解（样本量效应占比91%/99.85%，变量重定义边际贡献的具体百分点，非笼统"两者都有贡献"）；Step4报告了具体相关系数数值（Pearson/Spearman、原始值/log空间四组数字，非仅定性判断）；Step5两个问题均给出明确回答，未回避（样本量效应主导+具体量化；duration_A效应消失判定为很大程度是构造性共线所致，并据此给出更新后的duration_A vs duration_B选择建议）。
+
+## 2026-08-25（工作命令 #11：临界风速估计——暴露(customers_v2)与恢复(duration_B)模型的二次曲线拐点 —— 已执行，生成回执）
+
+- 本机 `.venv` 直接执行。**Step0复现校验**：重跑命令#9脚本的确定性Step0-2函数重建样本/折，重新拟合E0'（n=117,235）与R0c'_B（n=116,064），与命令#9历史结果最大系数绝对差均为9.71e-17（浮点精度量级），校验通过。
+- **Step1（逐折拐点）**：E0'折间拐点范围[0.185, 0.298]（z-score），均值0.2395，折间CV **19.30%**；R0c'_B折间拐点范围[-0.218, -0.138]，均值-0.1713，折间CV **20.13%**——均低于命令提醒的30-50%警戒线，5折符号完全一致（E0'全正、R0c'_B全负），未发现"临界风速概念不成立"的负面证据。
+- **Step2（全样本估计+两种置信区间，重要方法论发现）**：全样本拟合β₁/β₂给出E0'拐点z=0.2390、R0c'_B拐点z=-0.1638；Delta method（一阶泰勒展开，用完整协方差矩阵含Cov(β₁,β₂)）95%CI分别为[0.134,0.344]、[-0.262,-0.066]；Bootstrap（按日期分组重抽样，500次，非简单行重抽样）95%CI分别为[0.056,0.416]、**[-0.400,0.038]**——**R0c'_B的Bootstrap CI上界跨过0，而Delta method CI不含0**。诊断发现Bootstrap标准差是Delta method的1.7-2.2倍，500次重抽样中E0'有0.6%符号翻转、R0c'_B有5.2%符号翻转，判定为拐点作为两随机系数之比值（Fieller型问题）天然具有的厚尾特性，Delta method一阶近似低估了尾部风险；**以Bootstrap CI作为更保守的主要区间估计，明确恢复侧证据强度弱于暴露侧**。
+- **Step3（物理单位换算）**：核实`main1_v3.py`第337行`"wind_speed_unit": "ms"`确认gust_0h单位为m/s（非km/h/mph，未假设）。换算得E0'临界风速点估计**10.57 m/s**（Bootstrap CI [9.69,11.43]），R0c'_B临界风速点估计**8.62 m/s**（Bootstrap CI [7.49,9.59]）。
+- **Step4（观测范围检验）**：E0'拐点位于观测阵风分布第65.9百分位，R0c'_B拐点位于第50.2百分位（≈中位数），**均落在数据密集覆盖区间，非曲线外推产物**，可信度不需因外推问题打折扣。
+- **Step5（暴露vs恢复对比）**：两模型β₂均为正（凸性/U型曲线），拐点是"阵风负相关区制→正相关区制"的转折点，符合"体制跃迁阈值"叙事。恢复侧临界值（8.62 m/s）低于暴露侧（10.57 m/s），提出假说"抢修条件恶化门槛低于设备大规模失效门槛"（标注为未经验证的假说，非已证实结论）；但两个95% Bootstrap CI边界（9.69 vs 9.59）非常接近，如实报告"两者是否存在真实差异"证据强度中等、非压倒性，未强行编造确定性结论。
+- **产出文件**（均写入 `claude_branch/results/critical_wind_speed/`）：`00_复现校验.md`、`01_逐折拐点.md`、`02_全样本拐点与置信区间.md`、`03_物理单位换算.md`、`04_观测范围检验.md`、`05_暴露侧与恢复侧对比.md`、`06_综合报告.md`；`raw/`下全部JSON+CSV原始结果（含500次Bootstrap原始拐点序列）；脚本 `claude_branch/scripts/critical_wind_speed/critical_wind_speed_pipeline.py`（通过`importlib`复用命令#9脚本的Step0-2函数及拟合基础设施）。
+- 验收标准逐项确认：Step0复现校验先行通过（误差~1e-17）；Step1报告了5折各自拐点值（含β₁/β₂），未只报告全样本结果；Step2同时给出Delta method和Bootstrap两种置信区间并对差异做了具体归因（比值估计量厚尾特性）；Step3的物理单位换算先核实了gust_0h确切单位（m/s，未假设）；Step4明确报告了两个拐点的观测分布百分位（65.9、50.2）确认非外推；Step5对暴露侧和恢复侧给出了具体数值对比，提出的工程解释标注为未验证假说，并如实说明置信区间临界重叠、证据强度中等，未编造确定性理由。
+
+## 2026-08-25（工作命令 #12：临界风速的Cause Code构成稳健性检验 —— 已执行，生成回执）
+
+- 本机 `.venv` 直接执行，复用命令#9/#11的确定性样本构造函数与拐点估计函数（`importlib`加载）。
+- **Step1（构成比例诊断）**：对117,298个完备协变量事件按gust_0h做等宽/等频各10箱，weather_natural占比从最低阵风分箱的3.24%（等宽）/3.23%（等频）**剧烈上升**到最高阵风分箱的86.67%/32.86%，远超命令预设的"从<5%到>30%"警戒判据，technical_asset同步从约44.7%降到0-14%——**构成比例剧烈变化这一"复合假象"担忧的前提确认真实存在**。但同时发现：全六组混合样本与仅weather_natural+technical_asset子集两条customers_v2/duration_B经验均值曲线**形状高度一致**（都在同一分箱附近触底再上升，仅整体水平不同），这一发现初步不支持"纯粹是复合假象"，但已提示需要Step2完整回归重新检验来给出更权威判断。
+- **Step2（weather_natural+technical_asset子集完整重估，核心发现）**：子集n=60,453（占六组基础样本51.54%）。**暴露侧E0'_WT**：点估计10.69 m/s，与六组10.57 m/s高度接近（差1.1%），方向一致，但折间CV从19.30%升至38.59%，Bootstrap CI从[0.056,0.416]变为**跨零的[-0.131,0.426]**——统计置信层面减弱。**恢复侧R0c'_B_WT出现质变而非量变**：β₁从六组的0.0232骤降到**近乎零的0.0002**，5折拐点符号不再一致（2正3负，六组是5折全负），折间CV高达5017%（因均值趋零而无实际意义），Delta CI[-0.112,0.109]和Bootstrap CI[-0.276,0.534]均大幅跨零——**恢复侧阵风效应在这个理论上更纯净的子集里基本消失**。
+- **Step3（对比与判断）**：暴露侧判定为"点估计层面接近、统计置信层面减弱但可归因于样本量减半（呼应命令#10的既有教训），暴露侧临界风速在两个范围下互相印证"；恢复侧判定为**"不能说接近"**——β₁本身塌陷（非仅CI变宽）更符合"六组样本的border-line显著结果相当一部分是Cause Code构成偏移造成的复合假象"这一解释，而非单纯统计功效不足，本命令判断该解释权重更大。
+- **Step4（综合结论，明确范围建议）**：**明确建议以weather_natural+technical_asset作为临界风速分析及模块D方差分解的主规格**，理由：①更贴合论文"纯粹风效应"的研究目的；②暴露侧结果在该范围下独立复现，验证通过；③恢复侧的效应消失被判定为"范围选对后揭示的更准确情况"而非需要退回全六组的理由。具体建议：暴露侧临界风速以WT子集结果为主报告（约10.7 m/s），全六组作为交叉验证的敏感性分析保留；**恢复侧临界风速不建议作为确立性发现重笔报告**，改为探索性表述，注明可能反映Cause Code构成效应而非纯粹风力关系，建议未来更大样本下复查。
+- **产出文件**（均写入 `claude_branch/results/cause_code_robustness/`）：`01_构成比例诊断.md`、`02_weather_technical子集临界风速.md`、`03_范围对比与判断.md`、`04_综合结论.md`；`raw/`下全部JSON+CSV原始结果（含等宽/等频分箱构成数据、WT子集逐折系数、500次Bootstrap原始序列）；脚本 `claude_branch/scripts/cause_code_robustness/step1_composition_diagnostic.py`、`step2_wt_subset_critical_wind_speed.py`（通过`importlib`复用命令#9/#11脚本的样本构造与拐点估计函数）。
+- 验收标准逐项确认：Step1报告了具体构成比例数字及两条经验均值曲线的具体数值（非定性描述）；Step2完整复现了命令#11全部方法环节未简化；Step3给出了明确的"部分接近/不接近"判断及具体依据；Step4给出了明确的Cause Code范围建议（weather_natural+technical_asset），未回避、未各打五十大板。
+
+## 2026-08-25（工作命令 #13：拆解weather_natural+technical_asset子集下R0c'_B一次项/二次项各自的稳定性 —— 已执行，生成回执）
+
+- 本机 `.venv` 直接执行。**数据来源**：命令#12 Step2脚本已保存完整逐折系数明细（`raw/R0c_prime_B_WT_fold_coefs.csv`），本命令直接读取整理，**未重新拟合模型**，不涉及复现校验。
+- **Step1（逐折系数明细）**：一次项β₁5折为[-0.0117, 0.0058, 0.0023, 0.0097, -0.0034]，p值范围0.19–0.82（**0/5显著**），2负3正（**3/5同号**），折间均值趋近于零（0.00053）；二次项β₂5折为[0.0592, 0.0716, 0.0873, 0.0807, 0.0812]，p值均<1e-18（**5/5显著**），**5/5同号**，折间CV**14.40%**。
+- **Step2（与全六组并排对比，关键发现）**：**二次项的稳健性和量级在两个Cause Code范围下几乎没有变化**（CV 13.88%→14.40%，系数量级0.069→0.076，两个范围下均5/5同号5/5显著）；**一次项则从"5/5同号、5/5显著、CV26.91%（四项系数中原本就最弱的一项）"彻底恶化为"3/5同号、0/5显著、系数趋零"**。精确定位了命令#12报告的"R0c'_B_WT拐点符号不一致、β₁塌缩至近乎零"现象，根源是一次项单独恶化，二次项未受影响。
+- **Step3（判断：情形A）**：明确判定为**情形A**——二次项稳健（CV14.40%，远低于30-40%判定门槛），一次项恶化。据此建议修正命令#12对恢复侧的表述：**"极端阵风存在独立于customers渠道之外的直接效应"这一叙事可以保留**（由二次项支撑，样本量减半后依然稳健，不需要等天气API补齐后重检）；**"线性效应独立存在"及"给出一个具体临界风速数值"这两项表述需要正式收回**（临界风速作为比值型指标依赖一次项估计，一次项已不可靠导致比值本身无意义，但这不代表二次项捕捉的凸性效应本身有问题）。建议论文改为报告"控制customers_v2后阵风对duration_B存在显著正向二次项效应（凸性），该效应在两个Cause Code范围下高度一致"，不再报告具体的恢复侧临界风速数值。
+- **产出文件**：`claude_branch/results/cause_code_robustness/05_一次二次项拆解判断.md`（复用命令#12已有的`raw/R0c_prime_B_WT_fold_coefs.csv`和`raw/R0c_prime_B_fold_coefs.csv`两份已有数据，未新增raw文件）。
+- 验收标准逐项确认：报告了β₁、β₂各自独立的5折数值明细（含p值），未只报告拐点复合指标；与全六组结果做了并排对比；给出了明确的情形A判断（非含糊表述）；情形A按提醒不需要"等样本量扩大后重检"的建议，已转而给出调整论文表述方式的具体建议。
+
+## 2026-08-25（工作命令 #14：模块D——方差分解，量化风相对其他因素的解释力权重 —— 已执行，生成回执）
+
+- 本机 `.venv` 直接执行，复用命令#9/#12确定性样本构造函数，样本为weather_natural+technical_asset主规格。
+- **Step0（天气缺失率单独核实，遗留问题解决）**：weather_natural+technical_asset共66,079个事件（与命令#8的66,078基本一致）中，**单纯天气数据缺失排除4.77%**（3,152个事件），**其他协变量（LAD/人口/GVA/剥夺指数/城乡分类）缺失排除3.74%**（2,474个事件），两类原因量级相近，合计排除8.51%，最终完备协变量60,453个（91.49%）与命令#12样本量精确吻合。
+- **方法论披露**：命令原文建议基线含"区域固定效应（LAD或licence_area）"，但核实命令#9-#13全部规格从未在均值模型里用LAD虚拟变量FE（LAD只用于聚类稳健SE），均值方程的"区域效应"角色由区域社会经济协变量（urban_binary/log_population/income_deprivation_rate/deprivation_gap_pct/morans_i）承担——引入真正的LAD FE会是与此前12条命令不一致的新选择，本命令沿用已确立的区域社会经济协变量口径，未含糊代换，已明确披露。
+- **Step1（E0'方差分解，n=60,437）**：基线（区域SES+年月FE）OOS R²=0.99%，+非阵风气象+0.76pp（累计1.75%），+阵风+1.02pp（累计2.77%）——**阵风的样本外边际贡献（1.02pp）是三个变量组里最大的一组**，占完整模型总解释力（2.77%）的**36.8%**，尽管模型总体解释力很小。
+- **Step2（R0c'_B方差分解，n=59,834，两种顺序）**：顺序甲（customers先）：customers边际OOS R²贡献7.73pp，阵风后加边际贡献0.99pp；顺序乙（阵风先）：阵风先加边际贡献0.82pp，customers后加边际贡献7.90pp。两种顺序完整模型总OOS R²一致（11.28%）。**customers_v2边际贡献对顺序几乎不敏感**（7.73 vs 7.90，相对差异2.2%），**阵风边际贡献存在中等顺序依赖**（0.82 vs 0.99，相对差异20.7%）——判定为正常范围内的顺序依赖性（呼应命令#10已确认duration_B与customers_v2非强共线，log空间Spearman仅-0.099），如实报告为区间（0.82-0.99pp）未选择单一顺序呈现。**customers_v2的权重是阵风的约8-9倍**（占总解释力69% vs 8%）。
+- **Step3（综合报告，方法论总结）**：明确区分"效应真实性"（模块B/C已确立）与"效应权重"（本模块量化）两个独立维度，用具体数字重新表述"稳健但权重不大"这一此前讨论过的方法论要点——阵风边际解释暴露规模变异约1.0pp（占模型总解释力36.8%，但模型总R²仅2.77%）；阵风边际解释恢复时长变异约0.8-1.0pp（占模型总解释力约8%，customers_v2占约69%，是阵风的8-9倍）。给出四条论文方法论章节建议（区分两个维度、统一用OOS R²、恢复模型报告顺序区间、customers_v2主导性发现可作为讨论亮点）。
+- **产出文件**（均写入 `claude_branch/results/variance_decomposition/`）：`00_天气缺失率单独核实.md`、`01_E0prime方差分解.md`、`02_R0cprimeB方差分解.md`、`03_综合报告.md`；`raw/`下天气缺失率JSON+三份嵌套模型R²序列CSV+样本量JSON；脚本 `claude_branch/scripts/variance_decomposition/variance_decomposition_pipeline.py`（复用命令#9样本构造函数，自建嵌套区块设计矩阵与5折OOS R²计算逻辑）。
+- 验收标准逐项确认：Step0把"天气本身缺失"（4.77%）和"其他协变量缺失"（3.74%）分开报告未混为一谈；Step1-2同时报告了样本内和样本外R²且结论以样本外为准；Step2两种加入顺序均已完成且未选择性只呈现一种；Step3给出了具体数字（1.02pp、36.8%、0.82-0.99pp、7.73-7.90pp、8-9倍等），未停留于定性描述。
+
+## 2026-08-25（工作命令 #15：模块E——locked_temporal_test最终确认性检验 —— 执行中发现关键阻塞点，已停止并汇报，未擅自绕过）
+
+- 本机 `.venv` 直接执行。按命令Step0要求构建holdout样本前，先核实v3数据管线是否真的从未接触过locked_temporal_test（2023-09-30至2024-03-31）窗口——**核实结果推翻了这一前提**。
+- **⚠️ 关键发现**：命令#9建立的样本构造函数（`step0_build_sample`/`step2_build_folds`/`complete_predictors_mask`）对v3天气匹配事件做5折`GroupKFold`时**未施加任何日期范围限制**，也**未借用codex `analysis_step2/02_split_manifest.parquet` 里定义的`split_role`标签**（该标签正是命令#1-5用来标记screening_development/expansion_pool/locked_temporal_test三角色的依据）。精确核实：命令#9-11的全六组开发样本（n=117,298）里有22,914个事件（19.53%）、命令#12-14的weather_natural+technical_asset主规格样本（n=60,453）里有12,115个事件（20.04%）落在locked_temporal_test窗口内，且这些事件在5折交叉验证的每一折（训练折或验证折）里均有分布（各折2,125-2,994个不等）。
+- **影响判定**：这意味着命令#9-14的全部逐折系数稳定性判定、临界风速估计（含Bootstrap重抽样）、Cause Code范围稳健性检验（weather_natural+technical_asset主规格的确立）、方差分解，**均已经把本应保留的locked_temporal_test数据当作开发样本的一部分反复使用**——命令#15"这是全项目第一次、也应该是唯一一次接触这份保留数据"这一前提**在v3独立重建管线下不成立**，此前命令#9-14均未发现或报告这一遗漏（含本会话自己执行的这些命令）。
+- **未擅自决定替代方案，按命令纪律要求停止执行Step1-4，仅完成Step0并汇报**，向网页端/用户提出三个选项供决策：①放弃已被使用过的2023-09-30窗口，重新定义一个真正未被触碰过的新时间切片作为holdout（需要新数据）；②继续执行Step1-4但在论文里明确标注这不是真正独立的样本外确认，只是开发样本内部特定时间子集的"事后一致性复核"，认识论地位弱于true holdout；③回头借用codex的split_manifest角色标签（仅借用日期分组信息，不引入codex的变量定义）重新划分保留样本，但需要用户明确授权重做，且此后需要重新遵守不触碰新保留样本的纪律。
+- **产出文件**：`claude_branch/results/module_e_final_confirmation/00_holdout样本构建.md`（详细记录核实过程、精确数字、五折分布、影响判定、三个待决策选项）。未产出Step1-4文件（未执行）。
+- 验收标准逐项确认：Step0如实报告了holdout与开发样本"完全不可比"这一比"构成差异"更严重的问题（并非简单的Cause Code构成比例差异，而是holdout本身已被使用过）；未根据结果反过来调整任何协变量/样本筛选/模型设定（因为根本未执行到那一步）；遇到技术上无法直接套用锁定规格的情况（前提不成立）时选择停下汇报而非自行决定替代方案，符合命令最高优先级的纪律要求。
+
+## 2026-08-25（工作命令 #16：重建干净开发样本（剔除locked_temporal_test污染），复现最终锁定规格结果 —— 已执行，生成回执，附带一项重大关联发现）
+
+- 本机 `.venv` 直接执行。首次安装pyarrow以读取codex的`analysis_step2/02_split_manifest.parquet`。
+- **Step0（角色边界核实）**：逐行核实三角色精确日期边界——expansion_pool [2021-04-01,2023-09-25]、screening_development [2021-04-03,2023-09-29]、**locked_temporal_test [2023-09-30,2024-03-31]**，三者两两日期集合零重叠，边界无歧义，与命令#15报告一致。
+- **Step1（干净样本重建）**：对v3事件级数据按`incident_date_utc>=2023-09-30`整块剔除（非随机行剔除）。发现32个跨界事件（起始在开发区间、最晚阶段结束延伸到locked窗口），**明确决定按起始日期归属保留**（与项目一贯做法一致，规模仅0.03%可忽略），非静默处理。干净样本：v3事件级135,025→109,250（剔除19.09%）；weather_natural+technical_asset范围66,079→53,114（剔除19.63%）；天气匹配后62,927→50,345（剔除20.00%）——剔除比例与命令#15报告的19.5%-20.04%高度吻合。验证干净样本与locked窗口零日期重叠（最晚2023-09-29 vs 最早2023-09-30）。
+- **Step2（E0/R0c干净样本重估）**：完备协变量n=94,384，WT范围n=48,338，E0'_clean n=48,323，R0c'_B_clean n=47,840。E0'一次项5/5同号5/5显著CV22.94%（较受污染WT的3/5显著·43.65%明显改善）；R0c'_B一次项3/5同号0/5显著（趋零，与命令#13"情形A"判断一致，去污染前后无实质变化）；二次项两模型均保持稳健。
+- **⚠️ Step2重大附带发现（与去污染本身无关，独立问题）**：**customers_v2系数符号在weather_natural+technical_asset范围下与全六组范围完全相反**——干净WT样本下customers_v2一次项+0.307（正，5/5显著CV2.66%）、二次项-0.381（负，5/5显著CV1.41%），而全六组样本（命令#9/#10）是一次项-0.109（负）。**经核实此反转并非去污染引入**：命令#12已计算但从未在报告正文展示的受污染WT样本customers系数（+0.34、-0.395）与本命令干净样本几乎一致；独立裸回归二次验证（无任何其他协变量）同样复现该反转（WT范围+0.361/-0.393，六组范围-0.093/-0.044）。**这是本会话首次实际查看并报告该范围下customers_v2系数具体数值，此前命令#12/13的脚本均只聚焦阵风系数/拐点，从未展示customers系数**，建议网页端就此单独发新命令排查。
+- **Step3（临界风速重估）**：E0'_clean拐点z=0.4769（折间CV22.00%），Delta CI(z)[0.287,0.667]，Bootstrap CI(z)[0.232,0.836]（不跨零）；物理单位点估计**12.13 m/s**（Bootstrap CI[10.86,14.00]），观测分布第75.3百分位。**与受污染WT（命令#12：10.69 m/s，Bootstrap CI[9.19,12.10]，临界跨零）相比，点估计上移13.5%，统计显著性从"临界跨零"变为"明确不跨零"——有实质意义的偏移，非可忽略的噪声**。核实locked窗口阵风分布（均值10.82高于干净样本9.71，但p99/max反而更低）作为可能的分布层面解释，未做因果分解验证，标注为非确定性参考。R0c'_B_clean拐点z=0.0419（Delta/Bootstrap CI均跨零），物理点估计9.87 m/s与受污染版本巧合一致，但两者均不具统计可靠性，不建议采用。
+- **Step4（方差分解重估）**：E0'总OOS R²2.57%（受污染2.77%），阵风边际贡献0.92pp/35.8%占比（受污染1.02pp/36.8%）；R0c'_B总OOS R²11.07%（受污染11.28%），阵风边际贡献区间0.77-0.96pp（受污染0.82-0.99pp），customers_v2边际贡献区间6.99-7.18pp（受污染7.73-7.90pp），权重比约8.2倍（受污染约8.7倍）——全部关键比例相对变化<10%，高度稳健。附带提请注意：command#14报告曾将customers_v2解读为"负向、优先调度"机制，需结合Step2的符号反转发现同步更新解释文字。
+- **Step5（新旧对比与判断）**：系数稳定性/方差分解层面变化很小甚至改善，无任何方向性反转；**E0'临界风速需要更新为干净样本新数字（12.13 m/s）**，不能继续沿用命令#12的10.69 m/s（新数字统计证据更强，非坏消息，但数值确实变了）；R0c'_B不建议报告具体临界风速数值，此判断去污染前后不变。综合判断：干净样本结果足够稳定，可作为论文一正式开发样本阶段结果，但需连同以上三点具体说明一并采纳，不能笼统"确认修复成功"了事。
+- **产出文件**（均写入 `claude_branch/results/dev_sample_decontamination/`）：`00_角色边界核实.md`、`01_干净开发样本重建.md`、`02_E0_R0c干净样本重估.md`、`03_临界风速重估.md`、`04_方差分解重估.md`、`05_新旧对比与判断.md`；`raw/`下全部JSON+CSV原始结果（含500+500次Bootstrap原始拐点序列）；脚本 `claude_branch/scripts/dev_sample_decontamination/`下`clean_sample_builder.py`（共享干净样本构造函数，复用命令#9确定性函数，在LAD补齐与折构造之前插入日期过滤）+ `step1_rebuild_clean_sample.py`/`step2_refit_clean.py`/`step3_critical_wind_speed_clean.py`/`step4_variance_decomposition_clean.py`。
+- 验收标准逐项确认：Step0逐行核实未引用转述性文档；Step1验证零日期重叠并明确说明32个跨界事件的处理方式（非静默处理）；Step2-4完整复现命令#9/#11/#14方法环节未简化；Step5给出具体新旧数字对比未用"基本一致"掩盖E0'临界风速的实质性偏移；全程未根据结果反过来调整任何协变量/样本筛选/模型设定；发现的customers_v2符号反转问题已如实披露并建议单独立项，未在本命令范围内擅自展开或掩盖。
+
+## 2026-08-25（工作命令 #17：排查customers_v2对duration_B效应方向在weather_natural+technical_asset范围下的反转 —— 已执行，生成回执）
+
+- 本机 `.venv` 直接执行，复用命令#16的干净weather_natural+technical_asset样本（R0c'_B_clean，n=47,840）及确定性构造函数。
+- **Step1（原始分箱关系）**：customers_v2按十分位分箱（合并为7箱），duration_B均值从12.19（customers=0-1）升至峰值15.16（customers=3-8），再单调降至8.88（customers=213-27013）——**不依赖二次函数假设的原始分箱直接呈现先升后降形态**，log尺度同样成立。**同一批47,840个事件**改用命令#10已验证的legacy式customers_naive/duration_naive（按`[Incident Reference,Start Date and Time]`排序取最早阶段），关系变为清晰单调递减（12.23→10.98→10.08→7.63→5.15→2.24），**无倒U型迹象**——证实倒U型是customers_v2/duration_B新定义特有的现象。
+- **Step2（子组构成排查）**：weather_natural（n=7,705，customers_v2中位数28）与technical_asset（n=40,135，中位数2）customers_v2水平确有明显差异，但**两组各自内部单独分箱后均呈非单调关系**——technical_asset是清晰单峰倒U型（峰值在customers=3-4，13.56→6.61）；weather_natural是更复杂的"早期小驼峰+中段下降+尾部回升"形态（23.75→10.49→17.15）。**判定不是"一组单调、混合后产生假象"式的构成偏移**，但如实记录了两组具体形态存在细节差异（暗示单一二次函数可能是对weather_natural尾部特征的简化）。
+- **Step3（灵活函数形式复核）**：把customers_v2一次+二次项替换为7个十分位哑变量（完全不设函数形式假设），相对最低分箱的系数序列为+0.590→+0.445→+0.339→+0.385→+0.067(不显著)→**-0.456**（p=1.5e-28），呈现"先显著为正、逐渐衰减、最终转为显著负"的模式，与二次函数拟合的倒U型定性完全吻合；阵风系数（z_gust_0h_sq=0.0713,p=8.8e-22）与已确立结果高度一致，内部一致性良好。中间区间（8-23→23-59）出现小幅非单调回升，提示真实关系可能比标准二次函数略复杂。
+- **Step4（综合判断）**：**明确判定为三层结论**——①不是函数形式设定产物（Step3排除）；②不是weather_natural/technical_asset两组构成偏移意义上的假象（Step2排除，两组各自独立非单调）；③但确实是customers_v2/duration_B新定义特有的现象，legacy定义下同一批事件不出现（Step1证实），**不能脱离具体变量定义抽象谈论"customers规模与恢复时长的关系"**。提出三个未经证实的工程假说（构造层面机械贡献、应急响应机制分层、中等规模事件"最难啃"）供论文讨论部分参考，均标注置信程度。**明确建议**：weather_natural+technical_asset主规格下应放弃"customers单调负向、调度优先级"表述，改用倒U型描述并推荐"应急响应机制分层"假说作为审慎解释；全六组的单调负向结果应明确限定为该范围/该legacy定义下的表观模式，不作普遍结论；建议将"变量定义方式本身实质性改变经验关系形状"这一发现作为方法论稳健性检验的一部分呈现。
+- **产出文件**（均写入 `claude_branch/results/customers_duration_shape_investigation/`）：`01_原始分箱关系.md`、`02_子组构成排查.md`、`03_灵活函数形式复核.md`、`04_综合判断与叙事更新建议.md`；`raw/`下全部分箱CSV+十分位哑变量系数表；脚本 `claude_branch/scripts/customers_duration_shape_investigation/`下`step1_binned_relationship.py`/`step2_subgroup_check.py`/`step3_flexible_form.py`（复用命令#16的`clean_sample_builder.py`）。
+- 验收标准逐项确认：Step1原始分箱经验关系（新定义+legacy定义）均已报告，未依赖二次函数假设；Step2分组报告weather_natural与technical_asset并给出明确的"非纯构成偏移"判断；Step3用十分位哑变量（区别于二次多项式）做了复核；Step4给出明确判断（真实但依赖变量定义的现象，非构成偏移非函数形式产物）且工程解释部分全部标注为"未经证实、仅供参考"，未含糊带过。
+
+## 2026-08-25（工作命令 #18：n_stages分层检验——排查customers_v2-duration_B倒U型是否为阶段数的机械副产品 —— 已执行，生成回执，最终定案）
+
+- 本机 `.venv` 直接执行，复用命令#16的干净weather_natural+technical_asset样本（R0c'_B_clean，n=47,840），`n_stages`取v3数据集`stage_row_count`列按Incident Reference关联（全部可关联，无缺失）。
+- **Step1（分布）**：n_stages=1占59.21%（28,328个）、2占15.81%、3-4占13.30%、5-9占10.00%、10+占1.68%，样本量足以支撑分层。
+- **Step2（单阶段子集，n=28,328，关键验证）**：customers_v2十分位分箱后duration_B均值11.45→11.38→10.47→**3.80**，**清晰单调下降，未出现命令#17全样本上的倒U型**，与legacy定义已知的单调下降模式高度吻合，已核实计算逻辑无误（单阶段事件customers_v2/duration_B在数值上确实约等于legacy定义，这一理论预期与实测结果一致）。
+- **Step3（多阶段子集）**：n_stages≥2整体（n=19,512）及按2/3-4/≥5细分，**每一个具体分层内部均呈（近似）单调下降，无一独立复现倒U型**（仅n_stages≥2合并组最后一箱有极小幅回升9.38→10.21，细分后未稳定重现）。发现关键对照：单阶段customers=0-1时均值11.45，多阶段customers=0-2时均值高达24.15——判定全样本"先升"段主要是customers增大时样本构成从单阶段为主转向多阶段为主所致的构成效应，非customers本身在固定n_stages下的真实非单调效应。
+- **Step4（回归控制n_stages）**：customers_v2一次项控制前+0.3067（p=1.1e-49）→控制后**-0.2364**（p=5.6e-16），**完全反转符号**（相对变化177%）；二次项控制前-0.3806→控制后-0.3011，**缩小约21%**但仍高度显著（p=3.7e-81）；log(n_stages)本身系数+0.9708（p=1.9e-174），是duration_B极强正向预测因子，符合定义预期。控制后拐点位置z=-0.392，移至customers分布密集区低值端，观测区间内曲线实质表现为持续下降，不再构成完整倒U型。阵风核心发现（z_gust_0h_sq）不受影响，内部一致性良好。
+- **Step5（综合判断，定案）**：**明确判定为"倒U型主要是n_stages的机械副产品"**，量化贡献——上升段（一次项正值）约100%归因n_stages构成效应；下降段（二次项负值）约79%强度独立存在但因上升段消失、拐点移出观测区间实际意义，不再构成完整倒U型。**命令#17提出的"应急响应机制分层"假说降级**，改为支持命令#17假说清单第一条（多阶段反复处理的构造性机械关联）。给出可直接写入论文方法论/限制章节的最终表述：不采用"customers独立倒U型因果效应"表述，改为"customers_v2/duration_B表观非线性关系主要反映阶段数度量的处理复杂度，控制后更接近legacy定义下已知的单调负向关系，原始非线性关系作为方法论限制在附录说明，不作为模块C核心因果发现"。
+- **产出文件**：`claude_branch/results/customers_duration_shape_investigation/05_n_stages分层检验与最终叙事校准.md`（单一综合文件，含Step1-5全部内容及可直接引用的论文表述文字）；`raw/`下分布/分箱/回归系数CSV；脚本`claude_branch/scripts/customers_duration_shape_investigation/step5_n_stages_stratification.py`（复用命令#16`clean_sample_builder.py`）。
+- 验收标准逐项确认：Step2明确报告单阶段子集内部关系形状并与legacy定义对比确认一致；Step4报告了控制n_stages前后customers_v2一次项（完全反转）和二次项（缩小21%）的具体数字，未止步于定性判断；Step5在三种判断中明确归属"主要是机械副产品"并给出量化中间态描述及可直接使用的论文表述文字，未笼统二选一。至此customers_v2-duration_B关系排查完成，未发现需要进一步深挖的性质全新问题。
+
+## 2026-08-26（工作命令 #19：模块E——locked_temporal_test最终确认性检验（更新版，替代命令#15） —— 已执行，生成回执，论文一实证部分最终headline结果）
+
+- 本机 `.venv` 直接执行。命令#15因发现开发样本污染在Step0停止，其产出已重命名为`00_holdout样本构建_命令15已废弃_基于污染前提.md`并加废弃说明，不与本命令混淆。本命令基于命令#16修复后的干净开发样本，是真正意义上的模块E confirmatory检验。
+- **Step0（holdout样本构建）**：对locked_temporal_test窗口[2023-09-30,2024-03-31]应用与命令#16完全相同的构建流程，得到weather_natural+technical_asset样本n=12,115，E0可用n=12,114，R0c可用n=11,992（p99截尾167.37h）。日期范围验证完全落在locked窗口内。与干净开发样本对比：Cause Code构成高度相似（technical_asset 82.61% vs 83.97%，weather_natural 17.39% vs 16.03%，相差约1.4pp）；n_stages分布几乎完全一致（各分箱差异<1.5pp）——未发现因单一秋冬季节覆盖导致的明显结构性偏差。
+- **Step1（E0暴露，单次拟合）**：一次项+0.0661（p=0.0066，**符号较开发样本-0.0842反转**）；二次项+0.1661（p=1.2e-24，与开发样本+0.0898同号，约1.85倍量级）。500次日期分组Bootstrap（184个唯一日期，达到可靠性门槛）：拐点z=-0.1988（开发样本+0.4769，**方向相反**），Delta CI(z)[-0.352,-0.046]不跨零，**Bootstrap CI(z)[-0.548,0.087]跨零**——临界风速12.13 m/s这一具体数值未获holdout确认，但阵风-暴露存在非线性凸性关系这一定性判断得到确认且holdout上更强。
+- **Step2（R0c恢复，单次拟合，核心正面结果）**：**阵风二次项+0.0638（p=1.3e-8），与开发样本稳健区间+0.0682~+0.0918方向一致、量级吻合，明确得到确认**；一次项不显著（p=0.508），与开发样本"证据弱"判断一致。customers_v2原始（未控制n_stages）系数方向复现（+0.4592/-0.4509，同号于开发样本+0.3067/-0.3806，量级更大）。n_stages分层检查复现命令#18方法：holdout单阶段子集（n=7,279，占60.7%）呈现9.26→9.21→3.66的（近似）单调下降，**与开发样本命令#18发现的模式完全一致，独立证实了n_stages构成效应解释**。
+- **Step3（方差分解，样本内R²，holdout本身已是样本外性质无需内部CV）**：E0阵风边际贡献占比36.0%（开发样本OOS约35.8%，**高度一致**）；R0c阵风边际贡献0.29-0.34pp（开发样本0.61-0.73pp，**约为开发样本45-47%**），customers_v2边际贡献10.73-10.79pp（开发样本7.17-7.28pp，**约1.48倍**），权重比从开发样本约10倍扩大到holdout约32-37倍——与Step1/2系数层面证据（holdout customers_v2量级更大、阵风一次项方向反转）内部一致，非独立新异常。
+- **Step4（综合判断，逐项明确回答）**：①E0阵风效应**部分确认**——凸性方向一致且更强，但一次项符号反转、临界风速具体数值（12.13 m/s）未获确认，Bootstrap CI转为跨零；②R0c阵风二次项**明确确认**——本项目核心稳健发现通过独立时间窗口检验；③customers_v2效应（含n_stages构成解释）**明确确认**——不仅系数方向复现，n_stages分层诊断链条本身也在holdout独立重现；④对E0分歧讨论了三个候选原因（样本量缩至25%、季节覆盖单一导致阵风分布差异、真实时间不稳定性），均未强行择一，如实并列。**给出可直接用于论文的最终结论摘要**：核心发现（恢复侧阵风二次凸性效应、customers_v2的n_stages构成解释）通过confirmatory检验，暴露侧的具体临界风速数值改为标注"探索性、未通过独立时间窗口确认"，凸性定性结论保留。
+- **产出文件**（均写入 `claude_branch/results/module_e_final_confirmation/`）：`00_holdout样本构建.md`、`01_E0暴露模型holdout结果.md`、`02_R0c恢复模型holdout结果.md`、`03_方差分解holdout复现.md`、`04_综合判断.md`；命令#15旧产出保留为`00_holdout样本构建_命令15已废弃_基于污染前提.md`（已加废弃说明）；`raw/`下全部系数/Bootstrap/方差分解原始结果；脚本`claude_branch/scripts/module_e_final_confirmation/`下`build_holdout_sample.py`（复用命令#16`clean_sample_builder.py`及命令#9确定性函数，反向日期过滤）+`fit_holdout_models.py`（单次拟合+Bootstrap+样本内方差分解，复用命令#11/#14基础设施）。
+- 验收标准逐项确认：全程未根据holdout结果反过来调整任何协变量/样本筛选/模型设定；Step0报告了Cause Code构成与n_stages分布差异；Step1-2给出与命令#16的直接数值对比；样本量充分未出现"不足需跳过"情况；Step4对四个问题逐一明确回答，如实披露E0一次项/临界风速未获确认这一负面信号，未因R0c/customers_v2的正面确认而选择性忽视。至此论文一实证部分全部完成。
+
+## 2026-08-26（工作命令 #20：梳理旧论文（v6）整体框架与建模/画图代码，重点排查LAD风敏感性地图的具体方法 —— 已执行，生成回执，纠正了命令背景的核心假设前提）
+
+- 本机纯只读梳理，未做任何新计算。安装python-docx以读取docx（pandoc本机未安装）。
+- **Step0**：定位到`paper/0525_revised_v6.docx`（正文，实际读取全部189段落+12表格）及`paper/0525_revised_v6_appendices_AE.docx`（含附录A-F，25表格），完整梳理章节结构（Introduction→Case study→Empirical framework→Results and Discussion→Conclusion→Appendix A-F）与全部图表清单（Figure1-8、Table1）。**LAD风敏感性地图精确定位为Figure 6**（4.3节"Spatial heterogeneity in model-based conditional outage estimates"）。
+- **Step1**：盘点全部建模/画图脚本，按"最终生产脚本（读取权威数据`data\new\...`，含`0519_4.1-4.4.py`、`530_Work A/B.py`、`530_Section4_3_extra.py`等）"与"早期草稿/被放弃脚本（读取遗留目录`data_merged\...`或方法已被替换，含`vulnerability.py`、`figure4_vulnerability.py`、`Figure_section4.4.py`等）"两类分别列出，与`项目研究框架与数据结果说明.md`第9节点名脚本交叉核对一致。
+- **Step2（核心，重大发现）**：精确定位生产脚本为**`0519_4.3.py`**（经`530_Section4_3_extra.py`读取其输出目录`Section4_3_VulnerabilityMaps_LogOLS`交叉确认）。原样引用代码精确回答四个问题：①画的量**不是阵风系数**，是全国统一log-OLS基线模型在统一天气情景（阵风20m/s、气压/温度/降水z=0）下对每个LAD的**条件预测停电结果水平**（exp(Xβ)，即条件中位数非条件均值）；②**完全没有per-LAD单独回归、没有阵风×LAD交互项、没有分层/随机效应/经验贝叶斯收缩**——LAD间差异100%来自5个区域协变量（log_population/income_deprivation_rate/deprivation_gap_pct/morans_i/urban_binary）各自LAD均值的差异，天气变量对全部113个LAD强制设为同一值；③无样本量筛选机制（因无per-LAD回归，只有该LAD完全无观测记录时才在地图上显示灰色"No estimate"）；④画图用`LAD_DEC_2021_UK_BGC.shp`边界+`Oranges`连续色阶（0-98百分位截断colorbar范围，非分位数分箱），正文对该图的解读措辞审慎（明确声明"conditional model-based estimate"而非"物理脆弱性/历史发生率地图"，且承认遗漏LAD固定效应可能混入未观测因素）。**这一发现直接推翻了命令背景"每个LAD单独回归可能小样本不稳定"这一假设前提**——该风险只存在于历史上已被放弃的草稿方法（`vulnerability.py`等，确实是per-LAD Poisson回归+n≥200阈值+系数排名合成分数），不存在于v6最终方法。
+- **Step3**：对`0519_4.1/4.2/4.4.py`、`530_Work A/B.py`、`530_Section4_3_extra.py`逐一概述目的/模型/核心发现（基线非线性R²仅0.0375-0.0479、双向LAD×日期聚类后暴露侧一次项/交互项转为不显著而恢复侧保持稳健、暴露-恢复LAD预测面Pearson r=-0.893强负相关等），均与`项目研究框架与数据结果说明.md`已有摘要交叉核对一致。
+- **Step4（综合框架图+风险判断）**：汇总完整故事线并标注对应脚本/数据文件；对照本项目claude_branch已确立发现（customers/duration定义缺陷已修复、weather_natural+technical_asset主规格、真正独立时间窗口confirmatory检验均比v6更严格）。**明确的方法论风险判断**：①不存在命令背景担忧的小样本回归不稳定风险（因方法结构上不存在per-LAD回归）；②但存在一个更根本的概念性风险——图题话语框架易让读者误以为反映"风敏感度"，实际图上差异与风完全无关，100%来自静态社会经济地理协变量；③论文自己已承认遗漏LAD固定效应的混淆风险，经核实评估准确无夸大；④历史上确实存在过一版会有小样本风险的早期草稿方法，但已被放弃未采用。给出三点供网页端/用户判断的新版本设计方向建议（加入阵风×区域交互项获得真正风敏感度量、复用v6保守框架但替换为已修正变量定义、任一方向都需在图注措辞上明确风险边界），未越权替用户做最终选择。
+- **产出文件**（均写入 `claude_branch/results/old_paper_framework_review/`）：`00_旧论文正文结构梳理.md`、`01_建模画图脚本清单.md`、`02_LAD风敏感性地图方法精确复原.md`、`03_其余建模内容概览.md`、`04_旧论文完整框架地图.md`。未修改任何原始文件（严格只读）。
+- 验收标准逐项确认：Step0实际找到并通读了论文正文docx（非依赖框架说明文档转述）；Step2精确到代码片段级别复原方法，明确回答了"是否存在收缩/分层处理"（否）这一关键问题；Step4给出了明确的方法论风险判断（不存在小样本回归风险，但存在概念性风险与已承认的固定效应遗漏风险），结合本项目已验证的"小样本不稳定"教训做了针对性说明。
+
+## 2026-08-26（工作命令 #21：全量合并样本最终回归 + "基线区域差异"地图与阵风剂量-反应曲线配对 —— 已执行，生成回执，含一项重要方法论澄清）
+
+- 本机 `.venv` 直接执行，全程复用命令#16/#19/#11/#14/#20已确立的确定性函数与复原方法。
+- **Step0（全量样本构建）**：合并命令#16干净开发样本（n=48,338）与命令#19 holdout样本（n=12,115），求和校验通过（48,338+12,115=60,453），**日期重叠0、Incident Reference重叠0**，唯一事件数=行数（无重复）。**有趣的交叉验证**：合并后样本量60,453与命令#12报告的、去污染修复之前的原始weather_natural+technical_asset完整样本量完全一致，证明命令#16的日期切分无遗漏无重复。E0最终样本n=60,437；R0c在合并分布上重新计算p99（192.08h，介于开发样本194.80h与holdout样本167.37h之间），最终样本n=59,834。
+- **Step1（全量最终拟合）**：报告完整系数表（不止阵风/customers项，含全部区域协变量、年月FE）。三方对比（开发样本/holdout/全量）：全部系数都合理落在开发样本与holdout两组历史结果之间（多数更接近开发样本，符合其约80%权重占比），无异常值。**R0c阵风二次项（核心稳健发现）全量估计+0.0792（p=2.8×10⁻³⁶），是三次估计里统计最精确的一次**，E0/R0c样本内R²分别为3.23%/11.76%。
+- **Step2（临界风速+方差分解）**：E0临界风速点估计**10.69 m/s**（Bootstrap CI[9.20,12.06]），与命令#12去污染前完整样本报告的10.69 m/s**完全一致**（Step0一致性的再次印证），落在第63.7百分位，Delta CI不跨零但Bootstrap CI跨零（证据强度中等，与历史判断一致）。方差分解（新建5折GroupKFold，OOS）：E0阵风边际贡献1.07pp/占38.2%；R0c阵风边际贡献0.62-0.75pp、customers_v2边际贡献7.73-7.87pp，**权重比约10.5-12.7倍**，落在开发样本（8.2倍）与holdout（32-37倍）之间。
+- **Step3（阵风剂量-反应曲线）**：区域/customers_v2固定在样本均值，仅阵风从p1(2.2m/s)到p99(27.2m/s)变化，E0预测值最大/最小比值**2.79**，R0c**2.37**。
+- **Step4（基线区域差异地图，严格执行command要求的关键差异）**：复用命令#20复原的`0519_4.3.py`预测框架，但天气固定为**样本均值**（非v6硬编码20m/s，并说明理由）、**R0c预测的customers_v2也严格固定为样本均值**（不同于v6原方法本身不含customers协变量的情况，本项目R0c模型含customers_v2故必须显式固定，已按命令要求执行，未沿用可能让其自由变化的旧逻辑）、5个区域协变量仍按LAD自身均值。111个LAD均有预测值（无样本量筛选，与命令#20已确认的方法一致）。区域驱动最大/最小比值：customers_v2预测**1.96**，duration_B预测**1.41**。图注按要求重新撰写，全文未使用"vulnerability"/"敏感性"话语，明确写明"本图假设全部区域面临完全相同天气条件，差异完全反映区域社会经济/人口特征"。产出PNG+PDF双格式地图。
+- **Step5（核心对比，重大方法论澄清）**：**发现并澄清了一个关键概念混淆**——Step4地图按设计排除了customers_v2变化，其"区域比值"（1.41-1.96）衡量的是"5个静态LAD社会经济协变量"单独的影响，**不能**用来检验"customers_v2权重远超阵风"这一方差分解结论（那是关于customers_v2本身、不是关于静态区域协变量）。补充计算了customers_v2自身的剂量-反应比值（**5.99**，阵风固定在均值，customers_v2从p1到p99变化）。**分两个问题分别报告**：①"customers_v2 vs 阵风"——两种度量方式（预测值比值5.99 vs 2.37约2.5倍；方差分解7.8pp vs 0.7pp约10.5-12.7倍）**高度一致**，均支持"风的权重有限"；②"5个静态区域协变量 vs 阵风"——两种度量方式（预测值比值1.41-1.96 vs 2.37-2.79；方差分解E0基线33.8% vs 阵风38.2%）均显示**两者大致相当、阵风甚至略高**，**与命令背景预设的"区域地图差异应远大于阵风"不完全吻合，如实报告未回避**。给出修正后结论：论文一"风的权重有限"论点的最强证据应来自customers_v2而非静态区域协变量，不应用地图视觉差异暗示"区域远比风重要"。
+- **Step6（可选，已完成）**：复现暴露-恢复预测面相关性检验，Pearson r=-0.780、Spearman rho=-0.758（v6原始-0.893/-0.879），方向一致、高度显著，判定为基本复现v6发现，强度略减弱（部分可能源于customers_v2固定处理与v6原方法的协变量细节差异）。
+- **产出文件**（均写入 `claude_branch/results/final_combined_analysis/`）：`00_全量样本构建.md`、`01_全量样本E0_R0c最终拟合.md`、`02_全量样本临界风速与方差分解.md`、`03_阵风剂量反应曲线.csv`+`03_阵风剂量反应曲线说明.md`、`04_基线区域差异地图数据.csv`+`04_基线区域差异地图图注.md`+`04a/04b`地图PNG/PDF、`05_阵风vs区域影响幅度对比.md`、`06_暴露恢复预测面相关性.md`；`raw/`下全部原始JSON/CSV结果；脚本`claude_branch/scripts/final_combined_analysis/`下`combined_sample_builder.py`+`step1_final_fit.py`+`step2_critical_wind_and_variance.py`+`step3_dose_response_curve.py`+`step4_baseline_regional_map.py`。
+- 验收标准逐项确认：Step0验证了合并样本无重复事件、日期不重叠；Step1给出了全量与命令#16/#19两组历史结果的三方对比；Step4严格按"customers_v2固定为样本均值"处理未沿用旧逻辑；Step4图注已重新撰写未沿用vulnerability话语；Step5给出了量化的核心对比结论并发现、澄清、如实报告了一个重要的概念混淆（静态区域协变量与customers_v2不应混为一谈），未简单说"区域远大于风"来迎合命令背景预设。
+
+## 2026-08-26（工作命令 #22：补齐customers_v2剂量-反应曲线（替代地图，作为"权重有限"论点的核心视觉证据） —— 已执行，生成回执，论文一实证部分收尾）
+
+- 本机 `.venv` 直接执行，复用命令#21已拟合的R0c最终模型（未重新拟合），复用命令#21 Step3已使用的参照值约定（非目标协变量取实际样本均值，非人为把平方项清零）。
+- **Step1（customers_v2剂量-反应曲线）**：阵风及全部其他协变量固定在与命令#21 Step3完全一致的参照值，仅customers_v2的log1p z-score在观测p1-p99（原始值0–1,522.67）间取50个网格点。预测duration_B范围1.37–8.20小时，**最大/最小比值5.9903**，与命令#21 Step5已报告的5.99**核对一致**（差异0.01%，视为同一数字，源于此前口头报告的小数位舍入），未发现需要排查的不一致。如实标注曲线呈现的"先升后降"形态是命令#17/#18已排查过的n_stages构成效应（未在本命令重新控制n_stages，因为目的是与命令#21 headline模型规格保持一致，不是重新做归因分析）。
+- **Step2（并排对比图）**：生成双子图对比图（图8），横轴分别为阵风原始值(m/s)、customers_v2原始值，纵轴统一为预测duration_B并使用相同y轴范围便于目视比较陡峭程度。图题采用描述性措辞"预测恢复时长对阵风强度 vs 对受影响客户规模的敏感程度对比"，避免"权重"等易被误认为已经过正式统计推断的表述；子图标题标注具体比值（阵风2.37× vs customers_v2 5.99×）。输出PNG+PDF双格式。
+- **Step3（地图角色重新定位）**：撰写可直接用于论文正文/图注的重新定位文字，明确收回"图4地图证明区域比风重要"这一表述，改为"5个静态区域协变量本身的差异幅度与阵风处于同一数量级，不构成比天气更主导的解释因素；真正远超阵风解释力的是customers_v2这一事件规模变量本身（见新图8）"。给出三点具体修正供网页端整合（不再使用的表述/应采用的表述/权重论点核心证据来源变更为图8+方差分解表）。明确本说明不修改命令#21已产出的地图图片本身及其原有图注（原图注在事实描述层面依然准确），只调整这个差异幅度该如何与阵风比较、该用哪张图佐证"权重有限"论点这一更高层次的定位。
+- **产出文件**（均写入 `claude_branch/results/final_combined_analysis/`）：`07_customers_v2剂量反应曲线.csv`+`07_customers_v2剂量反应曲线说明.md`、`08_阵风vs客户规模剂量反应对比图.png`+`.pdf`、`09_地图角色重新定位说明.md`；`raw/step7_customers_dose_response_summary.json`；脚本`claude_branch/scripts/final_combined_analysis/step7_customers_dose_response.py`（复用命令#21`combined_sample_builder.py`及命令#11拟合基础设施）。
+- 验收标准逐项确认：Step1使用了与命令#21 Step3完全相同的参照值约定（未重新选择一套不同固定值）；Step1算出的比值（5.9903）与命令#21 Step5的5.99核对一致；Step2的并排图两条曲线共用同一纵轴范围可直接目视比较；Step3文字明确收回"地图证明区域比风重要"表述并给出如实的重新定位。**至此论文一实证部分（影响函数结构、临界风速、方差分解、权重可视化）全部分析工作完成**，如无新发现，后续转入论文正文结构设计阶段。
+
+## 2026-08-26（工作命令 #23：核实具体命名风暴事件在最终数据集中的记录，用作论文具体案例 —— 已执行，生成回执）
+
+- 本机 `.venv` 直接执行，纯数据检索+汇总，未重新拟合任何模型，复用命令#21的全量最终样本（weather_natural+technical_asset，完备协变量，n=60,453）。会话启动时收到系统通知：此前两个后台任务（命令#16 Step3临界风速bootstrap、命令#21 Step2临界风速+方差分解）因会话边界被标记"stopped/无完成记录"，经核实两者对应的输出文件（`03_临界风速重估.md`及`final_combined_analysis/00-09`全部文件）均已完整存在于磁盘，确认是harness任务追踪的会话边界artifact、不是计算未完成，未重跑，直接继续执行本命令。
+- **Step1（全部7场风暴逐一核实）**：按网页端给定的英国气象局官方日期（各加1天缓冲），对Storm Arwen/Dudley/Eunice/Franklin/Babet/Ciarán/Henk**全部7场**逐一检索，全部检索到明显数量的事件（267至1,601起不等），未出现"某场风暴不明显"的情况。全样本阵风分布参照：p50=8.90、p95=19.80、p99=27.20、max=39.40 m/s。**Storm Eunice**（2022-02-17至19）以n=1,601、customers_v2总和376,712、UKPN区域内实测阵风峰值39.40 m/s（恰为全样本历史最高值，第100百分位）居首。**明确区分**：39.40 m/s（约88.2mph，Lewes/Peacehaven 33/11KV变电站）是UKPN区域内实测值，与英国气象局记录的怀特岛（不属UKPN区域）122mph全国性历史纪录是两个不同尺度的数字，未混淆报告。Storm Babet（以洪水为主）峰值阵风22.80 m/s为7场中第二低，但duration_B最大值1,890.47h反而是7场中最长，符合背景预期的"风力次要"特征，如实报告未夸大其阵风影响。
+- **Step2（重点案例详细展开，按数据结果非预设选定）**：**Storm Eunice**在customers_v2总和与区内阵风峰值两项指标上均为7场之首，判定为影响最大的风暴；**Storm Franklin**（customers_v2总和201,529，居第二，且与Eunice同属2022年2月Dudley→Eunice→Franklin三连击序列）作为第二案例展开。逐一列出两场风暴涉及的LAD/变电站明细（按customers_v2总和排序前8个LAD），发现**Wealden在两场风暴中均是customers_v2总和最高的LAD**，间隔仅48小时连续受两场风暴影响，标注为观察不做因果结论。对照临界风速阈值10.69 m/s：Eunice期间96.1%事件（1,538/1,601）阵风超过阈值，Franklin为88.7%（1,053/1,187）；7场风暴峰值阵风均为阈值的2.06-3.69倍。如实提醒：Franklin记录的最长单次恢复时间1,728.30小时（约72天）、Babet的1,890.47小时均为风暴窗口内未经p99截尾的原始极值，非模型拟合使用的典型数值范围。
+- **Step3（可引用文字草稿）**：撰写三段英文可引用文字（引言开篇案例、临界风速阈值实际印证、恢复时长极端拖尾现象呼应"权重有限"论点），每个数字均标注可追溯至Step1/2具体表格的来源，明确提醒39.4m/s与122mph不可混用、两处极端最长恢复时长需加脚注说明未经截尾处理。
+- **产出文件**（均写入 `claude_branch/results/final_combined_analysis/`）：`10_命名风暴核实.md`、`11_重点案例详细数据.md`、`12_案例文字草稿.md`；`raw/`下7场风暴各自的事件明细CSV+汇总JSON；脚本`claude_branch/scripts/final_combined_analysis/step10_named_storms.py`（复用命令#21`combined_sample_builder.py`）。
+- 验收标准逐项确认：Step1对全部7场风暴逐一核查未挑选合适的几场；全程明确区分"全国性气象记录"（怀特岛122mph）与"UKPN区域内实际观测值"（39.4m/s），未混淆；Step3文字草稿每个数字均可追溯至Step1/2具体数据来源，未出现未经核实的表述。
+
+## 2026-08-26（工作命令 #24：风暴期模型预测检验（拟合值vs观测值）——作为正文补充分析 —— 已执行，生成回执）
+
+- 本机 `.venv` 直接执行，确定性重新拟合命令#21最终E0/R0c模型（系数与命令#21完全一致，非重新调参），对命令#23已核实的全部7场风暴窗口事件代入各自真实观测协变量计算预测值，与观测值比较。**风暴事件本身是训练样本的一部分，本次检验属样本内拟合值-观测值对照，非样本外泛化检验**（与命令#19的真正holdout confirmatory检验性质不同，已在报告中明确区分）。
+- **Step1-2（7场风暴逐一检验，log尺度Pearson相关系数为主）**：**E0（暴露）表现好坏参半，无统一方向**——全样本基准r=0.179；Ciarán(0.341)、Henk(0.332)、Dudley(0.294)高于基准，Eunice(0.153)、Franklin(0.124)、Babet(0.185)、Arwen(0.116，p=0.059临界显著)低于或接近基准。**R0c（恢复）系统性全面弱于全样本基准，7场无一例外**——全样本基准r=0.343；最弱的Storm Dudley(r=0.084，p=0.151，**统计上不显著**，14组结果中唯一一个)，其次Henk(0.136)，表现相对最好的Ciarán(0.317)仍低于基准。原始尺度相关系数在多场风暴出现负相关（Dudley/Babet/Ciarán/Henk），判定为极端右偏分布下拖尾观测值主导所致，以log尺度为主要依据。散点图直观显示预测值范围明显窄于观测值范围，与全样本已知R²水平（E0 3.2%、R0c 11.8%）吻合。**如实报告了Dudley这一负面/不显著结果，未选择性只呈现表现好的风暴**。
+- **Step3（风暴期vs全样本对照）**：明确给出E0（无统一方向）与R0c（系统性全面弱于基准）两种不同模式的对照表。
+- **Step4（综合结论，核心）**：明确判断"风暴期预测未必更准"这一结果**与方差分解'风的权重有限'论点完全一致、相互印证，不构成自相矛盾**——阵风对R0c总解释力仅占6-7%，风暴期间事件集中发生会引入模型协变量之外更多运营层面异质性（资源同时分摊、跨区域调度顺序、设备受损程度差异等），预测精度系统性走弱恰恰是这一论点在个体事件层面的具体体现；如果风暴期反而预测显著更准才是需要额外解释的意外结果。对Storm Dudley不显著给出合理推测（三连击中最先到达且强度最弱一场，噪声占比更高）并明确标注为"未经证实的观察，非结论"。撰写英文可引用文字草稿，建议紧接命令#23案例文字之后呈现，形成"案例介绍→模型预测表现"完整叙事链，并提醒不可将本次检验称为"样本外验证"。
+- **产出文件**（均写入 `claude_branch/results/final_combined_analysis/`）：`13_风暴期预测检验.csv`+`13_风暴期预测检验散点图.png/.pdf`、`14_风暴期vs全样本预测精度对照.md`、`15_风暴期预测检验文字草稿.md`；`raw/step13_summary.json`；脚本`claude_branch/scripts/final_combined_analysis/step13_storm_prediction_check.py`。
+- 验收标准逐项确认：Step1覆盖全部7场风暴未只做Eunice/Franklin两个重点案例；Step2如实报告了表现较差/不显著的风暴（Dudley、Henk）未选择性呈现；Step3给出风暴期vs全样本的直接对照表；Step4结论诚实，正面讨论了预测精度不理想的情况且与方差分解"权重有限"论点呼应未自相矛盾。
+
+## 2026-08-27（工作命令 #25：变异范围受限诊断 + weather_natural风主导子样本独立回归 —— 已执行，生成回执）
+
+- 本机 `.venv` 直接执行，复用命令#21全量最终样本及确定性函数。
+- **Step1（变异范围受限诊断，Thorndike Case 2公式）**：完整推导直接变异范围受限公式`ρ_受限=(u·ρ_full)/√(1-ρ_full²+u²·ρ_full²)`。**重大发现：命令背景"风暴窗口内阵风变异幅度天然变窄"这一假设并不对全部风暴成立**——只有Arwen、Babet等较弱/较短风暴呈现变异压缩，Eunice、Ciarán、Henk等最严重风暴的阵风/预测值标准差反而**扩大**（Eunice预测值η标准差扩大到全样本2.35倍(E0)/1.45倍(R0c)），原因是长窗口同时覆盖风暴前后平静期与峰值期，跨度反而更宽。理论ρ与实际观测ρ逐风暴对比：**R0c有4/7场（Eunice/Franklin/Ciarán/Henk）理论方向与观测方向相反**，判定变异范围受限**不是**R0c系统性走弱的主要原因，命令#24"运营异质性"解释获得额外量化支持；未强行给出单一"解释掉X%"的数字（因该框架对严重风暴产生负数/超100%的荒谬结果，已如实说明不采用）。
+- **Step2（weather_natural子样本构建）**：从全量样本筛选`cause_group_official`严格=weather_natural，E0 n=9,857、R0c n=9,758，占主规格16.3%（与预期"六分之一量级"吻合），唯一日期1,003个，样本量充足**直接用标准5折**（无需减少折数，已明确说明判断依据），p99阈值重新计算=142.84h。
+- **Step3（子样本回归，与主规格并排对比）**：**E0一次项从主规格-0.0323完全反转为+0.1332（且更稳定,CV11.5%,5/5显著）；二次项虽5折同号但仅1/5显著、CV高达118.17%，判定为不可靠**（不是新发现，是小样本噪声）。**R0c二次项完美复现**（+0.0823 vs 主规格+0.0792，同一数量级，5/5显著，CV24.5%）；**R0c一次项从主规格不显著变为5/5显著（CV17.4%）**；customers_v2符号反转为负（-0.165，与命令#17/18的n_stages构成效应讨论相呼应，未展开）。
+- **Step4（方差分解+临界风速）**：**R0c阵风OOS边际贡献从主规格0.62-0.75pp提升到1.43-1.71pp（约2-2.3倍），首次超过customers_v2的边际贡献（1.00-1.28pp，权重比从10.5-12.7倍逆转为0.6-0.9倍）**，总OOS R²从11.05%提升到21.56%（近2倍）——**完全符合甚至超出预期**。**E0阵风OOS边际贡献从主规格+1.07pp变为-0.15pp（负值）**——与预期相反，如实报告未选择性隐瞒。E0临界风速估计**明确判定为不可靠**：点估计2.76m/s对应观测分布第0.97百分位（极端外推），两种方法CI均含物理上不可能的负风速值，标注为"当前样本量下无法可靠估计"而非"发现了更低的临界风速"。
+- **Step5（综合判断）**：①变异范围受限无法用单一百分比回答，方向和大小因风暴而异，对R0c系统性走弱不是主要原因；②weather_natural子样本风的解释力**恢复侧显著提升（超预期）、暴露侧反而下降转负**，两模型方向相反不能笼统回答；③**R0c核心稳健发现（二次项凸性）独立复现未偏移**，E0二次项/临界风速的不稳定按本项目命令#5/#16已建立的解读原则**明确判定为小样本噪声导致的证据不足，不是新发现**；④撰写英文补充说明供整合进命令#24文字草稿，每个数字均标注来源。
+- **产出文件**（均写入 `claude_branch/results/final_combined_analysis/`）：`16_变异范围受限诊断.md`、`17_weather_natural子样本构建.md`、`18_weather_natural子样本回归结果.md`、`19_weather_natural子样本方差分解与临界风速.md`、`20_综合判断.md`；`raw/`下全部系数/方差分解/bootstrap原始文件；脚本`step16_range_restriction.py`、`step17_weather_natural_subsample.py`（均复用命令#21`combined_sample_builder.py`及既有拟合基础设施）。
+- 验收标准逐项确认：Step1给出Thorndike公式完整推导+理论vs观测逐风暴对比，未止步于标准差比值；Step3-4全部结果与主规格并排对比；Step5第3点明确讨论小样本CV恶化风险并按既有解读原则判定为证据不足而非新发现；全部步骤中折构造决策（5折充足，未减少）已明确说明依据。
+
+## 2026-08-27（工作命令 #26：核查weather_natural子样本阵风分布——Cause Code是否存在低阵风端的选择效应 —— 已执行，生成回执，假说得到数据强烈支持）
+
+- 本机 `.venv` 直接执行，纯描述性诊断，未重新拟合任何模型，复用命令#21主规格全量E0样本（n=60,437，weather_natural n=9,857、technical_asset n=50,580）。
+- **Step1（阵风分布对比）**：weather_natural子样本`gust_0h`中位数13.20 m/s，比technical_asset的8.50 m/s高55%；全部分位数（p1-p99）weather_natural均系统性高于technical_asset。
+- **Step2（Cause Code判定与阵风水平关系，核心发现）**：全量样本按阵风十分位分箱，weather_natural占比从最低分箱**6.89%单调上升到最高分箱56.10%**，**9个相邻分箱间隔全部为上升（9/9），近乎完美的单调关系**，提升约8.1倍——Cause Code判定为weather_natural的概率本身随阵风强度上升，分类过程不独立于它试图解释的阵风水平。
+- **Step3（低阵风端锚点密度检验）**：命令#21主规格E0拐点10.69 m/s以下的观测点，在全量样本中占比63.70%，在weather_natural子样本中只占**36.83%**（相对密度只有全量样本的57.8%）——U型曲线下降段锚点在weather_natural子样本中被系统性稀释。
+- **Step4（综合判断）**：**假说两个分支均得到数据清晰支持**（未出现"证据不支持需退回笼统解释"的情况）。给出更精确的英文机制性解释替代命令#25"reduced statistical power"的笼统表述：weather_natural子样本E0二次项变弱，根源是Cause Code判定本身随阵风强度上升导致的低阵风端选择性稀释（选择效应导致的变异范围受限），而非单纯样本量不足。同时指出这是Cause Code分类体系更广泛意义上的数据局限，未来任何依赖Cause Code分组做样本细分都需要留意。
+- **产出文件**（均写入 `claude_branch/results/final_combined_analysis/`）：`21_阵风分布对比.md`、`22_CauseCode判定与阵风水平关系.md`、`23_低阵风端锚点密度检验.md`、`24_综合判断.md`（含可直接引用的英文表述）；`raw/`下分布JSON+分箱CSV+锚点密度JSON+完整汇总JSON；脚本`claude_branch/scripts/final_combined_analysis/step21_causecode_gust_diagnostic.py`（复用命令#21`combined_sample_builder.py`）。
+- 验收标准逐项确认：Step2报告了具体分箱占比数字（6.89%-56.10%，9/9单调）未止步于定性描述；Step3给出了具体观测点数量/占比对比（63.70% vs 36.83%）未止步于定性判断；Step4判断基于Step1-3实际数据，两个假说分支均成立，如实报告（本次是假说被证实的案例，不存在需要"不勉强采信"的负面结果）。
+
+## 2026-08-27（工作命令 #27：撰写前最终验证——四项遗留问题收尾 —— 已执行，生成回执，**未发现动摇核心结论的重大稳健性问题**）
+
+- 本机 `.venv` 直接执行，复用命令#21全量最终样本及确定性函数。**核心结论（置于回执开头）：本轮验证（尤其技术难度最高的Step4双向聚类）未发现任何推翻已确立核心结论的问题**，论文一实证部分至此没有已知但未处理的重大稳健性缺口。
+- **Step1（customers_v2-duration_B原始相关系数，2.3节口径统一）**：全量最终样本（n=60,437）Pearson r=-0.0157（原始值）/-0.0109（log尺度），Spearman ρ=+0.1101。已提供可直接引用数字，并明确说明与命令#3 legacy口径数字（Spearman ρ=-0.153/-0.508）的差异来源（变量定义/样本范围/检验目的三点不同，非误算），建议2.3节采用本次数字、保留"两维度近似独立"这一定性判断不变。
+- **Step2（VIF共线性检查）**：E0、R0c两模型全部连续协变量VIF均远低于10，最高值deprivation_gap_pct（约3.75-3.76）也低于5这一更严格阈值，两模型VIF数值几乎完全一致，判定当前最终模型规格无共线性问题，可直接写入附录B替代v6原Appendix Table B1。
+- **Step3（customers_v2符号反转收尾检验）**：weather_natural子样本（n=9,806）单阶段子集内部customers_v2-duration_B关系单调下降（19.30→3.13h），与主规格单阶段子集行为一致，无反常。**但控制log(n_stages)后，customers_v2一次项从-0.1698变为-0.7507（更负，非回归到主规格的正方向），二次项从-0.0547（临界显著p=0.051）变为-0.1831（p=1.2e-11，显著性大幅增强）**——**明确判定不是命令#18同一套n_stages构成效应的简单放大**（放大逻辑应预期"控制前更正、控制后转负"，但实际是"控制前已负、控制后更负"），如实标注为待进一步研究的开放问题，未强行套用旧解释。
+- **Step4（双向LAD×日期聚类，本命令最关键一步）**：本机`statsmodels`内置`cov_cluster_2groups`（Cameron-Gelbach-Miller）直接支持双向聚类，未遇工具包限制，未尝试Conley空间HAC（明确说明放弃原因：本机无现成空间计量工具包，拒绝现场拼凑不可靠实现）。**核心发现全部经受住考验**：R0c阵风二次项p从2.8e-36变为5.4e-22（标准误仅扩大约30%，依然极度显著）；E0阵风二次项p从9.3e-31变为8.9e-4（依然远超1%阈值）；customers_v2一次+二次项在双向聚类下同样保持极度显著（p分别为9.1e-51、1.4e-66）。**仅三项此前已知证据强度较弱的系数失去显著性**：E0阵风一次项（p从0.022变0.14）、E0/R0c的阵风×气压交互项（p从<0.01变0.10-0.11）——与v6原论文自己报告的双向聚类结果模式高度一致（暴露侧一次项/交互项脆弱、恢复侧核心非线性结构稳健），构成独立交叉验证，非新发现的脆弱性。
+- **Step5（综合汇总）**：开头醒目标注核心结论未被动摇；四项遗留问题中①②④已完全收尾，③遗留一个范围有限、已明确标注的开放问题（不影响主规格结论有效性）；给出四条可直接用于论文正文/附录/方法论章节的具体建议文字。
+- **产出文件**（均写入 `claude_branch/results/final_combined_analysis/`）：`25_全量样本customers_duration相关系数.md`、`26_VIF共线性检查.md`、`27_customers_v2符号反转收尾检验.md`、`28_空间自相关稳健性检验.md`、`29_最终验证综合汇总.md`；`raw/`下VIF CSV+双向聚类六份系数表CSV；相关计算复用`combined_sample_builder.py`及`v9.design_train_valid`基础设施，未新增独立脚本文件（均以内联方式执行并归档结果）。
+- 验收标准逐项确认：Step1、Step2给出可直接写入论文2.3节和附录B的具体数字；Step3明确判断（"不是"同一套n_stages机制）未含糊；Step4报告了双向聚类下核心系数显著性变化（核心保持显著，仅三项已知脆弱系数失去显著性），完整完成本命令技术难度最高的一步；Step5开头醒目标注"未发现动摇核心结论的重大稳健性问题"，未淹没在其他内容中。
+
+## 2026-08-27（工作命令 #28：反事实迁移分析（"确认风效应"迁移至全量样本）+ 风暴权重占比 —— 已执行，生成回执，**明确放弃反事实分析、退回朴素方案**）
+
+- 本机 `.venv` 直接执行，复用命令#21/#25已产出系数（从`raw/step17_full_fit.json`等文件读取，未重新拟合已有模型），仅用系数做新的反事实预测计算。
+- **Step1（风暴权重占比，基础数字）**：7场命名风暴窗口（27个日历天，占研究期1,096天的2.46%）贡献了全量样本（n=60,453）8.15%的事件数（4,924个）、**14.72%的customers_v2总和**（827,723/5,622,104）——按客户影响衡量，风暴日密度约为研究期平均水平的6倍。Eunice以customers_v2总和376,712居首。
+- **Step2（反事实迁移分析，核心计算）**：已在报告开头明确声明可迁移性假设"未经证实、非既定事实"。**R0c（恢复）**：用weather_natural系数（β₁=0.2307,β₂=0.0824）计算的反事实方差占比1.50%，是全量样本自身实际边际贡献（0.62%-0.96%）的**1.57-2.43倍，方向符合预期**。**E0（暴露）**：反事实占比仅0.22%，反而**小于**实际观测的1.83%（比值0.12，方向与预期相反）——已完整讨论"用weather_natural子样本本身不可靠的E0系数（命令#25确认CV=118%、临界风速外推至0.97百分位）做反事实计算"这一问题，明确判定该数字不具备实质解释意义，是系数噪声导致的伪结果，未跳过这一讨论。
+- **Step3（稳健性检验，真实执行三组系数对照）**：**E0高度不稳健**——weather_natural(0.22%)/主规格自身(0.89%)/naive六组(0.33%)三者相差达4倍。**R0c中等稳健**——weather_natural(1.50%)与主规格自身(1.41%)高度接近（仅差6%，与命令#25/#27已确认的"R0c二次项跨样本几乎完全复现"相互印证），但naive六组给出明显更低的0.66%（约为前两者一半）。额外发现方法论警示：本命令简化计算方法（反事实方差/总方差）算出的"主规格自身"数字（E0:0.89%、R0c:1.41%）与项目一贯的正式嵌套模型序贯R²分解方法算出的数字（E0:1.83%、R0c:0.62-0.96%）**不完全一致**，两套方法不能直接画等号。
+- **Step4（综合判断，明确不含糊）**：**明确判定放弃反事实迁移分析作为4.3节正式升级论点，退回"风暴权重占比+风暴期模型验证+weather_natural条件性发现"更朴素的双线对比方案**。理由：两模型结果不一致（E0完全不成立、R0c仅部分成立）、可迁移性假设本身无法被数据证实、朴素方案（命令#23/#24/#25/#27已产出）已足够扎实完整、不需要额外脆弱的反事实分析"加分"。建议反事实分析全部产出不写入正文，如需提及R0c部分结果最多作为方法论附录一句话探索性提及且须完整保留全部限制条件。
+- **产出文件**（均写入 `claude_branch/results/final_combined_analysis/`）：`30_风暴权重占比.md`、`31_反事实迁移分析.md`、`32_反事实分析稳健性.md`、`33_综合判断.md`；`raw/step30_storm_weight.json`、`raw/step31_counterfactual.json`、`raw/step32_robustness.json`；脚本`claude_branch/scripts/final_combined_analysis/step30_counterfactual.py`（复用命令#21`combined_sample_builder.py`及命令#10/#17/#21/#25已归档的系数）。
+- 验收标准逐项确认：Step1三个比例数字具体准确（14.72%/8.15%/2.46%）；Step2明确标注可迁移性假设未当作既定事实，E0部分完整讨论了系数不可靠对结果的影响未跳过；Step3稳健性检验真实执行三组系数对照未想当然假设稳健；Step4给出明确的放弃判断，未停留在"两种可能性都存在"这一含糊表述，本次是探索性方法论尝试判定不可行的诚实案例。
+
+## 2026-08-31（工作命令 #29：整理论文一写作用"数字总账"——唯一权威数字清单 —— 已执行，生成回执，发现并更正两处不一致）
+
+- 本机纯只读核实，未重新计算任何数字。逐一打开命令#3/#8/#10/#11/#12/#14/#16/#17-19/#21/#22/#23-26/#27-28全部预期来源文件核实，未凭网页端记忆照抄。
+- **全部条目均已核实收录，无"预期来源文件未找到对应数字"的情况**。
+- **发现并更正两处不一致**：
+  1. **R0c阵风边际贡献区间**：命令#28《反事实迁移分析》脚本曾误用[0.62, 0.96]（0.96疑似混入了命令#16开发样本单独的区间上界0.77-0.96pp）；核实命令#21官方文件`02_全量样本临界风速与方差分解.md`记录的全量合并样本正确区间是**[0.62, 0.75]**。已计算修正后的反事实/实际比值应为**2.00-2.42倍**（原命令#28报告为1.57-2.43倍，下界需上修），不影响命令#28/#33"反事实分析不建议写入正文"这一定性判断，仅在网页端仍考虑附录提及时需采用修正数字。
+  2. **Storm Babet事件数**：命令#23/#28记录507，命令#24记录506，相差1个事件——核实为样本口径差异（60,453天气匹配全量 vs 60,437要求customers_v2非缺失的E0可用样本），可完全解释，非数据错误，已注明两个口径分别对应的数字供论文引用时选用。
+- **临界风速时间线特别标注**：完整梳理了暴露侧临界风速三阶段演变（命令#12污染样本10.69m/s → 命令#16去污染开发样本**12.13m/s**[证据变强但数值上移13.5%] → 命令#21全量合并样本**10.69m/s**[与命令#12数值巧合一致，但Bootstrap CI重新跨零]），明确建议正文采用命令#21的10.69m/s作为最终定稿数字，如3.2节需交代演变过程必须完整说明这一非单调时间线。
+- **产出文件**：`claude_branch/results/final_combined_analysis/34_论文数字总账.md`（按Abstract/Introduction→2.Data→4.1→4.2→4.3→4.4六个章节组织，每条数字均标注精确来源文件路径与核实状态，末尾附两处不一致项的完整说明）。
+- 验收标准逐项确认：清单里每一个数字都注明了精确来源文件路径；发现的两处不一致均已明确标注更正而非悄悄改过；清单覆盖命令背景列出的全部条目无遗漏。
+
+## 2026-08-31（工作命令 #30：补齐论文Section 2撰写所需的两组数字 —— 已执行，生成回执）
+
+- 本机 `.venv` 直接执行，Step1直接计算（未涉及新建模），Step2纯核实历史文件不重新计算。
+- **Step1（描述统计表）**：全量最终样本customers_v2（n=60,437）与duration_B（n=59,834）原始值+log尺度完整描述统计——customers_v2原始均值93.02/中位数2.00/标准差410.96/最大值27,013；log1p尺度均值2.1384；duration_B原始均值11.84h/中位数6.27h/标准差19.96h/最大值192.08h（合并样本p99截尾值）；log尺度均值1.6558。两变量原始尺度均值远超中位数，严重右偏，为log-OLS规格提供直接经验支持。
+- **Step2（Cause Code构成偏移量化证据）**：从命令#12/#13历史回执核实提取（明确声明这两个命令发生在命令#16去污染修复之前，未重新计算，未尝试在去污染后最终样本重做）。**推荐数字1（命令#13）**：R0c阵风二次项在全六组（n=116,064）与weather_natural+technical_asset子集（n=59,834）间几乎不变（0.0687 vs 0.0760，CV13.88%vs14.40%，均5/5显著）；**阵风一次项则从稳健显著（5/5显著,均值0.0237）塌缩为统计上无法区分于零（0/5显著,均值0.00053）**——已撰写可直接使用的英文引用文字。备选数字2（命令#12）：R0c'_B临界风速点估计两个范围下8.62 vs 9.87 m/s，建议作为数字1的脚注补充而非首选，因其本质是数字1一次项塌缩导致的下游比值失真。
+- **产出文件**：`claude_branch/results/final_combined_analysis/35_论文Section2补充数字.md`。
+- 验收标准逐项确认：Step1描述统计表覆盖customers_v2和duration_B两变量、原始值和log两种尺度的全部要求统计量；Step2从命令#12/#13实际历史文件核实提取，未凭空构造，并明确声明了口径与核实范围的边界。
+
+## 2026-08-31（工作命令 #31：在干净全量最终样本上重做"全六组Cause Code vs weather_natural+technical_asset"对比表 —— 已执行，生成回执，命令#13模式在干净样本上独立复现）
+
+- 本机 `.venv` 直接执行，复用命令#16/#19的日期去污染构建逻辑，唯一修改点是跳过`cause_group_official`筛选（保留全六组），其余步骤（天气匹配、LAD补齐、完备协变量筛选、customers_v2/duration_B构造）完全一致。
+- **Step1（全六组干净样本构建）**：开发样本94,384+独立确认样本22,914=合并**117,298**（求和校验通过，日期/ID重叠均为0）；R0c可用样本（p99合并样本重新计算=125.29h）**n=116,064**，是weather_natural+technical_asset主规格（59,834）的**1.94倍**。**发现一个很好的内部一致性验证**：全六组干净样本完备协变量总量（117,298）与命令#9-13当年去污染修复之前使用的全六组样本量**完全一致**（同为117,298，R0c可用同为116,064）——与命令#21 Step0已验证的原理相同（去污染只是重新分配数据归属，不删除数据），本次在全六组场景下再次得到印证。
+- **Step2（全六组干净样本R0c拟合）**：重新构造5折GroupKFold（0个日期跨折），逐折系数完整报告。**汇总：一次项5/5同号、5/5显著，均值0.02566，CV30.06%；二次项5/5同号、5/5显著，均值0.06079，CV19.82%**。
+- **Step3（综合对比，命令#13模式确认复现）**：与命令#21干净主规格（一次项+0.0002不显著0/5显著；二次项+0.0792）并排对比，**明确判定命令#13"二次项几乎不变、一次项从稳健显著塌缩为不可区分于零"这一模式在完全去污染、口径统一的最终样本上独立复现**——一次项从干净全六组的0.0257(5/5显著)跌到干净主规格的0.0002(0/5显著)；二次项两个范围下同一数量级（0.0608 vs 0.0792）且均5/5显著保持稳健。去污染前后全六组样本自身结果几乎无变化（一次项0.0237→0.0257，二次项0.0687→0.0608，差异纯粹来自重新构造的折分不同，非实质性变化）。**撰写了可直接替换命令#30英文表述的最终版本**，不再依赖或提及受污染样本时期的历史数字。
+- **产出文件**（均写入 `claude_branch/results/final_combined_analysis/`）：`36_全六组干净样本构建.md`、`37_全六组干净样本R0c拟合结果.md`、`38_综合对比与最终文字.md`；`raw/step36_verification.json`、`raw/step37_six_group_R0c_fold_coefs.csv`、`raw/step37_six_group_R0c_stability.csv`；脚本`claude_branch/scripts/final_combined_analysis/step36_six_group_clean_sample.py`（复用命令#16/#19确定性函数，仅跳过Cause Code筛选环节）。
+- 验收标准逐项确认：Step1明确报告了全六组干净样本最终规模并与主规格对比（1.94倍）；Step2给出完整逐折系数结果未只报告汇总统计；Step3对比表结构与命令#13保持一致（同号/显著折数、均值系数、CV四项指标并排）便于直接判断模式是否复现（判定为复现）；给出了口径完全干净、不依赖受污染样本历史数字的最终英文表述。
+
+## 2026-08-31（工作命令 #32：回溯v6论文（旧论文）的数据来源引用 —— 已执行，生成回执，发现一处引用与实际文件不一致）
+
+- 本机纯只读回溯，未做任何计算，方法同命令#20（python-docx读取`0525_revised_v6.docx`）。六项数据来源逐一核实，全部为v6正文+参考文献列表原文摘录，未转述改写。
+- **①Open-Meteo天气数据**：引用[31]（Open-Meteo Historical Weather API，缺URL）+[32]（Hersbach et al. 2020 ERA5全球再分析，完整期刊信息）。
+- **②ONS人口/区域数据**：人口引用[36]（Estimates of the population for the UK...），区域特征综合来源引用[35]（Explore Local Statistics Service），机构作者名显示为"Statistics OfN"（疑似EndNote机构名缩写乱码，应为Office for National Statistics）。
+- **③收入剥夺指数**：引用[37]"Mapping income deprivation at a local authority level"（ONS 2021版本）——**明确不是命令背景假设的IMD（Indices of Multiple Deprivation）**，是ONS专门的收入维度剥夺制图数据集，论文一引用时不能想当然替换成IMD。
+- **④Moran's I**：与③同引用[37]（数据来源一致），**如实报告v6没有为Moran's I计算方法本身提供任何单独的方法论文献引用**，只有数据来源引用。
+- **⑤LAD边界文件**：引用[34]"Local Authority Districts (December 2023) Boundaries UK BFE"。**⚠️发现discrepancy**：v6实际建模代码（`0519_4.3.py`等全部脚本）硬编码使用的shapefile是`LAD_DEC_2021_UK_BGC.shp`（**December 2021、BGC概化裁剪边界**），与参考文献[34]写明的"December 2023、BFE完整范围"**年份和边界类型均不一致**——本项目命令#6-31全程复用的正是这份"Dec 2021 BGC"文件，如论文一延续使用需按实际版本重新查找官方引用，不能照抄v6写错版本号的[34]。
+- **⑥Ofgem Cause Code框架**：引用[41]，**确认是RIIO-ED2（不是命令背景假设的RIIO-ED1）**"Annex F – Interruptions. London: Ofgem; 2023"，机构作者名同样显示为"Markets OoGaE"乱码格式（应为Office of Gas and Electricity Markets），无URL。
+- **产出文件**：`claude_branch/results/final_combined_analysis/39_v6数据来源引用回溯.md`（含六项逐一核实的正文引用位置+参考文献原文摘录+汇总对照表）。
+- 验收标准逐项确认：六项数据来源逐一核实，v6存在的引用信息完整摘录，Moran's I方法论引用缺失如实说明"未提供"未凑数；摘录信息均为v6原文，未转述改写，额外发现并标注了LAD边界文件引用版本与实际代码使用文件不一致这一具体问题供决策参考。
+
+## 2026-09-01（工作命令 #33：全文图表风格规范 + Figure 1、2、6 制作 —— 已执行，生成回执，三张图均视觉核实通过）
+
+- 本机 `.venv` 直接执行，新建`claude_branch/scripts/final_combined_analysis/figures/`输出目录（只读复用既有数据，不改动任何历史结果文件）。
+- **Step0（统一风格规范）**：新建共享模块`figure_style.py`——单栏90mm/双栏185mm尺寸换算、矢量PDF+300dpi PNG双格式输出、无衬线字体优先Arial（**已核实本机确有Arial安装，三张图实际均以Arial渲染，未触发DejaVu Sans回退**）、坐标轴标签9pt/刻度8pt/图例7pt、色盲友好配色（viridis连续型、青绿/橙色区分分类避免红绿对比、地图沿用项目一贯Oranges）。
+- **Figure 1（UKPN服务区域地图+事件密度）**：脚本`figure1_study_area.py`，复用命令#21`combined_sample_builder()`完整最终样本（n=60,453，全部事件均有有效经纬度、零缺失），叠加DNO许可区边界（EPN/LPN/SPN）。**采用hexbin（gridsize=60,viridis,对数计数）渲染事件密度，成功避免约6万点原始散点的过度重叠问题**，视觉核实伦敦热点清晰、区域边界与密度层次分明。
+- **Figure 2（2×2分布面板）**：脚本`figure2_distribution.py`，customers_v2（n=60,437）与duration_B（n=59,834）原始值+log尺度各两面板，直方图+核密度估计叠加（参照Mukherjee et al. 2018风格），原始值面板展示0-99百分位区间提升可读性（完整值域另行记录供图注引用）。视觉核实呈现预期的原始值右偏、log尺度近对称分布。
+- **Figure 6（区域基线差异地图，严格仅改标题文字）**：脚本`figure6_regional_map.py`，**直接读取命令#21已产出的`04_基线区域差异地图数据.csv`（111个LAD），未重新拟合任何模型、未重新计算任何预测值**；配色（Oranges）、投影（EPSG:27700）、色阶裁剪（0-98百分位）、图例、缺失区域样式**逐行复用命令#21`step4_baseline_regional_map.py`原始代码，无任何改动**；**唯一改动是标题文字**（"predicted customers_v2"→"predicted affected customers"，"predicted duration_B"→"predicted restoration duration"，括号内说明保留），文件按命令要求从`04a`/`04b`重命名为`Figure_6a_regional_customers`/`Figure_6b_regional_duration`避免与命令#21旧文件混淆。两图与命令#21原图并排核实，色阶范围/地图轮廓/图例刻度完全一致。
+- **产出文件**（均写入`claude_branch/results/final_combined_analysis/figures/`）：`Figure_1_study_area_map.pdf/.png`、`Figure_2_distribution.pdf/.png`、`Figure_6a_regional_customers.pdf/.png`、`Figure_6b_regional_duration.pdf/.png`；脚本`claude_branch/scripts/final_combined_analysis/`下`figure_style.py`、`figure1_study_area.py`、`figure2_distribution.py`、`figure6_regional_map.py`；说明文档`claude_branch/results/final_combined_analysis/40_全文图表风格规范与Figure1_2_6制作.md`。
+- 验收标准逐项确认：三张图尺寸/字体/分辨率/配色均按Step0规范执行且Arial字体确认生效；Figure 1明确避免了点重叠问题（hexbin方案，已说明选用理由）；Figure 6严格做到"仅改标题文字"，数据/配色/投影/图例/其余视觉设计均未改动，文件已按要求重命名；全部图表均以PDF+PNG双格式交付（PNG分辨率：Figure1/2为300dpi，Figure6沿用命令#21原有600dpi设定）；图注文字撰写明确说明留待网页端后续处理，不在本命令范围内。
+
+## 2026-09-01（工作命令 #34：图表风格规范修正（三项问题）+ 具体绘图代码 —— 已执行，生成回执，三张图均重新生成并视觉核实通过）
+
+- 本机 `.venv` 直接执行，新增依赖`matplotlib_scalebar`（原未安装，`pip install`一次性成功，未触发"库缺失退回手动方案"分支）；未重新计算任何数据，仅调整绘图脚本。
+- **共享样式模块`figure_style.py`升级为v2**：字号表全面提升（坐标轴标签10pt、刻度/图例9pt、面板标签10pt加粗，替代命令#33的7-8pt区间）；`axes.linewidth`0.6→0.8；显式设置`axes.grid=False`；新增`add_north_arrow()`/`add_scale_bar()`/`add_locator_inset()`三个地图要素辅助函数供全部地图类图表复用。
+- **Figure 1修正**：移除原有"(a) UKPN licence areas and event density"标题行（本图单面板，判定为标题而非必要面板标签，整行删除）；新增右上角指北针、右下角比例尺、左上角全英国缩略图（灰色GB轮廓+橙色高亮UKPN三许可区）；hexbin密度渲染与配色未改动。
+- **Figure 2修正**：核查确认命令#33版本本就未使用`set_title`/`suptitle`，无需删除任何标题；仅将全部文字字号从7-8pt提升至9-10pt区间（含四个面板标签(a)-(d)提升到10pt加粗）。
+- **Figure 6a/6b修正**：**彻底移除**`ax.set_title()`整行（命令#33只改了标题文字内容，标题本身仍渲染在图内；本命令要求连标题渲染都去掉，图名只保留在文件名中）；新增左上角指北针、左下角比例尺、右上角全英国缩略图（灰色GB轮廓+橙色高亮111个有预测值LAD的范围）；配色/投影/色阶裁剪/图例逐行沿用命令#21原图，重新生成后色阶范围（6a:5.282-10.130，6b:5.987-8.211）与命令#33记录完全一致，证明底层数据未被改动。
+- **Step3主动排查四项**：①线条粗细——Figure 1/2的边界/曲线线宽（1.0-1.3pt）达标；**Figure 6a/6b的LAD行政边界线宽0.18pt低于建议的0.8-1.2pt，但判定为choropleth地图边界的合理设计取舍（111个密集小多边形加粗边界会掩盖色阶信息），保留不变并已说明理由，未强行修改**；②图例遮挡——四张图逐一检查，颜色条均独立于数据区域外侧，未发现遮挡问题；③正文引用编号——本命令范围未接触论文正文，仅核实`figures/`目录内文件命名与既定编号规则一一对应，无重复或错位；④网格线——核查确认命令#33全部脚本均未主动添加网格线，本次额外在`figure_style.py`中显式设为`False`防止未来疏漏，未发现网格线问题。
+- **产出文件**（覆盖`claude_branch/results/final_combined_analysis/figures/`下命令#33同名文件）：`Figure_1_study_area_map.pdf/.png`、`Figure_2_distribution.pdf/.png`、`Figure_6a_regional_customers.pdf/.png`、`Figure_6b_regional_duration.pdf/.png`；脚本修改`figure_style.py`（v2）、`figure1_study_area.py`、`figure2_distribution.py`、`figure6_regional_map.py`；说明文档`claude_branch/results/final_combined_analysis/41_图表风格规范修正V2.md`。
+- 验收标准逐项确认：Figure 1/6a/6b三张地图均补充了比例尺+指北针（另主动补充全英国缩略图）；全部四张图内部均确认无标题文字（Figure 1/6a/6b为主动移除，Figure 2核查后确认本就合规）；全部图内文字字号符合10pt/9pt/10pt加粗新规定；Step3四项主动排查均如实报告，LAD边界线宽问题已说明理由未强行修改，其余三项未发现问题。
+
+## 2026-09-01（用户直接反馈：地图三要素美术设计重做 —— 已执行，Figure 1/6a/6b重新生成）
+
+- 用户反馈命令#34版本的比例尺/指北针/缩略图"太丑"，要求统一设计：全部缩略图放左上角、指北针改为拉长三角形放右下角、比例尺放左下角且用更细线条+两端实心圆点。
+- **`figure_style.py`升级为v3**：`add_north_arrow()`改用`matplotlib.patches.Polygon`绘制窄长三角形（替代原`annotate`粗箭头），固定右下角，"N"标注于三角尖端上方；`add_scale_bar()`彻底重写，弃用`matplotlib_scalebar`库的实心色块样式，改为`ax.plot()`绘制0.9pt细线+两端`marker="o"`实心圆点端头，长度按可视地图宽度的约22%自动取整（1/2/5/10/20/25/50/100...km整数阶梯），固定左下角；`add_locator_inset()`增加白色背景+浅灰细边框（`Rectangle`patch），固定左上角，且高亮区域改用`.dissolve()`合并为单一色块减少视觉噪点。
+- Figure 1、Figure 6a/6b三个调用点的手动位置参数（原先三张图各自不同的x/y/rect覆盖值）全部移除，统一改为调用默认值，确保三张地图的三要素位置、样式完全一致。
+- 重新运行`figure1_study_area.py`、`figure6_regional_map.py`，视觉核实：三张图指北针均为清晰的黑色窄三角形+右下角"N"、比例尺均为细线两端黑色实心圆点+左下角、缩略图均为左上角白底浅灰细边框+橙色高亮区域，三图设计完全一致，色阶范围与此前版本不变（数据未改动）。
+- **产出文件**（覆盖`claude_branch/results/final_combined_analysis/figures/`下同名文件）：`Figure_1_study_area_map.pdf/.png`、`Figure_6a_regional_customers.pdf/.png`、`Figure_6b_regional_duration.pdf/.png`（Figure 2不含地图元素，未改动）；脚本更新`figure_style.py`（v3）、`figure1_study_area.py`、`figure6_regional_map.py`。
+
+## 2026-09-01（工作命令 #35：Figure 1、2、6a、6b 详细文字内容描述 —— 已执行，生成回执）
+
+- 本机纯只读操作，未修改任何数据/图片文件，仅打开并肉眼查看四张实际PNG图片（命令#34/用户反馈修正后的最新版本）逐一描述视觉内容。
+- **文件命名偏差说明**：命令背景要求产出写入`35_图片内容详细描述.md`，但核实发现`35_`这一编号已被命令#30的`35_论文Section2补充数字.md`占用，为避免覆盖既有文件，**已改用下一个可用编号`42_`**，即最终产出为`claude_branch/results/final_combined_analysis/42_图片内容详细描述.md`，此处明确标注该编号调整，未静默处理。
+- **Figure 1**：hexbin密度呈现单极集中模式，唯一亮黄色热点紧贴LPN且跨越LPN/SPN边界；EPN内部散点密度中等偏低、东北角有一处次级聚集但强度远不及伦敦；SPN密度从北向南柔和递减；三许可区呈"沙漏"轮廓，LPN是夹在EPN/SPN中间收窄处的楔形，非四面环绕；全英国缩略图显示UKPN区域仅占英国全境东南角一小块。
+- **Figure 2**：(a)customers原始尺度为极端右偏"L形"单峰；(b)log1p变换后呈现窄尖峰+梳齿状锯齿的多峰外观，判定更可能是低位整数堆积的分箱伪影而非真实多总体混合；(c)duration原始尺度峰值偏移到x=1-2h（不在绝对零点）后单调右偏递减；**(d)log(duration)是四面板中唯一呈现清晰真双峰结构的面板**（窄尖峰在~1h、宽缓峰在~7-12h，两峰间有明显低谷），因duration为连续变量，判定为反映恢复时长中两种不同过程的可能性更高，但因果层面判断超出视觉描述范畴。
+- **Figure 6a**：呈现"伦敦核心极浅+紧邻环带最深"的强烈同心环状结构，伦敦以北有一条大面积连片深色带、西部有一孤立"手指状"深色区域、南部海岸有两块并列深色斑块；整体是环形而非单调地理梯度。
+- **Figure 6b**：同样有"伦敦核心浅"模式但对比强度弱于6a、深色区域更零散；全图最深单点在东北角海岸拐角（6a同位置只是中等深浅）；6a那条伦敦以北的连片深色带在6b中基本消失、代之以大片浅色；整体呈斑块状而非环形。
+- **6a/6b对比明确判断：两图地理模式总体不同（大体错位），仅在伦敦核心、西部孤立区域、南部两块斑块三处局部重叠**——customers高值中心成片出现在伦敦以北内陆，duration高值中心则是孤立分散的（伦敦紧邻小块+东北角孤立点），这一视觉层面的"错位"与命令#21已报告的"两模型预测面中等强度负相关"定量发现在直觉上吻合。
+- 如实标注两处难以精确描述的细节（Figure 1 EPN内部次级聚集的精细层次、Figure 6a/6b伦敦市中心内部细小LAD间的精确深浅排序），均建议如需更高精度通过数值化方法或原始CSV核对，未编造不确定的描述。
+- **产出文件**：`claude_branch/results/final_combined_analysis/42_图片内容详细描述.md`。
+- 验收标准逐项确认：全部描述基于实际打开图片后的观察，未转述已有统计数字；描述具体到方位/形状层面（如"跨越LPN/SPN边界""伦敦以北一整条连片深色带""东北角孤立热点"等），未使用空泛表述；Figure 6a/6b对比部分给出了明确判断（模式不同，仅局部重叠）。
+
+## 2026-09-01（工作命令 #36：重新检查log-OLS模型形式在最终修正样本上的适用性 —— 已执行，生成回执，**核心发现在全部替代分布假设下完全复现**）
+
+- 本机 `.venv` 直接执行，复用命令#21`combined_sample_builder.py`/`critical_wind_speed_pipeline.py`的`fit_full_sample()`/`v3_validation_pipeline.py`的`design_train_valid()`，只读接入既有样本，新增NB2/Gamma/Tweedie GLM拟合与残差诊断，未修改任何既有文件。
+- **文件命名偏差说明**：命令背景要求写入`40_模型形式适用性检查.md`，但`40_`已被命令#33占用，**改用下一可用编号`43_`**，已在文件内明确标注。
+- **Step1（暴露侧E0替代分布对比）**：NB2 GLM（alpha=4.71，强过离散，收敛正常）阵风一次项-0.1275(p=1.1e-5)、二次项+0.0976(p=1.1e-13)；Tweedie GLM(var_power=1.5)一次项-0.1192(p=1.0e-4)、二次项+0.0787(p=3.3e-12)——**均与log-OLS基准（一次项-0.0323 p=0.022，二次项+0.1028 p=9.3e-31）方向一致，二次项凸性在两种替代假设下均高度显著且未减弱**。NB2拟合出现"divide by zero"数值警告但`converged=True`，估计值合理，未影响结果。
+- **Step2（恢复侧R0c替代分布对比，核心验证）**：Gamma GLM阵风一次项+0.0030(p=0.757不显著)、二次项+0.0776(p=5.1e-45)；Tweedie GLM一次项+0.0155(p=0.103不显著)、二次项+0.0737(p=1.2e-42)——**与log-OLS基准（一次项+0.0002 p=0.982不显著，二次项+0.0792 p=2.8e-36）完全同构：二次项同一数量级且极度显著、一次项均不显著，本文最核心的"U型曲线凸性"稳健发现在完全不依赖对数正态假设的两种替代分布下独立复现，且p值比log-OLS基准更小**。Gamma/Tweedie均顺利收敛，无技术问题。
+- **Step3（log-OLS残差诊断，如实报告问题）**：E0模型偏度0.8675、超额峰度-0.2416，Jarque-Bera统计量7727.1(p≈0)；R0c模型偏度-0.2731、超额峰度0.8069，Jarque-Bera统计量2366.0(p≈0)——**两模型残差均在n≈6万样本量下显著偏离正态**（大样本下JB检验对轻微偏离极敏感，符合预期）。E0残差vs拟合值图呈现清晰三角形/楔形非随机图案，判定为customers_v2存在14.9%结构性零值（log1p(0)=0硬下界）导致的几何图案而非传统喇叭状异方差；R0c残差vs拟合值图呈现较随机的对称云状分布，未发现系统性异方差。E0的QQ图偏离45度线程度（S形，右尾重、左尾轻）明显强于R0c（仅两端轻微偏离），与两模型JB统计量大小关系一致。
+- **Step4（综合判断，明确不回避）**：①替代分布假设下两个核心发现完全成立，四组独立替代模型无一出现方向反转或显著性消失；②残差诊断确实发现真实问题（两模型残差显著非正态，E0另有零值堆积几何图案）**且已完整报告未回避**，但结合"大样本OLS一致性不依赖正态假设"+"核心发现已被三种不依赖正态假设的替代分布独立复现"两点，判定不威胁现有结论有效性；③撰写了可直接用于论文3.1节的英文表述，完整交代了检验方法、发现的问题及log-OLS被保留的理由（可解释性+与交叉验证基础设施的一致性）。
+- **产出文件**：`43_模型形式适用性检查.md`；`raw/step40_model_form_check.json`（全部系数/诊断原始数值）；`raw/step40_residual_diagnostics/`下4张残差诊断图（E0/R0c各1张残差vs拟合值+1张QQ图）；脚本`claude_branch/scripts/final_combined_analysis/step40_model_form_check.py`。
+- 验收标准逐项确认：Step1/Step2给出替代模型阵风一次+二次项具体系数与显著性并与log-OLS直接对比；Step3给出残差诊断图和具体偏度/峰度数值，未止步于定性描述；Step4给出明确判断，发现的残差非正态问题未回避、已完整讨论其对结论有效性的影响。
+
+## 2026-09-01（工作命令 #37：Section 4 全部图表制作（Figure 4/5/7/8/9/10）+ 详细文字描述 —— 已执行，生成回执）
+
+- 本机 `.venv` 直接执行，全部6张图均复用`figure_style.py`统一风格模块，全部数据只读自既有结果文件（Figure 9为command #24确定性重拟合复现+重新出图，非新分析；Figure 10开发样本行为已有5折系数的逆方差加权汇总，非新建模）。
+- **文件命名偏差说明**：命令背景要求写入`41_Section4图表详细描述.md`，但`41_`已被命令#34占用，**改用下一可用编号`44_`**，已在文件内标注。
+- **Figure 4（阵风剂量-反应曲线）**：读取命令#21 Step3已有`03_阵风剂量反应曲线.csv`（50网格点/模型），(a)暴露侧标注临界风速10.69m/s+Bootstrap 95%CI阴影带[9.20,12.06]；(b)恢复侧不标临界值改用文字标注二次项p值(2.8e-36)。
+- **Figure 5（方差分解柱状图）**：读取命令#21 Step2 `raw/step2_E0_variance_decomposition.csv`/`step2_R0c_order_gust_then_customers.csv`，统一采用"阵风先于customers"顺序（0.62pp口径）保证四类别口径一致，完整顺序依赖区间已在文字说明中披露。
+- **Figure 7（幅度对比）**：三个比值（2.79/2.37/5.99倍）改用简单水平条形图而非哑铃图，理由：三个数字均为独立单值非成对before/after，条形图更符合数据结构，已在回执中说明选择理由。
+- **Figure 8（weather_natural vs主规格对比）**：读取命令#25 `raw/step17_*`与命令#21`raw/step2_*`，(a)E0阵风边际贡献主规格+1.07pp vs weather_natural-0.15pp（全部6图中唯一出现负值的柱子）；(b)R0c阵风vs customers边际贡献从主规格悬殊差距(0.62 vs 7.87)变为weather_natural近乎持平且顺序反转(1.43 vs 1.28)，突出命令背景强调的"阵风反超"发现。
+- **Figure 9（风暴期拟合值-观测值散点图）**：核查确认command #24原文件`13_风暴期预测检验散点图.png/.pdf`仍存在于本机，但因含图内标题、7-8pt字号、非色盲校验默认tab10配色，判定不符合现行统一规范后选择**重新生成**（非直接复用）；复用command #24`step13_storm_prediction_check.py`同一套确定性重拟合逻辑，各风暴事件数（Babet n=506等）与历史记录完全一致，确认为重新出图而非新分析；配色改用Wong(2011)色盲友好7色调色板。
+- **Figure 10（稳健性森林图）**：四组×两模型共8行，读取命令#16开发样本5折系数（逆方差加权汇总为单点估计）、命令#19 holdout单次拟合系数、命令#27单向/双向LAD聚类系数；核实LAD单向与双向聚类共享完全相同点估计（仅标准误不同）这一预期模式在图上清晰可辨。
+- **详细文字描述**：对6张图逐一做了空间/形状层面的具体描述（如Figure 4"右臂陡峭远超左臂"、Figure 9"列状堆叠+Eunice/Franklin局部聚集"、Figure 10"E0-holdout点位明显跳出同组范围"等），未重复已有统计数字。
+- **产出文件**：`figures/`下`Figure_4_dose_response.pdf/.png`、`Figure_5_variance_decomposition.pdf/.png`、`Figure_7_magnitude_comparison.pdf/.png`、`Figure_8_weather_subsample_comparison.pdf/.png`、`Figure_9_storm_validation.pdf/.png`、`Figure_10_robustness_forest.pdf/.png`；脚本`figure4_dose_response.py`、`figure5_variance_decomposition.py`、`figure7_magnitude_comparison.py`、`figure8_weather_subsample_comparison.py`、`figure9_storm_validation.py`、`figure10_robustness_forest.py`；说明文档`44_Section4图表详细描述.md`。
+- 验收标准逐项确认：全部6图均调用了`figure_style.py`；全部图内无标题文字（模型名称标注属必要说明文字，非标题，与Figure1地图区域标注同性质）；每张图均有详细文字描述聚焦形状/空间模式；Figure 9已确认原文件存在并说明重新生成的判定依据。
+
+## 2026-09-01（工作命令 #38：审稿意见（F1/F4/F6/M6/M4）核实与重算 —— 已执行，生成回执）
+
+- 本机 `.venv` 直接执行，只读为主，M6按命令明确许可新增计算（新安装`dcor`包精确一维距离相关算法+`sklearn`互信息估计器）。**文件命名偏差**：`42_`已被命令#33占用，改用下一可用编号`45_`。
+- **F1（Bootstrap CI"跨零"矛盾）**：核实命令#21原始500次bootstrap抽样文件（非仅最终CI数字），确认"跨零"指**标准化z-score尺度**（[-0.128, 0.419]，12.0%抽样z<0），对应物理单位m/s尺度经同一批抽样逐点换算后是**[9.20, 12.06]**（0%抽样<0 m/s）——z=0对应样本均值风速9.87m/s，不是0m/s，两个"零"含义不同。给出可直接替换`Paper1_draft.md`第170/172行的修改后英文文字。**顺带发现**：第172行"65.9th percentile"应为**63.7th percentile**（核实自`raw/step2_critical_wind_speed.json`），一并给出修正文字。
+- **F4（customers均值口径统一）**：新脚本`step38_F4_customers_mean_ratio.py`在命令#21最终E0样本（n=60,437）上按命令#8完全相同的排序+去重逻辑重新计算"仅取最早阶段"客户数均值=**47.13**，与Table 1的customers_v2均值93.02（交叉验证完全一致）对比，比值为**1.97倍**（不是此前引用的1.8倍，因原1.8倍来自命令#8对n=135,025全量原始样本的计算，与Table 1口径不同）。
+- **F6（六条引用核实）**：通过CrossRef官方API + OSTI.gov逐一核实[3][4][7][8][9][10]完整信息（含DOI）。核实过程中发现[7]一次WebSearch摘要给出的卷期信息（Vol.343/121237）与CrossRef API权威结果（Vol.342/120720）不一致，已如实记录并说明采信CrossRef的依据；[7][8]因ScienceDirect页面403拦截未能做第二源交叉验证，如实说明局限。
+- **M6（非线性依赖检验）**：命令#21最终样本（n=59,834）distance correlation=**0.1989**（"弱"）、MI=**0.2854 nats**（z=160.4，极显著），均显著非零但效应量远低于命令#3 legacy口径（dcorr 0.375-0.519、MI 0.211-0.399 nats）。**新增分解实验**（`step38_M6_decompose_sample_vs_definition.py`）：把legacy变量定义限定到与新口径完全相同的59,834个incident ID重新计算，得dcorr=0.443、MI=0.458——**不降反升**，排除"样本限制削弱依赖"的可能性，证实差异主要由**变量重新定义**（customers_v2跨阶段聚合+duration_B总跨度）驱动，而非样本口径，用重新计算的数字验证（而非重复）了此前的推测。明确判断："近似独立"仅在线性/简单单调意义上成立，非线性度量下存在弱但统计显著的残余依赖。
+- **M4（Cause Code决策时间线）**：核实文件系统时间戳确认精确时间线：命令#12（2026-08-25 10:54-10:59，基于污染前六组混合样本n=117,298）→ 命令#13（同日13:05，同一污染前子集）→ 命令#16首次引入去污染概念（同日23:10-23:11）→ 命令#19确立最终开发/确认样本切分（次日）。**决策时间明确早于去污染方法论确立**，但命令#31（2026-08-31）已在完全去污染的最终样本上独立复现同一决策模式，给出了可直接用于2.4节、不含糊带过决策历史状态的完整表述。
+- **产出文件**：`45_审稿意见核实与重算.md`；脚本`step38_F4_customers_mean_ratio.py`、`step38_M6_nonlinear_dependence.py`、`step38_M6_decompose_sample_vs_definition.py`；`raw/step38_F4_customers_mean_ratio.json`、`raw/step38_M6_nonlinear_dependence.json`、`raw/step38_M6_decompose_sample_vs_definition.json`。
+- 验收标准逐项确认：F1给出两种口径具体数字+可直接使用的修改后英文文字；F4三个数字在完全统一口径下给出且与Table1交叉验证一致；F6六条引用逐一核实并如实说明核实过程中的不一致与局限；M6报告新旧口径具体数值对比+分解实验验证结果，给出明确判断；M4给出精确到小时的确切时间线。
+
+## 2026-09-03（工作命令 #39：Equation记法核对 + 附录B-F撰写数据收集 —— 已执行，生成回执）
+
+- 本机纯只读核实，未做任何新的统计计算，按提醒优先级（B、D、E、F、C、Equation）完成，报告内呈现顺序调整为Equation先行。
+- **Equation核对**：核对`build_stage_base_v3.py`确认Equation 1求和逻辑（排除`Re-interruption Stage`=Y/1的阶段后求和）与论文一致，但**发现两处论文公式未覆盖的细节**——①69个"全阶段皆重复中断"边界事件的实际结果是`customers_v2=NaN`（缺失并排除），而非公式字面空集求和隐含的0；②Equation 1（排除重复中断阶段）与Equation 2（duration_B用全部阶段含重复中断阶段的起止时间戳）之间存在未言明的处理不对称。核对`v3_validation_pipeline.py`/`critical_wind_speed_pipeline.py`确认Equation 4年月固定效应是**分别独立的年度+月份哑变量相加**（非交互），阵风×气压交互项是**标准化后二者的直接乘积**，协变量清单与2.4节完全一致——**可据此撤除`Paper1_draft.md`第144行的"待本地端确认"标注**。
+- **附录B**：整理customers_v2 vs最早阶段口径对比（命令#8全量样本41.18 vs 75.56，比值1.8倍；命令#38-F4最终样本47.13 vs 93.02，比值1.97倍）；duration_A/B对比及duration_A构造性共线发现（加权分母与customers_v2的Spearman ρ=0.997 vs duration_B仅-0.099）；500样本人工核对结果（浮点误差量级7.1e-15，500/500通过）；69个边界事件处理方式；10.56%疑似缺失起始阶段（14,264/135,025，精确10.564%）发现来源及"保留+标记列"处理决定。
+- **附录D**：整理主规格全量样本（命令#18，n=47,840）单阶段子集单调关系分箱数字、控制log(n_stages)前后customers_v2系数变化（一次项+0.307→-0.236完全反转，二次项-0.381→-0.301缩小21%）；weather_natural子样本（命令#27，n=9,806）同样排查及**未解开异常**的完整数字（控制前-0.170→控制后-0.751，控制前后均为负、与主规格"正转负"模式不同）。
+- **附录E**：整理locked_temporal_test精确日期区间[2023-09-30,2024-03-31]（184天连续无缺口）、三级污染比例精确数字（19.09%/19.63%/20.00%）、32个跨界事件处理决定、暴露侧临界风速三阶段完整链条（命令#12污染10.69m/s→命令#16干净开发样本12.13m/s[CV从38.59%降到22.00%,Bootstrap CI从跨零变不跨零]→命令#21最终合并样本10.69m/s[数值巧合一致但机制不同,CI重新跨零]）。
+- **附录F**：用脚本直接合并读取命令#27四份原始CSV（`step28_E0/R0c_lad_cluster.csv`、`step28_E0/R0c_twoway_cluster.csv`），生成E0/R0c两模型全部26项协变量在LAD单向vs双向聚类下的系数/标准误/p值完整对照表，避免手工转录数字出错。
+- **附录C**：整理命令#13/31全六组vs主规格阵风一次二次项完整对比表（干净口径优先）；**如实报告一处重要缺口**——全六组模型的全部协变量完整系数表在命令#12/13/31及命令#9原始目录中均未产出过，只保存了阵风两项的逐折系数，已列入"未找到清单"，未用主规格单侧表格拼凑冒充。
+- **产出文件**：`46_附录数据收集与公式核对.md`（纯整理，无新增脚本/数据文件）。
+- 验收标准逐项确认：Equation核对明确指出了具体差异（69事件NaN非0、Eq1/Eq2重复中断处理不对称、年月FE非交互记法），未只说"基本一致"；附录B-F每项数字均标注精确来源文件路径；全六组完整系数表、10.56%敏感性分析结果、n_stages最终样本口径重做三项历史文件中确实不存在的数字已如实列入"未找到清单"，未替代或编造。
+
+## 2026-09-03（工作命令 #40：三阶阵风项检验 + z空间曲线对称性分析 —— 已执行，生成回执，发现暴露侧/恢复侧结果不一致）
+
+- 本机 `.venv` 直接执行，检验一为新增回归（命令明确允许），检验二为对命令#21已有系数的post-hoc数学分析，未重新拟合模型。均在命令#21全量最终样本上执行（E0 n=60,437，R0c n=59,834），独立新建5折`GroupKFold`按日期分组（0个日期跨折）。
+- **检验一（三阶阵风项）**：**E0与R0c结果明显不一致，如实报告，未选择性呈现**。**R0c符合"三阶无影响"预期**——三阶项4/5折同号仅1/5折显著（全样本p=0.095），OOS R²几乎不变（+0.000007，+0.006%），二次项保持稳健主导。**E0明显不符合预期**——三阶项5/5折同号、4/5折显著（全样本系数-0.0274，p=9.95×10⁻¹¹），OOS R²有实质提升（+0.001441，+5.1%相对提升），且加入三阶项后**一次项从稳健显著（4/5折显著）塌缩为折间噪声（0/5折显著，CV=456.80%）**，二次项幅度近乎翻倍（0.103→0.190）——说明E0原二次设定可能存在under-specification，三阶项捕捉到了真实曲率而非噪声。
+- **检验二（z空间对称性）**：直接用命令#21已有系数计算η(z)=β₁z+β₂z²在z=±1,±2,±3处的取值。**R0c在z空间下近乎完美对称**（左右差异仅0.2%-0.5%，属噪声水平，一致预期）；**E0在z空间下确实存在真实、非噪声的不对称**（左右比值0.52-0.81），符合"一次项显著非零应呈现真实不对称"的预期，但**方向与Figure 4a视觉印象相反**（z空间下左侧η值更大，不是右侧）。
+- **几何效应量化（核心发现）**：用Figure 4实际绘图范围（p1=2.2至p99=27.2 m/s）计算右端点到拐点的z距离是左端点的**1.94倍（E0）/2.26倍（R0c）**，对应η值差异达**3.80倍（E0）/5.11倍（R0c）**——**R0c的曲线本身完全对称，但因拐点恰好落在样本均值附近、而观测范围因阵风物理下限（0 m/s，对应z=-1.89）在左侧被截断、右偏分布使右侧延伸更远（p99对应z=3.32），单纯几何效应就能产生5倍视觉差异**，证实Figure 4b"右臂更陡"**约100%是几何效应**，与函数对称性无关；E0的真实函数不对称与视觉印象方向相反（会削弱而非加强"右臂更陡"），最终3.80倍视觉差异仍主要归因于同一几何效应。
+- **产出**：给出了可直接用于重写4.1节的英文文字草稿，明确区分暴露侧（真实阈值语言恰当）与恢复侧（应改用"偏离典型风况的凸性代价"而非"存在具体阈值"）两种不同性质的非线性，并纳入了三阶项检验的不对称结果作为设定检验的如实披露。
+- **产出文件**：`47_三阶项检验与对称性分析.md`；脚本`step40_1_cubic_gust_term.py`、`step40_2_zspace_symmetry.py`；`raw/step40_1_cubic_E0.json`、`raw/step40_1_cubic_R0c.json`、`raw/step40_2_zspace_symmetry.json`。
+- 验收标准逐项确认：检验一给出完整5折稳定性未止步于单次全样本拟合；检验二给出z=±1,±2,±3具体数值对比及绘图端点到拐点距离/η值的具体倍数，未只做定性描述；三阶项在E0上与用户预期明显不符已如实报告未选择性呈现；英文文字草稿准确反映两组检验的实际发现未提前预设结论。
+
+## 2026-09-04（工作命令 #41：补全命令#39附录D截断内容 + 附录A数据字典收集 —— 已执行，生成回执）
+
+- 本机纯只读操作，第一部分重新打开命令#39当时的源文件完整重新输出（未重新计算），第二部分为新的数据字典整理工作。
+- **第一部分（附录D完整重新输出）**：重新完整呈现命令#18（`customers_duration_shape_investigation\05_n_stages分层检验与最终叙事校准.md`）单阶段/多阶段子集分箱数字、回归控制前后系数完整变化（一次项+0.307→-0.236完全反转，二次项-0.381→-0.301）及Step5综合判断与论文可引用表述全文；命令#27（`27_customers_v2符号反转收尾检验.md`）weather_natural子样本排查结果及"控制前后均为负、不同于主规格模式"这一未解开异常的完整分析文字，均保留原始叙事上下文，未只输出片段。
+- **第二部分（附录A数据字典）**：整理customers_v2/duration_B定义（引用命令#39 Equation核对结论）；Cause Code六个项目自定义分类桶的完整数字编码清单（`build_stage_base_v3.py`的`classify_cause_code`函数），**明确澄清六个组名是项目自定义分类桶而非逐码官方名称**；区域协变量（population/income_deprivation_rate/deprivation_gap_pct/morans_i/urban_binary）完整来源+计算方式+单位表格，均溯源至`project_memory\data_source_inventory.md`（2026-05-30版本）——**重要澄清：morans_i是IMD2019官方已计算的收入剥夺空间聚集指标，不是本项目对停电结果变量计算的空间自回归项**（`work_d_morans_i_initial_audit.md`原文已警示这一易混淆点）；urban_binary的精确二值化规则（`rural_urban_classification`文本含"urban"子串即编码1）。
+- **Q1-Q5核查（基于实际查阅`audit_step0\00_data_audit_report.md`完成，非凭记忆重构）**：发现项目原始问题清单实际是**Q1-Q12**（非命令背景所称"Q1-Q5"），逐一核实：Q1/Q2已解决（行=阶段级，分析单位=事件级）；Q3部分解决（项目方法论已确立但`audit_step0c`记录官方口径从未被UKPN公开确认）；Q4已解决（工程层面）；**Q5仍未解决**——customers=0业务含义核实结论为**仍停留推测阶段**，直接证据是`Paper1_draft.md`第261行当前论文自身仍将此列为未解决限制。
+- **Exceptional Event专项核实**：确认数据集中该字段真实取值域是文本"yes"/"potential"（非命令背景所述"Category 1/2/3/9"数字编码），缺失率93.68%-95.41%（两次审计口径不同），**系统检索LOG.md全文、HANDOFF文档、audit_step0系列、project_memory目录后，未找到任何用户或网页端就该字段做出范围界定声明的书面记录**，如实报告"未找到"而非编造。
+- **附录A 3.3（LAD边界技术细节）**：直接读取`LAD_DEC_2021_UK_BGC.prj`文件确认原生坐标系为**British National Grid/EPSG:27700**（Transverse Mercator，含完整投影参数），补充DNO/BUA等其他地理数据技术细节。
+- **产出文件**：`48_附录D补全与附录A数据收集.md`。
+- 验收标准逐项确认：第一部分完整重新输出附录D三项内容未丢弃已衔接的上下文；第二部分Q1-Q5核查基于实际查阅历史文件完成；customers=0含义与Exceptional Event分类两项均如实报告"仍未解决"/"未找到范围界定声明"确切状态，未编造解决方案。
+
+## 2026-09-04（工作命令 #42：Appendix D 构成效应交叉分箱数据 + 配图 + 详细文字描述 —— 已执行，生成回执）
+
+- 本机`.venv`直接执行，命令#21最终R0c样本（n=59,834）上做n_stages×affected customers二维交叉分箱，纯描述性统计（分组均值），未做任何新回归建模。图片复用`figure_style.py`统一风格模块。
+- **分箱口径说明（如实披露的必要偏离）**：附录D.1/D.3此前的分箱边界是**每个子集各自内部专属的分位数边界**（单阶段/多阶段/weather_natural三套完全不同的边界），无法直接复用为"四条线共享同一x轴"的交叉表；改用在完整n=59,834全样本上计算的customers_v2四分位数边界（Q1[0,1]/Q2(1,2]/Q3(2,36]/Q4(36,27013]）统一应用到全部分层，是"沿用四分位数分箱方法"这一指示的自然推广，已在报告中明确说明理由。
+- **交叉表数据（4×4，全部16格无空白）**：n_stages=1/2/3-4三个分层清晰单调下降（如n_stages=3-4从40.60降到9.40）；**n_stages≥5分层未呈现单调下降**（14.03→18.76→18.76→14.68，先升后平后微降），如实标注该分层Q1/Q2格样本量极小（22、18个事件），判断这一非单调形状很可能是共享分箱导致的小样本噪声而非真实模式，未为图面"整齐"隐瞒这一局限。合并（不分层）视图清晰呈现先升（11.65→14.19，峰值在Q2）后降（→9.87）。
+- **Figure D1**：双面板图，(a)四条分层折线（Wong色盲友好配色）、(b)单条合并折线，两面板纵轴范围一致，无图内标题。详细文字描述基于实际打开图片观察，具体到各线陡峭程度对比（n_stages=3-4降幅最大且首段最陡、n_stages=1最平缓、n_stages≥5非单调）、合并曲线转折点位置（Q2）及升段斜率、两面板对比"分层后消失、合并后出现"的视觉强度。
+- **产出文件**：`49_附录D图表数据与描述.md`；脚本`step42_appendixD_composition_crosstab.py`、`figureD1_composition_effect.py`；图片`figures/Figure_D1_composition_effect.pdf/.png`；原始数据`raw/step42_crosstab_mean_duration.csv`等4个文件。
+- 验收标准逐项确认：交叉分箱4×4全部16格无空白；图片调用`figure_style.py`且两面板纵轴范围一致；详细文字描述基于实际观察未止步于重复数字；n_stages≥5分层的非单调结果及小样本局限已如实报告，未选择性呈现。
+
+## 2026-09-04（工作命令 #43：数学审查（M01-M05, E01-E05, A01-A11）涉及的本地数据核实 —— 已执行，生成回执）
+
+- 本机`.venv`直接执行，只读为主，M01/M03/M05对命令#21已有最终模型系数做确定性post-hoc数学分析/相同种子确定性复现，未引入新建模选择。
+- **M01（最高优先级）**：确认"19%-48%"确实是围绕z=0（样本均值）而非真正拐点z*=0.157计算的（脚本`step43_M01_M03_M05.py`精确复现：k=1处47.86%、k=3处18.98%）；用代数恒等式证明+浮点精度数值核实（差值1e-16量级，等同精确0）确认围绕真正拐点计算必然精确为0，非近似——命令#40报告英文草稿"asymmetry in the fitted function itself"这一措辞确认不准确，已给出改写建议（应表述为"以均值为参照点两侧不对称"而非"函数本身不对称"，二次函数相对自身顶点永远精确对称）。
+- **M03**：用完整精度系数重算气压±1SD/均值处拐点，得9.656/10.694/11.732 m/s，与导师示例9.64/10.68/11.72差异在四舍五入范围内（<0.2%），确认无误。
+- **M05**：确定性复现500次bootstrap（种子20260826，与原文件比对最大误差5.55e-17，确认同一批次）并额外捕获此前被丢弃的β₁/β₂：β₂从未接近零或为负（0/500，最小值0.0366）；拐点分布明确非正态（偏度-0.52中度左偏、超额峰度1.14重尾）但非双峰；确认标准化参数（阵风均值/标准差）在每次重抽样中**均重新估计**（非固定），量化了这一效应（均值波动std=0.339、标准差波动std=0.460）。
+- **E01（最高优先级）**：排查范围远超命令#12/13——系统核查后确认**命令#9、#10、#11、#12、#13、#14共六项基础性决策**（变量定义选择、duration_A/B口径选择、临界风速方法论、Cause Code范围、方差分解方法论）全部基于locked_temporal_test污染前数据做出，如实完整报告未简化。额外发现duration_A构造性共线发现（Pearson r=0.962/Spearman ρ=0.997）**从未在干净数据上复核**，但因duration_A已被放弃未影响最终结论。给出10.69→12.13→10.69完整时间线表格。
+- **E02**：确认Figure 10 development sample行R0c二次项真实值为**0.066**（视觉估计正确），网页端记忆的0.079实为主规格LAD/双向聚类行数值，两者混淆已澄清；确认开发/确认样本标准化**各自独立计算**，均值差异达11.6%（9.65 vs 10.77 m/s）而标准差差异仅约1%，量化了对跨样本系数比较的影响。
+- **A02**：确认Figure 4/6均为naive `np.exp(eta)`，未用Duan(1983)修正；计算实际Duan smearing因子E0=10.46（隐含约90%低估）、R0c=2.20（隐含约54%低估），明确该低估是常数乘性因子，不影响拐点/比值但影响绝对预测值显示。
+- **A05**：确认三个比值（2.79/2.37/5.99）均为"曲线网格max/min"而非"p99/p1端点值"，用实际数据量化两种定义的差异（如E0严格p99/p1仅2.13，而非2.79），因两条阵风曲线的最小值均落在拐点附近而非p1端点；给出统一表述建议。
+- **A07/A08**：确认Table D1（n_stages分布，n=47,840）与正文"完整分析样本59,834"表述不一致，样本实为命令#16开发样本单独口径；确认Table D2（0.307/-0.381）与Table F2（0.339/-0.396）系相同模型设定在不同样本（n=47,840 vs 59,834）上的正常差异，非错误；均给出命令#42已算好的59,834口径n_stages分布作为现成替代方案。
+- **A09**：系统检索`claude_branch`全部文件+两份v6 docx，**未发现任何"Isha"误用**，如实报告原审查担忧不成立，未强行制造问题。
+- **A10**：逐一核实全部"Appendix X"引用，发现**三处悬空/疑似错位引用**：第189行（预测面相关系数-0.780/-0.758归入Appendix E但内容与E已确立主题不符）、第245行（双向聚类与"原始数据集"比较归入Appendix B但B无此内容）、第218行（Cause Code选择效应归入Appendix D但内容实际不在D中，最严重的一处）；确认残差诊断附录**仍是字面占位符**"[编号待定]"，内容本身已齐全（命令#36）但编号未填、诊断图未套用统一风格；给出命令#26证据链应新建Appendix G收录的具体建议内容。
+- **产出文件**：`50_数学审查本地核实.md`；脚本`step43_M01_M03_M05.py`；原始数据`raw/step43_M01_M03_M05.json`、`raw/step43_M05_bootstrap_full.csv`。
+- 验收标准逐项确认：每项均给出可追溯文件/脚本/数据依据；A09核实后确认问题不存在如实说明未强行制造问题；M01给出完整代数证明+改写建议，E01完整排查出六项受污染决策（非止步于已知的#12/13）并额外发现duration_A遗留缺口，未因篇幅简化。
+
+## 2026-09-05（工作命令 #44：C01专项修复——事件代表行按最早开始时间重新选取，核心模型重估对比 —— 已执行，生成回执。**注：这是独立编号的C01专项修复，不是常规工作命令编号延续，产出全部写入新目录`c01_repair_20260905/`，未覆盖任何历史文件**）
+
+- 本机`.venv`直接执行，Step1-5全部完成，未分批次交付。确认bug位置：`v3_validation_pipeline.py`第64行`df.drop_duplicates(INCIDENT_COL)`默认`keep="first"`按文件行序（非按时间排序）选取代表行，该函数被本项目全部下游脚本间接调用。核实原始v3文件行序本身不按事件分组也不按时间排序（如事件FREP-231661-Z的13条阶段记录分散在source_row 1到237,716之间）。
+- **Step1**：135,025个唯一事件中**9.54%（12,886个）代表行发生变化**，24,893个事件存在并列最早时间（已用source_row_number消歧）；变化事件的阵风差异均值0.25m/s、6,918个事件绝对差异超过1m/s。完整135,025行事件级对照表已产出，非仅汇总统计。
+- **Step2**：复用`main1.py`原有`build_incident_features_from_hourly`函数（未重新实现），从75,983个本地天气缓存文件中按新代表行时刻重新索引，**95.21%（12,269个）成功从现有缓存恢复、无需新天气API调用**；617个（4.79%）无法恢复，已明确列出完整Incident Reference清单标记为"待新增天气请求"，未用旧数据顶替。
+- **Step3**：主E0/主R0c样本代表行变化占比**13.57%/13.56%，与code_audit_20260905报告数字精确一致**，确认复现同一bug；开发/确认样本归属仅1个事件变化；**风暴归属变化数初次输出11,385个，经核查发现98.9%（11,261个）是`None`经pandas转`NaN`后`NaN!=NaN`恒真导致的比较伪影，已修正为真实变化124个**（其中59个是Eunice/Franklin背靠背风暴边界附近的合理跳转），如实报告并更正了诊断脚本自身的这一逻辑缺陷。
+- **Step4**：通过猴子补丁`v9.step0_build_sample()`、其余下游代码逐行未改动的方式重建修复后样本（WT n=60,453/E0 n=60,437/R0c n=59,834，与修复前完全相同）。核心系数对比：E0二次项0.1028→0.1060（+3.1%）、R0c二次项0.0792→0.0850（+7.2%），**修复前基线额外用相同新方法重新计算**（命令#21本身未产出过最终样本5折稳定性表）以确保对比方法论一致。临界风速10.694→10.807 m/s（+1.06%），Delta/Bootstrap两种CI定性结论不变。customers/阵风权重比从12.7倍降至7.4倍（阵风边际贡献0.62pp→1.06pp）。5折CV%普遍改善（E0二次项15.83%→13.19%，R0c二次项23.74%→20.42%）。
+- **Step5**：明确回答核心发现（二次项主导且稳健）完全成立，稳健性指标修复后不降反升；临界风速变化幅度小（+1.06%）两种CI检验均通过；customers解释力更大这一排序依然成立但权重差距收窄（12.7倍→7.4倍），已如实指出这一实质变化不应被笼统忽略。
+- **产出文件**：`C01_repair_report.md`；脚本`step1_representative_row.py`、`step2_weather_reextraction.py`、`step3_4_corrected_sample_and_refit.py`、`step4b_fold_stability_and_variance.py`、`step4c_original_baseline_for_comparison.py`；完整原始数据见`raw/`目录（事件级对照表、天气重提取结果、修复前后系数表、5折稳定性表、方差分解表等）。
+- 验收标准逐项确认：Step1给出精确到事件级别的完整对照表；Step2的617个不可恢复事件已明确列出完整清单；Step4模型重估确保只改输入数据不改模型设定（含额外补做的同方法修复前基线）；Step5判断完全基于Step4实际数字；如实报告并修正了诊断脚本自身的NaN比较缺陷（11,385→124），未回避自身失误也未简化真实存在的权重比变化。
+
+## 2026-09-05（工作命令 #45：C02/C04/C05/C06/C07/C08代码修复 + 基于C01修复数据的最终重新生成 —— 已执行，生成回执。**注：C01之后的同一条修复链路延续，独立于常规编号序列，产出全部写入新目录`c02_c08_repair_20260905/`，未覆盖命令#44之前的任何产出**）
+
+- 本机`.venv`直接执行，先完成全部C02-C08代码修复，最后统一用`corrected_sample_builder.py`（封装C01猴子补丁逻辑）做唯一一次连贯的最终重新生成，未边修边生成。
+- **C02**：确认R²确实是"拼接5折样本外预测后统一算一次"（pooled OOF），非5折均值；未改代码，额外算出备选口径：pooled OOF系统性高于5折简单平均（如R0c+customers: 11.30% vs 10.97%），且部分折出现负R²（R0c基线第3/5折分别为-1.40%/-1.39%），已给出两组数字供网页端选择。
+- **C04**：确认`step13_storm_prediction_check.py`确有重复log1p变换bug——E0面板`log1p(exp(η))≠η`实际受影响，R0c面板`log(exp(η))=η`恰好数学抵消未受影响。修复后直接绘制η本身；修复前后E0面板整体视觉形态基本不变，确认"暴露侧低值区系统性高估"是真实模式非bug产物。
+- **C05**：修复前R0c风暴验证集混入了被p99截尾排除的训练范围外事件。修复后分组统计：训练范围内Pearson r=+0.378（n=4883，p~2e-165），**被截尾排除的48个事件r=-0.382（p=0.0073，显著负相关）**——发现模型对训练截尾范围外的极端事件不仅无预测力反而方向相反，已在Figure 9(b)用空心三角形单独标出。
+- **C06**：精确记录标准化范围——阵风/降水/温度/气压/customers(R0c)经z-score标准化，urban_binary/log_population/income_deprivation_rate/deprivation_gap_pct/morans_i/年月FE保留原始尺度，已给出可直接用于论文Table2/3.3的英文表述。
+- **C07**：统一Figure4与Figure6的customers参照场景为精确的z-score=0（此前Figure4用样本均值导致平方项≈0.9999833非精确0）；已澄清"z=0"对应训练样本log1p(customers)均值这一水平，非字面"customers=0"，避免误导性图注措辞。
+- **C08**：Figure4临界风速CI改为动态读取（不再硬编码9.20-12.06），图内文字统一为"turning point"；Figure10"development sample"确认是对已有5折系数的逆方差加权meta汇总而非新单次拟合，与论文当前描述一致，未发现数字对不上，未重新设计方法论。
+- **C03**：如实记录（未改代码）——weather_natural子样本p99截尾点142.84h明确不同于主规格192.08h，且GroupKFold折分配因输入日期集合不同而必然不同，已给出可直接用于论文方法论说明的英文句子。
+- **最终重新生成**：临界风速10.81 m/s（Delta CI[10.13,11.48]，Bootstrap CI[9.16,12.16]，与C01一致，确认C02-C08修复不改变模型系数）；customers/阵风权重比7.35倍；**重要发现**：weather_natural子样本E0阵风OOS边际贡献从命令#25污染前数据的-0.15pp（负，异常）**修正为+0.45pp（正，符合预期方向）**，此前"未解开异常"在C01修复后自然消失；R0c"阵风在weather_natural反超customers"核心发现依然成立（2.76 vs 1.32）。全部10张图（Figure 1/2/4/5/6/7/8/9/10/D1）已重新生成并提供详细文字描述；**Figure D1数字与命令#42完全相同**（不受C01/C02-C08任何一项影响，因只依赖n_stages/customers_v2/duration_B），确认了修复范围界定的准确性。
+- **产出文件**：`C02_C08_repair_report.md`；脚本`corrected_sample_builder.py`、`final_core_tables.py`、`c02_r2_definition_check.py`及10张图对应脚本；`raw/`下全部系数表、方差分解表、C02对比JSON、C05分组统计等；`figures/`下10张图PDF+PNG。
+- 验收标准逐项确认：C02-C08每项均给出具体修复前后产出差异；Figure4/6customers参照场景完全统一为z-score=0并给出准确技术说明；最终生成全部来自同一次连贯运行未拼接批次；全部10张图均有详细文字描述。
+
+## 2026-09-05（工作命令 #46：全部遗留待核实项统一核实——A02、Table 3/4.4 p值、Appendix F/G、C09 —— 已执行，生成回执。**注：这是C01→C02-C08→C09修复链路的收尾环节，独立于常规工作命令编号序列，产出全部写入新目录`c09_final_cleanup_20260905/`，未覆盖命令#45之前的既有产出文件本身**）
+
+- 本机`.venv`直接执行，复用`corrected_sample_builder.py`一次性构建C01修正后组合样本，A02/Appendix G/C09-VIF三项分析合并在同一进程内完成以避免重复构建样本。
+- **A02**：确认Figure 4/6命令#45版本确实仍是naive `np.exp(eta)`未做Duan(1983)修正；在C01修正数据上重新拟合得到smearing因子E0=10.4485（隐含低估90.43%）、R0c=2.1869（隐含低估54.27%），与命令#43修复前旧估计数值接近但为独立重新计算所得（非复用），已按命令要求给出选项(a)保留现状+图注声明与选项(b)应用修正+重新生成两张图的具体后果和实施成本，未代为选择。
+- **Table 3/Section 4.4**：核实命令#45已产出的四个C01修正数据聚类系数表（LAD单聚类、LAD×date双向聚类，E0/R0c各一对），完整整理出Table 3所需的阵风一次/二次项单聚类p值，以及Section 4.4所需的阵风一次/二次项+阵风×气压交互项双向聚类p值，全部为本命令实际核实确认，非复用修复前p值。
+- **Appendix F**：完整重新整理Table F1（E0，26个协变量）、Table F2（R0c，26个协变量）两张完整系数表，每行含系数+LAD聚类SE/p+双向聚类SE/p，非部分行patch。
+- **Appendix G**：Table G1（weather_natural占比按阵风十分位，修正后6.93%–57.06%，与命令#26原始6.89%–56.10%相比判定"不构成实质性差异"）；临界风速(10.81m/s)以下事件占比对比（修正后65.03% vs 37.88%，较原63.70%/36.83%变化约1个百分点，已说明该变化主要由临界风速阈值本身从10.69→10.81m/s右移贡献，非单纯阵风值修正效应，定性结论不变）。
+- **C09项目1**：确认命令#27 VIF检查（`step26_*.csv`）和LAD/date/双向聚类检查（`step28_*.csv`）均缺失配套生产脚本（`final_combined_analysis/`目录下只有`step30_counterfactual.py`一份存活），历史上以内联/临时代码方式执行，属真实可复现性缺口。
+- **C09项目2**：确认原VIF检查故意不含年月固定效应哑变量（对齐v6论文Appendix Table B1口径，非无意疏漏）；本命令第一次尝试重新计算完整设计矩阵VIF时脚本本身有bug（遗漏常数项导致对数人口/剥夺率等非中心化协变量VIF虚假膨胀至42+），**已定位、修正并如实记录这一自身失误**；修正后确认完整设计矩阵（含全部年月FE）下最高VIF仅3.755/3.758（E0/R0c），"全部VIF<4"论文表述依然成立，且与C01修正前数字在小数点后3位精度一致。
+- **C09项目3**：确认`v3_validation_pipeline.py`的`step0_build_sample`/`step1_lad_gapfill`/`step2_build_folds`均存在"看似只读实则写盘"的副作用；**发现并诚实披露本人自己编写的`corrected_sample_builder.py`只对`step0_build_sample`打了补丁，未同步覆盖后两者**，导致命令#44/45/46三次运行已实际覆盖`claude_branch/results/v3_validation/raw/step1_lad_gapfill.json`（原holdout n=23650→现23649）和`step2_folds.json`（原dev n=97663→现97664）两个历史文件，与既定"不覆盖历史产出"约束相抵触；已现场重新复现验证原始数值可完全追溯（非仅凭报告文字回忆），确认全项目`.md`报告均未引用过这两个具体文件名作为数字来源（故未造成论文可引用数字丢失），选择如实披露而非手工改写文件内容，并给出后续修复建议（扩展`_patch_v9()`覆盖范围）。
+- **产出文件**：`C09_final_cleanup_report.md`；脚本`run_all_c09.py`、`c09_vif_fixed.py`（含诊断脚本`diag_vif_spike.py`、`diag_vif_original.py`留存于`scripts/c09_final_cleanup_20260905/`供追溯）；`raw/`目录下A02/Appendix G/VIF全部原始数据（含如实保留的VIF误算版本以资对照）。
+- 验收标准逐项确认：A02两个选项均给出具体后果和成本未代为选择；Table 3/4.4 p值均为本命令核实确认的C01修正数据实际拟合结果；Appendix F两张表完整无缺行；Appendix G两项均给出"是否实质性差异"的明确判断；C09三项均如实报告，其中项目2、项目3均涉及本命令自身在核查过程中发现并诚实披露的失误（VIF计算bug、猴子补丁覆盖范围不足导致的历史文件覆盖），未因是"收尾清理"而降低核查标准或回避自身问题。

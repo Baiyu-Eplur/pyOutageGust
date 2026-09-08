@@ -1,0 +1,5 @@
+model,step,blocks_added,r2_in_sample,r2_in_sample_increment,r2_oos_5fold,r2_oos_5fold_increment
+R0c_wn_corrected_gust_first,baseline,region_SES+year_month_FE,0.1841276782594209,,0.13731990038906783,
+R0c_wn_corrected_gust_first,nongust_weather,nongust_weather,0.2131988011426006,0.0290711228831797,0.18373577793951756,0.046415877550449736
+R0c_wn_corrected_gust_first,gust,gust,0.22916537086512623,0.015966569722525636,0.21136136111334647,0.027625583173828905
+R0c_wn_corrected_gust_first,customers,customers,0.24410079783078964,0.014935426965663412,0.22458771201631667,0.013226350902970196

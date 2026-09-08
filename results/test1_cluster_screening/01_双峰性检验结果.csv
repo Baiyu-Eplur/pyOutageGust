@@ -1,0 +1,3 @@
+variable,method,statistic,p_value,n,note
+log1p_customers,hartigan_dip_test,0.07497457411645055,0.0,62928,diptest package available; no fallback needed
+log1p_duration,hartigan_dip_test,0.012239984860084846,0.0,62928,diptest package available; no fallback needed

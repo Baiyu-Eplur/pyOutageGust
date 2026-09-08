@@ -1,0 +1,10 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\haoya\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "numpy": "2.4.3",
+  "pandas": "3.0.1",
+  "pyarrow": "25.0.1",
+  "package_path": "D:\\Pyprogramme\\STST2603\\.venv\\Lib\\site-packages",
+  "models_run": 0,
+  "new_weather_requests": 0
+}

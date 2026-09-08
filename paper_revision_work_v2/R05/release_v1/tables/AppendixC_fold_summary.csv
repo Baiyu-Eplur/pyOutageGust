@@ -1,0 +1,5 @@
+group,term,evaluation_n,folds,positive_folds,negative_folds,significant_folds_p_normal_lt_005,mean_coefficient,SD_ddof1,coefficient_of_variation_pct,interpretation
+main,zG,60436,5,2,3,1,-0.00554584244258087,0.012000420329467772,216.3858864314063,overlapping training folds; descriptive summaries only; all_valid current counterpart
+main,zG2,60436,5,5,0,5,0.08350220117472161,0.018831960519356938,22.552651612084553,overlapping training folds; descriptive summaries only; all_valid current counterpart
+six_groups,zG,117108,5,5,0,3,0.018920305058217114,0.00692358283433794,36.5933995938983,overlapping training folds; descriptive summaries only; all_valid current counterpart
+six_groups,zG2,117108,5,5,0,5,0.07806104855721445,0.015751688068394377,20.17867855931919,overlapping training folds; descriptive summaries only; all_valid current counterpart

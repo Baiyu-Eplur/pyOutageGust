@@ -1,0 +1,72 @@
+{
+  "version": "R04_extensions_v1",
+  "frozen_core_identity": "859a02e917d71b4b51333b4db452403a97f1e6c479b6faf654d79f988c553846",
+  "files": [
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\artifact_acceptance.py",
+      "sha256": "ba1195d82315c339cce2a4f111262fc6c265a155284f456e0577cbe9deed0eee",
+      "bytes": 4220
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\audit_results.py",
+      "sha256": "173f6baa620e4fa68984e24d0a0e2e1904061ef1a5dd299ed007468630f500ae",
+      "bytes": 6184
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\calendar_repair.py",
+      "sha256": "36a0aff44ad45bb00722e2390eedcfa467807c515d1e4faf75a61b5f9fb3eb81",
+      "bytes": 6860
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\common.py",
+      "sha256": "6f6e1b882766a6c079f055b0be2c4f8a51a587a1b02cb985d6e09124bf68a4df",
+      "bytes": 1621
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\compatibility.py",
+      "sha256": "5ce74f809e31d991232a1b75be9efa35bc5971bf0508715c46173bad4638ce2a",
+      "bytes": 2995
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\deliver.py",
+      "sha256": "84f4f2b019f6692df59003777e46ba1523585fa5fdcd089b410a4a9615c5d223",
+      "bytes": 56063
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\figures.py",
+      "sha256": "7ac3b90f2010f81cc57c20751a9f2d2181dbb5515816119dd646f583f982665f",
+      "bytes": 11232
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\final_data.py",
+      "sha256": "cdca3875dc789dd8a21cfbb7460aeaa6ecf364377ff1a14558ec328e83d357af",
+      "bytes": 13583
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\numeric_acceptance.py",
+      "sha256": "0172237a62a409206d19d8769d6daa4cab2dd75276a8adaad3647e283a096e0f",
+      "bytes": 10863
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\product_complete.py",
+      "sha256": "dce41bb7ad825823f4608083f96ac22c9ab0f019911fac7dee4aec55ab4385ed",
+      "bytes": 5105
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\report_data.py",
+      "sha256": "754645a469730c77a23e6ce4481b18fcb02629bac78a3a5a85ad76c96791c022",
+      "bytes": 9294
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\supplements.py",
+      "sha256": "437bbc71bdd4f25668f7d9d18555a28aeb9cb16df469236779a368ebd53cf036",
+      "bytes": 6146
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\cli.py",
+      "sha256": "0bc701f1551b1eaceeb0bea41d741415ec96c3062a9b55e561821921d983fb03",
+      "bytes": 491
+    }
+  ],
+  "policy": "only independent work-root sources and copied R03/R04 libraries imported"
+}

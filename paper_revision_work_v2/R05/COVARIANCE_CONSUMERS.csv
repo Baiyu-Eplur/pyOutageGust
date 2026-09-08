@@ -1,0 +1,25 @@
+model,consumer,actual_use,two_way_matrix_used,rule
+main_E0_development,R04/tables/period_comparison.csv,physical linear/quadratic SE: LAD only,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+main_E0_development,R04/figures/figure10.png/.pdf,point only; no covariance or interval,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+main_E0_development,minimum_interface,conditional point/support only; no delta-method CI,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+main_E0_later,R04/tables/period_comparison.csv,physical linear/quadratic SE: LAD only,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+main_E0_later,R04/figures/figure10.png/.pdf,point only; no covariance or interval,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+main_E0_later,minimum_interface,conditional point/support only; no delta-method CI,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+main_R0c_development,R04/tables/period_comparison.csv,physical linear/quadratic SE: LAD only,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+main_R0c_development,R04/figures/figure10.png/.pdf,point only; no covariance or interval,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+main_R0c_development,minimum_interface,conditional point/support only; no delta-method CI,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+main_R0c_later,R04/tables/period_comparison.csv,physical linear/quadratic SE: LAD only,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+main_R0c_later,R04/figures/figure10.png/.pdf,point only; no covariance or interval,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+main_R0c_later,minimum_interface,conditional point/support only; no delta-method CI,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+weather_E0_development,R04/tables/period_comparison.csv,physical linear/quadratic SE: LAD only,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+weather_E0_development,R04/figures/figure10.png/.pdf,point only; no covariance or interval,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+weather_E0_development,minimum_interface,conditional point/support only; no delta-method CI,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+weather_E0_later,R04/tables/period_comparison.csv,physical linear/quadratic SE: LAD only,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+weather_E0_later,R04/figures/figure10.png/.pdf,point only; no covariance or interval,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+weather_E0_later,minimum_interface,conditional point/support only; no delta-method CI,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+weather_R0c_development,R04/tables/period_comparison.csv,physical linear/quadratic SE: LAD only,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+weather_R0c_development,R04/figures/figure10.png/.pdf,point only; no covariance or interval,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+weather_R0c_development,minimum_interface,conditional point/support only; no delta-method CI,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+weather_R0c_later,R04/tables/period_comparison.csv,physical linear/quadratic SE: LAD only,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+weather_R0c_later,R04/figures/figure10.png/.pdf,point only; no covariance or interval,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use
+weather_R0c_later,minimum_interface,conditional point/support only; no delta-method CI,False,No automatic PSD repair or arbitrary-direction Wald test; inspect actual contrast before future use

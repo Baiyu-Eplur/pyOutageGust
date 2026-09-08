@@ -1,0 +1,3 @@
+target,n,skewness,excess_kurtosis,JB_statistic,JB_p_asymptotic_descriptive_only,mean_exp_residual_diagnostic_only,not_applied_to_predictions,JB_log10_p_asymptotic,JB_p_status
+E0,60436,0.8682097803402893,-0.2358563360981747,7732.738611665655,0.0,10.4485500028908,True,-1679.1428545233032,floating_point_underflow; use log10_p; asymptotic iid reference is descriptive only
+R0c,60436,0.0871153110464333,1.559003028036014,6196.822260395809,0.0,3.4635270260323283,True,-1345.6228565125678,floating_point_underflow; use log10_p; asymptotic iid reference is descriptive only

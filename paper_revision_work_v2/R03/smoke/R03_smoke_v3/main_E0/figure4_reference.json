@@ -1,0 +1,10 @@
+{
+  "reference_population_sha256": "5f553f639e31688c97ec668c0db3b601ccf42eaec3c4f32b47f16be8bb251155",
+  "model_training_ids_sha256": "5f553f639e31688c97ec668c0db3b601ccf42eaec3c4f32b47f16be8bb251155",
+  "scaler_sha256": "41bfd5133e9fce17a0be153867a329e6fb5b3bd712fcfbba23f4b618ff4765ec",
+  "raw_settings": "each row retains regional/calendar covariates; fixed driver, pressure; customer curve fixed gust",
+  "reference_order": "set raw -> design squares/interactions -> predict each eta -> aggregate",
+  "display": "exp_mean_eta",
+  "minimum_CI": null,
+  "no_old_interval_fallback": true
+}

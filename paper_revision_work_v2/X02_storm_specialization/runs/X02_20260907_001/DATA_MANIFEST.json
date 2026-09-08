@@ -1,0 +1,26 @@
+{
+  "run_id": "X02_20260907_001",
+  "created_utc": "2026-09-07T11:53:19.134921+00:00",
+  "random_seed": 20260907,
+  "source_event_table": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R02\\data\\R02_event_master.parquet",
+  "source_event_sha256": "8ac332cdb59d5eb961a01146757665a2600ebaada4265c8ac1ac30218c6f066d",
+  "source_event_manifest": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R02\\data\\EVENT_MANIFEST.json",
+  "source_event_manifest_sha256": "950d38b0b1a1d9f334803ef973838a69f2b4d0ecfe4ed5fc539f13a66d290fb1",
+  "source_windows": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\X02_storm_specialization\\evidence\\storm_windows_X01_readonly.json",
+  "source_windows_sha256": "e5fd7a63e946f199c28633fea863f6e4701a8a66310e81f936b62a4b49c1d267",
+  "event_rows": 135025,
+  "unique_events": 135025,
+  "input_version": "R02_20260905",
+  "git_commit": null,
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pandas": "3.0.1",
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "sklearn": "1.8.0",
+    "pyarrow": "25.0.1"
+  },
+  "source_policy": "read_only; no source file copied or modified",
+  "analysis_calendar": "UTC proxy; Europe/London calendar membership sensitivity reported"
+}

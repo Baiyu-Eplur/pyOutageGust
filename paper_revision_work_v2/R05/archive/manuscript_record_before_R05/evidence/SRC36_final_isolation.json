@@ -1,0 +1,404 @@
+{
+  "timestamp_utc": "2026-09-05T22:16:50.471544+00:00",
+  "passed": true,
+  "scope": "actual R04 start to current; named paths only",
+  "protected_paths": 549,
+  "changed_since_R04_start": [],
+  "prior_R02_R03_snapshot_files_verified": 8437,
+  "unexpected_prior_changes": [],
+  "original_source_pairs": [
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\Buckinghamshire_combination.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\borrowed_from_main\\coef_fold_stability_E0_R0.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\borrowed_from_main\\coef_fold_stability_expansion_validation.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\borrowed_from_main\\coef_fold_stability_R0_custadj.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\cause_code_robustness\\step1_composition_diagnostic.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\cause_code_robustness\\step2_wt_subset_critical_wind_speed.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\code_audit_20260905\\audit_pipeline.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\code_audit_20260905\\trace_findings.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\critical_wind_speed\\critical_wind_speed_pipeline.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\customers_duration_shape_investigation\\step1_binned_relationship.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\customers_duration_shape_investigation\\step2_subgroup_check.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\customers_duration_shape_investigation\\step3_flexible_form.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\customers_duration_shape_investigation\\step5_n_stages_stratification.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\dev_sample_decontamination\\clean_sample_builder.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\dev_sample_decontamination\\step1_rebuild_clean_sample.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\dev_sample_decontamination\\step2_refit_clean.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\dev_sample_decontamination\\step3_critical_wind_speed_clean.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\dev_sample_decontamination\\step4_variance_decomposition_clean.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\combined_sample_builder.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure10_robustness_forest.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure1_study_area.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure2_distribution.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure4_dose_response.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure5_variance_decomposition.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure6_regional_map.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure7_magnitude_comparison.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure8_weather_subsample_comparison.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure9_storm_validation.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure_style.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figureD1_composition_effect.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step10_named_storms.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step13_storm_prediction_check.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step16_range_restriction.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step17_weather_natural_subsample.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step1_final_fit.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step21_causecode_gust_diagnostic.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step2_critical_wind_and_variance.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step30_counterfactual.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step36_six_group_clean_sample.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step38_F4_customers_mean_ratio.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step38_M6_decompose_sample_vs_definition.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step38_M6_nonlinear_dependence.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step3_dose_response_curve.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step40_1_cubic_gust_term.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step40_2_zspace_symmetry.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step40_model_form_check.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step42_appendixD_composition_crosstab.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step43_M01_M03_M05.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step4_baseline_regional_map.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step7_customers_dose_response.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\module_e_final_confirmation\\build_holdout_sample.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\module_e_final_confirmation\\fit_holdout_models.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\Buckinghamshire_combination_v2.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\data_arrange_v2.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\filter_v2.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\GVA_merge_with_crosswalk_v2.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\GVA_new_v2.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\LAD_AreaSummary_v2.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\LAD_DNO_v2.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\LAD_GeoMerge_v2.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\LAD_urban_Summary_v2.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\main1_v2.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\match_lad_v2.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\poppulation_merge_v2.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\test1\\test1_full_pipeline.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\test1\\test1_step0_inventory.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\test1b\\test1b_independence_pipeline.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\v3_audit\\audit_v3_dataset.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\v3_controlled_comparison\\controlled_comparison_pipeline.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\v3_validation\\v3_validation_pipeline.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\variance_decomposition\\variance_decomposition_pipeline.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\data_arrange.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\filter.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\GVA_merge_with_crosswalk.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\GVA_new.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\main1.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\poppulation_merge.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\Buckinghamshire_combination_v3.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\build_stage_base_v3.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\combine_weather_chunks_v3.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\data_arrange_v3.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\enrich_downstream_v3.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\GVA_merge_with_crosswalk_v3.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\LAD_GeoMerge_v3.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\main1_v3.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\match_lad_v3.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\poppulation_merge_v3.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\restore_original_columns_v3.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\validate_final_v3.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\weather_cached_chunk_v3.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\tests\\test_stage_base_v3.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\event_input_repair\\r02_events.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\event_input_repair\\r02_input_pipeline.py",
+      "matches_frozen": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\event_input_repair\\test_r02_events.py",
+      "matches_frozen": true
+    }
+  ],
+  "large_inputs": [
+    {
+      "key": "raw",
+      "path": "D:\\Pyprogramme\\STST2603\\data\\ukpn-iis.csv",
+      "sha256": "2c9c0b20c4650b7d765c5c05de37e4bd189206ddabea7019c9437337750daaba",
+      "matches": true
+    },
+    {
+      "key": "v3",
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\outputs\\ukpn_full_stage_dataset_v3.csv",
+      "sha256": "0aad744eabd2e86f186cdb6072964fcea4492afaf34b8deaa94c51ce553dd16f",
+      "matches": true
+    }
+  ],
+  "R02_event_sha256": "8ac332cdb59d5eb961a01146757665a2600ebaada4265c8ac1ac30218c6f066d",
+  "Word_unchanged": true,
+  "LOG_note": "R04 start hash cd09ad5aea2fa42405da9e7d5b634590143d7d39e79f1eeb0730adc6af57857e unchanged. Earlier R03 documented +3916 bytes; additional log changes before R04 start are not attributed to this run. Unknown writer remains unresolved; no original log rollback or adoption as B1 evidence."
+}

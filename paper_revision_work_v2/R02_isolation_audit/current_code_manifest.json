@@ -1,0 +1,37 @@
+[
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\event_input_repair\\r02_input_pipeline.py",
+    "sha256": "ecdef9a5e4d22467f0e1981544ac71e51743b68d0b0a458eac123546f75b3350",
+    "role": "new_revision_only"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\event_input_repair\\r02_events.py",
+    "sha256": "31c12f44966197b454b39d03347eab17e3377112aaf8026503c0c8622112f686",
+    "role": "new_revision_only"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\event_input_repair\\test_r02_events.py",
+    "sha256": "e334011c861159c35e311e0eec8f40d246a7cc849dfd6910eda8f250b9b48d2a",
+    "role": "new_revision_only"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\run_r02.py",
+    "sha256": "28f6667056ca3d02a0da1f7b95f235bb2f6f44ad7ea386347415eef7d989e0e3",
+    "role": "new_revision_only"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\check_r02.py",
+    "sha256": "53666f357e426aafef8b485302cde0993115e664e5440e99a593501eb677bc5e",
+    "role": "new_revision_only"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\close_r02.py",
+    "sha256": "1e91122edad4069ec3507b1900a1e314f03f38012a7c04d240476018ebd7bfbe",
+    "role": "new_revision_only"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\audit_r02_isolation.py",
+    "sha256": "7c121cea65fc681235a9e0aa9eb024c8bcb390046ab44a78e990d6d0a51d4870",
+    "role": "new_revision_only"
+  }
+]

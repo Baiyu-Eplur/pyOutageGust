@@ -1,0 +1,106 @@
+{
+  "raw_rows": 237901,
+  "incidents": 135025,
+  "unique_identifier_missing": 0,
+  "unique_identifier_duplicate_rows": 2,
+  "exact_raw_duplicate_rows": 0,
+  "time_offset_counts": {
+    "+01:00": 128323,
+    "+00:00": 109578
+  },
+  "invalid_start_rows": 0,
+  "invalid_end_rows": 0,
+  "end_before_start_rows": 0,
+  "earliest_tied_incidents": 24893,
+  "earliest_tie_conflicts": {
+    "Spatial Coordinates": 0,
+    "Cause Code": 0,
+    "licence_area": 0,
+    "regulatory_year": 0,
+    "substation": 0,
+    "SiteFunctionalLocation": 0
+  },
+  "cause_conflict_ids": [
+    "FREP-338321-Z",
+    "FREP-314454-J"
+  ],
+  "extreme_id": "FREP-338321-Z",
+  "extreme_old_rep": [
+    {
+      "Incident Reference": "FREP-338321-Z",
+      "source_row_used": 89486,
+      "earliest_source_row": 163320,
+      "time_used": "2023-05-11 11:06:00+00:00",
+      "earliest_recorded_start": "2022-11-04 16:44:00+00:00",
+      "lag_hours": 4506.366666666667,
+      "hour_diff": true,
+      "date_diff": true,
+      "gust_0h_used": 5.400000095367432,
+      "gust_0h_earliest": null,
+      "gust_0h_delta": null,
+      "precipitation_24h_sum_used": 1.7000000476837158,
+      "precipitation_24h_sum_earliest": null,
+      "precipitation_24h_sum_delta": null,
+      "temperature_0h_used": 14.914999961853027,
+      "temperature_0h_earliest": null,
+      "temperature_0h_delta": null,
+      "pressure_msl_0h_used": 1015.5999755859376,
+      "pressure_msl_0h_earliest": null,
+      "pressure_msl_0h_delta": null,
+      "earliest_weather_status": "weather_request_unavailable",
+      "coordinate_diff": false,
+      "lad_diff": false,
+      "current_date": "2023-05-11",
+      "temporal_partition_change": false
+    }
+  ],
+  "extreme_stage_count": 2,
+  "extreme_min_start": "2022-11-04 16:44:00+00:00",
+  "extreme_max_end": "2023-05-11 13:40:00+00:00",
+  "extreme_duration_B": 4508.933333333333,
+  "extreme_C_nonrepeat": 1,
+  "extreme_metadata_unique": {
+    "Spatial Coordinates": [
+      "51.803888482106, 1.16435758884433"
+    ],
+    "Cause Code": [
+      "98",
+      "71"
+    ],
+    "licence_area": [
+      "EPN"
+    ],
+    "regulatory_year": [
+      "2022-23",
+      "2023-24"
+    ],
+    "substation": [
+      "VALLEYBRIDGE RD PRIMARY"
+    ],
+    "SiteFunctionalLocation": [
+      "EPN-S0000000H3010"
+    ]
+  },
+  "global_earliest": "2021-04-01 00:07:00+00:00",
+  "global_latest_start": "2024-04-01 13:26:00+00:00",
+  "global_latest_end": "2024-04-25 11:23:00+00:00",
+  "boundary_2021-04-01": {
+    "start_before_and_end_after": 0,
+    "stage_starts_both_sides": 0
+  },
+  "boundary_2023-04-01": {
+    "start_before_and_end_after": 62,
+    "stage_starts_both_sides": 14
+  },
+  "boundary_2024-04-01": {
+    "start_before_and_end_after": 35,
+    "stage_starts_both_sides": 3
+  },
+  "reinterruption_values": {
+    "N": 217276,
+    "Y": 20525,
+    "0": 98,
+    "1": 2
+  },
+  "negative_customer_rows": 0
+}

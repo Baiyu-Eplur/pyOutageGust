@@ -1,0 +1,51 @@
+[
+  {
+    "stage": "X02-A first attempt",
+    "classification": "blocking_task_resolved",
+    "result": "failed",
+    "reason": "local stage script initially resolved claude_branch root two levels too high; FileNotFoundError before audit",
+    "resolution": "local X02 script path corrected; source untouched"
+  },
+  {
+    "stage": "X02-A second attempt",
+    "classification": "reporting_limitation_resolved",
+    "result": "failed",
+    "reason": "optional pandas tabulate dependency unavailable",
+    "resolution": "deterministic local Markdown serializer used; no installation"
+  },
+  {
+    "stage": "X02-C/D",
+    "classification": "reporting_limitation",
+    "result": "warning",
+    "reason": "joblib could not identify physical core count and used logical core count",
+    "resolution": "no numerical/model failure"
+  },
+  {
+    "stage": "X02-D first Path B",
+    "classification": "invalid_model",
+    "result": "invalidated",
+    "reason": "storm-population branch omitted held-process +/-48h crossing exclusion; 3 long events, 63 artifact-level violations",
+    "resolution": "complete v1 evidence retained; only Path B rerun with corrected local mask"
+  },
+  {
+    "stage": "X02-E first attempt",
+    "classification": "reporting_limitation_resolved",
+    "result": "failed",
+    "reason": "unused DataFrame field access in fixed group-bound helper",
+    "resolution": "removed unused access; no model/output change"
+  },
+  {
+    "stage": "X02-E second attempt",
+    "classification": "reporting_limitation_resolved",
+    "result": "failed",
+    "reason": "Tk backend unavailable in bundled Python",
+    "resolution": "fixed noninteractive Agg backend; no dependency installation"
+  },
+  {
+    "stage": "X02-F repackage attempt",
+    "classification": "reporting_limitation_resolved",
+    "result": "failed",
+    "reason": "repackage gate initially accepted X02-E but not already-completed X02-F",
+    "resolution": "allow deterministic repackage only when acceptance_pass remains true"
+  }
+]

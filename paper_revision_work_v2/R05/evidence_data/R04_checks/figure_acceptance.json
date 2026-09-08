@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "figure_groups": 12,
+  "formats": [
+    "PNG",
+    "PDF"
+  ],
+  "rows": [
+    {
+      "figure": "figure01",
+      "visual_review": "passed",
+      "source": "R02 candidate_main_E0"
+    },
+    {
+      "figure": "figure02",
+      "visual_review": "passed",
+      "source": "R02 candidate_main_E0 / R0c"
+    },
+    {
+      "figure": "figure03",
+      "visual_review": "passed",
+      "source": "frozen UTC contract and R03/configs/storm_windows.json"
+    },
+    {
+      "figure": "figure04",
+      "visual_review": "passed",
+      "source": "formal figure4_curve_data/reference"
+    },
+    {
+      "figure": "figure05",
+      "visual_review": "passed",
+      "source": "formal metrics.json / contributions.json"
+    },
+    {
+      "figure": "figure06",
+      "visual_review": "passed",
+      "source": "formal figure6 data; copied LAD21 geometry"
+    },
+    {
+      "figure": "figure07",
+      "visual_review": "passed",
+      "source": "formal figure7 reference JSON"
+    },
+    {
+      "figure": "figure08",
+      "visual_review": "passed",
+      "source": "formal metrics.json / contributions.json"
+    },
+    {
+      "figure": "figure09",
+      "visual_review": "passed",
+      "source": "formal figure9 event CSVs"
+    },
+    {
+      "figure": "figure10",
+      "visual_review": "passed",
+      "source": "periods_v2 archives; period_comparison.csv"
+    },
+    {
+      "figure": "figureD1",
+      "visual_review": "passed",
+      "source": "formal stage_composition.csv / stage_pooled.csv; population-specific shared bins"
+    },
+    {
+      "figure": "figureF1",
+      "visual_review": "passed",
+      "source": "four panels from two formal main model archives; no additional fits"
+    }
+  ],
+  "only_active_figures_checked": true,
+  "drafts_archived": true
+}

@@ -1,0 +1,85 @@
+--- H0/scripts/v3_validation/v3_validation_pipeline.py
++++ R02/scripts/v3_validation/v3_validation_pipeline.py
+@@ -6,6 +6,7 @@
+ from __future__ import annotations
+ 
+ import json
++import sys
+ from pathlib import Path
+ 
+ import numpy as np
+@@ -19,7 +20,6 @@
+ LAD_SHP = Path(r"D:\Pyprogramme\STST2603\data\Local_Authority_Districts_December_2021_UK_BGC_2022\LAD_DEC_2021_UK_BGC.shp")
+ OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\v3_validation")
+ RAW_DIR = OUT_DIR / "raw"
+-RAW_DIR.mkdir(parents=True, exist_ok=True)
+ 
+ INCIDENT_COL = "Incident Reference"
+ 
+@@ -59,28 +59,42 @@
+ # ---------------- Step 0: build event-level weather-matched sample ----------------
+ 
+ def step0_build_sample():
+-    log_step("Step 0: loading v3 dataset and deduplicating to event level...")
+-    df = pd.read_csv(SRC, usecols=USECOLS, low_memory=False)
+-    event = df.drop_duplicates(INCIDENT_COL).copy()
+-    n_total_events = len(event)
+-
+-    matched = event[event["weather_status_v3"] == "matched"].copy()
+-    n_matched = len(matched)
+-
++    """Read the verified R02 full-stage event artifact; never fall back to row order.
++
++    Input production is explicit: paper_revision_work_v2/code/run_r02.py.
++    This adapter returns inputs only and does not overwrite historical reports.
++    """
++    repair_dir = Path(__file__).resolve().parents[1] / "event_input_repair"
++    if str(repair_dir) not in sys.path:
++        sys.path.insert(0, str(repair_dir))
++    from r02_events import load_active_events
++    event, manifest = load_active_events()
++    matched = event.loc[event["new_in_study_utc"] & event["weather_numeric_available"]].copy()
+     step0_summary = {
+-        "n_total_events_v3": int(n_total_events),
+-        "n_weather_matched_events": int(n_matched),
+-        "weather_matched_pct": float(n_matched / n_total_events * 100),
+-        "cause_group_counts_in_matched_sample": matched["cause_group_official"].value_counts(dropna=False).to_dict(),
+-    }
+-    (RAW_DIR / "step0_sample.json").write_text(js(step0_summary), encoding="utf-8")
+-    log_step(f"Step 0 done: {n_matched} weather-matched events out of {n_total_events} total.")
++        "input_version": manifest["run_id"],
++        "event_manifest": str(repair_dir.parents[1] / "paper_revision_work_v2/R02/data/EVENT_MANIFEST.json"),
++        "event_sha256": manifest["event_table"]["sha256"],
++        "n_total_events_v3": len(event),
++        "n_weather_matched_events": len(matched),
++        "weather_matched_pct": 100 * len(matched) / len(event),
++        "cause_group_counts_in_matched_sample": matched["cause_group_event"].value_counts(dropna=False).to_dict(),
++        "scope": "R02 inputs; numeric availability includes explicitly flagged v3-only provenance",
++        "models_run": 0,
++    }
++    log_step(f"Step 0: verified R02 inputs, {len(matched)} in-window numeric-weather events / {len(event)} total.")
+     return matched, step0_summary
+ 
+ 
+ # ---------------- Step 1: light-weight LAD gap-fill (only where genuinely missing) ----------------
+ 
+ def step1_lad_gapfill(matched: pd.DataFrame):
++    if "input_version" in matched and matched["input_version"].eq("R02_20260905").all():
++        return matched, {
++            "n_events_in_sample": len(matched),
++            "n_missing_LAD21CD_after": int(matched["LAD21CD"].isna().sum()),
++            "gapfill_performed": False,
++            "note": "R02 producer already checked selected-stage LAD and rejoined annual population; coverage only, no historical writes.",
++        }
+     log_step("Step 1: checking LAD21CD coverage in the weather-matched sample...")
+     n_missing_before = int(matched["LAD21CD"].isna().sum())
+     n_total = len(matched)
+@@ -138,6 +152,8 @@
+ # ---------------- Step 2: build outcome-blind date-grouped 5-fold CV ----------------
+ 
+ def step2_build_folds(sample: pd.DataFrame):
++    if "input_version" in sample:
++        raise RuntimeError("R02 input rebuilding is complete. R03 must repair fold/tail interfaces before model execution; historical folds are not reused.")
+     log_step("Step 2: building GroupKFold(date, 5) folds...")
+     sample = sample.copy()
+     sample["incident_date_utc"] = pd.to_datetime(sample["incident_date_utc"], errors="coerce")

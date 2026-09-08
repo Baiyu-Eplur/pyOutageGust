@@ -1,0 +1,6 @@
+GLM E0 NB2 computed
+GLM E0 Tweedie_1.5_log computed
+cubic E0 delta 0.0019316391122705667
+GLM R0c Gamma_log computed
+GLM R0c Tweedie_1.5_log computed
+cubic R0c delta 0.000498186962844871

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "figure_groups": 12,
+  "PNG_PDF_files": 24,
+  "new_fits": 0,
+  "all_sources_frozen": true,
+  "order": [
+    "base 11",
+    "02/03/D1/F1 final data",
+    "05/08 paired panels",
+    "D1 actual numerical bins"
+  ],
+  "pixel_identical_count": 6,
+  "byte_identical_count": 6
+}

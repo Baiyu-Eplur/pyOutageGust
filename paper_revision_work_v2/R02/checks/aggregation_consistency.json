@@ -1,0 +1,14 @@
+{
+  "customers_v2_event_excl_reinterruptions": {
+    "mismatches": 0,
+    "max_abs_difference": 0.0
+  },
+  "duration_B_full_span_hours": {
+    "mismatches": 0,
+    "max_abs_difference": 6.821210263296962e-13
+  },
+  "duration_A_customer_weighted_hours": {
+    "mismatches": 0,
+    "max_abs_difference": 1.1368683772161603e-13
+  }
+}

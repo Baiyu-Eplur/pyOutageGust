@@ -1,0 +1,51 @@
+{
+  "date": "2026-09-05",
+  "task": "Understand research history and audit computation pipeline",
+  "active_manuscripts": [
+    "D:\\Pyprogramme\\STST2603\\claude_branch\\docs\\0905new\\Draft_revised.docx",
+    "D:\\Pyprogramme\\STST2603\\claude_branch\\docs\\0905new\\Appendix_revised.docx"
+  ],
+  "author_constraints": [
+    "Do not modify manuscripts",
+    "Execute numerical checks and supplementary experiments according to subsequent instructions",
+    "Keep outputs inside claude_branch; external project data read only"
+  ],
+  "current_data": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\outputs\\ukpn_full_stage_dataset_v3.csv",
+  "authority": "Current manuscript defines the intended claims; source code/data determine implemented computations; old reports are dated evidence, not final authority.",
+  "report": "D:\\Pyprogramme\\STST2603\\claude_branch\\results\\code_audit_20260905\\代码流程核查与研究推进脉络.md",
+  "research_questions": [
+    "Nonlinear gust associations with incident customer impact and restoration span",
+    "Gust versus customer-scale predictive contributions in recovery across cause-defined samples"
+  ],
+  "replicated": [
+    "Raw 20-column preservation, all 237901 stage rows",
+    "C, duration_A and duration_B aggregate columns",
+    "Four final samples and full OLS fits",
+    "80 fold fits across 16 nested configurations, pooled OOF and mean-fold metrics",
+    "Representative-row versus earliest-start comparison",
+    "Storm exposure display-scale calculation and recovery membership"
+  ],
+  "not_executed": [
+    "Onset-corrected refitting",
+    "Official field-definition verification",
+    "Weather API refresh or full geospatial rebuilding",
+    "500-draw bootstrap rerun",
+    "All historical exploratory analyses"
+  ],
+  "open_issues": [
+    "C01 representative-stage time and weather/date selection",
+    "C02 pooled versus mean-fold R2 reporting",
+    "C03 subgroup-specific trimming and folds",
+    "C04 exposure storm log1p(exp(eta)) transform",
+    "C05 storm recovery mixed fit membership",
+    "C06 limited standardization scope",
+    "C07 curve/reference-map difference",
+    "C08 stale bootstrap/figure production code",
+    "C09 side effects, missing producers and runtime portability"
+  ],
+  "preservation": {
+    "historical_files_monitored": 549,
+    "changed": []
+  },
+  "completion": "First pipeline audit and core replication complete; scientific validity and all historical experiments are not certified."
+}

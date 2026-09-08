@@ -1,0 +1,50 @@
+{
+  "step0_summary": {
+    "n_total_events_v3": 135025,
+    "n_weather_matched_events": 121313,
+    "weather_matched_pct": 89.84484354749121
+  },
+  "step3_role_storm_summary": {
+    "n_weather_matched_events_with_changed_rep_row": 11927,
+    "n_dev_holdout_role_changed": 1,
+    "n_storm_membership_changed": 11385
+  },
+  "sample_specific_changed_rates": {
+    "combined_e0_n": 60437,
+    "combined_e0_changed": 8199,
+    "combined_e0_changed_pct": 13.566192895080828,
+    "combined_r0c_n": 59834,
+    "combined_r0c_changed": 8113,
+    "combined_r0c_changed_pct": 13.559180399104187
+  },
+  "corrected_sample_sizes": {
+    "wt": 60453,
+    "e0": 60437,
+    "r0c": 59834,
+    "p99_cap": 192.0833333333333
+  },
+  "corrected_E0": {
+    "beta1": -0.036014312441059675,
+    "beta2": 0.10599692045043266,
+    "turning_point_z": 0.16988376779257963,
+    "turning_point_ms": 10.80715790164296,
+    "delta_ci_ms": [
+      10.132013239309375,
+      11.482302563976544
+    ],
+    "bootstrap_ci_z": [
+      -0.1427912977289122,
+      0.42626977042362624
+    ],
+    "bootstrap_ci_ms": [
+      9.156250573349347,
+      12.160862041464775
+    ],
+    "gust_mean": 9.910180853795751,
+    "gust_sd": 5.279945573978424
+  },
+  "corrected_R0c": {
+    "beta1": -0.000992638820534675,
+    "beta2": 0.08495442319039566
+  }
+}

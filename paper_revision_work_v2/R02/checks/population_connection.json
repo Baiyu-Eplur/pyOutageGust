@@ -1,0 +1,14 @@
+{
+  "path": "D:\\Pyprogramme\\STST2603\\data\\population_lad_long.csv",
+  "sha256": "46d0a29a3c0a71b000577360a4dd7ec75ea29e22b17e3600e0d006be03c72b55",
+  "lookup_rows": 5054,
+  "duplicate_keys": 0,
+  "events_after_merge": 135025,
+  "missing_population": 5762,
+  "missing_by_year": {
+    "2022": 2452,
+    "2021": 1575,
+    "2023": 1428,
+    "2024": 307
+  }
+}

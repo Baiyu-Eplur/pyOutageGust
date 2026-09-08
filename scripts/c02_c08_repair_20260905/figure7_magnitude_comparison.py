@@ -1,0 +1,116 @@
+"""Final regeneration of Figure 7 (magnitude comparison) on C01-corrected
+data. Ratio definition unchanged (curve max / curve min over the plotted
+1st-99th percentile range, per A05's finding -- not itself one of C02-C08's
+fixes). Reuses Figure 4's already-computed corrected gust dose-response
+curves and computes a fresh customers_v2-to-duration_B dose-response curve
+on the corrected R0c sample for the third ratio."""
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+sys.path.insert(0, str(Path(__file__).parent))
+from corrected_sample_builder import build_corrected_combined_samples, _patch_v9  # noqa: E402
+
+sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis")))
+from figure_style import apply_style, mm_to_in, save_fig, SINGLE_COL_MM  # noqa: E402
+
+RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c02_c08_repair_20260905\raw")
+OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c02_c08_repair_20260905\figures")
+
+
+def log_step(msg):
+    print(f"[fig7-final] {msg}", flush=True)
+
+
+def main():
+    apply_style()
+    v9, _, _ = _patch_v9()
+    import importlib.util
+    spec11 = importlib.util.spec_from_file_location(
+        "critical_wind_speed_pipeline",
+        r"D:\Pyprogramme\STST2603\claude_branch\scripts\critical_wind_speed\critical_wind_speed_pipeline.py")
+    v11 = importlib.util.module_from_spec(spec11)
+    spec11.loader.exec_module(v11)
+
+    curves = pd.read_csv(RAW_DIR / "figure4_dose_response_curves_corrected.csv")
+    e0_curve = curves[curves["model"] == "E0_gust_dose_response"]
+    r0c_curve = curves[curves["model"] == "R0c_gust_dose_response"]
+    ratio_gust_e0 = e0_curve["predicted_level"].max() / e0_curve["predicted_level"].min()
+    ratio_gust_r0c = r0c_curve["predicted_level"].max() / r0c_curve["predicted_level"].min()
+
+    log_step("Building customers_v2 -> duration_B dose-response curve (corrected R0c sample)...")
+    _, combined_e0, combined_r0cb, _ = build_corrected_combined_samples()
+    res, cov, gust_mean, gust_sd, d = v11.fit_full_sample(
+        combined_r0cb, "log_duration_B_full_span_hours", use_customers_covariate=True)
+    cust_raw = d["customers_v2_event_excl_reinterruptions"].astype(float)
+    p1, p99 = cust_raw.quantile(0.01), cust_raw.quantile(0.99)
+    grid_raw = np.linspace(p1, p99, 50)
+    grid_log1p = np.log1p(grid_raw)
+
+    s = combined_r0cb.copy()
+    s["customers_v2_log1p"] = np.log1p(s["customers_v2_event_excl_reinterruptions"].astype(float))
+    Xtr_full, _ = v9.design_train_valid(s, s, extra_scale_cols=["customers_v2_log1p"])
+    mu_c, sd_c = s["customers_v2_log1p"].mean(), s["customers_v2_log1p"].std(ddof=1)
+    grid_z = (grid_log1p - mu_c) / sd_c
+
+    exog_names = list(res.model.exog_names)
+    means = Xtr_full.mean(axis=0)
+    X = pd.DataFrame(0.0, index=range(len(grid_z)), columns=exog_names)
+    if "Intercept" in X.columns:
+        X["Intercept"] = 1.0
+    for c in exog_names:
+        if c in ("z_gust_0h", "z_gust_0h_sq", "z_gust_pressure", "Intercept",
+                  "z_log1p_customers_v2", "z_log1p_customers_v2_sq"):
+            continue
+        if c in means.index:
+            X[c] = means[c]
+    X["z_gust_0h"] = 0.0
+    X["z_gust_0h_sq"] = 0.0
+    if "z_gust_pressure" in X.columns:
+        X["z_gust_pressure"] = 0.0
+    X["z_log1p_customers_v2"] = grid_z
+    X["z_log1p_customers_v2_sq"] = grid_z ** 2
+    beta = res.params.loc[exog_names]
+    pred = np.exp(X[exog_names].astype(float) @ beta)
+    ratio_customers = float(pred.max() / pred.min())
+
+    pd.DataFrame({"customers_v2_raw": grid_raw, "customers_v2_z": grid_z, "predicted_duration_B": pred.values}).to_csv(
+        RAW_DIR / "figure7_customers_dose_response_corrected.csv", index=False)
+
+    log_step(f"Ratios (corrected): gust->E0={ratio_gust_e0:.4f}, gust->R0c={ratio_gust_r0c:.4f}, "
+              f"customers->R0c={ratio_customers:.4f}")
+
+    LABELS = [
+        "Gust \u2192 affected customers\n(E0, 1st\u201399th pct. of gust)",
+        "Gust \u2192 restoration duration\n(R0c, customers fixed)",
+        "Affected customers \u2192 restoration duration\n(R0c, gust fixed)",
+    ]
+    RATIOS = [ratio_gust_e0, ratio_gust_r0c, ratio_customers]
+    COLORS = ["#1b9e77", "#1b9e77", "#7570b3"]
+
+    fig_w = mm_to_in(SINGLE_COL_MM) * 1.75
+    fig, ax = plt.subplots(figsize=(fig_w, fig_w * 0.45))
+    y = np.arange(len(LABELS))[::-1]
+    ax.barh(y, RATIOS, color=COLORS, height=0.5)
+    for yi, v in zip(y, RATIOS):
+        ax.text(v + 0.08, yi, f"{v:.2f}\u00d7", va="center", fontsize=9)
+    ax.set_yticks(y)
+    ax.set_yticklabels(LABELS)
+    ax.set_xlabel("Predicted-value ratio (max/min over observed range)")
+    ax.axvline(1.0, color="#888888", linewidth=0.6, linestyle="--")
+    ax.set_xlim(0, max(RATIOS) * 1.18)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    plt.tight_layout()
+    save_fig(fig, OUT_DIR, "Figure_7_magnitude_comparison")
+    plt.close(fig)
+    log_step("Saved Figure_7_magnitude_comparison (final).")
+
+
+if __name__ == "__main__":
+    main()

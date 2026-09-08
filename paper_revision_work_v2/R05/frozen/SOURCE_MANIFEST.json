@@ -1,0 +1,82 @@
+[
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R04_src\\artifact_acceptance.py",
+    "sha256": "ba1195d82315c339cce2a4f111262fc6c265a155284f456e0577cbe9deed0eee"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R04_src\\audit_results.py",
+    "sha256": "173f6baa620e4fa68984e24d0a0e2e1904061ef1a5dd299ed007468630f500ae"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R04_src\\calendar_repair.py",
+    "sha256": "36a0aff44ad45bb00722e2390eedcfa467807c515d1e4faf75a61b5f9fb3eb81"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R04_src\\common.py",
+    "sha256": "6f6e1b882766a6c079f055b0be2c4f8a51a587a1b02cb985d6e09124bf68a4df"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R04_src\\compatibility.py",
+    "sha256": "5ce74f809e31d991232a1b75be9efa35bc5971bf0508715c46173bad4638ce2a"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R04_src\\deliver.py",
+    "sha256": "84f4f2b019f6692df59003777e46ba1523585fa5fdcd089b410a4a9615c5d223"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R04_src\\figures.py",
+    "sha256": "7ac3b90f2010f81cc57c20751a9f2d2181dbb5515816119dd646f583f982665f"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R04_src\\final_data.py",
+    "sha256": "cdca3875dc789dd8a21cfbb7460aeaa6ecf364377ff1a14558ec328e83d357af"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R04_src\\numeric_acceptance.py",
+    "sha256": "0172237a62a409206d19d8769d6daa4cab2dd75276a8adaad3647e283a096e0f"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R04_src\\product_complete.py",
+    "sha256": "dce41bb7ad825823f4608083f96ac22c9ab0f019911fac7dee4aec55ab4385ed"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R04_src\\report_data.py",
+    "sha256": "754645a469730c77a23e6ce4481b18fcb02629bac78a3a5a85ad76c96791c022"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R04_src\\supplements.py",
+    "sha256": "437bbc71bdd4f25668f7d9d18555a28aeb9cb16df469236779a368ebd53cf036"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R03_src\\acceptance.py",
+    "sha256": "a8d9cb746d3726e89a6049b092df5965e64f38e229f7311e2ea4ae85cbe79ea9"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R03_src\\contracts.py",
+    "sha256": "c13d1a9ce1426e1f1694645b2e77e30913e119dbacccc0dd369c8603381bdc6d"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R03_src\\diagnostics.py",
+    "sha256": "5e55c99646a18d85b23c5f57360619483eda02e10532ef509d155a4621a9d2cb"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R03_src\\prediction.py",
+    "sha256": "d9c50ef586ff04b4e6494b74484b26d3c3a1b5f21e131b4a69e392de8501bf1b"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R03_src\\producer.py",
+    "sha256": "721356a1fac69a4fa571e783bf3f0be159d7c3b422deee8e31c2917a6f9e269a"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R03_src\\retained.py",
+    "sha256": "b19ab59c5ba9744e1251ddef89fd120daa739a471fefae41ec963b266433e3c2"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R03_src\\run_pipeline.py",
+    "sha256": "28f42e89bd5ab138c043d923549c2ad0eacd2fd00f4ef5039746c45518a83919"
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R03_src\\test_pipeline.py",
+    "sha256": "fc8284d18f47e234ceb21b3e8f0c0d63f1961c71c5e818c13afb34bfcaf4887f"
+  }
+]

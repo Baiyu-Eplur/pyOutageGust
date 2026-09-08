@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "unit_tests": 15,
+  "full_event_count": 135025,
+  "stage_membership_sum": 237901,
+  "C_D_A_full_comparison": "aggregation_consistency.json",
+  "full_row_shuffle": "full_shuffle.json",
+  "unresolved_events": 2,
+  "Buck_proxy_exact": true,
+  "strict_cache_rain_24_unique_finite": true,
+  "active_input_reader": "active_entry.json",
+  "initial_test_failure_fixed": "nullable missing coordinate query flag; fillna(False), no numeric change",
+  "models_run": 0
+}

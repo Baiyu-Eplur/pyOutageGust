@@ -1,0 +1,41 @@
+{
+  "findings": [
+    {
+      "code": "ISSUE002",
+      "severity": "S3",
+      "blocker": true,
+      "message": "open blocker SOURCE: regional reconstruction / source conditions before dependent validation"
+    },
+    {
+      "code": "ISSUE002",
+      "severity": "S3",
+      "blocker": true,
+      "message": "open blocker SHAPE: stable shape/minimum not validated"
+    },
+    {
+      "code": "ISSUE002",
+      "severity": "S3",
+      "blocker": true,
+      "message": "open blocker CONTRIBUTION: ordering uncertainty and process validation absent"
+    },
+    {
+      "code": "ISSUE002",
+      "severity": "S3",
+      "blocker": true,
+      "message": "open blocker ENGINEERING: engineering calibration absent"
+    },
+    {
+      "code": "ISSUE002",
+      "severity": "S3",
+      "blocker": true,
+      "message": "open blocker WORD: Word/citation/layout not yet updated"
+    },
+    {
+      "code": "RELEASE002",
+      "severity": "S1",
+      "blocker": false,
+      "message": "required checks not completed: W_final"
+    }
+  ],
+  "interpretation": "Five S3 manuscript-release conditions (sources, shape, contribution, engineering, Word) intentionally remain open. They are not execution failures or a blanket block on V00 protocol preparation; no scientific waiver."
+}

@@ -1,0 +1,295 @@
+[
+  {
+    "figure": "figure01",
+    "title": "Locations of eligible incidents",
+    "source": "R02 candidate_main_E0",
+    "scale": "count",
+    "reference": "one event per incident; observed coordinates",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure01.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure01.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "passed",
+    "visual_review_scope": "PNG inspected for axes, units, labels and layout; PDF generated from same canvas; source and identity independently checked",
+    "file_identities": [
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure01.png",
+        "sha256": "ce7348a5098d82539733eea114a9f5c95a080f570a3e775444fb3bf406b37d83"
+      },
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure01.pdf",
+        "sha256": "38c9ad1764dfefb4780d7ac00934f359f0f7fbe5bb8681ff7953ed0833fd734b"
+      }
+    ]
+  },
+  {
+    "figure": "figure02",
+    "title": "Outcome distributions: all 60,436 eligible events, no tail trimming",
+    "source": "R02 candidate_main_E0 / R0c",
+    "scale": "explicit per axis",
+    "reference": "actual frozen B1 population and archives",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure02.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure02.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "passed",
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\final_data.py",
+    "visual_review_scope": "PNG inspected for axes, units, labels and layout; PDF generated from same canvas; source and identity independently checked",
+    "file_identities": [
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure02.png",
+        "sha256": "3170adc7f88cc0c3b15e1e11ad6b20446d9d6a23c2a3c04c44f94ec06ab00960"
+      },
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure02.pdf",
+        "sha256": "168537e102794f5d46aecd3a37c996de50257a698782bc479588a2b324426a55"
+      }
+    ]
+  },
+  {
+    "figure": "figure03",
+    "title": "Retrospective periods and seven named storm windows",
+    "source": "frozen UTC contract and R03/configs/storm_windows.json",
+    "scale": "explicit per axis",
+    "reference": "actual frozen B1 population and archives",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure03.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure03.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "passed",
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\final_data.py",
+    "visual_review_scope": "PNG inspected for axes, units, labels and layout; PDF generated from same canvas; source and identity independently checked",
+    "file_identities": [
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure03.png",
+        "sha256": "06ea56d1fc18060df188fcfe0d8b4967347b82074cf6e05857e3980ee19d9e23"
+      },
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure03.pdf",
+        "sha256": "029250819b20c47cefccbf44c7e3e861c73eee70cc2dc6b60fa4b6e8e181c719"
+      }
+    ]
+  },
+  {
+    "figure": "figure04",
+    "title": "Gust reference curves — no minimum confidence intervals",
+    "source": "formal figure4_curve_data/reference",
+    "scale": "exp(mean eta)",
+    "reference": "each model estimation population; per-row raw gust grid, fixed mean physical pressure",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure04.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure04.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "passed",
+    "visual_review_scope": "PNG inspected for axes, units, labels and layout; PDF generated from same canvas; source and identity independently checked",
+    "file_identities": [
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure04.png",
+        "sha256": "7d318feb6aa80437def6f4546132cb86f5b75c734c2420fd0d3271e8c895c609"
+      },
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure04.pdf",
+        "sha256": "9e93b7ce74ace4fc7d64bb54aff11a7b56ee2c62643ff45df3ba28be8e42848b"
+      }
+    ]
+  },
+  {
+    "figure": "figure05",
+    "title": "Nested predictive fit for both main outcomes",
+    "source": "formal metrics.json / contributions.json",
+    "scale": "pooled OOF R2",
+    "reference": "pooled R2; declared control includes nongust weather+region+calendar; no unfitted regional-only baseline",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure05.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure05.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "passed",
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\product_complete.py",
+    "visual_review_scope": "PNG inspected for axes, units, labels and layout; PDF generated from same canvas; source and identity independently checked",
+    "file_identities": [
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure05.png",
+        "sha256": "3ca69668bb5f7053182e93f8de4c1cece94bb9d4847cdd16fd3ffe9a39beeb83"
+      },
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure05.pdf",
+        "sha256": "46bd8857cacc164b3c86133b10c92df6d57e5d7bd296c627015e69205b51656f"
+      }
+    ]
+  },
+  {
+    "figure": "figure06",
+    "title": "Regional reference surfaces; Buckinghamshire proxy retained",
+    "source": "formal figure6 data; copied LAD21 geometry",
+    "scale": "exp(weighted mean eta)",
+    "reference": "common calendar; weather/log-C center; LAD21/23 compatibility unresolved",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure06.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure06.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "passed",
+    "visual_review_scope": "PNG inspected for axes, units, labels and layout; PDF generated from same canvas; source and identity independently checked",
+    "file_identities": [
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure06.png",
+        "sha256": "0dd958e59b57704531af81d11483ec2518023691988c1e499896d965d8c9ccf7"
+      },
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure06.pdf",
+        "sha256": "19c39f087ae4d2c65ff2643eead61829d2b06c048e7c62f60088a11f82f63231"
+      }
+    ]
+  },
+  {
+    "figure": "figure07",
+    "title": "Range of the fitted reference curves",
+    "source": "formal figure7 reference JSON",
+    "scale": "exponentiated grid max/min ratio",
+    "reference": "not endpoint ratio or causal importance",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure07.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure07.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "passed",
+    "visual_review_scope": "PNG inspected for axes, units, labels and layout; PDF generated from same canvas; source and identity independently checked",
+    "file_identities": [
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure07.png",
+        "sha256": "a0b75350334c5c3139943bb56ee4da6f657713490a9f1fbb4378b33848bc9676"
+      },
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure07.pdf",
+        "sha256": "10552d1e8b579be412deac0dda1944d4f2e994b649b2ed0a6710c76e33bd2445"
+      }
+    ]
+  },
+  {
+    "figure": "figure08",
+    "title": "Information contributions in main and weather populations",
+    "source": "formal metrics.json / contributions.json",
+    "scale": "R2 percentage points",
+    "reference": "E0 gust increment and R0c conditional G/K; paired within each population, cross-population descriptive",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure08.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure08.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "passed",
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\product_complete.py",
+    "visual_review_scope": "PNG inspected for axes, units, labels and layout; PDF generated from same canvas; source and identity independently checked",
+    "file_identities": [
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure08.png",
+        "sha256": "8d7a17ead1cfb7cf790bbbb6923d629be23cfde95319514c6fc240a7a61b8639"
+      },
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure08.pdf",
+        "sha256": "c8b016dd6e09220a91912d83ad59b9e32f3004b8e54d8836ca7ea48a8517aace"
+      }
+    ]
+  },
+  {
+    "figure": "figure09",
+    "title": "Named-window predictions: distinct descriptive and date-OOF identities",
+    "source": "formal figure9 event CSVs",
+    "scale": "eta vs log target; no double log",
+    "reference": "UNIQUE_ANY; overlaps listed once; no true process holdout",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure09.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure09.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "passed",
+    "visual_review_scope": "PNG inspected for axes, units, labels and layout; PDF generated from same canvas; source and identity independently checked",
+    "file_identities": [
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure09.png",
+        "sha256": "aaffa1708f32b9abf2ea43a542069b91ed86bc3133647a88b29806ac31ed87fe"
+      },
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure09.pdf",
+        "sha256": "a665fc6ebd42cdb941fc7ebf5fc5752ce9eb5502f2aea79f6d80061b2885d2e7"
+      }
+    ]
+  },
+  {
+    "figure": "figure10",
+    "title": "Period comparison using equivalent full-rank calendar bases",
+    "source": "periods_v2 archives; period_comparison.csv",
+    "scale": "physical quadratic coefficient",
+    "reference": "each period own training scale; no overlapping-CV nominal intervals",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure10.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure10.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "passed",
+    "visual_review_scope": "PNG inspected for axes, units, labels and layout; PDF generated from same canvas; source and identity independently checked",
+    "file_identities": [
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure10.png",
+        "sha256": "27c37c1c1f7eb6f5ba530930a0a9053a7536bac729a64cafb6701d0cd3cb5204"
+      },
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure10.pdf",
+        "sha256": "94b7dd36b3b390690cbb37ac2cf3e2afe11e4676b65acf85be7f80a7da4911bd"
+      }
+    ]
+  },
+  {
+    "figure": "figureD1",
+    "title": "Stage composition and pooled means within each population",
+    "source": "formal stage_composition.csv / stage_pooled.csv; population-specific shared bins",
+    "scale": "explicit per axis",
+    "reference": "numerically ordered frozen edges; actual counts and means independently derived",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figureD1.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figureD1.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "passed",
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\artifact_acceptance.py",
+    "visual_review_scope": "PNG inspected for axes, units, labels and layout; PDF generated from same canvas; source and identity independently checked",
+    "file_identities": [
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figureD1.png",
+        "sha256": "ca2bbdb4fb298ecf89bd5926b3cdb36a1b0a85629ca076049770e05eafea75d5"
+      },
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figureD1.pdf",
+        "sha256": "f17e0a9d16daec7cf8357d68bea75b510d729eb83a0dd98172c430044a0a0d91"
+      }
+    ]
+  },
+  {
+    "figure": "figureF1",
+    "title": "Full-fit log-OLS residual diagnostics",
+    "source": "four panels from two formal main model archives; no additional fits",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figureF1.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figureF1.pdf"
+    ],
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\src\\final_data.py",
+    "visual_review": "passed",
+    "scale": "explicit per axis",
+    "reference": "actual frozen B1 population and archives",
+    "visual_review_scope": "PNG inspected for axes, units, labels and layout; PDF generated from same canvas; source and identity independently checked",
+    "file_identities": [
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figureF1.png",
+        "sha256": "58af5a84f553d6b244ce9335be79339383a2f8f367e96b854ff54c5f48b635e9"
+      },
+      {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figureF1.pdf",
+        "sha256": "555cc5aea7e69a8d760ee316f477b288eaf7525b6208de25ce92d18d70767c19"
+      }
+    ]
+  }
+]

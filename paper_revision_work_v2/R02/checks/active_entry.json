@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\v3_validation\\v3_validation_pipeline.py",
+  "sha256": "c6421fd3a4f37cae278fc4553149295f431173f912cb348793b84c6c2c2175e4",
+  "step0": {
+    "input_version": "R02_input_20260905",
+    "event_manifest": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R02\\data\\EVENT_MANIFEST.json",
+    "event_sha256": "8ac332cdb59d5eb961a01146757665a2600ebaada4265c8ac1ac30218c6f066d",
+    "n_total_events_v3": 135025,
+    "n_weather_matched_events": 121178,
+    "weather_matched_pct": 89.744862062581,
+    "cause_group_counts_in_matched_sample": {
+      "technical_asset": 52310,
+      "non_fault_or_unknown": 46240,
+      "weather_natural": 10616,
+      "third_party": 9668,
+      "external_or_customer": 1807,
+      "human_error": 536,
+      "unresolved": 1
+    },
+    "scope": "R02 inputs; numeric availability includes explicitly flagged v3-only provenance",
+    "models_run": 0
+  },
+  "step1": {
+    "n_events_in_sample": 121178,
+    "n_missing_LAD21CD_after": 135,
+    "gapfill_performed": false,
+    "note": "R02 producer already checked selected-stage LAD and rejoined annual population; coverage only, no historical writes."
+  },
+  "step2_guard": "R02 input rebuilding is complete. R03 must repair fold/tail interfaces before model execution; historical folds are not reused.",
+  "models_run": 0,
+  "import_mkdir_calls": 0
+}

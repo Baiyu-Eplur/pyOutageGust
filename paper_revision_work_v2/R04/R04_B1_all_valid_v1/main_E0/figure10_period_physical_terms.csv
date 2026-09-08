@@ -1,0 +1,3 @@
+period,target,n,rank,columns,status,physical_linear_gust,physical_quadratic_gust,pressure_physical,source,cross_period_independence_assumed,CV_inverse_variance_interval,physical_linear_SE,physical_quadratic_SE,reference_distribution,nominal_independent_CV_interval,failure_reason
+development,E0,48323,25,25,descriptive_full_fit_available,-0.07775462234479237,0.0032035587580658592,1012.0748262233079,single full fit and its own scaler,False,,0.008177420063397011,0.0003587809553088971,not converted into a cross-period hypothesis test,,
+later,E0,12113,18,19,blocked_calendar_design_rank_deficient,,,,,,,,,,,additive year/month coding not full rank in this period; no silent term dropping or H0 fallback

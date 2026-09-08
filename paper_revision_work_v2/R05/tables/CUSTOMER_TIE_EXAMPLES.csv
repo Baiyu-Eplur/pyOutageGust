@@ -1,0 +1,13 @@
+anonymous_event,minimum_stage_number,min_stage_tie_n,min_stage_customer_unique_n,earliest_time_tie_n,earliest_time_customer_unique_n,min_stage_customers,earliest_time_customers,aggregate_C,in_main
+c19f18c67a32,1,1,1,3,3,10,1,27,False
+a099652eea27,1,1,1,3,3,17,17,51,True
+2b4b69a252ee,2,1,1,3,3,94,94,454,True
+70739916baf6,1,1,1,2,2,1,1,4,True
+fdde9c3e3d50,1,1,1,2,2,17,1,18,False
+981ca1da1314,1,1,1,5,4,7,1,50,True
+cb511a5cb9e1,1,1,1,2,2,30,21,51,True
+3f60e5023c14,1,1,1,2,2,142,142,143,False
+da49e29ee6e8,1,1,1,3,2,24,1,51,True
+59900c0cbcad,1,1,1,5,5,30,22,132,True
+af77921eff32,1,1,1,2,2,49,104,320,False
+54a4312ec8bf,1,1,1,2,2,22,21,43,False

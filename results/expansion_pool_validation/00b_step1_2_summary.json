@@ -1,0 +1,24 @@
+{
+  "p99_duration_threshold_merged": 114.27333333333372,
+  "n_legacy_joint_raw_customers_ge1_duration_ge1": 38061,
+  "n_after_p99_trim": 37680,
+  "n_final_complete_predictors": 36124,
+  "fold_sizes": {
+    "0": 7231,
+    "1": 7220,
+    "2": 7220,
+    "3": 7233,
+    "4": 7220
+  },
+  "fold_self_check": {
+    "dates_crossing_fold": 0,
+    "dates_total": 912,
+    "substations_crossing_fold": 744,
+    "substations_total": 747,
+    "lads_crossing_fold": 111,
+    "lads_total": 111,
+    "outcome_blind": true
+  },
+  "cmd1_p99_threshold_screening_only": 86.6713,
+  "cmd1_n_final": 9122
+}

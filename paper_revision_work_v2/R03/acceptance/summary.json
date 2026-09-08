@@ -1,0 +1,198 @@
+{
+  "events": 135025,
+  "candidate_base": 60436,
+  "samples": [
+    {
+      "sample": "main_E0",
+      "H0": 60437,
+      "R02": 60436,
+      "common": 60436,
+      "enter": 0,
+      "exit": 1,
+      "v3_only": 0
+    },
+    {
+      "sample": "main_R0c",
+      "H0": 59834,
+      "R02": 60436,
+      "common": 59834,
+      "enter": 602,
+      "exit": 0,
+      "v3_only": 0
+    },
+    {
+      "sample": "weather_E0",
+      "H0": 9857,
+      "R02": 9857,
+      "common": 9857,
+      "enter": 0,
+      "exit": 0,
+      "v3_only": 0
+    },
+    {
+      "sample": "weather_R0c",
+      "H0": 9758,
+      "R02": 9857,
+      "common": 9758,
+      "enter": 99,
+      "exit": 0,
+      "v3_only": 0
+    }
+  ],
+  "exclusive_entrants": [
+    {
+      "sample": "main_R0c",
+      "exclusive_reason_in_order": "旧四天气不完整→新可用",
+      "events": 0
+    },
+    {
+      "sample": "main_R0c",
+      "exclusive_reason_in_order": "旧年份人口缺失→新完整",
+      "events": 0
+    },
+    {
+      "sample": "main_R0c",
+      "exclusive_reason_in_order": "旧原因不符→新共识符合",
+      "events": 0
+    },
+    {
+      "sample": "main_R0c",
+      "exclusive_reason_in_order": "旧目标无效→新有效",
+      "events": 0
+    },
+    {
+      "sample": "main_R0c",
+      "exclusive_reason_in_order": "旧H0截尾→完整有效尾部",
+      "events": 602
+    },
+    {
+      "sample": "main_R0c",
+      "exclusive_reason_in_order": "其他待解释",
+      "events": 0
+    },
+    {
+      "sample": "weather_R0c",
+      "exclusive_reason_in_order": "旧四天气不完整→新可用",
+      "events": 0
+    },
+    {
+      "sample": "weather_R0c",
+      "exclusive_reason_in_order": "旧年份人口缺失→新完整",
+      "events": 0
+    },
+    {
+      "sample": "weather_R0c",
+      "exclusive_reason_in_order": "旧原因不符→新共识符合",
+      "events": 0
+    },
+    {
+      "sample": "weather_R0c",
+      "exclusive_reason_in_order": "旧目标无效→新有效",
+      "events": 0
+    },
+    {
+      "sample": "weather_R0c",
+      "exclusive_reason_in_order": "旧H0截尾→完整有效尾部",
+      "events": 99
+    },
+    {
+      "sample": "weather_R0c",
+      "exclusive_reason_in_order": "其他待解释",
+      "events": 0
+    }
+  ],
+  "overlapping_entrant_flags": [
+    {
+      "sample": "main_R0c",
+      "overlapping_flag": "时间改变",
+      "events": 85
+    },
+    {
+      "sample": "main_R0c",
+      "overlapping_flag": "任一天气变化",
+      "events": 85
+    },
+    {
+      "sample": "main_R0c",
+      "overlapping_flag": "R1兼容阈值也会排除",
+      "events": 602
+    },
+    {
+      "sample": "weather_R0c",
+      "overlapping_flag": "时间改变",
+      "events": 14
+    },
+    {
+      "sample": "weather_R0c",
+      "overlapping_flag": "任一天气变化",
+      "events": 14
+    },
+    {
+      "sample": "weather_R0c",
+      "overlapping_flag": "R1兼容阈值也会排除",
+      "events": 99
+    }
+  ],
+  "date_groups": 1096,
+  "fold_events": {
+    "0": 12098,
+    "1": 12085,
+    "2": 12085,
+    "3": 12085,
+    "4": 12083
+  },
+  "fold_date_groups": {
+    "0": 216,
+    "1": 220,
+    "2": 220,
+    "3": 220,
+    "4": 220
+  },
+  "storm_union": {
+    "UTC_UNIQUE_ANY": 7300,
+    "UTC_overlap_events_ge2": 702,
+    "UTC_summed_window_memberships": 8002,
+    "UTC_overlap_extra_memberships": 702,
+    "London_UNIQUE_ANY": 7298,
+    "London_overlap_events_ge2": 702,
+    "UTC_London_union_difference": 6
+  },
+  "calendar_all": {
+    "UTC_London_date_diff": 1845,
+    "UTC_London_study_diff": 2,
+    "UTC_London_period_diff": 2
+  },
+  "LAD_codes": 113,
+  "LAD_codes_in_population": 113,
+  "candidate_LAD_codes": 111,
+  "confirmed_geography_error_codes": [],
+  "geography_identity_unresolved_codes": 113,
+  "geography_scope": "no local explicit LAD21-to-LAD23 compatibility source found; same-code membership only",
+  "Buck_workbook_sha256": "6eb516a87654078ee69d4df55c8bc749b5da5de117f996f262c0c762bc20b38f",
+  "Buck_sheets": [
+    "Notes",
+    "LSOA",
+    "Local authorities",
+    "Rural urban classification",
+    "Profiles",
+    "Rankings for all indicators"
+  ],
+  "weather_event_states": [
+    {
+      "weather_cache_status": "missing_file",
+      "weather_numeric_available": false,
+      "events": 8236
+    },
+    {
+      "weather_cache_status": "query_ineligible",
+      "weather_numeric_available": false,
+      "events": 5611
+    },
+    {
+      "weather_cache_status": "readable",
+      "weather_numeric_available": true,
+      "events": 121178
+    }
+  ],
+  "input_sha256": "8ac332cdb59d5eb961a01146757665a2600ebaada4265c8ac1ac30218c6f066d"
+}

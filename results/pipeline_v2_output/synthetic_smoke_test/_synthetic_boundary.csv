@@ -1,0 +1,2 @@
+Incident Reference,Start Date and Time,End Date and Time,Restoration Stage,Re-interruption Stage,Number of Customers Restored,Cause Code,cause_code_norm,cause_group_official,customers_v2,duration_A_customer_weighted_hours,duration_B_full_span_hours,all_stages_are_reinterruption,stage_row_count
+INC_D,2023-05-01T00:00:00,2023-05-01T01:00:00,1,Y,30,71,71,technical_asset,,0.875,2.0,True,2

@@ -1,0 +1,21 @@
+{
+  "beta1": -0.0007214352274392613,
+  "beta2": 0.08482921228863778,
+  "beta3_interaction": 0.021173962710705384,
+  "gust_mean": 9.913135115978218,
+  "gust_sd": 5.276540005192859,
+  "pressure_physical": 1012.0665864042937,
+  "pressure_mean": 1012.0665864042937,
+  "pressure_sd": 13.082506925357073,
+  "support_ms": [
+    2.200000047683716,
+    27.5
+  ],
+  "status": "conditional_fitted_minimum",
+  "minimum_ms": 9.935572444676886,
+  "interval": null,
+  "interval_status": "not_estimated_do_not_draw",
+  "curvature_physical": 0.006093642330934421,
+  "algebraic_vertex_ms": 9.935572444676886,
+  "failure_reason": null
+}

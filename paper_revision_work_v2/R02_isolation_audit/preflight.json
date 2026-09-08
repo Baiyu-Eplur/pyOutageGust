@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-09-05T17:31:24.922752+00:00",
+  "prior_artifact_files_verified": 311,
+  "protected_files": 549,
+  "modified_old_files": [
+    "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\v3_validation\\v3_validation_pipeline.py"
+  ],
+  "source_snapshot_count": 91,
+  "modified_snapshot_sources": [
+    "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\v3_validation\\v3_validation_pipeline.py"
+  ],
+  "old_entry_H0_sha256": "308da0c13e17a8c8b45327a0475632f700f8912b283f58811f9259af409e6e1c",
+  "old_entry_R02_sha256": "c6421fd3a4f37cae278fc4553149295f431173f912cb348793b84c6c2c2175e4",
+  "restoration_snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\v3_validation\\v3_validation_pipeline.py",
+  "user_direction": "审查所有工作；基于原有工作另起炉灶，不破坏原有代码"
+}

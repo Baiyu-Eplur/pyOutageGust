@@ -1,0 +1,9 @@
+old_cause_group,cause_group_event,events
+external_or_customer,external_or_customer,4967
+external_or_customer,unresolved,1
+human_error,human_error,623
+non_fault_or_unknown,non_fault_or_unknown,53147
+technical_asset,technical_asset,54866
+technical_asset,unresolved,1
+third_party,third_party,10208
+weather_natural,weather_natural,11212

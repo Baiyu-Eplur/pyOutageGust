@@ -1,0 +1,44 @@
+{
+  "fits": 0,
+  "bin_validation": [
+    {
+      "group": "main",
+      "bin_edges": [
+        0.0,
+        1.0,
+        2.0,
+        35.0,
+        27013.0
+      ],
+      "bin_count_sum": 60436,
+      "n": 60436,
+      "means_ascending_bins": [
+        21.451354929233773,
+        17.639356907609635,
+        15.84619474439504,
+        11.7081153565989
+      ],
+      "actual_bin_counts_means_verified": true
+    },
+    {
+      "group": "weather",
+      "bin_edges": [
+        0.0,
+        2.0,
+        27.0,
+        213.0,
+        22130.0
+      ],
+      "bin_count_sum": 9857,
+      "n": 9857,
+      "means_ascending_bins": [
+        28.038088012139603,
+        19.182335630203845,
+        12.839330601092897,
+        12.198637657584383
+      ],
+      "actual_bin_counts_means_verified": true
+    }
+  ],
+  "fold_summary_source": "archived models; covariance only for main folds, no refit"
+}

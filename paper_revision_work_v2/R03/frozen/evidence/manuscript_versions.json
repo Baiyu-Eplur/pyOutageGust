@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Draft_revised.docx",
+    "local": "D:\\Pyprogramme\\STST2603\\claude_branch\\docs\\0905new\\Draft_revised.docx",
+    "local_sha256": "196cef4abcdf4e6723b55035049c08de75613c3cc5a56314b264490f70e5926c",
+    "supplied": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_handoff_v2\\reference\\supplied_manuscripts\\Draft_revised.docx",
+    "supplied_sha256": "196cef4abcdf4e6723b55035049c08de75613c3cc5a56314b264490f70e5926c",
+    "same": true
+  },
+  {
+    "name": "Appendix_revised.docx",
+    "local": "D:\\Pyprogramme\\STST2603\\claude_branch\\docs\\0905new\\Appendix_revised.docx",
+    "local_sha256": "55f5c4f30fc75473d9da354b2819d3f8298904b8be94104ca3e107276696af8c",
+    "supplied": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_handoff_v2\\reference\\supplied_manuscripts\\Appendix_revised.docx",
+    "supplied_sha256": "55f5c4f30fc75473d9da354b2819d3f8298904b8be94104ca3e107276696af8c",
+    "same": true
+  }
+]

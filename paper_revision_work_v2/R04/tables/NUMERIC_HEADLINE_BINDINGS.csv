@@ -1,0 +1,13 @@
+旧定位,旧值/说法,当前值,单位,目标/人群,n,当前来源,MR,CL
+D-P002/039,60453/60437/59834,60436 E0；60436 R0c,events,main,60436.0,core_actual_acceptance.json,MR01/09/10,CL01
+D-P017,9.87 / 5.22,9.910222388 / 5.279979383,m/s mean/SD,main E0,60436.0,main_E0/full_model.json,MR05/11,CL01/02
+D-P030；A-P018,47.13→93.02；1.97,47.128334106→93.025729698；1.973881137,customers / ratio,lowest stage number,60436.0,customer_aggregation_comparison.json,MR04,CL01
+同上定义核查,earliest stage文字混用,31.121963730→93.025729698；2.989070050,customers / ratio,earliest record time,60436.0,customer_aggregation_comparison.json,MR04,CL01
+D-P071/073；摘要,10.69/10.7,10.807545499,m/s,main E0; mean physical pressure,60436.0,conditional_minimum_no_CI.json,MR18/19,CL02
+D-T04 weather E0,−0.15,+0.382246343,R²百分点,weather E0,9857.0,contributions.json,MR12/13/18,CL03
+D-T04 main R0c,gust0.62–0.75；customers7.73–7.87,G|K1.142120140；K|G6.141466554,R²百分点,main R0c,60436.0,contributions.json,MR12/13,CL03
+D-T04 weather R0c,gust1.43–1.71；customers1.00–1.28,G|K3.579703969；K|G1.507182044,R²百分点,weather R0c,9857.0,contributions.json,MR12/13,CL03
+D-P102,27日；8.15%；14.72%,25唯一日；7.366470316%；13.257885884%,days / events% / customers%,main unique storm,60436.0,storm_statistics.csv,MR14/16,CL04
+D-P006,1601；101LAD；376712；52.7h,见storm_LAD_details按main/weather分别取数，旧句混用群体须重写,events/LAD/customers/h,Eunice,,storm_LAD_details.csv,MR05/16,CL01/04
+MR18三阶旧反证,E0 ΔR²≈0.001441,E0 +0.001931639；R0c +0.000498187,R²,main paired OOF,60436.0,supplement_summary.csv,MR18,CL02
+A-T12；A-P086,500次旧bootstrap；9.2–12.1,未运行；无合格B1最低点CI,not available,B1 minima,,instruction scope,MR19/20,CL02

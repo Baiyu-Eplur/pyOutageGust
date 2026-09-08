@@ -1,0 +1,233 @@
+{
+  "B00": {
+    "population": "storm",
+    "family": "mean",
+    "gust": "none",
+    "grid": [
+      {}
+    ]
+  },
+  "B01": {
+    "population": "storm",
+    "family": "ridge_linear",
+    "gust": "none",
+    "grid": [
+      {
+        "lambda": 0
+      },
+      {
+        "lambda": 0.001
+      },
+      {
+        "lambda": 0.1
+      }
+    ]
+  },
+  "G02": {
+    "population": "all_period",
+    "family": "ridge_linear",
+    "gust": "quadratic",
+    "grid": [
+      {
+        "lambda": 0
+      },
+      {
+        "lambda": 0.001
+      },
+      {
+        "lambda": 0.1
+      }
+    ]
+  },
+  "P00": {
+    "population": "all_period",
+    "family": "ridge_linear",
+    "gust": "quadratic+storm_offset",
+    "grid": [
+      {
+        "lambda": 0
+      },
+      {
+        "lambda": 0.001
+      },
+      {
+        "lambda": 0.1
+      }
+    ]
+  },
+  "P02": {
+    "population": "all_period",
+    "family": "ridge_linear",
+    "gust": "quadratic+storm_offset+storm_interactions",
+    "grid": [
+      {
+        "lambda": 0
+      },
+      {
+        "lambda": 0.001
+      },
+      {
+        "lambda": 0.1
+      }
+    ]
+  },
+  "S01": {
+    "population": "storm",
+    "family": "ridge_linear",
+    "gust": "linear",
+    "grid": [
+      {
+        "lambda": 0
+      },
+      {
+        "lambda": 0.001
+      },
+      {
+        "lambda": 0.1
+      }
+    ]
+  },
+  "S02": {
+    "population": "storm",
+    "family": "ridge_linear",
+    "gust": "quadratic",
+    "grid": [
+      {
+        "lambda": 0
+      },
+      {
+        "lambda": 0.001
+      },
+      {
+        "lambda": 0.1
+      }
+    ]
+  },
+  "S03": {
+    "population": "storm",
+    "family": "cubic_quantile_bspline_generalized_ridge",
+    "gust": "spline",
+    "grid": [
+      {
+        "n_knots": 3,
+        "difference_penalty": 0.01,
+        "control_lambda": 0.001
+      },
+      {
+        "n_knots": 3,
+        "difference_penalty": 0.01,
+        "control_lambda": 0.1
+      },
+      {
+        "n_knots": 3,
+        "difference_penalty": 1,
+        "control_lambda": 0.001
+      },
+      {
+        "n_knots": 3,
+        "difference_penalty": 1,
+        "control_lambda": 0.1
+      },
+      {
+        "n_knots": 5,
+        "difference_penalty": 0.01,
+        "control_lambda": 0.001
+      },
+      {
+        "n_knots": 5,
+        "difference_penalty": 0.01,
+        "control_lambda": 0.1
+      },
+      {
+        "n_knots": 5,
+        "difference_penalty": 1,
+        "control_lambda": 0.001
+      },
+      {
+        "n_knots": 5,
+        "difference_penalty": 1,
+        "control_lambda": 0.1
+      }
+    ],
+    "extrapolation": "linear"
+  },
+  "S04": {
+    "population": "storm",
+    "family": "profiled_softplus_ridge",
+    "gust": "monotone softplus",
+    "grid": [
+      {
+        "control_lambda": 0.001
+      },
+      {
+        "control_lambda": 0.1
+      }
+    ],
+    "tau_bounds": "training gust q01-q99",
+    "h_bounds": [
+      0.05,
+      20
+    ],
+    "starts": "tau q10/q50/q75/q90 x h .5/2/5 plus b=0 boundary"
+  },
+  "G05": {
+    "population": "all_period",
+    "family": "HistGradientBoostingRegressor",
+    "gust": "raw",
+    "grid": [
+      {
+        "max_leaf_nodes": 7,
+        "min_samples_leaf": 20
+      },
+      {
+        "max_leaf_nodes": 7,
+        "min_samples_leaf": 50
+      },
+      {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 20
+      },
+      {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 50
+      }
+    ],
+    "fixed": {
+      "loss": "squared_error",
+      "learning_rate": 0.05,
+      "max_iter": 200,
+      "early_stopping": false,
+      "l2_regularization": 1
+    }
+  },
+  "S05": {
+    "population": "storm",
+    "family": "HistGradientBoostingRegressor",
+    "gust": "raw",
+    "grid": [
+      {
+        "max_leaf_nodes": 7,
+        "min_samples_leaf": 20
+      },
+      {
+        "max_leaf_nodes": 7,
+        "min_samples_leaf": 50
+      },
+      {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 20
+      },
+      {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 50
+      }
+    ],
+    "fixed": {
+      "loss": "squared_error",
+      "learning_rate": 0.05,
+      "max_iter": 200,
+      "early_stopping": false,
+      "l2_regularization": 1
+    }
+  }
+}

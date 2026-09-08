@@ -1,0 +1,18 @@
+{
+  "prior_manifest_files": 311,
+  "changed_revision_only_files": [
+    "code/check_r02.py",
+    "code/close_r02.py",
+    "DECISIONS.md",
+    "issue_ledger.json",
+    "ISSUE_LEDGER.md",
+    "R02/REPRODUCE.md",
+    "reports/R02_report.md",
+    "RETURN_TO_CHATGPT.md",
+    "RUN_STATE.json",
+    "STATUS.md"
+  ],
+  "unchanged_prior_files": 301,
+  "original_research_files_unchanged": 549,
+  "all_numeric_outputs_unchanged": true
+}

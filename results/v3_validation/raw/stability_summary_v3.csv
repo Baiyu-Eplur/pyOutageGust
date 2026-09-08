@@ -1,0 +1,15 @@
+model,term,n_folds,same_sign_folds,significant_folds,mean_coefficient,coef_cv_pct,all_same_sign
+E0_prime_customers_v2,z_gust_0h,5,5,5,-0.03863680064055035,18.280970857013713,True
+E0_prime_customers_v2,z_gust_0h_sq,5,5,5,0.08134165969287935,12.554440798710312,True
+R0_prime_A_duration_A,z_gust_0h,5,5,5,0.023159155433109826,10.145848725655805,True
+R0_prime_A_duration_A,z_gust_0h_sq,5,5,5,0.03316769798079355,27.044038203555626,True
+R0_prime_B_duration_B,z_gust_0h,5,5,5,0.025847299375094522,23.934147531777803,True
+R0_prime_B_duration_B,z_gust_0h_sq,5,5,5,0.06083850234151521,16.397027214379026,True
+R0c_prime_A_custadj,z_gust_0h,5,5,0,0.006176139799603117,58.032210801022266,True
+R0c_prime_A_custadj,z_gust_0h_sq,5,5,5,0.06315014300938729,14.03120144099709,True
+R0c_prime_A_custadj,z_log1p_customers_v2,5,5,5,-0.6064749079669924,0.31428416291261113,True
+R0c_prime_A_custadj,z_log1p_customers_v2_sq,5,5,5,0.06728480113648393,2.80202916659624,True
+R0c_prime_B_custadj,z_gust_0h,5,5,5,0.02370915289404501,26.908873142238132,True
+R0c_prime_B_custadj,z_gust_0h_sq,5,5,5,0.06870972125052828,13.877139311745779,True
+R0c_prime_B_custadj,z_log1p_customers_v2,5,5,5,-0.10933325820676827,2.401714039436257,True
+R0c_prime_B_custadj,z_log1p_customers_v2_sq,5,5,5,-0.05365314057754542,2.284537656861697,True

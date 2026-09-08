@@ -1,0 +1,23 @@
+{
+  "LSOA_sheet_dimension": "A1:O32845",
+  "four_old_LAD_LSOA_rows": 319,
+  "unique_LSOA_codes": 319,
+  "fields_checked": [
+    "2011 LSOA",
+    "2019 LAD",
+    "Income Score(rate)",
+    "mid2015 total population excluding prisoners"
+  ],
+  "indicator_rebuilt": false,
+  "Moran_rebuilt": false,
+  "remaining": [
+    "compatible LSOA geometry",
+    "complete weights recipe",
+    "vintage and membership verification before dependent V fits"
+  ],
+  "workbook": {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\frozen\\reference_data\\localincomedeprivationdata.xlsx",
+    "bytes": 3504872,
+    "sha256": "6eb516a87654078ee69d4df55c8bc749b5da5de117f996f262c0c762bc20b38f"
+  }
+}

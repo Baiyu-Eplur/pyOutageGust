@@ -1,0 +1,15 @@
+{
+  "producer": "reconstructed_stage_composition_using_frozen_step42_definition",
+  "n": 720,
+  "event_ids_sha256": "5f553f639e31688c97ec668c0db3b601ccf42eaec3c4f32b47f16be8bb251155",
+  "shared_customer_bin_edges": [
+    0.0,
+    1.0,
+    2.0,
+    30.25,
+    3186.0
+  ],
+  "duplicate_quantile_edges": "collapsed and recorded",
+  "stage_source": "R02 full-stage stage_row_count",
+  "step27_full_original_table": "not claimed reproduced; subgroup-specific historical bins require separate identity"
+}

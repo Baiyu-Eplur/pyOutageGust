@@ -1,0 +1,548 @@
+[
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\Buckinghamshire_combination.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\Buckinghamshire_combination.py",
+    "sha256": "85301a882d318e76b8280144e7ec98a9525d30af1ef3ec9b0a8c5862be24cfa6",
+    "snapshot_sha256": "85301a882d318e76b8280144e7ec98a9525d30af1ef3ec9b0a8c5862be24cfa6"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\borrowed_from_main\\coef_fold_stability_E0_R0.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\borrowed_from_main\\coef_fold_stability_E0_R0.py",
+    "sha256": "1741491055ff836b314059814e800fe49ef9169c3c44906da0a623e6d90c0e59",
+    "snapshot_sha256": "1741491055ff836b314059814e800fe49ef9169c3c44906da0a623e6d90c0e59"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\borrowed_from_main\\coef_fold_stability_expansion_validation.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\borrowed_from_main\\coef_fold_stability_expansion_validation.py",
+    "sha256": "59bd9a62e75ed800637c8a489386275808a19c0234c6b989b93d67bf600bc454",
+    "snapshot_sha256": "59bd9a62e75ed800637c8a489386275808a19c0234c6b989b93d67bf600bc454"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\borrowed_from_main\\coef_fold_stability_R0_custadj.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\borrowed_from_main\\coef_fold_stability_R0_custadj.py",
+    "sha256": "40b891a9b246b2102b687100d774f7496f1c07b2f883b53308d4b07c271ff9a9",
+    "snapshot_sha256": "40b891a9b246b2102b687100d774f7496f1c07b2f883b53308d4b07c271ff9a9"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\cause_code_robustness\\step1_composition_diagnostic.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\cause_code_robustness\\step1_composition_diagnostic.py",
+    "sha256": "ca01064bd15a08d7eb2287372f9447a54f25d0dba4d7abb4d376795ce258dda5",
+    "snapshot_sha256": "ca01064bd15a08d7eb2287372f9447a54f25d0dba4d7abb4d376795ce258dda5"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\cause_code_robustness\\step2_wt_subset_critical_wind_speed.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\cause_code_robustness\\step2_wt_subset_critical_wind_speed.py",
+    "sha256": "be4a2afe1b107d266fc8f7b912620d376634189b0056e1b5397c1fccb21de033",
+    "snapshot_sha256": "be4a2afe1b107d266fc8f7b912620d376634189b0056e1b5397c1fccb21de033"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\code_audit_20260905\\audit_pipeline.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\code_audit_20260905\\audit_pipeline.py",
+    "sha256": "5ae8a271a5d944269f3f9aee4e87254e22e7d319fe46ccd9d2277a5c1e62f121",
+    "snapshot_sha256": "5ae8a271a5d944269f3f9aee4e87254e22e7d319fe46ccd9d2277a5c1e62f121"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\code_audit_20260905\\trace_findings.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\code_audit_20260905\\trace_findings.py",
+    "sha256": "7d6d5d92173667f47c06ef2f22c83808799336e0c1353306b8a0b1614518c53d",
+    "snapshot_sha256": "7d6d5d92173667f47c06ef2f22c83808799336e0c1353306b8a0b1614518c53d"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\critical_wind_speed\\critical_wind_speed_pipeline.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\critical_wind_speed\\critical_wind_speed_pipeline.py",
+    "sha256": "a38a4947e3d1ffaf84aed0e6b9ee63b1c70fd438a4f3176edb47a9cbbbe42028",
+    "snapshot_sha256": "a38a4947e3d1ffaf84aed0e6b9ee63b1c70fd438a4f3176edb47a9cbbbe42028"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\customers_duration_shape_investigation\\step1_binned_relationship.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\customers_duration_shape_investigation\\step1_binned_relationship.py",
+    "sha256": "065f1d742630c9f157d65353d2a4799a5cdcb6a3254bbfeca5387f127cb77c60",
+    "snapshot_sha256": "065f1d742630c9f157d65353d2a4799a5cdcb6a3254bbfeca5387f127cb77c60"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\customers_duration_shape_investigation\\step2_subgroup_check.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\customers_duration_shape_investigation\\step2_subgroup_check.py",
+    "sha256": "988c11e830ede4072daedbe80877e93e33e36d4d8c415cac3d11b914ca691a4b",
+    "snapshot_sha256": "988c11e830ede4072daedbe80877e93e33e36d4d8c415cac3d11b914ca691a4b"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\customers_duration_shape_investigation\\step3_flexible_form.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\customers_duration_shape_investigation\\step3_flexible_form.py",
+    "sha256": "d2e32ad4eab9bbbde1a552f9653e6d3d8c0c00f2c6c57c6a6cea37b74b8b9d39",
+    "snapshot_sha256": "d2e32ad4eab9bbbde1a552f9653e6d3d8c0c00f2c6c57c6a6cea37b74b8b9d39"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\customers_duration_shape_investigation\\step5_n_stages_stratification.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\customers_duration_shape_investigation\\step5_n_stages_stratification.py",
+    "sha256": "90bd2390cf7ebc2f224e0574b126c2401a61b8e638e46925ddd29dd42e534336",
+    "snapshot_sha256": "90bd2390cf7ebc2f224e0574b126c2401a61b8e638e46925ddd29dd42e534336"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\dev_sample_decontamination\\clean_sample_builder.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\dev_sample_decontamination\\clean_sample_builder.py",
+    "sha256": "8ed94a3d21533f13837d48ef42db70b718572ee9abfcdba359905ae52bed4ba5",
+    "snapshot_sha256": "8ed94a3d21533f13837d48ef42db70b718572ee9abfcdba359905ae52bed4ba5"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\dev_sample_decontamination\\step1_rebuild_clean_sample.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\dev_sample_decontamination\\step1_rebuild_clean_sample.py",
+    "sha256": "55d67d9bdb279a7a8d97acecce9e9dbf0a99754f16aa89493da91d9f701f0646",
+    "snapshot_sha256": "55d67d9bdb279a7a8d97acecce9e9dbf0a99754f16aa89493da91d9f701f0646"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\dev_sample_decontamination\\step2_refit_clean.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\dev_sample_decontamination\\step2_refit_clean.py",
+    "sha256": "d53368d85dab62c1f38935d96758ed6c1264e135aa0261f9deea1959dddb0bb1",
+    "snapshot_sha256": "d53368d85dab62c1f38935d96758ed6c1264e135aa0261f9deea1959dddb0bb1"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\dev_sample_decontamination\\step3_critical_wind_speed_clean.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\dev_sample_decontamination\\step3_critical_wind_speed_clean.py",
+    "sha256": "7ae607f26f46dbe9b7a1d3ed2d6c7dd9cc97b97cdf8775265e815cd567c7ac46",
+    "snapshot_sha256": "7ae607f26f46dbe9b7a1d3ed2d6c7dd9cc97b97cdf8775265e815cd567c7ac46"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\dev_sample_decontamination\\step4_variance_decomposition_clean.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\dev_sample_decontamination\\step4_variance_decomposition_clean.py",
+    "sha256": "a33992f9b16e1f31cbf5dfadf12ca4091634bda7e10fc93ba4555b976417c901",
+    "snapshot_sha256": "a33992f9b16e1f31cbf5dfadf12ca4091634bda7e10fc93ba4555b976417c901"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\combined_sample_builder.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\combined_sample_builder.py",
+    "sha256": "bef8d2ac20adf2a3e0e8d086c62f927cbea317af2cee8223321427e69d536858",
+    "snapshot_sha256": "bef8d2ac20adf2a3e0e8d086c62f927cbea317af2cee8223321427e69d536858"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure10_robustness_forest.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\figure10_robustness_forest.py",
+    "sha256": "5c011b4f377b596370d6bcf48548e1373ebdc4318b7d20b947d18163fbe28c81",
+    "snapshot_sha256": "5c011b4f377b596370d6bcf48548e1373ebdc4318b7d20b947d18163fbe28c81"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure1_study_area.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\figure1_study_area.py",
+    "sha256": "32658a3b74145adf3c24295c5ccb087f55981b2f12cad4a8e54b04875c8f4870",
+    "snapshot_sha256": "32658a3b74145adf3c24295c5ccb087f55981b2f12cad4a8e54b04875c8f4870"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure2_distribution.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\figure2_distribution.py",
+    "sha256": "d0c364b46d77089b7b0aab1960068b8e84d3235f025c109e11254a696cb20c2d",
+    "snapshot_sha256": "d0c364b46d77089b7b0aab1960068b8e84d3235f025c109e11254a696cb20c2d"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure4_dose_response.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\figure4_dose_response.py",
+    "sha256": "c5e624eacf0a984ce176eefb096e662e87bfa683b9217bab5a0a5fec2d7be634",
+    "snapshot_sha256": "c5e624eacf0a984ce176eefb096e662e87bfa683b9217bab5a0a5fec2d7be634"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure5_variance_decomposition.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\figure5_variance_decomposition.py",
+    "sha256": "e0acc5f6de113bfd094d4217868a8619929bc9d3e6c295401c8840187105ad2d",
+    "snapshot_sha256": "e0acc5f6de113bfd094d4217868a8619929bc9d3e6c295401c8840187105ad2d"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure6_regional_map.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\figure6_regional_map.py",
+    "sha256": "2a4af28dd5e466bd48ab3ce12a0808fa9bdf2e63d10106e50749cda622098a9b",
+    "snapshot_sha256": "2a4af28dd5e466bd48ab3ce12a0808fa9bdf2e63d10106e50749cda622098a9b"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure7_magnitude_comparison.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\figure7_magnitude_comparison.py",
+    "sha256": "f264b77763879ed7777c3b0e9347c74ba73f01e198317fbb3e76ab09131da874",
+    "snapshot_sha256": "f264b77763879ed7777c3b0e9347c74ba73f01e198317fbb3e76ab09131da874"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure8_weather_subsample_comparison.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\figure8_weather_subsample_comparison.py",
+    "sha256": "dafc467ec03440f14c86331b9d660fcf08a1826c990dabdcc886946a6adff386",
+    "snapshot_sha256": "dafc467ec03440f14c86331b9d660fcf08a1826c990dabdcc886946a6adff386"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure9_storm_validation.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\figure9_storm_validation.py",
+    "sha256": "53b4deb7895b8ca5abcdede25f4897af00f540720b1694aa1065284da8e04133",
+    "snapshot_sha256": "53b4deb7895b8ca5abcdede25f4897af00f540720b1694aa1065284da8e04133"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figure_style.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\figure_style.py",
+    "sha256": "183312056ab54a78d3642453bd8b1e5e13b5f51dd837eb3f7165bad3fd5f82df",
+    "snapshot_sha256": "183312056ab54a78d3642453bd8b1e5e13b5f51dd837eb3f7165bad3fd5f82df"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\figureD1_composition_effect.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\figureD1_composition_effect.py",
+    "sha256": "37b67ad56cce086933b24e176e6e7a5320e4d887860bb26df788e1184aae1ba2",
+    "snapshot_sha256": "37b67ad56cce086933b24e176e6e7a5320e4d887860bb26df788e1184aae1ba2"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step10_named_storms.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step10_named_storms.py",
+    "sha256": "55f28464c028aebda7b16a1f2366f14bb248aea640696c25baf288e4636b87ea",
+    "snapshot_sha256": "55f28464c028aebda7b16a1f2366f14bb248aea640696c25baf288e4636b87ea"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step13_storm_prediction_check.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step13_storm_prediction_check.py",
+    "sha256": "089a1fa2ae79c06ce6cff95cdc8a5720de8cfce73545f680344c47c509909407",
+    "snapshot_sha256": "089a1fa2ae79c06ce6cff95cdc8a5720de8cfce73545f680344c47c509909407"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step16_range_restriction.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step16_range_restriction.py",
+    "sha256": "525ac055c96538b4c98bb0ca55b4cb31271e09796605cf783e60358214c43c76",
+    "snapshot_sha256": "525ac055c96538b4c98bb0ca55b4cb31271e09796605cf783e60358214c43c76"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step17_weather_natural_subsample.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step17_weather_natural_subsample.py",
+    "sha256": "70b72ca5d78ee673e22f7a945b1d7fa0625a7893c6a22d5f036452d3225e58e5",
+    "snapshot_sha256": "70b72ca5d78ee673e22f7a945b1d7fa0625a7893c6a22d5f036452d3225e58e5"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step1_final_fit.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step1_final_fit.py",
+    "sha256": "0b80f3d0d14faf244b64790af09626e2e08b054cf22943367a4a1981998da2ec",
+    "snapshot_sha256": "0b80f3d0d14faf244b64790af09626e2e08b054cf22943367a4a1981998da2ec"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step21_causecode_gust_diagnostic.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step21_causecode_gust_diagnostic.py",
+    "sha256": "a1f19a86d848dbb91d7ce1e0c2aaf8e0e8cfffa546d57f8022e8621d064152b5",
+    "snapshot_sha256": "a1f19a86d848dbb91d7ce1e0c2aaf8e0e8cfffa546d57f8022e8621d064152b5"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step2_critical_wind_and_variance.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step2_critical_wind_and_variance.py",
+    "sha256": "19a0f1c71c4a94c30c652d93efb1c3c38fa3e2b4732523e6a433aae4ee83fea6",
+    "snapshot_sha256": "19a0f1c71c4a94c30c652d93efb1c3c38fa3e2b4732523e6a433aae4ee83fea6"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step30_counterfactual.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step30_counterfactual.py",
+    "sha256": "727f9490167d3a60256d246a09324a8cdb87ecd7bbca9bcf7dafb59414faad3f",
+    "snapshot_sha256": "727f9490167d3a60256d246a09324a8cdb87ecd7bbca9bcf7dafb59414faad3f"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step36_six_group_clean_sample.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step36_six_group_clean_sample.py",
+    "sha256": "51c0a1bd168358847bf2fcae74e66be58b430de348315f73114a83e7d0dfaa96",
+    "snapshot_sha256": "51c0a1bd168358847bf2fcae74e66be58b430de348315f73114a83e7d0dfaa96"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step38_F4_customers_mean_ratio.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step38_F4_customers_mean_ratio.py",
+    "sha256": "e5959d2880f7b6a662d19a1e355e3be1234850971296d71eb56370478ab3079c",
+    "snapshot_sha256": "e5959d2880f7b6a662d19a1e355e3be1234850971296d71eb56370478ab3079c"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step38_M6_decompose_sample_vs_definition.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step38_M6_decompose_sample_vs_definition.py",
+    "sha256": "8de1d39b33a76df1e4ced81c05b34d47b061449118516e36dde24ced6675d628",
+    "snapshot_sha256": "8de1d39b33a76df1e4ced81c05b34d47b061449118516e36dde24ced6675d628"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step38_M6_nonlinear_dependence.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step38_M6_nonlinear_dependence.py",
+    "sha256": "a7edba84aa8d7a1cdc4c6e9431a5b6167a755c062d31e48b69ca522db405e3e1",
+    "snapshot_sha256": "a7edba84aa8d7a1cdc4c6e9431a5b6167a755c062d31e48b69ca522db405e3e1"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step3_dose_response_curve.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step3_dose_response_curve.py",
+    "sha256": "22c7b5abf05037470f2ce92c56608f7be3bedc9d05edf1754eaea8fd17c19615",
+    "snapshot_sha256": "22c7b5abf05037470f2ce92c56608f7be3bedc9d05edf1754eaea8fd17c19615"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step40_1_cubic_gust_term.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step40_1_cubic_gust_term.py",
+    "sha256": "819036dfcdaa684af4d8cc16166320aad3c8c32a4ab8de7370f54be357b8d556",
+    "snapshot_sha256": "819036dfcdaa684af4d8cc16166320aad3c8c32a4ab8de7370f54be357b8d556"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step40_2_zspace_symmetry.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step40_2_zspace_symmetry.py",
+    "sha256": "baed14f030dae1da8ce3f30af276c58c3c84e6c986ab3f14b9385af369becfbc",
+    "snapshot_sha256": "baed14f030dae1da8ce3f30af276c58c3c84e6c986ab3f14b9385af369becfbc"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step40_model_form_check.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step40_model_form_check.py",
+    "sha256": "c88d691e0a6490a6dc45f355b49d033954b6528b04e7ad449eeaceb226e81415",
+    "snapshot_sha256": "c88d691e0a6490a6dc45f355b49d033954b6528b04e7ad449eeaceb226e81415"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step42_appendixD_composition_crosstab.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step42_appendixD_composition_crosstab.py",
+    "sha256": "48c4db3fe33b529bf1b4e967d2c87fab5e18ff47de1af5c8baf25bc0fad627aa",
+    "snapshot_sha256": "48c4db3fe33b529bf1b4e967d2c87fab5e18ff47de1af5c8baf25bc0fad627aa"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step43_M01_M03_M05.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step43_M01_M03_M05.py",
+    "sha256": "9c2da7d284e37e505f22f9e664b35d03929e6c8b7c4444e9704fceae6909b647",
+    "snapshot_sha256": "9c2da7d284e37e505f22f9e664b35d03929e6c8b7c4444e9704fceae6909b647"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step4_baseline_regional_map.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step4_baseline_regional_map.py",
+    "sha256": "ffe8370224acf257dee94173d2ee82b4a445ff443d751b8174fe1d92c4b5e7f9",
+    "snapshot_sha256": "ffe8370224acf257dee94173d2ee82b4a445ff443d751b8174fe1d92c4b5e7f9"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\final_combined_analysis\\step7_customers_dose_response.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\final_combined_analysis\\step7_customers_dose_response.py",
+    "sha256": "51ffc05f6435f1b7497f263a485ea34305cd38c5fe4e187d1dbe416130aaec79",
+    "snapshot_sha256": "51ffc05f6435f1b7497f263a485ea34305cd38c5fe4e187d1dbe416130aaec79"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\module_e_final_confirmation\\build_holdout_sample.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\module_e_final_confirmation\\build_holdout_sample.py",
+    "sha256": "5ef63d67244ee535bdcab765a6646c304a2689f21798df8b25b15a58accd27e3",
+    "snapshot_sha256": "5ef63d67244ee535bdcab765a6646c304a2689f21798df8b25b15a58accd27e3"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\module_e_final_confirmation\\fit_holdout_models.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\module_e_final_confirmation\\fit_holdout_models.py",
+    "sha256": "3f2c41ee96c18a0c85a962bbde2131a7836ffbd442d4e381b28f993df0df9b70",
+    "snapshot_sha256": "3f2c41ee96c18a0c85a962bbde2131a7836ffbd442d4e381b28f993df0df9b70"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\Buckinghamshire_combination_v2.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\pipeline_v2\\Buckinghamshire_combination_v2.py",
+    "sha256": "85301a882d318e76b8280144e7ec98a9525d30af1ef3ec9b0a8c5862be24cfa6",
+    "snapshot_sha256": "85301a882d318e76b8280144e7ec98a9525d30af1ef3ec9b0a8c5862be24cfa6"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\data_arrange_v2.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\pipeline_v2\\data_arrange_v2.py",
+    "sha256": "d5471c07bbcd8e949326ea803ca5576325711fcb0dfdee95f881fc4c4bd567e6",
+    "snapshot_sha256": "d5471c07bbcd8e949326ea803ca5576325711fcb0dfdee95f881fc4c4bd567e6"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\filter_v2.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\pipeline_v2\\filter_v2.py",
+    "sha256": "d9d3cc1a01e51a10bcceea61df8083ea5dceb7fcb72c55d40aed0db366ddae71",
+    "snapshot_sha256": "d9d3cc1a01e51a10bcceea61df8083ea5dceb7fcb72c55d40aed0db366ddae71"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\GVA_merge_with_crosswalk_v2.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\pipeline_v2\\GVA_merge_with_crosswalk_v2.py",
+    "sha256": "4d7d1696d12ec09d8beb273541432e7888c1a442a2fd5de5ba4901a99895c7b9",
+    "snapshot_sha256": "4d7d1696d12ec09d8beb273541432e7888c1a442a2fd5de5ba4901a99895c7b9"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\GVA_new_v2.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\pipeline_v2\\GVA_new_v2.py",
+    "sha256": "7839e5b45420e870a3a5f925d168699d7aded1eea4745d5f91dbfbdd32054747",
+    "snapshot_sha256": "7839e5b45420e870a3a5f925d168699d7aded1eea4745d5f91dbfbdd32054747"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\LAD_AreaSummary_v2.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\pipeline_v2\\LAD_AreaSummary_v2.py",
+    "sha256": "9c4e6f5a3cfd72f0ef54006f4ad91dc9b2af547b03c87fcc6bfc2140ee19386d",
+    "snapshot_sha256": "9c4e6f5a3cfd72f0ef54006f4ad91dc9b2af547b03c87fcc6bfc2140ee19386d"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\LAD_DNO_v2.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\pipeline_v2\\LAD_DNO_v2.py",
+    "sha256": "b1c0942395d1e10494b474984af8799bab2c0c16f5eeb695c057edbef031903a",
+    "snapshot_sha256": "b1c0942395d1e10494b474984af8799bab2c0c16f5eeb695c057edbef031903a"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\LAD_GeoMerge_v2.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\pipeline_v2\\LAD_GeoMerge_v2.py",
+    "sha256": "2c21e4d8733c399a3da208e1739470a77c5a4136e11713ede6efdb27616ed430",
+    "snapshot_sha256": "2c21e4d8733c399a3da208e1739470a77c5a4136e11713ede6efdb27616ed430"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\LAD_urban_Summary_v2.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\pipeline_v2\\LAD_urban_Summary_v2.py",
+    "sha256": "3f003a8d510378ff34d4c5604f3e971c5f3c9bbd0e9ab44888e1ca7a7050d182",
+    "snapshot_sha256": "3f003a8d510378ff34d4c5604f3e971c5f3c9bbd0e9ab44888e1ca7a7050d182"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\main1_v2.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\pipeline_v2\\main1_v2.py",
+    "sha256": "9234c3bc6188e029947da4c577d7b67d8c563dfa11009ffd2cffbb58e87024b8",
+    "snapshot_sha256": "9234c3bc6188e029947da4c577d7b67d8c563dfa11009ffd2cffbb58e87024b8"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\match_lad_v2.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\pipeline_v2\\match_lad_v2.py",
+    "sha256": "d393c14733a0ec51024ef86a36550e41838f6fe192227882fcfc44483e689e53",
+    "snapshot_sha256": "d393c14733a0ec51024ef86a36550e41838f6fe192227882fcfc44483e689e53"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\pipeline_v2\\poppulation_merge_v2.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\pipeline_v2\\poppulation_merge_v2.py",
+    "sha256": "eacea91cd7a90753d734802d7faa511eedc090ddce5d7712538a845ed4c12989",
+    "snapshot_sha256": "eacea91cd7a90753d734802d7faa511eedc090ddce5d7712538a845ed4c12989"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\test1\\test1_full_pipeline.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\test1\\test1_full_pipeline.py",
+    "sha256": "472a327dab69202f2202a6916b38db9883c3978c64b908d93be275a312a9b076",
+    "snapshot_sha256": "472a327dab69202f2202a6916b38db9883c3978c64b908d93be275a312a9b076"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\test1\\test1_step0_inventory.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\test1\\test1_step0_inventory.py",
+    "sha256": "1da944f5e10983c81b043d619bcfd0ef44e8db562f1c62a90091e30fe2eabe1a",
+    "snapshot_sha256": "1da944f5e10983c81b043d619bcfd0ef44e8db562f1c62a90091e30fe2eabe1a"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\test1b\\test1b_independence_pipeline.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\test1b\\test1b_independence_pipeline.py",
+    "sha256": "a006065c3ad802f55b41b2cbe75b6762a7c5f5263b20ea664cddd6bd91468f75",
+    "snapshot_sha256": "a006065c3ad802f55b41b2cbe75b6762a7c5f5263b20ea664cddd6bd91468f75"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\v3_audit\\audit_v3_dataset.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\v3_audit\\audit_v3_dataset.py",
+    "sha256": "b3203445b348d0c4e66f63d5b0e0f61d24cd7bfd651d3e77ff69e02fc4161f87",
+    "snapshot_sha256": "b3203445b348d0c4e66f63d5b0e0f61d24cd7bfd651d3e77ff69e02fc4161f87"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\v3_controlled_comparison\\controlled_comparison_pipeline.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\v3_controlled_comparison\\controlled_comparison_pipeline.py",
+    "sha256": "b18c92666aac849c6b0e961759fe8fc0dfa7e05da78130582520da6a10b90b21",
+    "snapshot_sha256": "b18c92666aac849c6b0e961759fe8fc0dfa7e05da78130582520da6a10b90b21"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\v3_validation\\v3_validation_pipeline.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\v3_validation\\v3_validation_pipeline.py",
+    "sha256": "308da0c13e17a8c8b45327a0475632f700f8912b283f58811f9259af409e6e1c",
+    "snapshot_sha256": "308da0c13e17a8c8b45327a0475632f700f8912b283f58811f9259af409e6e1c"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\variance_decomposition\\variance_decomposition_pipeline.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\claude_branch\\scripts\\variance_decomposition\\variance_decomposition_pipeline.py",
+    "sha256": "30a5d4665b445e37b09db95910edb2222c4889a1de9a0f3d0b3325b9005e4479",
+    "snapshot_sha256": "30a5d4665b445e37b09db95910edb2222c4889a1de9a0f3d0b3325b9005e4479"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\data_arrange.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\data_arrange.py",
+    "sha256": "286c65d837bce1a3d16f3576b5fdbc92350e7865acdd3bda44e9b84f711c6f3a",
+    "snapshot_sha256": "286c65d837bce1a3d16f3576b5fdbc92350e7865acdd3bda44e9b84f711c6f3a"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\filter.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\filter.py",
+    "sha256": "a8ff20df2933dcf5eb4a9dfa3df994fd838bf5ee59ae79ea6f507db8839edd07",
+    "snapshot_sha256": "a8ff20df2933dcf5eb4a9dfa3df994fd838bf5ee59ae79ea6f507db8839edd07"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\GVA_merge_with_crosswalk.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\GVA_merge_with_crosswalk.py",
+    "sha256": "4d7d1696d12ec09d8beb273541432e7888c1a442a2fd5de5ba4901a99895c7b9",
+    "snapshot_sha256": "4d7d1696d12ec09d8beb273541432e7888c1a442a2fd5de5ba4901a99895c7b9"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\GVA_new.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\GVA_new.py",
+    "sha256": "7839e5b45420e870a3a5f925d168699d7aded1eea4745d5f91dbfbdd32054747",
+    "snapshot_sha256": "7839e5b45420e870a3a5f925d168699d7aded1eea4745d5f91dbfbdd32054747"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\main1.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\main1.py",
+    "sha256": "9234c3bc6188e029947da4c577d7b67d8c563dfa11009ffd2cffbb58e87024b8",
+    "snapshot_sha256": "9234c3bc6188e029947da4c577d7b67d8c563dfa11009ffd2cffbb58e87024b8"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\poppulation_merge.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\poppulation_merge.py",
+    "sha256": "eacea91cd7a90753d734802d7faa511eedc090ddce5d7712538a845ed4c12989",
+    "snapshot_sha256": "eacea91cd7a90753d734802d7faa511eedc090ddce5d7712538a845ed4c12989"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\Buckinghamshire_combination_v3.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\rebuild_v3_full_stage\\scripts\\Buckinghamshire_combination_v3.py",
+    "sha256": "85301a882d318e76b8280144e7ec98a9525d30af1ef3ec9b0a8c5862be24cfa6",
+    "snapshot_sha256": "85301a882d318e76b8280144e7ec98a9525d30af1ef3ec9b0a8c5862be24cfa6"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\build_stage_base_v3.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\rebuild_v3_full_stage\\scripts\\build_stage_base_v3.py",
+    "sha256": "5d862c0e8a35d57b5200cd39ab4389d429b63b7c01a2326c94314a1b438fc26b",
+    "snapshot_sha256": "5d862c0e8a35d57b5200cd39ab4389d429b63b7c01a2326c94314a1b438fc26b"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\combine_weather_chunks_v3.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\rebuild_v3_full_stage\\scripts\\combine_weather_chunks_v3.py",
+    "sha256": "2cc46e383ba90798dac83d1db580f21af031a8c98ad9b4a4153d051c3f91a12a",
+    "snapshot_sha256": "2cc46e383ba90798dac83d1db580f21af031a8c98ad9b4a4153d051c3f91a12a"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\data_arrange_v3.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\rebuild_v3_full_stage\\scripts\\data_arrange_v3.py",
+    "sha256": "286c65d837bce1a3d16f3576b5fdbc92350e7865acdd3bda44e9b84f711c6f3a",
+    "snapshot_sha256": "286c65d837bce1a3d16f3576b5fdbc92350e7865acdd3bda44e9b84f711c6f3a"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\enrich_downstream_v3.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\rebuild_v3_full_stage\\scripts\\enrich_downstream_v3.py",
+    "sha256": "3769eeb375ab47ca657c5107a204f3cc189f12df29555edd32df06c4d301832c",
+    "snapshot_sha256": "3769eeb375ab47ca657c5107a204f3cc189f12df29555edd32df06c4d301832c"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\GVA_merge_with_crosswalk_v3.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\rebuild_v3_full_stage\\scripts\\GVA_merge_with_crosswalk_v3.py",
+    "sha256": "4d7d1696d12ec09d8beb273541432e7888c1a442a2fd5de5ba4901a99895c7b9",
+    "snapshot_sha256": "4d7d1696d12ec09d8beb273541432e7888c1a442a2fd5de5ba4901a99895c7b9"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\LAD_GeoMerge_v3.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\rebuild_v3_full_stage\\scripts\\LAD_GeoMerge_v3.py",
+    "sha256": "2c21e4d8733c399a3da208e1739470a77c5a4136e11713ede6efdb27616ed430",
+    "snapshot_sha256": "2c21e4d8733c399a3da208e1739470a77c5a4136e11713ede6efdb27616ed430"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\main1_v3.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\rebuild_v3_full_stage\\scripts\\main1_v3.py",
+    "sha256": "bc65ca43cff6843c4deae4bc032445306d72068e9e841a437effa100694da80f",
+    "snapshot_sha256": "bc65ca43cff6843c4deae4bc032445306d72068e9e841a437effa100694da80f"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\match_lad_v3.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\rebuild_v3_full_stage\\scripts\\match_lad_v3.py",
+    "sha256": "d393c14733a0ec51024ef86a36550e41838f6fe192227882fcfc44483e689e53",
+    "snapshot_sha256": "d393c14733a0ec51024ef86a36550e41838f6fe192227882fcfc44483e689e53"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\poppulation_merge_v3.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\rebuild_v3_full_stage\\scripts\\poppulation_merge_v3.py",
+    "sha256": "eacea91cd7a90753d734802d7faa511eedc090ddce5d7712538a845ed4c12989",
+    "snapshot_sha256": "eacea91cd7a90753d734802d7faa511eedc090ddce5d7712538a845ed4c12989"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\restore_original_columns_v3.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\rebuild_v3_full_stage\\scripts\\restore_original_columns_v3.py",
+    "sha256": "7754d90fa4539a52c48aece88bccf6411c95f7272492d6245aaa1c025f06e58c",
+    "snapshot_sha256": "7754d90fa4539a52c48aece88bccf6411c95f7272492d6245aaa1c025f06e58c"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\validate_final_v3.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\rebuild_v3_full_stage\\scripts\\validate_final_v3.py",
+    "sha256": "d06115caefb7f3bb43ecd49a91d2dc5c65c18dd1f45f2c5dd7c3a989a0a3a7e4",
+    "snapshot_sha256": "d06115caefb7f3bb43ecd49a91d2dc5c65c18dd1f45f2c5dd7c3a989a0a3a7e4"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\scripts\\weather_cached_chunk_v3.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\rebuild_v3_full_stage\\scripts\\weather_cached_chunk_v3.py",
+    "sha256": "201d874ca2d5ed068f69592cc81524f17ae39b5d5fd6437d719060a0bc23dd11",
+    "snapshot_sha256": "201d874ca2d5ed068f69592cc81524f17ae39b5d5fd6437d719060a0bc23dd11"
+  },
+  {
+    "source": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\tests\\test_stage_base_v3.py",
+    "snapshot": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\code\\snapshots\\H0\\rebuild_v3_full_stage\\tests\\test_stage_base_v3.py",
+    "sha256": "0f13d662263feebaf4aa939fbefa448c9f3b54c85a6916f3888e2ef48f2d7987",
+    "snapshot_sha256": "0f13d662263feebaf4aa939fbefa448c9f3b54c85a6916f3888e2ef48f2d7987"
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "cell_bindings_checked": 182,
+  "paragraph_bindings_checked": 64,
+  "numeric_slots": 950,
+  "full_combination_paragraphs": [
+    "A-P027",
+    "A-P044",
+    "A-P054",
+    "D-P039",
+    "D-P041",
+    "D-P084",
+    "D-P093",
+    "D-P097",
+    "D-P106",
+    "D-P111",
+    "D-P116"
+  ],
+  "candidates": 90,
+  "migration_rows": 963,
+  "corrected_metadata_A_T10": 10,
+  "new_model_fits": 0,
+  "Word_modified": false,
+  "candidate_exact_file": {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\MANUSCRIPT_REWRITE_CANDIDATES.md",
+    "bytes": 201262,
+    "sha256": "05b76d668b1f2cc4b9b76880c4d6ae673c33f06768be74fd620065b28b920050"
+  },
+  "mapping_exact_file": {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\MANUSCRIPT_MIGRATION_MAP.csv",
+    "bytes": 1315756,
+    "sha256": "0da95c3228835a52b30ef7a808d220691299d678efc766fe1ff46abbf7dde290"
+  },
+  "remaining_W_scope": "OCR/formula objects, exact Word layout, citation verification; six-chapter proposal not decided"
+}

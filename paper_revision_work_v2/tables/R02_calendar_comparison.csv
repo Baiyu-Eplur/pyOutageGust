@@ -1,0 +1,6 @@
+scope,N,UTC_London_date_diff,UTC_London_study_diff,UTC_London_period_diff,old_new_period_diff,recovery_crosses_study_end
+all_events,135025,1845,2,2,1,35
+main_E0,60436,768,0,0,1,25
+main_R0c,60436,768,0,0,1,25
+weather_E0,9857,105,0,0,0,0
+weather_R0c,9857,105,0,0,0,0

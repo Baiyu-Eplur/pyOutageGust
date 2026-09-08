@@ -1,0 +1,11 @@
+--- pre_isolation/code/check_r02.py
++++ isolated/code/check_r02.py
+@@ -61,4 +61,7 @@
+     save(Q/'code_changes/code_manifest.json',[{'path':str(p),'sha256':sha(p),'H0_snapshot':source['snapshot'] if p==path else None,'change':'modified' if p==path else 'new'} for p in files])
+     save(Q/'checks/targeted_checks.json',{'passed':True,'unit_tests':result.testsRun,'full_event_count':len(e),'stage_membership_sum':int(e.stage_row_count.sum()),'C_D_A_full_comparison':'aggregation_consistency.json','full_row_shuffle':'full_shuffle.json','unresolved_events':len(amb),'Buck_proxy_exact':True,'strict_cache_rain_24_unique_finite':True,'active_input_reader':'active_entry.json','initial_test_failure_fixed':'nullable missing coordinate query flag; fillna(False), no numeric change','models_run':0})
+     print(json.dumps({'checks_passed':True,'tests':result.testsRun,'active_entry_n':len(matched)},ensure_ascii=False))
+-if __name__=='__main__':globals()[sys.argv[1]]()
++if __name__=='__main__':
++    if sys.argv[1]=='final' and (Q/'ISOLATED_ENTRY.json').exists():
++        raise SystemExit('Historical v9 check archived after isolation. Use code/audit_r02_isolation.py validate for the independent entry; original v9 must remain untouched.')
++    globals()[sys.argv[1]]()

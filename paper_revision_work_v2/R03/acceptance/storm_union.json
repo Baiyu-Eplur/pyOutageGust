@@ -1,0 +1,9 @@
+{
+  "UTC_UNIQUE_ANY": 7300,
+  "UTC_overlap_events_ge2": 702,
+  "UTC_summed_window_memberships": 8002,
+  "UTC_overlap_extra_memberships": 702,
+  "London_UNIQUE_ANY": 7298,
+  "London_overlap_events_ge2": 702,
+  "UTC_London_union_difference": 6
+}

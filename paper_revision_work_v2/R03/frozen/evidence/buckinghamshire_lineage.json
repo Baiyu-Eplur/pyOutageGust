@@ -1,0 +1,78 @@
+{
+  "all_incidents": 2313,
+  "H0_sample_incidents": {
+    "main_E0": 1151,
+    "main_R0c": 1146,
+    "weather_E0": 293,
+    "weather_R0c": 292
+  },
+  "values": [
+    {
+      "income_deprivation_rate": 0.06325,
+      "deprivation_gap_pct": 0.1874999999999999,
+      "morans_i": 0.3,
+      "rural_urban_classification": "Urban with Significant Rural (rural including hub towns 26-49%)"
+    }
+  ],
+  "oldcode_2021_population_rows": 0,
+  "arithmetic_mean": {
+    "Deprivation gap (percentage points)": 0.18749999999999997,
+    "Moran's I": 0.3,
+    "Income deprivation rate": 0.06325
+  },
+  "source_workbook_sha256": "6eb516a87654078ee69d4df55c8bc749b5da5de117f996f262c0c762bc20b38f",
+  "workbook_sample_cell_formats": {
+    "B3": {
+      "value": "E07000223",
+      "format": "General"
+    },
+    "C3": {
+      "value": "Adur",
+      "format": "General"
+    },
+    "D3": {
+      "value": "n-shape",
+      "format": "General"
+    },
+    "E3": {
+      "value": "Urban with City and Town",
+      "format": "General"
+    },
+    "F3": {
+      "value": 4,
+      "format": "General"
+    },
+    "G3": {
+      "value": "Urban",
+      "format": "General"
+    },
+    "H3": {
+      "value": 0.217,
+      "format": "0.0%"
+    },
+    "I3": {
+      "value": 233,
+      "format": "General"
+    },
+    "J3": {
+      "value": 0.17,
+      "format": "General"
+    },
+    "K3": {
+      "value": 234,
+      "format": "General"
+    },
+    "L3": {
+      "value": 0.108,
+      "format": "0.0%"
+    },
+    "M3": {
+      "value": 158,
+      "format": "General"
+    },
+    "N3": {
+      "value": 3,
+      "format": "General"
+    }
+  }
+}

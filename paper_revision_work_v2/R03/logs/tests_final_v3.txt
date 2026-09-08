@@ -1,0 +1,22 @@
+test_archive_roundtrip_and_unknown_categories (test_pipeline.PipelineTests.test_archive_roundtrip_and_unknown_categories) ... ok
+test_calendar_period_rank_failure_not_silent_fit (test_pipeline.PipelineTests.test_calendar_period_rank_failure_not_silent_fit) ... ok
+test_cluster_covariance_against_frozen_statsmodels (test_pipeline.PipelineTests.test_cluster_covariance_against_frozen_statsmodels) ... ok
+test_eta_zero_double_log_removed (test_pipeline.PipelineTests.test_eta_zero_double_log_removed) ... ok
+test_fresh_import_has_no_writes_or_legacy_modules (test_pipeline.PipelineTests.test_fresh_import_has_no_writes_or_legacy_modules) ... ok
+test_input_real_manifest_and_no_fallback (test_pipeline.PipelineTests.test_input_real_manifest_and_no_fallback) ... ok
+test_no_new_result_no_old_figure_or_interval (test_pipeline.PipelineTests.test_no_new_result_no_old_figure_or_interval) ... ok
+test_old_output_path_rejected (test_pipeline.PipelineTests.test_old_output_path_rejected) ... ok
+test_oof_complete_unique_and_paired_blocks (test_pipeline.PipelineTests.test_oof_complete_unique_and_paired_blocks) ... ok
+test_pooled_hand_calculation_negative_constant (test_pipeline.PipelineTests.test_pooled_hand_calculation_negative_constant) ... ok
+test_raw_scenario_square_interaction_and_reference_mean (test_pipeline.PipelineTests.test_raw_scenario_square_interaction_and_reference_mean) ... ok
+test_regional_reference_common_calendar (test_pipeline.PipelineTests.test_regional_reference_common_calendar) ... ok
+test_shared_dates_and_shuffle (test_pipeline.PipelineTests.test_shared_dates_and_shuffle) ... ok
+test_stage_closure_raw_log_archive (test_pipeline.PipelineTests.test_stage_closure_raw_log_archive) ... ok
+test_storm_unique_union_with_mixed_fit_identity (test_pipeline.PipelineTests.test_storm_unique_union_with_mixed_fit_identity) ... ok
+test_test_tail_does_not_leak_training_or_scaler (test_pipeline.PipelineTests.test_test_tail_does_not_leak_training_or_scaler) ... ok
+test_vif_and_stage_producers (test_pipeline.PipelineTests.test_vif_and_stage_producers) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 6.369s
+
+OK

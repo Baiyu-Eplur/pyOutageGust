@@ -1,0 +1,125 @@
+{
+  "version": "MR-v1.0",
+  "files": [
+    {
+      "path": "A_word_index.json",
+      "size_bytes": 48532,
+      "sha256": "63fcbc7a3193edceb51adb1fdb764298b9e83111fc28f729b98bb89f6cc4c6a3"
+    },
+    {
+      "path": "A_word_index.txt",
+      "size_bytes": 31976,
+      "sha256": "125834a37445179742d68dfb64eda8d655a8a080bf5136f53938137885703218"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size_bytes": 721,
+      "sha256": "faaeca8233f1d130d48bc073c6c7f3149867616ccb47b18d198ad5974b008001"
+    },
+    {
+      "path": "D_word_index.json",
+      "size_bytes": 76676,
+      "sha256": "7bd1df84e408a6daf4f31549eba8dc11c514bf7d61a62e9b7ac8746f131c0670"
+    },
+    {
+      "path": "D_word_index.txt",
+      "size_bytes": 57981,
+      "sha256": "0adc7ac418c337d80a2ca4762a59c7c0f16f2bfa39ba3adee74d6ca990e95c69"
+    },
+    {
+      "path": "MANUSCRIPT_LEDGER.md",
+      "size_bytes": 70574,
+      "sha256": "af1e031e6274f3391eaff6fecafeaa761f17426930cfd486fec2f1ab63ff0919"
+    },
+    {
+      "path": "REVISION_ITEMS.json",
+      "size_bytes": 41537,
+      "sha256": "3ede8b63f0321e727368955201add78656a0fad6527ab3ffd1e8d6fa858d1da9"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "size_bytes": 4763,
+      "sha256": "6976bfb140dc1719f478e2bdac85629bba6a05c721c46dcbfac7bdd1fc8d3358"
+    },
+    {
+      "path": "STAGE_WRITING_IMPACT_TEMPLATE.md",
+      "size_bytes": 786,
+      "sha256": "8afcf94fe4836e2c214757b369105baca1da593d24bb23749efdea743214b18f"
+    },
+    {
+      "path": "START_HERE.md",
+      "size_bytes": 954,
+      "sha256": "eb7e559a71eb66430420a9454d26b59fdada6b46255c4381b5e2ba07ce4e10fd"
+    },
+    {
+      "path": "evidence/DOC01_main_baseline.docx",
+      "size_bytes": 1119751,
+      "sha256": "196cef4abcdf4e6723b55035049c08de75613c3cc5a56314b264490f70e5926c"
+    },
+    {
+      "path": "evidence/DOC02_appendix_baseline.docx",
+      "size_bytes": 120515,
+      "sha256": "55f5c4f30fc75473d9da354b2819d3f8298904b8be94104ca3e107276696af8c"
+    },
+    {
+      "path": "evidence/OLD01_original_main.docx",
+      "size_bytes": 1463689,
+      "sha256": "bd9169585a1e894610b17b8ecfc82f2eb3021a6b889716f62072a989cbb199e7"
+    },
+    {
+      "path": "evidence/OLD02_original_appendix.docx",
+      "size_bytes": 124631,
+      "sha256": "317459a9d4e93cf399e03ccea688a053e02af0c522c469376956c953fb62bc5b"
+    },
+    {
+      "path": "evidence/OLD03_user_main_revision.md",
+      "size_bytes": 86586,
+      "sha256": "bbd8afd44085dde4c3c8c9a086e106b1c8c6fa199b300cc478f8d0997d8ace46"
+    },
+    {
+      "path": "evidence/OLD04_user_appendix_revision.md",
+      "size_bytes": 27456,
+      "sha256": "366477c8751d95150e6ae54fa175f6f4a408a046db7a783611957e59da1146b8"
+    },
+    {
+      "path": "evidence/SRC01_code_audit_20260905.md",
+      "size_bytes": 23349,
+      "sha256": "2479a2d139045dfdcc3f7a52909682e61bca1fb74617c645e57bc6c31f505b55"
+    },
+    {
+      "path": "evidence/SRC02_R00_R01_return_20260905.md",
+      "size_bytes": 3654,
+      "sha256": "0da24b04b188f17f7451528fe759dd56d81d7711d25faad951997639c5c37850"
+    },
+    {
+      "path": "evidence/SRC03_R00_R01_review_R02.md",
+      "size_bytes": 15425,
+      "sha256": "2edead79992d5b25ad08ea42b464fa82d350be50a514c50455422c41992b2f45"
+    },
+    {
+      "path": "evidence/SRC04_local_mathematical_audit.md",
+      "size_bytes": 35968,
+      "sha256": "866310ac63024196065780e7715369be23b7b6065b300d9025d50424906daf17"
+    },
+    {
+      "path": "evidence/SRC05_logic_review.md",
+      "size_bytes": 23407,
+      "sha256": "5424932ffa934adcf46dd6c81b9910fbd36e09f759ddf304c639be56b76cd59d"
+    },
+    {
+      "path": "evidence/SRC06_validation_worklist.md",
+      "size_bytes": 20569,
+      "sha256": "8cf39a22f47a4518b114ae76648d0628c2fd1d7fe63d175e3833953bd145f267"
+    },
+    {
+      "path": "evidence/SRC07_previous_revision_log.md",
+      "size_bytes": 38014,
+      "sha256": "6c0a485a7b5ef6447f392cd15ec5c639803f7b909c4b9ea928c03926437599ae"
+    },
+    {
+      "path": "evidence/SRC08_execution_plan_before_ledger.md",
+      "size_bytes": 66367,
+      "sha256": "41c5158b05bdb74f8720861fb88870feb657f868bc9f85fa919f236fac209241"
+    }
+  ]
+}

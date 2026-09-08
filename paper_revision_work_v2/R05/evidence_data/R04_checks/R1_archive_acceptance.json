@@ -1,0 +1,26 @@
+[
+  {
+    "group": "main",
+    "target": "E0",
+    "n": 60436,
+    "all_archives_and_OOF_passed": true
+  },
+  {
+    "group": "main",
+    "target": "R0c",
+    "n": 59832,
+    "all_archives_and_OOF_passed": true
+  },
+  {
+    "group": "weather",
+    "target": "E0",
+    "n": 9857,
+    "all_archives_and_OOF_passed": true
+  },
+  {
+    "group": "weather",
+    "target": "R0c",
+    "n": 9758,
+    "all_archives_and_OOF_passed": true
+  }
+]

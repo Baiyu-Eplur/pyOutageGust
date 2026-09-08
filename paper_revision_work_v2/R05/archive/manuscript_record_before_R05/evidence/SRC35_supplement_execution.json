@@ -1,0 +1,91 @@
+{
+  "fits_returned": 22,
+  "model_attempts": 22,
+  "results": [
+    {
+      "analysis": "GLM",
+      "target": "E0",
+      "variant": "NB2",
+      "n": 60436,
+      "status": "computed",
+      "beta_gust": -0.1373628974425701,
+      "beta_gust2": 0.09425984411169673,
+      "pooled_R2": null,
+      "delta_R2": null,
+      "warning_count": 4
+    },
+    {
+      "analysis": "GLM",
+      "target": "E0",
+      "variant": "Tweedie_1.5_log",
+      "n": 60436,
+      "status": "computed",
+      "beta_gust": -0.13127141856535696,
+      "beta_gust2": 0.07793990255699483,
+      "pooled_R2": null,
+      "delta_R2": null,
+      "warning_count": 0
+    },
+    {
+      "analysis": "cubic",
+      "target": "E0",
+      "variant": "zG3",
+      "n": 60436,
+      "status": "computed",
+      "beta_gust": 0.006577995492710653,
+      "beta_gust2": 0.1966724117985176,
+      "beta_gust3": -0.028509606600744142,
+      "pooled_R2": 0.0315530946382353,
+      "quadratic_R2": 0.029621455525964735,
+      "delta_R2": 0.0019316391122705667
+    },
+    {
+      "analysis": "GLM",
+      "target": "R0c",
+      "variant": "Gamma_log",
+      "n": 60436,
+      "status": "computed",
+      "beta_gust": -0.05115694484548499,
+      "beta_gust2": 0.07309004907555942,
+      "pooled_R2": null,
+      "delta_R2": null,
+      "warning_count": 0
+    },
+    {
+      "analysis": "GLM",
+      "target": "R0c",
+      "variant": "Tweedie_1.5_log",
+      "n": 60436,
+      "status": "computed",
+      "beta_gust": -0.04127195202805036,
+      "beta_gust2": 0.07733305959448508,
+      "pooled_R2": null,
+      "delta_R2": null,
+      "warning_count": 0
+    },
+    {
+      "analysis": "cubic",
+      "target": "R0c",
+      "variant": "zG3",
+      "n": 60436,
+      "status": "computed",
+      "beta_gust": -0.015411119343273102,
+      "beta_gust2": 0.07070965978437228,
+      "beta_gust3": 0.0053785025518556405,
+      "pooled_R2": 0.09251401945139548,
+      "quadratic_R2": 0.09201583248855061,
+      "delta_R2": 0.000498186962844871
+    },
+    {
+      "analysis": "six_groups",
+      "target": "R0c",
+      "variant": "all_valid_shared_dates",
+      "n": 117108,
+      "status": "computed_harmonized_scope",
+      "pooled_R2": 0.03992310456130377,
+      "delta_R2": null
+    }
+  ],
+  "no_new_model_search": true,
+  "bootstrap": 0
+}

@@ -1,0 +1,416 @@
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\combined_sample_builder.py:6: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\combined_sample_builder.py:9: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\combined_sample_builder.py:15: from clean_sample_builder import build_clean_wt_samples, v9  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\combined_sample_builder.py:18: from build_holdout_sample import build_holdout_wt_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\combined_sample_builder.py:23: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\combined_sample_builder.py:27: def build_combined_samples():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\combined_sample_builder.py:100:     OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\combined_sample_builder.py:101:     RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\combined_sample_builder.py:102:     RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\combined_sample_builder.py:105:     (RAW_DIR / "step0_verification.json").write_text(js(verification), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure10_robustness_forest.py:14: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure10_robustness_forest.py:17: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure10_robustness_forest.py:24: from figure_style import apply_style, mm_to_in, save_fig, SINGLE_COL_MM  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure10_robustness_forest.py:27: HOLDOUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\module_e_final_confirmation\raw")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure10_robustness_forest.py:29: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\figures")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure10_robustness_forest.py:30: OUT_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure10_robustness_forest.py:35: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure10_robustness_forest.py:39: def pooled_estimate(fold_csv: Path, term: str):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure10_robustness_forest.py:48: def single_estimate(csv_path: Path, term: str, coef_col="coefficient", se_col="std_error"):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure10_robustness_forest.py:54: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure10_robustness_forest.py:63:     e0_hold, e0_hold_se = single_estimate(HOLDOUT_DIR / "step1_E0_holdout_coefs.csv", term)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure10_robustness_forest.py:64:     r0c_hold, r0c_hold_se = single_estimate(HOLDOUT_DIR / "step2_R0c_holdout_coefs.csv", term)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure10_robustness_forest.py:107:     save_fig(fig, OUT_DIR, "Figure_10_robustness_forest")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure1_study_area.py:3: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure1_study_area.py:6: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure1_study_area.py:12: from shapely.geometry import Point
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure1_study_area.py:15: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure1_study_area.py:16: from figure_style import (  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure1_study_area.py:23: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\figures")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure1_study_area.py:24: OUT_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure1_study_area.py:29: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure1_study_area.py:33: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure1_study_area.py:101:     save_fig(fig, OUT_DIR, "Figure_1_study_area_map")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure1_study_area.py:104:     log_step(f"Saved to {OUT_DIR}")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure2_distribution.py:3: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure2_distribution.py:6: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure2_distribution.py:12: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure2_distribution.py:13: from figure_style import apply_style, mm_to_in, save_fig, DOUBLE_COL_MM  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure2_distribution.py:15: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\figures")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure2_distribution.py:16: OUT_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure2_distribution.py:19: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure2_distribution.py:23: def hist_with_kde(ax, data, color, bins, xlabel, log_x=False):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure2_distribution.py:37: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure2_distribution.py:75:     save_fig(fig, OUT_DIR, "Figure_2_distribution")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure4_dose_response.py:4: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure4_dose_response.py:7: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure4_dose_response.py:13: from figure_style import apply_style, mm_to_in, save_fig, panel_label, DOUBLE_COL_MM  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure4_dose_response.py:16: OUT_DIR = RESULTS_DIR / "figures"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure4_dose_response.py:17: OUT_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure4_dose_response.py:25: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure4_dose_response.py:29: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure4_dose_response.py:65:     save_fig(fig, OUT_DIR, "Figure_4_dose_response")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure5_variance_decomposition.py:8: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure5_variance_decomposition.py:11: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure5_variance_decomposition.py:18: from figure_style import apply_style, mm_to_in, save_fig, SINGLE_COL_MM  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure5_variance_decomposition.py:20: RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\raw")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure5_variance_decomposition.py:21: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\figures")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure5_variance_decomposition.py:22: OUT_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure5_variance_decomposition.py:25: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure5_variance_decomposition.py:29: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure5_variance_decomposition.py:31:     e0 = pd.read_csv(RAW_DIR / "step2_E0_variance_decomposition.csv")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure5_variance_decomposition.py:32:     r0c = pd.read_csv(RAW_DIR / "step2_R0c_order_gust_then_customers.csv")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure5_variance_decomposition.py:77:     save_fig(fig, OUT_DIR, "Figure_5_variance_decomposition")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure6_regional_map.py:6: from command #21's original script."""
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure6_regional_map.py:7: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure6_regional_map.py:10: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure6_regional_map.py:18: from figure_style import apply_style, add_north_arrow, add_scale_bar, add_locator_inset  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure6_regional_map.py:22: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\figures")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure6_regional_map.py:23: OUT_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure6_regional_map.py:26: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure6_regional_map.py:30: def quantile_limits(values, lower_q=0.0, upper_q=0.98):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure6_regional_map.py:40: def plot_map(map_gdf, gb_outline, value_col, out_stub):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure6_regional_map.py:63:     fig.savefig(OUT_DIR / f"{out_stub}.png", dpi=600, bbox_inches="tight")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure6_regional_map.py:64:     fig.savefig(OUT_DIR / f"{out_stub}.pdf", bbox_inches="tight")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure6_regional_map.py:69: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure7_magnitude_comparison.py:11: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure7_magnitude_comparison.py:14: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure7_magnitude_comparison.py:20: from figure_style import apply_style, mm_to_in, save_fig, SINGLE_COL_MM  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure7_magnitude_comparison.py:22: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\figures")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure7_magnitude_comparison.py:23: OUT_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure7_magnitude_comparison.py:35: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure7_magnitude_comparison.py:39: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure7_magnitude_comparison.py:58:     save_fig(fig, OUT_DIR, "Figure_7_magnitude_comparison")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure8_weather_subsample_comparison.py:6: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure8_weather_subsample_comparison.py:9: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure8_weather_subsample_comparison.py:16: from figure_style import apply_style, mm_to_in, save_fig, panel_label, DOUBLE_COL_MM  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure8_weather_subsample_comparison.py:18: RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\raw")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure8_weather_subsample_comparison.py:19: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\figures")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure8_weather_subsample_comparison.py:20: OUT_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure8_weather_subsample_comparison.py:23: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure8_weather_subsample_comparison.py:27: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure8_weather_subsample_comparison.py:29:     e0_main = pd.read_csv(RAW_DIR / "step2_E0_variance_decomposition.csv")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure8_weather_subsample_comparison.py:30:     e0_wn = pd.read_csv(RAW_DIR / "step17_E0_variance_decomposition.csv")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure8_weather_subsample_comparison.py:31:     r0c_main = pd.read_csv(RAW_DIR / "step2_R0c_order_gust_then_customers.csv")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure8_weather_subsample_comparison.py:32:     r0c_wn = pd.read_csv(RAW_DIR / "step17_R0c_order_gust_then_customers.csv")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure8_weather_subsample_comparison.py:88:     save_fig(fig, OUT_DIR, "Figure_8_weather_subsample_comparison")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure9_storm_validation.py:12: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure9_storm_validation.py:15: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure9_storm_validation.py:23: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure9_storm_validation.py:24: from figure_style import apply_style, mm_to_in, save_fig, panel_label, DOUBLE_COL_MM  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure9_storm_validation.py:27: from clean_sample_builder import v9  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure9_storm_validation.py:29: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\figures")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure9_storm_validation.py:30: OUT_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure9_storm_validation.py:45: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure9_storm_validation.py:49: def fit_model(train_sample, target_col, use_customers):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure9_storm_validation.py:61: def predict_for_subset(res, train_sample_for_scaling, subset, use_customers, obs_col):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure9_storm_validation.py:76: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure9_storm_validation.py:149:     save_fig(fig, OUT_DIR, "Figure_9_storm_validation")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure_style.py:15: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure_style.py:17: from matplotlib.patches import Polygon, Rectangle
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure_style.py:26: def apply_style():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure_style.py:46: def mm_to_in(mm: float) -> float:
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure_style.py:50: def panel_label(ax, label: str, x=-0.10, y=1.05):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure_style.py:56: def add_north_arrow(ax, x=0.93, y=0.08, height=0.075, width_ratio=0.24):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure_style.py:69: def _nice_length_km(width_m: float) -> float:
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure_style.py:76: def add_scale_bar(ax, location="lower left", x0=None, y0=0.055):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure_style.py:97: def add_locator_inset(fig, ax_main, gb_boundary_gdf, highlight_gdf, rect=(0.02, 0.72, 0.20, 0.20)):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure_style.py:113: def save_fig(fig, out_dir, basename: str, dpi_png=300):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure_style.py:114:     fig.savefig(out_dir / f"{basename}.pdf", bbox_inches="tight")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figure_style.py:115:     fig.savefig(out_dir / f"{basename}.png", dpi=dpi_png, bbox_inches="tight")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figureD1_composition_effect.py:7: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figureD1_composition_effect.py:10: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figureD1_composition_effect.py:16: from figure_style import apply_style, mm_to_in, save_fig, panel_label, DOUBLE_COL_MM  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figureD1_composition_effect.py:18: RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\raw")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figureD1_composition_effect.py:19: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\figures")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figureD1_composition_effect.py:20: OUT_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figureD1_composition_effect.py:31: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figureD1_composition_effect.py:35: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figureD1_composition_effect.py:37:     cross = pd.read_csv(RAW_DIR / "step42_crosstab_mean_duration.csv", index_col=0)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figureD1_composition_effect.py:38:     pooled = pd.read_csv(RAW_DIR / "step42_pooled_mean_duration.csv", index_col=0)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\figureD1_composition_effect.py:74:     save_fig(fig, OUT_DIR, "Figure_D1_composition_effect")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step10_named_storms.py:6: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step10_named_storms.py:10: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step10_named_storms.py:16: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step10_named_storms.py:18: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step10_named_storms.py:19: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step10_named_storms.py:20: RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step10_named_storms.py:34: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step10_named_storms.py:38: def js(obj):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step10_named_storms.py:50: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step10_named_storms.py:105:         sub.to_csv(RAW_DIR / f"step10_{storm.replace(' ', '_')}_events.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step10_named_storms.py:107:     (RAW_DIR / "step10_storm_summary.json").write_text(js(results), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:6: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:10: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:15: from scipy import stats
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:18: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:21: from clean_sample_builder import v9  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:25: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:26: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:27: RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:40: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:44: def js(obj):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:56: def fit_model(train_sample, target_col, use_customers):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:68: def predict_for_subset(res, train_sample_for_scaling, subset, target_col, use_customers, obs_col):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:85: def corr_stats(pred, obs, log_scale_pred, log_scale_obs):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:101: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:169:     result_df.to_csv(OUT_DIR / "13_风暴期预测检验.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:204:     fig.savefig(OUT_DIR / "13_风暴期预测检验散点图.png", dpi=600, bbox_inches="tight")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:205:     fig.savefig(OUT_DIR / "13_风暴期预测检验散点图.pdf", bbox_inches="tight")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step13_storm_prediction_check.py:208:     (RAW_DIR / "step13_summary.json").write_text(js(all_rows), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step16_range_restriction.py:5: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step16_range_restriction.py:9: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step16_range_restriction.py:13: from scipy import stats
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step16_range_restriction.py:16: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step16_range_restriction.py:19: from clean_sample_builder import v9  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step16_range_restriction.py:23: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step16_range_restriction.py:24: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step16_range_restriction.py:25: RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step16_range_restriction.py:52: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step16_range_restriction.py:56: def js(obj):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step16_range_restriction.py:68: def thorndike_case2(rho_full, u):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step16_range_restriction.py:80: def fit_model(train_sample, target_col, use_customers):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step16_range_restriction.py:92: def predict_for_subset(res, train_sample_for_scaling, subset, use_customers):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step16_range_restriction.py:107: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step16_range_restriction.py:186:     df.to_csv(RAW_DIR / "step16_range_restriction.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:6: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:11: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:16: from sklearn.model_selection import GroupKFold
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:19: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:22: from clean_sample_builder import v9  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:26: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:27: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:28: RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:42: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:46: def js(obj):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:58: def add_fresh_folds(df: pd.DataFrame, n_splits: int) -> pd.DataFrame:
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:74: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:116:     (RAW_DIR / "step17_sample_sizes.json").write_text(js(sizes), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:141:     e0_fold.to_csv(RAW_DIR / "step17_E0_weather_natural_fold_coefs.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:142:     r0c_fold.to_csv(RAW_DIR / "step17_R0c_weather_natural_fold_coefs.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:158:     stab.to_csv(RAW_DIR / "step17_stability_summary.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:175:     (RAW_DIR / "step17_full_fit.json").write_text(js(full_fit), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:188:     np.savetxt(RAW_DIR / "step17_E0_wn_bootstrap_turning_points_z.csv", boot, delimiter=",")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:204:     (RAW_DIR / "step17_critical_wind_speed.json").write_text(js(tp_result), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:210:     e0_var.to_csv(RAW_DIR / "step17_E0_variance_decomposition.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:216:     r0c_var_a.to_csv(RAW_DIR / "step17_R0c_order_customers_then_gust.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step17_weather_natural_subsample.py:222:     r0c_var_b.to_csv(RAW_DIR / "step17_R0c_order_gust_then_customers.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step1_final_fit.py:3: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step1_final_fit.py:8: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step1_final_fit.py:12: from scipy import stats
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step1_final_fit.py:15: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step1_final_fit.py:18: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step1_final_fit.py:19: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step1_final_fit.py:20: RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step1_final_fit.py:27: def js(obj):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step1_final_fit.py:39: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step1_final_fit.py:43: def full_coef_table(res, cov):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step1_final_fit.py:53: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step1_final_fit.py:60:     e0_table.to_csv(RAW_DIR / "step1_E0_final_full_coefs.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step1_final_fit.py:68:     r0c_table.to_csv(RAW_DIR / "step1_R0c_final_full_coefs.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step1_final_fit.py:78:     (RAW_DIR / "step1_meta.json").write_text(js(meta), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step21_causecode_gust_diagnostic.py:6: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step21_causecode_gust_diagnostic.py:10: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step21_causecode_gust_diagnostic.py:16: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step21_causecode_gust_diagnostic.py:18: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step21_causecode_gust_diagnostic.py:19: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step21_causecode_gust_diagnostic.py:20: RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step21_causecode_gust_diagnostic.py:25: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step21_causecode_gust_diagnostic.py:29: def js(obj):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step21_causecode_gust_diagnostic.py:41: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step21_causecode_gust_diagnostic.py:61:     (RAW_DIR / "step21_gust_distributions.json").write_text(js(step1), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step21_causecode_gust_diagnostic.py:77:     step2_df.to_csv(RAW_DIR / "step22_wn_share_by_decile.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step21_causecode_gust_diagnostic.py:99:     (RAW_DIR / "step23_anchor_density.json").write_text(js(step3), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step21_causecode_gust_diagnostic.py:109:     (RAW_DIR / "step26_full_summary.json").write_text(js(summary), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step2_critical_wind_and_variance.py:4: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step2_critical_wind_and_variance.py:9: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step2_critical_wind_and_variance.py:16: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step2_critical_wind_and_variance.py:20: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step2_critical_wind_and_variance.py:21: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step2_critical_wind_and_variance.py:22: RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step2_critical_wind_and_variance.py:36: def js(obj):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step2_critical_wind_and_variance.py:48: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step2_critical_wind_and_variance.py:52: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step2_critical_wind_and_variance.py:69:     np.savetxt(RAW_DIR / "step2_E0_bootstrap_turning_points_z.csv", boot, delimiter=",")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step2_critical_wind_and_variance.py:95:     (RAW_DIR / "step2_critical_wind_speed.json").write_text(js(result), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step2_critical_wind_and_variance.py:125:     e0_var.to_csv(RAW_DIR / "step2_E0_variance_decomposition.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step2_critical_wind_and_variance.py:131:     r0c_var_a.to_csv(RAW_DIR / "step2_R0c_order_customers_then_gust.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step2_critical_wind_and_variance.py:137:     r0c_var_b.to_csv(RAW_DIR / "step2_R0c_order_gust_then_customers.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step30_counterfactual.py:3: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step30_counterfactual.py:7: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step30_counterfactual.py:13: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step30_counterfactual.py:15: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step30_counterfactual.py:16: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step30_counterfactual.py:17: RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step30_counterfactual.py:45: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step30_counterfactual.py:49: def js(obj):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step30_counterfactual.py:61: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step30_counterfactual.py:100:     (RAW_DIR / "step30_storm_weight.json").write_text(js(step1), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step30_counterfactual.py:174:     (RAW_DIR / "step31_counterfactual.json").write_text(js(step2), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step30_counterfactual.py:212:     (RAW_DIR / "step32_robustness.json").write_text(js(robustness), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:6: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:11: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:16: from scipy import stats
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:17: from statsmodels.stats.sandwich_covariance import cov_cluster
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:18: from sklearn.model_selection import GroupKFold
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:21: from clean_sample_builder import v9  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:23: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:24: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:25: RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:31: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:35: def js(obj):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:47: def build_six_group_dev():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:65: def build_six_group_holdout():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:84: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:120:     (RAW_DIR / "step36_verification.json").write_text(js(verification), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:157:     fold_df.to_csv(RAW_DIR / "step37_six_group_R0c_fold_coefs.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step36_six_group_clean_sample.py:171:     stab_df.to_csv(RAW_DIR / "step37_six_group_R0c_stability.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_F4_customers_mean_ratio.py:5: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_F4_customers_mean_ratio.py:8: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_F4_customers_mean_ratio.py:14: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_F4_customers_mean_ratio.py:21: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_F4_customers_mean_ratio.py:22: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_F4_customers_mean_ratio.py:25: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_F4_customers_mean_ratio.py:29: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_F4_customers_mean_ratio.py:76:     (RAW_DIR / "step38_F4_customers_mean_ratio.json").write_text(
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_decompose_sample_vs_definition.py:14: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_decompose_sample_vs_definition.py:19: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_decompose_sample_vs_definition.py:24: from sklearn.feature_selection import mutual_info_regression
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_decompose_sample_vs_definition.py:27: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_decompose_sample_vs_definition.py:36: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_decompose_sample_vs_definition.py:37: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_decompose_sample_vs_definition.py:42: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_decompose_sample_vs_definition.py:46: def dcorr_stat(x, y):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_decompose_sample_vs_definition.py:50: def mi_stat(x, y):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_decompose_sample_vs_definition.py:55: def perm_test(x, y, stat_fn, n_perm=N_PERM):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_decompose_sample_vs_definition.py:66: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_decompose_sample_vs_definition.py:117:     (RAW_DIR / "step38_M6_decompose_sample_vs_definition.json").write_text(
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_nonlinear_dependence.py:19: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_nonlinear_dependence.py:24: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_nonlinear_dependence.py:28: from sklearn.feature_selection import mutual_info_regression
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_nonlinear_dependence.py:31: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_nonlinear_dependence.py:33: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_nonlinear_dependence.py:34: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_nonlinear_dependence.py:39: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_nonlinear_dependence.py:43: def perm_test(x, y, stat_fn, n_perm=N_PERM):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_nonlinear_dependence.py:55: def dcorr_stat(x, y):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_nonlinear_dependence.py:59: def mi_stat(x, y):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_nonlinear_dependence.py:64: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_nonlinear_dependence.py:111:     RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step38_M6_nonlinear_dependence.py:112:     (RAW_DIR / "step38_M6_nonlinear_dependence.json").write_text(
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step3_dose_response_curve.py:3: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step3_dose_response_curve.py:8: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step3_dose_response_curve.py:14: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step3_dose_response_curve.py:18: from clean_sample_builder import v9  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step3_dose_response_curve.py:20: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step3_dose_response_curve.py:21: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step3_dose_response_curve.py:22: RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step3_dose_response_curve.py:29: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step3_dose_response_curve.py:33: def js(obj):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step3_dose_response_curve.py:45: def build_curve(sample, target_col, use_customers, model_label):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step3_dose_response_curve.py:99: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step3_dose_response_curve.py:112:     combined_curve.to_csv(OUT_DIR / "03_阵风剂量反应曲线.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step3_dose_response_curve.py:115:     (RAW_DIR / "step3_dose_response_summary.json").write_text(js(summary), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:5: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:10: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:15: from scipy import stats
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:16: from sklearn.model_selection import GroupKFold
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:17: from statsmodels.stats.sandwich_covariance import cov_cluster
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:20: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:23: from clean_sample_builder import v9  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:25: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:26: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:27: RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:30: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:34: def js(obj):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:46: def make_folds(df, n_splits=5):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:58: def add_cubic(X):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:64: def fit_with_cluster(y, X, lad_series):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:74: def run_model(df, target_col, use_customers, label):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:169: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:179:     (RAW_DIR / "step40_1_cubic_E0.json").write_text(js(e0_summary), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_1_cubic_gust_term.py:180:     (RAW_DIR / "step40_1_cubic_R0c.json").write_text(js(r0c_summary), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_2_zspace_symmetry.py:8: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_2_zspace_symmetry.py:11: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_2_zspace_symmetry.py:15: RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\raw")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_2_zspace_symmetry.py:29: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_2_zspace_symmetry.py:33: def eta(beta1, beta2, z):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_2_zspace_symmetry.py:37: def analyze(label, beta1, beta2, gust_mean, gust_sd):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_2_zspace_symmetry.py:80: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_2_zspace_symmetry.py:88:     RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_2_zspace_symmetry.py:89:     (RAW_DIR / "step40_2_zspace_symmetry.json").write_text(
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:8: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:13: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:19: from scipy import stats
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:22: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:23: from figure_style import apply_style  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:26: from clean_sample_builder import v9  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:33: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:34: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:35: DIAG_DIR = RAW_DIR / "step40_residual_diagnostics"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:41: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:45: def js(obj):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:57: def extract_terms(params, pvalues, terms):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:67: def residual_diagnostics(res, model_label, out_stub):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:82:     fig.savefig(DIAG_DIR / f"{out_stub}_resid_vs_fitted.png", dpi=200)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:89:     fig.savefig(DIAG_DIR / f"{out_stub}_qqplot.png", dpi=200)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:98:         "resid_vs_fitted_png": str((DIAG_DIR / f"{out_stub}_resid_vs_fitted.png").relative_to(OUT_DIR)),
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:99:         "qqplot_png": str((DIAG_DIR / f"{out_stub}_qqplot.png").relative_to(OUT_DIR)),
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:103: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step40_model_form_check.py:227:     (RAW_DIR / "step40_model_form_check.json").write_text(js(results), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step42_appendixD_composition_crosstab.py:20: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step42_appendixD_composition_crosstab.py:23: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step42_appendixD_composition_crosstab.py:29: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step42_appendixD_composition_crosstab.py:32: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step42_appendixD_composition_crosstab.py:33: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step42_appendixD_composition_crosstab.py:34: RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step42_appendixD_composition_crosstab.py:37: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step42_appendixD_composition_crosstab.py:41: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step42_appendixD_composition_crosstab.py:111:     cross_mean.to_csv(RAW_DIR / "step42_crosstab_mean_duration.csv")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step42_appendixD_composition_crosstab.py:112:     cross_n.to_csv(RAW_DIR / "step42_crosstab_n.csv")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step42_appendixD_composition_crosstab.py:113:     pooled.to_csv(RAW_DIR / "step42_pooled_mean_duration.csv")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step42_appendixD_composition_crosstab.py:115:         "stage_row_count", "n_stages_group", "customers_bin"]].to_csv(
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step42_appendixD_composition_crosstab.py:116:         RAW_DIR / "step42_event_level_with_groups.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step43_M01_M03_M05.py:12: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step43_M01_M03_M05.py:16: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step43_M01_M03_M05.py:23: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step43_M01_M03_M05.py:26: from clean_sample_builder import v9  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step43_M01_M03_M05.py:28: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step43_M01_M03_M05.py:29: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step43_M01_M03_M05.py:30: RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step43_M01_M03_M05.py:36: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step43_M01_M03_M05.py:40: def js(obj):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step43_M01_M03_M05.py:52: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step43_M01_M03_M05.py:146:     boot_df_out.to_csv(RAW_DIR / "step43_M05_bootstrap_full.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step43_M01_M03_M05.py:152:     orig = pd.read_csv(RAW_DIR / "step2_E0_bootstrap_turning_points_z.csv", header=None)[0].to_numpy()
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step43_M01_M03_M05.py:195:     (RAW_DIR / "step43_M01_M03_M05.json").write_text(js(result), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step4_baseline_regional_map.py:7: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step4_baseline_regional_map.py:12: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step4_baseline_regional_map.py:20: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step4_baseline_regional_map.py:23: from clean_sample_builder import v9  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step4_baseline_regional_map.py:27: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step4_baseline_regional_map.py:28: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step4_baseline_regional_map.py:29: RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step4_baseline_regional_map.py:38: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step4_baseline_regional_map.py:42: def js(obj):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step4_baseline_regional_map.py:54: def fit_and_predict_by_lad(sample: pd.DataFrame, target_col: str, use_customers: bool, label: str):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step4_baseline_regional_map.py:100: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step4_baseline_regional_map.py:110:     pred_lad.to_csv(OUT_DIR / "04_基线区域差异地图数据.csv", index=False, encoding="utf-8-sig")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step4_baseline_regional_map.py:152:         fig.savefig(OUT_DIR / f"{out_stub}.png", dpi=600, bbox_inches="tight")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step4_baseline_regional_map.py:153:         fig.savefig(OUT_DIR / f"{out_stub}.pdf", bbox_inches="tight")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step4_baseline_regional_map.py:171:     (RAW_DIR / "step4_regional_map_summary.json").write_text(js(summary), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step7_customers_dose_response.py:5: from __future__ import annotations
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step7_customers_dose_response.py:10: from pathlib import Path
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step7_customers_dose_response.py:17: from combined_sample_builder import build_combined_samples  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step7_customers_dose_response.py:20: from clean_sample_builder import v9  # noqa: E402
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step7_customers_dose_response.py:23: OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step7_customers_dose_response.py:24: RAW_DIR = OUT_DIR / "raw"
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step7_customers_dose_response.py:25: RAW_DIR.mkdir(parents=True, exist_ok=True)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step7_customers_dose_response.py:32: def log_step(msg):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step7_customers_dose_response.py:36: def js(obj):
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step7_customers_dose_response.py:48: def main():
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step7_customers_dose_response.py:93:     curve.to_csv(OUT_DIR / "07_customers_v2剂量反应曲线.csv", index=False)
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step7_customers_dose_response.py:114:     (RAW_DIR / "step7_customers_dose_response_summary.json").write_text(js(summary), encoding="utf-8")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step7_customers_dose_response.py:119:     gust_curve_all = pd.read_csv(OUT_DIR / "03_阵风剂量反应曲线.csv")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step7_customers_dose_response.py:148:     fig.savefig(OUT_DIR / "08_阵风vs客户规模剂量反应对比图.png", dpi=600, bbox_inches="tight")
+D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis\step7_customers_dose_response.py:149:     fig.savefig(OUT_DIR / "08_阵风vs客户规模剂量反应对比图.pdf", bbox_inches="tight")

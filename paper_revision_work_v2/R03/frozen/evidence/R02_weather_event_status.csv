@@ -1,0 +1,4 @@
+weather_cache_status,weather_validation_tier,weather_numeric_available,events
+missing_file,unavailable,False,8236
+query_ineligible,unavailable,False,5611
+readable,strict_cache_checked,True,121178

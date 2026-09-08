@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "command": "R05/cli.py consumers",
+  "graphics": "reused 24 verified immutable outputs from actual R05 render; no rerender necessary",
+  "binding_rows": 246,
+  "figure_groups": 12,
+  "new_fits": 0,
+  "Word_modified": false
+}

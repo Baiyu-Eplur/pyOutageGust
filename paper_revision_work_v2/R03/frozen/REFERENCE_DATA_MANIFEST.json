@@ -1,0 +1,44 @@
+[
+  {
+    "original_path": "D:\\Pyprogramme\\STST2603\\data\\population_lad_long.csv",
+    "frozen_path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\frozen\\reference_data\\population_lad_long.csv",
+    "sha256": "46d0a29a3c0a71b000577360a4dd7ec75ea29e22b17e3600e0d006be03c72b55",
+    "role": "local evidence only"
+  },
+  {
+    "original_path": "D:\\Pyprogramme\\STST2603\\data\\localincomedeprivationdata.xlsx",
+    "frozen_path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\frozen\\reference_data\\localincomedeprivationdata.xlsx",
+    "sha256": "6eb516a87654078ee69d4df55c8bc749b5da5de117f996f262c0c762bc20b38f",
+    "role": "local evidence only"
+  },
+  {
+    "original_path": "D:\\Pyprogramme\\STST2603\\data\\BUA_2022_GB_-3259870081615132876\\BUA_2022_GB.dbf",
+    "frozen_path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\frozen\\reference_data\\BUA_2022_GB.dbf",
+    "sha256": "df84f1b3314de2a1b302b9bb7a9c7436601174a83320c3da8ae4539201eee519",
+    "role": "local evidence only"
+  },
+  {
+    "original_path": "D:\\Pyprogramme\\STST2603\\data\\Built_Up_Area_to_Local_Authority_District_(December_2022)_Lookup_in_Great_Britain\\Built_Up_Area_to_Local_Authority_District_(December_2022)_Lookup_in_Great_Britain.dbf",
+    "frozen_path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\frozen\\reference_data\\Built_Up_Area_to_Local_Authority_District_(December_2022)_Lookup_in_Great_Britain.dbf",
+    "sha256": "b4ea6f9528460bf2d6e298c1848ef2a768150dc6c5677358fa74c9d0c022ea05",
+    "role": "local evidence only"
+  },
+  {
+    "original_path": "D:\\Pyprogramme\\STST2603\\data\\dno_license_areas_20200506\\DNO_License_Areas_20200506.dbf",
+    "frozen_path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\frozen\\reference_data\\DNO_License_Areas_20200506.dbf",
+    "sha256": "21cc7f02cb32d35329bd9e6b1c9327b114dfdad1895a67d4d304168221afb81c",
+    "role": "local evidence only"
+  },
+  {
+    "original_path": "D:\\Pyprogramme\\STST2603\\data\\Local_Authority_Districts_December_2021_UK_BGC_2022\\LAD_DEC_2021_UK_BGC.dbf",
+    "frozen_path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\frozen\\reference_data\\LAD_DEC_2021_UK_BGC.dbf",
+    "sha256": "4bc7e07eef4ff0eb020f82e7a7b7288822dd5a9fbca2e9e0063444a350600d41",
+    "role": "local evidence only"
+  },
+  {
+    "original_path": "D:\\Pyprogramme\\STST2603\\data\\main_ONS_BUA_2024_EW_V2_1187912359471544048\\main_ONS_BUA_2024_EW_V2.dbf",
+    "frozen_path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\frozen\\reference_data\\main_ONS_BUA_2024_EW_V2.dbf",
+    "sha256": "efbdc62be5249fa09eea6e885871f4a956101ea0271c73c923fce910639e18cb",
+    "role": "local evidence only"
+  }
+]

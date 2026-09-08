@@ -1,0 +1,77 @@
+[
+  {
+    "path": "D:\\Pyprogramme\\pyOutageGust\\paper_revision_work_v2\\R04\\checks\\artifact_acceptance.json",
+    "bytes": 934,
+    "sha256": "4490b8161bd2738de16af5b2f08dc06210f510b9561ce026ba34b25ce8b28d09"
+  },
+  {
+    "path": "D:\\Pyprogramme\\pyOutageGust\\paper_revision_work_v2\\R04\\checks\\calendar_equivalence.json",
+    "bytes": 321303,
+    "sha256": "8585edb7e4f1968397f8ecc2932cc8790e0ba2a6f4ad573c5e550daedfed49ad"
+  },
+  {
+    "path": "D:\\Pyprogramme\\pyOutageGust\\paper_revision_work_v2\\R04\\checks\\core_actual_acceptance.json",
+    "bytes": 9085,
+    "sha256": "911e3861835b53d242925ea6482c4d119d29c972ee9811a7112404071432e3cb"
+  },
+  {
+    "path": "D:\\Pyprogramme\\pyOutageGust\\paper_revision_work_v2\\R04\\checks\\figure_acceptance.json",
+    "bytes": 1855,
+    "sha256": "f3c1cbe2c36fbd5ed75722bef35956b28ecdb33764f548ce2c157e5a2fafc923"
+  },
+  {
+    "path": "D:\\Pyprogramme\\pyOutageGust\\paper_revision_work_v2\\R04\\checks\\final_data.json",
+    "bytes": 729,
+    "sha256": "027a5f0b60b6f79a990d55b3b3d4483a85bb94180bc7f45a43cfa2bc4935dedb"
+  },
+  {
+    "path": "D:\\Pyprogramme\\pyOutageGust\\paper_revision_work_v2\\R04\\checks\\final_isolation.json",
+    "bytes": 15978,
+    "sha256": "5d8e2e99806222a4b55453a25d89ac00efc9fbe58caeed61719d142d2873ff47"
+  },
+  {
+    "path": "D:\\Pyprogramme\\pyOutageGust\\paper_revision_work_v2\\R04\\checks\\period_covariance_acceptance.json",
+    "bytes": 7971,
+    "sha256": "40b50b558b597ca91743ddd22cb126cdeb75190bb32a74f9738914f788a5ed38"
+  },
+  {
+    "path": "D:\\Pyprogramme\\pyOutageGust\\paper_revision_work_v2\\R04\\checks\\preflight.json",
+    "bytes": 970,
+    "sha256": "60a8009e6942435889e81c7d4866a816368830ef8b6a0463963c2c0d034fa00d"
+  },
+  {
+    "path": "D:\\Pyprogramme\\pyOutageGust\\paper_revision_work_v2\\R04\\checks\\protected_at_start.json",
+    "bytes": 98101,
+    "sha256": "3582b6348e40042106be87c3eda9d9fb85d232893076807031c9be4747411ff7"
+  },
+  {
+    "path": "D:\\Pyprogramme\\pyOutageGust\\paper_revision_work_v2\\R04\\checks\\R1_acceptance.json",
+    "bytes": 6224,
+    "sha256": "538b15cd530e20756bbd180f948853b649c9b368c7682287b8eaaa4579696245"
+  },
+  {
+    "path": "D:\\Pyprogramme\\pyOutageGust\\paper_revision_work_v2\\R04\\checks\\R1_archive_acceptance.json",
+    "bytes": 457,
+    "sha256": "4e344148e574b04bd0ed98902197068179d2ad44656d4e78d3a2c76e772f2a38"
+  },
+  {
+    "path": "D:\\Pyprogramme\\pyOutageGust\\paper_revision_work_v2\\R04\\checks\\report_data.json",
+    "bytes": 774,
+    "sha256": "e0ffd85b29876d366fa6a4c6f8ec1265cccd426b0be3bd5b96efb7863aeafe8e"
+  },
+  {
+    "path": "D:\\Pyprogramme\\pyOutageGust\\paper_revision_work_v2\\R04\\checks\\return_package_validation.json",
+    "bytes": 308,
+    "sha256": "fbf8741840322451c9aa1dd058f2504297063bc2ba2809603db6989940ce0883"
+  },
+  {
+    "path": "D:\\Pyprogramme\\pyOutageGust\\paper_revision_work_v2\\R04\\checks\\runtime_paths.json",
+    "bytes": 994,
+    "sha256": "c57243738d2daadf0c0185baafbe68358564bd067b3ad509d169a193e9f64e63"
+  },
+  {
+    "path": "D:\\Pyprogramme\\pyOutageGust\\paper_revision_work_v2\\R04\\checks\\supplement_execution.json",
+    "bytes": 2380,
+    "sha256": "847c8d04c2bf50d43c25a4c05658c3f301a741cfde7ab03ba56a9613f6037f95"
+  }
+]

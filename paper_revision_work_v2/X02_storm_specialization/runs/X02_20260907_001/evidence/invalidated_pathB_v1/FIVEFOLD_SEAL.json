@@ -1,0 +1,17 @@
+{
+  "started_utc": "2026-09-07T12:09:01.550293+00:00",
+  "completed_utc": "2026-09-07T12:17:53.301576+00:00",
+  "time_test_seal_sha256": "682e32cd2a021b2180182c338d63af3f66b48c11501fc2f384bfa3fa48d471bf",
+  "predictions_sha256": "8d0dbd9bd3e6be575df279ac8e1f93a304da3631cd62a41fdcfef72bbbb1580e",
+  "prediction_duplicate_keys": 0,
+  "failures_n": 0,
+  "outer_groups": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5"
+  ],
+  "nested_inner_groups": 4,
+  "path_A_unchanged": true
+}

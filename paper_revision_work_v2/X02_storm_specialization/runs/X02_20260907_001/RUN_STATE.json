@@ -1,0 +1,8 @@
+{
+  "run_id": "X02_20260907_001",
+  "stage": "X02-F",
+  "status": "completed",
+  "completed_utc": "2026-09-07T12:44:05.404350+00:00",
+  "acceptance_pass": true,
+  "package_hash_reference": "../RETURN_PACKAGE_X02.receipt.json"
+}

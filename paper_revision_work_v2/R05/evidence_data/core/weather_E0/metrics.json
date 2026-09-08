@@ -1,0 +1,130 @@
+{
+  "control": {
+    "pooled_oof_r2": 0.02046582089703597,
+    "pooled": {
+      "n": 9857,
+      "SSE": 47484.461031415034,
+      "SST": 48476.57391077488,
+      "r2": 0.02046582089703597,
+      "status": "defined",
+      "weights": "event_equal",
+      "SST_center": "evaluation_target_mean"
+    },
+    "folds": {
+      "0": {
+        "n": 2245,
+        "SSE": 11458.018278952164,
+        "SST": 11571.883335142587,
+        "r2": 0.009839803331288977,
+        "status": "defined",
+        "weights": "event_equal",
+        "SST_center": "evaluation_target_mean"
+      },
+      "1": {
+        "n": 1800,
+        "SSE": 8339.112665865678,
+        "SST": 8738.023037005576,
+        "r2": 0.045652245301999184,
+        "status": "defined",
+        "weights": "event_equal",
+        "SST_center": "evaluation_target_mean"
+      },
+      "2": {
+        "n": 2071,
+        "SSE": 10053.162771558527,
+        "SST": 10069.107445822618,
+        "r2": 0.0015835240958428365,
+        "status": "defined",
+        "weights": "event_equal",
+        "SST_center": "evaluation_target_mean"
+      },
+      "3": {
+        "n": 1935,
+        "SSE": 9273.704255631645,
+        "SST": 9230.869960602207,
+        "r2": -0.004640331324377467,
+        "status": "defined",
+        "weights": "event_equal",
+        "SST_center": "evaluation_target_mean"
+      },
+      "4": {
+        "n": 1806,
+        "SSE": 8360.463059407026,
+        "SST": 8559.131757703612,
+        "r2": 0.023211314409054995,
+        "status": "defined",
+        "weights": "event_equal",
+        "SST_center": "evaluation_target_mean"
+      }
+    },
+    "mean_fold_r2": 0.015129311162761705,
+    "mean_fold_policy": "unweighted across all declared folds; undefined if any fold undefined",
+    "evaluation_ids_sha256": "b26795097e8853a5bfe5ec8e9e0fd08abe49e93387d3d4d1d30921714ddd1c26",
+    "failed_folds": [],
+    "prediction_scale": "log1p_C"
+  },
+  "G": {
+    "pooled_oof_r2": 0.02428828432644692,
+    "pooled": {
+      "n": 9857,
+      "SSE": 47299.16110045796,
+      "SST": 48476.57391077488,
+      "r2": 0.02428828432644692,
+      "status": "defined",
+      "weights": "event_equal",
+      "SST_center": "evaluation_target_mean"
+    },
+    "folds": {
+      "0": {
+        "n": 2245,
+        "SSE": 11649.46835253291,
+        "SST": 11571.883335142587,
+        "r2": -0.0067046145509179755,
+        "status": "defined",
+        "weights": "event_equal",
+        "SST_center": "evaluation_target_mean"
+      },
+      "1": {
+        "n": 1800,
+        "SSE": 8321.724387637856,
+        "SST": 8738.023037005576,
+        "r2": 0.04764220094232907,
+        "status": "defined",
+        "weights": "event_equal",
+        "SST_center": "evaluation_target_mean"
+      },
+      "2": {
+        "n": 2071,
+        "SSE": 9960.956068159476,
+        "SST": 10069.107445822618,
+        "r2": 0.010740910080169086,
+        "status": "defined",
+        "weights": "event_equal",
+        "SST_center": "evaluation_target_mean"
+      },
+      "3": {
+        "n": 1935,
+        "SSE": 9111.449365083026,
+        "SST": 9230.869960602207,
+        "r2": 0.012937090006562069,
+        "status": "defined",
+        "weights": "event_equal",
+        "SST_center": "evaluation_target_mean"
+      },
+      "4": {
+        "n": 1806,
+        "SSE": 8255.562927044695,
+        "SST": 8559.131757703612,
+        "r2": 0.035467245890412946,
+        "status": "defined",
+        "weights": "event_equal",
+        "SST_center": "evaluation_target_mean"
+      }
+    },
+    "mean_fold_r2": 0.02001656647371104,
+    "mean_fold_policy": "unweighted across all declared folds; undefined if any fold undefined",
+    "evaluation_ids_sha256": "b26795097e8853a5bfe5ec8e9e0fd08abe49e93387d3d4d1d30921714ddd1c26",
+    "failed_folds": [],
+    "prediction_scale": "log1p_C"
+  }
+}

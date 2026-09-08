@@ -1,0 +1,9 @@
+{
+  "required_files_missing": [],
+  "stages_correct": true,
+  "required_issue_ids_missing": [],
+  "history_1_to_43_complete": true,
+  "weather_available_case_strict_sum_mismatches": [],
+  "protected_unchanged": true,
+  "scope": "deliverable/protection verification; not repaired pipeline regression tests"
+}

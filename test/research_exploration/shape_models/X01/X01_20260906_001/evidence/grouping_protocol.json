@@ -1,0 +1,325 @@
+{
+  "base_utc": "2021-04-01T00:00:00+00:00",
+  "block_days": 14,
+  "purge_hours": 48,
+  "storm_windows": {
+    "Arwen": {
+      "start": "2021-11-25T00:00:00+00:00",
+      "end_exclusive": "2021-11-29T00:00:00+00:00",
+      "calendar": "UTC_declared_proxy",
+      "date_source": "frozen R01/old step10 dates, business timezone not independently confirmed",
+      "endpoint": "start inclusive/end next-day exclusive",
+      "London_alternative": true
+    },
+    "Dudley": {
+      "start": "2022-02-15T00:00:00+00:00",
+      "end_exclusive": "2022-02-18T00:00:00+00:00",
+      "calendar": "UTC_declared_proxy",
+      "date_source": "frozen R01/old step10 dates, business timezone not independently confirmed",
+      "endpoint": "start inclusive/end next-day exclusive",
+      "London_alternative": true
+    },
+    "Eunice": {
+      "start": "2022-02-17T00:00:00+00:00",
+      "end_exclusive": "2022-02-20T00:00:00+00:00",
+      "calendar": "UTC_declared_proxy",
+      "date_source": "frozen R01/old step10 dates, business timezone not independently confirmed",
+      "endpoint": "start inclusive/end next-day exclusive",
+      "London_alternative": true
+    },
+    "Franklin": {
+      "start": "2022-02-19T00:00:00+00:00",
+      "end_exclusive": "2022-02-23T00:00:00+00:00",
+      "calendar": "UTC_declared_proxy",
+      "date_source": "frozen R01/old step10 dates, business timezone not independently confirmed",
+      "endpoint": "start inclusive/end next-day exclusive",
+      "London_alternative": true
+    },
+    "Babet": {
+      "start": "2023-10-17T00:00:00+00:00",
+      "end_exclusive": "2023-10-23T00:00:00+00:00",
+      "calendar": "UTC_declared_proxy",
+      "date_source": "frozen R01/old step10 dates, business timezone not independently confirmed",
+      "endpoint": "start inclusive/end next-day exclusive",
+      "London_alternative": true
+    },
+    "Ciaran": {
+      "start": "2023-10-31T00:00:00+00:00",
+      "end_exclusive": "2023-11-04T00:00:00+00:00",
+      "calendar": "UTC_declared_proxy",
+      "date_source": "frozen R01/old step10 dates, business timezone not independently confirmed",
+      "endpoint": "start inclusive/end next-day exclusive",
+      "London_alternative": true
+    },
+    "Henk": {
+      "start": "2024-01-01T00:00:00+00:00",
+      "end_exclusive": "2024-01-04T00:00:00+00:00",
+      "calendar": "UTC_declared_proxy",
+      "date_source": "frozen R01/old step10 dates, business timezone not independently confirmed",
+      "endpoint": "start inclusive/end next-day exclusive",
+      "London_alternative": true
+    }
+  },
+  "storm_window_blocks": {
+    "Arwen": [
+      17
+    ],
+    "Dudley": [
+      22,
+      23
+    ],
+    "Eunice": [
+      23
+    ],
+    "Franklin": [
+      23
+    ],
+    "Babet": [
+      66
+    ],
+    "Ciaran": [
+      67
+    ],
+    "Henk": [
+      71
+    ]
+  },
+  "group_block_members": {
+    "block_0": [
+      0
+    ],
+    "block_1": [
+      1
+    ],
+    "block_2": [
+      2
+    ],
+    "block_3": [
+      3
+    ],
+    "block_4": [
+      4
+    ],
+    "block_5": [
+      5
+    ],
+    "block_6": [
+      6
+    ],
+    "block_7": [
+      7
+    ],
+    "block_8": [
+      8
+    ],
+    "block_9": [
+      9
+    ],
+    "block_10": [
+      10
+    ],
+    "block_11": [
+      11
+    ],
+    "block_12": [
+      12
+    ],
+    "block_13": [
+      13
+    ],
+    "block_14": [
+      14
+    ],
+    "block_15": [
+      15
+    ],
+    "block_16": [
+      16
+    ],
+    "stormcluster_17": [
+      17
+    ],
+    "block_18": [
+      18
+    ],
+    "block_19": [
+      19
+    ],
+    "block_20": [
+      20
+    ],
+    "block_21": [
+      21
+    ],
+    "stormcluster_22": [
+      22,
+      23
+    ],
+    "block_24": [
+      24
+    ],
+    "block_25": [
+      25
+    ],
+    "block_26": [
+      26
+    ],
+    "block_27": [
+      27
+    ],
+    "block_28": [
+      28
+    ],
+    "block_29": [
+      29
+    ],
+    "block_30": [
+      30
+    ],
+    "block_31": [
+      31
+    ],
+    "block_32": [
+      32
+    ],
+    "block_33": [
+      33
+    ],
+    "block_34": [
+      34
+    ],
+    "block_35": [
+      35
+    ],
+    "block_36": [
+      36
+    ],
+    "block_37": [
+      37
+    ],
+    "block_38": [
+      38
+    ],
+    "block_39": [
+      39
+    ],
+    "block_40": [
+      40
+    ],
+    "block_41": [
+      41
+    ],
+    "block_42": [
+      42
+    ],
+    "block_43": [
+      43
+    ],
+    "block_44": [
+      44
+    ],
+    "block_45": [
+      45
+    ],
+    "block_46": [
+      46
+    ],
+    "block_47": [
+      47
+    ],
+    "block_48": [
+      48
+    ],
+    "block_49": [
+      49
+    ],
+    "block_50": [
+      50
+    ],
+    "block_51": [
+      51
+    ],
+    "block_52": [
+      52
+    ],
+    "block_53": [
+      53
+    ],
+    "block_54": [
+      54
+    ],
+    "block_55": [
+      55
+    ],
+    "block_56": [
+      56
+    ],
+    "block_57": [
+      57
+    ],
+    "block_58": [
+      58
+    ],
+    "block_59": [
+      59
+    ],
+    "block_60": [
+      60
+    ],
+    "block_61": [
+      61
+    ],
+    "block_62": [
+      62
+    ],
+    "block_63": [
+      63
+    ],
+    "block_64": [
+      64
+    ],
+    "block_65": [
+      65
+    ],
+    "stormcluster_66": [
+      66
+    ],
+    "stormcluster_67": [
+      67
+    ],
+    "block_68": [
+      68
+    ],
+    "block_69": [
+      69
+    ],
+    "block_70": [
+      70
+    ],
+    "stormcluster_71": [
+      71
+    ],
+    "block_72": [
+      72
+    ],
+    "block_73": [
+      73
+    ],
+    "block_74": [
+      74
+    ],
+    "block_75": [
+      75
+    ],
+    "block_76": [
+      76
+    ],
+    "block_77": [
+      77
+    ],
+    "block_78": [
+      78
+    ]
+  },
+  "protocol_label": "time-block CV with known-storm protection and buffers"
+}

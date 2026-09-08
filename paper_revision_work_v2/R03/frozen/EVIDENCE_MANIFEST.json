@@ -1,0 +1,249 @@
+{
+  "files": [
+    {
+      "path": "frozen/evidence/26_VIF共线性检查.md",
+      "bytes": 2272,
+      "sha256": "68adad99008d9328da19dbc28ec04c395f3c0eed0bf5048831873355ac5ee735"
+    },
+    {
+      "path": "frozen/evidence/27_customers_v2符号反转收尾检验.md",
+      "bytes": 4897,
+      "sha256": "324e2ba0d440da63cef2d69a3b667c86680096f447343608587d05a79080db72"
+    },
+    {
+      "path": "frozen/evidence/28_空间自相关稳健性检验.md",
+      "bytes": 5533,
+      "sha256": "29dab0c41c0c2d9da0f33252f21f73661dea4694899fa043c053875822ff764b"
+    },
+    {
+      "path": "frozen/evidence/ACTIVE_PIPELINE.md",
+      "bytes": 3787,
+      "sha256": "a813d2e9133626d9c724ae09ac95c65f7a48c8b627c6e8d62c27d47b07fc294b"
+    },
+    {
+      "path": "frozen/evidence/buckinghamshire_lineage.json",
+      "bytes": 1682,
+      "sha256": "cc709fd5c9c167997580c35a767f83f6442dc4beec9d79df1e83505f34fa2bc9"
+    },
+    {
+      "path": "frozen/evidence/buckinghamshire_original_indicators.csv",
+      "bytes": 251,
+      "sha256": "f0f899377720557ca0768e795eda49f1ded48d3b0c6d857bf48f3960b46bc8ce"
+    },
+    {
+      "path": "frozen/evidence/manuscript_versions.json",
+      "bytes": 970,
+      "sha256": "54a14618885e2cabc2abd394d568d57dd7ef9a7992c44c72b5f26c365e19221e"
+    },
+    {
+      "path": "frozen/evidence/population_connection.json",
+      "bytes": 371,
+      "sha256": "625503a53b78a475a0676db605a21b5bcb8bb3098ba75e66c0e9f8bab0a01541"
+    },
+    {
+      "path": "frozen/evidence/R02_ambiguous_event_master.csv",
+      "bytes": 13252,
+      "sha256": "8d82d239f779cfd8afa53b514e766af910e9e612648406444cff1addfd2bfef4"
+    },
+    {
+      "path": "frozen/evidence/R02_AMBIGUOUS_EVENTS.md",
+      "bytes": 1608,
+      "sha256": "721e158093f4cd30ec2506a8c5022511b5396490b48959d8a734f74bfa8e6afe"
+    },
+    {
+      "path": "frozen/evidence/R02_ambiguous_source_stages.csv",
+      "bytes": 2831,
+      "sha256": "8b06eda8171236e76195ade76d578fe831c924e8c1500410f2f4476edd949ba7"
+    },
+    {
+      "path": "frozen/evidence/R02_Buck_membership.csv",
+      "bytes": 139,
+      "sha256": "6d7d5a26f6b1ce06936e64ef506a0492a3d45bad0752af1bf00e655cbab5cc54"
+    },
+    {
+      "path": "frozen/evidence/R02_calendar_boundary_events.csv",
+      "bytes": 458116,
+      "sha256": "9585ef3846423443f0cb9e932a3663498c63cad85d5a81211f49bd59bb6278da"
+    },
+    {
+      "path": "frozen/evidence/R02_calendar_comparison.csv",
+      "bytes": 271,
+      "sha256": "034d6dbf1f8012a21acd9bd72b148287e8790ec44afc771fc3a484f3e20b0d20"
+    },
+    {
+      "path": "frozen/evidence/R02_cause_transitions.csv",
+      "bytes": 342,
+      "sha256": "6bd5463062dacc2275a8f7e3bd7c2ac82bd137a3c77bf083924425014fde09f8"
+    },
+    {
+      "path": "frozen/evidence/R02_EVENT_MANIFEST.json",
+      "bytes": 13177,
+      "sha256": "950d38b0b1a1d9f334803ef973838a69f2b4d0ecfe4ed5fc539f13a66d290fb1"
+    },
+    {
+      "path": "frozen/evidence/R02_field_changes.csv",
+      "bytes": 13351,
+      "sha256": "9b25919c345ba7eaa00c23c0523e6ea79816902d3c70404a6f3c721212400e33"
+    },
+    {
+      "path": "frozen/evidence/R02_ISOLATED_ENTRY.json",
+      "bytes": 796,
+      "sha256": "02ad7d879ff3671f47df00bf86dbe380b1f2d392a0146717b8b3ebc9c85cbb34"
+    },
+    {
+      "path": "frozen/evidence/R02_isolation_validation.json",
+      "bytes": 1850,
+      "sha256": "e7c4e340f7dd9885f60144e708d00de841e23ccfba06621d806a3b5c74d7d96a"
+    },
+    {
+      "path": "frozen/evidence/R02_membership_transitions.csv",
+      "bytes": 287,
+      "sha256": "ae170a884ec0a53f8b7f005773758ff113df2dc3bb61081f8e3288b353cc486a"
+    },
+    {
+      "path": "frozen/evidence/R02_OLD_NEW_SUMMARY.md",
+      "bytes": 8667,
+      "sha256": "58ebd1c937fc448feda7708e94fba7edb43e9efe664cc969562acfc83fa4f97a"
+    },
+    {
+      "path": "frozen/evidence/R02_population_changes.csv",
+      "bytes": 1733,
+      "sha256": "6af249daf21537934fd58f59df0452eca9c9880ece7ce942c767075c8ef0edbf"
+    },
+    {
+      "path": "frozen/evidence/R02_R1_compat_changed_members.csv",
+      "bytes": 598,
+      "sha256": "496d17fae021494ed8aab3f4c23f001f8afd3fa0d5b87c59854f366a96bc8256"
+    },
+    {
+      "path": "frozen/evidence/R02_R1_compat_transitions.csv",
+      "bytes": 171,
+      "sha256": "2ae36e00b2587077987e3805e00dc6ecb248624323a95246da321f3127d47bab"
+    },
+    {
+      "path": "frozen/evidence/R02_raw_cause_counts.csv",
+      "bytes": 571,
+      "sha256": "5370ff574c00ba15e0cce14c84a6d2a5fcea28116d5c8e7de2b8e4719c2b05ed"
+    },
+    {
+      "path": "frozen/evidence/R02_SAMPLE_FLOW.md",
+      "bytes": 5520,
+      "sha256": "2feb83ec29d6616662ec554a675f370330dad4b4d7ad0f1e0b0451910c8f57f4"
+    },
+    {
+      "path": "frozen/evidence/R02_sequential_flow.csv",
+      "bytes": 274,
+      "sha256": "23c0f13c9d103b22e6bfc12b9613ad7e7a2e73023ed02dba01a81e8dfbac9526"
+    },
+    {
+      "path": "frozen/evidence/R02_stage_quality.csv",
+      "bytes": 406,
+      "sha256": "2ef9cbab78a1f2c780726c0fe7abf48067f1a65ae50ec50efd7e529a5d0ad2ec"
+    },
+    {
+      "path": "frozen/evidence/R02_storm_membership.csv",
+      "bytes": 1060,
+      "sha256": "e1e81dbb772d11bbfc9719593334ea1361b099cab3e7f75aea702eb5c52e644c"
+    },
+    {
+      "path": "frozen/evidence/R02_transition_reasons.csv",
+      "bytes": 1451,
+      "sha256": "95525ee7744d092f5124b1a1571a4f5ad3dd5db2a00bec68d2b8fce73a408ab2"
+    },
+    {
+      "path": "frozen/evidence/R02_WEATHER_AVAILABILITY.md",
+      "bytes": 3047,
+      "sha256": "b3d41182ec2ebee36566c8ee0cac0a3548b5d2aff59ffb65e3e9b2654f17bb6d"
+    },
+    {
+      "path": "frozen/evidence/R02_weather_event_status.csv",
+      "bytes": 200,
+      "sha256": "57120a099dbc3082a5f329122b0872af5c76789200d33289f303f5a215ff5e27"
+    },
+    {
+      "path": "frozen/evidence/R02_weather_field_changes.csv",
+      "bytes": 507,
+      "sha256": "cd95357b6b048986fe2b5bd5db979da2bb1c2c72102b586c5d8660fdf716bef2"
+    },
+    {
+      "path": "frozen/evidence/R1_compatibility_caps.json",
+      "bytes": 205,
+      "sha256": "7c0f5680fe050993359a50c2d50b8601ef87003dd02f1802d10d0efc200d487f"
+    },
+    {
+      "path": "frozen/evidence/SRC09_local_R02_return.md",
+      "bytes": 4426,
+      "sha256": "b28136c61d3244e18a162b31fcc766905f78b7b17f7941c1c01e671cc9c09389"
+    },
+    {
+      "path": "frozen/evidence/SRC10_local_R02_report.md",
+      "bytes": 8905,
+      "sha256": "b8b7aca323238e8fb4185378faca05e1c61e18d9f4659daf08857c985366fcbe"
+    },
+    {
+      "path": "frozen/evidence/SRC11_R03_instruction.txt",
+      "bytes": 18920,
+      "sha256": "af05d34f5f21adaabf71840a351a7e0a4f28612a159816be974dd73485055e12"
+    },
+    {
+      "path": "frozen/evidence/weather_scan_summary.json",
+      "bytes": 453,
+      "sha256": "682f8be5a23d720e51d29c6da39721c2151b8c2e1d0735a46d0cb03d4bc11749"
+    },
+    {
+      "path": "frozen/contracts/baseline_spec.json",
+      "bytes": 1586,
+      "sha256": "d501b44a9c911364e637e055d285842270be795569fca61407597a407c8ee134"
+    },
+    {
+      "path": "frozen/contracts/BASELINE_SPEC.md",
+      "bytes": 3840,
+      "sha256": "bfa33c79ee326096ca96c7ea19caf219c5f87f3af56a9253b68e00db2140504b"
+    },
+    {
+      "path": "frozen/contracts/cause_group_map.json",
+      "bytes": 1425,
+      "sha256": "012808414b8fb788b143596d10c31894d32116e0ed6938412c9d55ea08eb9a9e"
+    },
+    {
+      "path": "frozen/contracts/CAUSE_RULES.md",
+      "bytes": 2256,
+      "sha256": "87c06cf07507f43140d4cc1a8d46769eae805d43255384718df320530b68f203"
+    },
+    {
+      "path": "frozen/contracts/DATA_CONTRACT.md",
+      "bytes": 8571,
+      "sha256": "49eaa933eee319622b480f670a8512fac667f7a085ac3882a98c8000feb10274"
+    },
+    {
+      "path": "frozen/contracts/FIELD_PROVENANCE.md",
+      "bytes": 2451,
+      "sha256": "302eb837857eeec351d9cd7207e4c27cb2375d6c9787e31fe16f4bd377659a11"
+    },
+    {
+      "path": "frozen/contracts/FIGURE_REFERENCE_CONTRACT.md",
+      "bytes": 3109,
+      "sha256": "648f6be8316ddef8233e2607910db070d1019f5e951b11849deff29374fcfdcc"
+    },
+    {
+      "path": "frozen/contracts/INFORMATION_TIMING.md",
+      "bytes": 1696,
+      "sha256": "1045a423fd3e52d4d4936e0778bd4b9f202cf29fd033a77401c108f366eb8c51"
+    },
+    {
+      "path": "frozen/contracts/RESEARCH_HISTORY.md",
+      "bytes": 7983,
+      "sha256": "1afd610607214b4592fea61f7daa08690a79277bef60b2a5dc692f81f2d5be84"
+    },
+    {
+      "path": "frozen/contracts/UNRESOLVED_DEFINITIONS.md",
+      "bytes": 2693,
+      "sha256": "8263be6092a225951a041fca93330d5caaa481c4e194c9e274ea5de0378ee3e6"
+    },
+    {
+      "path": "frozen/contracts/WEATHER_AND_REGIONAL_SOURCES.md",
+      "bytes": 5991,
+      "sha256": "396a6ccdb41db2daeaf2b004c58bcbed50792862ef24fe8286358a8b21584f92"
+    }
+  ]
+}

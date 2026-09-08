@@ -1,0 +1,92 @@
+{
+  "best_k_bic": 6,
+  "best_k_icl": 6,
+  "dip_test": [
+    {
+      "variable": "log1p_customers",
+      "method": "hartigan_dip_test",
+      "statistic": 0.07497457411645055,
+      "p_value": 0.0,
+      "n": 62928,
+      "note": "diptest package available; no fallback needed"
+    },
+    {
+      "variable": "log1p_duration",
+      "method": "hartigan_dip_test",
+      "statistic": 0.012239984860084846,
+      "p_value": 0.0,
+      "n": 62928,
+      "note": "diptest package available; no fallback needed"
+    }
+  ],
+  "n_peaks_2d_kde": 6,
+  "ari": [
+    {
+      "k": 6,
+      "source": "best_bic",
+      "ari_gmm_vs_kmeans": 0.33798877090898644
+    }
+  ],
+  "sample_check": [
+    {
+      "cluster": 0,
+      "n": 25423,
+      "pct_of_total": 40.40013984235952,
+      "n_dates": 1096,
+      "n_lad": 113,
+      "mean_log1p_customers": 0.6931471805599452,
+      "mean_log1p_duration": 2.2379094163480158,
+      "formal_supported_n>=1000_dates>=100_lad>=30": true
+    },
+    {
+      "cluster": 1,
+      "n": 6516,
+      "pct_of_total": 10.354691075514873,
+      "n_dates": 1082,
+      "n_lad": 113,
+      "mean_log1p_customers": 5.01302648314064,
+      "mean_log1p_duration": 0.6528360031331516,
+      "formal_supported_n>=1000_dates>=100_lad>=30": true
+    },
+    {
+      "cluster": 2,
+      "n": 1845,
+      "pct_of_total": 2.9319221967963385,
+      "n_dates": 652,
+      "n_lad": 110,
+      "mean_log1p_customers": 1.109108156297395,
+      "mean_log1p_duration": 4.522676403436655,
+      "formal_supported_n>=1000_dates>=100_lad>=30": true
+    },
+    {
+      "cluster": 3,
+      "n": 16985,
+      "pct_of_total": 26.991164505466564,
+      "n_dates": 1096,
+      "n_lad": 113,
+      "mean_log1p_customers": 2.5267908158216863,
+      "mean_log1p_duration": 1.5848613127120978,
+      "formal_supported_n>=1000_dates>=100_lad>=30": true
+    },
+    {
+      "cluster": 4,
+      "n": 8147,
+      "pct_of_total": 12.946542079837274,
+      "n_dates": 1076,
+      "n_lad": 113,
+      "mean_log1p_customers": 0.0,
+      "mean_log1p_duration": 0.7510936805589152,
+      "formal_supported_n>=1000_dates>=100_lad>=30": true
+    },
+    {
+      "cluster": 5,
+      "n": 4012,
+      "pct_of_total": 6.375540300025426,
+      "n_dates": 1036,
+      "n_lad": 113,
+      "mean_log1p_customers": 1.0986122886681096,
+      "mean_log1p_duration": 2.088805504285577,
+      "formal_supported_n>=1000_dates>=100_lad>=30": true
+    }
+  ]
+}

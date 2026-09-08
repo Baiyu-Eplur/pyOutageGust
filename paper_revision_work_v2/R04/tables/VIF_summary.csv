@@ -1,0 +1,5 @@
+group,target,continuous_max_VIF,term,all_columns_max_VIF
+main,E0,3.7545521954199232,deprivation_gap_pct,3.7545521954199232
+main,R0c,3.754972756868928,deprivation_gap_pct,3.754972756868928
+weather,E0,4.926582685309151,deprivation_gap_pct,5.345617973396859
+weather,R0c,4.930074519858107,deprivation_gap_pct,5.34684621364827

@@ -1,0 +1,442 @@
+{
+  "myebtablesuk20112024.xlsx": {
+    "sha256": "321f27261c9cf110ea44ca10d198580ec3969bc1171c780cba5596184df9b04d",
+    "sheets": [
+      "Cover sheet",
+      "Contents",
+      "Notes",
+      "Related publications",
+      "MYEB1",
+      "MYEB2",
+      "MYEB3",
+      "MYEB4",
+      "MYEB5"
+    ],
+    "first_sheet_top": [
+      [
+        "Population estimates\nDetailed time series 2011 to 2024\nUnited Kingdom, local authorities, sex and age"
+      ],
+      [
+        "These datasets contain the detailed population estimates and components of change for the mid-year population series. These time series offer users a rich source of data from which to conduct further investigation and research. The series are updated annually as part of each mid-year estimates release. These unrounded estimates are published to enable and encourage further calculations and analysis. However, the estimates should not be taken to be accurate to the level of detail provided. When comparing mid-year population datasets please be aware that while they are broadly comparable, different data sources and methods are used to create the estimates for different countries of the UK. Differences can also occur between years. More information on the accuracy of the estimates is available in the Quality and Methodology document. Appropriate methods of disclosure control have been applied to prevent inference of information relating to individuals.\n\nThe estimated resident population of an area includes all people who usually live there, whatever their nationality. People arriving into an area from outside the UK are only included in the population estimates if their total stay or intended stay in the UK is 12 months or more. Visitors and short-term migrants (those who enter the UK for 3 to 12 months for certain purposes) are not included. The components of change provided in the file relate to the usual resident population only and will not show, for example, short-term migrants as part of the international migration flow. Similarly, people who leave the UK are only excluded from the population estimates if they remain, or intend to remain, outside the UK for 12 months or more. This is consistent with the United Nations recommended definition of an international long-term migrant. Members of UK and non-UK armed forces stationed in the UK are included in the population and UK forces stationed outside the UK are excluded. Students are taken to be resident at their term time address.\n\n"
+      ],
+      [
+        "The estimates contained here are consistent with population estimates for England and Wales published by the Office for National Statistics on 30 July 2025, the population estimates for Scotland published by National Records for Scotland on 14 August 2025 and for Northern Ireland by the Northern Ireland Statistics and Research Agency on 11 September 2025."
+      ],
+      [
+        "\nPublication dates"
+      ],
+      [
+        "The data tables in this spreadsheet were originally published at 9.30am 26 September 2025."
+      ],
+      [
+        "The next publication is scheduled for summer 2026."
+      ],
+      [
+        "\nDataset identifier codes"
+      ],
+      [
+        "The country and local authority codes are 9 digits long and are used as geography identifiers."
+      ],
+      [
+        "\nMore mid-year population estimates"
+      ],
+      [
+        "Population estimates tables page"
+      ],
+      [
+        "Population estimates bulletins accompanying these tables"
+      ],
+      [
+        "Quality and Methodology Information (QMI) report "
+      ],
+      [
+        "\nContact details "
+      ],
+      [
+        "pop.info@ons.gov.uk"
+      ],
+      [
+        "Telephone: +44 (0)1329 444661"
+      ],
+      [
+        "Further advice on the appropriate use of these data can be obtained by emailing pop.info@ons.gov.uk or phoning +44 (0)1329 444661 and asking to speak to a statistician."
+      ],
+      [
+        "\nData supplier:"
+      ],
+      [
+        "Population Estimates Unit"
+      ],
+      [
+        "Population Statistics Directorate"
+      ],
+      [
+        "Office for National Statistics"
+      ],
+      [
+        "Segensworth Road"
+      ],
+      [
+        "FAREHAM"
+      ],
+      [
+        "PO15 5RR"
+      ],
+      [
+        "email: pop.info@ons.gov.uk"
+      ],
+      [
+        "tel: +44 (0)1329 444661"
+      ]
+    ]
+  },
+  "regionalgvabbylainuk.xlsx": {
+    "sha256": "4faaaf61c7dbafe68b732df5689f94585555c18e5a9b57ba2e0f325a8923c0cd",
+    "sheets": [
+      "General notes",
+      "Note on per head data",
+      "Total GVA",
+      "Population",
+      "GVA per head",
+      "ABDE Production",
+      "C Manufacturing",
+      "F Construction",
+      "GHI Distribution",
+      "J Information",
+      "K Finance",
+      "L Real estate",
+      "MN Professional",
+      "OPQ Public services",
+      "RST Other services",
+      "Sheet1",
+      "ESRI_MAPINFO_SHEET"
+    ],
+    "first_sheet_top": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "Regional Gross Value Added (Balanced) by Local Authority in the UK",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "These tables show estimates of Balanced Gross Value Added, in current basic prices, allocated to local authorities in the UK.",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "These data are classified as experimental statistics, according to the Code of Practice for official statistics.",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "Methodology:",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "Balanced data at NUTS3 level are already published by ONS, having been calculated using detailed methodology. The methodology used here is a simplified process, in which 7 aggregated components of GVA(B) at NUTS3 are broken down to local authorities according to proportions calculated from the following datasets. It is important to note that in each of the proportion datasets, data were only available at LA level for the latest years. The proportions calculated from these available years are used to apportion the back series. Calculated this way, the time series assumes a lack of change in the regional distribution of LAs within a NUTS3 region. Going forward, each subsequent year will be apportioned using the latest available LA level data.",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "Business Register Employment Survey (BRES) was used for: CoE; Holding gains; Mixed income; Taxes; Subsidies",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "Annual Business Survey (ABS) was used for: Gross trading profits and surplus",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "Population was used for: Non-market capital consumption",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "Housing value was used for: Rental income",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "The data are presented in tables according to measure and SIC07 industry:",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "Total GVA",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "Population",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "GVA per head",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "ABDE: Agriculture, mining, electricity, gas, water and waste",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "C: Manufacturing",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "F: Construction",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "GHI: Distribution; transport; accommodation and food",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "J: Information and communication",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "K: Financial and insurance activities",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "L: Real estate activities",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "MN: Professional and administrative services",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  }
+}

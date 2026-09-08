@@ -1,0 +1,27 @@
+{
+  "prior_manifest_verified": 144,
+  "changes": [],
+  "large_input_identity_reused": [
+    {
+      "key": "raw",
+      "path": "D:\\Pyprogramme\\STST2603\\data\\ukpn-iis.csv",
+      "bytes": 44289889,
+      "mtime_ns": 1773610266000000000,
+      "sha256": "2c9c0b20c4650b7d765c5c05de37e4bd189206ddabea7019c9437337750daaba",
+      "matches_H0": true
+    },
+    {
+      "key": "v3",
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\outputs\\ukpn_full_stage_dataset_v3.csv",
+      "bytes": 1084515160,
+      "mtime_ns": 1787591347152281200,
+      "sha256": "0aad744eabd2e86f186cdb6072964fcea4492afaf34b8deaa94c51ce553dd16f",
+      "matches_H0": true
+    }
+  ],
+  "cache_directory_files": 75983,
+  "cache_directory_bytes": 908984629,
+  "instruction_sha256": "2edead79992d5b25ad08ea42b464fa82d350be50a514c50455422c41992b2f45",
+  "authorized": "User: 按该文件执行",
+  "timestamp": "2026-09-05T14:36:32.698042+00:00"
+}

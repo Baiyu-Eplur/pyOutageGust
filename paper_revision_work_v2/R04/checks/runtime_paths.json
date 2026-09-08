@@ -1,0 +1,15 @@
+{
+  "executable": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\runtime\\python\\python.exe",
+  "version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "isolated": 1,
+  "no_site": 1,
+  "dont_write_bytecode": true,
+  "module_paths": {
+    "numpy": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\runtime\\site-packages\\numpy\\__init__.py",
+    "pandas": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\runtime\\site-packages\\pandas\\__init__.py",
+    "scipy": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\runtime\\site-packages\\scipy\\__init__.py",
+    "statsmodels": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\runtime\\site-packages\\statsmodels\\__init__.py",
+    "sklearn": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\runtime\\site-packages\\sklearn\\__init__.py"
+  },
+  "all_copied": true
+}

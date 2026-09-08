@@ -1,0 +1,14 @@
+main E0 development rank 25 25 -> 25 eta error 0.0
+Traceback (most recent call last):
+  File "D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R04\cli.py", line 8, in <module>
+    runpy.run_path(str(root/'src'/f'{name}.py'),run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R04\src\calendar_repair.py", line 53, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R04\src\calendar_repair.py", line 36, in run
+    assert residual<1e-7 and pred_error<1e-7 and max(ident.values())<1e-7
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

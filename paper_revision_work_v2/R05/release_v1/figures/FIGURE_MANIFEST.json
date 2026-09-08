@@ -1,0 +1,193 @@
+[
+  {
+    "figure": "figure01",
+    "title": "Locations of eligible incidents",
+    "source": "R02 candidate_main_E0",
+    "scale": "count",
+    "reference": "one eligible event; reported primary-substation coordinates; hexbin counts, not area-normalized density; no licence boundaries or GB inset",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure01.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure01.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending",
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\src\\render_release.py",
+    "consumer_release": "R05_release_v1",
+    "source_model": "R04_B1_all_valid_v1"
+  },
+  {
+    "figure": "figure02",
+    "title": "Outcome distributions: all 60,436 eligible events, no tail trimming",
+    "source": "R02 candidate_main_E0 / R0c",
+    "scale": "explicit per axis",
+    "reference": "actual frozen B1 population and archives",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure02.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure02.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending",
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\src\\render_release.py",
+    "consumer_release": "R05_release_v1",
+    "source_model": "R04_B1_all_valid_v1"
+  },
+  {
+    "figure": "figure03",
+    "title": "Retrospective periods and seven named storm windows",
+    "source": "frozen UTC contract and R03/configs/storm_windows.json",
+    "scale": "explicit per axis",
+    "reference": "actual frozen B1 population and archives",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure03.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure03.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending",
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\src\\render_release.py",
+    "consumer_release": "R05_release_v1",
+    "source_model": "R04_B1_all_valid_v1"
+  },
+  {
+    "figure": "figure04",
+    "title": "Gust reference curves — no minimum confidence intervals",
+    "source": "formal figure4_curve_data/reference",
+    "scale": "exp(mean eta)",
+    "reference": "each model estimation population; per-row raw gust grid, fixed mean physical pressure",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure04.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure04.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending",
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\src\\render_release.py",
+    "consumer_release": "R05_release_v1",
+    "source_model": "R04_B1_all_valid_v1"
+  },
+  {
+    "figure": "figure05",
+    "title": "Nested predictive fit for both main outcomes",
+    "source": "formal metrics.json / contributions.json",
+    "scale": "pooled OOF R2",
+    "reference": "pooled R2; declared control includes nongust weather+region+calendar; no unfitted regional-only baseline",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure05.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure05.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending",
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\src\\render_release.py",
+    "consumer_release": "R05_release_v1",
+    "source_model": "R04_B1_all_valid_v1"
+  },
+  {
+    "figure": "figure06",
+    "title": "Regional reference surfaces; Buckinghamshire proxy retained",
+    "source": "formal figure6 data; copied LAD21 geometry",
+    "scale": "exp(weighted mean eta)",
+    "reference": "common calendar; weather/log-C center; LAD21/23 compatibility unresolved",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure06.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure06.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending",
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\src\\render_release.py",
+    "consumer_release": "R05_release_v1",
+    "source_model": "R04_B1_all_valid_v1"
+  },
+  {
+    "figure": "figure07",
+    "title": "Range of the fitted reference curves",
+    "source": "formal figure7 reference JSON",
+    "scale": "exponentiated grid max/min ratio",
+    "reference": "not endpoint ratio or causal importance",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure07.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure07.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending",
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\src\\render_release.py",
+    "consumer_release": "R05_release_v1",
+    "source_model": "R04_B1_all_valid_v1"
+  },
+  {
+    "figure": "figure08",
+    "title": "Information contributions in main and weather populations",
+    "source": "formal metrics.json / contributions.json",
+    "scale": "R2 percentage points",
+    "reference": "E0 gust increment and R0c conditional G/K; paired within each population, cross-population descriptive",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure08.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure08.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending",
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\src\\render_release.py",
+    "consumer_release": "R05_release_v1",
+    "source_model": "R04_B1_all_valid_v1"
+  },
+  {
+    "figure": "figure09",
+    "title": "Named-window predictions: distinct descriptive and date-OOF identities",
+    "source": "formal figure9 event CSVs",
+    "scale": "eta vs log target; no double log",
+    "reference": "UNIQUE_ANY; overlaps listed once; no true process holdout",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure09.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure09.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending",
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\src\\render_release.py",
+    "consumer_release": "R05_release_v1",
+    "source_model": "R04_B1_all_valid_v1"
+  },
+  {
+    "figure": "figure10",
+    "title": "Period comparison using equivalent full-rank calendar bases",
+    "source": "periods_v2 archives; period_comparison.csv",
+    "scale": "physical quadratic coefficient",
+    "reference": "each period own training scale; no overlapping-CV nominal intervals",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure10.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figure10.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending",
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\src\\render_release.py",
+    "consumer_release": "R05_release_v1",
+    "source_model": "R04_B1_all_valid_v1"
+  },
+  {
+    "figure": "figureD1",
+    "title": "Stage composition and pooled means within each population",
+    "source": "formal stage_composition.csv / stage_pooled.csv; population-specific shared bins",
+    "scale": "explicit per axis",
+    "reference": "actual frozen B1 population and archives",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figureD1.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figureD1.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending",
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\src\\render_release.py",
+    "consumer_release": "R05_release_v1",
+    "source_model": "R04_B1_all_valid_v1"
+  },
+  {
+    "figure": "figureF1",
+    "title": "Full-fit log-OLS residual diagnostics",
+    "source": "four panels from two formal main model archives; no additional fits",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figureF1.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\figureF1.pdf"
+    ],
+    "producer": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\src\\render_release.py",
+    "visual_review": "pending",
+    "scale": "explicit per axis",
+    "reference": "actual frozen B1 population and archives",
+    "consumer_release": "R05_release_v1",
+    "source_model": "R04_B1_all_valid_v1"
+  }
+]

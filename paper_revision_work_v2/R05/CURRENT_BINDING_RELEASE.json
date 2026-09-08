@@ -1,0 +1,22 @@
+{
+  "parent_graphics_release": "release_v1",
+  "tables": [
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\tables\\CURRENT_NUMERIC_BINDINGS_R05.csv",
+      "bytes": 64334,
+      "sha256": "68c0ae020f07ca4d7200198bcde2c93b7415336915922dc4c9eeeaab11b312ae"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\tables\\CURRENT_PARAGRAPH_BINDINGS_R05.csv",
+      "bytes": 21487,
+      "sha256": "67c35699172b9a94031ae50cf2f931b3297484cdcf77720a81e13e52df9876b5"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\tables\\NUMERIC_BINDING_SEMANTIC_AUDIT.csv",
+      "bytes": 85847,
+      "sha256": "f578cccfd9a947fce5433a38c7ec7200c81e20b94f12364df3eea73edbc443cf"
+    }
+  ],
+  "entry": "R05/cli.py consumers",
+  "replaces_metadata_only": "10 stale A-T10 six-group target labels; no numeric changes"
+}

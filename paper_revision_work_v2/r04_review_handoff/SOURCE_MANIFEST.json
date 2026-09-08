@@ -1,0 +1,46 @@
+{
+  "review_id": "RV-R03-20260905",
+  "local_ledger_received": false,
+  "sources": [
+    {
+      "source_key": "RV03-S01",
+      "original_name": "R03_report.md",
+      "path": "evidence/RV03-S01_R03_report.md",
+      "size_bytes": 11215,
+      "sha256": "78448761ec44c160360faaaebe9bd4c959c1992e282b38006475b9807a0d6702",
+      "role": "已读本地R03报告；底层代码/日志未在本环境独立读取或重跑"
+    },
+    {
+      "source_key": "RV03-S02",
+      "original_name": "R04_READINESS.md",
+      "path": "evidence/RV03-S02_R04_READINESS.md",
+      "size_bytes": 4004,
+      "sha256": "5ff4d7101fb80175352d997b445c476a7ac293ac94165238f41a1f5a9f8db739",
+      "role": "已读本地R04就绪报告；与S01同阶段，不算独立科学验证"
+    },
+    {
+      "source_key": "RV03-S03",
+      "original_name": "R03审阅与R04执行指令.md",
+      "path": "R03审阅与R04执行指令.md",
+      "size_bytes": 21726,
+      "sha256": "7cbf340dd2a70b26e4f92a00a1554f265dc56830b4ebcfae79ec9364e51f743d",
+      "role": "本对话审阅、代数推论和下一步任务；不是新模型实验证据"
+    },
+    {
+      "source_key": "RV03-S04",
+      "original_name": "R03反馈_论文修订台账增量.md",
+      "path": "R03反馈_论文修订台账增量.md",
+      "size_bytes": 30487,
+      "sha256": "f470198a93c15e0f02dc7a17dc1f23a7a65f11da9602b2baf7fe4a95e25eed9e",
+      "role": "本次29项MR/6CL及逐章审阅增量；不是本地完整台账"
+    },
+    {
+      "source_key": "RV03-S05",
+      "original_name": "REVISION_REVIEW_PATCH.json",
+      "path": "REVISION_REVIEW_PATCH.json",
+      "size_bytes": 33264,
+      "sha256": "dd8e9e155dbb65cd8eaa6a0357000b40f614af51c201335d36919bf52f324805",
+      "role": "同一批审阅增量的结构化表示；需核对后合并"
+    }
+  ]
+}

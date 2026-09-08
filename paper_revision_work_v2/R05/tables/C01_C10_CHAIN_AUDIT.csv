@@ -1,0 +1,11 @@
+issue,rule,active_copied_code,targeted_evidence,actual_result,consumers
+C01,Earliest valid UTC source row; weather/date/window same event key,R05/frozen/source_audit/r02_events.py,R02 frozen field audit; R05 customer rows match135025; core member/date checks,passed implementation; true onset unknown,all core/period/storm
+C02,pooled=1−sumSSE/SST; mean fold separate,R05/src/numerical_audit.py,"12 blocks,64 core archives, exact fold/SST tables",passed,"fig05/08, main metrics"
+C03,all_valid; common held-out identities; no evaluation p99 trim,R05/frozen/R03_src/contracts.py,12 block identities and training-only ddof1 preprocessing; B1 config hash,passed; tail sensitivity remains,all core OOF
+C04,eta already log target; do not log twice,R05/frozen/R03_src/prediction.py,archived eta readback + copied final renderer axes,passed,"fig09,F1"
+C05,half-open UTC windows; UNIQUE_ANY deduplicates,R05/frozen/R03_src/prediction.py,R04 core_actual_acceptance and formal unique event tables; R05 consumer readback,passed; date folds not full weather processes,"fig03/09, storm table"
+C06,only named predictors standardized; squares after standardization,R05/frozen/R03_src/contracts.py,every core training preprocessor rederived; 8 period physical terms,passed; unscaled regional coefficients need units,"tables3/F,fig04/10"
+C07,"exp(mean eta), scenario support and references explicit",R05/frozen/R03_src/prediction.py,R04 core acceptance reused; copied curve and regional files; fig07 grid max/min,passed; not arithmetic conditional means,fig04/06/07
+C08,single full-period estimates; own scale; point-only fig10,R05/frozen/R04_src/calendar_repair.py,8 archives; separately-seen unseen combination guard; six nonPSD matrices scoped,passed implementation; two-way arbitrary Wald barred,"fig10, appendixH"
+C09,no original side effects; explicit copied consumer release,R05/src/render_release.py,12 final groups in new directory; protected-file hashes and source inventory,passed within manifest scope,all figures and ledger
+C10,stable region codes separate from indicator reconstruction,R05/frozen/source_audit/Buckinghamshire_combination.py,frozen code/lookup audit; current Buck impact table; workbook Notes,code identity usable; mandatory LSOA reconstruction pending,region covariates/fig06

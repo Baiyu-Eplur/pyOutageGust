@@ -1,0 +1,52 @@
+{
+  "timestamp_utc": "2026-09-05T18:50:35.018465+00:00",
+  "passed_with_observed_log_append": true,
+  "protected_original_files_checked": 549,
+  "protected_original_files_byte_identical": 548,
+  "observed_original_changes": [
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\LOG.md",
+      "status": "original_bytes_preserved_as_exact_prefix_with_append",
+      "baseline_sha256": "5977f393a5c2bc76ba1566e251908c66ea4ae321591d9f8447b50acae719df42",
+      "current_sha256": "93d8738fe40f9cb60bb88f458521f96a11f18233097ba1a4e1e6b48fea9cd8bf",
+      "baseline_prefix_bytes": 185444,
+      "appended_bytes": 3916,
+      "mtime_utc": "2026-09-05T18:37:57.912164+00:00",
+      "writer": "not identified; R03 producers do not write this path",
+      "action": "observed and archived, original not reverted or edited",
+      "evidence_scope": "concurrent C01 repair log is not R03/B1 evidence"
+    }
+  ],
+  "original_source_snapshot_pairs_verified": 91,
+  "frozen_project_source_original_pairs_verified": 94,
+  "frozen_runtime_files_verified": 7711,
+  "frozen_reference_data_pairs_verified": 7,
+  "prior_manifest_files": 335,
+  "prior_manifest_unchanged": 329,
+  "declared_changed_revision_state_files": [
+    "DECISIONS.md",
+    "issue_ledger.json",
+    "ISSUE_LEDGER.md",
+    "RETURN_TO_CHATGPT.md",
+    "RUN_STATE.json",
+    "STATUS.md"
+  ],
+  "unexpected_code_data_manuscript_modifications": [],
+  "R02_event_sha256": "8ac332cdb59d5eb961a01146757665a2600ebaada4265c8ac1ac30218c6f066d",
+  "R02_manifest_unchanged": true,
+  "raw_and_v3_full_SHA_rechecked": [
+    {
+      "key": "raw",
+      "sha256": "2c9c0b20c4650b7d765c5c05de37e4bd189206ddabea7019c9437337750daaba"
+    },
+    {
+      "key": "v3",
+      "sha256": "0aad744eabd2e86f186cdb6072964fcea4492afaf34b8deaa94c51ce553dd16f"
+    }
+  ],
+  "current_manuscripts_rehashed_unchanged": 2,
+  "weather_cache_full_scan_repeated": false,
+  "weather_cache_identity_evidence": "R02 frozen protection evidence reused; R03 did not re-scan cache contents",
+  "runtime_module_paths": "checks/runtime_smoke.json and runtime_test.json; all Python modules inside R03",
+  "scope_limit": "hash checks cover recorded protected files, not an unsnapshotted historical filesystem; OS DLLs remain platform dependencies"
+}

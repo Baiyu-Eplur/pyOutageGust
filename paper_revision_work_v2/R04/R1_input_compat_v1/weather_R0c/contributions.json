@@ -1,0 +1,6 @@
+{
+  "gust_from_control": 0.027625583173828572,
+  "customers_from_control": 0.008333732219585888,
+  "gust_given_customers": 0.03251820185721266,
+  "customers_given_gust": 0.013226350902969974
+}

@@ -1,0 +1,67 @@
+[corrected-sample] Loading OLD-style event table and applying C01 corrections (Step1+Step2 outputs)...
+[corrected-sample] Corrected matched sample: 121313 events (12269 weather-corrected, 617 weather-nulled).
+[final-core] === Building corrected dev / holdout / combined samples ===
+[v16-clean] Building weather-matched sample (command #9 Step0)...
+[v16-clean] Excluding locked_temporal_test date block (>= 2023-09-30) BEFORE fold construction...
+[v16-clean] Weather-matched sample: 121313 -> 97664 after locked-window exclusion (23649 removed, 19.49%).
+[v3_validation] Step 1: checking LAD21CD coverage in the weather-matched sample...
+[v3_validation] Step 1 done: gap-filled 112 events, 112 still missing.
+[v3_validation] Step 2: building GroupKFold(date, 5) folds...
+[v3_validation] Step 2 done: 0 dates crossing folds (expect 0).
+[v16-clean] Clean complete-predictor sample: n=94383.
+[v16-clean] Verified: max date in clean sample = 2023-09-29 00:00:00 (< 2023-09-30 00:00:00).
+[v16-clean] Clean weather_natural+technical_asset sample: n=48339.
+[v16-clean] Clean E0' n=48324; clean R0c'_B n=47841 (p99 cap=194.79h).
+[v19] Building weather-matched sample (command #9 Step0)...
+[v19] Restricting to the locked_temporal_test date block [2023-09-30, 2024-03-31]...
+[v19] Weather-matched sample: 121313 -> 23649 in locked window.
+[v3_validation] Step 1: checking LAD21CD coverage in the weather-matched sample...
+[v3_validation] Step 1 done: gap-filled 25 events, 25 still missing.
+[v19] Holdout complete-predictor sample: n=22913.
+[v19] Verified: holdout date range [2023-09-30 00:00:00, 2024-03-31 00:00:00] within locked window.
+[v19] Holdout weather_natural+technical_asset sample: n=12114.
+[v19] Holdout E0 n=12113; holdout R0c n=11991 (p99 cap=167.39h).
+[v16-clean] Building weather-matched sample (command #9 Step0)...
+[v16-clean] Excluding locked_temporal_test date block (>= 2023-09-30) BEFORE fold construction...
+[v16-clean] Weather-matched sample: 121313 -> 97664 after locked-window exclusion (23649 removed, 19.49%).
+[v3_validation] Step 1: checking LAD21CD coverage in the weather-matched sample...
+[v3_validation] Step 1 done: gap-filled 112 events, 112 still missing.
+[v3_validation] Step 2: building GroupKFold(date, 5) folds...
+[v3_validation] Step 2 done: 0 dates crossing folds (expect 0).
+[v16-clean] Clean complete-predictor sample: n=94383.
+[v16-clean] Verified: max date in clean sample = 2023-09-29 00:00:00 (< 2023-09-30 00:00:00).
+[v16-clean] Clean weather_natural+technical_asset sample: n=48339.
+[v16-clean] Clean E0' n=48324; clean R0c'_B n=47841 (p99 cap=194.79h).
+[v19] Building weather-matched sample (command #9 Step0)...
+[v19] Restricting to the locked_temporal_test date block [2023-09-30, 2024-03-31]...
+[v19] Weather-matched sample: 121313 -> 23649 in locked window.
+[v3_validation] Step 1: checking LAD21CD coverage in the weather-matched sample...
+[v3_validation] Step 1 done: gap-filled 25 events, 25 still missing.
+[v19] Holdout complete-predictor sample: n=22913.
+[v19] Verified: holdout date range [2023-09-30 00:00:00, 2024-03-31 00:00:00] within locked window.
+[v19] Holdout weather_natural+technical_asset sample: n=12114.
+[v19] Holdout E0 n=12113; holdout R0c n=11991 (p99 cap=167.39h).
+[corrected-sample] CORRECTED final combined sample: WT n=60453, E0 n=60437, R0c n=59834 (p99 cap=192.08h)
+[final-core] === Combined sample: LAD single + two-way cluster (E0 & R0c) ===
+[final-core] E0 gust_sq: LAD se=0.0083, 2way se=0.0320
+[final-core] R0c gust_sq: LAD se=0.0061, 2way se=0.0081
+[final-core] === Dev-only 5-fold coefficient stability (E0 & R0c) ===
+[final-core] Dev pooled gust_sq: E0=0.0913+/-0.0050, R0c=0.0668+/-0.0037
+[final-core] === Holdout-only single-fit coefficients (E0 & R0c) ===
+[final-core] Holdout gust_sq: E0=0.1708, R0c=0.0730
+[final-core] === weather_natural subsample (corrected) ===
+[final-core] weather_natural (corrected): E0 n=9857, R0c n=9758 (p99=142.84h)
+[final-core] weather_natural E0 variance decomposition:
+          model            step             blocks_added  r2_in_sample  r2_in_sample_increment  r2_oos_5fold  r2_oos_5fold_increment
+E0_wn_corrected        baseline region_SES+year_month_FE      0.016807                     NaN     -0.008876                     NaN
+E0_wn_corrected nongust_weather          nongust_weather      0.036062                0.019255      0.019068                0.027945
+E0_wn_corrected            gust                     gust      0.045196                0.009135      0.023607                0.004539
+[final-core] weather_natural R0c variance decomposition (gust first):
+                      model            step             blocks_added  r2_in_sample  r2_in_sample_increment  r2_oos_5fold  r2_oos_5fold_increment
+R0c_wn_corrected_gust_first        baseline region_SES+year_month_FE      0.184128                     NaN      0.137320                     NaN
+R0c_wn_corrected_gust_first nongust_weather          nongust_weather      0.213199                0.029071      0.183736                0.046416
+R0c_wn_corrected_gust_first            gust                     gust      0.229165                0.015967      0.211361                0.027626
+R0c_wn_corrected_gust_first       customers                customers      0.244101                0.014935      0.224588                0.013226
+[final-core] weather_natural E0 (corrected): beta1=0.1329, beta2=0.0457, turning point z=-1.4545 (3.8001 m/s), Delta CI(z)=[-3.2441,0.3350]
+[final-core] Saved final_core_summary.json and all component CSVs.
+[final-core] === final_core_tables.py complete ===

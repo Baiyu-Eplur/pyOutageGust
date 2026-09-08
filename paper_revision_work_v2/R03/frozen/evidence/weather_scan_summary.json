@@ -1,0 +1,20 @@
+{
+  "eligible_event_count": 129414,
+  "distinct_query_keys": 82621,
+  "key_hour_rows": 122948,
+  "existing_files": 74896,
+  "cache_status_by_file": {
+    "readable": 74896,
+    "missing_file": 7725
+  },
+  "key_hour_status_counts": {
+    "readable": 114791,
+    "missing_file": 8157
+  },
+  "rain_status_by_key_hour": {
+    "valid_24_unique_values": 114791,
+    "nan": 8157
+  },
+  "scan_seconds": 597.155999999959,
+  "new_requests": 0
+}

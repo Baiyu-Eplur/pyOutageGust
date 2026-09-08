@@ -1,0 +1,5 @@
+sample,H0,R02_candidate,common,enter,exit,strict_cache_candidate,conditional_v3_only,R1_compat_candidate
+main_E0,60437,60436,60436,0,1,60436,0,60436
+main_R0c,59834,60436,59834,602,0,60436,0,59832
+weather_E0,9857,9857,9857,0,0,9857,0,9857
+weather_R0c,9758,9857,9758,99,0,9857,0,9758

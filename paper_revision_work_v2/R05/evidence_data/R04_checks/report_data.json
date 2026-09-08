@@ -1,0 +1,19 @@
+{
+  "old_numeric_slots": 950,
+  "customer_comparison": {
+    "n": 60436,
+    "lowest_stage_number_mean": 47.12833410550003,
+    "lowest_stage_nonmissing_n": 60436,
+    "aggregated_customer_mean": 93.02572969753128,
+    "ratio_aggregate_to_lowest_stage": 1.9738811367549456,
+    "earliest_record_time_customer_mean": 31.121963730227016,
+    "ratio_aggregate_to_earliest_time": 2.989070050460235,
+    "definitions_differ": true,
+    "source_v3_sha256": "0aad744eabd2e86f186cdb6072964fcea4492afaf34b8deaa94c51ce553dd16f",
+    "source_script": "frozen step38_F4_customers_mean_ratio.py",
+    "no_initial_customer_information_claim": true
+  },
+  "all_numerical_slots_explicit_status": true,
+  "text_token_inventory_not_formula_or_image_OCR": true,
+  "fits": 0
+}

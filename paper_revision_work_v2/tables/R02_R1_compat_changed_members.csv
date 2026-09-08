@@ -1,0 +1,4 @@
+Incident Reference,customers_v2_event_excl_reinterruptions,duration_B_full_span_hours,old_time_utc,new_time_utc,weather_numeric_available,event_identity_status,sample,transition
+FREP-338321-Z,1,4508.933333333333,2023-05-11 11:06:00+00:00,2022-11-04 16:44:00+00:00,False,unresolved,main_E0,exit
+FREP-335700-J,0,192.08333333333334,2024-01-03 14:40:00+00:00,2024-01-03 14:40:00+00:00,True,record_id_consistent_not_business_certified,main_R0c,exit
+FREP-338384-Z,0,192.08333333333334,2022-11-03 22:17:00+00:00,2022-11-03 22:17:00+00:00,True,record_id_consistent_not_business_certified,main_R0c,exit

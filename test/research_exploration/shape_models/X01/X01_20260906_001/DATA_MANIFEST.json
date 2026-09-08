@@ -1,0 +1,15 @@
+{
+  "run_id": "X01_20260906_001",
+  "input_path": "frozen_sources\\input\\R02_event_master.parquet",
+  "input_sha256": "8ac332cdb59d5eb961a01146757665a2600ebaada4265c8ac1ac30218c6f066d",
+  "input_bytes": 52376874,
+  "seed": 20260906,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.8"
+  }
+}

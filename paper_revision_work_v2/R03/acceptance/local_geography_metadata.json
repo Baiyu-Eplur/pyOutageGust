@@ -1,0 +1,207 @@
+[
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\data\\BUA_2022_GB_-3259870081615132876\\BUA_2022_GB.dbf",
+    "rows": 8545,
+    "fields": [
+      {
+        "name": "BUA22CD",
+        "type": "C",
+        "width": 80
+      },
+      {
+        "name": "BUA22NM",
+        "type": "C",
+        "width": 80
+      },
+      {
+        "name": "BUA22NMW",
+        "type": "C",
+        "width": 80
+      },
+      {
+        "name": "BUA22NMG",
+        "type": "C",
+        "width": 80
+      },
+      {
+        "name": "BNG_E",
+        "type": "F",
+        "width": 19
+      },
+      {
+        "name": "BNG_N",
+        "type": "F",
+        "width": 19
+      },
+      {
+        "name": "LONG",
+        "type": "F",
+        "width": 19
+      },
+      {
+        "name": "LAT",
+        "type": "F",
+        "width": 19
+      }
+    ]
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\data\\Built_Up_Area_to_Local_Authority_District_(December_2022)_Lookup_in_Great_Britain\\Built_Up_Area_to_Local_Authority_District_(December_2022)_Lookup_in_Great_Britain.dbf",
+    "rows": 10072,
+    "fields": [
+      {
+        "name": "BUA22CD",
+        "type": "C",
+        "width": 9
+      },
+      {
+        "name": "BUA22NM",
+        "type": "C",
+        "width": 50
+      },
+      {
+        "name": "BUA22NMW",
+        "type": "C",
+        "width": 25
+      },
+      {
+        "name": "BUA22NMG",
+        "type": "C",
+        "width": 31
+      },
+      {
+        "name": "LAD22CD",
+        "type": "C",
+        "width": 9
+      },
+      {
+        "name": "LAD22NM",
+        "type": "C",
+        "width": 35
+      },
+      {
+        "name": "WHOLE_PART",
+        "type": "C",
+        "width": 5
+      },
+      {
+        "name": "ObjectId",
+        "type": "N",
+        "width": 5
+      }
+    ]
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\data\\dno_license_areas_20200506\\DNO_License_Areas_20200506.dbf",
+    "rows": 14,
+    "fields": [
+      {
+        "name": "ID",
+        "type": "N",
+        "width": 10
+      },
+      {
+        "name": "Name",
+        "type": "C",
+        "width": 2
+      },
+      {
+        "name": "LongName",
+        "type": "C",
+        "width": 50
+      }
+    ]
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\data\\Local_Authority_Districts_December_2021_UK_BGC_2022\\LAD_DEC_2021_UK_BGC.dbf",
+    "rows": 374,
+    "fields": [
+      {
+        "name": "LAD21CD",
+        "type": "C",
+        "width": 9
+      },
+      {
+        "name": "LAD21NM",
+        "type": "C",
+        "width": 36
+      },
+      {
+        "name": "LAD21NMW",
+        "type": "C",
+        "width": 24
+      },
+      {
+        "name": "BNG_E",
+        "type": "N",
+        "width": 10
+      },
+      {
+        "name": "BNG_N",
+        "type": "N",
+        "width": 10
+      },
+      {
+        "name": "LONG",
+        "type": "F",
+        "width": 13
+      },
+      {
+        "name": "LAT",
+        "type": "F",
+        "width": 13
+      },
+      {
+        "name": "GlobalID",
+        "type": "C",
+        "width": 38
+      }
+    ]
+  },
+  {
+    "path": "D:\\Pyprogramme\\STST2603\\data\\main_ONS_BUA_2024_EW_V2_1187912359471544048\\main_ONS_BUA_2024_EW_V2.dbf",
+    "rows": 7775,
+    "fields": [
+      {
+        "name": "OBJECTID_1",
+        "type": "N",
+        "width": 10
+      },
+      {
+        "name": "gsscode",
+        "type": "C",
+        "width": 10
+      },
+      {
+        "name": "BUA24CD",
+        "type": "C",
+        "width": 10
+      },
+      {
+        "name": "BUA24NM",
+        "type": "C",
+        "width": 100
+      },
+      {
+        "name": "BUA24NMW",
+        "type": "C",
+        "width": 100
+      },
+      {
+        "name": "geometry_a",
+        "type": "F",
+        "width": 19
+      },
+      {
+        "name": "areahectar",
+        "type": "F",
+        "width": 19
+      },
+      {
+        "name": "GlobalID",
+        "type": "C",
+        "width": 38
+      }
+    ]
+  }
+]

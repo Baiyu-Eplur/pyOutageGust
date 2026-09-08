@@ -1,0 +1,1 @@
+{"package": {"path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\RETURN_PACKAGE_R05.zip", "bytes": 20664643, "sha256": "f8a06467a4809295022799fe921b892de910870635760b876658b9b7f839c6c9"}, "file_count": 396, "ledger_sources": 59, "R05_complete": true, "acceptance": "conditional_for_V", "candidate_findings": 15}

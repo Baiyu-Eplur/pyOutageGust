@@ -1,0 +1,30 @@
+{
+  "schema": "R03_production_v1",
+  "run_id": "R04_optional_train_p99_v1",
+  "purpose": "optional_training_tail_diagnostic_pending_authorization",
+  "input_version": "R02_input_20260905",
+  "input_manifest": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\frozen\\evidence\\R02_EVENT_MANIFEST.json",
+  "input_manifest_sha256": "950d38b0b1a1d9f334803ef973838a69f2b4d0ecfe4ed5fc539f13a66d290fb1",
+  "output_root": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_optional_train_p99_v1",
+  "n_splits": 5,
+  "fold_policy": "global candidate union; descending date group size, date ascending ties, least-loaded fold then smallest fold index",
+  "fold_map": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\folds\\date_to_fold.csv",
+  "training_tail": "main_train_p99",
+  "optional_tail": "main_train_p99; shared main training R0c reference, numpy linear .99, <=; all test retained",
+  "groups": [
+    "main",
+    "weather"
+  ],
+  "targets": [
+    "E0",
+    "R0c"
+  ],
+  "weights": "event_equal",
+  "calendar": "UTC additive training years/months; unseen error",
+  "full_fit_tail": "all_valid_descriptive",
+  "reference_contract": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\frozen\\contracts\\FIGURE_REFERENCE_CONTRACT.md",
+  "formal_execution_authorized_this_R03": false,
+  "fold_map_sha256": "4493523c51e67cc22e5a2636d0e4dc867861c8b2f427f64989015607ed15d876",
+  "fold_base_ids_sha256": "079106d9eb0dee5b59d28aa29ea3a47c44092f6a8038f19266cccbfec46d76d7",
+  "code_identity": "859a02e917d71b4b51333b4db452403a97f1e6c479b6faf654d79f988c553846"
+}

@@ -1,0 +1,227 @@
+{
+  "source_run_id": "R04_B1_all_valid_v1",
+  "reference_population_sha256": "b26795097e8853a5bfe5ec8e9e0fd08abe49e93387d3d4d1d30921714ddd1c26",
+  "calendar_weights": [
+    {
+      "new_year": 2021,
+      "new_month": 4,
+      "n": 38,
+      "weight": 0.0038551283351932635
+    },
+    {
+      "new_year": 2021,
+      "new_month": 5,
+      "n": 260,
+      "weight": 0.02637719387237496
+    },
+    {
+      "new_year": 2021,
+      "new_month": 6,
+      "n": 191,
+      "weight": 0.0193770924216293
+    },
+    {
+      "new_year": 2021,
+      "new_month": 7,
+      "n": 287,
+      "weight": 0.02911636400527544
+    },
+    {
+      "new_year": 2021,
+      "new_month": 8,
+      "n": 135,
+      "weight": 0.013695850664502384
+    },
+    {
+      "new_year": 2021,
+      "new_month": 9,
+      "n": 147,
+      "weight": 0.014913259612458152
+    },
+    {
+      "new_year": 2021,
+      "new_month": 10,
+      "n": 263,
+      "weight": 0.026681546109363904
+    },
+    {
+      "new_year": 2021,
+      "new_month": 11,
+      "n": 126,
+      "weight": 0.012782793953535558
+    },
+    {
+      "new_year": 2021,
+      "new_month": 12,
+      "n": 124,
+      "weight": 0.012579892462209597
+    },
+    {
+      "new_year": 2022,
+      "new_month": 1,
+      "n": 64,
+      "weight": 0.00649284772243076
+    },
+    {
+      "new_year": 2022,
+      "new_month": 2,
+      "n": 2377,
+      "weight": 0.24114842244090495
+    },
+    {
+      "new_year": 2022,
+      "new_month": 3,
+      "n": 181,
+      "weight": 0.01836258496499949
+    },
+    {
+      "new_year": 2022,
+      "new_month": 4,
+      "n": 99,
+      "weight": 0.010043623820635082
+    },
+    {
+      "new_year": 2022,
+      "new_month": 5,
+      "n": 158,
+      "weight": 0.01602921781475094
+    },
+    {
+      "new_year": 2022,
+      "new_month": 6,
+      "n": 180,
+      "weight": 0.018261134219336513
+    },
+    {
+      "new_year": 2022,
+      "new_month": 7,
+      "n": 370,
+      "weight": 0.03753677589530283
+    },
+    {
+      "new_year": 2022,
+      "new_month": 8,
+      "n": 192,
+      "weight": 0.019478543167292278
+    },
+    {
+      "new_year": 2022,
+      "new_month": 9,
+      "n": 165,
+      "weight": 0.016739373034391804
+    },
+    {
+      "new_year": 2022,
+      "new_month": 10,
+      "n": 204,
+      "weight": 0.020695952115248047
+    },
+    {
+      "new_year": 2022,
+      "new_month": 11,
+      "n": 224,
+      "weight": 0.02272496702850766
+    },
+    {
+      "new_year": 2022,
+      "new_month": 12,
+      "n": 204,
+      "weight": 0.020695952115248047
+    },
+    {
+      "new_year": 2023,
+      "new_month": 1,
+      "n": 158,
+      "weight": 0.01602921781475094
+    },
+    {
+      "new_year": 2023,
+      "new_month": 2,
+      "n": 24,
+      "weight": 0.0024348178959115348
+    },
+    {
+      "new_year": 2023,
+      "new_month": 3,
+      "n": 243,
+      "weight": 0.02465253119610429
+    },
+    {
+      "new_year": 2023,
+      "new_month": 4,
+      "n": 115,
+      "weight": 0.011666835751242772
+    },
+    {
+      "new_year": 2023,
+      "new_month": 5,
+      "n": 107,
+      "weight": 0.010855229785938926
+    },
+    {
+      "new_year": 2023,
+      "new_month": 6,
+      "n": 327,
+      "weight": 0.033174393831794664
+    },
+    {
+      "new_year": 2023,
+      "new_month": 7,
+      "n": 403,
+      "weight": 0.040884650502181194
+    },
+    {
+      "new_year": 2023,
+      "new_month": 8,
+      "n": 164,
+      "weight": 0.01663792228872882
+    },
+    {
+      "new_year": 2023,
+      "new_month": 9,
+      "n": 220,
+      "weight": 0.02231916404585574
+    },
+    {
+      "new_year": 2023,
+      "new_month": 10,
+      "n": 222,
+      "weight": 0.0225220655371817
+    },
+    {
+      "new_year": 2023,
+      "new_month": 11,
+      "n": 351,
+      "weight": 0.035609211727706196
+    },
+    {
+      "new_year": 2023,
+      "new_month": 12,
+      "n": 314,
+      "weight": 0.03185553413817591
+    },
+    {
+      "new_year": 2024,
+      "new_month": 1,
+      "n": 946,
+      "weight": 0.09597240539717967
+    },
+    {
+      "new_year": 2024,
+      "new_month": 2,
+      "n": 161,
+      "weight": 0.016333570051739882
+    },
+    {
+      "new_year": 2024,
+      "new_month": 3,
+      "n": 113,
+      "weight": 0.01146393425991681
+    }
+  ],
+  "scaler_sha256": "20733f6ef650bd379692e997972ab261c4d1ce7ae97810cb095a82a94cef2ae2",
+  "order": "physical weather/log-C center -> complete calendar designs -> weighted mean eta -> exp",
+  "population_copy_sha256": "46d0a29a3c0a71b000577360a4dd7ec75ea29e22b17e3600e0d006be03c72b55",
+  "geography": "LAD21 static / same-code LAD23 population; explicit compatibility unresolved",
+  "map_geometry_rendering": "not performed in R03"
+}

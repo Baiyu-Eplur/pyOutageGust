@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "B1_files": 381,
+  "core_models_reloaded": 64,
+  "OOF_blocks": 12,
+  "periods": 8,
+  "nonPSD_period_two_way": 6,
+  "new_model_fits": 0
+}

@@ -1,0 +1,11 @@
+{
+  "frozen_utc": "2026-09-07T11:57:14.753507+00:00",
+  "hashes": {
+    "run_config.yaml": "1d6e217b1e6f649f6985895bdae32450e5e9d61b6b05eb178b0d470307fc9020",
+    "MODEL_REGISTRY.json": "5eec9e6d1cb7ee6bcabe92bab12a156ae34148d21f7d4460e27ccabf18688b2a",
+    "EXPERIMENT_CONTRACT.md": "ff0e1d9c2ce18b47a627ce8b7b42607cfad5b2411052eeb716820e9347afb878",
+    "SPLIT_MANIFEST.parquet": "309ab818e3033ddaf32bbbe46a2492540befac8089a89824092627e19fdede65",
+    "SPLIT_AUDIT.json": "628163253bea3cbe52662778209b7488c0fdeda044e22d4b88b39a7c679ee755"
+  },
+  "immutable_after_stage_b": true
+}

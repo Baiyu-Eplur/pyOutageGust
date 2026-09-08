@@ -1,0 +1,12 @@
+{
+  "release": "release_v1",
+  "entry": "R05/cli.py render_release",
+  "manifest": {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\release_v1\\figures\\FIGURE_MANIFEST.json",
+    "bytes": 9819,
+    "sha256": "33fea678da79deb921cb10760064f9e83f6717a928eaac5852b953d81e986b47"
+  },
+  "supersedes_consumers_only": "R04/figures",
+  "no_model_successor": true,
+  "policy": "release_v1 is immutable; old renderers cannot update this R05 pointer. A further reviewed render must use a new release directory."
+}

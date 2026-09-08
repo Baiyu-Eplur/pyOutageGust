@@ -1,0 +1,9 @@
+{
+  "producer": "reconstructed_step27",
+  "source_definition": "frozen customers_duration_shape_investigation/step5_n_stages_stratification.py plus archived 27 report",
+  "historical_weather_n9806_reused": false,
+  "current_membership_sha256": "5f553f639e31688c97ec668c0db3b601ccf42eaec3c4f32b47f16be8bb251155",
+  "stage_transform": "natural log raw; not standardized",
+  "single_stage_bins": "within-single-stage quartiles, duplicate edges collapsed",
+  "new_mechanism_claim": false
+}

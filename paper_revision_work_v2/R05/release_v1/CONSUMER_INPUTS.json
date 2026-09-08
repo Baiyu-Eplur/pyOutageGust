@@ -1,0 +1,864 @@
+{
+  "source_code": [
+    {
+      "copied_source": {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R04_src\\final_data.py",
+        "bytes": 13583,
+        "sha256": "cdca3875dc789dd8a21cfbb7460aeaa6ecf364377ff1a14558ec328e83d357af"
+      },
+      "stop_before": "    table(Q/'tables/residual_diagnostics.csv'",
+      "reason": "final_data final 02/03/D1/F1; product_complete final05/08; artifact_acceptance numeric D1"
+    },
+    {
+      "copied_source": {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R04_src\\product_complete.py",
+        "bytes": 5105,
+        "sha256": "dce41bb7ad825823f4608083f96ac22c9ab0f019911fac7dee4aec55ab4385ed"
+      },
+      "stop_before": "    # Bind numerical captions",
+      "reason": "final_data final 02/03/D1/F1; product_complete final05/08; artifact_acceptance numeric D1"
+    },
+    {
+      "copied_source": {
+        "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R04_src\\artifact_acceptance.py",
+        "bytes": 4220,
+        "sha256": "ba1195d82315c339cce2a4f111262fc6c265a155284f456e0577cbe9deed0eee"
+      },
+      "stop_before": "    # Five-fold coefficient summaries",
+      "reason": "final_data final 02/03/D1/F1; product_complete final05/08; artifact_acceptance numeric D1"
+    }
+  ],
+  "base": {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R05\\frozen\\R04_src\\figures.py",
+    "bytes": 11232,
+    "sha256": "7ac3b90f2010f81cc57c20751a9f2d2181dbb5515816119dd646f583f982665f"
+  },
+  "frozen_model_and_data": [
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\config.json",
+      "bytes": 1619,
+      "sha256": "6a4857760612617b21cc9fe3f0c5b237aaa8c3a198ebe80ff2eec417a125ed43"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\RUN_MANIFEST.json",
+      "bytes": 3493,
+      "sha256": "0e95222c9a2af4be9ff2d67d506899c7df9cbd071f5fe9708b1173c28fd89e4e"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\selected_members.csv",
+      "bytes": 2603289,
+      "sha256": "537d2663cdbe8dc4fb349d0f2c946626b7b8e64f694d959150893aeb48bd176b"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\cluster_covariance.json",
+      "bytes": 63490,
+      "sha256": "2a738835accc95186d6ff130eb8976cf3ef0e47ea388535fe12bb647f3becf02"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\conditional_minimum_no_CI.json",
+      "bytes": 637,
+      "sha256": "1e7db09510de84cd7a362f7400db0ddfee64070afbe43d49333836619bc48be4"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\contributions.json",
+      "bytes": 49,
+      "sha256": "2c7f391f80f01111a79c60648b053aa1eb315cd8c0992ef4247a7ccff19370ca"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\figure10_period_physical_terms.csv",
+      "bytes": 706,
+      "sha256": "e79fc9533886b67d291dabf324d6780f7d8b16c8dab8d90dc82c4adf8c604f31"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\figure4_curve_data.csv",
+      "bytes": 8532,
+      "sha256": "335e15564002e2df50cf90e29e679ff44361849580206e399150f210c5b2704d"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\figure4_reference.json",
+      "bytes": 2496,
+      "sha256": "6322dbd3aa083419b7dd0bbf360ccb7272761f49c858aaf794a8a5b042d5868c"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\figure6_reference.json",
+      "bytes": 4891,
+      "sha256": "ce4ffb4fcecd610dd2a2e7b6c5a282ab5c4ca3b8897643806ba90ff4ddf17351"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\figure6_regional_reference.csv",
+      "bytes": 20128,
+      "sha256": "2405a34f3b09a349d9f73cd154c0c95d1421af4e54721e7f837e252e24db7a51"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\figure7_gust_ratio.json",
+      "bytes": 2554,
+      "sha256": "1512804b6feea77dc2aaf2f4fe23815a4a646ae120c1d0c660f5da674da85b83"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\figure9_descriptive_events.csv",
+      "bytes": 926105,
+      "sha256": "6b36fee9c58daa04455d8651db93a9a7dcb28bc3a2cb253954b2b6fa2684f36f"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\figure9_OOF_diagnostic_events.csv",
+      "bytes": 948148,
+      "sha256": "0b76d302ccdd77314c5743a5ec56c589b0d9a19eec3f4b81af5962e70c0aea64"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\fold_training.json",
+      "bytes": 4482,
+      "sha256": "27e055bd587e105222f964b566b78842a0fb17acbd23f24411c03ca34809b6d7"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\full_model.json",
+      "bytes": 1342892,
+      "sha256": "267857a22064108fb34d6d123d583fec4e5bd9bd96a03c1009680923d95615a8"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\metrics.json",
+      "bytes": 3928,
+      "sha256": "254d04e1967ca711e6e10d8541f9d3a0a66b12113866d2f9674ca1ab0e1fd70f"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\model_fold0_control.json",
+      "bytes": 1074706,
+      "sha256": "496eb3064bc5ce17722b6f8ffc1f222470e6d84d10b1e351aa330f6d5c20e720"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\model_fold0_G.json",
+      "bytes": 1074820,
+      "sha256": "7b0fd8b3f12fe67b1d7f3eb05b5e85f3dc8f492155d79be3530ddf7a03ba2982"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\model_fold1_control.json",
+      "bytes": 1075089,
+      "sha256": "30756333eefa5ba678cad75ccc1caf3ca61e02cc6321c02e21d9095ccde76e21"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\model_fold1_G.json",
+      "bytes": 1075204,
+      "sha256": "3b8c90c527ccafa68f4e5e425f18552c463520fde7a45923da13362048e00ed9"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\model_fold2_control.json",
+      "bytes": 1075185,
+      "sha256": "bbb3e29c57d3b2a7e7d56e3adadbeeb8a1d324627b43258071df0f45a625adc0"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\model_fold2_G.json",
+      "bytes": 1075305,
+      "sha256": "53aa8995bdb4c3fd21dd394d32ef3c09f5fe12551071f7a4e3e79ea9049eb36d"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\model_fold3_control.json",
+      "bytes": 1074997,
+      "sha256": "382f145a862ad325068898b9b58f25deff8a104d2d6cfa42becca22cdcf1fb4b"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\model_fold3_G.json",
+      "bytes": 1075116,
+      "sha256": "539248d07535956119c8c6654d73bd089ed274b23b3c1beb9cf1eb3e8335904c"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\model_fold4_control.json",
+      "bytes": 1075121,
+      "sha256": "e9e1d3c904b801a8a1466472a85711677d6f63483205952671b110208e63f68d"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\model_fold4_G.json",
+      "bytes": 1075240,
+      "sha256": "4df04787cea246d9c49ff48fc25207303d111012d12801a0b9fb241787d4b1ae"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\oof_control.csv",
+      "bytes": 10132934,
+      "sha256": "b4e022acf779040062d59d433b90eee3c8d760eb952722ec3fe93cbeed049fe4"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\oof_G.csv",
+      "bytes": 10132833,
+      "sha256": "ab75912e3ea42f97f7052e3c12d0e081eefc29b664baedf1f9369312503fd6b2"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\period_development_model.json",
+      "bytes": 1095087,
+      "sha256": "927dd9497d4d1722c1d7f83768faf9c22519003617027624241a1c7490f5f0e4"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\VIF.csv",
+      "bytes": 949,
+      "sha256": "9f764a1f48ff4bdf8ebb2971ba15c3bda668011309b5d15e73cd08e755eea4da"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_E0\\VIF_manifest.json",
+      "bytes": 759,
+      "sha256": "25f70b5dd7952147bd1094535eb07eef558eb19eb6f88b17678e376c1f8432da"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\cluster_covariance.json",
+      "bytes": 74148,
+      "sha256": "02a1ff1fe9e5e9fb2cb03c6050c54c7f887d1b7c55c33046fc0669b3e5acdfc0"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\conditional_minimum_no_CI.json",
+      "bytes": 639,
+      "sha256": "aff2a0c99e1664d406d2610427778139261ccca75afc7feac4c9f836372f69cf"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\contributions.json",
+      "bytes": 196,
+      "sha256": "251eb6f8d6cdaba075c5866212ddf0495eb97d6a34a89f7550cc798b3b44c837"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\figure10_period_physical_terms.csv",
+      "bytes": 709,
+      "sha256": "d6d949c2203addd4cf8d14ae12cfcc4d04e562dab3197f8b557986648e811567"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\figure4_curve_data.csv",
+      "bytes": 8529,
+      "sha256": "8ae77a08585ff999779aa53c0340a4d5381b93c9806071509757fbb1599e1f0d"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\figure4_reference.json",
+      "bytes": 2517,
+      "sha256": "8d96e078d0cfcc8ec8b779fb2eb1e598bf0b0309e372b85e9247edfb0580fe71"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\figure6_reference.json",
+      "bytes": 4891,
+      "sha256": "9f682a4348633e634b73d4d520350f7b791962a180dbac7cb3ff1bd60b5fb095"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\figure6_regional_reference.csv",
+      "bytes": 20116,
+      "sha256": "6660c085c19a7ca924c544f718e3e18a8a0e668c6f314d8d6b0416c9b9bf6c34"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\figure7_customer_curve.csv",
+      "bytes": 10146,
+      "sha256": "546adb8c282aa2b3d7753679f89360f9c0465b86f23f2493397490b000b8131e"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\figure7_gust_ratio.json",
+      "bytes": 2576,
+      "sha256": "28074098a5e58183776bb9d60e1491f9cd2860eda6d4197cba026a03abc94fa6"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\figure7_reference.json",
+      "bytes": 2612,
+      "sha256": "d10800c74322519185438546aa10e77de8d93faacbdea8a1ff154275aaad9662"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\figure9_descriptive_events.csv",
+      "bytes": 922812,
+      "sha256": "f836e7b3df8dd70d4eb87eea36e33e0943a412d5da610d4704dc4d031e4432e4"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\figure9_OOF_diagnostic_events.csv",
+      "bytes": 949254,
+      "sha256": "d48e15caf9676f744a3755d9e1653ac7a8e3b0696c4f2f125d66288e50c75ebf"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\fold_training.json",
+      "bytes": 4481,
+      "sha256": "c1910ebb15023b14f0f76f7185302434f7c7667406be1934ae62759709040ec4"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\full_model.json",
+      "bytes": 1343086,
+      "sha256": "1f2beb67aaa79f011585ce8e315677246d44c953dd71457b9ec84c16f2269e79"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\metrics.json",
+      "bytes": 7861,
+      "sha256": "1a75f640c378bc8a62b8ea6bef4383f0820d54edfb0a2d7c52f35d412b0c40a7"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold0_control.json",
+      "bytes": 1074822,
+      "sha256": "6a96cc5e277cf064e86ec24c71e74d910575e0349dc31026ebe9dbfc99b164be"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold0_G.json",
+      "bytes": 1074933,
+      "sha256": "7e028e97e76a65fbf342ef2752066a7dbf4e372bc3f401ae703a27b2c62cdb0d"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold0_GK.json",
+      "bytes": 1075014,
+      "sha256": "13440c80043eab340d7aaa6df0fbba9c77586d00823c855fcd4ce45e53ad80eb"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold0_K.json",
+      "bytes": 1074887,
+      "sha256": "13920a8637f4d7377f0dea8e0e7639b84f2f4cab0e26af1830cd26235d7fc713"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold1_control.json",
+      "bytes": 1075207,
+      "sha256": "d26e33bfc16ae138c3a2366ba5eb9a70db0f4c212732f7f181a83ed38bcf8a29"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold1_G.json",
+      "bytes": 1075316,
+      "sha256": "6723bb5572c51cc65d865b9d895d6cfbbbb4093e537d343845edc18363b85b95"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold1_GK.json",
+      "bytes": 1075405,
+      "sha256": "1b92e17538193f7d2b6bf6fcd504bbeda4941075dcc40509b57e2ee0843895cf"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold1_K.json",
+      "bytes": 1075278,
+      "sha256": "4f2b43543910fbaf1a75c357c51499e9e895cf6daf20dc668de479a64c97e365"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold2_control.json",
+      "bytes": 1075306,
+      "sha256": "cf6355057d1508e1c79faa9bac253f844d5b04fe2541845d5494ac0550ac1066"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold2_G.json",
+      "bytes": 1075426,
+      "sha256": "3ff2884f80c7542e93e36bae3f66502935f0258c99292be0ae7b5f7905936bcb"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold2_GK.json",
+      "bytes": 1075501,
+      "sha256": "0cbecfa1b2d0bbbc188d3cb3655592a2378da392ae30b6b12e15276080b3358a"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold2_K.json",
+      "bytes": 1075371,
+      "sha256": "0d1a5406daf6e4382ad7551abc93a847fa46088549beda17531b54d9769d89a4"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold3_control.json",
+      "bytes": 1075115,
+      "sha256": "4ad69467d18287c5552f4b43e63a552b5d0565a981e28b1a5129a6d4b4fe621d"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold3_G.json",
+      "bytes": 1075232,
+      "sha256": "3e66a34ea39b6a49b99327280ea59f6bdc6972f9240d0661bbe403af11e44b78"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold3_GK.json",
+      "bytes": 1075311,
+      "sha256": "4ee9c628cb992d2248dc8accffdee88e15305da7cdd886727e0dc6d6af8dbec0"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold3_K.json",
+      "bytes": 1075186,
+      "sha256": "e915c74618146da335595805304770a5e955bf567bf331fa120196b73779698b"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold4_control.json",
+      "bytes": 1075242,
+      "sha256": "b1d6032b340f3deb4f8af6d3494ffdb2684324bdee405993a956a18c950c8e30"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold4_G.json",
+      "bytes": 1075355,
+      "sha256": "2cef56954647a76af007a37659df6fa611ce5d4f01d6ff06eb17653f5dc778d1"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold4_GK.json",
+      "bytes": 1075430,
+      "sha256": "a5b8e9d25691cd9da657222eebe65cea1a8fc6306ea074f285667ace5c68229b"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\model_fold4_K.json",
+      "bytes": 1075312,
+      "sha256": "d498249f5f38a25da85a18d0bdb6a69410fca3287e187fd553caf665eb9186da"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\oof_control.csv",
+      "bytes": 10058465,
+      "sha256": "80a2c42d1126ccaced2de2a4d8d69c497642cfce183338aa6a0adec5230445e1"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\oof_G.csv",
+      "bytes": 10058469,
+      "sha256": "390314f274a90704e52c5904c1a2bf642edf33308b04094f0bfe09ef035018b4"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\oof_GK.csv",
+      "bytes": 10057761,
+      "sha256": "1e2953af7c80f1560bb820aadb0519de760c1dbab9cd8b92f550a44033cd527d"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\oof_K.csv",
+      "bytes": 10057521,
+      "sha256": "faf12dcb0a41174572f834588815083fcc7f9adf1869b457e2638f01e87ff85f"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\period_development_model.json",
+      "bytes": 1098686,
+      "sha256": "215b8496b192a103d4a5c0d4158035b76942a845239e1db46f8ff303a9e168d8"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\stage_composition.csv",
+      "bytes": 946,
+      "sha256": "8572e5e0f113150a00f40640e8dc7bc514cc3ea775a6db6c431d64bc993e888e"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\stage_manifest.json",
+      "bytes": 514,
+      "sha256": "ad5703a345485c79ecfb05779d562f3da46847ac6b26255664530e04e37e60b4"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\stage_pooled.csv",
+      "bytes": 267,
+      "sha256": "2def4412413aa3de887cdf423f4a4a19f1f843a9a8eaa8b1ec3437979eb045f3"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\step27_manifest.json",
+      "bytes": 493,
+      "sha256": "dc2c025ba45d4a2d0a74613348495c75279b850696a5422fed3803a407b56f81"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\step27_model_0.json",
+      "bytes": 1343130,
+      "sha256": "f4b9877d35e609d8cb65d96a23fe0f27eb2f7f7197a429ee751520d1f389c144"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\step27_model_1.json",
+      "bytes": 1343230,
+      "sha256": "8fe8ba2341ff751b26db09165550f171de02e9f2a04e7642df35194ea3e329a9"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\step27_single_stage_bins.csv",
+      "bytes": 220,
+      "sha256": "fadbe6bc9cec3b71f5fd938185a336949c7802ed5f2cea39edfd533f8a27518a"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\step27_stage_coefficients.csv",
+      "bytes": 1316,
+      "sha256": "14ff4567af9ffaedc4dc066a8471bb56dcbca1d60240abc3cba05189ebc7311b"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\VIF.csv",
+      "bytes": 1016,
+      "sha256": "71f4c2f3d8d37ecf276ab6fd84d0dc5f7ae48cbf3dec2b6c952acfe3fc401f91"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\main_R0c\\VIF_manifest.json",
+      "bytes": 782,
+      "sha256": "321ba075046a594c779f4ebf8b61096a3cc26142bf8d3436f2355df3b56a1d06"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\cluster_covariance.json",
+      "bytes": 62130,
+      "sha256": "cdf4e497394ec4be7fc79c9e5c240fa994386c743712a11376a0bbf0d5967862"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\conditional_minimum_no_CI.json",
+      "bytes": 651,
+      "sha256": "f71c42cfee30e68a41588ce200941de67fe9e676da80de02793f84cde36353fa"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\contributions.json",
+      "bytes": 50,
+      "sha256": "9c07ededd39da2d4227bb73fde8a81b828a14aa5ed59a302f79c005f1bca6216"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\figure4_curve_data.csv",
+      "bytes": 8519,
+      "sha256": "4e898e332ed12b32d4a46fbea67334b19de7f5eeef538b34fafa273b27e57b21"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\figure4_reference.json",
+      "bytes": 2511,
+      "sha256": "00b1580a1851456c617a481594c4fe277b376bed0e030bd86ae5894616d02fa8"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\figure6_reference.json",
+      "bytes": 4851,
+      "sha256": "15ccedc2702adb9ae26ee97d28522fe8bbf17aea9506f4ceaa2f0871ee46106e"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\figure6_regional_reference.csv",
+      "bytes": 20243,
+      "sha256": "f9c5c6b09ed6a02a4684a22439287ce4b335d7d4e021422f835bc3cc17f54266"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\figure7_gust_ratio.json",
+      "bytes": 2570,
+      "sha256": "f9fc5eecfee41213a479f7b57b78e2dbb9103803ef9aafff7c088e26271a0318"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\figure9_descriptive_events.csv",
+      "bytes": 573990,
+      "sha256": "664bd439347342056d8ecfa08eba39669523925c213a6ce3ff6350bc51986244"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\figure9_OOF_diagnostic_events.csv",
+      "bytes": 587679,
+      "sha256": "5c733582d438d29b761b1bee970b357934e0ad5be228e55b489bdcc1e15d4f1a"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\fold_training.json",
+      "bytes": 4470,
+      "sha256": "107150ded0257f5aebe6516e04d907db28fb048b54847c006805695f148c4813"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\full_model.json",
+      "bytes": 237934,
+      "sha256": "60989a66fbbf05b08a22dd7d429541722a5f19f2e3623c4b151ca04bf06476ee"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\metrics.json",
+      "bytes": 3920,
+      "sha256": "fd3c5a2ac8ed6ac33ba0c4b38af25e70c068a7f6ff931f1dd73d39e47af46c10"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\model_fold0_control.json",
+      "bytes": 185176,
+      "sha256": "8a2c581ccda36ad3e74a0909c928c496c58096db0a20cc3813ecb87c1cdd7803"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\model_fold0_G.json",
+      "bytes": 185285,
+      "sha256": "34b0f14f8fc453d8c260a1cc6f7f6556ab111ca414258f5a297724ce41d2fccb"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\model_fold1_control.json",
+      "bytes": 194899,
+      "sha256": "8dec2b3a4711c3476780166ca0a8b138a7fca8b4b1090e9f6b7f2eef31c33691"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\model_fold1_G.json",
+      "bytes": 195009,
+      "sha256": "4f1165f92474cf04ea3f5d732f00c3408d824edfad9e6ca6a8c40aab03517c48"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\model_fold2_control.json",
+      "bytes": 188743,
+      "sha256": "156ffe64564b6585c3cf2059579199ccbcf479a91c28374317a3d8b2519b4d08"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\model_fold2_G.json",
+      "bytes": 188864,
+      "sha256": "79e741b69e8dd9e0935bfb2da80e65344c5477226add2a5f9cd633e7d4747918"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\model_fold3_control.json",
+      "bytes": 191825,
+      "sha256": "a0f290526564de9cb27d2f0737a4fa13ab9c971de5393841d13658e3aab2e99c"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\model_fold3_G.json",
+      "bytes": 191923,
+      "sha256": "8f07b31905d5698485393ede8ecefb4f8b92754ab5f9ef5166dd32a40a93d71c"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\model_fold4_control.json",
+      "bytes": 194639,
+      "sha256": "db1b67b8d495e6e8b771e627d3194b252c4eb1b555f1781ca21c55a761657bbb"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\model_fold4_G.json",
+      "bytes": 194751,
+      "sha256": "8f48e62f9fc6a514aa4a5f1efefedf19266a941bf7ed230372a4b58745eabbd3"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\oof_control.csv",
+      "bytes": 1658773,
+      "sha256": "da3427ebda5019b6f247572263dc6d5492753c09e08925221b50740b24f57142"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\oof_G.csv",
+      "bytes": 1658535,
+      "sha256": "55ed0282babbb3deb89ce088944104a9aed0d81443306c6329040ff0da301a88"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\VIF.csv",
+      "bytes": 951,
+      "sha256": "89191f5e35512412a5e0b0967ee00047569ab860f9f8b23b5d2d8302b350ef4e"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_E0\\VIF_manifest.json",
+      "bytes": 758,
+      "sha256": "601dccf6e822115484602eedecce888694ed3e3bbd50ac2869141a9908c009ef"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\cluster_covariance.json",
+      "bytes": 72885,
+      "sha256": "d30ed15973a12e1212dfea128107c0e2af3472d2c9f88af8cd8aec1e44731b04"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\conditional_minimum_no_CI.json",
+      "bytes": 649,
+      "sha256": "4ba3cbd7ae58c985b8c808bae376e3ca73686f90d4601e86e4f6d11d8af35c8f"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\contributions.json",
+      "bytes": 198,
+      "sha256": "8a564d31fbf257ca62e45cab1f85ca168109059c6b082703677756ac6dc48f4e"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\figure4_curve_data.csv",
+      "bytes": 8503,
+      "sha256": "0425d796321c7642a98ff7c9e9e8428351a6579caf82c329a40b1317087eb784"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\figure4_reference.json",
+      "bytes": 2532,
+      "sha256": "ec312e64adfa04761fe100fa0ea89851f4f541e4ccd199a02377a595125ff8ba"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\figure6_reference.json",
+      "bytes": 4851,
+      "sha256": "06b091ded74a227079bc4684dfcee1f22a11562f9d63b3da9d57a2194e0e47e5"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\figure6_regional_reference.csv",
+      "bytes": 20151,
+      "sha256": "59ce3f68f8333665462695356ccf5c1fa90a0193d7808f85fcaf3af9959e8460"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\figure7_customer_curve.csv",
+      "bytes": 10086,
+      "sha256": "bf167797bb2fe360f4a455598f0d813429b81de98af91847c22896ff5e4fda1b"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\figure7_gust_ratio.json",
+      "bytes": 2590,
+      "sha256": "8ead048a54bb823192284033bd8f8848e59728a807149ca0f1cb6fc4765af033"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\figure7_reference.json",
+      "bytes": 2600,
+      "sha256": "486b662e7b3d336953911e63caba1ac82defc69b22ad9361c9c65988eaf5661b"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\figure9_descriptive_events.csv",
+      "bytes": 572539,
+      "sha256": "edfae7332aa91d7a29caf8103b2bfdd1602a84d60beaf3ba4031847ed4d74be4"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\figure9_OOF_diagnostic_events.csv",
+      "bytes": 588898,
+      "sha256": "b69f2e14e5d9c6dce77b3ede86ab9363e9ced3bd63f5ed7fb9ed764c28b63278"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\fold_training.json",
+      "bytes": 4472,
+      "sha256": "db36c1853e01dedc77ceba21fb8466af4ae96f7e156de527c32e97f7e6fab219"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\full_model.json",
+      "bytes": 238134,
+      "sha256": "96e1f959f59498fdff02f9114bc33f2adbf60de5e4b15ea514d2dfc460f50628"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\metrics.json",
+      "bytes": 7796,
+      "sha256": "5382f32e390b925adae8b2d01b58e28ae756bead15a373bcc0114d2abc0535d2"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold0_control.json",
+      "bytes": 185302,
+      "sha256": "03a50481586f3920a354f187a28c221bd3503ce2cc3dfb59f96b4b09d6e991a6"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold0_G.json",
+      "bytes": 185413,
+      "sha256": "b62789b531f56e9c9eabfc6b8b5daaa1adc41a2b34af0e685414c4dd69128d51"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold0_GK.json",
+      "bytes": 185497,
+      "sha256": "7a53835f0acf344daf2922e97f802552a8eccb909a7ea5036ca15008bd4fe36f"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold0_K.json",
+      "bytes": 185367,
+      "sha256": "de5b3fbf7cf9077f1d5782e2133164fdf045be195a7862a8a88f1b89fe5bb14d"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold1_control.json",
+      "bytes": 195016,
+      "sha256": "9bec538b96aeefd3caa9c03fe4d8db019af0e10088035a1726b6ceb14ca3f5e6"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold1_G.json",
+      "bytes": 195139,
+      "sha256": "20c49054d8cfd450a3c2afb3bebeb232676ce053501181dfdc12d574a5854ebf"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold1_GK.json",
+      "bytes": 195214,
+      "sha256": "e94d1c9b6e1916f8dac2af38bd1df226bcdb94a7e1bf3467f809c3afedad7bd0"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold1_K.json",
+      "bytes": 195086,
+      "sha256": "a273d6ed853423fd055bf628f03805b4183a9ca38827b79f27ffcc1956a4594c"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold2_control.json",
+      "bytes": 188869,
+      "sha256": "413cefa33e46beaf76498d877624a0251760b42529cb2375edc1bf38d85d85b0"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold2_G.json",
+      "bytes": 188991,
+      "sha256": "d3da021ca27506816d8b10d46812c45453cbe7ba3874c6b237017d4800138857"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold2_GK.json",
+      "bytes": 189072,
+      "sha256": "61c0543bb9bc1e3cb6ec5e31ae0ac5a9dc3740dc3940beb668bb6680df7d79ba"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold2_K.json",
+      "bytes": 188944,
+      "sha256": "f34be6c4de2b58f1c7286efbdfc5dfc21c1c4904172f81aa99d13d0b8a8b320a"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold3_control.json",
+      "bytes": 191934,
+      "sha256": "0f9b74096b3563dac57602e20666bad00efefebddac4bd1a3dc253285c05c1ef"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold3_G.json",
+      "bytes": 192050,
+      "sha256": "14d00b981196a4ecc5356d17565df2e2fee6cc2643c147f29519895f6ea14c12"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold3_GK.json",
+      "bytes": 192135,
+      "sha256": "0fa5a3f0b4b495ec000881f0c3a5a78dd495f4be987d5912642f0963b5209324"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold3_K.json",
+      "bytes": 192007,
+      "sha256": "8dd1723981b1dc47add2698fb296772bfb9bf51ce61afc33d37905a52bac7d10"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold4_control.json",
+      "bytes": 194753,
+      "sha256": "59f8025fda2914cb888a9eca06fbb6aec96b14f9a4db8ad479b83d3c3d6906ba"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold4_G.json",
+      "bytes": 194875,
+      "sha256": "fbd5556aeaf0fe1d3d1b47f66d2a57afb62edd8b902fca0ce6d1f0f663990a9f"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold4_GK.json",
+      "bytes": 194953,
+      "sha256": "267eb7ab482f41227f899b04a6720f749c57e60830c10915d3f7f02fc4aeaef5"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\model_fold4_K.json",
+      "bytes": 194824,
+      "sha256": "069505c2d6c74e66a4b7655a9dcbb56d06d9b7e6460c085ab969a56fe0cb1096"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\oof_control.csv",
+      "bytes": 1655881,
+      "sha256": "fa4975fba074a97047bb2c91545eeb541c7e8f08eb7004e3692c0fd72f658a12"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\oof_G.csv",
+      "bytes": 1656015,
+      "sha256": "d85628992b84f944462693754dae3df77b05c4929ea812eb1e48a51d51de2d1c"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\oof_GK.csv",
+      "bytes": 1656126,
+      "sha256": "724209861e621489afc3499f0887a184384054b31e19843127bb15b28f9c9b15"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\oof_K.csv",
+      "bytes": 1656019,
+      "sha256": "b45703fccdcbb2f436fa44d35433ba2bef7b93224346f44698bc54908008f682"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\stage_composition.csv",
+      "bytes": 907,
+      "sha256": "db0e577da4ba3cc0b69c20502e513f4178d00932b03c81a8392c5b9948b0ec60"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\stage_manifest.json",
+      "bytes": 515,
+      "sha256": "908c4c8965d325aabf40fada97cde2848e4240ea0febf025e6b4e01505d91624"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\stage_pooled.csv",
+      "bytes": 242,
+      "sha256": "7660c358572e4f1eeb7263cc2009e5ea180258762dc48a4fd64db020ef0fdac2"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\step27_manifest.json",
+      "bytes": 493,
+      "sha256": "0b281e0a665cb1ad8160aee0de9eb3a00400cb850938f8ee9eac27ea1cd1fd02"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\step27_model_0.json",
+      "bytes": 238178,
+      "sha256": "1cfe10fb145245572b7e4f0234b6d352af2620a066cb0ba90d096b2e703510bf"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\step27_model_1.json",
+      "bytes": 238289,
+      "sha256": "652cf2197a18a9ad8b8f090e966c2e6c397610fac9d1020236d7217fcbf014fa"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\step27_single_stage_bins.csv",
+      "bytes": 262,
+      "sha256": "97f2b01f8ccb189b4e5edb73320118fbe91b7db5efde483ceea096610e9d359e"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\step27_stage_coefficients.csv",
+      "bytes": 1305,
+      "sha256": "8a0be68ecde892e2a5e8c8593512700ce02648a88703ea90f436687f0e739e8e"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\VIF.csv",
+      "bytes": 1012,
+      "sha256": "2511fc72b701ab8a944165e75a3da7185b8ca6afafda8d1a106234318e4dc3b4"
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1\\weather_R0c\\VIF_manifest.json",
+      "bytes": 781,
+      "sha256": "362e2ccf2dd5554d3422f6c915c10b8a8cdc4fa96c8ba0463012df8cd3670da3"
+    }
+  ],
+  "event_master": {
+    "schema": "R03_production_v1",
+    "run_id": "R04_B1_all_valid_v1",
+    "purpose": "B1_formal_pending_R04",
+    "input_version": "R02_input_20260905",
+    "input_manifest": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\frozen\\evidence\\R02_EVENT_MANIFEST.json",
+    "input_manifest_sha256": "950d38b0b1a1d9f334803ef973838a69f2b4d0ecfe4ed5fc539f13a66d290fb1",
+    "output_root": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\R04_B1_all_valid_v1",
+    "n_splits": 5,
+    "fold_policy": "global candidate union; descending date group size, date ascending ties, least-loaded fold then smallest fold index",
+    "fold_map": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\folds\\date_to_fold.csv",
+    "training_tail": "all_valid",
+    "optional_tail": "main_train_p99; shared main training R0c reference, numpy linear .99, <=; all test retained",
+    "groups": [
+      "main",
+      "weather"
+    ],
+    "targets": [
+      "E0",
+      "R0c"
+    ],
+    "weights": "event_equal",
+    "calendar": "UTC additive training years/months; unseen error",
+    "full_fit_tail": "all_valid_descriptive",
+    "reference_contract": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\frozen\\contracts\\FIGURE_REFERENCE_CONTRACT.md",
+    "formal_execution_authorized_this_R03": false,
+    "fold_map_sha256": "4493523c51e67cc22e5a2636d0e4dc867861c8b2f427f64989015607ed15d876",
+    "fold_base_ids_sha256": "079106d9eb0dee5b59d28aa29ea3a47c44092f6a8038f19266cccbfec46d76d7",
+    "code_identity": "859a02e917d71b4b51333b4db452403a97f1e6c479b6faf654d79f988c553846"
+  },
+  "new_fits": 0
+}

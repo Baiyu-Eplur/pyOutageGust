@@ -1,0 +1,93 @@
+{
+  "run_id": "X02_20260907_001",
+  "frozen_utc": "2026-09-07T11:57:14.753507+00:00",
+  "random_seed": 20260907,
+  "source_event_sha256": "8ac332cdb59d5eb961a01146757665a2600ebaada4265c8ac1ac30218c6f066d",
+  "tasks": {
+    "E_log": {
+      "target": "ln(1+C)",
+      "eligibility": "candidate_main_E0 and C>=0"
+    },
+    "R_log": {
+      "target": "ln(D/hour)",
+      "eligibility": "candidate_main_R0c and D>0"
+    },
+    "R_C_log": {
+      "target": "ln(D/hour)",
+      "eligibility": "R_log plus final ln(1+C) and square as post-event controls"
+    }
+  },
+  "F0_numeric": [
+    "pressure_msl_0h",
+    "temperature_0h",
+    "precipitation_24h_sum",
+    "log_population",
+    "urban_binary",
+    "deprivation_gap_pct",
+    "morans_i",
+    "income_deprivation_rate",
+    "season_sin",
+    "season_cos",
+    "time_trend"
+  ],
+  "F0_categorical": [
+    "licence_area",
+    "rural_urban_classification"
+  ],
+  "gust": "gust_0h in m/s; raw for tree; training-standardized polynomial powers for parametric models",
+  "F1": {
+    "status": "skipped",
+    "reason": "no auditable timestamped operational/pre-forecast archive in verified contract"
+  },
+  "calendar": {
+    "basis": "UTC proxy",
+    "season": "sin/cos of fractional day-of-year",
+    "trend_origin": "2021-04-01T00:00:00Z",
+    "trend_unit": "365.2425 days"
+  },
+  "missing": "training-fold means for numeric; explicit training levels and unknown all-zero for categorical; audited main population currently complete",
+  "scaling": "training-fold mean and population SD for numeric; categorical reference level dropped; no full-sample preprocessing",
+  "primary_weight": "event equal",
+  "selection_metric": "unweighted mean of protected-process MSE (macro-MSE)",
+  "time_path": {
+    "development_groups": [
+      "P1",
+      "P2",
+      "P3"
+    ],
+    "test_groups": [
+      "P4",
+      "P5"
+    ],
+    "fit_cutoff_utc": "2023-10-29T00:00:00+00:00",
+    "label_maturity_proxy": "max_stage_end_utc < cutoff",
+    "test_scoring": "single frozen scoring call after MODEL_SELECTION_LOCK"
+  },
+  "five_process_path": {
+    "outer_groups": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+    ],
+    "inner": "leave one of remaining four protected groups out",
+    "all_period_pool": "same parent population excluding outer and inner protected intervals plus 48h buffers"
+  },
+  "protection": "remove training events whose [event_time_proxy_utc,max_stage_end_utc] intersects held process interval expanded +/-48h",
+  "tail": "all eligible evaluation events; no outcome p99 trimming",
+  "original_scale_E_auxiliary": "max(exp(z_hat)-1,0), median/central back-transform only; never used for primary log score",
+  "models": [
+    "B00",
+    "B01",
+    "G02",
+    "P00",
+    "P02",
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "G05",
+    "S05"
+  ]
+}

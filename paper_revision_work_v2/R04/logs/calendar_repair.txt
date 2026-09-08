@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R04\src\calendar_repair.py", line 1, in <module>
+    from common import *
+ModuleNotFoundError: No module named 'common'

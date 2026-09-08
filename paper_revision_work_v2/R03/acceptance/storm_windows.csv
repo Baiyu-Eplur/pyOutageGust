@@ -1,0 +1,8 @@
+window,date_start,date_end_inclusive,UTC_events,London_events,membership_difference,main_candidates_UTC,weather_candidates_UTC
+Arwen,2021-11-25,2021-11-28,574,574,0,270,81
+Dudley,2022-02-15,2022-02-17,616,616,0,291,121
+Eunice,2022-02-17,2022-02-19,2291,2291,0,1659,1398
+Franklin,2022-02-19,2022-02-22,1631,1631,0,1132,884
+Babet,2023-10-17,2023-10-22,1089,1087,6,509,80
+Ciaran,2023-10-31,2023-11-03,990,990,0,576,206
+Henk,2024-01-01,2024-01-03,811,811,0,494,336

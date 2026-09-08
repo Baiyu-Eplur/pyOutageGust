@@ -1,0 +1,18 @@
+{
+  "kind": "instruction_package_not_execution_results",
+  "version": "X01-v1.0",
+  "files": [
+    {
+      "name": "CODEX_X01_候选曲线比较指令.md",
+      "sha256": "c0f220e4189b9eaa9024e9be3fe1695d1883a8d6d8ed947663bb85307cd58513"
+    },
+    {
+      "name": "RETURN_TO_CHATGPT_X01_模板.md",
+      "sha256": "43f649cd6f11c9264b5167f577e84fb4509b37b0f305553d931d2058e2939dc6"
+    },
+    {
+      "name": "新方向探索_形状约束与后果超越曲线.md",
+      "sha256": "1ef72a96836b7ee15b00f07051c7126a5ebccd56f85e52e6eee47667abbf9731"
+    }
+  ]
+}

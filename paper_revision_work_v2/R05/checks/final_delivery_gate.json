@@ -1,0 +1,20 @@
+{
+  "status": "passed_for_R05_delivery",
+  "acceptance": "conditional_for_V",
+  "MR": 29,
+  "CL": 6,
+  "sources": 59,
+  "candidate_locations": 90,
+  "migration_rows": 963,
+  "old_numeric_slots": 950,
+  "binding_rows": 246,
+  "combined_paragraphs": 11,
+  "figure_groups": 12,
+  "core_new_fits": 0,
+  "other_new_fits": 0,
+  "Word_changed": false,
+  "original_log_append_disclosed": true,
+  "V_W_started": false,
+  "candidate_findings_after_final_edits": 0,
+  "submission_S3_conditions_open": 5
+}

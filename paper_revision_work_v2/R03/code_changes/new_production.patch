@@ -1,0 +1,689 @@
+--- /dev/null
++++ b/paper_revision_work_v2/R03/cli.py
+@@ -0,0 +1,41 @@
++"""Isolated R03 CLI. Invoke with runtime/python/python.exe -I -S -B."""
++import sys,os,json,argparse,hashlib,datetime
++from pathlib import Path
++ROOT=Path(__file__).resolve().parent;WORK=ROOT.parent
++os.environ['OPENBLAS_NUM_THREADS']='1';os.environ['OMP_NUM_THREADS']='1';os.environ['MKL_NUM_THREADS']='1'
++sys.dont_write_bytecode=True
++sys.path.insert(0,str(ROOT/'runtime/site-packages'));sys.path.insert(0,str(ROOT/'src'))
++def dependency_check():
++    for file in ['PROJECT_SOURCE_MANIFEST.json','RUNTIME_MANIFEST.json']:
++        doc=json.loads((ROOT/'frozen'/file).read_text(encoding='utf-8'));rows=doc if isinstance(doc,list) else doc['files']
++        for row in rows:
++            p=Path(row['frozen_path']) if 'frozen_path' in row else ROOT/row['path']
++            with p.open('rb') as f:actual=hashlib.file_digest(f,'sha256').hexdigest()
++            if actual!=row['sha256']:raise ValueError('Frozen code dependency changed: '+str(p))
++def imported_paths():
++    paths=sorted({str(Path(m.__file__).resolve()) for m in list(sys.modules.values()) if getattr(m,'__file__',None) and not str(m.__file__).startswith('<')})
++    bad=[p for p in paths if not Path(p).is_relative_to(ROOT)]
++    if bad:raise ValueError('Code loaded from outside isolated R03: '+str(bad))
++    return paths
++def main():
++    parser=argparse.ArgumentParser();parser.add_argument('command',choices=['accept','test','smoke','formal']);parser.add_argument('--config');parser.add_argument('--execute-formal',action='store_true');args=parser.parse_args()
++    dependency_check()
++    from producer import read,save_json
++    if args.command=='accept':
++        from acceptance import run;run()
++    elif args.command=='test':
++        import unittest
++        suite=unittest.defaultTestLoader.discover(str(ROOT/'src'),pattern='test_pipeline.py');result=unittest.TextTestRunner(verbosity=2).run(suite)
++        save_json(ROOT/'checks/test_summary.json',{'passed':result.wasSuccessful(),'tests':result.testsRun,'errors':len(result.errors),'failures':len(result.failures)},ROOT)
++        if not result.wasSuccessful():raise SystemExit(1)
++    else:
++        if args.command=='formal' and not args.execute_formal:raise SystemExit('Formal R04 needs an explicit later execution request; this R03 turn runs smoke only')
++        from run_pipeline import run
++        from producer import code_identity
++        config=read(args.config or ROOT/'configs/smoke.json')
++        if args.command=='formal' and config.get('code_identity')!=code_identity():raise ValueError('R04 code identity differs from released configuration; review/release new version first')
++        if args.command=='smoke' and config['purpose']!='non_inferential_smoke':raise ValueError('smoke must use marked configuration')
++        run(config,formal=args.command=='formal')
++    import numpy,pandas,scipy,pyarrow,platform
++    save_json(ROOT/f'checks/runtime_{args.command}.json',{'python':sys.version,'executable':sys.executable,'packages':{'numpy':numpy.__version__,'pandas':pandas.__version__,'scipy':scipy.__version__,'pyarrow':pyarrow.__version__},'platform':platform.platform(),'loaded_code_paths':imported_paths(),'code_load_outside_R03':False,'formal_run':args.command=='formal','timestamp_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()},ROOT)
++if __name__=='__main__':main()
+--- /dev/null
++++ b/paper_revision_work_v2/R03/src/acceptance.py
+@@ -0,0 +1,79 @@
++"""Targeted intake from existing R02 artifacts; never rescan hourly weather."""
++import json,shutil,zipfile,struct,xml.etree.ElementTree as ET
++from pathlib import Path
++import pandas as pd
++import numpy as np
++from contracts import *
++from producer import ROOT,WORK,sha,read,save_json,load_events,step2_build_folds
++def md(frame):
++    d=frame.astype(object).where(pd.notna(frame),'NA')
++    return '| '+' | '.join(map(str,d.columns))+' |\n| '+' | '.join(['---']*len(d.columns))+' |\n'+'\n'.join('| '+' | '.join(str(v).replace('|','/').replace('\n',' ') for v in row)+' |' for row in d.itertuples(index=False,name=None))+'\n'
++def copy_evidence(path):
++    src=Path(path);dest=ROOT/'frozen/reference_data'/src.name;dest.parent.mkdir(exist_ok=True)
++    if not dest.exists():shutil.copyfile(src,dest)
++    if sha(src)!=sha(dest):raise ValueError('reference copy identity mismatch')
++    return dest,{'original_path':str(src),'frozen_path':str(dest),'sha256':sha(dest),'role':'local evidence only'}
++def dbf_columns(path):
++    with Path(path).open('rb') as f:
++        header=f.read(32);n=struct.unpack('<I',header[4:8])[0];hlen=struct.unpack('<H',header[8:10])[0];fields=[]
++        for i in range((hlen-33)//32):
++            b=f.read(32);fields.append({'name':b[:11].split(b'\x00')[0].decode('ascii'),'type':chr(b[11]),'width':b[16]})
++    return {'rows':n,'fields':fields}
++def build_config():
++    manifest=ROOT/'frozen/evidence/R02_EVENT_MANIFEST.json'
++    config={'schema':'R03_production_v1','run_id':'R04_B1_all_valid_v1','purpose':'B1_formal_pending_R04','input_version':'R02_input_20260905','input_manifest':str(manifest),'input_manifest_sha256':sha(manifest),'output_root':str(WORK/'R04/R04_B1_all_valid_v1'),'n_splits':5,'fold_policy':'global candidate union; descending date group size, date ascending ties, least-loaded fold then smallest fold index','fold_map':str(ROOT/'folds/date_to_fold.csv'),'training_tail':'all_valid','optional_tail':'main_train_p99; shared main training R0c reference, numpy linear .99, <=; all test retained','groups':['main','weather'],'targets':['E0','R0c'],'weights':'event_equal','calendar':'UTC additive training years/months; unseen error','full_fit_tail':'all_valid_descriptive','reference_contract':str(ROOT/'frozen/contracts/FIGURE_REFERENCE_CONTRACT.md'),'formal_execution_authorized_this_R03':False}
++    save_json(ROOT/'configs/R04_primary.json',config,ROOT)
++    return config
++def run():
++    config=build_config();e,em=load_events(config);base=e.loc[e.candidate_main_E0|e.candidate_main_R0c].copy();mapping=step2_build_folds(base,config);mapping.to_csv(ROOT/'folds/date_to_fold.csv',index=False)
++    members=attach_folds(base,mapping);members[[ID,'new_date_utc','fold','candidate_main_E0','candidate_main_R0c','candidate_weather_E0','candidate_weather_R0c']].to_csv(ROOT/'folds/event_membership.csv',index=False)
++    config['fold_map_sha256']=sha(ROOT/'folds/date_to_fold.csv');config['fold_base_ids_sha256']=identity(base[ID]);save_json(ROOT/'configs/R04_primary.json',config,ROOT)
++    optional=dict(config,run_id='R04_optional_train_p99_v1',training_tail='main_train_p99',purpose='optional_training_tail_diagnostic_pending_authorization',output_root=str(WORK/'R04/R04_optional_train_p99_v1'))
++    save_json(ROOT/'configs/R04_optional_p99.json',optional,ROOT)
++    smoke=dict(config,run_id='R03_smoke_v1',purpose='non_inferential_smoke',groups=['main'],output_root=str(ROOT/'smoke/R03_smoke_v1'),smoke_rows_per_year_month_fold=4)
++    save_json(ROOT/'configs/smoke.json',smoke,ROOT)
++    assert len(e)==135025 and len(base)==60436 and set(e.loc[e.event_identity_unresolved,ID])=={'FREP-338321-Z','FREP-314454-J'}
++    assert not e.loc[e.event_identity_unresolved,'candidate_main_E0'].any()
++    acceptance=[];decomp=[];marginal=[];enterrows=[]
++    for s in ['main_E0','main_R0c','weather_E0','weather_R0c']:
++        counts=e['membership_'+s].value_counts();acceptance.append({'sample':s,'H0':int(e['H0_'+s].sum()),'R02':int(e['candidate_'+s].sum()),'common':int(counts.get('common',0)),'enter':int(counts.get('enter',0)),'exit':int(counts.get('exit',0)),'v3_only':int((e['candidate_'+s]&e.weather_validation_tier.eq('v3_only_window_not_reverified')).sum())})
++    for s,cap in [('main_R0c',192.08333333333334),('weather_R0c',142.84466666666685)]:
++        d=e.loc[e['membership_'+s].eq('enter')].copy();remaining=pd.Series(True,index=d.index)
++        tests=[('旧四天气不完整→新可用',~np.isfinite(d[['old_'+c for c in WX]].astype(float)).all(axis=1)),('旧年份人口缺失→新完整',d.old_population.isna()&d.population.notna()),('旧原因不符→新共识符合',~d.old_cause_group.isin(['technical_asset','weather_natural'])),('旧目标无效→新有效',~np.isfinite(d['old_'+D].astype(float))|d['old_'+D].le(0)),('旧H0截尾→完整有效尾部',d[D].gt(cap)),('其他待解释',pd.Series(True,index=d.index))]
++        for reason,mask in tests:
++            chosen=remaining&mask;decomp.append({'sample':s,'exclusive_reason_in_order':reason,'events':int(chosen.sum())});d.loc[chosen,'exclusive_reason']=reason;remaining&=~chosen
++        assert not remaining.any();assert decomp[-1]['events']==0
++        for label,mask in [('时间改变',d.selected_source_row.ne(d.old_source_row)),('任一天气变化',pd.concat([(d[c]-d['old_'+c]).abs().gt(1e-6)|(d[c].isna()!=d['old_'+c].isna()) for c in WX],axis=1).any(axis=1)),('R1兼容阈值也会排除',~d['R1_compat_candidate_'+s])]:marginal.append({'sample':s,'overlapping_flag':label,'events':int(mask.sum())})
++        d['sample']=s;enterrows.append(d[[ID,'sample','exclusive_reason',D,'selected_source_row','old_source_row']])
++    pd.concat(enterrows).to_csv(ROOT/'acceptance/entrants_exclusive.csv',index=False)
++    # Frozen date windows are analysis assumptions, never promoted to verified business calendars.
++    stormdates={'Arwen':('2021-11-25','2021-11-28'),'Dudley':('2022-02-15','2022-02-17'),'Eunice':('2022-02-17','2022-02-19'),'Franklin':('2022-02-19','2022-02-22'),'Babet':('2023-10-17','2023-10-22'),'Ciaran':('2023-10-31','2023-11-03'),'Henk':('2024-01-01','2024-01-03')}
++    windows={};storm=[]
++    for name,(start,end) in stormdates.items():
++        stop=(pd.Timestamp(end,tz='UTC')+pd.Timedelta(days=1)).isoformat();windows[name]={'start':pd.Timestamp(start,tz='UTC').isoformat(),'end_exclusive':stop,'calendar':'UTC_declared_proxy','date_source':'frozen R01/old step10 dates, business timezone not independently confirmed','endpoint':'start inclusive/end next-day exclusive','London_alternative':True}
++        u=e['new_storm_'+name];l=e['new_storm_london_'+name]
++        storm.append({'window':name,'date_start':start,'date_end_inclusive':end,'UTC_events':int(u.sum()),'London_events':int(l.sum()),'membership_difference':int(u.ne(l).sum()),'main_candidates_UTC':int((u&e.candidate_main_E0).sum()),'weather_candidates_UTC':int((u&e.candidate_weather_E0).sum())})
++    u=e[['new_storm_'+x for x in windows]].sum(axis=1);l=e[['new_storm_london_'+x for x in windows]].sum(axis=1)
++    union={'UTC_UNIQUE_ANY':int(u.gt(0).sum()),'UTC_overlap_events_ge2':int(u.gt(1).sum()),'UTC_summed_window_memberships':int(u.sum()),'UTC_overlap_extra_memberships':int((u-1).clip(lower=0).sum()),'London_UNIQUE_ANY':int(l.gt(0).sum()),'London_overlap_events_ge2':int(l.gt(1).sum()),'UTC_London_union_difference':int(u.gt(0).ne(l.gt(0)).sum())}
++    save_json(ROOT/'configs/storm_windows.json',windows,ROOT)
++    pd.DataFrame(storm).to_csv(ROOT/'acceptance/storm_windows.csv',index=False);save_json(ROOT/'acceptance/storm_union.json',union,ROOT)
++    copies=[];pop,pmeta=copy_evidence(WORK.parent.parent/'data/population_lad_long.csv');copies.append(pmeta);p=pd.read_csv(pop)
++    book,bmeta=copy_evidence(WORK.parent.parent/'data/localincomedeprivationdata.xlsx');copies.append(bmeta)
++    with zipfile.ZipFile(book) as z:
++        doc=ET.fromstring(z.read('xl/workbook.xml'));sheets=[v.attrib['name'] for v in doc.findall('.//{http://schemas.openxmlformats.org/spreadsheetml/2006/main}sheet')]
++    assert bmeta['sha256']=='6eb516a87654078ee69d4df55c8bc749b5da5de117f996f262c0c762bc20b38f'
++    dataroot=WORK.parent.parent/'data';metadata=[]
++    for dbf in sorted(dataroot.rglob('*.dbf')):
++        cp,info=copy_evidence(dbf);copies.append(info);metadata.append({'path':str(dbf),**dbf_columns(cp)})
++    save_json(ROOT/'acceptance/local_geography_metadata.json',metadata,ROOT)
++    codes=sorted(e.LAD21CD.dropna().unique());pcodes=set(p.LAD23CD.dropna());rows=[]
++    for code in codes:
++        rows.append({'LAD21CD':code,'exists_as_LAD23_population_code':code in pcodes,'all_events':int(e.LAD21CD.eq(code).sum()),'main_candidates':int((e.LAD21CD.eq(code)&e.candidate_main_E0).sum()),'weather_candidates':int((e.LAD21CD.eq(code)&e.candidate_weather_E0).sum()),'geographic_equivalence':'unresolved_no_local_explicit_2021_to_2023_boundary_crosswalk'})
++    geo=pd.DataFrame(rows);geo.to_csv(ROOT/'acceptance/LAD21_LAD23_compatibility.csv',index=False)
++    save_json(ROOT/'frozen/REFERENCE_DATA_MANIFEST.json',copies,ROOT)
++    weather=e.groupby(['weather_cache_status','weather_numeric_available']).size().rename('events').reset_index()
++    numbers={'events':len(e),'candidate_base':len(base),'samples':acceptance,'exclusive_entrants':decomp,'overlapping_entrant_flags':marginal,'date_groups':len(mapping),'fold_events':members.fold.value_counts().sort_index().to_dict(),'fold_date_groups':mapping.fold.value_counts().sort_index().to_dict(),'storm_union':union,'calendar_all':{c:int(e[c].sum()) for c in ['UTC_London_date_diff','UTC_London_study_diff','UTC_London_period_diff']},'LAD_codes':len(codes),'LAD_codes_in_population':int(geo.exists_as_LAD23_population_code.sum()),'candidate_LAD_codes':int(geo.main_candidates.gt(0).sum()),'confirmed_geography_error_codes':[],'geography_identity_unresolved_codes':len(codes),'geography_scope':'no local explicit LAD21-to-LAD23 compatibility source found; same-code membership only','Buck_workbook_sha256':bmeta['sha256'],'Buck_sheets':sheets,'weather_event_states':weather.to_dict('records'),'input_sha256':em['event_table']['sha256']}
++    save_json(ROOT/'acceptance/summary.json',numbers,ROOT)
++    report='# R03 输入接收与定向对账\n\n基于已冻结 R02 主表及其可读报告，本轮没有重跑天气扫描或 H0 拟合。原 v9 已恢复，实际新入口是 R03/src/producer.py::step0_build_sample/step2_build_folds，经 R03/cli.py 运行。全部项目代码参考来自本地冻结副本，不导入原生产者。\n\n'+f'135,025 个事件；主表 SHA256 `{numbers["input_sha256"]}`。两未决 ID 仍保留且不纳入主原因候选；候选身份如下。\n\n'+md(pd.DataFrame(acceptance))+'\n602/99 的互斥归因采用固定顺序：天气数值资格→年度人口→原因→目标有效性→旧 H0 尾部限制→其他；前项命中后不再重复计入后项。旧 cap 是 H0 描述身份，不是新拟合阈值。\n\n'+md(pd.DataFrame(decomp))+'\n可重叠边际标志不能相加：\n\n'+md(pd.DataFrame(marginal))+'\nR1_compat 是成员诊断：main_R0c=59,832、weather_R0c=9,758，无 R1 模型。主阈值由 192.083333 变为 191.913333 h 另影响两条旧成员，详见冻结 R02 表。\n\nUTC/London 全事件日期/研究期/时期差异为 1,845/2/2；主候选为 768/0/0，天气候选为 105/0/0。风暴日期来源是冻结 R01 与旧 step10 约定；UTC 为明确分析解释，源业务时区未确证；结束日期包含全天，实际使用次日零时开区间，不随结果调整。\n\n'+md(pd.DataFrame(storm))+'\n'+md(pd.DataFrame([union]))+'\n天气事件数：\n\n'+md(weather)+'\n129,414 可查询事件对应 82,621 键、122,948 键×小时；74,896 可读文件、7,725 缺文件键；75,983 是整个目录文件数。121,178 四值完整事件全部缓存小时/窗口通过；可读但数值/小时/窗口失败实数0；不可查询5,611，缺文件事件8,236，其最早v3数值也缺。四候选v3-only实数0；历史model仍未决，不将数据值通过等同来源确定。\n\n'+f'区域：{len(codes)} 个非空 LAD21 代码中 {int(geo.exists_as_LAD23_population_code.sum())} 个出现在 LAD23 人口长表，候选涉及 {int(geo.main_candidates.gt(0).sum())} 个代码。同码只确认连接覆盖，不证明边界相同。本地 DBF/lookup 元数据见 local_geography_metadata.json，未发现可明确验证 2021→2023 边界等价的来源；没有已证实需改值的错误，保留全部相关代码的未决标志。5,762缺LAD和其中151可用坐标但未新增匹配沿用R02，不强行补区。\n\n'+f'Buck：工作簿 localincomedeprivationdata.xlsx SHA `{bmeta["sha256"]}`，Rankings for all indicators 的 Income deprivation rate、Deprivation gap (percentage points)、Moran\'s I；比例存储不乘100。普通LAD gap为LSOA rate极差，Buck四旧码简单均值保留 .06325/.1875/.30 及proxy。主候选各1,151、天气各293。原脚本真实路径及SHA已复制登记于 frozen/PROJECT_SOURCE_MANIFEST.json，详证来自 frozen/evidence/buckinghamshire_lineage.json。LSOA重建不在本轮。\n'
++    (WORK/'tables/R03_INPUT_ACCEPTANCE.md').write_text(report,encoding='utf-8')
++    print(json.dumps({'base':len(base),'dates':len(mapping),'geography_codes':len(codes),'fold_events':numbers['fold_events']},ensure_ascii=False))
+--- /dev/null
++++ b/paper_revision_work_v2/R03/src/contracts.py
+@@ -0,0 +1,103 @@
++"""Pure declared R03 numerical contracts; no filesystem or historical imports."""
++import hashlib,json
++import numpy as np
++import pandas as pd
++
++ID='Incident Reference';C='customers_v2_event_excl_reinterruptions';D='duration_B_full_span_hours'
++WX=['gust_0h','precipitation_24h_sum','temperature_0h','pressure_msl_0h']
++REGION=['urban_binary','log_population','income_deprivation_rate','deprivation_gap_pct','morans_i']
++G=['zG','zG2','zG_zPressure'];K=['zK','zK2']
++def identity(values):return hashlib.sha256('\n'.join(sorted(map(str,values))).encode()).hexdigest()
++def config_hash(obj):return hashlib.sha256(json.dumps(obj,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()
++def target(df,name):
++    if name=='E0':return np.log1p(df[C].to_numpy(dtype=float))
++    if name=='R0c':return np.log(df[D].to_numpy(dtype=float))
++    raise ValueError('unknown target')
++def global_date_folds(base,n_splits=5):
++    if not base[ID].is_unique:raise ValueError('duplicate candidate ID')
++    counts=base.groupby('new_date_utc').size().rename('events').reset_index().sort_values(['events','new_date_utc'],ascending=[False,True],kind='stable')
++    if len(counts)<n_splits:raise ValueError('not enough date groups')
++    totals=[0]*n_splits;rows=[]
++    for date,n in counts.itertuples(index=False,name=None):
++        fold=min(range(n_splits),key=lambda f:(totals[f],f));totals[fold]+=int(n)
++        rows.append({'date_utc':str(date),'fold':fold,'base_events':int(n)})
++    return pd.DataFrame(rows).sort_values('date_utc').reset_index(drop=True)
++def attach_folds(df,mapping):
++    if not mapping.date_utc.is_unique:raise ValueError('duplicate date map')
++    d=df.copy();d['fold']=d.new_date_utc.map(mapping.set_index('date_utc').fold)
++    if d.fold.isna().any():raise ValueError('candidate date missing from frozen folds')
++    d['fold']=d.fold.astype(int);return d
++def training_population(main_train,group,target_name,tail):
++    d=main_train.copy();threshold=None
++    if tail=='main_train_p99' and target_name=='R0c':
++        x=d[D].to_numpy(dtype=float)
++        if not len(x) or not (np.isfinite(x)&(x>0)).all():raise ValueError('invalid main training recovery reference')
++        threshold=float(np.quantile(x,.99,method='linear'));d=d.loc[d[D].le(threshold)].copy()
++    elif tail!='all_valid':
++        if not(tail=='main_train_p99' and target_name=='E0'):raise ValueError('unknown tail policy')
++    if group=='weather':d=d.loc[d.cause_group_event.eq('weather_natural')].copy()
++    elif group!='main':raise ValueError('unknown group')
++    return d,{'tail_policy':tail,'threshold_hours':threshold,'quantile':.99 if threshold is not None else None,'algorithm':'numpy.quantile(method=linear)','comparison':'D <= training_threshold','reference_population':'main_training_R0c_eligible','reference_n':len(main_train),'reference_ids_sha256':identity(main_train[ID]),'retained_n':len(d),'retained_ids_sha256':identity(d[ID]),'evaluation':'all valid test IDs; never trimmed using test D'}
++def raw_predictors(df,target_name):
++    p=df[WX+REGION].astype(float).copy()
++    if target_name=='R0c':p['log1p_customers']=np.log1p(df[C].astype(float))
++    if not np.isfinite(p).all(axis=None):raise ValueError('incomplete predictors: define common population before fitting')
++    return p
++def fit_preprocessor(train,target_name):
++    raw=raw_predictors(train,target_name);cols=WX+(['log1p_customers'] if target_name=='R0c' else [])
++    sd=raw[cols].std(ddof=1)
++    if not np.isfinite(sd).all() or sd.le(0).any():raise ValueError('zero/nonfinite training SD')
++    return {'target':target_name,'scale_columns':cols,'mean':raw[cols].mean().to_dict(),'sd':sd.to_dict(),'sd_ddof':1,'years':sorted(train.new_year.astype(int).unique().tolist()),'months':sorted(train.new_month.astype(int).unique().tolist()),'unknown_category':'error','region_columns':REGION,'region_scale':'raw; population already natural log','training_ids_sha256':identity(train[ID])}
++def design(df,prep,block='full'):
++    raw=raw_predictors(df,prep['target']);year=df.new_year.astype(int);month=df.new_month.astype(int)
++    if not year.isin(prep['years']).all() or not month.isin(prep['months']).all():raise ValueError('unseen calendar category; no reference fallback')
++    z={c:(raw[c]-prep['mean'][c])/prep['sd'][c] for c in prep['scale_columns']}
++    x=pd.DataFrame({'const':np.ones(len(df))},index=df.index)
++    x['zG']=z[WX[0]];x['zG2']=x.zG**2;x['zRain24']=z[WX[1]];x['zTemp']=z[WX[2]];x['zPressure']=z[WX[3]];x['zG_zPressure']=x.zG*x.zPressure
++    for c in REGION:x[c]=raw[c]
++    for y in prep['years'][1:]:x[f'year_{y}']=year.eq(y).astype(float)
++    for mo in prep['months'][1:]:x[f'month_{mo}']=month.eq(mo).astype(float)
++    if prep['target']=='R0c':x['zK']=z['log1p_customers'];x['zK2']=x.zK**2
++    if block not in ['full','control','G','K','GK']:raise ValueError('unknown variable block')
++    keep_g=block in ['full','G','GK'];keep_k=block in ['full','K','GK']
++    if not keep_g:x=x.drop(columns=G)
++    if prep['target']=='R0c' and not keep_k:x=x.drop(columns=K)
++    if prep['target']=='E0' and block in ['K','GK']:raise ValueError('customer block not defined for E0')
++    for name in prep.get('extra_raw_columns',[]):
++        if name!='log_n_stages':raise ValueError('unregistered diagnostic covariate')
++        stage=df.stage_row_count.astype(float)
++        if not (np.isfinite(stage)&stage.gt(0)).all():raise ValueError('invalid stage diagnostic covariate')
++        x[name]=np.log(stage)
++    return x.astype(float)
++def fit_ols(train,prep,block,metadata):
++    x=design(train,prep,block);y=target(train,prep['target']);a=x.to_numpy();coef,resid,rank,s=np.linalg.lstsq(a,y,rcond=None)
++    if rank!=a.shape[1] or len(a)<=a.shape[1]:raise ValueError(f'unsupported design rank {rank}/{a.shape[1]}, n={len(a)}')
++    return {'schema':'R03_portable_linear_v1','target':prep['target'],'target_scale':'log1p_C' if prep['target']=='E0' else 'log_D','block':block,'columns':list(x.columns),'parameters':coef.tolist(),'preprocessor':prep,'training_ids':sorted(train[ID].tolist()),'training_dates':sorted(train.new_date_utc.unique().tolist()),'training_n':len(train),'rank':int(rank),'condition_number':float(s[0]/s[-1]),'metadata':metadata,'uncertainty':'not part of this parameter archive','no_smearing':True}
++def predict_eta(df,model):
++    x=design(df,model['preprocessor'],model['block'])
++    if list(x.columns)!=model['columns']:raise ValueError('design column order mismatch')
++    return x.to_numpy()@np.asarray(model['parameters'])
++def score(y,pred):
++    y=np.asarray(y,dtype=float);p=np.asarray(pred,dtype=float)
++    if y.shape!=p.shape or y.ndim!=1 or not np.isfinite(y).all() or not np.isfinite(p).all():raise ValueError('nonfinite/mismatched score inputs')
++    n=len(y);sse=float(np.sum((y-p)**2));sst=float(np.sum((y-y.mean())**2)) if n else 0.
++    return {'n':n,'SSE':sse,'SST':sst,'r2':None if n<2 or sst==0 else 1-sse/sst,'status':'undefined_small_or_constant' if n<2 or sst==0 else 'defined','weights':'event_equal','SST_center':'evaluation_target_mean'}
++def score_oof(predictions,expected):
++    if not expected[ID].is_unique or not predictions[ID].is_unique:raise ValueError('duplicate OOF/member IDs')
++    if set(predictions[ID])!=set(expected[ID]):raise ValueError('incomplete/extra OOF IDs; no changed denominator')
++    p=predictions.set_index(ID).loc[expected[ID]].reset_index();check=expected.set_index(ID).loc[p[ID]]
++    if not np.array_equal(p.fold.to_numpy(),check.fold.to_numpy()):raise ValueError('OOF fold mismatch')
++    if not np.allclose(p.y.to_numpy(),check.y.to_numpy(),rtol=0,atol=0):raise ValueError('OOF target mismatch')
++    if not p.prediction_source.eq('OOF_date_group_diagnostic').all():raise ValueError('non-OOF predictions mixed into scoring')
++    pooled=score(p.y,p.prediction_eta);folds={str(f):score(d.y,d.prediction_eta) for f,d in p.groupby('fold')}
++    rs=[v['r2'] for v in folds.values()];defined=all(x is not None for x in rs)
++    return {'pooled_oof_r2':pooled['r2'],'pooled':pooled,'folds':folds,'mean_fold_r2':float(np.mean(rs)) if defined else None,'mean_fold_policy':'unweighted across all declared folds; undefined if any fold undefined','evaluation_ids_sha256':identity(p[ID]),'failed_folds':[],'prediction_scale':p.target_scale.iloc[0]}
++def paired_contributions(metrics,target_name):
++    required=['control','G'] if target_name=='E0' else ['control','G','K','GK']
++    if set(metrics)!=set(required):raise ValueError('required block comparison incomplete')
++    if len({metrics[b]['evaluation_ids_sha256'] for b in required})!=1:raise ValueError('unpaired populations')
++    r={b:metrics[b]['pooled_oof_r2'] for b in required}
++    def delta(a,b):return None if r[a] is None or r[b] is None else r[a]-r[b]
++    out={'gust_from_control':delta('G','control')}
++    if target_name=='R0c':out.update(customers_from_control=delta('K','control'),gust_given_customers=delta('GK','K'),customers_given_gust=delta('GK','G'))
++    return out
+--- /dev/null
++++ b/paper_revision_work_v2/R03/src/diagnostics.py
+@@ -0,0 +1,48 @@
++"""Reconstructed minimal diagnostic producers; old output values never consumed."""
++import numpy as np
++import pandas as pd
++from contracts import *
++def vif_table(x):
++    a=x.to_numpy(dtype=float);n,k=a.shape;rank=int(np.linalg.matrix_rank(a));rows=[]
++    for j,name in enumerate(x.columns):
++        if name=='const':continue
++        y=a[:,j];other=np.delete(a,j,axis=1);res=y-other@np.linalg.lstsq(other,y,rcond=None)[0];sst=float(np.sum((y-y.mean())**2));sse=float(res@res)
++        val=None if sst==0 or sse<=1e-14*max(sst,1) else sst/sse
++        rows.append({'term':name,'VIF':val,'status':'undefined_constant_or_collinear' if val is None else 'defined'})
++    return pd.DataFrame(rows),{'producer':'reconstructed_step26_VIF','n':n,'columns':list(x.columns),'design_rank':rank,'k':k,'intercept_in_auxiliary_regressions':True,'intercept_VIF_reported':False,'year_month_dummies_and_square_interaction_included':True,'all_VIF_below4_required':False}
++def cluster_covariance(x,residuals,groups):
++    a=x.to_numpy(dtype=float);n,k=a.shape;g=pd.Series(groups).astype(str).to_numpy();unique,inv=np.unique(g,return_inverse=True);ng=len(unique)
++    if ng<2 or n<=k:raise ValueError('insufficient clusters/residual df')
++    scores=np.zeros((ng,k));np.add.at(scores,inv,a*np.asarray(residuals)[:,None]);bread=np.linalg.pinv(a.T@a);correction=ng/(ng-1)*(n-1)/(n-k)
++    return correction*bread@(scores.T@scores)@bread
++def covariance_producer(train,model):
++    x=design(train,model['preprocessor'],model['block']);res=target(train,model['target'])-predict_eta(train,model)
++    lad=train.LAD21CD.astype(str);date=train.new_date_utc.astype(str);intersection=lad+'|'+date
++    cl=cluster_covariance(x,res,lad);cd=cluster_covariance(x,res,date);ci=cluster_covariance(x,res,intersection);tw=cl+cd-ci
++    return {'producer':'reconstructed_step28','columns':list(x.columns),'LAD_CR1':cl.tolist(),'date_CR1':cd.tolist(),'LAD_date_two_way_CR1':tw.tolist(),'two_way_min_eigenvalue':float(np.linalg.eigvalsh(tw).min()),'negative_diagonal':bool((np.diag(tw)<0).any()),'negative_variance_policy':'retain diagnostic flag; no imaginary SE/nominal interval','correction':'each one-way G/(G-1)*(n-1)/(n-k); intersection inclusion-exclusion','LAD_fixed_effects':False,'reference_distribution_for_intervals':'not automatically inferred from CV; formal interval contract recorded separately'}
++def stage_composition(events):
++    d=events.copy();x=d[C].to_numpy(dtype=float);edges=np.unique(np.quantile(x,[0,.25,.5,.75,1],method='linear'))
++    if len(edges)<2:raise ValueError('insufficient customer support')
++    d['customer_bin']=pd.cut(d[C].astype(float),edges,include_lowest=True,duplicates='drop').astype(str)
++    stage=d.stage_row_count
++    if stage.isna().any() or stage.le(0).any():raise ValueError('invalid stage count')
++    d['stage_group']=np.select([stage.eq(1),stage.eq(2),stage.between(3,4)],['1','2','3-4'],default='5+')
++    table=d.groupby(['stage_group','customer_bin'],observed=True)[D].agg(['count','mean','median']).reset_index()
++    pooled=d.groupby('customer_bin',observed=True)[D].agg(['count','mean','median']).reset_index()
++    return table,pooled,{'producer':'reconstructed_stage_composition_using_frozen_step42_definition','n':len(d),'event_ids_sha256':identity(d[ID]),'shared_customer_bin_edges':edges.tolist(),'duplicate_quantile_edges':'collapsed and recorded','stage_source':'R02 full-stage stage_row_count','step27_full_original_table':'not claimed reproduced; subgroup-specific historical bins require separate identity'}
++def stage_closure(events,metadata):
++    """Step27 diagnostic recovered from step5 definitions; explicitly uses current membership."""
++    import copy
++    prep=fit_preprocessor(events,'R0c');aug=copy.deepcopy(prep);aug['extra_raw_columns']=['log_n_stages']
++    plain=fit_ols(events,prep,'GK',dict(metadata,diagnostic='without_stage_control'))
++    controlled=fit_ols(events,aug,'GK',dict(metadata,diagnostic='raw_log_stage_control'))
++    models=[plain,controlled];rows=[]
++    for model in models:
++        x=design(events,model['preprocessor'],'GK');res=target(events,'R0c')-predict_eta(events,model);cov=cluster_covariance(x,res,events.LAD21CD)
++        for term in ['zG','zG2','zK','zK2','log_n_stages']:
++            if term not in model['columns']:continue
++            j=model['columns'].index(term);rows.append({'spec':model['metadata']['diagnostic'],'term':term,'coefficient':model['parameters'][j],'LAD_CR1_SE':float(np.sqrt(cov[j,j])) if cov[j,j]>=0 else None,'same_population_sha256':identity(events[ID]),'n':len(events)})
++    single=events.loc[events.stage_row_count.eq(1)];bins=None
++    if len(single):
++        groups=pd.qcut(single[C].astype(float),4,duplicates='drop');bins=single.groupby(groups,observed=True)[D].agg(['count','mean','median']).reset_index();bins[bins.columns[0]]=bins.iloc[:,0].astype(str)
++    return pd.DataFrame(rows),models,bins,{'producer':'reconstructed_step27','source_definition':'frozen customers_duration_shape_investigation/step5_n_stages_stratification.py plus archived 27 report','historical_weather_n9806_reused':False,'current_membership_sha256':identity(events[ID]),'stage_transform':'natural log raw; not standardized','single_stage_bins':'within-single-stage quartiles, duplicate edges collapsed','new_mechanism_claim':False}
+--- /dev/null
++++ b/paper_revision_work_v2/R03/src/prediction.py
+@@ -0,0 +1,85 @@
++"""Scale, reference-population, and storm identities shared by all consumers."""
++import numpy as np
++import pandas as pd
++from contracts import *
++from producer import require_result
++
++def aggregate_eta(eta,weights=None):
++    a=np.asarray(eta,dtype=float);w=np.ones(len(a)) if weights is None else np.asarray(weights,dtype=float)
++    if not len(a) or not np.isfinite(a).all() or len(w)!=len(a) or not np.isfinite(w).all() or (w<0).any() or w.sum()<=0:raise ValueError('invalid reference weights/prediction')
++    mean=float(np.average(a,weights=w))
++    return {'mean_eta':mean,'exp_mean_eta':float(np.exp(mean)),'mean_exp_eta':float(np.average(np.exp(a),weights=w)),'interpretation':'exponentiated fitted log response; no conditional arithmetic-mean/smearing claim'}
++def set_scenario(reference,model,settings):
++    d=reference.copy()
++    for col,val in settings.items():
++        if col=='customers_at_training_log_center':d[C]=np.expm1(model['preprocessor']['mean']['log1p_customers'])
++        elif col in WX+[C]:d[col]=val
++        else:raise ValueError('scenario requires declared raw variable')
++    return d
++def reference_curve(reference,model,driver,grid,fixed_pressure=None):
++    if driver not in ['gust_0h',C]:raise ValueError('unsupported curve driver')
++    prep=model['preprocessor'];rows=[]
++    for value in grid:
++        settings={driver:float(value),'pressure_msl_0h':prep['mean']['pressure_msl_0h'] if fixed_pressure is None else fixed_pressure}
++        if driver==C:settings['gust_0h']=prep['mean']['gust_0h']
++        d=set_scenario(reference,model,settings);a=aggregate_eta(predict_eta(d,model))
++        rows.append({'raw_driver':driver,'value':float(value),'n_reference':len(d),**a})
++    return pd.DataFrame(rows),{'source_run_id':model['metadata']['run_id'],'purpose':model['metadata'].get('purpose'),'target_scale':model['target_scale'],'design_columns':model['columns'],'reference_population_sha256':identity(reference[ID]),'model_training_ids_sha256':prep['training_ids_sha256'],'scaler_sha256':config_hash(prep),'pressure_physical':prep['mean']['pressure_msl_0h'] if fixed_pressure is None else fixed_pressure,'driver':driver,'grid':list(map(float,grid)),'raw_settings':'each row retains regional/calendar covariates; fixed driver, pressure; customer curve fixed gust','reference_order':'set raw -> design squares/interactions -> predict each eta -> aggregate','display':'exp_mean_eta','minimum_CI':None,'no_old_interval_fallback':True}
++def minimum_interface(model,pressure_physical,support):
++    p=dict(zip(model['columns'],model['parameters']));prep=model['preprocessor']
++    b1=p.get('zG');b2=p.get('zG2');b3=p.get('zG_zPressure');mu=prep['mean']['gust_0h'];sd=prep['sd']['gust_0h']
++    out={'beta1':b1,'beta2':b2,'beta3_interaction':b3,'gust_mean':mu,'gust_sd':sd,'pressure_physical':pressure_physical,'pressure_mean':prep['mean']['pressure_msl_0h'],'pressure_sd':prep['sd']['pressure_msl_0h'],'support_ms':list(map(float,support)),'status':'unavailable','minimum_ms':None,'interval':None,'interval_status':'not_estimated_do_not_draw'}
++    if any(x is None for x in [b1,b2,b3]):out['failure_reason']='required gust terms missing';return out
++    if b2<=1e-12:out['failure_reason']='nonpositive_or_near_zero_curvature';return out
++    zp=(pressure_physical-prep['mean']['pressure_msl_0h'])/prep['sd']['pressure_msl_0h'];v=mu-sd*(b1+b3*zp)/(2*b2)
++    out['curvature_physical']=2*b2/sd**2;out['algebraic_vertex_ms']=float(v)
++    if not np.isfinite(v) or not support[0]<=v<=support[1]:out['failure_reason']='outside_declared_support';return out
++    out.update(status='conditional_fitted_minimum',minimum_ms=float(v),failure_reason=None);return out
++def regional_reference(regional_year,calendar,model):
++    """New figure 6 table: raw weather/K center and common calendar, no mean-square shortcut."""
++    prep=model['preprocessor'];result=[]
++    if regional_year.duplicated(['LAD21CD','new_year']).any():raise ValueError('duplicate regional-year keys')
++    if calendar.duplicated(['new_year','new_month']).any():raise ValueError('duplicate reference calendar keys')
++    for lad,g in regional_year.groupby('LAD21CD'):
++        d=calendar.merge(g,on='new_year',how='left',validate='many_to_one')
++        if d[REGION].isna().any(axis=None):result.append({'LAD21CD':lad,'status':'missing_region_year_no_fill'});continue
++        d[ID]=[f'{lad}:calendar:{i}' for i in range(len(d))]
++        for c in WX:d[c]=prep['mean'][c]
++        if model['target']=='R0c':d[C]=np.expm1(prep['mean']['log1p_customers'])
++        x=design(d,prep,model['block'])
++        if model['target']=='R0c' and 'zK' in x:
++            if not np.allclose(x.zK,0,atol=1e-12) or not np.allclose(x.zK2,0,atol=1e-20):raise ValueError('customer reference not at training log center')
++        result.append({'LAD21CD':lad,'status':'descriptive_common_calendar',**aggregate_eta(predict_eta(d,model),d.weight)})
++    return pd.DataFrame(result)
++def storm_event_predictions(events,model,windows,prediction_source='full_sample_descriptive',oof=None,oof_models=None):
++    masks={name:events.new_time_utc.ge(pd.Timestamp(win['start']))&events.new_time_utc.lt(pd.Timestamp(win['end_exclusive'])) for name,win in windows.items()}
++    mask=pd.DataFrame(masks,index=events.index);d=events.loc[mask.any(axis=1)].copy()
++    if not d[ID].is_unique:raise ValueError('storm union duplicated')
++    d['window_list']=[';'.join(mask.columns[mask.loc[i]].tolist()) for i in d.index];d['window_count']=mask.sum(axis=1).loc[d.index]
++    d['was_in_this_fit']=d[ID].isin(model['training_ids']);tail=model['metadata'].get('tail',{})
++    cap=tail.get('threshold_hours');d['tail_excluded_from_fit']=False if cap is None else d[D].gt(cap)
++    d['model_fold']=-1;d['training_threshold_hours']=cap;d['model_training_tail_policy']=tail.get('tail_policy','not_provided');d['fit_model_key']='full_model'
++    if prediction_source=='full_sample_descriptive':d['prediction_eta']=predict_eta(d,model)
++    elif prediction_source=='OOF_date_group_diagnostic':
++        if oof is None or not oof[ID].is_unique or oof_models is None:raise ValueError('missing/duplicate storm OOF or corresponding fold archives')
++        d['prediction_eta']=d[ID].map(oof.set_index(ID).prediction_eta)
++        if d.prediction_eta.isna().any():raise ValueError('incomplete storm OOF')
++        d['was_in_this_fit']=False # each row's corresponding fold fit excludes its date
++        d['tail_excluded_from_fit']=False # test tails are retained regardless of D
++        d['model_fold']=d[ID].map(oof.set_index(ID).fold)
++        for f,g in d.groupby('model_fold'):
++            fm=oof_models[int(f)];ft=fm['metadata']['tail']
++            if set(g[ID])&set(fm['training_ids']) or set(g.new_date_utc)&set(fm['training_dates']):raise ValueError('storm OOF archive leakage')
++            d.loc[g.index,'training_threshold_hours']=ft['threshold_hours'];d.loc[g.index,'model_training_tail_policy']=ft['tail_policy'];d.loc[g.index,'fit_model_key']=f"model_fold{int(f)}_{fm['block']}"
++    else:raise ValueError('true holdout protocol not implemented in R03; do not relabel')
++    d['prediction_source']=prediction_source;d['target_scale']=model['target_scale'];d['y']=target(d,model['target']);d['squared_error_log']=(d.y-d.prediction_eta)**2
++    for key in ['run_id','purpose','input_version']:d[key]=model['metadata'].get(key)
++    return d[[ID,'run_id','purpose','input_version','window_list','window_count','was_in_this_fit','tail_excluded_from_fit','model_fold','fit_model_key','model_training_tail_policy','training_threshold_hours','prediction_source','target_scale','y','prediction_eta','squared_error_log']]
++def figure4_data(model_file,run_id,reference,grid,allow_smoke=False):
++    m=require_result(model_file,run_id,allow_smoke);return reference_curve(reference,m,'gust_0h',grid)
++def figure7_data(model_file,run_id,reference,driver,grid,allow_smoke=False):
++    m=require_result(model_file,run_id,allow_smoke);curve,meta=reference_curve(reference,m,driver,grid)
++    meta['exponentiated_grid_max_min_ratio']=float(np.exp(curve.mean_eta.max()-curve.mean_eta.min()));return curve,meta
++def physical_gust_terms(model,pressure):
++    p=dict(zip(model['columns'],model['parameters']));q=model['preprocessor'];s=q['sd']['gust_0h'];mu=q['mean']['gust_0h'];zp=(pressure-q['mean']['pressure_msl_0h'])/q['sd']['pressure_msl_0h']
++    return {'physical_linear_gust':(p['zG']+p['zG_zPressure']*zp)/s-2*p['zG2']*mu/s**2,'physical_quadratic_gust':p['zG2']/s**2,'pressure_physical':pressure,'source':'single full fit and its own scaler','cross_period_independence_assumed':False,'CV_inverse_variance_interval':None}
+--- /dev/null
++++ b/paper_revision_work_v2/R03/src/producer.py
+@@ -0,0 +1,72 @@
++"""Explicit R03 production entry: calculation separated from file publication."""
++import json,hashlib
++from pathlib import Path
++import pandas as pd
++import numpy as np
++from contracts import *
++ROOT=Path(__file__).resolve().parents[1];WORK=ROOT.parent
++def sha(p):
++    with Path(p).open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
++def read(p):return json.loads(Path(p).read_text(encoding='utf-8'))
++def code_identity():
++    files=[ROOT/'cli.py',*sorted((ROOT/'src').glob('*.py'))]
++    return config_hash({p.relative_to(ROOT).as_posix():sha(p) for p in files})
++def clean(x):
++    if isinstance(x,dict):return {str(k):clean(v) for k,v in x.items()}
++    if isinstance(x,(list,tuple)):return [clean(v) for v in x]
++    if isinstance(x,np.generic):return clean(x.item())
++    if isinstance(x,float) and not np.isfinite(x):return None
++    return x
++def save_json(path,obj,output_root):
++    p=Path(path).resolve();out=Path(output_root).resolve()
++    if not out.is_relative_to(WORK.resolve()) or not p.is_relative_to(out):raise ValueError('write outside declared revision output root')
++    p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(clean(obj),ensure_ascii=False,indent=2,allow_nan=False),encoding='utf-8')
++def load_events(config):
++    mp=Path(config['input_manifest']);expected=config['input_manifest_sha256']
++    if sha(mp)!=expected:raise ValueError('R02 manifest identity changed')
++    m=read(mp)
++    if m['run_id']!=config['input_version']:raise ValueError('wrong input version')
++    p=Path(m['event_table']['path'])
++    if sha(p)!=m['event_table']['sha256']:raise ValueError('R02 table hash mismatch')
++    d=pd.read_parquet(p)
++    if len(d)!=m['event_count'] or not d[ID].is_unique or not d.input_version.eq('R02_20260905').all():raise ValueError('bad event identity/version')
++    return d,m
++def step0_build_sample(config):
++    events,m=load_events(config)
++    return events.loc[events.candidate_main_E0|events.candidate_main_R0c].copy(),m
++def step2_build_folds(base,config):
++    return global_date_folds(base,config['n_splits'])
++def run_oof(main_sample,mapping,group,target_name,config):
++    d=attach_folds(main_sample,mapping);groupmask=d.cause_group_event.eq('weather_natural') if group=='weather' else pd.Series(True,index=d.index)
++    evaluation=d.loc[groupmask].copy();expected=evaluation[[ID,'fold']].copy();expected['y']=target(evaluation,target_name)
++    blocks=['control','G'] if target_name=='E0' else ['control','G','K','GK']
++    collected={b:[] for b in blocks};archives=[];fold_records=[]
++    for f in range(config['n_splits']):
++        trainmain=d.loc[d.fold.ne(f)].copy();valid=evaluation.loc[evaluation.fold.eq(f)].copy()
++        if not len(valid):raise ValueError('empty evaluation fold')
++        train,tail=training_population(trainmain,group,target_name,config['training_tail'])
++        if set(train.new_date_utc)&set(valid.new_date_utc):raise ValueError('date group leakage')
++        prep=fit_preprocessor(train,target_name)
++        fold_records.append({'fold':f,'training':tail,'evaluation_n':len(valid),'evaluation_ids_sha256':identity(valid[ID]),'scaler_sha256':config_hash(prep),'training_mean_target':float(target(train,target_name).mean())})
++        for block in blocks:
++            meta={'run_id':config['run_id'],'purpose':config['purpose'],'config_sha256':config_hash(config),'code_identity':code_identity(),'input_version':config['input_version'],'group':group,'fold':f,'tail':tail,'evaluation_ids_sha256':identity(valid[ID]),'evaluation_n':len(valid)}
++            model=fit_ols(train,prep,block,meta);yp=predict_eta(valid,model);archives.append(model)
++            pred=valid[[ID,'fold','new_date_utc','LAD21CD']].copy();pred['y']=target(valid,target_name);pred['prediction_eta']=yp;pred['training_mean_baseline']=float(target(train,target_name).mean());pred['prediction_source']='OOF_date_group_diagnostic';pred['target_scale']=model['target_scale'];pred['run_id']=config['run_id'];pred['purpose']=config['purpose']
++            collected[block].append(pred)
++    frames={b:pd.concat(v,ignore_index=True) for b,v in collected.items()};metrics={b:score_oof(p,expected) for b,p in frames.items()}
++    return {'predictions':frames,'models':archives,'fold_records':fold_records,'metrics':metrics,'contributions':paired_contributions(metrics,target_name),'expected':expected}
++def publish_oof(result,output_root):
++    out=Path(output_root).resolve()
++    if not out.is_relative_to(WORK.resolve()):raise ValueError('old output directory forbidden')
++    out.mkdir(parents=True,exist_ok=True)
++    for b,p in result['predictions'].items():p.to_csv(out/f'oof_{b}.csv',index=False)
++    for model in result['models']:
++        save_json(out/f"model_fold{model['metadata']['fold']}_{model['block']}.json",model,out)
++    save_json(out/'metrics.json',result['metrics'],out);save_json(out/'contributions.json',result['contributions'],out);save_json(out/'fold_training.json',result['fold_records'],out)
++def require_result(path,run_id,allow_smoke=False):
++    p=Path(path)
++    if not p.exists():raise FileNotFoundError('No declared new artifact; H0 fallback and silent fitting forbidden')
++    model=read(p)
++    if model.get('schema')!='R03_portable_linear_v1' or model['metadata']['run_id']!=run_id:raise ValueError('artifact version/schema mismatch')
++    if model['metadata']['purpose']=='non_inferential_smoke' and not allow_smoke:raise ValueError('smoke artifact cannot supply a publication figure')
++    return model
+--- /dev/null
++++ b/paper_revision_work_v2/R03/src/retained.py
+@@ -0,0 +1,43 @@
++"""Versioned data producers for retained figures and descriptive period comparisons."""
++import numpy as np
++import pandas as pd
++from contracts import *
++from producer import ROOT,read,sha,require_result
++from prediction import regional_reference,physical_gust_terms
++from diagnostics import covariance_producer
++
++def figure6_data(model_path,run_id,reference,all_events,allow_smoke=False):
++    model=require_result(model_path,run_id,allow_smoke)
++    manifest=read(ROOT/'frozen/REFERENCE_DATA_MANIFEST.json')
++    source=next(x for x in manifest if x['original_path'].endswith('population_lad_long.csv'))
++    if sha(source['frozen_path'])!=source['sha256']:raise ValueError('frozen population copy changed')
++    p=pd.read_csv(source['frozen_path']).rename(columns={'LAD23CD':'LAD21CD','year':'new_year'})
++    if p.duplicated(['LAD21CD','new_year']).any():raise ValueError('population duplicate keys')
++    cols=['LAD21CD','urban_binary','income_deprivation_rate','deprivation_gap_pct','morans_i','regional_proxy_flag']
++    regional=all_events[cols].dropna(subset=['LAD21CD']).drop_duplicates()
++    if regional.LAD21CD.duplicated().any():raise ValueError('regional static fields inconsistent')
++    grid=regional.merge(p[['LAD21CD','new_year','population']],on='LAD21CD',validate='one_to_many');grid['log_population']=np.log(grid.population.where(grid.population.gt(0)))
++    cal=reference.groupby(['new_year','new_month']).size().rename('n').reset_index();cal['weight']=cal.n/cal.n.sum()
++    result=regional_reference(grid,cal,model);result=result.merge(regional[['LAD21CD','regional_proxy_flag']],on='LAD21CD',validate='one_to_one')
++    return result,{'source_run_id':run_id,'reference_population_sha256':identity(reference[ID]),'calendar_weights':cal.to_dict('records'),'scaler_sha256':config_hash(model['preprocessor']),'order':'physical weather/log-C center -> complete calendar designs -> weighted mean eta -> exp','population_copy_sha256':source['sha256'],'geography':'LAD21 static / same-code LAD23 population; explicit compatibility unresolved','map_geometry_rendering':'not performed in R03'}
++
++def period_comparison(events,target_name,metadata,pressure_physical):
++    rows=[];models=[]
++    for period in ['development','later']:
++        d=events.loc[events.new_period.eq(period)].copy()
++        if not len(d):raise ValueError('empty period; no invented coefficients')
++        prep=fit_preprocessor(d,target_name);block='G' if target_name=='E0' else 'GK'
++        x=design(d,prep,block);rank=int(np.linalg.matrix_rank(x.to_numpy()))
++        if rank<len(x.columns):
++            rows.append({'period':period,'target':target_name,'n':len(d),'rank':rank,'columns':len(x.columns),'status':'blocked_calendar_design_rank_deficient','physical_linear_gust':None,'physical_quadratic_gust':None,'failure_reason':'additive year/month coding not full rank in this period; no silent term dropping or H0 fallback','nominal_independent_CV_interval':None})
++            continue
++        _,period_tail=training_population(d,'main',target_name,'all_valid')
++        model=fit_ols(d,prep,block,dict(metadata,period=period,fit_type='period_full_sample_descriptive_all_valid',tail=period_tail))
++        cov=covariance_producer(d,model);params=physical_gust_terms(model,pressure_physical)
++        q=prep;s=q['sd']['gust_0h'];mu=q['mean']['gust_0h'];zp=(pressure_physical-q['mean']['pressure_msl_0h'])/q['sd']['pressure_msl_0h']
++        jac=np.zeros((2,len(model['columns'])));ix={c:i for i,c in enumerate(model['columns'])}
++        jac[0,ix['zG']]=1/s;jac[0,ix['zG2']]=-2*mu/s**2;jac[0,ix['zG_zPressure']]=zp/s;jac[1,ix['zG2']]=1/s**2
++        physical_cov=jac@np.asarray(cov['LAD_CR1'])@jac.T
++        rows.append({'period':period,'target':target_name,'n':len(d),'rank':model['rank'],'columns':len(model['columns']),'status':'descriptive_full_fit_available',**params,'physical_linear_SE':float(np.sqrt(physical_cov[0,0])) if physical_cov[0,0]>=0 else None,'physical_quadratic_SE':float(np.sqrt(physical_cov[1,1])) if physical_cov[1,1]>=0 else None,'reference_distribution':'not converted into a cross-period hypothesis test','nominal_independent_CV_interval':None})
++        model['LAD_CR1_covariance']=cov['LAD_CR1'];model['physical_gust_covariance']=physical_cov.tolist();models.append(model)
++    return pd.DataFrame(rows),models
+--- /dev/null
++++ b/paper_revision_work_v2/R03/src/run_pipeline.py
+@@ -0,0 +1,65 @@
++"""Minimal smoke and explicitly invoked later formal producer use the same functions."""
++import json
++from pathlib import Path
++import numpy as np
++import pandas as pd
++from contracts import *
++from producer import *
++from prediction import reference_curve,minimum_interface,storm_event_predictions,regional_reference,physical_gust_terms,figure4_data,figure7_data
++from diagnostics import vif_table,covariance_producer,stage_composition,stage_closure
++from retained import figure6_data,period_comparison
++
++def select_smoke(base,foldmap,n_per_cell):
++    d=attach_folds(base,foldmap)
++    # Outcome-blind selection, with every observed calendar year/month/fold represented.
++    d['_pick']=d[ID].map(lambda x:__import__('hashlib').sha256(('R03_smoke_v1:'+x).encode()).hexdigest())
++    return d.sort_values('_pick').groupby(['new_year','new_month','fold'],sort=True).head(n_per_cell).drop(columns=['_pick','fold']).sort_values(ID).reset_index(drop=True)
++def run(config,formal=False):
++    if formal and config['purpose']=='non_inferential_smoke':raise ValueError('smoke cannot be relabelled B1')
++    output=Path(config['output_root']).resolve()
++    if not output.is_relative_to(WORK) or output.exists():raise ValueError('output must be new and within revision work root')
++    base,em=step0_build_sample(config)
++    if sha(config['fold_map'])!=config['fold_map_sha256']:raise ValueError('fold map changed')
++    mapping=pd.read_csv(config['fold_map'],dtype={'date_utc':str})
++    if identity(base[ID])!=config['fold_base_ids_sha256']:raise ValueError('fold base membership changed')
++    sample=base if formal else select_smoke(base,mapping,config['smoke_rows_per_year_month_fold'])
++    output.mkdir(parents=True)
++    save_json(output/'config.json',config,output);sample[[ID,'new_date_utc','new_year','new_month','LAD21CD']].to_csv(output/'selected_members.csv',index=False)
++    windows=read(ROOT/'configs/storm_windows.json');runs=[];full_models={};period_count=0;blocked_products=[]
++    for target_name in config['targets']:
++        targetmain=sample.loc[sample['candidate_main_'+target_name]].copy()
++        for group in config['groups']:
++            dest=output/f'{group}_{target_name}';result=run_oof(targetmain,mapping,group,target_name,config);publish_oof(result,dest)
++            training,tail=training_population(targetmain,group,target_name,'all_valid')
++            prep=fit_preprocessor(training,target_name);block='G' if target_name=='E0' else 'GK'
++            model=fit_ols(training,prep,block,{'run_id':config['run_id'],'purpose':config['purpose'],'input_version':config['input_version'],'config_sha256':config_hash(config),'code_identity':code_identity(),'group':group,'fit_type':'all_valid_full_sample_descriptive','tail':tail})
++            file=dest/'full_model.json';save_json(file,model,output);reloaded=read(file)
++            assert np.array_equal(predict_eta(training,model),predict_eta(training,reloaded))
++            x=design(training,prep,block);vif,vm=vif_table(x);vif.to_csv(dest/'VIF.csv',index=False);save_json(dest/'VIF_manifest.json',vm,output)
++            cov=covariance_producer(training,model);save_json(dest/'cluster_covariance.json',cov,output)
++            grid=np.linspace(*np.quantile(training.gust_0h,[.01,.99],method='linear'),50)
++            curve,meta=figure4_data(file,config['run_id'],training,grid,allow_smoke=not formal);curve.to_csv(dest/'figure4_curve_data.csv',index=False);save_json(dest/'figure4_reference.json',meta,output)
++            gust_curve,gust_meta=figure7_data(file,config['run_id'],training,'gust_0h',grid,allow_smoke=not formal);save_json(dest/'figure7_gust_ratio.json',gust_meta,output)
++            minimum=minimum_interface(model,prep['mean']['pressure_msl_0h'],[float(grid.min()),float(grid.max())]);save_json(dest/'conditional_minimum_no_CI.json',minimum,output)
++            storm=storm_event_predictions(training,model,windows);storm.to_csv(dest/'figure9_descriptive_events.csv',index=False)
++            fold_models={m['metadata']['fold']:m for m in result['models'] if m['block']==block}
++            storm_oof=storm_event_predictions(training,model,windows,prediction_source='OOF_date_group_diagnostic',oof=result['predictions'][block],oof_models=fold_models);storm_oof.to_csv(dest/'figure9_OOF_diagnostic_events.csv',index=False)
++            mapdata,mapmeta=figure6_data(file,config['run_id'],training,base,allow_smoke=not formal);mapdata.to_csv(dest/'figure6_regional_reference.csv',index=False);save_json(dest/'figure6_reference.json',mapmeta,output)
++            full_models[(group,target_name)]=model
++            runs.append({'target':target_name,'group':group,'sample_n':len(training),'date_groups':training.new_date_utc.nunique(),'LAD_groups':training.LAD21CD.nunique(),'columns':len(x.columns),'rank':vm['design_rank'],'OOF_fit_count':len(result['models']),'full_fit_count':1,'archive_prediction_exact':True,'non_inferential_smoke':not formal})
++            if target_name=='R0c':
++                tab,pool,stage=stage_composition(training);tab.to_csv(dest/'stage_composition.csv',index=False);pool.to_csv(dest/'stage_pooled.csv',index=False);save_json(dest/'stage_manifest.json',stage,output)
++                customer_grid=np.expm1(np.linspace(*np.quantile(np.log1p(training[C]),[.01,.99],method='linear'),50));cc,cm=figure7_data(file,config['run_id'],training,C,customer_grid,allow_smoke=not formal);cc.to_csv(dest/'figure7_customer_curve.csv',index=False);save_json(dest/'figure7_reference.json',cm,output)
++                stagecoef,stage_models,single_bins,stage_info=stage_closure(training,model['metadata']);stagecoef.to_csv(dest/'step27_stage_coefficients.csv',index=False)
++                for i,stage_model in enumerate(stage_models):save_json(dest/f'step27_model_{i}.json',stage_model,output)
++                if single_bins is not None:single_bins.to_csv(dest/'step27_single_stage_bins.csv',index=False)
++                save_json(dest/'step27_manifest.json',stage_info,output)
++            if group=='main':
++                periods,period_models=period_comparison(training,target_name,model['metadata'],prep['mean']['pressure_msl_0h']);periods.to_csv(dest/'figure10_period_physical_terms.csv',index=False)
++                period_count+=len(period_models)
++                for row in periods.loc[periods.status.str.startswith('blocked')].to_dict('records'):blocked_products.append({'product':f'figure10_{target_name}',**row})
++                for pm in period_models:save_json(dest/f"period_{pm['metadata']['period']}_model.json",pm,output)
++    summary={'run_id':config['run_id'],'purpose':config['purpose'],'input_event_sha256':em['event_table']['sha256'],'config_sha256':config_hash(config),'code_identity':code_identity(),'selected_n':len(sample),'selected_dates':sample.new_date_utc.nunique(),'fold_map_sha256':config['fold_map_sha256'],'runs':runs,'formal_B1':formal,'OOF_fit_count':sum(x['OOF_fit_count'] for x in runs),'full_fit_count':sum(x['full_fit_count'] for x in runs),'stage_diagnostic_fit_count':2*sum(x['target']=='R0c' for x in runs),'period_fit_count':period_count,'isolated_blocked_products':blocked_products,'intervals_generated':0,'bootstrap_runs':0,'Word_modified':False}
++    save_json(output/'RUN_MANIFEST.json',summary,output)
++    assert sha(em['event_table']['path'])==em['event_table']['sha256']
++    print(json.dumps(clean(summary),ensure_ascii=False),flush=True)
+--- /dev/null
++++ b/paper_revision_work_v2/R03/src/test_pipeline.py
+@@ -0,0 +1,126 @@
++"""Tests exercise known R03 errors, not old scientific conclusions."""
++import unittest,json,tempfile,importlib.util,os
++from pathlib import Path
++from unittest.mock import patch
++import numpy as np
++import pandas as pd
++from contracts import *
++from producer import *
++from prediction import *
++from diagnostics import *
++
++def synthetic(n=300):
++    r=np.random.default_rng(20260905);d=pd.DataFrame({ID:[f'test_{i}' for i in range(n)],'new_date_utc':[f'2022-01-{i%25+1:02}' for i in range(n)],'new_year':2022,'new_month':1,'LAD21CD':['L'+str(i%17) for i in range(n)],'cause_group_event':np.where(np.arange(n)%3==0,'weather_natural','technical_asset'),'stage_row_count':r.integers(1,9,n)})
++    for c in WX:d[c]=r.normal(10,2,n)
++    d['pressure_msl_0h']=r.normal(1010,8,n);d['precipitation_24h_sum']=r.uniform(0,30,n)
++    for c in REGION:d[c]=r.normal(0,1,n)
++    d['urban_binary']=r.integers(0,2,n);d[C]=r.integers(0,1000,n);d[D]=np.exp(r.normal(1,1,n));d['new_time_utc']=pd.to_datetime(d.new_date_utc,utc=True)
++    return d
++
++class PipelineTests(unittest.TestCase):
++    def test_input_real_manifest_and_no_fallback(self):
++        config=read(ROOT/'configs/R04_primary.json');d,m=load_events(config);self.assertEqual(len(d),135025)
++        bad=dict(config,input_manifest=str(ROOT/'checks/absent_manifest.json'))
++        with self.assertRaises(FileNotFoundError):load_events(bad)
++        bad=dict(config,input_manifest_sha256='incorrect')
++        with self.assertRaises(ValueError):load_events(bad)
++    def test_shared_dates_and_shuffle(self):
++        d=synthetic();a=global_date_folds(d);b=global_date_folds(d.sample(frac=1,random_state=2));pd.testing.assert_frame_equal(a,b)
++        main=attach_folds(d,a);weather=attach_folds(d[d.cause_group_event.eq('weather_natural')],a)
++        self.assertTrue(weather.fold.eq(weather[ID].map(main.set_index(ID).fold)).all());self.assertTrue(main.groupby('new_date_utc').fold.nunique().eq(1).all())
++    def test_test_tail_does_not_leak_training_or_scaler(self):
++        d=synthetic();d=attach_folds(d,global_date_folds(d));trainmain=d[d.fold.ne(0)];test=d[d.fold.eq(0)].copy()
++        tr,meta=training_population(trainmain,'main','R0c','main_train_p99');prep=fit_preprocessor(tr,'R0c');model=fit_ols(tr,prep,'GK',{'tail':meta})
++        test[D]=1e12;test['gust_0h']=1e6;tr2,meta2=training_population(trainmain,'main','R0c','main_train_p99')
++        self.assertEqual(meta,meta2);self.assertEqual(prep,fit_preprocessor(tr2,'R0c'));self.assertEqual(len(predict_eta(test,model)),len(test))
++        wt,wmeta=training_population(trainmain,'weather','R0c','main_train_p99');self.assertEqual(meta['threshold_hours'],wmeta['threshold_hours'])
++    def test_oof_complete_unique_and_paired_blocks(self):
++        d=synthetic();mapping=global_date_folds(d);cfg={'n_splits':5,'training_tail':'all_valid','run_id':'synthetic','purpose':'non_inferential_smoke','input_version':'synthetic'}
++        r=run_oof(d,mapping,'main','R0c',cfg)
++        for frame in r['predictions'].values():self.assertEqual(len(frame),len(d));self.assertTrue(frame[ID].is_unique)
++        p=r['predictions']['GK'];expected=r['expected']
++        with self.assertRaises(ValueError):score_oof(p.iloc[1:],expected)
++        with self.assertRaises(ValueError):score_oof(pd.concat([p,p.iloc[:1]]),expected)
++        self.assertEqual(set(r['contributions']),{'gust_from_control','customers_from_control','gust_given_customers','customers_given_gust'})
++    def test_pooled_hand_calculation_negative_constant(self):
++        a=score([1,2,3],[1,2,2]);self.assertEqual(a['SSE'],1);self.assertEqual(a['SST'],2);self.assertEqual(a['r2'],.5)
++        self.assertLess(score([1,2,3],[10,10,10])['r2'],0);self.assertIsNone(score([2,2],[1,3])['r2'])
++    def test_eta_zero_double_log_removed(self):
++        d=synthetic();prep=fit_preprocessor(d,'E0');m=fit_ols(d,prep,'G',{})
++        m['parameters']=[0.]*len(m['parameters']);eta=predict_eta(d,m)
++        self.assertTrue(np.array_equal(eta,np.zeros(len(d))));self.assertEqual(aggregate_eta([0])['mean_eta'],0)
++        self.assertNotEqual(aggregate_eta([0])['mean_eta'],float(np.log(2)))
++    def test_raw_scenario_square_interaction_and_reference_mean(self):
++        d=synthetic();prep=fit_preprocessor(d,'R0c');m=fit_ols(d,prep,'GK',{})
++        scenario=set_scenario(d,m,{'customers_at_training_log_center':True,'gust_0h':prep['mean']['gust_0h'],'pressure_msl_0h':prep['mean']['pressure_msl_0h']});x=design(scenario,prep,'GK')
++        self.assertTrue(np.allclose(x.zK2,0,atol=1e-20));self.assertTrue(np.allclose(x.zG_zPressure,0,atol=1e-20))
++        original=design(d,prep,'GK');self.assertGreater(original.zK2.mean(),.9)
++        self.assertAlmostEqual(predict_eta(d,m).mean(),float(original.mean().to_numpy()@np.asarray(m['parameters'])))
++        a=aggregate_eta([0.,2.]);self.assertNotEqual(a['exp_mean_eta'],a['mean_exp_eta'])
++    def test_archive_roundtrip_and_unknown_categories(self):
++        d=synthetic();prep=fit_preprocessor(d,'R0c');m=fit_ols(d,prep,'GK',{});reloaded=json.loads(json.dumps(m));self.assertTrue(np.array_equal(predict_eta(d,m),predict_eta(d,reloaded)))
++        d.new_year=2099
++        with self.assertRaises(ValueError):predict_eta(d,m)
++    def test_no_new_result_no_old_figure_or_interval(self):
++        with self.assertRaises(FileNotFoundError):require_result(ROOT/'checks/missing_model.json','R04')
++        d=synthetic();p=fit_preprocessor(d,'E0');m=fit_ols(d,p,'G',{'run_id':'smoke','purpose':'non_inferential_smoke'})
++        path=ROOT/'checks/synthetic_model.json';save_json(path,m,ROOT)
++        with self.assertRaises(ValueError):require_result(path,'smoke')
++        mi=minimum_interface(m,1010,[0,50]);self.assertIsNone(mi['interval'])
++    def test_cluster_covariance_against_frozen_statsmodels(self):
++        import statsmodels.api as sm
++        from statsmodels.stats.sandwich_covariance import cov_cluster,cov_cluster_2groups
++        d=synthetic();p=fit_preprocessor(d,'R0c');m=fit_ols(d,p,'GK',{});x=design(d,p,'GK');fit=sm.OLS(target(d,'R0c'),x).fit();cov=covariance_producer(d,m)
++        self.assertTrue(np.allclose(cov['LAD_CR1'],cov_cluster(fit,d.LAD21CD),rtol=1e-7,atol=1e-9))
++        groups=np.column_stack([pd.factorize(d.LAD21CD)[0],pd.factorize(d.new_date_utc)[0]])
++        self.assertTrue(np.allclose(cov['LAD_date_two_way_CR1'],cov_cluster_2groups(fit,groups)[0],rtol=1e-7,atol=1e-9))
++    def test_vif_and_stage_producers(self):
++        from statsmodels.stats.outliers_influence import variance_inflation_factor
++        d=synthetic();p=fit_preprocessor(d,'R0c');x=design(d,p,'GK');v,meta=vif_table(x)
++        expected=[variance_inflation_factor(x.to_numpy(),i) for i in range(1,x.shape[1])]
++        self.assertTrue(np.allclose(v.VIF,expected,rtol=1e-7));self.assertEqual(meta['design_rank'],x.shape[1])
++        tab,pool,info=stage_composition(d);self.assertEqual(tab['count'].sum(),len(d));self.assertEqual(pool['count'].sum(),len(d))
++    def test_storm_unique_union_with_mixed_fit_identity(self):
++        d=synthetic();p=fit_preprocessor(d,'E0');m=fit_ols(d.iloc[:200],p,'G',{'tail':{}})
++        windows={'A':{'start':'2022-01-01Z'.replace('01Z','01T00:00Z'),'end_exclusive':'2022-01-05T00:00Z'},'B':{'start':'2022-01-03T00:00Z','end_exclusive':'2022-01-08T00:00Z'}}
++        result=storm_event_predictions(d,m,windows);self.assertTrue(result[ID].is_unique);self.assertTrue(result.window_count.gt(1).any());self.assertTrue((~result.was_in_this_fit).any())
++        self.assertTrue(np.allclose(result.y,np.log1p(d.set_index(ID).loc[result[ID],C])))
++    def test_old_output_path_rejected(self):
++        with self.assertRaises(ValueError):save_json(WORK.parent/'results/forbidden.json',{},WORK.parent/'results')
++    def test_regional_reference_common_calendar(self):
++        d=synthetic();p=fit_preprocessor(d,'R0c');m=fit_ols(d,p,'GK',{})
++        reg=d.drop_duplicates('LAD21CD')[['LAD21CD','new_year',*REGION]];cal=pd.DataFrame({'new_year':[2022],'new_month':[1],'weight':[1.]})
++        out=regional_reference(reg,cal,m);self.assertEqual(len(out),17);self.assertTrue(out.status.eq('descriptive_common_calendar').all())
++    def test_stage_closure_raw_log_archive(self):
++        d=synthetic();table,models,bins,info=stage_closure(d,{'purpose':'non_inferential_smoke'})
++        self.assertEqual(info['stage_transform'],'natural log raw; not standardized')
++        augmented=models[1];x=design(d,augmented['preprocessor'],'GK');self.assertTrue(np.array_equal(x.log_n_stages,np.log(d.stage_row_count)))
++        self.assertTrue(np.array_equal(predict_eta(d,augmented),predict_eta(d,json.loads(json.dumps(augmented)))))
++    def test_calendar_period_rank_failure_not_silent_fit(self):
++        from retained import period_comparison
++        d=synthetic();d['new_period']=np.where(np.arange(len(d))<100,'development','later')
++        d['new_year']=2022;d['new_month']=1
++        later=d.new_period.eq('later');d.loc[later,'new_year']=np.where(np.arange(later.sum())%2==0,2023,2024);d.loc[later,'new_month']=np.where(d.loc[later,'new_year'].eq(2023),10,2)
++        rows,models=period_comparison(d,'E0',{},1010)
++        self.assertEqual(rows.loc[rows.period.eq('later'),'status'].iloc[0],'blocked_calendar_design_rank_deficient');self.assertEqual(len(models),1)
++    def test_fresh_import_has_no_writes_or_legacy_modules(self):
++        import subprocess,sys
++        code='''import sys,os,platform
++from pathlib import Path
++r=Path(sys.argv[1]);sys.path.insert(0,str(r/'runtime/site-packages'));sys.path.insert(0,str(r/'src'))
++# Windows stdlib platform discovery may read `cmd /c ver`; complete that
++# OS metadata probe before guarding research/numerical module imports.
++platform.uname()
++def audit(event,args):
++ if event=='open':
++  mode,flags=args[1],args[2]
++  if (isinstance(mode,str) and any(c in mode for c in 'wax+')) or (isinstance(flags,int) and flags&(os.O_WRONLY|os.O_RDWR|os.O_CREAT|os.O_TRUNC|os.O_APPEND)):raise RuntimeError('write on import')
++ if event in {'os.mkdir','os.remove','os.rename','socket.connect','subprocess.Popen'}:raise RuntimeError('side effect on import')
++sys.addaudithook(audit)
++import producer,contracts,prediction,diagnostics,retained,run_pipeline
++paths=[Path(m.__file__).resolve() for m in list(sys.modules.values()) if getattr(m,'__file__',None) and not str(m.__file__).startswith('<')]
++assert all(p.is_relative_to(r) for p in paths)
++print('pure isolated imports passed')
++'''
++        out=subprocess.run([sys.executable,'-I','-S','-B','-c',code,str(ROOT)],capture_output=True,text=True)
++        self.assertEqual(out.returncode,0,out.stderr)

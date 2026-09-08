@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "files_verified": 410,
+  "zip": {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\RETURN_PACKAGE_R05.zip",
+    "bytes": 20692440,
+    "sha256": "f2fb32f5d6da3bb9eb2e0661df81b7d25ad1facca0928232f0dd0ea34525b37f"
+  },
+  "full_latest_ledger": "MR-v1.5-R05",
+  "manifest_relative": true,
+  "no_V_W": true
+}

@@ -1,0 +1,5 @@
+field,new_finite,old_finite,both_finite_changed_gt_1e6,old_missing_new_finite,old_finite_new_missing,earliest_v3_both_finite_changed_gt_1e6,earliest_v3_missing_new_finite,earliest_v3_finite_new_missing,max_abs_vs_earliest_v3
+gust_0h,121178,121313,10820,9,144,0,0,0,7.105427357601002e-15
+precipitation_24h_sum,121178,121313,6477,9,144,0,0,0,7.105427357601002e-15
+temperature_0h,121178,121313,10964,9,144,0,0,0,7.105427357601002e-15
+pressure_msl_0h,121178,121313,10720,9,144,0,0,0,1.1368683772161603e-13

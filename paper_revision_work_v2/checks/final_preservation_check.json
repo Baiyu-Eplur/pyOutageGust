@@ -1,0 +1,11 @@
+{
+  "historical_files_checked": 549,
+  "historical_changes": [],
+  "snapshot_sources_checked": 91,
+  "snapshot_mismatches": [],
+  "large_input_size_mtime_changed": [],
+  "large_input_hash_policy": "R00 SHA once, final size/mtime identity check only",
+  "read_weather_caches_checked": 14,
+  "weather_cache_changes": [],
+  "workbook_changes": []
+}

@@ -1,0 +1,381 @@
+{
+  "gust_0h": {
+    "display_name": "Gust speed (m/s)",
+    "n_full": 60453,
+    "n_fit_subsample": 5000,
+    "full_sample_mean": 9.910025974892664,
+    "full_sample_std": 5.279630326131117,
+    "full_sample_min": 0.5,
+    "full_sample_max": 39.400001525878906,
+    "full_sample_skew": 1.2392636267775226,
+    "top3_candidates": [
+      {
+        "name": "mielke",
+        "score": 0.0008618196008312902,
+        "loc": 0.7694588631297764,
+        "scale": 10.459825210479252,
+        "arg": [
+          2.081878770643283,
+          3.7632509291614364
+        ]
+      },
+      {
+        "name": "betaprime",
+        "score": 0.0008950822578930912,
+        "loc": 0.4644467059896784,
+        "scale": 66.03474326726752,
+        "arg": [
+          3.7727533460426734,
+          27.380264669154542
+        ]
+      },
+      {
+        "name": "gausshyper",
+        "score": 0.0008958857340364321,
+        "loc": 0.702039694886293,
+        "scale": 2123.483389231197,
+        "arg": [
+          3.1123877568447846,
+          536.7164890067525,
+          -569.29602840545,
+          -0.31352066286100855
+        ]
+      }
+    ],
+    "best_distribution": "mielke",
+    "best_params": [
+      2.081878770643283,
+      3.7632509291614364,
+      0.7694588631297764,
+      10.459825210479252
+    ],
+    "best_score_rss": 0.0008618196008312902
+  },
+  "precipitation_24h_sum": {
+    "display_name": "24h cumulative precipitation (mm)",
+    "n_full": 60453,
+    "n_fit_subsample": 5000,
+    "full_sample_mean": 3.2509404141777254,
+    "full_sample_std": 5.2594835271754565,
+    "full_sample_min": 0.0,
+    "full_sample_max": 47.80000305175781,
+    "full_sample_skew": 2.563685610069776,
+    "top3_candidates": [
+      {
+        "name": "alpha",
+        "score": 0.04300688449348846,
+        "loc": -0.3394843705579733,
+        "scale": 0.5584662579412876,
+        "arg": [
+          4.892874738945247e-08
+        ]
+      },
+      {
+        "name": "invgauss",
+        "score": 0.048144459605552546,
+        "loc": -0.024519131459242824,
+        "scale": 0.07914869865225085,
+        "arg": [
+          40.86634445129121
+        ]
+      },
+      {
+        "name": "genpareto",
+        "score": 0.06284176346343,
+        "loc": -2.3548526781050685e-09,
+        "scale": 0.08688927765392443,
+        "arg": [
+          1.9471338304550359
+        ]
+      }
+    ],
+    "best_distribution": "alpha",
+    "best_params": [
+      4.892874738945247e-08,
+      -0.3394843705579733,
+      0.5584662579412876
+    ],
+    "best_score_rss": 0.04300688449348846
+  },
+  "temperature_0h": {
+    "display_name": "Temperature (°C)",
+    "n_full": 60453,
+    "n_fit_subsample": 5000,
+    "full_sample_mean": 11.883434955013055,
+    "full_sample_std": 6.098768971141047,
+    "full_sample_min": -9.25,
+    "full_sample_max": 38.900001525878906,
+    "full_sample_skew": 0.30711437861635854,
+    "top3_candidates": [
+      {
+        "name": "alpha",
+        "score": 0.0006932535517525044,
+        "loc": -76.86718249579559,
+        "scale": 1304.2348598610297,
+        "arg": [
+          14.77232784432671
+        ]
+      },
+      {
+        "name": "genextreme",
+        "score": 0.0007014879210645918,
+        "loc": 9.43710294489114,
+        "scale": 5.6780568080745155,
+        "arg": [
+          0.16363552533776632
+        ]
+      },
+      {
+        "name": "invgamma",
+        "score": 0.0007049183480454216,
+        "loc": -55.4633436865991,
+        "scale": 8359.7614226757,
+        "arg": [
+          125.1110047610639
+        ]
+      }
+    ],
+    "best_distribution": "alpha",
+    "best_params": [
+      14.77232784432671,
+      -76.86718249579559,
+      1304.2348598610297
+    ],
+    "best_score_rss": 0.0006932535517525044
+  },
+  "pressure_msl_0h": {
+    "display_name": "Mean sea level pressure (hPa)",
+    "n_full": 60453,
+    "n_fit_subsample": 5000,
+    "full_sample_mean": 1012.0744892328787,
+    "full_sample_std": 13.075070865153895,
+    "full_sample_min": 953.5999755859376,
+    "full_sample_max": 1046.0999755859375,
+    "full_sample_skew": -0.6524690010200587,
+    "top3_candidates": [
+      {
+        "name": "weibull_min",
+        "score": 4.835681346555623e-05,
+        "loc": 917.9236032069653,
+        "scale": 99.637113618582,
+        "arg": [
+          8.610150155484074
+        ]
+      },
+      {
+        "name": "powernorm",
+        "score": 5.190644750191305e-05,
+        "loc": 1074.263441094192,
+        "scale": 27.842884348611147,
+        "arg": [
+          47.90040170640397
+        ]
+      },
+      {
+        "name": "johnsonsu",
+        "score": 5.3656046737638264e-05,
+        "loc": 1057.4327958587605,
+        "scale": 30.09035597036626,
+        "arg": [
+          5.0062367855557035,
+          4.25924411959941
+        ]
+      }
+    ],
+    "best_distribution": "weibull_min",
+    "best_params": [
+      8.610150155484074,
+      917.9236032069653,
+      99.637113618582
+    ],
+    "best_score_rss": 4.835681346555623e-05
+  },
+  "log_population": {
+    "display_name": "log population",
+    "n_full": 60453,
+    "n_fit_subsample": 5000,
+    "full_sample_mean": 12.071205235711897,
+    "full_sample_std": 0.4846652841687914,
+    "full_sample_min": 9.069813136839207,
+    "full_sample_max": 13.26866389661907,
+    "full_sample_skew": -0.2887783344682175,
+    "top3_candidates": [
+      {
+        "name": "weibull_min",
+        "score": 1.7871910047114752,
+        "loc": 11.030903454574762,
+        "scale": 1.1746270803446213,
+        "arg": [
+          2.4374823525368767
+        ]
+      },
+      {
+        "name": "pearson3",
+        "score": 1.798616047024109,
+        "loc": 12.071607030381692,
+        "scale": 0.46345096754207293,
+        "arg": [
+          0.6537047328014234
+        ]
+      },
+      {
+        "name": "invgauss",
+        "score": 1.826288171704561,
+        "loc": 6.3392346978565115,
+        "scale": 758.2046283053787,
+        "arg": [
+          0.0075463594023338215
+        ]
+      }
+    ],
+    "best_distribution": "weibull_min",
+    "best_params": [
+      2.4374823525368767,
+      11.030903454574762,
+      1.1746270803446213
+    ],
+    "best_score_rss": 1.7871910047114752
+  },
+  "income_deprivation_rate": {
+    "display_name": "Income deprivation rate",
+    "n_full": 60453,
+    "n_fit_subsample": 5000,
+    "full_sample_mean": 0.10881340462838901,
+    "full_sample_std": 0.03817389483046172,
+    "full_sample_min": 0.053,
+    "full_sample_max": 0.202,
+    "full_sample_skew": 0.4281550243546881,
+    "top3_candidates": [
+      {
+        "name": "triang",
+        "score": 154.61258776364525,
+        "loc": 0.05299999858666027,
+        "scale": 0.15848123568997807,
+        "arg": [
+          2.1946113122250455e-09
+        ]
+      },
+      {
+        "name": "johnsonsb",
+        "score": 160.5901037850295,
+        "loc": 0.05073456705854052,
+        "scale": 0.15508339345631786,
+        "arg": [
+          0.5181644364974115,
+          0.6919680685515606
+        ]
+      },
+      {
+        "name": "gompertz",
+        "score": 162.07150089751994,
+        "loc": 0.05299999958099272,
+        "scale": 0.09246510883038322,
+        "arg": [
+          1.0341814479418439
+        ]
+      }
+    ],
+    "best_distribution": "triang",
+    "best_params": [
+      2.1946113122250455e-09,
+      0.05299999858666027,
+      0.15848123568997807
+    ],
+    "best_score_rss": 154.61258776364525
+  },
+  "deprivation_gap_pct": {
+    "display_name": "Deprivation gap (percentage points)",
+    "n_full": 60453,
+    "n_fit_subsample": 5000,
+    "full_sample_mean": 0.2725297917390369,
+    "full_sample_std": 0.0828514371068296,
+    "full_sample_min": 0.113,
+    "full_sample_max": 0.5249999999999999,
+    "full_sample_skew": 0.4198664666791696,
+    "top3_candidates": [
+      {
+        "name": "foldnorm",
+        "score": 55.37432440199064,
+        "loc": 0.11299999749630116,
+        "scale": 0.08681176135177474,
+        "arg": [
+          1.7815148302047268
+        ]
+      },
+      {
+        "name": "mielke",
+        "score": 55.398466024407476,
+        "loc": 0.10823957492236108,
+        "scale": 0.24757335408779202,
+        "arg": [
+          1.5536166996409146,
+          6.613871535106391
+        ]
+      },
+      {
+        "name": "burr",
+        "score": 55.39876773160159,
+        "loc": 0.10823958076370746,
+        "scale": 0.2475772100008025,
+        "arg": [
+          6.6141302927129075,
+          0.23489284868554416
+        ]
+      }
+    ],
+    "best_distribution": "foldnorm",
+    "best_params": [
+      1.7815148302047268,
+      0.11299999749630116,
+      0.08681176135177474
+    ],
+    "best_score_rss": 55.37432440199064
+  },
+  "morans_i": {
+    "display_name": "Moran's I",
+    "n_full": 60453,
+    "n_fit_subsample": 5000,
+    "full_sample_mean": 0.2794797611367509,
+    "full_sample_std": 0.1668980575004651,
+    "full_sample_min": -0.15,
+    "full_sample_max": 0.7,
+    "full_sample_skew": 0.1113105719388536,
+    "top3_candidates": [
+      {
+        "name": "dgamma",
+        "score": 18.18160564342991,
+        "loc": 0.2549285056346496,
+        "scale": 0.07613225303482728,
+        "arg": [
+          1.8302961736532901
+        ]
+      },
+      {
+        "name": "dweibull",
+        "score": 19.156057604028398,
+        "loc": 0.2653778943118269,
+        "scale": 0.15226454948735524,
+        "arg": [
+          1.4535480778235226
+        ]
+      },
+      {
+        "name": "burr",
+        "score": 19.88621048880798,
+        "loc": -0.17899479518485484,
+        "scale": 0.6154558507070975,
+        "arg": [
+          8.968978781479315,
+          0.2617890080465191
+        ]
+      }
+    ],
+    "best_distribution": "dgamma",
+    "best_params": [
+      1.8302961736532901,
+      0.2549285056346496,
+      0.07613225303482728
+    ],
+    "best_score_rss": 18.18160564342991
+  }
+}

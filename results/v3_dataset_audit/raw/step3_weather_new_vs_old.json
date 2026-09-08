@@ -1,0 +1,14 @@
+{
+  "v3_total_incidents": 135025,
+  "overlap_with_old_master": 62928,
+  "new_incidents_not_in_old_master": 72097,
+  "new_incidents_weather_status_counts": {
+    "matched": 58386,
+    "weather_request_unavailable": 8100,
+    "invalid_time_or_coordinate": 5611
+  },
+  "overlap_incidents_weather_status_counts": {
+    "matched": 62927,
+    "weather_request_unavailable": 1
+  }
+}

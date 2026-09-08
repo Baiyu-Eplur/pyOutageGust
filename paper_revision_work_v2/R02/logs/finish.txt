@@ -1,0 +1,1 @@
+{"event_master": 135025, "numeric_weather": 121178, "candidates": {"main_E0": 60436, "main_R0c": 60436, "weather_E0": 9857, "weather_R0c": 9857}, "v3_only_numeric_complete": 0}

@@ -1,0 +1,194 @@
+[
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\main_E0_development.json",
+    "covariance": "LAD",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 2.4896060530750887e-06
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\main_E0_development.json",
+    "covariance": "date",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 9.66536695264983e-07
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\main_E0_development.json",
+    "covariance": "intersection",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 5.746508214465786e-07
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\main_E0_development.json",
+    "covariance": "two_way",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 2.7793521766532913e-06
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\main_E0_later.json",
+    "covariance": "LAD",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 4.88227301123689e-06
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\main_E0_later.json",
+    "covariance": "date",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": -1.1008727793403464e-16
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\main_E0_later.json",
+    "covariance": "intersection",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 2.1818249828951573e-06
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\main_E0_later.json",
+    "covariance": "two_way",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": -0.0026595636254426506
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\main_R0c_development.json",
+    "covariance": "LAD",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 6.298391436993236e-07
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\main_R0c_development.json",
+    "covariance": "date",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 3.885338728801022e-07
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\main_R0c_development.json",
+    "covariance": "intersection",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 2.4872206176881785e-07
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\main_R0c_development.json",
+    "covariance": "two_way",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 8.808797247926096e-07
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\main_R0c_later.json",
+    "covariance": "LAD",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 1.72498722324617e-06
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\main_R0c_later.json",
+    "covariance": "date",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": -7.581349021969627e-16
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\main_R0c_later.json",
+    "covariance": "intersection",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 1.0099696262494984e-06
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\main_R0c_later.json",
+    "covariance": "two_way",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": -0.00047740797399275527
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\weather_E0_development.json",
+    "covariance": "LAD",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 4.366594220041432e-06
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\weather_E0_development.json",
+    "covariance": "date",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 2.108765445608786e-06
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\weather_E0_development.json",
+    "covariance": "intersection",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 4.544303366642843e-06
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\weather_E0_development.json",
+    "covariance": "two_way",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": -8.573379385463513e-05
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\weather_E0_later.json",
+    "covariance": "LAD",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 1.4283422630932399e-05
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\weather_E0_later.json",
+    "covariance": "date",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 6.0240713549553885e-06
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\weather_E0_later.json",
+    "covariance": "intersection",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 1.3982586054346282e-05
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\weather_E0_later.json",
+    "covariance": "two_way",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": -0.01097991678404309
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\weather_R0c_development.json",
+    "covariance": "LAD",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 1.8064983360286611e-06
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\weather_R0c_development.json",
+    "covariance": "date",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 1.3527155105275697e-06
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\weather_R0c_development.json",
+    "covariance": "intersection",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 1.5641510713640576e-06
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\weather_R0c_development.json",
+    "covariance": "two_way",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": -5.190851553851274e-05
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\weather_R0c_later.json",
+    "covariance": "LAD",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 3.895969314517712e-06
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\weather_R0c_later.json",
+    "covariance": "date",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 3.5292374814818228e-06
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\weather_R0c_later.json",
+    "covariance": "intersection",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": 5.240150267731377e-06
+  },
+  {
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\periods_v2\\weather_R0c_later.json",
+    "covariance": "two_way",
+    "negative_diagonal": false,
+    "minimum_eigenvalue": -0.001083028487627375
+  }
+]

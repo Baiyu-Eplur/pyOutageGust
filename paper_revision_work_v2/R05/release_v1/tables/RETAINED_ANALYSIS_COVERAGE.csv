@@ -1,0 +1,27 @@
+论文位置/产物,保留职责,生产者,配置/输入,当前输出,状态/边界
+正文表1 / D-T01,四列原/对数描述,R04/src/report_data.py,R02主组60436,R04/tables/Table1_current.csv,本轮重算；恢复尾部不同旧H0
+正文表2 / D-T02；附录A-T01/02,变量/原因代码/区域定义,R01/R03冻结契约和代码副本,现有来源,R03/CONTRACTS.md；contracts/DATA_CONTRACT.md,定义可复用；来源/边界限制未解决，非新数值结果
+正文表3 / 附录F A-T08/09,四组全系数、三种CR1,R03/cli.py formal；R04/src/audit_results.py,R04_primary.json；R02输入,R04/tables/Tables3_F_complete_coefficients.csv,本轮重算；p为正态Wald描述，不是稳健性证明
+正文表4 / D-T04,嵌套OOF/条件增量,R03/cli.py formal,共同日期fold；all_valid,R04/tables/core_metrics.csv；H0_R1_B1_increments.csv,本轮重算；单个条件点替代含混区间
+图1,主模型事件位置密度,R04/src/figures.py,主组60436坐标,R04/figures/figure01.png/.pdf,实际导出；新密度面板不含旧三许可区边界/GB inset；后续图注需改，原边界装饰仍未补
+图2,原尺度+log目标分布,R04/src/final_data.py,主组60436,R04/figures/figure02.png/.pdf,四面板实际导出；原尺度计数用log纵轴，尾部不裁
+图3,真实开发历史/风暴窗口,R04/src/final_data.py,冻结UTC和storm_windows,R04/figures/figure03.png/.pdf,实际导出；earlier/later，保留历史非独立性
+图4,四模型阵风参考曲线,冻结figure4数据→R04/src/figures.py,各自估计人口+均值物理气压,R04/figures/figure04.png/.pdf,实际导出；exp(meanη)，无smearing/旧CI
+图5/8,E0/R0c嵌套模型及条件增量,正式metrics/contributions→product_complete.py,各固定评估总体,R04/figures/figure05/08.png/.pdf,实际导出；图5主组两目标pooled R²，图8两目标贡献百分点
+图6,区域参考地图,正式figure6数据→figures.py,复制LAD21几何；共同日历；客户z=z²=0,R04/figures/figure06.png/.pdf,实际导出；Buck代理保留；不作因果区域差异
+图7,参考网格指数max/min比,正式figure7数据→figures.py,50点p1–p99各自网格,R04/figures/figure07.png/.pdf,实际导出；非算术均值、非端点比
+图9,训练内/OOF风暴预测,正式figure9数据→figures.py,UNIQUE_ANY主组4452/目标,R04/figures/figure09.png/.pdf,实际导出并核ID；E侧η；不等于真正过程留出
+图10 / 附录H A-T13,物理尺度分期比较,R04/src/calendar_repair.py,period_equivalent_v1；8个分期,R04/periods_v2；figures/figure10.png/.pdf,等价性通过；仅点估计；天气早期E最低点无有效支持
+VIF / D-P041,完整冻结设计VIF,R03/src/diagnostics.py,四组完整日历设计,R04/R04_B1_all_valid_v1/*/VIF.csv,本轮重算；不得保留旧最高3.76或<4未经替换
+阶段 / A-T04/05、附录D,阶段描述及raw ln(stage)控制,核心step27；final_data.py,当前全期all_valid，另列分期分布,R04/tables/AppendixD_period_stage_counts.csv；核心step27_*,描述/全期控制已重算；旧earlier截尾控制没有冒充新结果，须明确改表责任或待后续原总体重跑
+附录图D1,分层和pooled共同分箱,R04/src/artifact_acceptance.py,主/天气各总体自身公共数值分箱,R04/figures/figureD1.png/.pdf,4面板实际导出；修复CSV字符串排序；缺首阶段排除敏感性延至V
+六原因组 / A-T03、D-P038,完整系数及5折对照,R04/src/supplements.py,R02共识六组117108，all_valid,R04/supplements_v1/six_group_*.json；six_groups_OOF.csv,6次实际拟合；改为当前主方案对应物，非旧116064截尾原样复现
+GLM / D-P048、A-P094,NB2/Tweedie E，Gamma/Tweedie R,R04/src/supplements.py,冻结旧分布规格；当前60436,R04/supplements_v1；tables/supplement_summary.csv,4次实际拟合收敛；NB数值警告保留
+三阶 / MR18,预声明zG³与二次配对OOF,R04/src/supplements.py,同成员同共同fold；两目标,R04/supplements_v1/cubic_*；tables/supplement_summary.csv,12次实际拟合；保留反向线索，未做模型搜索
+残差诊断 / D-P048、附录F/H,log-OLS残差/Q-Q/分布,R04/src/final_data.py,全拟合再读预测,R04/figures/figureF1.png/.pdf；tables/residual_diagnostics.csv,实际生成；exp残差均值仅诊断，不作回变换校准
+附录G A-T10 / A-P073,阵风十分位原因比例和低阵风支持,report_data.py/final_data.py/numeric_acceptance.py,主组60436十分位；另列六组117108；main/weather低阵风支持,R04/tables/AppendixG_*.csv,本轮重算；两种十分位分母分别标记，旧负增量解释需撤回重审
+附录H A-T11,条件物理最低点,冻结minimum_interface,主E0压力−1/0/+1SD,R04/tables/AppendixH_pressure_minima.json,确定性重算；不新增拟合或CI
+附录E A-T06/07、H A-T12,历史开发样本/最低点/Bootstrap,冻结历史来源,H0历史证据,manuscript_record/evidence；R04/frozen/H0,可证明历史身份；不当B1，不跑500bootstrap，不继承旧CI
+附录B历史500事件/时长比较,历史验证及数据规则,R00–R03已冻结证据,原抽样/输入规则,contracts/；R02/checks/；manuscript_record/evidence,按历史证据复用；不冒充本轮独立重跑
+风暴数字 D-P006/102,三类总体/窗口/唯一/重叠,audit_results.py/final_data.py,UTC冻结窗口,R04/tables/storm_statistics.csv；storm_LAD_details.csv,本轮重算；27累计窗口日vs25唯一日
+最低点CI/稳健U/过程验证/工程校准,科学主张验证,尚未运行V,需后续指令,R04_WRITING_IMPACT.md,延至V；无结果，不能填0或H0

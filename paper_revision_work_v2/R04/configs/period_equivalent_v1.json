@@ -1,0 +1,24 @@
+{
+  "run_id": "R04_period_equivalent_v1",
+  "input": "R02_input_20260905",
+  "basis_policy": "retain all substantive columns and intercept; add calendar in original deterministic order if independent",
+  "relative_rank_tolerance": 1e-10,
+  "equivalence_atol": 1e-07,
+  "tails": "all_valid",
+  "groups": [
+    "main",
+    "weather"
+  ],
+  "targets": [
+    "E0",
+    "R0c"
+  ],
+  "periods": [
+    "development",
+    "later"
+  ],
+  "reference": "each group-target full-period training mean physical pressure; own period gust/pressure scales",
+  "covariance": "CR1 with effective full rank k, no CV inverse variance intervals",
+  "supported_prediction": "observed year-month combinations within each period only",
+  "producer_sha256": "36a0aff44ad45bb00722e2390eedcfa467807c515d1e4faf75a61b5f9fb3eb81"
+}

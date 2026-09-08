@@ -1,0 +1,13 @@
+group,target,comparison,common_n,eta_difference_RMSE,left_common_R2,right_common_R2,target_max_difference,fold_same_n,interpretation
+main,E0,H0→B1,60436,0.11092455398698185,0.02812176136953559,0.029621455525964735,0.0,14677,common-event descriptive comparison; training populations and date assignment differ
+main,E0,H0→R1,60436,0.11191696362986549,0.02812176136953559,0.02945982958392357,0.0,15226,common-event descriptive comparison; training populations and date assignment differ
+main,E0,R1→B1,60436,0.05254240347006481,0.02945982958392357,0.029621455525964735,0.0,17865,common-event descriptive comparison; training populations and date assignment differ
+main,R0c,H0→B1,59834,0.08648443935755908,0.11053659115053105,0.11058509267926908,1.7763568394002505e-15,14159,common-event descriptive comparison; training populations and date assignment differ
+main,R0c,H0→R1,59832,0.059381840451121305,0.11061265059917758,0.1134933649144102,1.7763568394002505e-15,14715,common-event descriptive comparison; training populations and date assignment differ
+main,R0c,R1→B1,59832,0.07440613667367912,0.1134933649144102,0.11064545886556365,0.0,14931,common-event descriptive comparison; training populations and date assignment differ
+weather,E0,H0→B1,9857,0.20775101459566897,0.020103346763084895,0.02428828432644692,0.0,3173,common-event descriptive comparison; training populations and date assignment differ
+weather,E0,H0→R1,9857,0.20427230213215247,0.020103346763084895,0.02360736963623944,0.0,3768,common-event descriptive comparison; training populations and date assignment differ
+weather,E0,R1→B1,9857,0.11509730460183196,0.02360736963623944,0.02428828432644692,0.0,3274,common-event descriptive comparison; training populations and date assignment differ
+weather,R0c,H0→B1,9758,0.14507221141601973,0.21558175570266513,0.22725018464675706,8.881784197001252e-16,3130,common-event descriptive comparison; training populations and date assignment differ
+weather,R0c,H0→R1,9758,0.13254998661002007,0.21558175570266513,0.22458771201631655,8.881784197001252e-16,3418,common-event descriptive comparison; training populations and date assignment differ
+weather,R0c,R1→B1,9758,0.08781060912567679,0.22458771201631667,0.22725018464675717,0.0,3517,common-event descriptive comparison; training populations and date assignment differ

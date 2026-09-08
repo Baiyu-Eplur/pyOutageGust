@@ -1,0 +1,123 @@
+{
+  "schema_version": "2.0",
+  "active_phase": "R",
+  "active_stage": "R01",
+  "baseline": "H0_accepted_no_R1_or_B1_run",
+  "project_root": "D:\\Pyprogramme\\STST2603\\claude_branch",
+  "last_updated": "2026-09-05T12:16:21.230730+00:00",
+  "stages": {
+    "R00": {
+      "execution_status": "completed",
+      "report": "reports/R00_report.md",
+      "inputs": [
+        "results/code_audit_20260905"
+      ],
+      "outputs": [
+        "inventory/"
+      ],
+      "blockers": []
+    },
+    "R01": {
+      "execution_status": "completed",
+      "report": "reports/R01_report.md",
+      "inputs": [
+        "reports/R00_report.md",
+        "inventory/large_input_identity.json"
+      ],
+      "outputs": [
+        "contracts/",
+        "checks/",
+        "reports/R01_report.md"
+      ],
+      "blockers": [],
+      "unresolved_definitions": "contracts/UNRESOLVED_DEFINITIONS.md"
+    },
+    "R02": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "R03": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "R04": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "R05": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "V00": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "V01": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "V02": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "V03": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "V04": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "W00": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    },
+    "W01": {
+      "execution_status": "not_started",
+      "report": null,
+      "inputs": [],
+      "outputs": [],
+      "blockers": []
+    }
+  },
+  "issue_ledger": "ISSUE_LEDGER.md",
+  "decisions": "DECISIONS.md",
+  "artifact_manifest": "ARTIFACT_MANIFEST.json",
+  "invalidated_outputs": [
+    {
+      "scope": "All retained H0 model/OOF/figure numerical outputs depending on first-row input",
+      "status": "historical_only_not_valid_for_corrected_input",
+      "reason": "C01 repair not run; preserve H0 and recompute dependent outputs in R04"
+    }
+  ]
+}

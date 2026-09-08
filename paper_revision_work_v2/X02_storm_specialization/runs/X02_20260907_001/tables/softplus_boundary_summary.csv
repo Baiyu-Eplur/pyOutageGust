@@ -1,0 +1,4 @@
+path,task,tau,h,b,success,status,message,iterations,tau_at_bound,h_at_bound,b_at_bound
+D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\X02_storm_specialization\runs\X02_20260907_001\models\time_frozen\E_log\S04.joblib,E_log,12.613945871528303,0.05000000000000001,0.02446928215054478,True,0,CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL,17,False,True,False
+D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\X02_storm_specialization\runs\X02_20260907_001\models\time_frozen\R_C_log\S04.joblib,R_C_log,12.862248120596833,0.05000000000000001,0.05612446607720863,True,0,CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL,14,False,True,False
+D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\X02_storm_specialization\runs\X02_20260907_001\models\time_frozen\R_log\S04.joblib,R_log,12.881914644554806,0.05000000000000001,0.0497390756169338,True,0,CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL,8,False,True,False

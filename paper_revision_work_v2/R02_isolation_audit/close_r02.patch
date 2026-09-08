@@ -1,0 +1,11 @@
+--- pre_isolation/code/close_r02.py
++++ isolated/code/close_r02.py
+@@ -164,4 +164,7 @@
+         entries.append({'path':str(p),'relative_path':p.relative_to(O).as_posix(),'bytes':p.stat().st_size,'sha256':sha(p),'role':'R02_or_retained_prior_artifact'})
+     save(O/'ARTIFACT_MANIFEST.json',{'run_id':'R02_20260905','timestamp_utc':now,'root':str(O),'self_excluded':True,'files':entries})
+     print(json.dumps({'R02':'completed','manifest_files':len(entries),'models_run':0,'manuscripts_modified':0},ensure_ascii=False))
+-if __name__=='__main__':globals()[sys.argv[1]]()
++if __name__=='__main__':
++    if (Q/'ISOLATED_ENTRY.json').exists():
++        raise SystemExit('This pre-isolation closure is archived. It expects a patched original v9 and would publish stale entry metadata. Use the isolation audit and current RUN_STATE.')
++    globals()[sys.argv[1]]()

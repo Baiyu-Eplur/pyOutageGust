@@ -1,0 +1,9 @@
+version,sample,N,min_stage_ge2,tie_earliest,identity_unresolved,cross_study_recovery
+H0,main_E0,60437,8817,15249,1,25
+R02_candidate,main_E0,60436,8817,15249,0,25
+H0,main_R0c,59834,8671,15148,0,16
+R02_candidate,main_R0c,60436,8817,15249,0,25
+H0,weather_E0,9857,2593,3528,0,0
+R02_candidate,weather_E0,9857,2593,3528,0,0
+H0,weather_R0c,9758,2578,3503,0,0
+R02_candidate,weather_R0c,9857,2593,3528,0,0

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R03\cli.py", line 39, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R03\cli.py", line 36, in main
+    run(config,formal=args.command=='formal')
+  File "D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R03\src\run_pipeline.py", line 57, in run
+    periods,period_models=period_comparison(training,target_name,model['metadata'],prep['mean']['pressure_msl_0h']);periods.to_csv(dest/'figure10_period_physical_terms.csv',index=False)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R03\src\retained.py", line 30, in period_comparison
+    model=fit_ols(d,prep,block,dict(metadata,period=period,fit_type='period_full_sample_descriptive_all_valid'))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Pyprogramme\STST2603\claude_branch\paper_revision_work_v2\R03\src\contracts.py", line 74, in fit_ols
+    if rank!=a.shape[1] or len(a)<=a.shape[1]:raise ValueError(f'unsupported design rank {rank}/{a.shape[1]}, n={len(a)}')
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: unsupported design rank 18/19, n=121

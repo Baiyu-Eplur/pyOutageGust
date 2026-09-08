@@ -1,0 +1,58 @@
+{
+  "Arwen": {
+    "start": "2021-11-25T00:00:00+00:00",
+    "end_exclusive": "2021-11-29T00:00:00+00:00",
+    "calendar": "UTC_declared_proxy",
+    "date_source": "frozen R01/old step10 dates, business timezone not independently confirmed",
+    "endpoint": "start inclusive/end next-day exclusive",
+    "London_alternative": true
+  },
+  "Dudley": {
+    "start": "2022-02-15T00:00:00+00:00",
+    "end_exclusive": "2022-02-18T00:00:00+00:00",
+    "calendar": "UTC_declared_proxy",
+    "date_source": "frozen R01/old step10 dates, business timezone not independently confirmed",
+    "endpoint": "start inclusive/end next-day exclusive",
+    "London_alternative": true
+  },
+  "Eunice": {
+    "start": "2022-02-17T00:00:00+00:00",
+    "end_exclusive": "2022-02-20T00:00:00+00:00",
+    "calendar": "UTC_declared_proxy",
+    "date_source": "frozen R01/old step10 dates, business timezone not independently confirmed",
+    "endpoint": "start inclusive/end next-day exclusive",
+    "London_alternative": true
+  },
+  "Franklin": {
+    "start": "2022-02-19T00:00:00+00:00",
+    "end_exclusive": "2022-02-23T00:00:00+00:00",
+    "calendar": "UTC_declared_proxy",
+    "date_source": "frozen R01/old step10 dates, business timezone not independently confirmed",
+    "endpoint": "start inclusive/end next-day exclusive",
+    "London_alternative": true
+  },
+  "Babet": {
+    "start": "2023-10-17T00:00:00+00:00",
+    "end_exclusive": "2023-10-23T00:00:00+00:00",
+    "calendar": "UTC_declared_proxy",
+    "date_source": "frozen R01/old step10 dates, business timezone not independently confirmed",
+    "endpoint": "start inclusive/end next-day exclusive",
+    "London_alternative": true
+  },
+  "Ciaran": {
+    "start": "2023-10-31T00:00:00+00:00",
+    "end_exclusive": "2023-11-04T00:00:00+00:00",
+    "calendar": "UTC_declared_proxy",
+    "date_source": "frozen R01/old step10 dates, business timezone not independently confirmed",
+    "endpoint": "start inclusive/end next-day exclusive",
+    "London_alternative": true
+  },
+  "Henk": {
+    "start": "2024-01-01T00:00:00+00:00",
+    "end_exclusive": "2024-01-04T00:00:00+00:00",
+    "calendar": "UTC_declared_proxy",
+    "date_source": "frozen R01/old step10 dates, business timezone not independently confirmed",
+    "endpoint": "start inclusive/end next-day exclusive",
+    "London_alternative": true
+  }
+}

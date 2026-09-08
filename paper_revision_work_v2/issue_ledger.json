@@ -1,0 +1,1070 @@
+[
+  {
+    "id": "C01",
+    "title": "代表阶段时间",
+    "related": "T02/T03/T07/T08；L02/L03/L05/L08",
+    "execution_status": "completed",
+    "execution_scope": "R04 frozen formal core/OOF and declared current consumers completed; science not closed",
+    "repair_status": "targeted_checks_passed",
+    "evidence_source": "reproduced_this_run",
+    "evidence": "checks/event_semantic_checks.json；contracts/DATA_CONTRACT.md；R02/checks/active_entry.json；R02/checks/full_shuffle.json；R02/data/EVENT_MANIFEST.json；R02_isolation_audit/validation.json（旧v9已恢复，新入口独立）",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "repair_milestones": {
+      "rule_defined": true,
+      "code_patched": true,
+      "input_rebuilt": true,
+      "targeted_checks_passed": true,
+      "models_reestimated": true
+    },
+    "revision_entry": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\cli.py",
+    "historical_entry_status": "restored_H0",
+    "history": [
+      {
+        "id": "C01",
+        "title": "代表阶段时间",
+        "related": "T02/T03/T07/T08；L02/L03/L05/L08",
+        "execution_status": "completed",
+        "execution_scope": "R02 event/time input only",
+        "repair_status": "targeted_checks_passed",
+        "evidence_source": "reproduced_this_run",
+        "evidence": "checks/event_semantic_checks.json；contracts/DATA_CONTRACT.md；R02/checks/active_entry.json；R02/checks/full_shuffle.json；R02/data/EVENT_MANIFEST.json；R02_isolation_audit/validation.json（旧v9已恢复，新入口独立）",
+        "remaining": "R03输入消费已通过；R04正式模型、真实onset/业务日历及两ID身份仍待",
+        "repair_milestones": {
+          "rule_defined": true,
+          "code_patched": true,
+          "input_rebuilt": true,
+          "targeted_checks_passed": true,
+          "models_reestimated": false
+        },
+        "revision_entry": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R03\\cli.py",
+        "historical_entry_status": "restored_H0"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "C02",
+    "title": "pooled与mean-fold",
+    "related": "T06/T07/T09/T14；L07/L10/L12",
+    "execution_status": "completed",
+    "execution_scope": "R04 frozen formal core/OOF and declared current consumers completed; science not closed",
+    "repair_status": "targeted_checks_passed_with_isolated_products",
+    "evidence_source": "R03_local_execution",
+    "evidence": "R03/CONTRACTS.md; R03/checks/test_summary.json; R03/smoke/R03_smoke_v4/RUN_MANIFEST.json; R03/PRODUCER_CONSUMER_MAP.md; R03/checks/final_isolation.json",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "C02",
+        "title": "pooled与mean-fold",
+        "related": "T06/T07/T09/T14；L07/L10/L12",
+        "execution_status": "not_started",
+        "execution_scope": "R00/R01 definition/intake only",
+        "repair_status": "rule_defined",
+        "evidence_source": "verified_from_artifact",
+        "evidence": "H0 oof_metric_comparison.csv；BASELINE_SPEC",
+        "remaining": "R03/R04评分与图件"
+      },
+      {
+        "id": "C02",
+        "title": "pooled与mean-fold",
+        "related": "T06/T07/T09/T14；L07/L10/L12",
+        "execution_status": "completed",
+        "execution_scope": "R03 independent code and targeted/smoke checks only; formal models not reestimated",
+        "repair_status": "targeted_checks_passed_with_isolated_products",
+        "evidence_source": "R03_local_execution",
+        "evidence": "R03/CONTRACTS.md; R03/checks/test_summary.json; R03/smoke/R03_smoke_v4/RUN_MANIFEST.json; R03/PRODUCER_CONSUMER_MAP.md; R03/checks/final_isolation.json",
+        "remaining": "R04正式产物/渲染、V科学证据；图10后期参数基阻断及未迁移分支见R03/R04_READINESS.md",
+        "models_reestimated": false
+      }
+    ],
+    "models_reestimated": false,
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md",
+    "repair_milestones": {
+      "models_reestimated": true
+    }
+  },
+  {
+    "id": "C03",
+    "title": "独立p99/成员/fold",
+    "related": "T04/T06/T07；L04/L07/L08/L11",
+    "execution_status": "completed",
+    "execution_scope": "R04 frozen formal core/OOF and declared current consumers completed; science not closed",
+    "repair_status": "targeted_checks_passed_with_isolated_products",
+    "evidence_source": "R03_local_execution",
+    "evidence": "R03/CONTRACTS.md; R03/checks/test_summary.json; R03/smoke/R03_smoke_v4/RUN_MANIFEST.json; R03/PRODUCER_CONSUMER_MAP.md; R03/checks/final_isolation.json",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "C03",
+        "title": "独立p99/成员/fold",
+        "related": "T04/T06/T07；L04/L07/L08/L11",
+        "execution_status": "not_started",
+        "execution_scope": "R00/R01 definition/intake only",
+        "repair_status": "rule_defined",
+        "evidence_source": "verified_from_artifact",
+        "evidence": "H0 source_and_sample_checks.json；BASELINE_SPEC",
+        "remaining": "R03/R04共同口径"
+      },
+      {
+        "id": "C03",
+        "title": "独立p99/成员/fold",
+        "related": "T04/T06/T07；L04/L07/L08/L11",
+        "execution_status": "completed",
+        "execution_scope": "R03 independent code and targeted/smoke checks only; formal models not reestimated",
+        "repair_status": "targeted_checks_passed_with_isolated_products",
+        "evidence_source": "R03_local_execution",
+        "evidence": "R03/CONTRACTS.md; R03/checks/test_summary.json; R03/smoke/R03_smoke_v4/RUN_MANIFEST.json; R03/PRODUCER_CONSUMER_MAP.md; R03/checks/final_isolation.json",
+        "remaining": "R04正式产物/渲染、V科学证据；图10后期参数基阻断及未迁移分支见R03/R04_READINESS.md",
+        "models_reestimated": false
+      }
+    ],
+    "models_reestimated": false,
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md",
+    "repair_milestones": {
+      "models_reestimated": true
+    }
+  },
+  {
+    "id": "C04",
+    "title": "暴露多log1p",
+    "related": "T09/T14；L10/L12",
+    "execution_status": "completed",
+    "execution_scope": "R04 frozen formal core/OOF and declared current consumers completed; science not closed",
+    "repair_status": "targeted_checks_passed_with_isolated_products",
+    "evidence_source": "R03_local_execution",
+    "evidence": "R03/CONTRACTS.md; R03/checks/test_summary.json; R03/smoke/R03_smoke_v4/RUN_MANIFEST.json; R03/PRODUCER_CONSUMER_MAP.md; R03/checks/final_isolation.json",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "C04",
+        "title": "暴露多log1p",
+        "related": "T09/T14；L10/L12",
+        "execution_status": "not_started",
+        "execution_scope": "R00/R01 definition/intake only",
+        "repair_status": "rule_defined",
+        "evidence_source": "verified_from_artifact",
+        "evidence": "H0 storm_exposure_scale_audit.csv；BASELINE_SPEC",
+        "remaining": "R03修代码/R04重算"
+      },
+      {
+        "id": "C04",
+        "title": "暴露多log1p",
+        "related": "T09/T14；L10/L12",
+        "execution_status": "completed",
+        "execution_scope": "R03 independent code and targeted/smoke checks only; formal models not reestimated",
+        "repair_status": "targeted_checks_passed_with_isolated_products",
+        "evidence_source": "R03_local_execution",
+        "evidence": "R03/CONTRACTS.md; R03/checks/test_summary.json; R03/smoke/R03_smoke_v4/RUN_MANIFEST.json; R03/PRODUCER_CONSUMER_MAP.md; R03/checks/final_isolation.json",
+        "remaining": "R04正式产物/渲染、V科学证据；图10后期参数基阻断及未迁移分支见R03/R04_READINESS.md",
+        "models_reestimated": false
+      }
+    ],
+    "models_reestimated": false,
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md",
+    "repair_milestones": {
+      "models_reestimated": true
+    }
+  },
+  {
+    "id": "C05",
+    "title": "风暴训练成员与窗口",
+    "related": "T04/T07/T09；L04/L08/L10",
+    "execution_status": "completed",
+    "execution_scope": "R04 frozen formal core/OOF and declared current consumers completed; science not closed",
+    "repair_status": "targeted_checks_passed_with_isolated_products",
+    "evidence_source": "R03_local_execution",
+    "evidence": "R03/CONTRACTS.md; R03/checks/test_summary.json; R03/smoke/R03_smoke_v4/RUN_MANIFEST.json; R03/PRODUCER_CONSUMER_MAP.md; R03/checks/final_isolation.json",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "C05",
+        "title": "风暴训练成员与窗口",
+        "related": "T04/T07/T09；L04/L08/L10",
+        "execution_status": "not_started",
+        "execution_scope": "R00/R01 definition/intake only",
+        "repair_status": "open",
+        "evidence_source": "verified_from_artifact",
+        "evidence": "H0 storm_recovery_membership_audit.csv",
+        "remaining": "R03/R04成员接口；V过程留出"
+      },
+      {
+        "id": "C05",
+        "title": "风暴训练成员与窗口",
+        "related": "T04/T07/T09；L04/L08/L10",
+        "execution_status": "completed",
+        "execution_scope": "R03 independent code and targeted/smoke checks only; formal models not reestimated",
+        "repair_status": "targeted_checks_passed_with_isolated_products",
+        "evidence_source": "R03_local_execution",
+        "evidence": "R03/CONTRACTS.md; R03/checks/test_summary.json; R03/smoke/R03_smoke_v4/RUN_MANIFEST.json; R03/PRODUCER_CONSUMER_MAP.md; R03/checks/final_isolation.json",
+        "remaining": "R04正式产物/渲染、V科学证据；图10后期参数基阻断及未迁移分支见R03/R04_READINESS.md",
+        "models_reestimated": false
+      }
+    ],
+    "models_reestimated": false,
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md",
+    "repair_milestones": {
+      "models_reestimated": true
+    }
+  },
+  {
+    "id": "C06",
+    "title": "部分标准化",
+    "related": "T01/T11/T14；L01/L12",
+    "execution_status": "completed",
+    "execution_scope": "R04 frozen formal core/OOF and declared current consumers completed; science not closed",
+    "repair_status": "targeted_checks_passed_with_isolated_products",
+    "evidence_source": "R03_local_execution",
+    "evidence": "R03/CONTRACTS.md; R03/checks/test_summary.json; R03/smoke/R03_smoke_v4/RUN_MANIFEST.json; R03/PRODUCER_CONSUMER_MAP.md; R03/checks/final_isolation.json",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "C06",
+        "title": "部分标准化",
+        "related": "T01/T11/T14；L01/L12",
+        "execution_status": "completed",
+        "execution_scope": "R00/R01 definition/intake only",
+        "repair_status": "rule_defined",
+        "evidence_source": "verified_from_artifact",
+        "evidence": "H0 full_fit_summary.csv；FIELD_PROVENANCE",
+        "remaining": "R03统一变换字典"
+      },
+      {
+        "id": "C06",
+        "title": "部分标准化",
+        "related": "T01/T11/T14；L01/L12",
+        "execution_status": "completed",
+        "execution_scope": "R03 independent code and targeted/smoke checks only; formal models not reestimated",
+        "repair_status": "targeted_checks_passed_with_isolated_products",
+        "evidence_source": "R03_local_execution",
+        "evidence": "R03/CONTRACTS.md; R03/checks/test_summary.json; R03/smoke/R03_smoke_v4/RUN_MANIFEST.json; R03/PRODUCER_CONSUMER_MAP.md; R03/checks/final_isolation.json",
+        "remaining": "R04正式产物/渲染、V科学证据；图10后期参数基阻断及未迁移分支见R03/R04_READINESS.md",
+        "models_reestimated": false
+      }
+    ],
+    "models_reestimated": false,
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md",
+    "repair_milestones": {
+      "models_reestimated": true
+    }
+  },
+  {
+    "id": "C07",
+    "title": "图形参考与反变换",
+    "related": "T09/T14；L10/L12",
+    "execution_status": "completed",
+    "execution_scope": "R04 frozen formal core/OOF and declared current consumers completed; science not closed",
+    "repair_status": "targeted_checks_passed_with_isolated_products",
+    "evidence_source": "R03_local_execution",
+    "evidence": "R03/CONTRACTS.md; R03/checks/test_summary.json; R03/smoke/R03_smoke_v4/RUN_MANIFEST.json; R03/PRODUCER_CONSUMER_MAP.md; R03/checks/final_isolation.json",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "C07",
+        "title": "图形参考与反变换",
+        "related": "T09/T14；L10/L12",
+        "execution_status": "completed",
+        "execution_scope": "R00/R01 definition/intake only",
+        "repair_status": "rule_defined",
+        "evidence_source": "verified_from_artifact",
+        "evidence": "H0 curve_reference_audit.json；FIGURE_REFERENCE_CONTRACT",
+        "remaining": "R03/R04实际接入"
+      },
+      {
+        "id": "C07",
+        "title": "图形参考与反变换",
+        "related": "T09/T14；L10/L12",
+        "execution_status": "completed",
+        "execution_scope": "R03 independent code and targeted/smoke checks only; formal models not reestimated",
+        "repair_status": "targeted_checks_passed_with_isolated_products",
+        "evidence_source": "R03_local_execution",
+        "evidence": "R03/CONTRACTS.md; R03/checks/test_summary.json; R03/smoke/R03_smoke_v4/RUN_MANIFEST.json; R03/PRODUCER_CONSUMER_MAP.md; R03/checks/final_isolation.json",
+        "remaining": "R04正式产物/渲染、V科学证据；图10后期参数基阻断及未迁移分支见R03/R04_READINESS.md",
+        "models_reestimated": false
+      }
+    ],
+    "models_reestimated": false,
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md",
+    "repair_milestones": {
+      "models_reestimated": true
+    }
+  },
+  {
+    "id": "C08",
+    "title": "旧区间/标签回填",
+    "related": "T10/T11/T14；L09/L12",
+    "execution_status": "completed",
+    "execution_scope": "R04 frozen formal core/OOF and declared current consumers completed; science not closed",
+    "repair_status": "targeted_checks_passed_with_isolated_products",
+    "evidence_source": "R03_local_execution",
+    "evidence": "R03/CONTRACTS.md; R03/checks/test_summary.json; R03/smoke/R03_smoke_v4/RUN_MANIFEST.json; R03/PRODUCER_CONSUMER_MAP.md; R03/checks/final_isolation.json",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "C08",
+        "title": "旧区间/标签回填",
+        "related": "T10/T11/T14；L09/L12",
+        "execution_status": "not_started",
+        "execution_scope": "R00/R01 definition/intake only",
+        "repair_status": "open",
+        "evidence_source": "verified_from_artifact",
+        "evidence": "冻结figure4/figure10/step43源码与H0报告",
+        "remaining": "R03关闭旧回填；V03条件区间"
+      },
+      {
+        "id": "C08",
+        "title": "旧区间/标签回填",
+        "related": "T10/T11/T14；L09/L12",
+        "execution_status": "completed",
+        "execution_scope": "R03 independent code and targeted/smoke checks only; formal models not reestimated",
+        "repair_status": "targeted_checks_passed_with_isolated_products",
+        "evidence_source": "R03_local_execution",
+        "evidence": "R03/CONTRACTS.md; R03/checks/test_summary.json; R03/smoke/R03_smoke_v4/RUN_MANIFEST.json; R03/PRODUCER_CONSUMER_MAP.md; R03/checks/final_isolation.json",
+        "remaining": "R04正式产物/渲染、V科学证据；图10后期参数基阻断及未迁移分支见R03/R04_READINESS.md",
+        "models_reestimated": false
+      }
+    ],
+    "models_reestimated": false,
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md",
+    "repair_milestones": {
+      "models_reestimated": true
+    }
+  },
+  {
+    "id": "C09",
+    "title": "副作用/环境/缺生产者",
+    "related": "T01/T03/T11/T14；L01/L05/L12",
+    "execution_status": "completed",
+    "execution_scope": "R04 frozen formal core/OOF and declared current consumers completed; science not closed",
+    "repair_status": "targeted_checks_passed_with_isolated_products",
+    "evidence_source": "R03_local_execution",
+    "evidence": "R03/CONTRACTS.md; R03/checks/test_summary.json; R03/smoke/R03_smoke_v4/RUN_MANIFEST.json; R03/PRODUCER_CONSUMER_MAP.md; R03/checks/final_isolation.json",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "revision_entry": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\event_input_repair\\r02_input_pipeline.py",
+    "historical_entry_status": "restored_H0",
+    "history": [
+      {
+        "id": "C09",
+        "title": "副作用/环境/缺生产者",
+        "related": "T01/T03/T11/T14；L01/L05/L12",
+        "execution_status": "completed",
+        "execution_scope": "R00/R01 definition/intake only",
+        "repair_status": "rule_defined",
+        "evidence_source": "reproduced_this_run",
+        "evidence": "inventory/runtime_verified.json；ACTIVE_PIPELINE；R02/checks/active_entry.json（v9导入副作用/入口已处理）；R02_isolation_audit/validation.json（旧v9已恢复，新入口独立）",
+        "remaining": "仅v9输入入口已修；其他旧生产脚本副作用及step26/27/28等生产者交R03，不整体关闭；R03仅在独立新流程继续，原研究代码只读",
+        "revision_entry": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\event_input_repair\\r02_input_pipeline.py",
+        "historical_entry_status": "restored_H0"
+      },
+      {
+        "id": "C09",
+        "title": "副作用/环境/缺生产者",
+        "related": "T01/T03/T11/T14；L01/L05/L12",
+        "execution_status": "completed",
+        "execution_scope": "R03 independent code and targeted/smoke checks only; formal models not reestimated",
+        "repair_status": "targeted_checks_passed_with_isolated_products",
+        "evidence_source": "R03_local_execution",
+        "evidence": "R03/CONTRACTS.md; R03/checks/test_summary.json; R03/smoke/R03_smoke_v4/RUN_MANIFEST.json; R03/PRODUCER_CONSUMER_MAP.md; R03/checks/final_isolation.json",
+        "remaining": "R04正式产物/渲染、V科学证据；图10后期参数基阻断及未迁移分支见R03/R04_READINESS.md",
+        "revision_entry": "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\event_input_repair\\r02_input_pipeline.py",
+        "historical_entry_status": "restored_H0",
+        "models_reestimated": false
+      }
+    ],
+    "models_reestimated": false,
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md",
+    "repair_milestones": {
+      "models_reestimated": true
+    }
+  },
+  {
+    "id": "C10",
+    "title": "Buck旧区简单均值proxy",
+    "related": "T01；L01",
+    "execution_status": "completed",
+    "execution_scope": "R02 proxy flag and membership only",
+    "repair_status": "targeted_checks_passed",
+    "evidence_source": "reproduced_this_run",
+    "evidence": "checks/buckinghamshire_lineage.json；D03；tables/R02_Buck_membership.csv；R02/checks/targeted_checks.json",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "repair_milestones": {
+      "rule_defined": true,
+      "proxy_code_patched": true,
+      "input_rebuilt": true,
+      "targeted_checks_passed": true,
+      "LSOA_rebuilt": false,
+      "models_reestimated": false
+    },
+    "history": [
+      {
+        "id": "C10",
+        "title": "Buck旧区简单均值proxy",
+        "related": "T01；L01",
+        "execution_status": "completed",
+        "execution_scope": "R02 proxy flag and membership only",
+        "repair_status": "targeted_checks_passed",
+        "evidence_source": "reproduced_this_run",
+        "evidence": "checks/buckinghamshire_lineage.json；D03；tables/R02_Buck_membership.csv；R02/checks/targeted_checks.json",
+        "remaining": "历史代理保留已实现；LSOA真值重建与敏感性尚未执行",
+        "repair_milestones": {
+          "rule_defined": true,
+          "proxy_code_patched": true,
+          "input_rebuilt": true,
+          "targeted_checks_passed": true,
+          "LSOA_rebuilt": false,
+          "models_reestimated": false
+        }
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "T01",
+    "title": "区域源定义及VIF",
+    "related": "C06,C09,C10",
+    "execution_status": "completed",
+    "execution_scope": "R01 definition part only",
+    "repair_status": "rule_defined",
+    "evidence_source": "verified_from_artifact",
+    "evidence": "contracts/ + H0 artifacts",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "T01",
+        "title": "区域源定义及VIF",
+        "related": "C06,C09,C10",
+        "execution_status": "completed",
+        "execution_scope": "R01 definition part only",
+        "repair_status": "rule_defined",
+        "evidence_source": "verified_from_artifact",
+        "evidence": "contracts/ + H0 artifacts",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "T02",
+    "title": "气象产品/时间匹配",
+    "related": "C01",
+    "execution_status": "completed",
+    "execution_scope": "R01 definition part only",
+    "repair_status": "rule_defined",
+    "evidence_source": "verified_from_artifact",
+    "evidence": "contracts/ + H0 artifacts",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "T02",
+        "title": "气象产品/时间匹配",
+        "related": "C01",
+        "execution_status": "completed",
+        "execution_scope": "R01 definition part only",
+        "repair_status": "rule_defined",
+        "evidence_source": "verified_from_artifact",
+        "evidence": "contracts/ + H0 artifacts",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "T03",
+    "title": "事件与特殊阶段",
+    "related": "C01,C09",
+    "execution_status": "completed",
+    "execution_scope": "R01 definition part only",
+    "repair_status": "rule_defined",
+    "evidence_source": "verified_from_artifact",
+    "evidence": "contracts/ + H0 artifacts",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "T03",
+        "title": "事件与特殊阶段",
+        "related": "C01,C09",
+        "execution_status": "completed",
+        "execution_scope": "R01 definition part only",
+        "repair_status": "rule_defined",
+        "evidence_source": "verified_from_artifact",
+        "evidence": "contracts/ + H0 artifacts",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "T04",
+    "title": "长尾敏感性",
+    "related": "C03,C05",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "T04",
+        "title": "长尾敏感性",
+        "related": "C03,C05",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "T05",
+    "title": "非线性形状",
+    "related": "",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "T05",
+        "title": "非线性形状",
+        "related": "",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "T06",
+    "title": "配对贡献稳定性",
+    "related": "C02,C03",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "T06",
+        "title": "配对贡献稳定性",
+        "related": "C02,C03",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "T07",
+    "title": "完整过程留出",
+    "related": "C01,C02,C03,C05",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "T07",
+        "title": "完整过程留出",
+        "related": "C01,C02,C03,C05",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "T08",
+    "title": "信息时点",
+    "related": "C01",
+    "execution_status": "completed",
+    "execution_scope": "R01 definition part only",
+    "repair_status": "rule_defined",
+    "evidence_source": "verified_from_artifact",
+    "evidence": "contracts/ + H0 artifacts",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "T08",
+        "title": "信息时点",
+        "related": "C01",
+        "execution_status": "completed",
+        "execution_scope": "R01 definition part only",
+        "repair_status": "rule_defined",
+        "evidence_source": "verified_from_artifact",
+        "evidence": "contracts/ + H0 artifacts",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "T09",
+    "title": "工程场景/误差",
+    "related": "C02,C04,C05,C07",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "T09",
+        "title": "工程场景/误差",
+        "related": "C02,C04,C05,C07",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "T10",
+    "title": "条件最低点区间",
+    "related": "C08",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "T10",
+        "title": "条件最低点区间",
+        "related": "C08",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "T11",
+    "title": "诊断及既有材料",
+    "related": "C06,C08,C09",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "T11",
+        "title": "诊断及既有材料",
+        "related": "C06,C08,C09",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "T12",
+    "title": "可选异质性增强",
+    "related": "",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "T12",
+        "title": "可选异质性增强",
+        "related": "",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "T13",
+    "title": "可选扩大用途",
+    "related": "",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "T13",
+        "title": "可选扩大用途",
+        "related": "",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "T14",
+    "title": "文稿整合",
+    "related": "C02,C04,C06,C07,C08,C09",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "T14",
+        "title": "文稿整合",
+        "related": "C02,C04,C06,C07,C08,C09",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "L01",
+    "title": "区域变量矛盾",
+    "related": "C06,C09,C10",
+    "execution_status": "completed",
+    "execution_scope": "R01 definition part only",
+    "repair_status": "rule_defined",
+    "evidence_source": "verified_from_artifact",
+    "evidence": "contracts/ + H0 artifacts",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "L01",
+        "title": "区域变量矛盾",
+        "related": "C06,C09,C10",
+        "execution_status": "completed",
+        "execution_scope": "R01 definition part only",
+        "repair_status": "rule_defined",
+        "evidence_source": "verified_from_artifact",
+        "evidence": "contracts/ + H0 artifacts",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "L02",
+    "title": "气象/结构风解释",
+    "related": "C01",
+    "execution_status": "completed",
+    "execution_scope": "R01 definition part only",
+    "repair_status": "rule_defined",
+    "evidence_source": "verified_from_artifact",
+    "evidence": "contracts/ + H0 artifacts",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "L02",
+        "title": "气象/结构风解释",
+        "related": "C01",
+        "execution_status": "completed",
+        "execution_scope": "R01 definition part only",
+        "repair_status": "rule_defined",
+        "evidence_source": "verified_from_artifact",
+        "evidence": "contracts/ + H0 artifacts",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "L03",
+    "title": "事后客户信息",
+    "related": "C01",
+    "execution_status": "completed",
+    "execution_scope": "R01 definition part only",
+    "repair_status": "rule_defined",
+    "evidence_source": "verified_from_artifact",
+    "evidence": "contracts/ + H0 artifacts",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "L03",
+        "title": "事后客户信息",
+        "related": "C01",
+        "execution_status": "completed",
+        "execution_scope": "R01 definition part only",
+        "repair_status": "rule_defined",
+        "evidence_source": "verified_from_artifact",
+        "evidence": "contracts/ + H0 artifacts",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "L04",
+    "title": "最长1%与极端叙事",
+    "related": "C03,C05",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "L04",
+        "title": "最长1%与极端叙事",
+        "related": "C03,C05",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "L05",
+    "title": "后果工程语义",
+    "related": "C01,C09",
+    "execution_status": "completed",
+    "execution_scope": "R01 definition part only",
+    "repair_status": "rule_defined",
+    "evidence_source": "verified_from_artifact",
+    "evidence": "contracts/ + H0 artifacts",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "L05",
+        "title": "后果工程语义",
+        "related": "C01,C09",
+        "execution_status": "completed",
+        "execution_scope": "R01 definition part only",
+        "repair_status": "rule_defined",
+        "evidence_source": "verified_from_artifact",
+        "evidence": "contracts/ + H0 artifacts",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "L06",
+    "title": "二次充分性",
+    "related": "",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "L06",
+        "title": "二次充分性",
+        "related": "",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "L07",
+    "title": "排序反转稳定性",
+    "related": "C02,C03",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "L07",
+        "title": "排序反转稳定性",
+        "related": "C02,C03",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "L08",
+    "title": "风暴依赖",
+    "related": "C01,C03,C05",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "L08",
+        "title": "风暴依赖",
+        "related": "C01,C03,C05",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "L09",
+    "title": "最低点区间条件",
+    "related": "C08",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "L09",
+        "title": "最低点区间条件",
+        "related": "C08",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "L10",
+    "title": "风暴误差/校准",
+    "related": "C02,C04,C05,C07",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "L10",
+        "title": "风暴误差/校准",
+        "related": "C02,C04,C05,C07",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "L11",
+    "title": "原因/支持/异质性",
+    "related": "C03",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "L11",
+        "title": "原因/支持/异质性",
+        "related": "C03",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  },
+  {
+    "id": "L12",
+    "title": "全文证据一致性",
+    "related": "C02,C04,C06,C07,C08,C09",
+    "execution_status": "not_started",
+    "execution_scope": "future experiment/review",
+    "repair_status": "open",
+    "evidence_source": "reported_by_local_audit",
+    "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+    "remaining": "See MR-v1.3-R04 item-specific release conditions; R05/V/W not started; no Word edits",
+    "history": [
+      {
+        "id": "L12",
+        "title": "全文证据一致性",
+        "related": "C02,C04,C06,C07,C08,C09",
+        "execution_status": "not_started",
+        "execution_scope": "future experiment/review",
+        "repair_status": "open",
+        "evidence_source": "reported_by_local_audit",
+        "evidence": "handoff ISSUE_MAP and historical review; not a new experiment",
+        "remaining": "科学缺口未整体关闭；按R/V/W阶段执行"
+      }
+    ],
+    "r04_actual_evidence": "reports/R04_report.md; baseline/B1_MANIFEST.json; manuscript_record/R04_WRITING_IMPACT.md"
+  }
+]

@@ -1,0 +1,598 @@
+{
+  "profile": {
+    "terminology": [
+      {
+        "id": "score",
+        "preferred": "pooled OOF R²",
+        "prohibited": [
+          "causal variance shares are established"
+        ]
+      },
+      {
+        "id": "time",
+        "preferred": "earliest valid recorded start time",
+        "prohibited": [
+          "true initial customer counts were verified"
+        ]
+      },
+      {
+        "id": "span",
+        "preferred": "recorded restoration span",
+        "prohibited": [
+          "restoration span equals customer minutes lost"
+        ]
+      }
+    ],
+    "style_profile": {
+      "protected_terms": [
+        "pooled OOF",
+        "date-group",
+        "full-fit",
+        "reference",
+        "ln",
+        "CR1",
+        "LAD",
+        "customer",
+        "gust",
+        "covariance",
+        "stage",
+        "main",
+        "weather",
+        "R²",
+        "physical",
+        "conditional",
+        "period",
+        "model",
+        "population"
+      ],
+      "stock_phrases": []
+    }
+  },
+  "candidates": [
+    {
+      "location": "D-P002",
+      "text_sha256": "699eca4f59a546a0b2fe10eb428f9b31cafb61b48585332e2c805dc7e66fe8a3",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P006",
+      "text_sha256": "489a5e9e24984b5022d7bf3a825c4d369f37301482e95d8732c30da9fcb19143",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P010",
+      "text_sha256": "ba45c022cbcbd297923459893f1b350d80cbd84f785805d926839e3342b7b8e1",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P012",
+      "text_sha256": "ba45c022cbcbd297923459893f1b350d80cbd84f785805d926839e3342b7b8e1",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P011",
+      "text_sha256": "436c1f4ec6d69ac3d18e68b68a0b0bf4bd49e5dcad0b07ae1e3dab088d742d2c",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P013",
+      "text_sha256": "e30112c35d35693e5a64e6af6b372506c4271eb6150f41490cb8e63e3dee9d7f",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P017",
+      "text_sha256": "57949423b75391483fec6ae3b4239225f100a2297435ad663df921c42c56624f",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P018",
+      "text_sha256": "45566f29cf3b2a3b363a4c2712cc60d3052ecc70df94f999570e19502dbdbb1a",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P011",
+      "text_sha256": "45566f29cf3b2a3b363a4c2712cc60d3052ecc70df94f999570e19502dbdbb1a",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P019",
+      "text_sha256": "dd0ae40f307aea82085f7944552f12c9f00b8168fcfc86904c7dabae92e8116b",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P021",
+      "text_sha256": "dd0ae40f307aea82085f7944552f12c9f00b8168fcfc86904c7dabae92e8116b",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P013",
+      "text_sha256": "75ea85343b5e719bca42dcc467cba6bbf0690e07e6665ce44398672e9708d43e",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P030",
+      "text_sha256": "ad86e4fae881f086526da4b76185e5a74bd3b00fc97407c90422e0ca45c7a31d",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P018",
+      "text_sha256": "ad86e4fae881f086526da4b76185e5a74bd3b00fc97407c90422e0ca45c7a31d",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P017",
+      "text_sha256": "2df1227731598a44eb1229c6e6a939a4844ea13f8a342f9798e4007187868572",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P027",
+      "text_sha256": "edf9a27cf0e5b075c74b9e9c83831d30eb78602e178553d3c9597eb45fc84649",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P032",
+      "text_sha256": "aa7aadafea32a3aa5813ca46b7a1a03a66c5bb0319b1d17d207ec191d44f9bca",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P039",
+      "text_sha256": "db136164b0119f1d7d7e775bd04d895853701e617b11543cdb2f307d4736d3d4",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P038",
+      "text_sha256": "177d19c6af4439b8bdd63757fc14eabbd33c95c1e8e805cd130545422e35c6f2",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P029",
+      "text_sha256": "177d19c6af4439b8bdd63757fc14eabbd33c95c1e8e805cd130545422e35c6f2",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P031",
+      "text_sha256": "177d19c6af4439b8bdd63757fc14eabbd33c95c1e8e805cd130545422e35c6f2",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P040",
+      "text_sha256": "6ac11e512389de982dce073233dcc8d40b6266598a24d660975cdfaaa4e5e7df",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P041",
+      "text_sha256": "4cc90c7fc569c43b3cfb46ff196ceb75e0d196a7d5ba392c2138dd409fce47d9",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P054",
+      "text_sha256": "9c7c7aba597210750e4932403279387846ab48a9a72b116c9c8ddfbffd6fb225",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P060",
+      "text_sha256": "9c7c7aba597210750e4932403279387846ab48a9a72b116c9c8ddfbffd6fb225",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P061",
+      "text_sha256": "9c7c7aba597210750e4932403279387846ab48a9a72b116c9c8ddfbffd6fb225",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P064",
+      "text_sha256": "ff96d9cc54bbbbfdfd9c12294f00cde666b4f94c804789e115b4bd49f33d9401",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P065",
+      "text_sha256": "ff96d9cc54bbbbfdfd9c12294f00cde666b4f94c804789e115b4bd49f33d9401",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P068",
+      "text_sha256": "6b41c5b7cb73f9fbbef0e0c45f2296e39cb897fcc8c1ffea00d2d2b62fbdf053",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P073",
+      "text_sha256": "cbfff1c5a33ce24b20473178f72aeecd19f9db7b1e5276bb787b1e92c7e2e7b3",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P076",
+      "text_sha256": "cbfff1c5a33ce24b20473178f72aeecd19f9db7b1e5276bb787b1e92c7e2e7b3",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P076",
+      "text_sha256": "e67bb921ab366149e0b155084eee10756c23a6c2844d105355f04c9da1a807af",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P077",
+      "text_sha256": "57834384043971202b3c322a0104d261a2bcc54112a6ebcc2e909e8547769707",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P079",
+      "text_sha256": "57834384043971202b3c322a0104d261a2bcc54112a6ebcc2e909e8547769707",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P080",
+      "text_sha256": "55bfdc0a35290073e7cfccf3699d33ab496da054e5286f9064f04c51afe5a1f5",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P048",
+      "text_sha256": "55bfdc0a35290073e7cfccf3699d33ab496da054e5286f9064f04c51afe5a1f5",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P050",
+      "text_sha256": "55bfdc0a35290073e7cfccf3699d33ab496da054e5286f9064f04c51afe5a1f5",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P055",
+      "text_sha256": "55bfdc0a35290073e7cfccf3699d33ab496da054e5286f9064f04c51afe5a1f5",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P084",
+      "text_sha256": "8bc94d3fbe68b37870b9e17e9f84479cc8dd7b66a2c187aff075f7f8402a1127",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P086",
+      "text_sha256": "429e756596f1fd3d87a9aa3e27ba04bfd3d4f4df28c35124e6181c6ce3d74737",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P087",
+      "text_sha256": "63616de5472cecfbf365c61a781019a80d82a515c947abdd961fc8bc4905d72b",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P089",
+      "text_sha256": "63616de5472cecfbf365c61a781019a80d82a515c947abdd961fc8bc4905d72b",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P090",
+      "text_sha256": "c3a5053777edcbc2f8039ecbfe296fe84ac241696dba465ad236e2855dad695b",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P092",
+      "text_sha256": "c3a5053777edcbc2f8039ecbfe296fe84ac241696dba465ad236e2855dad695b",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P093",
+      "text_sha256": "f22c96190b27c5170e283f4974c3dbb39cf889401eea5986d933e21190b88ae8",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P097",
+      "text_sha256": "6a56293639458d933b5ec9b96b0df7823a9f0217e54ed0bfde3849cbde09a8c3",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P100",
+      "text_sha256": "effd78ce0dfab60deb6df4560339b829e232bb75033628982d0446a00416b2ba",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P101",
+      "text_sha256": "8993404735ea2383a767a1711b24c70a407c17fd3da0ac9eb2f2b4d7da5d0ea6",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P071",
+      "text_sha256": "8993404735ea2383a767a1711b24c70a407c17fd3da0ac9eb2f2b4d7da5d0ea6",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P073",
+      "text_sha256": "8993404735ea2383a767a1711b24c70a407c17fd3da0ac9eb2f2b4d7da5d0ea6",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P102",
+      "text_sha256": "52d97fa834e77db5c92803ac5df6c12370539447db924315344c2617d790d8e6",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P103",
+      "text_sha256": "8163e188fa6cd10a8167b2c016520246e9e9d8e87d9145d47e3e3f644f0f9580",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P105",
+      "text_sha256": "8163e188fa6cd10a8167b2c016520246e9e9d8e87d9145d47e3e3f644f0f9580",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P106",
+      "text_sha256": "b45d7e05f91c8f52ce3dc8314fc5c5d8bc062174217c74457ef411967d8abc0b",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P108",
+      "text_sha256": "ccab2b456fdabbb77f63f6a75f018c9bc9f8b41111d16239cc3aba81efce9151",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P111",
+      "text_sha256": "9cea4d4860ea06ae3b5c528341492000fbbd59db0a8df3e4d2b65ee2744c005e",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P112",
+      "text_sha256": "9cea4d4860ea06ae3b5c528341492000fbbd59db0a8df3e4d2b65ee2744c005e",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P114",
+      "text_sha256": "e2e56fad798e574324b31e6bda926cb931aadbaaf3adcb1c0630fa3b80d11296",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P116",
+      "text_sha256": "230d25ef5e2f2caeb090b5ea2c16ed08ef40cc7e232915720b28e84a4cec5985",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P068",
+      "text_sha256": "230d25ef5e2f2caeb090b5ea2c16ed08ef40cc7e232915720b28e84a4cec5985",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P118",
+      "text_sha256": "00b1dd3e86abaadf3580de037936d5b5fb397763f65a7b4c3068c1ecc2762a63",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P119",
+      "text_sha256": "b66e667f7a975e2f45bc7e6deed47a9d60eeda6f3886057d7178186d21b8581a",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P122",
+      "text_sha256": "67f466179eeab90525ca0353d840bb3702c6217c653101c11ceadb047de51b2e",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P123",
+      "text_sha256": "67f466179eeab90525ca0353d840bb3702c6217c653101c11ceadb047de51b2e",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P028",
+      "text_sha256": "9912ff76a88555ab4f1db9b7066be17f6e9946cf2401068f9ebb8e8703ed71b8",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P032",
+      "text_sha256": "242f2c6cc44204a60a715a76c7293bf7ec90bffde35b78e5198c9b131c8d2440",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P041",
+      "text_sha256": "242f2c6cc44204a60a715a76c7293bf7ec90bffde35b78e5198c9b131c8d2440",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P035",
+      "text_sha256": "963bd4891104280109b1a3208ccb59fc1234850ee51e2c3c6e3e8c847531ccc8",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P043",
+      "text_sha256": "963bd4891104280109b1a3208ccb59fc1234850ee51e2c3c6e3e8c847531ccc8",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P042",
+      "text_sha256": "01adb8f1bf90e689186f713fd4b3231d85ca99c292ae0c5e570596e8ae57169b",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P044",
+      "text_sha256": "01adb8f1bf90e689186f713fd4b3231d85ca99c292ae0c5e570596e8ae57169b",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P054",
+      "text_sha256": "be200b518b819075a36131eda3f675c2c6e9858bd1d8c43f8d2b1615d3ef85a8",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P046",
+      "text_sha256": "d1822f6d56bf88d7187ec075e2bfbfa34d7b6a9cef4fd7f3e2abcfe90aaaaf10",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P064",
+      "text_sha256": "5141d37641c7ed1aedd3f6d569bcf8b382958be9c387ac18d38085d29b4e7816",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P089",
+      "text_sha256": "453c8ad0465c5f0303308574e97797816cd7be1d6eaa69ae960d513bda56dd01",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P091",
+      "text_sha256": "3bde10ccdb3e9bac8c0d223a2af6edf43dd6dc1f7f698fc584c49c1a008866f3",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P094",
+      "text_sha256": "3f7119fdbbac80326e08a7f007db2330ac1fbdec5a9a123b5efc7d9faf7d32eb",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P035",
+      "text_sha256": "34d510577a40d23216bf30b71907eb5121db0a355a2cfa96fe4d9229a3420a90",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P048",
+      "text_sha256": "52aa1ed0e0a9670f24a9ce1ac70c11849a8e3178845c941e00567277dae8d266",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P051",
+      "text_sha256": "d8fe00af6ef46983231909a25d5445082b75f004caea083ded3b902bc91f5aff",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P053",
+      "text_sha256": "d8fe00af6ef46983231909a25d5445082b75f004caea083ded3b902bc91f5aff",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P057",
+      "text_sha256": "f6c324d9fc9651456eea03203c7c37d900005022788e7772decb5ce67f0d2d70",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P036",
+      "text_sha256": "ad5b2d846bc853483b11ec3deddace606d4a7cf71c361d0a5452d951093be38b",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P049",
+      "text_sha256": "6171a5a2d239a9ff7b09651ae2dfe37e22fd28535259ebe9f56d869217e4985d",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P066",
+      "text_sha256": "f33e03322f99a3db64b6399a937f81ad904a111a82b8d29215bd0524c4b6ff61",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P067",
+      "text_sha256": "ab30571fa122086a82b731d8cfb37d7a0ee1ceb4efaf37306848924ec234ca1f",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P081",
+      "text_sha256": "b064eed61d61a17d11e4f1deb83778fbe1ed54e6053de11ddca1b9e5b2b15ae6",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "A-P087",
+      "text_sha256": "a8eb1b4cbcda848947fad11d9b77656569d6cb29d8941d724e046ff540e82036",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P082",
+      "text_sha256": "dbd97434fc55467f83ef64b3ca332177daf0183860984469cf709647f2af9621",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    },
+    {
+      "location": "D-P098",
+      "text_sha256": "37b31e3ea246031e6a2c181140678ee1884d187a2928f307e8b636f5ce1c6616",
+      "findings": [],
+      "manual_review": "Exact candidate rechecked after wording edits: paragraph function and adjacent context, narrow claim, evidence link, units, terminology, prose and no new bibliography; duplicated candidates are alternatives for merging, not repeated insertion."
+    }
+  ],
+  "candidate_file_sha256": "05b76d668b1f2cc4b9b76880c4d6ae673c33f06768be74fd620065b28b920050",
+  "finding_count": 0,
+  "previous_finding_count": 15,
+  "previous_findings_resolved": "suspended compounds and dense hyphenation rewritten without changing numbers or scope",
+  "Word_modified": false
+}

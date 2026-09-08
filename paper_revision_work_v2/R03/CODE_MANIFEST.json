@@ -1,0 +1,63 @@
+{
+  "version": "R03_production_v1",
+  "code_identity": "859a02e917d71b4b51333b4db452403a97f1e6c479b6faf654d79f988c553846",
+  "files": [
+    {
+      "path": "cli.py",
+      "bytes": 3303,
+      "sha256": "e9c6d7a4aeb7eb3ce53569ef7fafe8beda08520ce50bf625c24993dea92e9e0b",
+      "change": "new_independent_implementation"
+    },
+    {
+      "path": "src/acceptance.py",
+      "bytes": 13267,
+      "sha256": "a8d9cb746d3726e89a6049b092df5965e64f38e229f7311e2ea4ae85cbe79ea9",
+      "change": "new_independent_implementation"
+    },
+    {
+      "path": "src/contracts.py",
+      "bytes": 8926,
+      "sha256": "c13d1a9ce1426e1f1694645b2e77e30913e119dbacccc0dd369c8603381bdc6d",
+      "change": "new_independent_implementation"
+    },
+    {
+      "path": "src/diagnostics.py",
+      "bytes": 5286,
+      "sha256": "5e55c99646a18d85b23c5f57360619483eda02e10532ef509d155a4621a9d2cb",
+      "change": "new_independent_implementation"
+    },
+    {
+      "path": "src/prediction.py",
+      "bytes": 8594,
+      "sha256": "d9c50ef586ff04b4e6494b74484b26d3c3a1b5f21e131b4a69e392de8501bf1b",
+      "change": "new_independent_implementation"
+    },
+    {
+      "path": "src/producer.py",
+      "bytes": 5458,
+      "sha256": "721356a1fac69a4fa571e783bf3f0be159d7c3b422deee8e31c2917a6f9e269a",
+      "change": "new_independent_implementation"
+    },
+    {
+      "path": "src/retained.py",
+      "bytes": 4301,
+      "sha256": "b19ab59c5ba9744e1251ddef89fd120daa739a471fefae41ec963b266433e3c2",
+      "change": "new_independent_implementation"
+    },
+    {
+      "path": "src/run_pipeline.py",
+      "bytes": 7349,
+      "sha256": "28f42e89bd5ab138c043d923549c2ad0eacd2fd00f4ef5039746c45518a83919",
+      "change": "new_independent_implementation"
+    },
+    {
+      "path": "src/test_pipeline.py",
+      "bytes": 10513,
+      "sha256": "fc8284d18f47e234ceb21b3e8f0c0d63f1961c71c5e818c13afb34bfcaf4887f",
+      "change": "new_independent_implementation"
+    }
+  ],
+  "source_references": "frozen/PROJECT_SOURCE_MANIFEST.json",
+  "runtime": "frozen/RUNTIME_MANIFEST.json",
+  "dependencies_are_copies": true
+}

@@ -1,0 +1,9 @@
+dependency,status,available_evidence_and_missing_object,affected_claim
+"LSOA income-domain rate, denominator and vintage",available in workbook LSOA sheet,"LSOA sheet A1:O32845 contains 2011 LSOA codes, 2019 LAD codes, Income Score(rate), mid-2015 total population excluding prisoners. Freeze and validate these fields before rebuilding; direct numerator is not separately provided.",rate/gap reconstruction
+LSOA polygons and LSOA→new Buckinghamshire membership,not located,LAD21 geometry is available; does not supply LSOA topology or matching-vintage membership.,gap and Moran support
+Published spatial-weight recipe,incomplete,"Notes give source geography but not complete neighbor/distance, normalization and island rules. Obtain recipe or explicitly predeclare a derived alternative.",Moran equivalence claim
+2021 population long table and MYEB3 source,available,LAD23 keys lack four former districts; explains simple-average fallback. Not LSOA income-domain denominator.,proxy provenance
+LAD21 polygons and LAD23 linkage,available; boundary equivalence unresolved,Key mapping does not establish unchanged boundaries. Record dated geometry crosswalk for all used keys.,regional map interpretation
+Original four-LAD deprivation workbook,available,"Read sheet dimensions, Notes and four codes; rate .06325, gap .1875, Moran .30 are historical simple means.",proxy reproduction
+Historical weather product metadata,incomplete,"Requests/cache values retained; historical models unspecified, attrs empty in sampled archives. Need actual response/model identity, not a new default download.",ERA5-specific/3-second/true-onset assertions
+UKPN raw export dictionary and cause code provenance,incomplete,"Source fields and implemented consensus map known; zero-C semantics, stage numbering, official code labels and true initial customers not fully documented.",initial availability and physical causation

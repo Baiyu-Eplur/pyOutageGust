@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "protected_files": 549,
+  "unchanged_protected_files": 548,
+  "authorized_active_source_changed": [
+    "D:\\Pyprogramme\\STST2603\\claude_branch\\scripts\\v3_validation\\v3_validation_pipeline.py"
+  ],
+  "missing_protected_files": [],
+  "large_inputs_full_hash_verified": [
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\data\\ukpn-iis.csv",
+      "sha256": "2c9c0b20c4650b7d765c5c05de37e4bd189206ddabea7019c9437337750daaba",
+      "full_hash_unchanged": true
+    },
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\rebuild_v3_full_stage\\outputs\\ukpn_full_stage_dataset_v3.csv",
+      "sha256": "0aad744eabd2e86f186cdb6072964fcea4492afaf34b8deaa94c51ce553dd16f",
+      "full_hash_unchanged": true
+    }
+  ],
+  "population_full_hash_unchanged": true,
+  "historical_cache_directory_files": 75983,
+  "cache_size_mtime_inventory_unchanged": true,
+  "requested_read_cache_files_full_hash_verified": 74896,
+  "prior_artifacts_unchanged_excluding_declared_state_updates": 138,
+  "new_network_requests": 0,
+  "models_run": 0,
+  "manuscripts_modified": 0
+}

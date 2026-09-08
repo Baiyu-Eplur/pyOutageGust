@@ -1,0 +1,8 @@
+main E0 development rank 25 25 -> 25 eta error 0.0
+main E0 later rank 18 19 -> 18 eta error 1.4210854715202004e-14
+main R0c development rank 27 27 -> 27 eta error 0.0
+main R0c later rank 20 21 -> 20 eta error 2.6645352591003757e-15
+weather E0 development rank 25 25 -> 25 eta error 0.0
+weather E0 later rank 17 18 -> 17 eta error 1.021405182655144e-14
+weather R0c development rank 27 27 -> 27 eta error 0.0
+weather R0c later rank 19 20 -> 19 eta error 4.884981308350689e-15

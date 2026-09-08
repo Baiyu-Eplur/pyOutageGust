@@ -1,0 +1,815 @@
+{
+  "patch_id": "RV-R03-20260905",
+  "kind": "review_delta_not_authoritative_local_ledger",
+  "local_ledger_reported_version": "MR-v1.2-R03",
+  "local_ledger_received": false,
+  "chat_available_ledger": "MR-v1.1",
+  "merge_policy": [
+    "先读取本地完整台账与原始证据，逐条核对；不覆盖/降级更晚版本",
+    "来源键属于本补丁命名空间；本地分配来源ID并保存映射，禁止抢占已用SRC号",
+    "保留历史与Word定位；本补丁不重置标题、PD或既有研究结果",
+    "若发现同一报告SHA和MR已有相同内容，记录已合并，不重复追加",
+    "R03检查通过是报告证据，正式重算只有R04实际产物存在才推进状态"
+  ],
+  "source_keys": [
+    "RV03-S01",
+    "RV03-S02",
+    "RV03-S03"
+  ],
+  "new_findings": [
+    {
+      "key": "RV03-N01",
+      "target_mr": [
+        "MR20",
+        "MR11"
+      ],
+      "title": "图10后期日历冗余与等价满秩基",
+      "role": "reported_rank_deficiency_and_review_algebra_inference"
+    }
+  ],
+  "execution_scope": {
+    "next_stage": "R04",
+    "primary": "all_valid",
+    "optional_shared_train_p99": "not_run_this_stage",
+    "core_formal": "authorized_by_next_stage_instruction",
+    "period_basis_repair": "permitted_if_equivalent_and_versioned",
+    "word_edit": false,
+    "auto_advance_R05_V_W": false
+  },
+  "updates": [
+    {
+      "target_mr": "MR01",
+      "title_for_matching": "事件时间与天气来自后续阶段",
+      "prior_word_anchors": [
+        "D-P017",
+        "D-P039",
+        "D-P054",
+        "D-P102",
+        "A-P060"
+      ],
+      "source_locators": [
+        "RV03-S01 §2",
+        "RV03-S02 开头/首行"
+      ],
+      "evidence_received": "新正式链R03/cli.py→run_pipeline.run→step0/load_events实际做过smoke，读取R02主表SHA 8ac332...，版本字段映射明确、无H0回退。旧v9已恢复H0，新链独立。",
+      "proposed_manuscript_action": "数据方法写实际时间代理/字段来源；可复现说明登记当前独立生产入口及档案身份。旧入口未改不等于新入口无效，但所有B1结果必须来自指定新链。",
+      "claim_ids": [
+        "CL01"
+      ],
+      "release_condition": "R04检查正式消费者及输出身份；输入修复不替代业务onset验证。",
+      "review_status": "输入消费和活动接口据报告完成；正式模型未运行",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR02",
+      "title_for_matching": "时区、并列和跨边界规则",
+      "prior_word_anchors": [
+        "D-P016",
+        "D-P017",
+        "D-P051",
+        "A-P013",
+        "A-P027",
+        "A-P060"
+      ],
+      "source_locators": [
+        "RV03-S01 §3"
+      ],
+      "evidence_received": "UTC/London全事件日期/研究窗/时期差1,845/2/2；主候选768/0/0，天气105/0/0。窗口采用历史UTC且结束日含全天，真实业务时区未确证。",
+      "proposed_manuscript_action": "§2及附录B补具体日历差异和采用UTC的冻结口径；候选成员相同不能推论日期fold不变。不把全事件差异套入模型样本。",
+      "claim_ids": [
+        "CL01",
+        "CL04"
+      ],
+      "release_condition": "R04读取实际窗口起止/总体并生成模型成员统计；保留业务时区限制。",
+      "review_status": "并列日历差异已回传；业务日历仍未决",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR03",
+      "title_for_matching": "未决事件身份与非重复记录",
+      "prior_word_anchors": [
+        "D-P016",
+        "D-P023",
+        "D-P029",
+        "D-P038",
+        "A-P024",
+        "A-P025",
+        "A-P027"
+      ],
+      "source_locators": [
+        "RV03-S01 §3"
+      ],
+      "evidence_received": "两个冲突ID仍保留全部原始聚合记录，均不进入主原因候选，不拆并ID。",
+      "proposed_manuscript_action": "保留记录资格/模型资格/业务身份三层区分，不将记录跨度写为连续失电。",
+      "claim_ids": [
+        "CL01"
+      ],
+      "release_condition": "R04实际模型成员核对；业务身份解释待源证据。",
+      "review_status": "R03资格对账据报告通过，科学边界不变",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR04",
+      "title_for_matching": "客户影响与恢复跨度的构造及验证边界",
+      "prior_word_anchors": [
+        "D-P007",
+        "D-P023",
+        "D-P025",
+        "D-P028",
+        "D-P030",
+        "A-P003",
+        "A-P018",
+        "A-P020",
+        "A-P023",
+        "A-P025"
+      ],
+      "source_locators": [
+        "RV03-S01 §1、§4"
+      ],
+      "evidence_received": "R03复用R02完整C/D/A构造证据；E为ln(1+C)，R为ln(D)，正式全样本结果未跑。",
+      "proposed_manuscript_action": "保留C/D正确公式及D=B；1.97倍等样本统计等R04重新生成，不能以smoke或R02全事件一致性补入。",
+      "claim_ids": [
+        "CL01"
+      ],
+      "release_condition": "R04正式描述统计/目标映射检查；客户/阶段语义限制仍保留。",
+      "review_status": "构造证据复用；新总体统计未产生",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR05",
+      "title_for_matching": "天气产品、缓存、时间窗与39.4m/s叙事",
+      "prior_word_anchors": [
+        "D-P006",
+        "D-P017",
+        "D-P040",
+        "D-P103",
+        "D-P138"
+      ],
+      "source_locators": [
+        "RV03-S01 §3、§6"
+      ],
+      "evidence_received": "不可查询5,611；可查询129,414=缺文件8,236+完整/窗口通过121,178。可读但值/小时/窗无效0，缺文件7,725键。R03复用R02全量检查，没有重扫缓存或新API；历史产品/响应单位仍未知。",
+      "proposed_manuscript_action": "附录A分开事件、键、键×小时、文件分母与缺失原因；正文来源撤回过强产品/阵风时间语义断言，39.4等候选风暴数字等待当前产物。",
+      "claim_ids": [
+        "CL01",
+        "CL02"
+      ],
+      "release_condition": "R04只更新受影响数值；来源若仍未决保持代理表述，不新默认补历史。",
+      "review_status": "缺失状态分母已展开；天气产品科学问题未关闭",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR06",
+      "title_for_matching": "gap定义从全国差值改为LAD内LSOA极差",
+      "prior_word_anchors": [
+        "D-P018",
+        "D-P040",
+        "D-P041",
+        "D-T02",
+        "A-T02"
+      ],
+      "source_locators": [
+        "RV03-S01 §3"
+      ],
+      "evidence_received": "Buck工作簿Rankings for all indicators及rate/gap/Moran字段有本地复制/哈希线索，普通LAD的gap仍为比例存储的LSOA极差。",
+      "proposed_manuscript_action": "表2及附录A用真实字段/单位，普通定义与Buck代理例外并列；不将全部比例输入乘100以迎合旧文字。",
+      "claim_ids": [
+        "CL01",
+        "CL05"
+      ],
+      "release_condition": "R04数值总账保存完整源路径/表列/单位；区域系数按当前样本解释。",
+      "review_status": "定义方向不变，新增本地表列线索",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR07",
+      "title_for_matching": "Moran的计算层级与未知空间权重",
+      "prior_word_anchors": [
+        "D-P018",
+        "D-T02",
+        "A-T02",
+        "A-P011"
+      ],
+      "source_locators": [
+        "RV03-S01 §3",
+        "RV03-S02 末段"
+      ],
+      "evidence_received": "Buck旧Moran均值仍是代理；合并区LSOA真值与空间权重未重建。",
+      "proposed_manuscript_action": "附录A层级说明不变；不要把代码重建/人口代码匹配当空间统计量核实。",
+      "claim_ids": [
+        "CL05",
+        "CL06"
+      ],
+      "release_condition": "后续源权重及LSOA重建/对照，或据未完成范围限制相关主张。",
+      "review_status": "科学缺口未变；R03无新权重验证",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR08",
+      "title_for_matching": "Buckinghamshire历史代理及后续重建决定",
+      "prior_word_anchors": [
+        "D-P018",
+        "D-P041",
+        "D-P087",
+        "D-P089",
+        "A-T02",
+        "A-P013",
+        "A-T08",
+        "A-T09"
+      ],
+      "source_locators": [
+        "RV03-S01 §3"
+      ],
+      "evidence_received": "四旧码2021人口缺失触发简单均值；.06325/.1875/.30和标记保留；候选主E/R各1,151，天气各293。",
+      "proposed_manuscript_action": "正文区域定义、表2和地图说明保留Buck代理例外；新增源表/字段身份。不把已有作者决定的LSOA重建降为未选择的可选任务。",
+      "claim_ids": [
+        "CL05",
+        "CL06"
+      ],
+      "release_condition": "R04核正式模型中的Buck成员数；重建影响对照继续留后续清单，未做不关闭科学问题。",
+      "review_status": "代理保留/来源对账推进；真值重建未执行",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR09",
+      "title_for_matching": "原因共识、分组来源与天气归因措辞",
+      "prior_word_anchors": [
+        "D-P038",
+        "D-P096",
+        "D-P097",
+        "A-P005",
+        "A-P007",
+        "A-T01",
+        "A-P070"
+      ],
+      "source_locators": [
+        "RV03-S01 §3、§7"
+      ],
+      "evidence_received": "原因冲突资格不变；R03尚未迁移六原因组正式结果，当前主/天气核心接口不能代表所有原因分析已更新。",
+      "proposed_manuscript_action": "数据章只写定义与资格，六组结果放敏感性/附录；无当前产物不继续引用旧系数证明新分组稳健。",
+      "claim_ids": [
+        "CL01",
+        "CL03"
+      ],
+      "release_condition": "R04覆盖表登记每组去向与生产者；仍缺定义/产物时明确未完成。",
+      "review_status": "资格核对完成；六组正式结果未完成",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR10",
+      "title_for_matching": "样本流、p99与极端恢复总体",
+      "prior_word_anchors": [
+        "D-P002",
+        "D-P032",
+        "D-T01",
+        "D-P038",
+        "D-P039",
+        "D-P097",
+        "A-T03"
+      ],
+      "source_locators": [
+        "RV03-S01 §3、§4",
+        "RV03-S02 主配置段"
+      ],
+      "evidence_received": "602/99在固定互斥归因中全部为取消H0截尾；主进入者85有时间/天气变化，天气进入者14，各标志重叠。R01已定主all_valid；可选主训练p99共享天气是另一配置，测试全有效。R1_compat主59,832/天气9,758只有成员表。",
+      "proposed_manuscript_action": "样本节明确成员增量来源；主恢复估计总体从旧截尾转向全有效D。H0→B1总变化不能全归因时间。停止重复询问主尾部规则，保留R1归因缺口及V01尾部敏感性。",
+      "claim_ids": [
+        "CL01",
+        "CL03"
+      ],
+      "release_condition": "R04实际n/训练/测试流；R1若不跑须说明未分离变化来源，候选n不直接换旧模型表。",
+      "review_status": "新增成员归因与主规则已明确；正式比较未生成",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR11",
+      "title_for_matching": "标准化、固定效应、VIF与系数尺度",
+      "prior_word_anchors": [
+        "D-P040",
+        "D-P041",
+        "D-P057",
+        "D-P060",
+        "D-P061",
+        "D-P064",
+        "A-P065"
+      ],
+      "source_locators": [
+        "RV03-S01 §4、§5"
+      ],
+      "evidence_received": "天气及恢复ln(1+C)训练ddof=1标准化，区域原尺度/人口log，年月加性，未知类别失败。新VIF含完整日历；后期独立分期日历秩亏。",
+      "proposed_manuscript_action": "§3及附录F准确列变量块/尺度/类别/协方差；VIF注明设计与旧诊断不同。与MR20共同记录等价日历基和有效参数数。",
+      "claim_ids": [
+        "CL02",
+        "CL03"
+      ],
+      "release_condition": "R04正式设计和VIF/协方差输出，后期等价性与可识别性检查。",
+      "review_status": "设计接口据报告实现；正式诊断及分期修复未完成",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR12",
+      "title_for_matching": "合并OOF R²与平均折R²",
+      "prior_word_anchors": [
+        "D-P054",
+        "D-P084",
+        "D-P086",
+        "D-P101",
+        "D-T04"
+      ],
+      "source_locators": [
+        "RV03-S01 §4",
+        "RV03-S02 OOF行"
+      ],
+      "evidence_received": "pooled/mean-fold分别命名，SSE/SST/n/尺度/成员输出；负R²允许、常量未定义，配对OOF测试通过。",
+      "proposed_manuscript_action": "方法、表4及图5/8采用真实pooled定义，同时明确mean-fold另列；不能用smoke分数作为新论文结果。",
+      "claim_ids": [
+        "CL03"
+      ],
+      "release_condition": "R04全量正式OOF成员、分母与得分验收；未来不确定性在V。",
+      "review_status": "评分代码检查完成；正式OOF待R04",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR13",
+      "title_for_matching": "贡献排序反转的配对条件与分支",
+      "prior_word_anchors": [
+        "D-P002",
+        "D-P010",
+        "D-P084",
+        "D-P094",
+        "D-P097",
+        "D-T04",
+        "D-P100",
+        "D-P108",
+        "D-P119"
+      ],
+      "source_locators": [
+        "RV03-S01 §4、§7"
+      ],
+      "evidence_received": "R0c G块含一次/平方/气压交互，K块含一次/平方；嵌套资格及预处理共享，保存两种条件增量。无正式四组分数。",
+      "proposed_manuscript_action": "方法按变量块和加入条件定义贡献；摘要/结果/结论保留反转稳定、点估计反转或无反转分支。",
+      "claim_ids": [
+        "CL03"
+      ],
+      "release_condition": "R04点结果，V02配对/过程不确定性与共同支持，不能提前定稳定反转。",
+      "review_status": "比较接口就绪；科学排序未验证",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR14",
+      "title_for_matching": "日分组与完整天气过程依赖",
+      "prior_word_anchors": [
+        "D-P011",
+        "D-P051",
+        "D-P054",
+        "D-P102",
+        "D-P105",
+        "D-P114",
+        "A-P057",
+        "A-P060"
+      ],
+      "source_locators": [
+        "RV03-S01 §4"
+      ],
+      "evidence_received": "60,436事件、1,096日期共同5折，fold SHA 449352...；全时期四组完整/训练折24设计通过。",
+      "proposed_manuscript_action": "方法写共同UTC日期fold及其诊断地位，删除主/天气各自分折的实施描述；完整风暴依赖仍由V处理。",
+      "claim_ids": [
+        "CL03",
+        "CL04"
+      ],
+      "release_condition": "R04实际折成员/OOF核对；V00/V02过程验证；历史开发限制不撤回。",
+      "review_status": "日期fold已实现；跨日过程依赖未解决",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR15",
+      "title_for_matching": "图9暴露侧多做一次log1p",
+      "prior_word_anchors": [
+        "D-P061",
+        "D-P103",
+        "D-P105",
+        "D-P106",
+        "A-P091"
+      ],
+      "source_locators": [
+        "RV03-S01 §4"
+      ],
+      "evidence_received": "新共同预测路径去除double-log，η=0输出0，归档读回预测一致。",
+      "proposed_manuscript_action": "图9及附录H的暴露log预测明确为η；同步图注/误差，旧确定性修复数不当B1结果。",
+      "claim_ids": [
+        "CL04",
+        "CL05"
+      ],
+      "release_condition": "R04真实图数据与导出核对，V评价校准/工程误差。",
+      "review_status": "新路径已修/检查通过；正式图未生成",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR16",
+      "title_for_matching": "图9恢复样本混合与窗口重复",
+      "prior_word_anchors": [
+        "D-P102",
+        "D-P103",
+        "D-P105",
+        "D-P106",
+        "D-P107",
+        "D-P108"
+      ],
+      "source_locators": [
+        "RV03-S01 §3、§4"
+      ],
+      "evidence_received": "UTC/London UNIQUE_ANY 7,300/7,298，对称差6；702事件重叠，窗口相加8,002；图9逐事件来源/尾部/版本接口存在，正式预测尚无。",
+      "proposed_manuscript_action": "先登记这些计数的筛选总体；主表/主模型/天气模型各列唯一数和分母，不能直接用7,300更新正文占比。新模型图9训练身份据ID重新核对，不沿用H0也不称独立验证。",
+      "claim_ids": [
+        "CL04"
+      ],
+      "release_condition": "R04实际风暴成员、客户/日数/权重与预测来源；V完整过程评价。",
+      "review_status": "窗口与来源接口推进；模型级分母/预测需正式产物",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR17",
+      "title_for_matching": "曲线、地图与参考人群的数学含义",
+      "prior_word_anchors": [
+        "D-P061",
+        "D-P077",
+        "D-P079",
+        "D-P087",
+        "D-P089",
+        "D-P093",
+        "A-P091",
+        "A-P092"
+      ],
+      "source_locators": [
+        "RV03-S01 §4",
+        "RV03-S02 图数据行"
+      ],
+      "evidence_received": "图4采用参考人群的个体完整设计预测，图6客户中心z=z²=0和共同日历，图7网格指数比；具体平均尺度需从CONTRACTS明确登记。",
+      "proposed_manuscript_action": "图4/6/7及附录H逐图声明目标、平均/反变换顺序、参考人群与支持；不把不同合法参考机械统一。",
+      "claim_ids": [
+        "CL05"
+      ],
+      "release_condition": "R04正式归档、consumer和最终图核对；未声明尺度不补造平均含义。",
+      "review_status": "场景接口据报告已修；平均尺度需落实到图表元数据",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR18",
+      "title_for_matching": "二次形状、GLM与三阶反向线索",
+      "prior_word_anchors": [
+        "D-P010",
+        "D-P044",
+        "D-P046",
+        "D-P048",
+        "D-P066",
+        "D-P068",
+        "D-P118",
+        "A-P094"
+      ],
+      "source_locators": [
+        "RV03-S01 §7",
+        "RV03-S02 六组/GLM行"
+      ],
+      "evidence_received": "GLM/三阶等没有本轮独立新生产者；旧三阶反向线索仍属受输入修复影响的H0。",
+      "proposed_manuscript_action": "保持形状结论分支及反向证据；无新GLM/三阶结果就不把旧证据用于证明B1形状稳健。",
+      "claim_ids": [
+        "CL02"
+      ],
+      "release_condition": "R04覆盖表与可恢复旧规格，V01正式形状比较。",
+      "review_status": "形状科学证据未新增；生产覆盖明确不足",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR19",
+      "title_for_matching": "最低点与物理单位不确定性",
+      "prior_word_anchors": [
+        "D-P002",
+        "D-P071",
+        "D-P073",
+        "D-P075",
+        "D-P079",
+        "D-P118",
+        "D-P120",
+        "A-P076",
+        "A-P080",
+        "A-P083",
+        "A-P086"
+      ],
+      "source_locators": [
+        "RV03-S01 §4"
+      ],
+      "evidence_received": "最低点接口保存β1/β2/β3、气压/阵风尺度、物理参考、支持/失败；所有区间为空，无旧Bootstrap回填。",
+      "proposed_manuscript_action": "图4/附录H只在明确条件下保留点估计；未产生合格CI就不画。禁止借硬编码区间恢复摘要阈值故事。",
+      "claim_ids": [
+        "CL02",
+        "CL05"
+      ],
+      "release_condition": "R04描述性点值及支持，V01决定地位、V03条件推断。",
+      "review_status": "接口检查完成；区间/稳健最低点未产生",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR20",
+      "title_for_matching": "分时段系数、尺度和CV汇总身份",
+      "prior_word_anchors": [
+        "D-P055",
+        "D-P111",
+        "D-P112",
+        "D-P114",
+        "D-P115",
+        "A-P061",
+        "A-P063",
+        "A-P089"
+      ],
+      "source_locators": [
+        "RV03-S01 §5",
+        "RV03-S02 图10行",
+        "RV03-S03 §1.2及R04-C"
+      ],
+      "evidence_received": "后期12,113事件：E18/19、R20/21；开发48,323事件E25/25、R27/27。2024仅1–3月、2023仅9–12月，年月编码精确冗余，不是扩大smoke可修的缺样本。",
+      "proposed_manuscript_action": "新增RV03-N01子记录：保持相同均值模型空间，确定满秩日历基；记录列映射、可识别实质参数、有效参数数、物理参考及支持边界。图10等修复正式结果，无效行保持空，不读H0填补。",
+      "claim_ids": [
+        "CL02",
+        "CL04"
+      ],
+      "release_condition": "R04允许局部编码修复；列空间/拟合/可识别参数及协方差处理可核查后生成图10，否则局部阻断而核心推进。",
+      "review_status": "新增局部分期阻断；全时期核心不受该已报告秩亏阻断",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR21",
+      "title_for_matching": "阶段组成、缺首阶段与客户—跨度关系",
+      "prior_word_anchors": [
+        "D-P032",
+        "D-P036",
+        "D-P080",
+        "D-P121",
+        "A-P027",
+        "A-P035",
+        "A-P044",
+        "A-P048",
+        "A-P050",
+        "A-P052",
+        "A-P054",
+        "A-P055"
+      ],
+      "source_locators": [
+        "RV03-S01 §4",
+        "RV03-S02 诊断行"
+      ],
+      "evidence_received": "step27从冻结实现/旧报告恢复raw ln(n_stages)规格；附录D公共箱/同组恢复总体接口已做smoke，正式结果未出。",
+      "proposed_manuscript_action": "明确阶段变量事后形成与描述性身份；新n/质量比例/客户—跨度关系从当前正式样本生成，不套旧9,806或不同开发样本。",
+      "claim_ids": [
+        "CL01",
+        "CL05",
+        "CL06"
+      ],
+      "release_condition": "R04数值与分箱验收，V01质量敏感性；不识别维修动作/调度机制。",
+      "review_status": "阶段控制生产重建；正式分析待运行",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR22",
+      "title_for_matching": "最终客户数与可用信息时点",
+      "prior_word_anchors": [
+        "D-P007",
+        "D-P012",
+        "D-P040",
+        "D-P058",
+        "D-P080",
+        "D-P094",
+        "D-P119",
+        "D-P124",
+        "A-P003",
+        "A-P052"
+      ],
+      "source_locators": [
+        "RV03-S01 §3、§7"
+      ],
+      "evidence_received": "R03没有新增真实业务onset或信息可用时点证据；C/原因/阶段仍涉及事后完整记录。",
+      "proposed_manuscript_action": "工程定位继续为回顾性条件关联；不因独立生产入口与OOF就改成故障初期可部署预测。",
+      "claim_ids": [
+        "CL05",
+        "CL06"
+      ],
+      "release_condition": "V03按拟保留用途核实信息时点，当前术语边界可确定记录。",
+      "review_status": "无新增业务时点证据；原限制保留",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR23",
+      "title_for_matching": "工程量级、误差与校准",
+      "prior_word_anchors": [
+        "D-P061",
+        "D-P077",
+        "D-P090",
+        "D-P103",
+        "D-P106",
+        "D-P107",
+        "D-P122",
+        "A-P091",
+        "A-P092"
+      ],
+      "source_locators": [
+        "RV03-S01 §4、§7",
+        "RV03-S02 图数据/验证行"
+      ],
+      "evidence_received": "预测/场景数据接口已修，但新完整误差/校准/过程验证及正式图形未做。",
+      "proposed_manuscript_action": "工程结果表分别报目标尺度、参考和误差来源；expη不自动是条件算术均值，相关性不替代校准。",
+      "claim_ids": [
+        "CL05"
+      ],
+      "release_condition": "R04当前描述量及图，V03工程校准/支持/区间。",
+      "review_status": "生产准备推进；工程科学证据尚无",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR24",
+      "title_for_matching": "图6/7是否推进主问题",
+      "prior_word_anchors": [
+        "D-P087",
+        "D-P089",
+        "D-P090",
+        "D-P092",
+        "D-P093"
+      ],
+      "source_locators": [
+        "RV03-S01 §4",
+        "RV03-S02 图4/6/7/9行"
+      ],
+      "evidence_received": "图6/7有当前归档数据消费者，无正式新图形导出；区域代理和LAD版本限制保留。",
+      "proposed_manuscript_action": "明确地图与网格服务的工程问题及指数拟合量，重算后决定主文/附录/暂撤建议；不得预先删除作者尚未裁决图。",
+      "claim_ids": [
+        "CL05",
+        "CL06"
+      ],
+      "release_condition": "R04新图及参考核对，V04/作者据证定去留。",
+      "review_status": "数据接口可用；正式图与最终结构地位未定",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR25",
+      "title_for_matching": "生产者、旧图回填与数字单一来源",
+      "prior_word_anchors": [
+        "D-P041",
+        "D-P048",
+        "D-P079",
+        "D-P114",
+        "A-P065",
+        "A-P094"
+      ],
+      "source_locators": [
+        "RV03-S01 §2、§4、§6",
+        "RV03-S02 全表"
+      ],
+      "evidence_received": "独立新运行链及重建诊断做过smoke；图形渲染和部分附录分支未迁移。旧step26_full_summary实为gust/cause诊断。549保护清单548不变，LOG追加3,916字节写入者未知；R03旧v9维持H0。",
+      "proposed_manuscript_action": "区分新正式入口、数据消费者、图形消费者和旧历史；列每项生产覆盖，旧日志中的拟合不得混入B1。保持真实路径/代码身份，不为“全部完成”回填旧输出。",
+      "claim_ids": [
+        "CL01",
+        "CL02",
+        "CL03",
+        "CL04",
+        "CL05"
+      ],
+      "release_condition": "R04实际全量结果与图表验收，R05项目级复审；故障只阻断其依赖分支。",
+      "review_status": "核心生产准备完成；全稿产物覆盖仍有缺口",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR26",
+      "title_for_matching": "主线、章节及修复历史分工",
+      "prior_word_anchors": [
+        "D-P002",
+        "D-P010",
+        "D-P013",
+        "D-P048",
+        "D-P055",
+        "D-P074",
+        "D-P075",
+        "D-P118",
+        "D-P123",
+        "A-P056",
+        "A-P078",
+        "A-P086",
+        "A-P094"
+      ],
+      "source_locators": [
+        "RV03-S01 §7",
+        "RV03-S03 §2及R04-F"
+      ],
+      "evidence_received": "本地报告台账已MR-v1.2-R03，保留29MR/6CL；本次未附完整文件。R03只有实现检查，尚无新工程发现。",
+      "proposed_manuscript_action": "增量合并本次审阅，不重置本地主台账；按形状/贡献/过程工程/敏感性组织结果职责，摘要/引言/结论分支随R04真实结果更新。六章仍为建议。",
+      "claim_ids": [
+        "CL01",
+        "CL02",
+        "CL03",
+        "CL04",
+        "CL05",
+        "CL06"
+      ],
+      "release_condition": "R04返回完整台账、来源映射及章节影响表；W阶段才落实Word。",
+      "review_status": "同步写作规则继续；本轮采用审阅补丁避免覆盖本地版本",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR27",
+      "title_for_matching": "文献、数据来源及术语引用",
+      "prior_word_anchors": [
+        "D-P006",
+        "D-P008",
+        "D-P016",
+        "D-P017",
+        "D-P018",
+        "D-P136",
+        "D-P138",
+        "D-P142",
+        "A-P007",
+        "A-T02"
+      ],
+      "source_locators": [
+        "RV03-S01 §2、§3、§6"
+      ],
+      "evidence_received": "复制运行库/源代码/参考数据有本地哈希，报告给输入/代码/fold身份；正式配置SHA未在附件列出，smoke SHA不能替代。来源未决项无新外部确证。",
+      "proposed_manuscript_action": "可复现记录区分本地运行原产物与本对话已读报告；引用和产品断言按实际来源核实，不把环境隔离当数据语义验证。",
+      "claim_ids": [
+        "CL01",
+        "CL05"
+      ],
+      "release_condition": "R04登记真实正式配置/模型/消费者身份；W前核对保留引用。",
+      "review_status": "溯源技术信息增加；业务/外部引用边界未变",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR28",
+      "title_for_matching": "C10编号缺口已闭合，科学问题转由MR08跟踪",
+      "prior_word_anchors": [
+        "D-P018",
+        "A-T02"
+      ],
+      "source_locators": [
+        "RV03-S01 §3"
+      ],
+      "evidence_received": "C10标题和根因继续明确，无新的编号缺口。",
+      "proposed_manuscript_action": "保持MR28编号衔接关闭，C10科学任务仍由MR08/MR06/MR07跟踪，不再重复要求标题。",
+      "claim_ids": [
+        "CL05",
+        "CL06"
+      ],
+      "release_condition": "后续按MR08重建条件判断科学闭合。",
+      "review_status": "编号缺口保持已闭合；不等于科学问题完成",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    },
+    {
+      "target_mr": "MR29",
+      "title_for_matching": "LAD21定位与LAD23人口/区域连接的边界兼容",
+      "prior_word_anchors": [
+        "D-P018",
+        "D-P041",
+        "A-P013",
+        "A-T02"
+      ],
+      "source_locators": [
+        "RV03-S01 §3"
+      ],
+      "evidence_received": "113个非空LAD21码均存在LAD23人口键，候选111码；113码完整边界兼容依据未决。已证实错配数量未提供；缺LAD5,762，其中151有坐标仍未补配。",
+      "proposed_manuscript_action": "数据/附录A分别写代码覆盖与边界等价证据，未知不填0、不称全部错配。区域讨论/地图保留具体限制。",
+      "claim_ids": [
+        "CL01",
+        "CL05",
+        "CL06"
+      ],
+      "release_condition": "继续定向寻找跨版源依据并记录影响范围；若证实影响输入的错误则版本化修复并重算依赖，不能当普通敏感性掩盖。",
+      "review_status": "代码覆盖已核，地理兼容仍未决",
+      "word_status": "尚未写入Word",
+      "evidence_level": "reported_by_local_audit; not_independently_reproduced_here"
+    }
+  ]
+}

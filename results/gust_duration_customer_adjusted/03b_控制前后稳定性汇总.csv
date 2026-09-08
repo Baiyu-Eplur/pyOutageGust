@@ -1,0 +1,5 @@
+term,spec,n_folds_same_sign,n_folds_p_lt_0.05,coefficient_cv
+z_gust_0h,orig,5,1,0.4445868135529393
+z_gust_0h,custadj,2,0,2.3023945900310183
+z_gust_0h_sq,orig,1,1,33.70410462628778
+z_gust_0h_sq,custadj,5,4,0.4717358095220667

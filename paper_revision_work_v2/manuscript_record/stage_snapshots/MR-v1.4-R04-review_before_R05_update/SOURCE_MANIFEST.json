@@ -1,0 +1,398 @@
+{
+  "checkpoint": "R04_completed_R05_not_started",
+  "date": "2026-09-05T22:16:50.471544+00:00",
+  "sources": [
+    {
+      "source_id": "SRC01",
+      "original_name": "代码流程核查与研究推进脉络.md",
+      "path": "evidence/SRC01_code_audit_20260905.md",
+      "role": "初步代码核查；已读报告，未在本环境读取其全部本地底层产物",
+      "size_bytes": 23349,
+      "sha256": "2479a2d139045dfdcc3f7a52909682e61bca1fb74617c645e57bc6c31f505b55"
+    },
+    {
+      "source_id": "SRC02",
+      "original_name": "RETURN_TO_CHATGPT.md",
+      "path": "evidence/SRC02_R00_R01_return_20260905.md",
+      "role": "R00–R01返回摘要；本轮S0-1按上下文对应R00–R01，不作为另一次独立审计",
+      "size_bytes": 3654,
+      "sha256": "0da24b04b188f17f7451528fe759dd56d81d7711d25faad951997639c5c37850"
+    },
+    {
+      "source_id": "SRC03",
+      "original_name": "R00_R01审阅与R02执行指令.md",
+      "path": "evidence/SRC03_R00_R01_review_R02.md",
+      "role": "本对话已给出的R00–R01审阅与下一步指令；是分析意见，不是新实验",
+      "size_bytes": 15425,
+      "sha256": "2edead79992d5b25ad08ea42b464fa82d350be50a514c50455422c41992b2f45"
+    },
+    {
+      "source_id": "SRC04",
+      "original_name": "50_数学审查本地核实.md",
+      "path": "evidence/SRC04_local_mathematical_audit.md",
+      "role": "早期本地数值核实；其中部分数学解释已被后续审查纠正",
+      "size_bytes": 35968,
+      "sha256": "866310ac63024196065780e7715369be23b7b6065b300d9025d50424906daf17"
+    },
+    {
+      "source_id": "SRC05",
+      "original_name": "最终逻辑审查_工程统计视角.md",
+      "path": "evidence/SRC05_logic_review.md",
+      "role": "L01–L12原逻辑审查；部分疑点已由SRC01/SRC02更新",
+      "size_bytes": 23407,
+      "sha256": "5424932ffa934adcf46dd6c81b9910fbd36e09f759ddf304c639be56b76cd59d"
+    },
+    {
+      "source_id": "SRC06",
+      "original_name": "补充实验与计算_人工确认清单.md",
+      "path": "evidence/SRC06_validation_worklist.md",
+      "role": "T01–T14原补证清单",
+      "size_bytes": 20569,
+      "sha256": "8cf39a22f47a4518b114ae76648d0628c2fd1d7fe63d175e3833953bd145f267"
+    },
+    {
+      "source_id": "SRC07",
+      "original_name": "修订审查与待补分析.md",
+      "path": "evidence/SRC07_previous_revision_log.md",
+      "role": "原Word→用户Markdown→当前Word的既有修订记录",
+      "size_bytes": 38014,
+      "sha256": "6c0a485a7b5ef6447f392cd15ec5c639803f7b909c4b9ea928c03926437599ae"
+    },
+    {
+      "source_id": "SRC08",
+      "original_name": "本地Codex接管_分步计划与提示词.md",
+      "path": "evidence/SRC08_execution_plan_before_ledger.md",
+      "role": "加入本台账前的v2执行计划快照",
+      "size_bytes": 66367,
+      "sha256": "41c5158b05bdb74f8720861fb88870feb657f868bc9f85fa919f236fac209241"
+    },
+    {
+      "source_id": "DOC01",
+      "original_name": "Draft_revised.docx",
+      "path": "evidence/DOC01_main_baseline.docx",
+      "role": "当前正文基线；本轮只读、未修改",
+      "size_bytes": 1119751,
+      "sha256": "196cef4abcdf4e6723b55035049c08de75613c3cc5a56314b264490f70e5926c"
+    },
+    {
+      "source_id": "DOC02",
+      "original_name": "Appendix_revised.docx",
+      "path": "evidence/DOC02_appendix_baseline.docx",
+      "role": "当前附录基线；本轮只读、未修改",
+      "size_bytes": 120515,
+      "sha256": "55f5c4f30fc75473d9da354b2819d3f8298904b8be94104ca3e107276696af8c"
+    },
+    {
+      "source_id": "OLD01",
+      "original_name": "Draft(2).docx",
+      "path": "evidence/OLD01_original_main.docx",
+      "role": "最初正文，用于历史追溯",
+      "size_bytes": 1463689,
+      "sha256": "bd9169585a1e894610b17b8ecfc82f2eb3021a6b889716f62072a989cbb199e7"
+    },
+    {
+      "source_id": "OLD02",
+      "original_name": "Appendix(6).docx",
+      "path": "evidence/OLD02_original_appendix.docx",
+      "role": "最初附录，用于历史追溯",
+      "size_bytes": 124631,
+      "sha256": "317459a9d4e93cf399e03ccea688a053e02af0c522c469376956c953fb62bc5b"
+    },
+    {
+      "source_id": "OLD03",
+      "original_name": "Paper1_Introduction_draft (6).md",
+      "path": "evidence/OLD03_user_main_revision.md",
+      "role": "用户前期措辞修改稿",
+      "size_bytes": 86586,
+      "sha256": "bbd8afd44085dde4c3c8c9a086e106b1c8c6fa199b300cc478f8d0997d8ace46"
+    },
+    {
+      "source_id": "OLD04",
+      "original_name": "Paper1_Appendices (1).md",
+      "path": "evidence/OLD04_user_appendix_revision.md",
+      "role": "用户前期措辞修改附录",
+      "size_bytes": 27456,
+      "sha256": "366477c8751d95150e6ae54fa175f6f4a408a046db7a783611957e59da1146b8"
+    },
+    {
+      "source_id": "SRC09",
+      "original_name": "RETURN_TO_CHATGPT(1).md",
+      "path": "evidence/SRC09_R02_return_20260905.md",
+      "role": "R02返回摘要；本地运行报告，非本对话独立重跑",
+      "size_bytes": 4426,
+      "sha256": "b28136c61d3244e18a162b31fcc766905f78b7b17f7941c1c01e671cc9c09389"
+    },
+    {
+      "source_id": "SRC10",
+      "original_name": "R02_report.md",
+      "path": "evidence/SRC10_R02_report_20260905.md",
+      "role": "R02_input_20260905完整报告；与SRC09同次运行，不算独立验证",
+      "size_bytes": 8905,
+      "sha256": "b8b7aca323238e8fb4185378faca05e1c61e18d9f4659daf08857c985366fcbe"
+    },
+    {
+      "source_id": "SRC11",
+      "original_name": "R02审阅与R03执行指令.md",
+      "path": "evidence/SRC11_R02_review_R03_20260905.md",
+      "role": "本对话R02审阅、台账裁决与R03指令；分析意见，不是新实验",
+      "size_bytes": 19416,
+      "sha256": "1187037f778942a7aa383e502d7712f159e6dbe1d399658859903233999d4609"
+    },
+    {
+      "source_id": "SRC12",
+      "original_name": "R03_report.md",
+      "path": "evidence/SRC12_R03_report.md",
+      "role": "R03本地执行报告，同一运行的总结，不是额外独立验证",
+      "size_bytes": 11215,
+      "sha256": "78448761ec44c160360faaaebe9bd4c959c1992e282b38006475b9807a0d6702"
+    },
+    {
+      "source_id": "SRC13",
+      "original_name": "R03_INPUT_ACCEPTANCE.md",
+      "path": "evidence/SRC13_R03_input_acceptance.md",
+      "role": "R02冻结产物的定向再读取/对账",
+      "size_bytes": 5161,
+      "sha256": "ef173039f6567051d594dcb3d4edba5cbb7a7d413f6b1a09ece4e98373ced435"
+    },
+    {
+      "source_id": "SRC14",
+      "original_name": "CONTRACTS.md",
+      "path": "evidence/SRC14_R03_contracts.md",
+      "role": "实际新代码实施规则，非正式模型结果",
+      "size_bytes": 6865,
+      "sha256": "432116f9520fe241b486117b6d0ddee1346aacfe33de04ab21827044fbd33a32"
+    },
+    {
+      "source_id": "SRC15",
+      "original_name": "PRODUCER_CONSUMER_MAP.md",
+      "path": "evidence/SRC15_R03_producers.md",
+      "role": "生产者定位及实现范围",
+      "size_bytes": 4686,
+      "sha256": "7aaf93a2905caf88f5a9b0304d51666647a856905d52844bd477552e7a377431"
+    },
+    {
+      "source_id": "SRC16",
+      "original_name": "tests_release.txt",
+      "path": "evidence/SRC16_R03_tests.txt",
+      "role": "17项针对性测试日志",
+      "size_bytes": 2192,
+      "sha256": "d685a14557706ffd0eef6dea0afe4886c9485da08696c9ad4c731ea98cd5fa59"
+    },
+    {
+      "source_id": "SRC17",
+      "original_name": "RUN_MANIFEST.json",
+      "path": "evidence/SRC17_R03_smoke.json",
+      "role": "720事件non_inferential_smoke运行清单",
+      "size_bytes": 2831,
+      "sha256": "b9d032eab139a119a98a44afa2295a07af49f88be18ebeb08a76a42764171d95"
+    },
+    {
+      "source_id": "SRC18",
+      "original_name": "full_candidate_period_rank.json",
+      "path": "evidence/SRC18_R03_period_rank.json",
+      "role": "完整候选矩阵秩检查，无拟合",
+      "size_bytes": 1399,
+      "sha256": "1b212b5fb4cdf33c7f6df533bb2ae8a82f06fc4b1d39f8c1cadd357b103cd221"
+    },
+    {
+      "source_id": "SRC19",
+      "original_name": "final_isolation.json",
+      "path": "evidence/SRC19_R03_isolation.json",
+      "role": "原文件/复制依赖哈希及LOG追加观察",
+      "size_bytes": 2312,
+      "sha256": "fdad97beaf8baa8409cb90f6522eb46dd318925a5fbd3dcb88b837bf9bbd1fc0"
+    },
+    {
+      "source_id": "SRC20",
+      "original_name": "R04_READINESS.md",
+      "path": "evidence/SRC20_R04_readiness.md",
+      "role": "后续具体配置和阻断，不是执行授权",
+      "size_bytes": 4004,
+      "sha256": "5ff4d7101fb80175352d997b445c476a7ac293ac94165238f41a1f5a9f8db739"
+    },
+    {
+      "source_id": "SRC21",
+      "original_name": "PRODUCTION_CHANGELOG.md",
+      "path": "evidence/SRC21_R03_code_changes.md",
+      "role": "独立实现及保留/失效状态",
+      "size_bytes": 2984,
+      "sha256": "38d47a631e3e52c7a3008110f332c153a5e0c734f7a54336ab3945063b2224dd"
+    },
+    {
+      "source_id": "SRC22",
+      "original_name": "SRC11_R03_instruction.txt",
+      "path": "evidence/SRC22_R03_pasted_instruction.txt",
+      "role": "用户本轮提供的原始执行指令；保留与原SRC11独立字节身份，非新实验",
+      "size_bytes": 18920,
+      "sha256": "af05d34f5f21adaabf71840a351a7e0a4f28612a159816be974dd73485055e12"
+    },
+    {
+      "source_id": "SRC23",
+      "original_name": "R04_design_support.json",
+      "path": "evidence/SRC23_R04_design_support.json",
+      "role": "24个完整总体/折设计支持检查，无拟合",
+      "size_bytes": 6119,
+      "sha256": "272e9241258634b18cd5f93f562090b37a38911d24d9b25d6923cad6ad178bad"
+    },
+    {
+      "source_id": "SRC24",
+      "original_name": "R03审阅与R04执行指令.md",
+      "path": "evidence/SRC24_R03审阅与R04执行指令.md",
+      "sha256": "7cbf340dd2a70b26e4f92a00a1554f265dc56830b4ebcfae79ec9364e51f743d",
+      "size_bytes": 21726,
+      "role": "本对话审阅、代数推论和下一步任务；不是新模型实验证据",
+      "review_source_key": "RV03-S03"
+    },
+    {
+      "source_id": "SRC25",
+      "original_name": "R03反馈_论文修订台账增量.md",
+      "path": "evidence/SRC25_R03反馈_论文修订台账增量.md",
+      "sha256": "f470198a93c15e0f02dc7a17dc1f23a7a65f11da9602b2baf7fe4a95e25eed9e",
+      "size_bytes": 30487,
+      "role": "本次29项MR/6CL及逐章审阅增量；不是本地完整台账",
+      "review_source_key": "RV03-S04"
+    },
+    {
+      "source_id": "SRC26",
+      "original_name": "REVISION_REVIEW_PATCH.json",
+      "path": "evidence/SRC26_REVISION_REVIEW_PATCH.json",
+      "sha256": "dd8e9e155dbb65cd8eaa6a0357000b40f614af51c201335d36919bf52f324805",
+      "size_bytes": 33264,
+      "role": "同一批审阅增量的结构化表示；需核对后合并",
+      "review_source_key": "RV03-S05"
+    },
+    {
+      "source_id": "SRC27",
+      "original_name": "R04_report.md",
+      "path": "evidence/SRC27_R04_report.md",
+      "role": "R04同次本地执行证据；非独立科学验证",
+      "sha256": "ac7e0aa0634bc132d4a7247c5c70f75f932657754f0823a67e533081688d08f0",
+      "size_bytes": 10595
+    },
+    {
+      "source_id": "SRC28",
+      "original_name": "H0_R1_B1_COMPARISON.md",
+      "path": "evidence/SRC28_H0_R1_B1_COMPARISON.md",
+      "role": "R04同次本地执行证据；非独立科学验证",
+      "sha256": "28122042c99cad8494c2d9012efd661d7e9934c586cf4caccc26ce1af69c1b67",
+      "size_bytes": 10828
+    },
+    {
+      "source_id": "SRC29",
+      "original_name": "NUMERIC_LEDGER.md",
+      "path": "evidence/SRC29_NUMERIC_LEDGER.md",
+      "role": "R04同次本地执行证据；非独立科学验证",
+      "sha256": "cfc40b54ec036de01568a2473278685ee523c95253079d49c95d66118950cc8d",
+      "size_bytes": 12291
+    },
+    {
+      "source_id": "SRC30",
+      "original_name": "RETAINED_ANALYSIS_COVERAGE.md",
+      "path": "evidence/SRC30_RETAINED_ANALYSIS_COVERAGE.md",
+      "role": "R04同次本地执行证据；非独立科学验证",
+      "sha256": "26d1c84a7eaa7f9b09be856047d353b4570dad1ffda5600e47815a49e2843d40",
+      "size_bytes": 6528
+    },
+    {
+      "source_id": "SRC31",
+      "original_name": "CALENDAR_BASIS_REPAIR.md",
+      "path": "evidence/SRC31_CALENDAR_BASIS_REPAIR.md",
+      "role": "R04同次本地执行证据；非独立科学验证",
+      "sha256": "73278a867aa6549d97fbe1d237aa47d103c9ae48e44ded88cdc40f062bf0563f",
+      "size_bytes": 6189
+    },
+    {
+      "source_id": "SRC32",
+      "original_name": "core_actual_acceptance.json",
+      "path": "evidence/SRC32_core_actual_acceptance.json",
+      "role": "R04同次本地执行证据；非独立科学验证",
+      "sha256": "911e3861835b53d242925ea6482c4d119d29c972ee9811a7112404071432e3cb",
+      "size_bytes": 9085
+    },
+    {
+      "source_id": "SRC33",
+      "original_name": "calendar_equivalence.json",
+      "path": "evidence/SRC33_calendar_equivalence.json",
+      "role": "R04同次本地执行证据；非独立科学验证",
+      "sha256": "8585edb7e4f1968397f8ecc2932cc8790e0ba2a6f4ad573c5e550daedfed49ad",
+      "size_bytes": 321303
+    },
+    {
+      "source_id": "SRC34",
+      "original_name": "R1_acceptance.json",
+      "path": "evidence/SRC34_R1_acceptance.json",
+      "role": "R04同次本地执行证据；非独立科学验证",
+      "sha256": "538b15cd530e20756bbd180f948853b649c9b368c7682287b8eaaa4579696245",
+      "size_bytes": 6224
+    },
+    {
+      "source_id": "SRC35",
+      "original_name": "supplement_execution.json",
+      "path": "evidence/SRC35_supplement_execution.json",
+      "role": "R04同次本地执行证据；非独立科学验证",
+      "sha256": "847c8d04c2bf50d43c25a4c05658c3f301a741cfde7ab03ba56a9613f6037f95",
+      "size_bytes": 2380
+    },
+    {
+      "source_id": "SRC36",
+      "original_name": "final_isolation.json",
+      "path": "evidence/SRC36_final_isolation.json",
+      "role": "R04同次本地执行证据；非独立科学验证",
+      "sha256": "5d8e2e99806222a4b55453a25d89ac00efc9fbe58caeed61719d142d2873ff47",
+      "size_bytes": 15978
+    },
+    {
+      "source_id": "SRC37",
+      "original_name": "FIGURE_MANIFEST.json",
+      "path": "evidence/SRC37_FIGURE_MANIFEST.json",
+      "role": "R04同次本地执行证据；非独立科学验证",
+      "sha256": "e09e15eb18dbe886e78a362b7c4e50fd783c14286cf772722606f28b04fdf431",
+      "size_bytes": 15221
+    },
+    {
+      "source_id": "SRC38",
+      "original_name": "customer_aggregation_comparison.json",
+      "path": "evidence/SRC38_customer_aggregation_comparison.json",
+      "role": "R04同次本地执行证据；非独立科学验证",
+      "sha256": "5eadbd21a5c0cf23cdd980c28f55f15cd354a333a6663222a8a8deb150e7c6b8",
+      "size_bytes": 570
+    },
+    {
+      "source_id": "SRC39",
+      "original_name": "SRC39_RETURN_PACKAGE_R04.zip",
+      "path": "evidence/SRC39_R04_review_SRC39_RETURN_PACKAGE_R04.zip",
+      "sha256": "dbaa6fd548acf8e834eae278649e2c8b2f1877056248d894f13ca090d49279b7",
+      "size_bytes": 9675445,
+      "role": "用户提供的完整R04包；包含全部本轮表/图/代码/检查及传入台账；未含完整原始数据和全部本地模型档案",
+      "incoming_source_id": "SRC39"
+    },
+    {
+      "source_id": "SRC40",
+      "original_name": "SRC40_R04_PACKAGE_REVIEW_CHECKS.json",
+      "path": "evidence/SRC40_R04_review_SRC40_R04_PACKAGE_REVIEW_CHECKS.json",
+      "sha256": "3bfbc1e7d3378a062d2909c69a44f5e63c1627288f6b564bc4230edb3b40f0be",
+      "size_bytes": 55620,
+      "role": "本轮独立只读聚合算术/文件哈希检查；不是原始数据重跑或科学验证",
+      "incoming_source_id": "SRC40"
+    },
+    {
+      "source_id": "SRC41",
+      "original_name": "SRC41_R04审阅与R05执行指令.md",
+      "path": "evidence/SRC41_R04_review_SRC41_R04审阅与R05执行指令.md",
+      "sha256": "1a381a85a16f57fb2f61a9cdab1c55b003baf7636710f45aff3d0d7e3482a46c",
+      "size_bytes": 28904,
+      "role": "本轮分析判断与供本地执行的R05指令；建议和授权范围不等于执行结果",
+      "incoming_source_id": "SRC41"
+    },
+    {
+      "source_id": "SRC42",
+      "original_name": "SRC42_R04_REVIEW_WRITING_IMPACT.md",
+      "path": "evidence/SRC42_R04_review_SRC42_R04_REVIEW_WRITING_IMPACT.md",
+      "sha256": "adcf4b2c2ebb855d352d81a5c706d14e41e69081755df9bbf6c62eeed3d73e0d",
+      "size_bytes": 14401,
+      "role": "本轮故事/RQ/章节/附录/段落修改计划；Word尚未落实",
+      "incoming_source_id": "SRC42"
+    }
+  ],
+  "version": "MR-v1.3-R04"
+}

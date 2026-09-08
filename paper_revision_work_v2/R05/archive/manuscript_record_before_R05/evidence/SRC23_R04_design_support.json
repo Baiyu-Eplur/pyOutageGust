@@ -1,0 +1,271 @@
+{
+  "fit_count": 0,
+  "scope": "24 full/OOF training designs and evaluation transforms only; no outcomes fitted or scored",
+  "code_identity": "859a02e917d71b4b51333b4db452403a97f1e6c479b6faf654d79f988c553846",
+  "checks": [
+    {
+      "target": "E0",
+      "group": "main",
+      "fold": -1,
+      "training_n": 60436,
+      "evaluation_n": 60436,
+      "rank": 26,
+      "columns": 26,
+      "unseen_categories": false,
+      "dates_disjoint": null
+    },
+    {
+      "target": "E0",
+      "group": "main",
+      "fold": 0,
+      "training_n": 48338,
+      "evaluation_n": 12098,
+      "rank": 26,
+      "columns": 26,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "E0",
+      "group": "main",
+      "fold": 1,
+      "training_n": 48351,
+      "evaluation_n": 12085,
+      "rank": 26,
+      "columns": 26,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "E0",
+      "group": "main",
+      "fold": 2,
+      "training_n": 48351,
+      "evaluation_n": 12085,
+      "rank": 26,
+      "columns": 26,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "E0",
+      "group": "main",
+      "fold": 3,
+      "training_n": 48351,
+      "evaluation_n": 12085,
+      "rank": 26,
+      "columns": 26,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "E0",
+      "group": "main",
+      "fold": 4,
+      "training_n": 48353,
+      "evaluation_n": 12083,
+      "rank": 26,
+      "columns": 26,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "E0",
+      "group": "weather",
+      "fold": -1,
+      "training_n": 9857,
+      "evaluation_n": 9857,
+      "rank": 26,
+      "columns": 26,
+      "unseen_categories": false,
+      "dates_disjoint": null
+    },
+    {
+      "target": "E0",
+      "group": "weather",
+      "fold": 0,
+      "training_n": 7612,
+      "evaluation_n": 2245,
+      "rank": 26,
+      "columns": 26,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "E0",
+      "group": "weather",
+      "fold": 1,
+      "training_n": 8057,
+      "evaluation_n": 1800,
+      "rank": 26,
+      "columns": 26,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "E0",
+      "group": "weather",
+      "fold": 2,
+      "training_n": 7786,
+      "evaluation_n": 2071,
+      "rank": 26,
+      "columns": 26,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "E0",
+      "group": "weather",
+      "fold": 3,
+      "training_n": 7922,
+      "evaluation_n": 1935,
+      "rank": 26,
+      "columns": 26,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "E0",
+      "group": "weather",
+      "fold": 4,
+      "training_n": 8051,
+      "evaluation_n": 1806,
+      "rank": 26,
+      "columns": 26,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "R0c",
+      "group": "main",
+      "fold": -1,
+      "training_n": 60436,
+      "evaluation_n": 60436,
+      "rank": 28,
+      "columns": 28,
+      "unseen_categories": false,
+      "dates_disjoint": null
+    },
+    {
+      "target": "R0c",
+      "group": "main",
+      "fold": 0,
+      "training_n": 48338,
+      "evaluation_n": 12098,
+      "rank": 28,
+      "columns": 28,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "R0c",
+      "group": "main",
+      "fold": 1,
+      "training_n": 48351,
+      "evaluation_n": 12085,
+      "rank": 28,
+      "columns": 28,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "R0c",
+      "group": "main",
+      "fold": 2,
+      "training_n": 48351,
+      "evaluation_n": 12085,
+      "rank": 28,
+      "columns": 28,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "R0c",
+      "group": "main",
+      "fold": 3,
+      "training_n": 48351,
+      "evaluation_n": 12085,
+      "rank": 28,
+      "columns": 28,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "R0c",
+      "group": "main",
+      "fold": 4,
+      "training_n": 48353,
+      "evaluation_n": 12083,
+      "rank": 28,
+      "columns": 28,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "R0c",
+      "group": "weather",
+      "fold": -1,
+      "training_n": 9857,
+      "evaluation_n": 9857,
+      "rank": 28,
+      "columns": 28,
+      "unseen_categories": false,
+      "dates_disjoint": null
+    },
+    {
+      "target": "R0c",
+      "group": "weather",
+      "fold": 0,
+      "training_n": 7612,
+      "evaluation_n": 2245,
+      "rank": 28,
+      "columns": 28,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "R0c",
+      "group": "weather",
+      "fold": 1,
+      "training_n": 8057,
+      "evaluation_n": 1800,
+      "rank": 28,
+      "columns": 28,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "R0c",
+      "group": "weather",
+      "fold": 2,
+      "training_n": 7786,
+      "evaluation_n": 2071,
+      "rank": 28,
+      "columns": 28,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "R0c",
+      "group": "weather",
+      "fold": 3,
+      "training_n": 7922,
+      "evaluation_n": 1935,
+      "rank": 28,
+      "columns": 28,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    },
+    {
+      "target": "R0c",
+      "group": "weather",
+      "fold": 4,
+      "training_n": 8051,
+      "evaluation_n": 1806,
+      "rank": 28,
+      "columns": 28,
+      "unseen_categories": false,
+      "dates_disjoint": true
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+sample,n,spearman_rho,p_value,effect_size_label
+full,62928,-0.15311694743636375,0.0,weak
+customers_gt0,53492,-0.5079292426056965,0.0,strong

@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "historical_files_unchanged": 549,
+  "historical_source_and_snapshot_pairs_unchanged": 91,
+  "prior_data_contract_table_snapshot_artifacts_unchanged": 223,
+  "raw_and_v3_full_hash_unchanged": true,
+  "population_hash_unchanged": true,
+  "cache_directory_size_mtime_unchanged": 75983,
+  "read_cache_full_hash_unchanged": 74896,
+  "unit_tests_passed": 15,
+  "new_reader_side_effect_guard_passed": true,
+  "legacy_module_imported": false,
+  "event_master_count": 135025,
+  "reader_sample_count": 121178,
+  "event_master_sha256": "8ac332cdb59d5eb961a01146757665a2600ebaada4265c8ac1ac30218c6f066d",
+  "entry_summary": {
+    "input_version": "R02_input_20260905",
+    "event_manifest": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R02\\data\\EVENT_MANIFEST.json",
+    "event_sha256": "8ac332cdb59d5eb961a01146757665a2600ebaada4265c8ac1ac30218c6f066d",
+    "n_total_events_v3": 135025,
+    "n_weather_matched_events": 121178,
+    "weather_matched_pct": 89.744862062581,
+    "cause_group_counts_in_matched_sample": {
+      "technical_asset": 52310,
+      "non_fault_or_unknown": 46240,
+      "weather_natural": 10616,
+      "third_party": 9668,
+      "external_or_customer": 1807,
+      "human_error": 536,
+      "unresolved": 1
+    },
+    "scope": "R02 input only; independent of historical v9 and its output directories",
+    "models_run": 0
+  },
+  "coverage": {
+    "n_events_in_sample": 121178,
+    "n_missing_LAD21CD_after": 135,
+    "gapfill_performed": false,
+    "note": "R02 producer already rejoined LAD and population; read-only coverage check"
+  },
+  "R02_model_boundary": "R02 provides inputs only. Implement R03 in an independent revision pipeline before model execution.",
+  "models_run": 0,
+  "numeric_recomputation": false,
+  "manuscripts_modified": 0
+}

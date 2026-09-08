@@ -1,0 +1,29 @@
+{
+  "models": {
+    "M00": "no gust",
+    "M01": "linear predictor",
+    "M02": "quadratic predictor",
+    "M03": "free cubic spline",
+    "M04": "monotone cubic spline",
+    "M05": "Softplus",
+    "M06": "lognormal CDF",
+    "M07": "Logistic",
+    "M08": "Gompertz"
+  },
+  "selected_for_conditional_bootstrap": {
+    "E": [
+      "M03",
+      "M05"
+    ],
+    "R": [
+      "M05",
+      "M08"
+    ],
+    "R_C": [
+      "M05",
+      "M08"
+    ]
+  },
+  "fit_status_source": "tables/fit_diagnostics.csv",
+  "formula_contract": "EXPERIMENT_CONTRACT.md"
+}

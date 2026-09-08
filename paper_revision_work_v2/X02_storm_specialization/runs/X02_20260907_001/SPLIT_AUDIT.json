@@ -1,0 +1,26 @@
+{
+  "cutoff_utc": "2023-10-29T00:00:00+00:00",
+  "rows": 135025,
+  "unique_ids": 135025,
+  "checks": {
+    "E_log": {
+      "parent_n": 60436,
+      "development_n": 3382,
+      "test_n": 1070
+    },
+    "R_log": {
+      "parent_n": 60436,
+      "development_n": 3382,
+      "test_n": 1070
+    },
+    "R_C_log": {
+      "parent_n": 60436,
+      "development_n": 3382,
+      "test_n": 1070
+    },
+    "P2_not_split": true,
+    "test_groups_not_mature_training": true,
+    "all_event_ids_unique": true
+  },
+  "stage_b_pass": true
+}

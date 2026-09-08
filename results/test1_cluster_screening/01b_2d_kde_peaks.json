@@ -1,0 +1,35 @@
+{
+  "n_2d_kde_local_maxima_above_2pct_threshold": 6,
+  "peaks": [
+    {
+      "x_log1p_customers_std": -0.5650564380943385,
+      "y_log1p_duration_std": 0.4917783018807049,
+      "density": 0.5429755818494669
+    },
+    {
+      "x_log1p_customers_std": 1.0205111558091278,
+      "y_log1p_duration_std": -0.6825102569361633,
+      "density": 0.0988323635739952
+    },
+    {
+      "x_log1p_customers_std": 2.2096868512367274,
+      "y_log1p_duration_std": -1.0561475256506214,
+      "density": 0.06778623496873488
+    },
+    {
+      "x_log1p_customers_std": -0.5650564380943385,
+      "y_log1p_duration_std": 2.466718150799984,
+      "density": 0.037580884360977854
+    },
+    {
+      "x_log1p_customers_std": -0.961448336570205,
+      "y_log1p_duration_std": 2.8937321721879354,
+      "density": 0.018301209682819806
+    },
+    {
+      "x_log1p_customers_std": -0.961448336570205,
+      "y_log1p_duration_std": 2.466718150799984,
+      "density": 0.018163397390369467
+    }
+  ]
+}

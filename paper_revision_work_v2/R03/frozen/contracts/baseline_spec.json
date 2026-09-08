@@ -1,0 +1,47 @@
+{
+  "contract_version": "R01_v1",
+  "status": "rule_defined",
+  "event_time": "earliest_available_stage_start_utc",
+  "study_start_inclusive": "2021-04-01T00:00:00Z",
+  "study_end_exclusive": "2024-04-01T00:00:00Z",
+  "historical_later_start": "2023-09-30T00:00:00Z",
+  "business_onset_verified": false,
+  "source_row_identity": [
+    "raw_sha256",
+    "source_row_number"
+  ],
+  "tie_break": [
+    "earliest_valid_start",
+    "persisted_source_row_number"
+  ],
+  "cause": "full_stage_consensus_else_unresolved",
+  "buckinghamshire": "retain_flagged_legacy_proxy_then_LSOA_rebuild_comparison",
+  "weather_exact_hour": true,
+  "rain_window_hours": 24,
+  "rain_min_valid_values": 24,
+  "new_weather_requests": false,
+  "targets": {
+    "E0": "log1p(C)",
+    "R0c": "log(duration_B_full_span_hours)"
+  },
+  "scale_cols": [
+    "gust_0h",
+    "precipitation_24h_sum",
+    "temperature_0h",
+    "pressure_msl_0h"
+  ],
+  "recovery_extra_scale": [
+    "log1p(C)"
+  ],
+  "sd_ddof": 1,
+  "regional_scale": "raw except natural log population",
+  "calendar": "additive year and month; training levels only",
+  "unseen_calendar": "explicit error pending V00 design decision",
+  "B1_primary_training_tail": "all_valid",
+  "B1_optional_p99_training_reference": "main_training_recovery_eligible",
+  "B1_evaluation_tail": "all_valid_no_test_y_trimming",
+  "OOF_primary_metric": "pooled_oof_r2",
+  "OOF_secondary_metric": "mean_fold_r2",
+  "R_stage_splits": "shared_global_UTC_date_fold_not_independent_weather_process_validation",
+  "executed_models": []
+}

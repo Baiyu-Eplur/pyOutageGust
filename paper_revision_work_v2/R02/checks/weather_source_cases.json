@@ -1,0 +1,8 @@
+{
+  "cache_missing_events": 8236,
+  "cache_missing_earliest_v3_any_numeric": 0,
+  "cache_missing_old_later_weather_present": 144,
+  "old_four_weather_complete": 121313,
+  "new_four_weather_complete": 121178,
+  "all_readable_attrs_empty": true
+}

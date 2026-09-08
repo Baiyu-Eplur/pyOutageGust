@@ -1,0 +1,33 @@
+{
+  "original_manifest_files": 549,
+  "original_all_hashes_match": false,
+  "unchanged_original_files": 548,
+  "append_only_log_exceptions": [
+    {
+      "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\LOG.md",
+      "baseline_SHA": "cd09ad5aea2fa42405da9e7d5b634590143d7d39e79f1eeb0730adc6af57857e",
+      "current_SHA": "9ad811b4f04e8aea7f2c4e7c32924bff0832381db5038c95e2a42ed45e9306b3",
+      "baseline_bytes_verified_as_exact_prefix": 193465,
+      "append_bytes": 4737,
+      "modified_timestamp_local": "2026-09-05T23:55:51.262810",
+      "attribution": "writer/process not established; no R05 executed code writes this path; log content belongs to separate historical cleanup",
+      "original_restored_or_modified_by_R05": false
+    }
+  ],
+  "original_code_and_Word_hashes_match": true,
+  "frozen_stage_manifest_files": 11184,
+  "frozen_all_hashes_match": true,
+  "scope": "named pre-R05 manifest paths, not an exhaustive assertion about every file on the entire disk",
+  "Word_SHA": {
+    "D:\\Pyprogramme\\STST2603\\claude_branch\\docs\\0905new\\Appendix_revised.docx": "55f5c4f30fc75473d9da354b2819d3f8298904b8be94104ca3e107276696af8c",
+    "D:\\Pyprogramme\\STST2603\\claude_branch\\docs\\0905new\\Draft_revised.docx": "196cef4abcdf4e6723b55035049c08de75613c3cc5a56314b264490f70e5926c"
+  },
+  "V_started": false,
+  "W_started": false,
+  "new_model_fits": 0,
+  "B1_MANIFEST": {
+    "path": "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\baseline\\B1_MANIFEST.json",
+    "bytes": 109737,
+    "sha256": "931674e355db9a92eae6e278f02320ca318ff8ab8868988e928e9559353d6e39"
+  }
+}

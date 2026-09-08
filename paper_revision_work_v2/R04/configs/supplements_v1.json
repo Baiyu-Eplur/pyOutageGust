@@ -1,0 +1,10 @@
+{
+  "run_id": "R04_supplements_v1",
+  "source_definitions": "R03 frozen step40_model_form_check, step40_1_cubic_gust_term, step36_six_group_clean_sample",
+  "input": "R02",
+  "primary_tail": "all_valid",
+  "cubic": "original zG^3 only, no model search; same B1 folds; reuse B1 quadratic predictions",
+  "six_groups": "R02 complete inputs and all six agreed causes; all_valid harmonized B1 membership, no old global p99; full + shared-date diagnostic",
+  "GLM": "original E NB2 BFGS maxiter200, Tweedie power1.5 log eql; R Gamma log, Tweedie1.5 log eql; LAD covariance; no search",
+  "producer_sha256": "437bbc71bdd4f25668f7d9d18555a28aeb9cb16df469236779a368ebd53cf036"
+}

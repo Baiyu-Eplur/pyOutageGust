@@ -1,0 +1,145 @@
+[
+  {
+    "figure": "figure01",
+    "title": "Locations of eligible incidents",
+    "source": "R02 candidate_main_E0",
+    "scale": "count",
+    "reference": "one event per incident; observed coordinates",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure01.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure01.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending"
+  },
+  {
+    "figure": "figure02",
+    "title": "Outcome distributions: all valid tails retained",
+    "source": "R02 main candidates",
+    "scale": "log1p C; log D",
+    "reference": "n=60,436 in both panels; different outcomes",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure02.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure02.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending"
+  },
+  {
+    "figure": "figure03",
+    "title": "Retrospective analysis periods",
+    "source": "frozen calendar contract",
+    "scale": "UTC dates",
+    "reference": "study half-open [2021-04-01, 2024-04-01)",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure03.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure03.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending"
+  },
+  {
+    "figure": "figure04",
+    "title": "Gust reference curves — no minimum confidence intervals",
+    "source": "formal figure4_curve_data/reference",
+    "scale": "exp(mean eta)",
+    "reference": "each model estimation population; per-row raw gust grid, fixed mean physical pressure",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure04.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure04.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending"
+  },
+  {
+    "figure": "figure05",
+    "title": "Recovery information under paired evaluation",
+    "source": "core metrics.json",
+    "scale": "pooled OOF R2",
+    "reference": "control / +gust / +customers / both; separate populations",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure05.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure05.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending"
+  },
+  {
+    "figure": "figure06",
+    "title": "Regional reference surfaces; Buckinghamshire proxy retained",
+    "source": "formal figure6 data; copied LAD21 geometry",
+    "scale": "exp(weighted mean eta)",
+    "reference": "common calendar; weather/log-C center; LAD21/23 compatibility unresolved",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure06.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure06.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending"
+  },
+  {
+    "figure": "figure07",
+    "title": "Range of the fitted reference curves",
+    "source": "formal figure7 reference JSON",
+    "scale": "exponentiated grid max/min ratio",
+    "reference": "not endpoint ratio or causal importance",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure07.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure07.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending"
+  },
+  {
+    "figure": "figure08",
+    "title": "Conditional information contributions — point estimates",
+    "source": "formal contributions.json",
+    "scale": "R2 percentage points",
+    "reference": "paired within each population; no uncertainty/stability claim",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure08.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure08.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending"
+  },
+  {
+    "figure": "figure09",
+    "title": "Named-window predictions: distinct descriptive and date-OOF identities",
+    "source": "formal figure9 event CSVs",
+    "scale": "eta vs log target; no double log",
+    "reference": "UNIQUE_ANY; overlaps listed once; no true process holdout",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure09.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure09.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending"
+  },
+  {
+    "figure": "figure10",
+    "title": "Period comparison using equivalent full-rank calendar bases",
+    "source": "periods_v2 archives; period_comparison.csv",
+    "scale": "physical quadratic coefficient",
+    "reference": "each period own training scale; no overlapping-CV nominal intervals",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure10.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figure10.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending"
+  },
+  {
+    "figure": "figureD1",
+    "title": "Stage composition and restoration spans",
+    "source": "formal stage_composition.csv",
+    "scale": "mean D hours",
+    "reference": "shared bins within population; descriptive, not repair actions",
+    "files": [
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figureD1.png",
+      "D:\\Pyprogramme\\STST2603\\claude_branch\\paper_revision_work_v2\\R04\\figures\\figureD1.pdf"
+    ],
+    "run_id": "R04_B1_all_valid_v1",
+    "visual_review": "pending"
+  }
+]

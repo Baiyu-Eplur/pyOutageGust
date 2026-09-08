@@ -1,0 +1,167 @@
+{
+  "project": {
+    "authority": "manuscript_record/REVISION_ITEMS.json",
+    "scope": "R05 candidates; paper not submission-ready"
+  },
+  "artifacts": [
+    {
+      "id": "candidate",
+      "path": "R05/MANUSCRIPT_REWRITE_CANDIDATES.md",
+      "status": "ACTIVE",
+      "role": "review_candidate",
+      "required_for_release": true
+    }
+  ],
+  "authority_sources": [
+    {
+      "id": "B1",
+      "status": "VERIFIED",
+      "path": "baseline/B1_MANIFEST.json"
+    }
+  ],
+  "contract": {
+    "questions": [
+      {
+        "id": "RQ1"
+      },
+      {
+        "id": "RQ2"
+      },
+      {
+        "id": "RQ3"
+      }
+    ]
+  },
+  "alignment": [
+    {
+      "question_id": "RQ1",
+      "method": "quadratic/cubic/period",
+      "evidence": "conditional minima and cubic paired OOF",
+      "result": "conditional positive curvature",
+      "interpretation": "model-specific shape",
+      "limitation": "V01/CI pending",
+      "contribution": "bounded incident-conditioned association"
+    },
+    {
+      "question_id": "RQ2",
+      "method": "paired blocks",
+      "evidence": "12OOF blocks",
+      "result": "conditional point ordering differs",
+      "interpretation": "retrospective information",
+      "limitation": "paired uncertainty/process pending",
+      "contribution": "population-specific comparison"
+    },
+    {
+      "question_id": "RQ3",
+      "method": "period/window/source scope",
+      "evidence": "8period/12fig/source inventory",
+      "result": "scope constrained",
+      "interpretation": "no engineering deployment proof",
+      "limitation": "V02/V03/source pending",
+      "contribution": "applicability limits"
+    }
+  ],
+  "issues": [
+    {
+      "id": "SOURCE",
+      "severity": "S3",
+      "status": "OPEN",
+      "evidence_status": "CONFIRMED",
+      "description": "regional reconstruction / source conditions before dependent validation"
+    },
+    {
+      "id": "SHAPE",
+      "severity": "S3",
+      "status": "OPEN",
+      "evidence_status": "CONFIRMED",
+      "description": "stable shape/minimum not validated"
+    },
+    {
+      "id": "CONTRIBUTION",
+      "severity": "S3",
+      "status": "OPEN",
+      "evidence_status": "CONFIRMED",
+      "description": "ordering uncertainty and process validation absent"
+    },
+    {
+      "id": "ENGINEERING",
+      "severity": "S3",
+      "status": "OPEN",
+      "evidence_status": "CONFIRMED",
+      "description": "engineering calibration absent"
+    },
+    {
+      "id": "WORD",
+      "severity": "S3",
+      "status": "OPEN",
+      "evidence_status": "CONFIRMED",
+      "description": "Word/citation/layout not yet updated"
+    }
+  ],
+  "release": {
+    "status": "R05_CONDITIONAL_FOR_V",
+    "candidate_artifact_ids": [
+      "candidate"
+    ],
+    "checked_hashes": {
+      "candidate": "05b76d668b1f2cc4b9b76880c4d6ae673c33f06768be74fd620065b28b920050"
+    },
+    "required_checks": [
+      "R05_numeric",
+      "R05_candidate",
+      "W_final"
+    ],
+    "completed_checks": [
+      "R05_numeric",
+      "R05_candidate"
+    ],
+    "visual_check": "PASSED"
+  },
+  "terminology": [
+    {
+      "id": "score",
+      "preferred": "pooled OOF R²",
+      "prohibited": [
+        "causal variance shares are established"
+      ]
+    },
+    {
+      "id": "time",
+      "preferred": "earliest valid recorded start time",
+      "prohibited": [
+        "true initial customer counts were verified"
+      ]
+    },
+    {
+      "id": "span",
+      "preferred": "recorded restoration span",
+      "prohibited": [
+        "restoration span equals customer minutes lost"
+      ]
+    }
+  ],
+  "style_profile": {
+    "protected_terms": [
+      "pooled OOF",
+      "date-group",
+      "full-fit",
+      "reference",
+      "ln",
+      "CR1",
+      "LAD",
+      "customer",
+      "gust",
+      "covariance",
+      "stage",
+      "main",
+      "weather",
+      "R²",
+      "physical",
+      "conditional",
+      "period",
+      "model",
+      "population"
+    ],
+    "stock_phrases": []
+  }
+}

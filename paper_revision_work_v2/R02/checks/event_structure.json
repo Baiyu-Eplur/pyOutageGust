@@ -1,0 +1,31 @@
+{
+  "tie_metadata_fields": [
+    "Spatial Coordinates",
+    "Cause Code",
+    "licence_area",
+    "regulatory_year",
+    "substation",
+    "SiteFunctionalLocation"
+  ],
+  "tie_metadata_conflict_counts": {
+    "Spatial Coordinates": 0,
+    "Cause Code": 0,
+    "licence_area": 0,
+    "regulatory_year": 0,
+    "substation": 0,
+    "SiteFunctionalLocation": 0
+  },
+  "all_stage_geography_conflict_counts": {
+    "Spatial Coordinates": 0,
+    "licence_area": 0,
+    "substation": 0,
+    "SiteFunctionalLocation": 0
+  },
+  "source_rows": 237901,
+  "events": 135025,
+  "earliest_tie_events": 24893,
+  "raw_offset_counts": {
+    "+01:00": 128323,
+    "+00:00": 109578
+  }
+}
