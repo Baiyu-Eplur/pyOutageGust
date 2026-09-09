@@ -1,0 +1,22 @@
+written
+written D:\Pyprogramme\pyOutageGust\results\new\20260909164707\results\paper\Extended_paper_draft.docx
+written D:\Pyprogramme\pyOutageGust\results\new\20260909164707\results\paper\NatComms_extract_draft.docx
+Traceback (most recent call last):
+  File "D:\Pyprogramme\pyOutageGust\analysis_new\document_plan.py", line 55, in <module>
+    main(Path(sys.argv[1]))
+  File "D:\Pyprogramme\pyOutageGust\analysis_new\document_plan.py", line 33, in main
+    if p.style.name == 'Title':
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Pyprogramme\pyOutageGust\analysis_new\runner.py", line 159, in <module>
+    worker(sys.argv[2])
+  File "D:\Pyprogramme\pyOutageGust\analysis_new\runner.py", line 150, in worker
+    module.main()
+  File "D:\Pyprogramme\pyOutageGust\analysis_new\documents.py", line 37, in main
+    subprocess.run([py, '-X', 'utf8', '-B', str(PROJECT/'analysis_new/document_plan.py'), str(ROOT)], env=env, check=True)
+  File "C:\Users\haoya\.conda\envs\pyoutagegust\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Users\\haoya\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe', '-X', 'utf8', '-B', 'D:\\Pyprogramme\\pyOutageGust\\analysis_new\\document_plan.py', 'D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909164707']' returned non-zero exit status 1.

@@ -1,0 +1,206 @@
+{
+  "E0": {
+    "n": 60437,
+    "quadratic": {
+      "sse": 237969.4622547212,
+      "bic": 83117.62095497215
+    },
+    "one_knot": {
+      "k1": 13.0,
+      "sse": 237591.89185664948,
+      "bic": 83021.65341368355
+    },
+    "two_knot": {
+      "k1": 14.0,
+      "k2": 26.0,
+      "sse": 237417.5514557283,
+      "bic": 82988.29897335534,
+      "profile_region_95": {
+        "k1": [
+          13.0,
+          14.0
+        ],
+        "k2": [
+          24.0,
+          29.0
+        ],
+        "n_cells": 10
+      },
+      "bootstrap": {
+        "B": 500,
+        "k1_pct_2.5_50_97.5": [
+          13.0,
+          14.0,
+          15.0
+        ],
+        "k2_pct_2.5_50_97.5": [
+          24.0,
+          26.0,
+          29.524999999999977
+        ],
+        "k1_sd": 0.7701921838086907,
+        "k2_sd": 1.8513767849900244
+      }
+    },
+    "two_vs_one_LR": {
+      "stat": 44.363797107352816,
+      "p_2df": 2.3255402468047812e-10
+    },
+    "nested_cv": {
+      "fold_knots_2": [
+        [
+          14.0,
+          25.0
+        ],
+        [
+          13.0,
+          29.0
+        ],
+        [
+          14.0,
+          26.0
+        ],
+        [
+          14.0,
+          25.0
+        ],
+        [
+          14.0,
+          26.0
+        ]
+      ],
+      "rmse_two_knot": 1.9864794242583639,
+      "rmse_one_knot": 1.9869395330927375,
+      "rmse_quadratic": 1.98868226594467
+    },
+    "selected": [
+      14.0,
+      25.0
+    ],
+    "selection_rule": "LR p<0.01 and both bootstrap 95% widths <= 6 m/s",
+    "ramp": {
+      "k1": 14.0,
+      "k2": 25.0,
+      "slope": 0.12146172840850161,
+      "se_twoway": 0.013842871680209508,
+      "p": 2.4793463583605847e-14,
+      "slope_below_k1": -0.026952197980057893,
+      "se_below_k1": 0.004431726365154902,
+      "bic": 82903.340891379,
+      "profile_region_95": {
+        "k1": [
+          13.0,
+          14.0
+        ],
+        "k2": [
+          24.0,
+          27.0
+        ]
+      },
+      "bootstrap": {
+        "B": 300,
+        "k1_pct": [
+          13.0,
+          14.0,
+          15.0
+        ],
+        "k2_pct": [
+          24.0,
+          25.0,
+          28.0
+        ]
+      },
+      "adj_r2": 0.03719116571898862,
+      "lr_two_hinge_vs_ramp": {
+        "stat": 1.4739685683888089,
+        "p_1df": 0.22472058536821687
+      }
+    },
+    "unconstrained_selected": [
+      14.0,
+      26.0
+    ],
+    "form": "three-segment plateau: free slope below k1, ramp k1-k2, constant above k2",
+    "final_selection_rule": "Replicate advisor E0 plateau specification using its freshly profiled knots; original hinge selection retained separately.",
+    "conditional_scope": "Main gust effect at mean pressure; retained gust-pressure interaction changes the high-gust slope at other pressures."
+  },
+  "R0c": {
+    "n": 59834,
+    "quadratic": {
+      "sse": 95804.66017851373,
+      "bic": 28474.074879373027
+    },
+    "one_knot": {
+      "k1": 17.0,
+      "sse": 95786.58090360847,
+      "bic": 28462.78255377627
+    },
+    "two_knot": {
+      "k1": 14.0,
+      "k2": 20.0,
+      "sse": 95758.94795607103,
+      "bic": 28456.518208999263,
+      "profile_region_95": {
+        "k1": [
+          8.0,
+          15.0
+        ],
+        "k2": [
+          18.0,
+          21.0
+        ],
+        "n_cells": 15
+      },
+      "bootstrap": {
+        "B": 500,
+        "k1_pct_2.5_50_97.5": [
+          8.0,
+          13.0,
+          16.0
+        ],
+        "k2_pct_2.5_50_97.5": [
+          18.0,
+          19.0,
+          25.0
+        ],
+        "k1_sd": 2.521487656126835,
+        "k2_sd": 1.7617389136872694
+      }
+    },
+    "two_vs_one_LR": {
+      "stat": 17.263674117253988,
+      "p_2df": 0.00017833672903016888
+    },
+    "nested_cv": {
+      "fold_knots_2": [
+        [
+          15.0,
+          20.0
+        ],
+        [
+          13.0,
+          19.0
+        ],
+        [
+          13.0,
+          20.0
+        ],
+        [
+          13.0,
+          19.0
+        ],
+        [
+          8.0,
+          18.0
+        ]
+      ],
+      "rmse_two_knot": 1.2693678424051023,
+      "rmse_one_knot": 1.2694501510297342,
+      "rmse_quadratic": 1.2694558934436466
+    },
+    "selected": [
+      17.0
+    ],
+    "selection_rule": "LR p<0.01 and both bootstrap 95% widths <= 6 m/s"
+  }
+}

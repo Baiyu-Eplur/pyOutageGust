@@ -1,0 +1,80 @@
+[
+  {
+    "reference_file": "build_doc.js",
+    "reference_sha256": "1453aca3d61712b6dcb7c2daca1e575d4b990179a75a56a250149742fcd9f9c4",
+    "project_file": "analysis_new/build_doc.js",
+    "usage": "project-owned adaptation; runtime imports never access reference directory"
+  },
+  {
+    "reference_file": "build_papers.js",
+    "reference_sha256": "b3ee6757292ead0753d02e11d8cd739a6a1a8656b75fc3d847337403a5c66f44",
+    "project_file": "analysis_new/build_papers.js",
+    "usage": "project-owned adaptation; runtime imports never access reference directory"
+  },
+  {
+    "reference_file": "district_day_fragility.py",
+    "reference_sha256": "06b0472a194e1779864d0611fab64135b6c46c9d965fbe88c252528a6e74a632",
+    "project_file": "analysis_new/district_day_fragility.py",
+    "usage": "project-owned adaptation; runtime imports never access reference directory"
+  },
+  {
+    "reference_file": "final_models.py",
+    "reference_sha256": "8176b5c9bb05e4b47a44491212e51b4fb67466b9ced03f73f8c8c28afc591276",
+    "project_file": "analysis_new/final_models.py",
+    "usage": "project-owned adaptation; runtime imports never access reference directory"
+  },
+  {
+    "reference_file": "fragility_demo.py",
+    "reference_sha256": "46ac16679d9759bc3b5dff6f52a8f5dc23fa684ef51510665dbeb63902225418",
+    "project_file": "analysis_new/fragility_demo.py",
+    "usage": "project-owned adaptation; runtime imports never access reference directory"
+  },
+  {
+    "reference_file": "fragility_surfaces.py",
+    "reference_sha256": "5886567e82d62b71fe13020fb5c0c3747fd13eef4a7d29988457af358de2c8c8",
+    "project_file": "analysis_new/fragility_surfaces.py",
+    "usage": "project-owned adaptation; runtime imports never access reference directory"
+  },
+  {
+    "reference_file": "knot_estimation.py",
+    "reference_sha256": "155a75cc6ec4b7c15e6f9b8d0fddcbf8084689ff0657521cefd05a67601bdd38",
+    "project_file": "analysis_new/knot_estimation.py",
+    "usage": "project-owned adaptation; runtime imports never access reference directory"
+  },
+  {
+    "reference_file": "model_selection.py",
+    "reference_sha256": "84530c4fa18bbe565f22aac39fec310b25978d82c319e877775030202f9dab8f",
+    "project_file": "analysis_new/model_selection.py",
+    "usage": "project-owned adaptation; runtime imports never access reference directory"
+  },
+  {
+    "reference_file": "paper_extras.py",
+    "reference_sha256": "b380b5bfce604e5da86aff4d52ff0ff6c1b56afa3605ed99b761c5362d0e2560",
+    "project_file": "analysis_new/paper_extras.py",
+    "usage": "project-owned adaptation; runtime imports never access reference directory"
+  },
+  {
+    "reference_file": "plateau_model.py",
+    "reference_sha256": "d3b29a5341ef5eebad3ee19c46d23bba3a10f64df68737cae6edd1f8d6501d9f",
+    "project_file": "analysis_new/plateau_model.py",
+    "usage": "project-owned adaptation; runtime imports never access reference directory"
+  },
+  {
+    "reference_file": "plot_model_selection.py",
+    "reference_sha256": "00871fceda48bcb0de754a007e0884001d491c76487b0e4514bca97098c6234b",
+    "project_file": "analysis_new/plot_model_selection.py",
+    "usage": "project-owned adaptation; runtime imports never access reference directory"
+  },
+  {
+    "reference_file": "run_main_regression.py",
+    "reference_sha256": "fc712a3491e75bc4fb57371815f216d2dd6da0f1c53b53355f142fbd4b798ff4",
+    "project_file": "review_package/code/run_main_regression.py",
+    "usage": "reuse existing project baseline via adapter"
+  },
+  {
+    "reference_file": "weather_only_regression.py",
+    "reference_sha256": "e125b81f4a676f1526aced6c2d9923fab247fbb63d1146dcac23cf3e87fb6ecc",
+    "project_file": "analysis_new/weather_only_regression.py",
+    "usage": "project-owned adaptation; runtime imports never access reference directory"
+  }
+]

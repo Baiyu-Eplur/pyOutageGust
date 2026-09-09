@@ -19,6 +19,8 @@ deepening it.
 
 ## Where Claude Code may write
 
+- `main_new.py`, `analysis_new/`, `results/new/` — 2026-09-09 用户进一步授权学习并独立复现导师全流程。新入口直接复用自己的样本、旧回归和必要新模块；导师包继续只读。新运行按秒级时间隔离，记录目的、步骤、源码和输入指纹，详见 docs/NEW_ANALYSIS_GUIDE.md。
+
 - `results/pretest/` — 本轮全部旧脚本的新增分析输出及中间数据，按类别/秒级运行时间保存。archive 内迁移前结果只读；运行记录位于 runs。
 - `main.py`, `pretestmain.py`, `pretest_paths.py` — 用户授权建立的统一入口及路径模块；功能开关与运行目的只在 main.py 顶部设置。
 - `data/generated/`, `review_package/results/` — 旧输出位置已停用；重跑必须经 main.py 写入 results/pretest。
@@ -36,7 +38,7 @@ deepening it.
 
 2026-09-09 起，开发修改逐步记入本文件同级的 `LOG.md`；每次执行分析另在
 `results/pretest/runs/<YYYYMMDDHHMMSS>/` 保存目的、开关、逐步执行状态、日志及产物校验。
-本阶段只接入旧流程，不更改导师 Comments、冻结研究包或统计定义。
+pretest 阶段只接入旧流程；随后用户授权的新分析由 main_new.py 运行，记录位于 results/new。新模块可实现导师方法与衔接修复，所有统计定义和偏离都需记录；不修改导师 Comments 和冻结研究包。
 
 **Every change must get a `LOG.md` entry, and the code change + the LOG.md
 entry must land in the same commit.** No exceptions for "small" changes —

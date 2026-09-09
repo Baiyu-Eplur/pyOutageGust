@@ -1,0 +1,705 @@
+{
+  "started_at": "2026-09-09T16:44:59.284353+01:00",
+  "purpose": "完整复现导师分析：自己的相同样本、500 次结点与 300 次平台 bootstrap",
+  "status": "completed",
+  "switches": {
+    "baseline": 1,
+    "model_selection": 1,
+    "hinge_search": 1,
+    "knot_estimation": 1,
+    "plateau_E0": 1,
+    "plateau_R0c": 1,
+    "select_final_knots": 1,
+    "plot_model_selection": 1,
+    "fragility_demo": 1,
+    "fragility_surfaces": 1,
+    "final_models": 1,
+    "district_day_fragility": 1,
+    "weather_only_regression": 1,
+    "paper_extras": 1,
+    "report_tables": 1,
+    "documents": 1
+  },
+  "settings": {
+    "knot_bootstraps": 500,
+    "plateau_bootstraps": 300,
+    "blas_threads": 1
+  },
+  "inputs": [
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\review_package\\data\\combined_E0_final.csv",
+      "sha256": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\review_package\\data\\combined_R0c_final.csv",
+      "sha256": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9"
+    }
+  ],
+  "sources": [
+    {
+      "path": "main_new.py",
+      "sha256": "c335504b049849baf45a8c2801254d84e2e5e56a251e8c984c26e983773c4fec"
+    },
+    {
+      "path": "pretestmain.py",
+      "sha256": "3769093cf873675126df683d976a919555d0b662fd6e30e2a6eed220f709378d"
+    },
+    {
+      "path": "pretest_paths.py",
+      "sha256": "b107a9d687a1fbaf4d82130785eb6367e2359250d3e29d2629971c01b7dc2e6c"
+    },
+    {
+      "path": "review_package\\code\\run_main_regression.py",
+      "sha256": "f96083218a31b7d46c6b00c3dacc4ccf4927540fc9a184e3fd13f5f17d5d15f8"
+    },
+    {
+      "path": "docs\\Draft.docx",
+      "sha256": "d9366c6d491439ad7d331c4cd7767a582b9962f76d002273168a21bceb37e682"
+    },
+    {
+      "path": "analysis_new\\__init__.py",
+      "sha256": "6e9c5f0cad8931a51b7fb7acb3e57e5b5404dd7873db0198de005146c63b7818"
+    },
+    {
+      "path": "analysis_new\\basis_solver.py",
+      "sha256": "ab181c3628721a83aac4d2d2bbe5cd2fbed2074de8ebaa427769f6a1c914cb9a"
+    },
+    {
+      "path": "analysis_new\\district_day_fragility.py",
+      "sha256": "5ee010fa5969aadf175035cdbe5c0b7045f7103afa4618c7b73754b0752de659"
+    },
+    {
+      "path": "analysis_new\\document_plan.py",
+      "sha256": "8e41bb6a41cf6d49c7e4ee5d28d6829754eb3e65c4f4c88fb6c84cbcb2046c8b"
+    },
+    {
+      "path": "analysis_new\\documents.py",
+      "sha256": "188350ade4add00164ca83e144fd99a0eb5ef85f5dcb385451972ff02426a1bd"
+    },
+    {
+      "path": "analysis_new\\final_models.py",
+      "sha256": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310"
+    },
+    {
+      "path": "analysis_new\\fragility_demo.py",
+      "sha256": "c16165bceac0b7a71a837606d67c17710a887762cb0f35f195b18778df90a72f"
+    },
+    {
+      "path": "analysis_new\\fragility_surfaces.py",
+      "sha256": "c3367c1d843f5ef7aeec6e0281a68b16544649f01b071b16ec0cd7bdce65906c"
+    },
+    {
+      "path": "analysis_new\\hinge_search.py",
+      "sha256": "1a7a32494ba491d4bfdd75b8b9bdc44d7ca9d73b11eef822759fcea932e68987"
+    },
+    {
+      "path": "analysis_new\\knot_estimation.py",
+      "sha256": "69c07f14a33db4942cf7e43db19f1de0fe9094088d1488297a05a3a10606bf8f"
+    },
+    {
+      "path": "analysis_new\\model_selection.py",
+      "sha256": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d"
+    },
+    {
+      "path": "analysis_new\\paper_extras.py",
+      "sha256": "a6699f2b0ae820d0a5766041b1db217185c70cc931452686ee953595e7075b70"
+    },
+    {
+      "path": "analysis_new\\plateau_model.py",
+      "sha256": "672d8ee3fc667b9192f4fe6f40bde033d27306e6298677e51af5e411eb3f3bdd"
+    },
+    {
+      "path": "analysis_new\\plot_model_selection.py",
+      "sha256": "5a0c8ce85b0f3228c773f51b78b12a72e538c33ce377a92186de0ccd0d53e392"
+    },
+    {
+      "path": "analysis_new\\report_tables.py",
+      "sha256": "3f5f2f7fbfb41910f6b82404cdd17f3c73b0f992cd00077643694bc0fe04e010"
+    },
+    {
+      "path": "analysis_new\\runner.py",
+      "sha256": "ebb6d7226419e522d5a498eb8a99f08c6668ec171682b44cdd971e72e8479d5b"
+    },
+    {
+      "path": "analysis_new\\runtime.py",
+      "sha256": "f7dc6fd8588c5206752d9a22df807f9c11f3c351d73748bd5d3bbad5a899c90f"
+    },
+    {
+      "path": "analysis_new\\select_final_knots.py",
+      "sha256": "6328eca03219a1f8e39408e19be097098829ad85fe2cf1fb3dd37aefac3522ee"
+    },
+    {
+      "path": "analysis_new\\weather_only_regression.py",
+      "sha256": "b7db64e8bd350dfbcabacd3f2ad7d2514ad26a4fb5d7f622d9989072b80ff9bd"
+    },
+    {
+      "path": "analysis_new\\build_doc.js",
+      "sha256": "4098be3a02cc634a64e360c63f47af73c597a9ba969c09728f5c1bde5976ac7d"
+    },
+    {
+      "path": "analysis_new\\build_papers.js",
+      "sha256": "d61cebf741f15d7737e6aef9b28631c78f184f1556fad00f61f9c323400d0267"
+    }
+  ],
+  "environment": {
+    "python": "3.12.6 | packaged by Anaconda, Inc. | (main, Oct  3 2024, 07:22:25) [MSC v.1929 64 bit (AMD64)]",
+    "executable": "C:\\Users\\haoya\\.conda\\envs\\pyoutagegust\\python.exe",
+    "packages": {
+      "numpy": "2.4.3",
+      "pandas": "3.0.1",
+      "scipy": "1.17.1",
+      "statsmodels": "0.14.6",
+      "matplotlib": "3.10.8",
+      "openpyxl": "3.1.5"
+    }
+  },
+  "reuse_run": "",
+  "steps": [
+    {
+      "stage": "baseline",
+      "status": "completed",
+      "started_at": "2026-09-09T16:44:59.351571+01:00",
+      "returncode": 0,
+      "seconds": 4.735,
+      "finished_at": "2026-09-09T16:45:04.096710+01:00"
+    },
+    {
+      "stage": "model_selection",
+      "status": "completed",
+      "started_at": "2026-09-09T16:45:04.097714+01:00",
+      "returncode": 0,
+      "seconds": 60.953,
+      "finished_at": "2026-09-09T16:46:05.043092+01:00"
+    },
+    {
+      "stage": "hinge_search",
+      "status": "completed",
+      "started_at": "2026-09-09T16:46:05.043092+01:00",
+      "returncode": 0,
+      "seconds": 13.375,
+      "finished_at": "2026-09-09T16:46:18.418359+01:00"
+    },
+    {
+      "stage": "knot_estimation",
+      "status": "completed",
+      "started_at": "2026-09-09T16:46:18.419367+01:00",
+      "returncode": 0,
+      "seconds": 134.609,
+      "finished_at": "2026-09-09T16:48:33.037184+01:00"
+    },
+    {
+      "stage": "plateau_E0",
+      "status": "completed",
+      "started_at": "2026-09-09T16:48:33.038182+01:00",
+      "returncode": 0,
+      "seconds": 38.078,
+      "finished_at": "2026-09-09T16:49:11.133264+01:00"
+    },
+    {
+      "stage": "plateau_R0c",
+      "status": "completed",
+      "started_at": "2026-09-09T16:49:11.134516+01:00",
+      "returncode": 0,
+      "seconds": 33.937,
+      "finished_at": "2026-09-09T16:49:45.077954+01:00"
+    },
+    {
+      "stage": "select_final_knots",
+      "status": "completed",
+      "started_at": "2026-09-09T16:49:45.078951+01:00",
+      "returncode": 0,
+      "seconds": 0.219,
+      "finished_at": "2026-09-09T16:49:45.294352+01:00"
+    },
+    {
+      "stage": "plot_model_selection",
+      "status": "completed",
+      "started_at": "2026-09-09T16:49:45.294352+01:00",
+      "returncode": 0,
+      "seconds": 32.234,
+      "finished_at": "2026-09-09T16:50:17.526583+01:00"
+    },
+    {
+      "stage": "fragility_demo",
+      "status": "completed",
+      "started_at": "2026-09-09T16:50:17.526583+01:00",
+      "returncode": 0,
+      "seconds": 173.766,
+      "finished_at": "2026-09-09T16:53:11.297723+01:00"
+    },
+    {
+      "stage": "fragility_surfaces",
+      "status": "completed",
+      "started_at": "2026-09-09T16:53:11.299223+01:00",
+      "returncode": 0,
+      "seconds": 6.406,
+      "finished_at": "2026-09-09T16:53:17.696346+01:00"
+    },
+    {
+      "stage": "final_models",
+      "status": "completed",
+      "started_at": "2026-09-09T16:53:17.697510+01:00",
+      "returncode": 0,
+      "seconds": 10.141,
+      "finished_at": "2026-09-09T16:53:27.840332+01:00"
+    },
+    {
+      "stage": "district_day_fragility",
+      "status": "completed",
+      "started_at": "2026-09-09T16:53:27.840332+01:00",
+      "returncode": 0,
+      "seconds": 98.469,
+      "finished_at": "2026-09-09T16:55:06.319607+01:00"
+    },
+    {
+      "stage": "weather_only_regression",
+      "status": "completed",
+      "started_at": "2026-09-09T16:55:06.320604+01:00",
+      "returncode": 0,
+      "seconds": 11.11,
+      "finished_at": "2026-09-09T16:55:17.445405+01:00"
+    },
+    {
+      "stage": "paper_extras",
+      "status": "completed",
+      "started_at": "2026-09-09T16:55:17.447310+01:00",
+      "returncode": 0,
+      "seconds": 11.5,
+      "finished_at": "2026-09-09T16:55:28.950479+01:00"
+    },
+    {
+      "stage": "report_tables",
+      "status": "completed",
+      "started_at": "2026-09-09T16:55:28.950479+01:00",
+      "returncode": 0,
+      "seconds": 1.391,
+      "finished_at": "2026-09-09T16:55:30.340401+01:00"
+    },
+    {
+      "stage": "documents",
+      "status": "completed",
+      "started_at": "2026-09-09T16:55:30.341404+01:00",
+      "returncode": 0,
+      "seconds": 2.125,
+      "finished_at": "2026-09-09T16:55:32.474982+01:00"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "results/COMPUTED_RESULTS.md",
+      "bytes": 2677,
+      "sha256": "3d683570ef0b44d0ed0679449147454743c202a58615950f0b1b9710037f133e"
+    },
+    {
+      "path": "results/E0_corrected_lad_cluster.csv",
+      "bytes": 2079,
+      "sha256": "b07679f5d4397050be251742e95be4e95660d50c733b2427dfe91f3f8b9d13bf"
+    },
+    {
+      "path": "results/E0_corrected_twoway_cluster.csv",
+      "bytes": 2060,
+      "sha256": "277bab9479d07786d270aa6244c92648e5449776a31183bde2e08458ef00f570"
+    },
+    {
+      "path": "results/figures/fig10_fragility_surfaces.png",
+      "bytes": 795568,
+      "sha256": "25527ad92aca58cef73df86f46fb05d674347bfa97fbb39f58c804e3e363b2df"
+    },
+    {
+      "path": "results/figures/fig11_final_models.png",
+      "bytes": 253758,
+      "sha256": "adccac1d0830775a15e83a19809ec19d9e5722a176b0ee1b17cfd66a9b7092de"
+    },
+    {
+      "path": "results/figures/fig12_district_day_fragility.png",
+      "bytes": 203865,
+      "sha256": "233589dca45cf78899a26f7b80bf2844e2654ca958d0b5c57d4942461a15cae2"
+    },
+    {
+      "path": "results/figures/fig13_weather_only.png",
+      "bytes": 182920,
+      "sha256": "a516361aa84f103b1b39c9183b884550a080b9bc97fbd1853fb98b0399e9cfa3"
+    },
+    {
+      "path": "results/figures/fig14_weather_only_pred_vs_obs.png",
+      "bytes": 584813,
+      "sha256": "3f53af6178770b87da27d3e73ce25d73dd00041ab70b6d9678856aba020e590b"
+    },
+    {
+      "path": "results/figures/fig1_model_comparison.png",
+      "bytes": 126509,
+      "sha256": "ea938786bac6610619812d113f39da111d722c4000f33aed627c1c8e3660b1ec"
+    },
+    {
+      "path": "results/figures/fig2_gust_response.png",
+      "bytes": 150735,
+      "sha256": "d7d5a512e2f2b0fefb716f031c5015c2e5c42fd223accfc8e390e0d2ae5d1916"
+    },
+    {
+      "path": "results/figures/fig3_E0_pred_vs_obs.png",
+      "bytes": 515926,
+      "sha256": "e0a530164e9940702a39c8392a22c7b5fbffe02e782df12e05b4dfb865254c9a"
+    },
+    {
+      "path": "results/figures/fig3_R0c_pred_vs_obs.png",
+      "bytes": 466441,
+      "sha256": "89418cf298692faf28e554b7c83aa0bf8880d274318519c8bf0a77b94b372f1f"
+    },
+    {
+      "path": "results/figures/fig4_E0_pred_vs_obs.png",
+      "bytes": 512988,
+      "sha256": "bb6b8f0869895a400513ec3418c078892f79bb211f5a40cd9ee46a1ea300bf55"
+    },
+    {
+      "path": "results/figures/fig4_R0c_pred_vs_obs.png",
+      "bytes": 474933,
+      "sha256": "0205a831606acc5b3e8d41b777c7a7f4f151e7fbc0725a9c11ec6439c2bef699"
+    },
+    {
+      "path": "results/figures/fig5_calibration_residuals.png",
+      "bytes": 254324,
+      "sha256": "1e7fc6467c95a93c2b0a6885c22e13f9acda9a829694f2b4da0478b7c9d0e429"
+    },
+    {
+      "path": "results/figures/fig6_knot_estimation.png",
+      "bytes": 193907,
+      "sha256": "a399930d04854cf9bd72ef28b2759902a32573228574e7b61bf57e63a5714e60"
+    },
+    {
+      "path": "results/figures/fig8_fragility_curves.png",
+      "bytes": 142049,
+      "sha256": "a53b2eac8ef25ce7f9f22f426a2ca2538e3f82b4eb604503b7dea4a6e8e029f3"
+    },
+    {
+      "path": "results/figures/fig9_fragility_lognormal.png",
+      "bytes": 147240,
+      "sha256": "097b498064b89e20af26ae901a8ffed161f2ddae7bd224a1dd45c1703b881132"
+    },
+    {
+      "path": "results/figures/figP1_r2_decomposition.png",
+      "bytes": 56234,
+      "sha256": "9e9043f876d4b03e23f271d4a69b3fcc8a756747b4f39aad6e2cbfea05a0d1df"
+    },
+    {
+      "path": "results/figures/figP2_distributions.png",
+      "bytes": 77056,
+      "sha256": "8f175fe341923d4b2c4cb2a5fba01a6ebe548ba13fb2eac1bd5cd1d9f2bc22b5"
+    },
+    {
+      "path": "results/figures/frag_rows.json",
+      "bytes": 851,
+      "sha256": "0a1d0781ebcd8a3f9d8af70f90db02b2197f889b437c9adf6d6a924cfab6a413"
+    },
+    {
+      "path": "results/figures/pvo_rows.json",
+      "bytes": 1822,
+      "sha256": "c46f770981acd578ae2f0351ccccc5aabf23b71d0fbaf4dcfcce708b51f35dd8"
+    },
+    {
+      "path": "results/figures/t2_rows.json",
+      "bytes": 1375,
+      "sha256": "53bdabac614e5ad66c1f4435abbc4985c2aa85c023c7f59e2233b105c97b4aac"
+    },
+    {
+      "path": "results/figures/wo_rows.json",
+      "bytes": 1194,
+      "sha256": "e7be7633f7fab229b95c771ab8ea4c4c1b134a1bf4af41880792fe987b7cf15c"
+    },
+    {
+      "path": "results/final_models/district_day_fragility.json",
+      "bytes": 5179,
+      "sha256": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb"
+    },
+    {
+      "path": "results/final_models/district_day_optimizer_diagnostics.json",
+      "bytes": 1623,
+      "sha256": "83a3ca07bd0ffc155df4a31129e04e39f87d34fe8bc34be514e7a85cdb047a53"
+    },
+    {
+      "path": "results/final_models/district_day_panel.csv",
+      "bytes": 14828536,
+      "sha256": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a"
+    },
+    {
+      "path": "results/final_models/E0_final_lad.csv",
+      "bytes": 2733,
+      "sha256": "2d7bc26b90a58031268cec59e0c1e7d84ef5b0a60634f009efc23d75c45dcc6d"
+    },
+    {
+      "path": "results/final_models/E0_final_twoway.csv",
+      "bytes": 2713,
+      "sha256": "491c75aea00d6a4a60a04026978eba65072e1576e0974dfaa211c96954487f94"
+    },
+    {
+      "path": "results/final_models/final_summary.json",
+      "bytes": 1064,
+      "sha256": "3432d0bdbd3a6ccfb3a689613c8483dde5ad26489f49f960a37a9f9abe264741"
+    },
+    {
+      "path": "results/final_models/interp_validation.json",
+      "bytes": 97,
+      "sha256": "a3b68c1c7f0049cf136bd43167f7a8a9b786690b3936ab077505bc12132d10f9"
+    },
+    {
+      "path": "results/final_models/R0c_final_lad.csv",
+      "bytes": 2954,
+      "sha256": "46f803512e3124cf8895a8e9d127fe46da16f36e7a280c3537683b0d93341e13"
+    },
+    {
+      "path": "results/final_models/R0c_final_twoway.csv",
+      "bytes": 2920,
+      "sha256": "0dab57b08504cba609ca93c282fa3ccf8b1bde92a9b679286efd965255cb54a2"
+    },
+    {
+      "path": "results/final_models/table2_replacement.csv",
+      "bytes": 1286,
+      "sha256": "83ccb4ecefd32cadc625bb6d1b27dd687e496dd94de8857ca281c03bc827b937"
+    },
+    {
+      "path": "results/Model_exploration_predicted_vs_observed.docx",
+      "bytes": 4919414,
+      "sha256": "912c4f3538aa23d679ed63aefed29152a5ec11e618a294041f576073f1910521"
+    },
+    {
+      "path": "results/model_selection/all_model_comparison.csv",
+      "bytes": 5095,
+      "sha256": "1f2174ceda47f9a97a717e1035f3fea0b24b6d10f63334c08526d6672ae3fe4d"
+    },
+    {
+      "path": "results/model_selection/E0_all_plateau_bootstrap.csv",
+      "bytes": 3307,
+      "sha256": "9f117c89925071619d0e5ec257095b13b9feb5601195cc1ef12a5bd4e8e68a86"
+    },
+    {
+      "path": "results/model_selection/E0_all_plateau_profile.csv",
+      "bytes": 9589,
+      "sha256": "3547170e114283ce44efea242a8d7220fae02bd62b2d16c6109c1af6bd43ef3c"
+    },
+    {
+      "path": "results/model_selection/E0_coefficients.xlsx",
+      "bytes": 30065,
+      "sha256": "e19077c19794000f6a8d1463485081197124ea750475bafc27ebd60957d11150"
+    },
+    {
+      "path": "results/model_selection/E0_knot_bootstrap.csv",
+      "bytes": 5505,
+      "sha256": "878d31d0792d61a2b84e027fd35b0f6a71e84c70fe753b3681859a437d42140d"
+    },
+    {
+      "path": "results/model_selection/E0_knot_profile_1.csv",
+      "bytes": 984,
+      "sha256": "c5f5bea5f71100aaa5fa8e326cd6f820c7ae8d25d0172921877fb01041d964af"
+    },
+    {
+      "path": "results/model_selection/E0_knot_profile_2.csv",
+      "bytes": 13146,
+      "sha256": "1f446e3fbee3b03722ebb3021891e7081869f1018df4e35e7454a68e6e0f3eef"
+    },
+    {
+      "path": "results/model_selection/E0_model_comparison.csv",
+      "bytes": 2592,
+      "sha256": "5be68241e8581134a3ef3f54cebe6e5152c73db65e6be184c04aff4aafd3fc8a"
+    },
+    {
+      "path": "results/model_selection/E0_weather_plateau_bootstrap.csv",
+      "bytes": 3304,
+      "sha256": "30cfb33b76731a5cadad5cac86e48d38b335c4509ff4c871349a14afbdde2041"
+    },
+    {
+      "path": "results/model_selection/E0_weather_plateau_profile.csv",
+      "bytes": 9501,
+      "sha256": "b2f44fe02e3d584231a2673236e52ee8ed2886f2502349a21588e2521c7d2c18"
+    },
+    {
+      "path": "results/model_selection/fragility_lognormal.json",
+      "bytes": 7313,
+      "sha256": "022d45a861d7ef0c9b9d3c6b9ca58072dbd735e67d7624bbd122909a504e5b58"
+    },
+    {
+      "path": "results/model_selection/fragility_optimizer_diagnostics.json",
+      "bytes": 1211,
+      "sha256": "2080150b3016fe5b74d64b8932429768773cb3e92527a80e27d88c01bf68b3cb"
+    },
+    {
+      "path": "results/model_selection/fragility_summary.json",
+      "bytes": 2477,
+      "sha256": "3b6732df959c7fec4ca65d289689998f617edabce354a5ae36f693371fb3b79c"
+    },
+    {
+      "path": "results/model_selection/hinge_knot_search.csv",
+      "bytes": 1976,
+      "sha256": "404e30b3a98455b2d36b432bcffd3fbb93f035737fd055e99fdb6d20963e7ee0"
+    },
+    {
+      "path": "results/model_selection/knots.json",
+      "bytes": 4447,
+      "sha256": "af506c6ec5b9ba4c3f3450bf88a02afb87e4116f798233bb5920341c95f5bb3b"
+    },
+    {
+      "path": "results/model_selection/predicted_vs_observed_summary.csv",
+      "bytes": 3095,
+      "sha256": "f1fcace39c43913e4037f984db875ec87617eb00d3248dad059c68014da0540a"
+    },
+    {
+      "path": "results/model_selection/R0c_all_plateau_bootstrap.csv",
+      "bytes": 3307,
+      "sha256": "7cb6292ca68bfece1a838f855b1280cb7946c1f00cb22ae7af14561f342181cb"
+    },
+    {
+      "path": "results/model_selection/R0c_all_plateau_profile.csv",
+      "bytes": 9424,
+      "sha256": "9589a0b118c7019b58653e809a7002de2286f526473d1b3ffe992c4da363ce7b"
+    },
+    {
+      "path": "results/model_selection/R0c_coefficients.xlsx",
+      "bytes": 31472,
+      "sha256": "6157ded373da68571ce29dc2b56b634c2f5637fd10796765212e3b9b1d4331cb"
+    },
+    {
+      "path": "results/model_selection/R0c_knot_bootstrap.csv",
+      "bytes": 5412,
+      "sha256": "992d4a1e569f0ca99450602522c698988dd585bf1628035a651a9ebad5f6e783"
+    },
+    {
+      "path": "results/model_selection/R0c_knot_profile_1.csv",
+      "bytes": 988,
+      "sha256": "916a3650989d5f1ece2d0fab0ef3bafc23643f042131cae2926c1dca02d252e3"
+    },
+    {
+      "path": "results/model_selection/R0c_knot_profile_2.csv",
+      "bytes": 13147,
+      "sha256": "68c3ac1099c8b974b4bd70c82491099d4fdc908974c4e2488ecbb5971c07d4c6"
+    },
+    {
+      "path": "results/model_selection/R0c_model_comparison.csv",
+      "bytes": 2578,
+      "sha256": "d564d4ced5d33541be17c4fa677f409a87a3cf23f2d109b4544a0342b7cd6e42"
+    },
+    {
+      "path": "results/model_selection/R0c_weather_plateau_bootstrap.csv",
+      "bytes": 3180,
+      "sha256": "4e6a776fb622631b0cffe55d473b71c7e355ef8b75e3ff5377316f15c489b72f"
+    },
+    {
+      "path": "results/model_selection/R0c_weather_plateau_profile.csv",
+      "bytes": 9609,
+      "sha256": "0f6dca1752a3ad02e5649b6699c9eec8e296eeffb4c37f7749ca5f0541588c6a"
+    },
+    {
+      "path": "results/model_selection/ramp_model.json",
+      "bytes": 2193,
+      "sha256": "ce9f95991d1f2d96e084103021153f1c5be63e833f923ae8564b8562b3083623"
+    },
+    {
+      "path": "results/model_selection/ramp_model_R0c.json",
+      "bytes": 2192,
+      "sha256": "521d363cc4e001e8ff10ae47605d31591014f5f846447bfa9fee1577ae64e3ef"
+    },
+    {
+      "path": "results/MODEL_SELECTION_REPORT.md",
+      "bytes": 2677,
+      "sha256": "3d683570ef0b44d0ed0679449147454743c202a58615950f0b1b9710037f133e"
+    },
+    {
+      "path": "results/paper/descriptive_rows.json",
+      "bytes": 409,
+      "sha256": "6b4f840f10150a2cee1ff32d2784faeb8a8c7abb2c67e5e3de39c3e2c15eb051"
+    },
+    {
+      "path": "results/paper/draft_media/media/image1.png",
+      "bytes": 242236,
+      "sha256": "720345c02f68ea7ee9289c12424a55a541b91d725b5f8db42207aca77dfab1da"
+    },
+    {
+      "path": "results/paper/Extended_paper_draft.docx",
+      "bytes": 1328020,
+      "sha256": "e80169b1118484147ab8490b5f4b4c5ce0f27033327605802a14d8c981f8fead"
+    },
+    {
+      "path": "results/paper/NatComms_extract_draft.docx",
+      "bytes": 543310,
+      "sha256": "da2d60028db47ffd75bd6419bac41d454270566616c80a28744b529a54e8693c"
+    },
+    {
+      "path": "results/paper/paper_extras.json",
+      "bytes": 3174,
+      "sha256": "3ed00f4f19ab19fe3fdf32ad17a79500e13f0eae5262d280f88830d6bcd4090e"
+    },
+    {
+      "path": "results/paper/Paper_reorganisation_plan.docx",
+      "bytes": 38124,
+      "sha256": "e32882748c0bb43c6323c733b2eebfb5b90b07eaa72ef8a043a3912bb2f756d6"
+    },
+    {
+      "path": "results/paper/r2_decomposition.csv",
+      "bytes": 1037,
+      "sha256": "547ad247bc5571e6ffe452e2e39b13cf2ea73da8cfcea68023522855ff7909af"
+    },
+    {
+      "path": "results/paper/references.json",
+      "bytes": 4138,
+      "sha256": "18debb752590c39e15c7d4ee002c1375a22de646a629b6fde720063a900ec03f"
+    },
+    {
+      "path": "results/paper/specification_rows.json",
+      "bytes": 838,
+      "sha256": "39bdb5f79c55de24f8e21ac6f6aa417a0aaa0fce573428312bcbd705dfa30aac"
+    },
+    {
+      "path": "results/R0c_corrected_lad_cluster.csv",
+      "bytes": 2260,
+      "sha256": "a19edacd11abbc516f118344698c168825e4f92e38a80812b8dd7a8e5824ab16"
+    },
+    {
+      "path": "results/R0c_corrected_twoway_cluster.csv",
+      "bytes": 2253,
+      "sha256": "a280c60a7cad85203731232240472bc83cd31a10d76b319e46bd20ec2f9aa45f"
+    },
+    {
+      "path": "results/run_summary.json",
+      "bytes": 203,
+      "sha256": "92f224988b3d1e5f864b1d61dda9fbfca3ae0c3827af2f72c70062aaf03a2246"
+    },
+    {
+      "path": "results/weather_only/E0_weather_final_twoway.csv",
+      "bytes": 2679,
+      "sha256": "994d2218bae8a395f72905e708e6f34763ea5990285d5792bf9de0ea890c400a"
+    },
+    {
+      "path": "results/weather_only/E0_weather_hinge_twoway.csv",
+      "bytes": 2579,
+      "sha256": "f0f47980a4cebdda9722e7d7180e29a7b9f54035179d8018b6fa7f158c3c35ac"
+    },
+    {
+      "path": "results/weather_only/E0_weather_paper_twoway.csv",
+      "bytes": 2577,
+      "sha256": "3127bb1e88f37f2ad617beb4ae89d56175f088a1e7dbd032f7a2be7823366632"
+    },
+    {
+      "path": "results/weather_only/R0c_weather_final_twoway.csv",
+      "bytes": 2887,
+      "sha256": "ba69ee5391716b3273a38bb6203da0781b63623dd49be5491a2addf89f7ba220"
+    },
+    {
+      "path": "results/weather_only/R0c_weather_hinge_twoway.csv",
+      "bytes": 2783,
+      "sha256": "cb846e2ab94541dc74843302eee67fd1da910eeebd1cad64a03be57f70afb9e8"
+    },
+    {
+      "path": "results/weather_only/R0c_weather_paper_twoway.csv",
+      "bytes": 2793,
+      "sha256": "aff72a4663243d0d92816628206ca830c55fcf12ca84a01d4600d213207e554e"
+    },
+    {
+      "path": "results/weather_only/weather_only_pred_vs_obs.csv",
+      "bytes": 543,
+      "sha256": "f1caf2fb60d3160a10c259292c0455a218f54b4ddd285387a06f2bc278fdf4ad"
+    },
+    {
+      "path": "results/weather_only/weather_only_summary.json",
+      "bytes": 7712,
+      "sha256": "286b36e35231108b8403bda654ec05e2d41550001797fd365e39b98e086ec555"
+    }
+  ],
+  "finished_at": "2026-09-09T16:55:32.475979+01:00"
+}

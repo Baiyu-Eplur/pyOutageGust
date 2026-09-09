@@ -1,0 +1,29 @@
+model                                        spec               kind   rmse      r2   corr  slope
+   E0                                   M1 linear          in-sample 2.0067  0.0121 0.1100 1.0000
+   E0                                   M1 linear LAD-CV out-of-fold 2.0072  0.0116 0.1075 0.9756
+   E0                        M5 quadratic (paper)          in-sample 1.9843  0.0340 0.1844 1.0000
+   E0                        M5 quadratic (paper) LAD-CV out-of-fold 1.9887  0.0297 0.1730 0.9264
+   E0                                       Cubic          in-sample 1.9828  0.0355 0.1883 1.0000
+   E0                                       Cubic LAD-CV out-of-fold 1.9871  0.0312 0.1773 0.9317
+   E0                                    Log gust          in-sample 1.9879  0.0305 0.1747 1.0000
+   E0                                    Log gust LAD-CV out-of-fold 1.9923  0.0262 0.1625 0.9170
+   E0                                   Gust bins          in-sample 1.9840  0.0343 0.1853 1.0000
+   E0                                   Gust bins LAD-CV out-of-fold 1.9882  0.0302 0.1742 0.9305
+   E0 Estimated plateau (E0) / single hinge (R0c)          in-sample 1.9820  0.0362 0.1903 1.0000
+   E0 Estimated plateau (E0) / single hinge (R0c) LAD-CV out-of-fold 1.9862  0.0322 0.1798 0.9367
+   E0                                 M5 + LAD FE          in-sample 1.9638  0.0539 0.2321 1.0000
+   E0                                 M5 + LAD FE LAD-CV out-of-fold 2.1020 -0.0840 0.1023 0.2505
+  R0c                                   M1 linear          in-sample 1.2844  0.0938 0.3062 1.0000
+  R0c                                   M1 linear LAD-CV out-of-fold 1.2852  0.0926 0.3044 0.9940
+  R0c                        M5 quadratic (paper)          in-sample 1.2654  0.1205 0.3471 1.0000
+  R0c                        M5 quadratic (paper) LAD-CV out-of-fold 1.2695  0.1148 0.3389 0.9769
+  R0c                                       Cubic          in-sample 1.2653  0.1206 0.3472 1.0000
+  R0c                                       Cubic LAD-CV out-of-fold 1.2695  0.1148 0.3389 0.9761
+  R0c                                    Log gust          in-sample 1.2694  0.1149 0.3389 1.0000
+  R0c                                    Log gust LAD-CV out-of-fold 1.2735  0.1091 0.3303 0.9739
+  R0c                                   Gust bins          in-sample 1.2666  0.1187 0.3446 1.0000
+  R0c                                   Gust bins LAD-CV out-of-fold 1.2708  0.1129 0.3360 0.9745
+  R0c Estimated plateau (E0) / single hinge (R0c)          in-sample 1.2653  0.1206 0.3473 1.0000
+  R0c Estimated plateau (E0) / single hinge (R0c) LAD-CV out-of-fold 1.2693  0.1149 0.3391 0.9765
+  R0c                                 M5 + LAD FE          in-sample 1.2579  0.1308 0.3616 1.0000
+  R0c                                 M5 + LAD FE LAD-CV out-of-fold 1.5039 -0.2423 0.2102 0.3258

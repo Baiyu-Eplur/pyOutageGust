@@ -1,0 +1,19 @@
+{
+  "checked_output_hashes": 83,
+  "checked_inputs": 2,
+  "checked_scientific_source_files": 13,
+  "issues": [],
+  "output_extensions": {
+    ".md": 2,
+    ".csv": 37,
+    ".png": 18,
+    ".json": 20,
+    ".docx": 4,
+    ".xlsx": 2
+  },
+  "full_run_steps": 16,
+  "finalized_run_steps": 1,
+  "full_run": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909164459",
+  "finalized_run": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909170633",
+  "finalized_parent_run": "20260909165736"
+}

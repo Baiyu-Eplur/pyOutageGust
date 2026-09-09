@@ -1,0 +1,123 @@
+{
+  "gust_domain_ms": [
+    0.5,
+    40
+  ],
+  "grid_points": 10001,
+  "probability_tolerance": 0.0001,
+  "curves": [
+    {
+      "model": "E0/lognormal_all_incidents/0",
+      "max_absolute_probability_difference": 3.712085049345504e-07
+    },
+    {
+      "model": "E0/lognormal_all_incidents/1",
+      "max_absolute_probability_difference": 1.6065276176036036e-07
+    },
+    {
+      "model": "E0/lognormal_all_incidents/2",
+      "max_absolute_probability_difference": 5.268139116262893e-08
+    },
+    {
+      "model": "E0/lognormal_weather_common_beta/0",
+      "max_absolute_probability_difference": 7.924206779641452e-08
+    },
+    {
+      "model": "E0/lognormal_weather_common_beta/1",
+      "max_absolute_probability_difference": 8.837571979780634e-08
+    },
+    {
+      "model": "E0/lognormal_weather_common_beta/2",
+      "max_absolute_probability_difference": 1.90422872609064e-08
+    },
+    {
+      "model": "E0/lognormal_weather_free_beta/0",
+      "max_absolute_probability_difference": 7.3725120224299445e-06
+    },
+    {
+      "model": "E0/lognormal_weather_free_beta/1",
+      "max_absolute_probability_difference": 2.411144064906612e-06
+    },
+    {
+      "model": "E0/lognormal_weather_free_beta/2",
+      "max_absolute_probability_difference": 5.726953913147426e-07
+    },
+    {
+      "model": "R0c/lognormal_all_incidents/0",
+      "max_absolute_probability_difference": 2.6786853279947564e-07
+    },
+    {
+      "model": "R0c/lognormal_all_incidents/1",
+      "max_absolute_probability_difference": 1.58023578555877e-07
+    },
+    {
+      "model": "R0c/lognormal_all_incidents/2",
+      "max_absolute_probability_difference": 4.108830885252157e-08
+    },
+    {
+      "model": "R0c/lognormal_weather_common_beta/0",
+      "max_absolute_probability_difference": 2.4365948980697993e-08
+    },
+    {
+      "model": "R0c/lognormal_weather_common_beta/1",
+      "max_absolute_probability_difference": 2.066033011338675e-08
+    },
+    {
+      "model": "R0c/lognormal_weather_common_beta/2",
+      "max_absolute_probability_difference": 2.6254199314568183e-08
+    },
+    {
+      "model": "R0c/lognormal_weather_free_beta/0",
+      "max_absolute_probability_difference": 7.756363769595431e-07
+    },
+    {
+      "model": "R0c/lognormal_weather_free_beta/1",
+      "max_absolute_probability_difference": 4.669615827346263e-08
+    },
+    {
+      "model": "R0c/lognormal_weather_free_beta/2",
+      "max_absolute_probability_difference": 4.735676869538352e-07
+    },
+    {
+      "model": "district_day/any_gt0",
+      "max_absolute_probability_difference": 1.7790974333742327e-06,
+      "nll_absolute_difference": 2.3690517991781235e-08
+    },
+    {
+      "model": "district_day/any_gt5",
+      "max_absolute_probability_difference": 3.6625016833768953e-06,
+      "nll_absolute_difference": 1.235312083736062e-07
+    },
+    {
+      "model": "district_day/any_gt100",
+      "max_absolute_probability_difference": 1.4276046071959314e-06,
+      "nll_absolute_difference": 5.966285243630409e-10
+    },
+    {
+      "model": "district_day/any_gt1000",
+      "max_absolute_probability_difference": 8.991991241824593e-06,
+      "nll_absolute_difference": 1.076841726899147e-08
+    },
+    {
+      "model": "district_day/wthr_gt0",
+      "max_absolute_probability_difference": 6.962406210453409e-07,
+      "nll_absolute_difference": 3.7471181713044643e-10
+    },
+    {
+      "model": "district_day/wthr_gt5",
+      "max_absolute_probability_difference": 3.330651586086475e-06,
+      "nll_absolute_difference": 9.338691597804427e-09
+    },
+    {
+      "model": "district_day/wthr_gt100",
+      "max_absolute_probability_difference": 1.7042321273086358e-06,
+      "nll_absolute_difference": 1.4260876923799515e-09
+    },
+    {
+      "model": "district_day/wthr_gt1000",
+      "max_absolute_probability_difference": 1.6589082041384984e-07,
+      "nll_absolute_difference": 1.0913936421275139e-11
+    }
+  ],
+  "all_within_probability_tolerance": true
+}

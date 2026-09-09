@@ -1,0 +1,752 @@
+{
+  "reference": "D:\\Pyprogramme\\pyOutageGust\\Comments\\Comments_for_Haoyan\\STST2603_review\\STST2603_review",
+  "run": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909165736",
+  "numeric_tolerance": {
+    "rtol": 1e-06,
+    "atol": 1e-07
+  },
+  "summary": {
+    "within_tolerance": 36,
+    "dimensions_match_visual_review_required": 17,
+    "differences": 5
+  },
+  "files": [
+    {
+      "file": "figures/fig10_fragility_surfaces.png",
+      "reference_sha256": "1a59b4b6491b4eed1f55373a07f3204f6ed2c530b078c6277ede25ad4071c3c5",
+      "actual_sha256": "25527ad92aca58cef73df86f46fb05d674347bfa97fbb39f58c804e3e363b2df",
+      "reference_dimensions": [
+        1950,
+        1125
+      ],
+      "actual_dimensions": [
+        1950,
+        1125
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/fig11_final_models.png",
+      "reference_sha256": "546492eb8a4f376e23459f9efc8ac17fa0e99e92620ca60b81b5820bf76e0c43",
+      "actual_sha256": "adccac1d0830775a15e83a19809ec19d9e5722a176b0ee1b17cfd66a9b7092de",
+      "reference_dimensions": [
+        1870,
+        1275
+      ],
+      "actual_dimensions": [
+        1870,
+        1275
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/fig12_district_day_fragility.png",
+      "reference_sha256": "f310c91b00c89b16ec35b560c3e9cebcef3b71f257e2d1e82636b370108c74a5",
+      "actual_sha256": "233589dca45cf78899a26f7b80bf2844e2654ca958d0b5c57d4942461a15cae2",
+      "reference_dimensions": [
+        2380,
+        731
+      ],
+      "actual_dimensions": [
+        2380,
+        731
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/fig13_weather_only.png",
+      "reference_sha256": "3c7ba506f70eb93118caa45aaf7c86931cd456bf96ee2b578c877ccb218daca7",
+      "actual_sha256": "a516361aa84f103b1b39c9183b884550a080b9bc97fbd1853fb98b0399e9cfa3",
+      "reference_dimensions": [
+        1870,
+        731
+      ],
+      "actual_dimensions": [
+        1870,
+        731
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/fig14_weather_only_pred_vs_obs.png",
+      "reference_sha256": "9ea3a4954c75202cb99a76e5aa6ffcf41447133ec5a9c1701834c247645b9314",
+      "actual_sha256": "3f53af6178770b87da27d3e73ce25d73dd00041ab70b6d9678856aba020e590b",
+      "reference_dimensions": [
+        1800,
+        1080
+      ],
+      "actual_dimensions": [
+        1800,
+        1080
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/fig1_model_comparison.png",
+      "reference_sha256": "b1acb7a2fbce4058259541f3ea9aabcbb1f2ccf12ab8eabff98eb7f2d02aedcd",
+      "actual_sha256": "ea938786bac6610619812d113f39da111d722c4000f33aed627c1c8e3660b1ec",
+      "reference_dimensions": [
+        1700,
+        1105
+      ],
+      "actual_dimensions": [
+        1700,
+        1105
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/fig2_gust_response.png",
+      "reference_sha256": "b905b9047c5807825fe78756b11bf6e063a3b87857cce348c2ce73849ca12387",
+      "actual_sha256": "d7d5a512e2f2b0fefb716f031c5015c2e5c42fd223accfc8e390e0d2ae5d1916",
+      "reference_dimensions": [
+        1700,
+        680
+      ],
+      "actual_dimensions": [
+        1700,
+        680
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/fig3_E0_pred_vs_obs.png",
+      "reference_sha256": "e344b5550fad4215f9909e754a89f1f8dbc5e26db3ac3f348e0effaf1b2e849e",
+      "actual_sha256": "e0a530164e9940702a39c8392a22c7b5fbffe02e782df12e05b4dfb865254c9a",
+      "reference_dimensions": [
+        1800,
+        900
+      ],
+      "actual_dimensions": [
+        1800,
+        900
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/fig3_R0c_pred_vs_obs.png",
+      "reference_sha256": "39e2d9a8f016c613a6fdc41d5bb92c027438bb5241ff09efd32d95ee4284b02d",
+      "actual_sha256": "89418cf298692faf28e554b7c83aa0bf8880d274318519c8bf0a77b94b372f1f",
+      "reference_dimensions": [
+        1800,
+        900
+      ],
+      "actual_dimensions": [
+        1800,
+        900
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/fig4_E0_pred_vs_obs.png",
+      "reference_sha256": "eecfe0f22641d1b643efbb0df11315d3041c6f1124b4067fbb67891760ce914c",
+      "actual_sha256": "bb6b8f0869895a400513ec3418c078892f79bb211f5a40cd9ee46a1ea300bf55",
+      "reference_dimensions": [
+        1800,
+        900
+      ],
+      "actual_dimensions": [
+        1800,
+        900
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/fig4_R0c_pred_vs_obs.png",
+      "reference_sha256": "5ad4f67db2a81fbef15a31f9ad3e7755ba30678214b60ac3ad46896a1186f401",
+      "actual_sha256": "0205a831606acc5b3e8d41b777c7a7f4f151e7fbc0725a9c11ec6439c2bef699",
+      "reference_dimensions": [
+        1800,
+        900
+      ],
+      "actual_dimensions": [
+        1800,
+        900
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/fig5_calibration_residuals.png",
+      "reference_sha256": "59db29a1aaa66d824eb4cefbbf038d39fb0106e03e71d57cb540704f49f97dda",
+      "actual_sha256": "1e7fc6467c95a93c2b0a6885c22e13f9acda9a829694f2b4da0478b7c9d0e429",
+      "reference_dimensions": [
+        1700,
+        1190
+      ],
+      "actual_dimensions": [
+        1700,
+        1190
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/fig6_knot_estimation.png",
+      "reference_sha256": "3e02179de81f6900e0ee759c48a43436e6ce9ed8f45a96fe1a7282e34178ab7b",
+      "actual_sha256": "a399930d04854cf9bd72ef28b2759902a32573228574e7b61bf57e63a5714e60",
+      "reference_dimensions": [
+        2040,
+        1105
+      ],
+      "actual_dimensions": [
+        2040,
+        1105
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/fig8_fragility_curves.png",
+      "reference_sha256": "a7d3db9a89c172b67e244fea66fe3d4a4aa53a6d28a7314df2341b12f5c5bdc2",
+      "actual_sha256": "a53b2eac8ef25ce7f9f22f426a2ca2538e3f82b4eb604503b7dea4a6e8e029f3",
+      "reference_dimensions": [
+        1870,
+        714
+      ],
+      "actual_dimensions": [
+        1870,
+        714
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/fig9_fragility_lognormal.png",
+      "reference_sha256": "c01e1c6690a856b01e76b03165575deab59a6143a279de48c3b9d3b1dde1a3ec",
+      "actual_sha256": "097b498064b89e20af26ae901a8ffed161f2ddae7bd224a1dd45c1703b881132",
+      "reference_dimensions": [
+        1870,
+        714
+      ],
+      "actual_dimensions": [
+        1870,
+        714
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/figP1_r2_decomposition.png",
+      "reference_sha256": "4cf9c32e22688162981da49e85e3791157cc27543bedf908606e10dbda49fd13",
+      "actual_sha256": "9e9043f876d4b03e23f271d4a69b3fcc8a756747b4f39aad6e2cbfea05a0d1df",
+      "reference_dimensions": [
+        1700,
+        646
+      ],
+      "actual_dimensions": [
+        1700,
+        646
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/figP2_distributions.png",
+      "reference_sha256": "f45f280fa0b2b39ef0110dfaa32fa8b6df7af9f72281c944b3a56612854b52fa",
+      "actual_sha256": "8f175fe341923d4b2c4cb2a5fba01a6ebe548ba13fb2eac1bd5cd1d9f2bc22b5",
+      "reference_dimensions": [
+        2040,
+        612
+      ],
+      "actual_dimensions": [
+        2040,
+        612
+      ],
+      "status": "dimensions_match_visual_review_required"
+    },
+    {
+      "file": "figures/frag_rows.json",
+      "reference_sha256": "6532673cc30653e3a23262af8da9e5ae7c5e2c659c60ccb2e406ba4e58ac0664",
+      "actual_sha256": "0a1d0781ebcd8a3f9d8af70f90db02b2197f889b437c9adf6d6a924cfab6a413",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "figures/pvo_rows.json",
+      "reference_sha256": "0749a30bf6aca74e2377b56581bacf634633f3a57b513a4f5721a1f82b7d5d82",
+      "actual_sha256": "c46f770981acd578ae2f0351ccccc5aabf23b71d0fbaf4dcfcce708b51f35dd8",
+      "status": "differences",
+      "differences": [
+        {
+          "field": "/5/1",
+          "reason": "text/type",
+          "reference": "Hinge 14/26 (E0) · 16 (R0c)",
+          "actual": "Hinge E0 14/26 · R0c 17"
+        },
+        {
+          "field": "/12/1",
+          "reason": "text/type",
+          "reference": "Hinge 14/26 (E0) · 16 (R0c)",
+          "actual": "Hinge E0 14/26 · R0c 17"
+        },
+        {
+          "field": "/12/4",
+          "reason": "text/type",
+          "reference": "1.2694",
+          "actual": "1.2693"
+        }
+      ]
+    },
+    {
+      "file": "figures/t2_rows.json",
+      "reference_sha256": "f3d7cb8dc67152239e462970c2d683aeaee7722b778c2bf85c628ebadb0bd739",
+      "actual_sha256": "53bdabac614e5ad66c1f4435abbc4985c2aa85c023c7f59e2233b105c97b4aac",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "figures/wo_rows.json",
+      "reference_sha256": "e42372625d9e0fc0fec59585dd6a218deb4bbefb1887992320eaa5a5584f1abf",
+      "actual_sha256": "09483f5131266ec56838e146e23da1e753e7359b05d558770346fcf06d89f6a7",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "final_models/district_day_fragility.json",
+      "reference_sha256": "5a7957593b3fc7d802f350a067f349eb9bb5b20a90bdc6aa2f7ad5d33bf4abdc",
+      "actual_sha256": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+      "status": "differences",
+      "differences": [
+        {
+          "field": "/fits/any_gt0/lognormal/beta",
+          "reason": "numeric",
+          "reference": 0.43695219113862316,
+          "actual": 0.43694735372200966
+        },
+        {
+          "field": "/fits/any_gt100/lognormal/beta",
+          "reason": "numeric",
+          "reference": 0.2912782194451185,
+          "actual": 0.2912776291935936
+        },
+        {
+          "field": "/fits/wthr_gt100/lognormal/beta",
+          "reason": "numeric",
+          "reference": 0.29024403789761943,
+          "actual": 0.2902434000468398
+        },
+        {
+          "field": "/fits/wthr_gt100/lognormal/theta",
+          "reason": "numeric",
+          "reference": 25.365720657966193,
+          "actual": 25.365692704870863
+        },
+        {
+          "field": "/fits/wthr_gt5/lognormal/beta",
+          "reason": "numeric",
+          "reference": 0.32123788395244984,
+          "actual": 0.32123636180177007
+        },
+        {
+          "field": "/fits/wthr_gt5/lognormal/theta",
+          "reason": "numeric",
+          "reference": 24.24395726298877,
+          "actual": 24.243900365547564
+        },
+        {
+          "field": "/fits/any_gt5/lognormal/beta",
+          "reason": "numeric",
+          "reference": 0.3622379092962739,
+          "actual": 0.3622401617507945
+        },
+        {
+          "field": "/fits/any_gt5/lognormal/theta",
+          "reason": "numeric",
+          "reference": 23.93300146050633,
+          "actual": 23.933084192134338
+        },
+        {
+          "field": "/fits/any_gt5/lognormal/p0",
+          "reason": "numeric",
+          "reference": 0.1510633717112401,
+          "actual": 0.15106376088580659
+        },
+        {
+          "field": "/fits/any_gt1000/lognormal/beta",
+          "reason": "numeric",
+          "reference": 0.24392737615853535,
+          "actual": 0.24393003955855522
+        },
+        {
+          "field": "/fits/any_gt1000/lognormal/theta",
+          "reason": "numeric",
+          "reference": 30.398266920427524,
+          "actual": 30.3984167426373
+        }
+      ]
+    },
+    {
+      "file": "final_models/district_day_panel.csv",
+      "reference_sha256": "1af6cd6d16b4e79a4c28819544c70943721325bc98a73fe37dfac07f766863e7",
+      "actual_sha256": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "final_models/E0_final_lad.csv",
+      "reference_sha256": "fe1dfc7df49625a696b6cdd52caf3c60aa402afa86cc13f1f42e8adcc2165292",
+      "actual_sha256": "2d7bc26b90a58031268cec59e0c1e7d84ef5b0a60634f009efc23d75c45dcc6d",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "final_models/E0_final_twoway.csv",
+      "reference_sha256": "1ed65782ab42f2c2fab5cac369a24ae124e5858ee64b72012de0c5148152b2ea",
+      "actual_sha256": "491c75aea00d6a4a60a04026978eba65072e1576e0974dfaa211c96954487f94",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "final_models/final_summary.json",
+      "reference_sha256": "266313f183e792a6e5e2cd70407f49cc884880c15356ebf336992631fa883add",
+      "actual_sha256": "3432d0bdbd3a6ccfb3a689613c8483dde5ad26489f49f960a37a9f9abe264741",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "final_models/interp_validation.json",
+      "reference_sha256": "e60092f6869b8203fed119a2ed67a8a704513e58cd0a8a3012ba742de4ef4f2e",
+      "actual_sha256": "a3b68c1c7f0049cf136bd43167f7a8a9b786690b3936ab077505bc12132d10f9",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "final_models/R0c_final_lad.csv",
+      "reference_sha256": "36f9a296eae5dc95864a6ac8b4affbe2c0a69a46806f08e302c0b954944cd856",
+      "actual_sha256": "46f803512e3124cf8895a8e9d127fe46da16f36e7a280c3537683b0d93341e13",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "final_models/R0c_final_twoway.csv",
+      "reference_sha256": "cdc669368c31d8a422ee562e08b5265c289c1f94f955918904dadc6ac373aff2",
+      "actual_sha256": "0dab57b08504cba609ca93c282fa3ccf8b1bde92a9b679286efd965255cb54a2",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "final_models/table2_replacement.csv",
+      "reference_sha256": "6ca580328ff6dd25e3b16455ea2e05a217a751178d3c32fd50f8e7450212dd33",
+      "actual_sha256": "83ccb4ecefd32cadc625bb6d1b27dd687e496dd94de8857ca281c03bc827b937",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "model_selection/all_model_comparison.csv",
+      "reference_sha256": "a46df9fca4319ed5695703c01a6768206b8375a7e4cf564acffd31fd5ff16ffb",
+      "actual_sha256": "1f2174ceda47f9a97a717e1035f3fea0b24b6d10f63334c08526d6672ae3fe4d",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "model_selection/E0_coefficients.xlsx",
+      "reference_sha256": "189490a1a5483ce50bc176dacbef359bae6a5c8e7e24a22479f06d4a6b0d13b7",
+      "actual_sha256": "e19077c19794000f6a8d1463485081197124ea750475bafc27ebd60957d11150",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "model_selection/E0_knot_bootstrap.csv",
+      "reference_sha256": "64cf3ea22ec21e43aadaeaf9eca4e0ea2232da70dc8dec7bd4ed697ceb463ed9",
+      "actual_sha256": "878d31d0792d61a2b84e027fd35b0f6a71e84c70fe753b3681859a437d42140d",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "model_selection/E0_knot_profile_1.csv",
+      "reference_sha256": "44c4a2702777248f6f4e6a249621210b664307d8341f9f6956a841304bc3bd08",
+      "actual_sha256": "c5f5bea5f71100aaa5fa8e326cd6f820c7ae8d25d0172921877fb01041d964af",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "model_selection/E0_knot_profile_2.csv",
+      "reference_sha256": "d7b2d6d2a49120d91cde4d928eca60f6cb92af5d6ac8377c813d71e2a0c5876e",
+      "actual_sha256": "1f446e3fbee3b03722ebb3021891e7081869f1018df4e35e7454a68e6e0f3eef",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "model_selection/E0_model_comparison.csv",
+      "reference_sha256": "bf5e020cde39c97e57c3d3aa3778ee0ab900508fcfddad3f98bd06a114f14ea5",
+      "actual_sha256": "5be68241e8581134a3ef3f54cebe6e5152c73db65e6be184c04aff4aafd3fc8a",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "model_selection/fragility_lognormal.json",
+      "reference_sha256": "7b387db5cad809834f54c44fbaf9ba07d7ff8d55d1c2e445d46525c5f126ee83",
+      "actual_sha256": "022d45a861d7ef0c9b9d3c6b9ca58072dbd735e67d7624bbd122909a504e5b58",
+      "status": "differences",
+      "differences": [
+        {
+          "field": "/E0/lognormal_weather_free_beta/beta/0",
+          "reason": "numeric",
+          "reference": 60.21087509727052,
+          "actual": 60.19252770790499
+        },
+        {
+          "field": "/E0/lognormal_weather_free_beta/beta/1",
+          "reason": "numeric",
+          "reference": 12.153767534393918,
+          "actual": 12.153789242334089
+        },
+        {
+          "field": "/E0/lognormal_weather_free_beta/beta/2",
+          "reason": "numeric",
+          "reference": 5.563950294324243,
+          "actual": 5.563791128728999
+        },
+        {
+          "field": "/E0/lognormal_weather_free_beta/theta/1",
+          "reason": "numeric",
+          "reference": 1242.93893149367,
+          "actual": 1242.8515394079245
+        },
+        {
+          "field": "/E0/lognormal_weather_free_beta/theta/2",
+          "reason": "numeric",
+          "reference": 249600.1377770099,
+          "actual": 249534.78492334345
+        },
+        {
+          "field": "/E0/lognormal_weather_common_beta/beta",
+          "reason": "numeric",
+          "reference": 14.93924752990234,
+          "actual": 14.939230568614704
+        },
+        {
+          "field": "/E0/lognormal_weather_common_beta/theta/0",
+          "reason": "numeric",
+          "reference": 0.021125700708474682,
+          "actual": 0.021125840710604152
+        },
+        {
+          "field": "/E0/lognormal_weather_common_beta/theta/1",
+          "reason": "numeric",
+          "reference": 3565.6887671889735,
+          "actual": 3565.666925752068
+        },
+        {
+          "field": "/E0/lognormal_weather_common_beta/theta/2",
+          "reason": "numeric",
+          "reference": 3989304876081.8755,
+          "actual": 3989190869375.724
+        },
+        {
+          "field": "/E0/lognormal_all_incidents/beta",
+          "reason": "numeric",
+          "reference": 8.434518498273087,
+          "actual": 8.434494432189664
+        },
+        {
+          "field": "/E0/lognormal_all_incidents/theta/0",
+          "reason": "numeric",
+          "reference": 44.2613124073964,
+          "actual": 44.26114629223043
+        },
+        {
+          "field": "/E0/lognormal_all_incidents/theta/1",
+          "reason": "numeric",
+          "reference": 60713.617661730605,
+          "actual": 60712.12996277941
+        },
+        {
+          "field": "/E0/lognormal_all_incidents/theta/2",
+          "reason": "numeric",
+          "reference": 387158186.08483326,
+          "actual": 387137760.00367093
+        },
+        {
+          "field": "/R0c/lognormal_weather_free_beta/beta/0",
+          "reason": "numeric",
+          "reference": 2.1816135564351447,
+          "actual": 2.181608748285488
+        },
+        {
+          "field": "/R0c/lognormal_weather_free_beta/beta/2",
+          "reason": "numeric",
+          "reference": 0.8035524712713167,
+          "actual": 0.8035535447336258
+        },
+        {
+          "field": "/R0c/lognormal_weather_free_beta/theta/0",
+          "reason": "numeric",
+          "reference": 4.605730034407466,
+          "actual": 4.6057392168695905
+        },
+        {
+          "field": "/R0c/lognormal_weather_free_beta/theta/2",
+          "reason": "numeric",
+          "reference": 42.549382562412404,
+          "actual": 42.54942678095514
+        },
+        {
+          "field": "/R0c/lognormal_all_incidents/beta",
+          "reason": "numeric",
+          "reference": 7.152546581466217,
+          "actual": 7.15255832780673
+        },
+        {
+          "field": "/R0c/lognormal_all_incidents/theta/0",
+          "reason": "numeric",
+          "reference": 0.2724537544588413,
+          "actual": 0.272452169606371
+        },
+        {
+          "field": "/R0c/lognormal_all_incidents/theta/1",
+          "reason": "numeric",
+          "reference": 810.2675461940784,
+          "actual": 810.273465490132
+        },
+        {
+          "field": "/R0c/lognormal_all_incidents/theta/2",
+          "reason": "numeric",
+          "reference": 2122972.406128253,
+          "actual": 2123015.3103692755
+        }
+      ]
+    },
+    {
+      "file": "model_selection/fragility_summary.json",
+      "reference_sha256": "88fc47c1b0312381f169b1895c3351da9eb9eadb8cd7323c115ad903ef24cd48",
+      "actual_sha256": "3b6732df959c7fec4ca65d289689998f617edabce354a5ae36f693371fb3b79c",
+      "status": "differences",
+      "differences": [
+        {
+          "field": "/E0/ordinal_converged",
+          "reason": "key coverage",
+          "reference": null,
+          "actual": true
+        },
+        {
+          "field": "/R0c/ordinal_converged",
+          "reason": "key coverage",
+          "reference": null,
+          "actual": true
+        }
+      ]
+    },
+    {
+      "file": "model_selection/hinge_knot_search.csv",
+      "reference_sha256": "d03272ef68841cc850ed40a860342764eb2818cf50f54ac83468bf21345f5418",
+      "actual_sha256": "404e30b3a98455b2d36b432bcffd3fbb93f035737fd055e99fdb6d20963e7ee0",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "model_selection/knots.json",
+      "reference_sha256": "62106a76578fb7b866a1d04bf082855fad86dbf9c4f2ed2106f9db96493f7f35",
+      "actual_sha256": "af506c6ec5b9ba4c3f3450bf88a02afb87e4116f798233bb5920341c95f5bb3b",
+      "status": "differences",
+      "differences": [
+        {
+          "field": "/E0/conditional_scope",
+          "reason": "key coverage",
+          "reference": null,
+          "actual": "Main gust effect at mean pressure; retained gust-pressure interaction changes the high-gust slope at other pressures."
+        },
+        {
+          "field": "/E0/final_selection_rule",
+          "reason": "key coverage",
+          "reference": null,
+          "actual": "Replicate advisor E0 plateau specification using its freshly profiled knots; original hinge selection retained separately."
+        },
+        {
+          "field": "/E0/unconstrained_selected",
+          "reason": "key coverage",
+          "reference": null,
+          "actual": [
+            14.0,
+            26.0
+          ]
+        }
+      ]
+    },
+    {
+      "file": "model_selection/predicted_vs_observed_summary.csv",
+      "reference_sha256": "a35f4a1ffadf92a23facd5f9ca9c64ecc74d7c66b35d6637b618643f913514f4",
+      "actual_sha256": "f1fcace39c43913e4037f984db875ec87617eb00d3248dad059c68014da0540a",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "model_selection/R0c_coefficients.xlsx",
+      "reference_sha256": "757f1a1c3e220a06865fcd975807d9a03d40573230a92094fc486ed1e0d84326",
+      "actual_sha256": "6157ded373da68571ce29dc2b56b634c2f5637fd10796765212e3b9b1d4331cb",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "model_selection/R0c_knot_bootstrap.csv",
+      "reference_sha256": "b62983a45b672cb3813e21ddd172088af454c4115df5a2d9b2f3cd42f54849a2",
+      "actual_sha256": "992d4a1e569f0ca99450602522c698988dd585bf1628035a651a9ebad5f6e783",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "model_selection/R0c_knot_profile_1.csv",
+      "reference_sha256": "3b586e7b6c8ff04855a4faf3674fb531d1f4b1aa1349940a7edd009c672da4e5",
+      "actual_sha256": "916a3650989d5f1ece2d0fab0ef3bafc23643f042131cae2926c1dca02d252e3",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "model_selection/R0c_knot_profile_2.csv",
+      "reference_sha256": "8a7dcc03827cf1731877b50a8781162413bac11f5e7a371cef7f1aadf87cb5ec",
+      "actual_sha256": "68c3ac1099c8b974b4bd70c82491099d4fdc908974c4e2488ecbb5971c07d4c6",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "model_selection/R0c_model_comparison.csv",
+      "reference_sha256": "c9a0712f7591e31ea181de7ee69188af3c3045d7fb1b5f4aad021c8efcf726fa",
+      "actual_sha256": "d564d4ced5d33541be17c4fa677f409a87a3cf23f2d109b4544a0342b7cd6e42",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "model_selection/ramp_model.json",
+      "reference_sha256": "e2b5c591a40f9fcd0ffc2c919a16f1700048ef48ea5b720fd631d03279a9e07d",
+      "actual_sha256": "ce9f95991d1f2d96e084103021153f1c5be63e833f923ae8564b8562b3083623",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "model_selection/ramp_model_R0c.json",
+      "reference_sha256": "e3bc0712aebad119d4c5859edcb67d0dd2433d97f4dce06ff21d24d111081907",
+      "actual_sha256": "521d363cc4e001e8ff10ae47605d31591014f5f846447bfa9fee1577ae64e3ef",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "paper/paper_extras.json",
+      "reference_sha256": "90f929f9a2e738ed8d240089747585f1ab0c7c9ee397d1bb806d08ba95eb1e35",
+      "actual_sha256": "3ed00f4f19ab19fe3fdf32ad17a79500e13f0eae5262d280f88830d6bcd4090e",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "paper/r2_decomposition.csv",
+      "reference_sha256": "a2c9a8a41b5ae9eadb9644600d1b872b1c602c2f9d65a96e0fdc20aa800fb106",
+      "actual_sha256": "547ad247bc5571e6ffe452e2e39b13cf2ea73da8cfcea68023522855ff7909af",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "weather_only/E0_weather_final_twoway.csv",
+      "reference_sha256": "066d3178d2be1da425b93cd32218e92c0c1f0f79818fe85fc1e3584bb2f03c30",
+      "actual_sha256": "994d2218bae8a395f72905e708e6f34763ea5990285d5792bf9de0ea890c400a",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "weather_only/E0_weather_hinge_twoway.csv",
+      "reference_sha256": "07c3674cdb5a27ed8fec77a356b1d91813aa7c15645998a4052ec93b07213ff7",
+      "actual_sha256": "f0f47980a4cebdda9722e7d7180e29a7b9f54035179d8018b6fa7f158c3c35ac",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "weather_only/E0_weather_paper_twoway.csv",
+      "reference_sha256": "28b7682bb84a68840a74aa571b10ab8dbd91ad5aa9829ed32ca1be16475410f8",
+      "actual_sha256": "3127bb1e88f37f2ad617beb4ae89d56175f088a1e7dbd032f7a2be7823366632",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "weather_only/R0c_weather_final_twoway.csv",
+      "reference_sha256": "8316dd59bfa4ecb5a73c5103d031b01e4da0f8e97aef871eb3172dc5836cc989",
+      "actual_sha256": "ba69ee5391716b3273a38bb6203da0781b63623dd49be5491a2addf89f7ba220",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "weather_only/R0c_weather_hinge_twoway.csv",
+      "reference_sha256": "494d286c6000acf78daa77a4309e1203e9cfb1e06893e453e184138a3351103a",
+      "actual_sha256": "cb846e2ab94541dc74843302eee67fd1da910eeebd1cad64a03be57f70afb9e8",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "weather_only/R0c_weather_paper_twoway.csv",
+      "reference_sha256": "594ee082239fc1d918ebcbedd289e8955e2d91702d5c09ec8586179f689a90f7",
+      "actual_sha256": "aff72a4663243d0d92816628206ca830c55fcf12ca84a01d4600d213207e554e",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "weather_only/weather_only_pred_vs_obs.csv",
+      "reference_sha256": "cff3d3f736c082515b51d526c5c6f25dcbe4a71d51586b80668e6cffd8f9a95d",
+      "actual_sha256": "f1caf2fb60d3160a10c259292c0455a218f54b4ddd285387a06f2bc278fdf4ad",
+      "status": "within_tolerance"
+    },
+    {
+      "file": "weather_only/weather_only_summary.json",
+      "reference_sha256": "211735c60b0ddb9ec84aa73d08f956ef73de5264cfbba18b1e0cbe2a97abea11",
+      "actual_sha256": "286b36e35231108b8403bda654ec05e2d41550001797fd365e39b98e086ec555",
+      "status": "within_tolerance"
+    }
+  ]
+}

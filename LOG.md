@@ -325,3 +325,64 @@ docs/、results/、test/
 - GitHub Release 已正式发布（非 draft、非 prerelease）：https://github.com/Baiyu-Eplur/pyOutageGust/releases/tag/pretest-unified-entry-20260909 ，标题“主要里程碑：统一分析入口与 pretest 归档”，Release ID 385624543。
 - 发布正文来自里程碑说明文件，文档链接转换为指向本标签的 GitHub 固定版本链接；API 回读确认正文一致。发布回执保存在 docs/milestones/2026-09-09_pretest-publication.json。
 - 本成功记录与发布回执作为单独的文档提交同步到 main；主要里程碑标签保持指向 b21a2a4，不移动已发布的版本标签。
+
+
+## 2026-09-09 新分析 Step 1：导师代码学习与独立模块建立
+
+- 核对两份导师样本与 review_package/data 的 SHA-256 完全一致（E0 60,437 行、R0c 59,834 行）。只读导师包，生产流程仅用自己的样本。
+- 学习 11 个 Python 分析程序、2 个 JS 文档程序；在 analysis_new/ 建立有来源标注的项目自有模块，复用既有主回归。源指纹见 docs/new_analysis/source_inventory.json。
+- 发现结点 selected 未由平台步骤写回、旧绘图标签、缺少 JSON 制表程序及硬编码 Linux 路径。补齐衔接，并将平台网格求解改为等价残差化 Gram 计算；后续验证另记。
+
+## 2026-09-09 16:31 新分析 Step 2：统一入口和完整计算
+
+- 新建 `main_new.py` 的 16 步 0/1 开关和运行目的；`analysis_new/runner.py` 按秒级时间创建独立运行，缺少依赖时停止，允许验证输入/产物指纹后复用已完成旧运行。复用 `pretestmain._write_guard` 与原主回归，禁止生产分析读取 Comments/旧项目。
+- 补建 `hinge_search.py`、`select_final_knots.py`；平台优化新增 `basis_solver.py`；`test/test_new_analysis.py` 逐候选直接残差回归等价测试通过（SSE 8 位小数）。初次 unittest 点路径被 Python 标准库 test 名称占用，改用 discover 后通过。
+- 16:31:43 启动完整 500/300 次运行 `results/new/20260909163143/`。E0 500 次 bootstrap 和折内结点验证已与导师结果吻合；运行余下步骤继续记录在该目录 logs/run.json。
+
+## 2026-09-09 新分析 Step 3：制表、文档与学习说明
+
+- `report_tables.py` 从当轮计算结果生成四份论文表格 JSON、描述统计和 COMPUTED_RESULTS.md，解决导师包制表程序缺失和旧 JSON 标签漂移。
+- 改编两个 JS 文档生成器到 `analysis_new/`，移除原作者机器路径和 python3 shell 调用。`documents.py` 使用自己的 `docs/Draft.docx` 地图与 26 条参考文献；地图已与导师图像逐字节核对相同。`document_plan.py` 补建本项目重组计划。
+- 文档模板保留历史论述但明示范围，数值表与图从当轮重新生成；手填叙述和因果/首创性主张不作为计算证据。新增 `docs/NEW_ANALYSIS_GUIDE.md`，说明全部步骤、公式、数据范围、来源、缺失桥接和解释差异。
+- 新 Python 模块 AST 语法检查、两份 JS 的 node --check 均通过。完整分析及文档生成/排版检查仍在进行。
+
+## 2026-09-09 16:41 新分析 Step 4：数值核对发现并修复探索版本混用
+
+- `docs/new_analysis/compare_reference.py` 对导师只读产物进行独立核对，不进入生成依赖。首轮阶段性核对已确认 14 个 CSV/JSON/XLSX 在 rtol=1e-6、atol=1e-7 内一致；平台两边际的全体/天气 bootstrap 结果也吻合。
+- `predicted_vs_observed_summary.csv` 的 E0 SSE 对应无平台约束的自由两铰链，`fragility_summary.json` 明确保存 E0 14/26；原包现有绘图源码却改成平台。将本项目探索图和 ordinal/NB 改为使用保留的 unconstrained_selected，最终 E0 模型仍用平台 14/25。源代码和旧产物不是同一版，不能机械地共享 selected。
+- ordinal 新增收敛标记；runner 每个子进程记录实际启动时的源码/原稿指纹，补足首次开发中逐步完善后续模块的来源追踪。受影响步骤完成后重新执行；初次运行作为开发记录保留。
+
+## 2026-09-09 16:44 新分析 Step 5：完整重跑和文档烟雾测试
+
+- 首轮数值步骤全部完成，在 report_tables 因缺少可选 tabulate 库停止；改成标准库 Markdown 表生成，不增加环境依赖。失败记录保存在 `results/new/20260909163143/`，不能作为成功运行自动复用。
+- 修正探索/最终结点区别后，于 16:44:59 从自己的数据重新完整执行 16 步，目录 `results/new/20260909164459/`，仍为 500/300 次 bootstrap。新增科学库版本记录、优化器收敛诊断；.gitignore 排除运行缓存和 QA 中间文件，.gitattributes 保留真实产物字节。
+- 文档烟雾夹具 `results/new/20260909164707/` 只复用首轮自己的数值产物，测试制表与文档。修复原 JS 未定义段落样式的 None 情况，缩放表格到页面正文宽度、禁止表格行跨页。4 份 DOCX 已生成。
+- 文档技能 render_docx.py 实际执行失败，原因是本机无 LibreOffice soffice.exe。已诊断并用本机隐藏 Word 16 实例只读打开生成的 DOCX、导出 PDF，再用 Poppler 栅格化检查。`docs/new_analysis/render_word.ps1` 保存此本地替代流程，不修改原稿。
+- 平台数值等价测试再次通过；旧入口 11 项测试通过。README/CLAUDE 更新新阶段路径与入口职责，原始样本、Comments 和冻结研究包保持只读。
+
+## 2026-09-09 16:55 新分析 Step 6：全流程完成与最终文档修正
+
+- `results/new/20260909164459/` 于 16:55:32 完成全部 16 步，保存 83 个产物。全部 58 个导师 results 产物都有本项目对应输出：35 个数值/结构在严格容差内一致、17 张图尺寸一致、其余 6 个文件逐项解释差异。
+- 自由探索预测 CSV、ordinal/NB 数值已吻合；两个 ordinal 模型均收敛。新增 `compare_fragility_curves.py` 比较 26 条对数正态曲线：0.5–40 m/s 的 10,001 点网格上最大概率绝对差为 8.991991e-6，全部小于 1e-4；原始参数细微差异保留在 JSON 验收记录，不宣称逐字节相同。
+- 论文模型比较表改为从同轮计算结果自动生成，并把剖面 BIC 加回共同高斯常数；原来手填的比较值不再伪装成当前计算。README/学习说明补充其定义。DOCX 明示历史叙述仍需论文阶段修订。
+- 最终 Word 排版检查发现天气模型变量 `gust_hinge_11` 仍显示原代码名，补充人类可读标签映射。下一次仅重新生成制表/文档，验证并复用上述已完成的数值产物；也验证关闭所有建模开关的增量运行方式。
+
+## 2026-09-09 17:06 新分析 Step 7：最终验收和成果索引
+
+- 最终输出 `results/new/20260909170633/`，仅开启 documents，SHA-256 验证复用 `20260909165736` 的数值/制表；后者已验证复用 `20260909164459` 完整 16 步结果。最终 83 个正式产物全部哈希通过，科学计算模块 13 个实际执行源码指纹一致。主入口顶部仍默认完整运行，用户可按学习说明选择增量复用。
+- 修正 `document_plan.py` 对表下说明的分页处理：把说明与前面表格末行绑定，避免被后面大图带到新页。Word 重新导出后检查表 2/3/4 的放大页面；其余三份文档主 XML 与已检查版本一致。最终文档共 41 页（16/15/8/2），页面总览与关键页检查完成。
+- 最终 58 文件对照为：36 个数值/结构严格匹配，17 图覆盖/尺寸一致，5 文件存在明确解释的新增诊断字段、旧 JSON 标签或优化末位差异；无缺失。26 条曲线最大概率差 8.991991e-6。保留原始对照证据，不宣称所有产物逐字节相同。
+- 新增 `docs/new_analysis/2026-09-09_REPRODUCTION_REPORT.md` 汇总数据相同的证据、完整输出路径、方法/版本区别、测试、全部产物范围和论文文字的边界；学习说明指向最终运行。主项目代码改动完成，旧内容仍在 pretest，导师文件未被修改。
+
+## 2026-09-09 — 导师独立复现关键里程碑发布：步骤 1 / 发布前检查与说明
+
+- 用户授权将上述更新作为关键 milestone 同步到 GitHub，并继续记录主要改动。fetch 后确认本地 main 与 origin/main 均位于 62cdbf2，无分叉；远程为 Baiyu-Eplur/pyOutageGust。
+- 新增 `docs/milestones/2026-09-09_advisor-independent-reproduction.md`，说明 16 步入口、复用与补齐的代码、数据一致性、83 个最终产物、58 文件比较与 5 个差异、文档范围；README 增加里程碑和发布入口。
+- 发布标签确定为 `advisor-independent-reproduction-20260909`，沿用附注 Git 标签与正式 GitHub Release 的记录方式。提交包含开发 Step 1–7 日志和五次运行轨迹，明确失败/烟雾记录不作为完整数值验收。
+- 检查发现新增 504 个待跟踪文件，共约 125.34 MiB，最大单文件约 14.14 MiB，无超出 GitHub 单文件大小限制的文件。沿用现有忽略规则，不加入 Comments、原始数据、缓存和排版 QA 中间文件；新增源码和结果通过 .gitattributes 原样保存字节。
+
+## 2026-09-09 — 导师独立复现关键里程碑发布：步骤 2 / 暂存区验收
+
+- 已暂存本轮实现、文档、结果和里程碑说明。逐项读取真实 Git blob，核对四次有输出清单的运行共 321 个记录产物与最终运行 26 个源码/原稿指纹，合计 347 项 SHA-256 全部一致；两份本地输入也与记录一致。核验清单保存为 `docs/milestones/2026-09-09_advisor-staged-verification.json`。
+- 首次 Git 空白检查将原样保存的 CRLF 行尾识别为空格；改用本次命令级 `core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol` 识别 CRLF 后，代码和新增说明检查通过，不修改文件字节或全局 Git 配置。
+- 暂存路径检查未发现 Comments、原始输入或 QA 缓存误加入；GitHub API 确認仓库 main 为默认分支、当前凭据有推送权限，且同名 Release 尚不存在。以下准备提交、推送并发布，不改写旧标签或提交历史。

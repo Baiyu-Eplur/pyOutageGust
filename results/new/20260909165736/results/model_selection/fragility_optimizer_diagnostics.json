@@ -1,0 +1,50 @@
+[
+  {
+    "n": 9857,
+    "common_beta": true,
+    "success": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "nll": 14271.340715071721,
+    "iterations": 22
+  },
+  {
+    "n": 9857,
+    "common_beta": false,
+    "success": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "nll": 14265.028835339155,
+    "iterations": 30
+  },
+  {
+    "n": 60437,
+    "common_beta": true,
+    "success": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "nll": 71872.63480926846,
+    "iterations": 18
+  },
+  {
+    "n": 9806,
+    "common_beta": true,
+    "success": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "nll": 13804.168812163429,
+    "iterations": 19
+  },
+  {
+    "n": 9806,
+    "common_beta": false,
+    "success": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "nll": 13650.282970059518,
+    "iterations": 29
+  },
+  {
+    "n": 59834,
+    "common_beta": true,
+    "success": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "nll": 81981.32511709345,
+    "iterations": 12
+  }
+]

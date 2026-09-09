@@ -1,0 +1,6 @@
+[all n=51173] ramp knots (17,33) slope=0.0859 (2way SE 0.0112)  BIC ramp=14310.7 vs 2-hinge(15,20)=14313.0  LR=8.54 p=0.003
+   region k1[16.0, 18.0] k2[31.0, 34.0]  boot k1 [16. 17. 20.] k2 [29. 33. 34.]
+   nested CV: ramp 1.1501  two-hinge 1.1502  quadratic 1.1504
+[weather n=9254] ramp knots (9,33) slope=0.0580 (2way SE 0.0063)  BIC ramp=4191.8 vs 2-hinge(9,34)=4200.0  LR=0.92 p=0.336
+   region k1[8.0, 12.0] k2[29.0, 34.0]  boot k1 [ 8. 10. 14.] k2 [26. 32. 34.]
+   nested CV: ramp 1.2478  two-hinge 1.2483  quadratic 1.2476

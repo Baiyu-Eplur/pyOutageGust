@@ -1,0 +1,11 @@
+{
+  "purpose": "文档生成与排版独立烟雾测试；输入为第一次开发运行的自有计算产物",
+  "source": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909163143",
+  "status": "smoke_completed_after_fix",
+  "started_at": "2026-09-09T16:47:07.102990",
+  "finished_at": "2026-09-09T16:47:11.107794",
+  "notes": [
+    "Initial document_plan failed on missing paragraph style; fixed and reran successfully.",
+    "Four DOCX exported using hidden Word; 40 pages rasterized and contact sheets inspected. Heading and caption pagination refinements applied to source for final run."
+  ]
+}

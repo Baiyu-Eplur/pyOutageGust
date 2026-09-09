@@ -47,3 +47,8 @@ Thumbs.db
 results/pretest/.run.lock
 results/pretest/runs/*/*/tmp/
 results/pretest/runs/*/*/mpl/
+
+# New analysis runtime caches; retain numeric outputs and provenance logs.
+results/new/*/tmp/
+results/new/*/mpl/
+results/new/*/qa/

@@ -1,5 +1,7 @@
 # pyOutageGust
 
+**关键里程碑：导师分析独立复现（2026-09-09）**：新增 [`main_new.py`](main_new.py) 和 [`analysis_new/`](analysis_new/)，直接使用自己的相同样本，完整运行 16 步，交付 83 个产物。学习、方法和开关说明见 [`docs/NEW_ANALYSIS_GUIDE.md`](docs/NEW_ANALYSIS_GUIDE.md)；改动、验证与范围见 [里程碑记录](docs/milestones/2026-09-09_advisor-independent-reproduction.md)。版本标签：`advisor-independent-reproduction-20260909`（[发布说明](https://github.com/Baiyu-Eplur/pyOutageGust/releases/tag/advisor-independent-reproduction-20260909)）。
+
 **主要里程碑（2026-09-09）**：[统一分析入口与 pretest 归档](docs/milestones/2026-09-09_pretest-unified-entry.md) — 新增 main.py 顶部统一开关，接入 117 个运行步骤，归档 721 个历史输出，记录每次运行目的与分类结果；26 项测试通过，8 个验证文件与旧版逐字节一致。版本标签：`pretest-unified-entry-20260909`（[发布说明](https://github.com/Baiyu-Eplur/pyOutageGust/releases/tag/pretest-unified-entry-20260909)）。
 
 Statistical analysis codebase for a UK Power Networks (UKPN) weather-outage
@@ -28,7 +30,8 @@ time — see below.
 
 | Path | Contents |
 |---|---|
-| `main.py` | 唯一分析入口；顶部直接设置运行目的和每一步的 0/1 开关 |
+| `main.py` | 旧分析统一入口；顶部设置运行目的和每一步的 0/1 开关 |
+| `main_new.py`, `analysis_new/` | 导师分析独立复现入口与模块；复用自己的样本和已有主回归 |
 | `pretestmain.py`, `pretest_paths.py` | 旧研究步骤调度、路径解析、分类输出和运行记录 |
 | `scripts/` | Dated analysis-task folders (data repair, figures, robustness checks, pipeline stages) |
 | `paper_revision_work_v2/` | Paper-revision work packages `R02`–`R05`, `X02_storm_specialization`, `code/`; `R02_isolation_audit` is an audit trail for R02 |
@@ -38,6 +41,7 @@ time — see below.
 | `data/external/` | Read-only input snapshots copied from the old STST2603 project (gitignored — see [`data/external/README.md`](data/external/README.md) for provenance and how to regenerate each file) |
 | `data/generated/` | 原中间数据位置；本轮旧流程新增中间数据统一进入 results/pretest/data |
 | `results/pretest/` | 旧研究结果：archive 历史归档；figures/models/data/analysis/checks 分类的新结果；runs 运行目的与日志 |
+| `results/new/` | 新分析：秒级运行目录、分类结果、目的/源码/数据校验和逐步日志 |
 | `docs/` | Design notes, review notes, manuscript drafts, migration history |
 | `test/` | Exploratory/validation scratch work |
 
@@ -80,7 +84,9 @@ python main.py
 图片结果位于 `results/pretest/figures/<YYYYMMDDHHMMSS>/<步骤序号>/`，其下保留原任务内的文件层级。
 每次运行的目的、开关、执行状态、控制台日志、输入来源与输出 SHA256 位于 `results/pretest/runs/<YYYYMMDDHHMMSS>/`。
 
-完整说明和任务目录见 [`docs/PRETEST_GUIDE.md`](docs/PRETEST_GUIDE.md)。本阶段接入 scripts 的全部旧功能和 review_package 回归；`paper_revision_work_v2`、`test` 内既有独立/冻结研究包保留原始状态，其科学流程没有作为新主分析迁入。导师 Comments 代码将在下一阶段处理。
+旧功能完整说明见 [`docs/PRETEST_GUIDE.md`](docs/PRETEST_GUIDE.md)。`paper_revision_work_v2` 内冻结研究包保持原样。
+
+导师分析使用 `python main_new.py`，其顶部 `STEPS` 默认完整启用。每次填写 `RUN_PURPOSE`；增量执行时填写已完成运行的 `REUSE_RUN` 并关闭不需要重算的步骤。结果进入 `results/new/<YYYYMMDDHHMMSS>/results/`，逐步记录位于同层 `run.json` 和 `logs/`。详情见 [`docs/NEW_ANALYSIS_GUIDE.md`](docs/NEW_ANALYSIS_GUIDE.md)。
 
 ## AI collaboration rules
 

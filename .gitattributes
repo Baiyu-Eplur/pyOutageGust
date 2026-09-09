@@ -5,6 +5,10 @@ results/pretest/** -text
 /main.py -text
 /pretestmain.py -text
 /pretest_paths.py -text
+/main_new.py -text
+analysis_new/** -text
+results/new/** -text
+test/test_new_analysis.py -text
 scripts/**/*.py -text
 review_package/code/*.py -text
 test/test_pretest_entry.py -text

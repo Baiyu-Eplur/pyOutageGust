@@ -1,0 +1,10 @@
+panel: 121,656 district-days, 34.5% with an incident; interpolation LOO: rmse=2.22 m/s corr=0.854 bias=-0.08
+  any_gt0      base=0.345  p0=0.319  theta=22.6  beta=0.44
+  any_gt5      base=0.167  p0=0.151  theta=23.9  beta=0.36
+  any_gt100    base=0.061  p0=0.053  theta=25.1  beta=0.29
+  any_gt1000   base=0.008  p0=0.007  theta=30.4  beta=0.24
+  wthr_gt0     base=0.050  p0=0.034  theta=23.1  beta=0.33
+  wthr_gt5     base=0.036  p0=0.024  theta=24.2  beta=0.32
+  wthr_gt100   base=0.020  p0=0.013  theta=25.4  beta=0.29
+  wthr_gt1000  base=0.003  p0=0.001  theta=31.8  beta=0.27
+surface >100: [-2.836 -0.005 -0.417  0.242  0.099] monotone in gust over 0.9875

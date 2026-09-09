@@ -1,0 +1,8 @@
+[E0] profile: 1-knot k=13  2-knot k=(14,26)  BIC quad=83117.6 1k=83021.7 2k=82988.3  LR(2v1)=44.4 p=2.3e-10  region k1[13.0, 14.0] k2[24.0, 29.0]
+[E0] bootstrap B=500: k1 [13. 14. 15.]  k2 [24.    26.    29.525]
+[E0] nested CV: quad=1.9887 1-knot=1.9869 2-knot=1.9865  fold knots=[[14.0, 25.0], [13.0, 29.0], [14.0, 26.0], [14.0, 25.0], [14.0, 26.0]]  (58s)
+[R0c] profile: 1-knot k=17  2-knot k=(14,20)  BIC quad=28474.1 1k=28462.8 2k=28456.5  LR(2v1)=17.3 p=0.00018  region k1[8.0, 15.0] k2[18.0, 21.0]
+[R0c] bootstrap B=500: k1 [ 8. 13. 16.]  k2 [18. 19. 25.]
+[R0c] nested CV: quad=1.2695 1-knot=1.2695 2-knot=1.2694  fold knots=[[15.0, 20.0], [13.0, 19.0], [13.0, 20.0], [13.0, 19.0], [8.0, 18.0]]  (74s)
+[E0] selected knots: [14.0, 26.0]  (bootstrap widths k1=2.0, k2=5.5)
+[R0c] selected knots: [17.0]  (bootstrap widths k1=8.0, k2=7.0)
