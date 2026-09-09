@@ -206,3 +206,7 @@ docs/、results/、test/
 - 顺带发现（与本任务无关，仅记录）：`STST2603_model_review_package/review_log.md` 和 `review_logs/` 目录在 2026-09-09 08:50–09:06 出现/更新过，**这不是本次或上次任何一个任务写入的**（本项目所有脚本都不会产生叫 `review_log.md` 的文件名），大概率是你自己在别处对那个老项目目录做了什么操作，特此告知，未做任何处理。
 
 对 `STST2603` 全程只读；本阶段发现并如实披露了阶段二遗留的一次误写（已用 checksum 证实无实际数据损失），本阶段自身的改动与重新运行均未再对 `STST2603` 产生任何写入。
+
+## 2026-09-09 — Comments/ 加入 .gitignore
+
+`Comments/`（含 `Comments_for_Haoyan/` 和 `Comments_for_Haoyan.zip`，约 32MB）是用户后续用来处理导师批注的目录，刚出现在工作区、尚未被 git 跟踪（`git status` 显示 `?? Comments/`）。在 [`.gitignore`](.gitignore) 里加了一条 `Comments/` 规则（放在"reviewer feedback"独立分组下），并用 `git check-ignore -v` 确认生效。未修改该目录下任何内容。

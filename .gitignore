@@ -28,6 +28,9 @@ __pycache__/
 env/
 venv/
 
+# --- reviewer feedback (professor's comments), handled outside git ---
+Comments/
+
 # --- OS / editor cruft ---
 .DS_Store
 Thumbs.db
