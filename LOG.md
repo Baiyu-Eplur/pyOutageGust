@@ -386,3 +386,11 @@ docs/、results/、test/
 - 已暂存本轮实现、文档、结果和里程碑说明。逐项读取真实 Git blob，核对四次有输出清单的运行共 321 个记录产物与最终运行 26 个源码/原稿指纹，合计 347 项 SHA-256 全部一致；两份本地输入也与记录一致。核验清单保存为 `docs/milestones/2026-09-09_advisor-staged-verification.json`。
 - 首次 Git 空白检查将原样保存的 CRLF 行尾识别为空格；改用本次命令级 `core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol` 识别 CRLF 后，代码和新增说明检查通过，不修改文件字节或全局 Git 配置。
 - 暂存路径检查未发现 Comments、原始输入或 QA 缓存误加入；GitHub API 确認仓库 main 为默认分支、当前凭据有推送权限，且同名 Release 尚不存在。以下准备提交、推送并发布，不改写旧标签或提交历史。
+
+## 2026-09-09 18:16 — 导师独立复现关键里程碑发布：步骤 3 / GitHub 发布成功
+
+- 主要里程碑提交为 `1a43c74b167a1173d494cfe61144424790eb1931`，提交说明为 `Milestone: independently reproduce advisor analysis with main_new`，共 511 个改动文件，包含代码、成果、学习和验收文档以及逐步日志。
+- 原子推送成功：GitHub main 从 `62cdbf2` 前进到 `1a43c74`，同时新增附注标签 `advisor-independent-reproduction-20260909`；标签对象为 `1594057ec2b33dfb816314c37c1981406be2dade`。未强推或移动已有标签。
+- 正式 GitHub Release 已于 2026-09-09 17:16:45 UTC 发布，标题为“关键里程碑：导师分析独立复现与 main_new 入口”，ID 为 `385710251`：https://github.com/Baiyu-Eplur/pyOutageGust/releases/tag/advisor-independent-reproduction-20260909 。
+- API 回读核对发布为非 draft、非 prerelease，发布正文与里程碑说明一致；相对文档/成果链接已转换为指向该标签的固定版本链接。远程 main 与附注标签所指提交均与本地里程碑提交一致。
+- 发布回执保存为 `docs/milestones/2026-09-09_advisor-publication.json`，记录提交、标签对象、Release URL、正文指纹、核验时间和 347 项暂存字节校验结果。本成功日志与回执作为后续文档提交同步到 main，里程碑标签继续固定在实现提交 `1a43c74`。
