@@ -8,7 +8,7 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\c02_c08_repair_20260905")))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "c02_c08_repair_20260905"))
 from corrected_sample_builder import build_corrected_combined_samples  # noqa: E402
 
 OUT_DIR = Path(r"D:\Pyprogramme\pyOutageGust\review_package\data")

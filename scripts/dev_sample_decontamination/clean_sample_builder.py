@@ -11,7 +11,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-V3_VALIDATION_SCRIPT = Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\v3_validation\v3_validation_pipeline.py")
+V3_VALIDATION_SCRIPT = Path(__file__).resolve().parents[1] / "v3_validation" / "v3_validation_pipeline.py"
 LOCKED_START = pd.Timestamp("2023-09-30")
 WT_GROUPS = {"weather_natural", "technical_asset"}
 

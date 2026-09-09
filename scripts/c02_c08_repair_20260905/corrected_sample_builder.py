@@ -19,8 +19,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-SRC = Path(r"D:\Pyprogramme\STST2603\rebuild_v3_full_stage\outputs\ukpn_full_stage_dataset_v3.csv")
-C01_RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c01_repair_20260905\raw")
+SRC = Path(r"D:\Pyprogramme\pyOutageGust\data\external\ukpn_full_stage_dataset_v3.csv")
+C01_RAW_DIR = Path(r"D:\Pyprogramme\pyOutageGust\results\c01_repair_20260905\raw")
 
 INCIDENT_COL = "Incident Reference"
 V9_USECOLS = [
@@ -88,13 +88,13 @@ def _patch_v9():
     matched = _build_corrected_matched()
     step0_summary = {"n_weather_matched_events": int(len(matched))}
 
-    sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\v3_validation")))
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "v3_validation"))
     import v3_validation_pipeline as v9  # noqa: E402
     v9.step0_build_sample = lambda: (matched.copy(), step0_summary)
 
     spec = importlib.util.spec_from_file_location(
         "clean_sample_builder",
-        r"D:\Pyprogramme\STST2603\claude_branch\scripts\dev_sample_decontamination\clean_sample_builder.py")
+        str(Path(__file__).resolve().parents[1] / "dev_sample_decontamination" / "clean_sample_builder.py"))
     clean_sample_builder = importlib.util.module_from_spec(spec)
     sys.modules["clean_sample_builder"] = clean_sample_builder
     spec.loader.exec_module(clean_sample_builder)
@@ -102,7 +102,7 @@ def _patch_v9():
 
     spec2 = importlib.util.spec_from_file_location(
         "build_holdout_sample",
-        r"D:\Pyprogramme\STST2603\claude_branch\scripts\module_e_final_confirmation\build_holdout_sample.py")
+        str(Path(__file__).resolve().parents[1] / "module_e_final_confirmation" / "build_holdout_sample.py"))
     build_holdout_sample = importlib.util.module_from_spec(spec2)
     sys.modules["build_holdout_sample"] = build_holdout_sample
     spec2.loader.exec_module(build_holdout_sample)

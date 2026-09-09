@@ -13,11 +13,11 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\dev_sample_decontamination")))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "dev_sample_decontamination"))
 import clean_sample_builder as csb  # noqa: E402
 from clean_sample_builder import v9  # noqa: E402
 
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\module_e_final_confirmation")
+OUT_DIR = Path(r"D:\Pyprogramme\pyOutageGust\results\module_e_final_confirmation")
 RAW_DIR = OUT_DIR / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -104,7 +104,7 @@ def main():
     dev_cause = dev_sample_wt["cause_group_official"].value_counts(normalize=True) * 100
 
     # ---- n_stages comparison ----
-    SRC = Path(r"D:\Pyprogramme\STST2603\rebuild_v3_full_stage\outputs\ukpn_full_stage_dataset_v3.csv")
+    SRC = Path(r"D:\Pyprogramme\pyOutageGust\data\external\ukpn_full_stage_dataset_v3.csv")
     stage_counts = pd.read_csv(SRC, usecols=["Incident Reference", "stage_row_count"], low_memory=False)
     stage_counts = stage_counts.drop_duplicates("Incident Reference").set_index("Incident Reference")["stage_row_count"]
 

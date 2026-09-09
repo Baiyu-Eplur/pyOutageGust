@@ -1,7 +1,7 @@
 """Command #9: re-validate gust coefficient stability using customers_v2/duration_A/duration_B.
 
 Read-only against rebuild_v3_full_stage/ and data/ (LAD shapefile only, for the small
-residual LAD gap-fill). Writes all outputs under claude_branch/results/v3_validation/.
+residual LAD gap-fill). Writes all outputs under results/v3_validation/.
 """
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ from sklearn.model_selection import GroupKFold
 
 SRC = Path(r"D:\Pyprogramme\pyOutageGust\data\external\ukpn_full_stage_dataset_v3.csv")
 LAD_SHP = Path(r"D:\Pyprogramme\pyOutageGust\data\external\gis\LAD_DEC_2021_UK_BGC\LAD_DEC_2021_UK_BGC.shp")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\v3_validation")
+OUT_DIR = Path(r"D:\Pyprogramme\pyOutageGust\results\v3_validation")
 RAW_DIR = OUT_DIR / "raw"
 
 INCIDENT_COL = "Incident Reference"

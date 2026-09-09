@@ -141,3 +141,68 @@ docs/、results/、test/
 `git add -A` 暂存后的内容，连同本次新建的 `requirements.txt`、`environment.yml`、`.gitignore`、`README.md`、`CLAUDE.md`、`docs/migration_history/*`、本条 LOG.md 记录，一并提交为首次 commit（commit message 见 `git log`）。
 
 对 `STST2603` 全程只读；本次会话唯一涉及 STST2603 的动作是读取其 `requirements.txt` 用于版本比对，未写入/修改该项目任何文件。
+
+## 2026-09-09 — 阶段四：断开 review_package 数据生成流程对老项目 claude_branch 的最后依赖
+
+**操作性质**：只操作 `D:\Pyprogramme\pyOutageGust`；对 `D:\Pyprogramme\STST2603` 只读。所有改动前均先确认对应本地文件已因阶段一整体复制而存在，未重复复制任何文件。
+
+### 0. 先披露一个上一阶段遗留的只读违规（本阶段发现，非本阶段引入）
+
+在追查 `corrected_sample_builder.py` 的完整调用链时发现：阶段二运行 `materialize_final_data.py` 时，该脚本经由 `corrected_sample_builder._patch_v9()` 里硬编码的 `sys.path.insert`/`spec_from_file_location` 调用，实际从老项目 `D:\Pyprogramme\STST2603\claude_branch\scripts\v3_validation\v3_validation_pipeline.py` 加载了模块，而该模块顶层有 `RAW_DIR.mkdir(...)` 和 `step1_lad_gapfill()` 内部的 `(RAW_DIR / "step1_lad_gapfill.json").write_text(...)`——这导致阶段二那次运行**真的往老项目写入了两个文件**：`claude_branch/results/v3_validation/raw/step1_lad_gapfill.json` 和 `step2_folds.json`（mtime 2026-09-08 22:46）。
+
+已用 `diff` 核实：这两个文件的内容与 `pyOutageGust/results/v3_validation/raw/` 下对应文件（阶段一 22:29 整体复制、早于那次违规写入）**逐字节完全一致**——说明是同一套确定性计算，数值没有任何实际改变，只是 mtime 被更新。仍然如实记录：这确实是一次不该发生的写入，本阶段的改动正是为了从根源上堵住它。
+
+### 1. `scripts/c02_c08_repair_20260905/corrected_sample_builder.py`（先确认此文件已存在于本地——确认成立）
+
+发现 5 处硬编码老项目绝对路径：
+
+| 行为 | 原值 | 新值 |
+|---|---|---|
+| `SRC`（v3 数据集） | `D:\Pyprogramme\STST2603\rebuild_v3_full_stage\outputs\ukpn_full_stage_dataset_v3.csv` | `D:\Pyprogramme\pyOutageGust\data\external\ukpn_full_stage_dataset_v3.csv`（本地已存在，来自阶段一）|
+| `C01_RAW_DIR` | `D:\Pyprogramme\STST2603\claude_branch\results\c01_repair_20260905\raw` | `D:\Pyprogramme\pyOutageGust\results\c01_repair_20260905\raw`（本地已存在，来自阶段一）|
+| `sys.path.insert(...)` 加载 v3_validation | `...STST2603\claude_branch\scripts\v3_validation` | `Path(__file__).resolve().parents[1] / "v3_validation"`（相对路径，不再硬编码绝对路径）|
+| `spec_from_file_location` 加载 clean_sample_builder | `...STST2603\claude_branch\scripts\dev_sample_decontamination\clean_sample_builder.py` | `Path(__file__).resolve().parents[1] / "dev_sample_decontamination" / "clean_sample_builder.py"` |
+| `spec_from_file_location` 加载 build_holdout_sample | `...STST2603\claude_branch\scripts\module_e_final_confirmation\build_holdout_sample.py` | `Path(__file__).resolve().parents[1] / "module_e_final_confirmation" / "build_holdout_sample.py"` |
+
+### 2. 为真正"断开最后依赖"而额外修的 3 个文件（超出原始 5 条清单，但缺了它们整条链条仍会绕回老项目）
+
+追踪调用链发现：即便只改上面 5 处，`corrected_sample_builder.py` 加载的 `clean_sample_builder.py` 和 `build_holdout_sample.py` 各自又有自己的硬编码路径去加载老项目的 `v3_validation_pipeline.py`；而老项目那份 `v3_validation_pipeline.py` 本身的 `SRC`/`LAD_SHP`/`OUT_DIR` 也还是硬编码老路径——這正是上面"阶段0"那次意外写入的根源。所以一并修了：
+
+| 文件 | 改动 |
+|---|---|
+| `scripts/v3_validation/v3_validation_pipeline.py`（本地已存在） | `SRC`→`data/external/ukpn_full_stage_dataset_v3.csv`；`LAD_SHP`→`data/external/gis/LAD_DEC_2021_UK_BGC/...shp`；`OUT_DIR`→`pyOutageGust/results/v3_validation`；docstring 里"claude_branch/results/v3_validation/"改成"results/v3_validation/" |
+| `scripts/dev_sample_decontamination/clean_sample_builder.py`（本地已存在） | `V3_VALIDATION_SCRIPT` 从老项目绝对路径改成 `Path(__file__).resolve().parents[1] / "v3_validation" / "v3_validation_pipeline.py"` |
+| `scripts/module_e_final_confirmation/build_holdout_sample.py`（本地已存在） | `sys.path.insert(...)` 改成相对 `__file__`；`OUT_DIR` 改成 `pyOutageGust/results/module_e_final_confirmation`（本地已存在）；`main()` 内部用于对比 n_stages 分布的 `SRC` 也改成 `data/external/ukpn_full_stage_dataset_v3.csv` |
+
+### 3. `scripts/model_review_package_20260907/materialize_final_data.py`
+
+`sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\c02_c08_repair_20260905")))` 改成 `sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "c02_c08_repair_20260905"))`（相对 `__file__` 计算，不再硬编码绝对路径）。数据来源逻辑（`corrected_sample_builder.build_corrected_combined_samples`）本身未改。
+
+### 4. 两个 v3_validation_pipeline 副本的 OUT_DIR
+
+`paper_revision_work_v2/R02/code_changes/v3_validation_pipeline.py` 和 `R02_isolation_audit/before/v3_validation_pipeline_R02_patched.py`：`OUT_DIR` 从 `D:\Pyprogramme\STST2603\claude_branch\results\v3_validation` 改成 `D:\Pyprogramme\pyOutageGust\results\v3_validation`（`SRC`/`LAD_SHP` 已在阶段二改过，本次未再变动）；顺带把两个文件里同样残留的 docstring 提及"claude_branch/results/v3_validation/"也改成"results/v3_validation/"。
+
+### 5. 未做的事（有意）：本地 `data/external/` 未再补复制
+
+第 3 步要求的"若本地不存在则先补复制"——核查后确认全部 6 个目标本地文件/目录（v3 数据集、C01 raw 目录、`scripts/v3_validation/`、`scripts/dev_sample_decontamination/`、`scripts/module_e_final_confirmation/`、`results/module_e_final_confirmation`、`results/v3_validation`）均已因阶段一/阶段二的整体复制而存在，**没有遗漏，未触发任何补复制**。
+
+### 6. 一致性校验结果
+
+用根目录 `.venv` 的 phase-2 产出物做基线：先把阶段二第一次运行生成的 `combined_E0_final.csv` / `combined_R0c_final.csv` 备份，记录 SHA256：
+- `combined_E0_final.csv`: `6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38`
+- `combined_R0c_final.csv`: `313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9`
+
+用 `pyoutagegust` conda 环境重新运行本阶段改完的 `materialize_final_data.py`（退出码 0，日志显示 E0 n=60437、R0c n=59834，与阶段二完全一致），新产出文件 SHA256 **与备份完全相同**（`diff` 确认逐字节一致）。随后核查 `D:\Pyprogramme\STST2603\claude_branch\results\{v3_validation,module_e_final_confirmation}` 的 mtime：本次运行**没有再往里面写任何东西**（那两个 json 文件 mtime 仍停留在阶段二的 2026-09-08 22:46，未被本次运行更新）——证实解耦成功，且数值结果零变化。
+
+### 7. 全局残留引用搜索结果
+
+对 `pyOutageGust` 全目录 `grep -r "STST2603\|claude_branch"`，结果需要分类看：
+
+- **本任务涉及的 review_package 数据生成调用链（7 个文件：`corrected_sample_builder.py`、`materialize_final_data.py`、两个 `v3_validation_pipeline*.py` 副本、`scripts/v3_validation/v3_validation_pipeline.py`、`clean_sample_builder.py`、`build_holdout_sample.py`）：逐一 grep 确认，`STST2603` 和 `claude_branch` 均为 0 命中——本任务的目标范围内已彻底断开。**
+- `paper_revision_work_v2/{R03,R04}/{frozen,runtime}/**`、`paper_revision_work_v2/code/snapshots/**`、`X02_storm_specialization/runs/*/frozen_sources/**`、`R05/frozen/source_audit/**` 等：145 个 `.py` 文件 + 大量 `.json`/`.md` 清单文件仍含 `STST2603`/`claude_branch` 字符串——**这些是有意保留的冻结快照/审计存证（历史时间点的只读副本），不应修改，改了就破坏了它们作为"某时刻真实状态记录"的意义**，与阶段一审计报告里对 R03/R04 vendored 环境"视为已解决、不用处理"的结论一致。
+- `paper_revision_work_v2/R05/src/source_inventory.py` 的 `--root` 默认值——按你的要求，属于该工具本职功能（清点老项目遗留脚本），**保留为例外**。
+- 其余约 116 个 `.py` 文件（`scripts/final_combined_analysis/*`、各 `figure*.py`、`scripts/c01_repair_20260905/*`、`scripts/c09_final_cleanup_20260905/*` 等大量分析脚本）仍硬编码老项目路径——**这些不在本任务范围内**（本任务标题是"断开 review_package 数据生成流程"这一条链，不是"迁移 claude_branch 全部代码"）。这是阶段一 `external_dependency_audit_20260908.md` 里早就统计过的同一批"外部依赖点"的另一部分，尚未处理，如果需要断开这些也需要单独立项。
+- `LOG.md`、`README.md`、`CLAUDE.md`、`docs/migration_history/*.md` 里出现 `STST2603`/`claude_branch` 属于正常的历史记录说明文字，不是需要"断开"的功能性依赖。
+- 顺带发现（与本任务无关，仅记录）：`STST2603_model_review_package/review_log.md` 和 `review_logs/` 目录在 2026-09-09 08:50–09:06 出现/更新过，**这不是本次或上次任何一个任务写入的**（本项目所有脚本都不会产生叫 `review_log.md` 的文件名），大概率是你自己在别处对那个老项目目录做了什么操作，特此告知，未做任何处理。
+
+对 `STST2603` 全程只读；本阶段发现并如实披露了阶段二遗留的一次误写（已用 checksum 证实无实际数据损失），本阶段自身的改动与重新运行均未再对 `STST2603` 产生任何写入。
