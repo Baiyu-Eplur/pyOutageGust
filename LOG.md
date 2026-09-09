@@ -228,3 +228,22 @@ docs/、results/、test/
 **推送结果**：`git remote add origin https://github.com/Baiyu-Eplur/pyOutageGust.git`，`git branch -m master main`（对齐远程默认分支名），`git push -u origin main` 一次性成功（远程仓库此前为空，无需处理冲突）。用 GitHub API 核对过：远程 5 个 commit 的 SHA 与本地完全一致。
 
 按用户要求，把这个刚推送上去的状态记录为**"导师修改前的最终版本"关键节点**：打了标签 `pre-review-checkpoint-20260909` 并 push 到远程；详细的节点记录（时间、项目结构统计、内容概述、已知未处理事项）写在 [`docs/milestones/2026-09-09_pre-review-checkpoint.md`](docs/milestones/2026-09-09_pre-review-checkpoint.md)。
+
+## 2026-09-09 — 工作命令 #56：导师模型探索材料完整阅读与严格审查
+
+**操作性质**：只读访问 `Comments/Comments_for_Haoyan/STST2603_review/`（导师提供的独立模型探索材料，含代码/数据/结果/三份Word文档），未修改包内任何文件；所有独立验证脚本运行在 `results/advisor_review_20260908/verification/` 下，未覆盖包内已有 `results/`。产出全部写入 `pyOutageGust/results/advisor_review_20260908/`（本任务的"claude_branch"路径按当前项目实际情况理解为 pyOutageGust，已向用户说明并确认该解读依据）。
+
+**做了什么**：
+1. 用 python-docx 完整提取三份 Word 文档（含所有表格，未跳过）+ 为完成 Claims audit 额外提取了 `Paper_reorganisation_plan.docx`，逐份通读并与 `MODEL_SELECTION_REPORT.md` 比对，发现该 md 文件缺少 docx 第12节的"plateau约束"修正（结点从14/26改为14/25，且第11节"weather-only斜率与pooled基本相同"的说法被文档自己撤回）。
+2. 逐行审查全部 12 个 `code/*.py` + 2 个 `.js`，发现的问题：`plateau_model.py` 产出的 `knots.json` 里 `selected`/`form` 字段无法用当前打包的 `code/` 完整复现（provenance缺口，不影响已发布数字）；一处BIC参数计数打印笔误；README bootstrap默认次数与代码默认值不一致（实际结果用的是对的）；一处死代码。
+3. 3a（占位符数据，最高优先级）：独立在自己的 `review_package/data/combined_R0c_final.csv`（与导师包SHA256相同）上复现 8,661个zero-customer事件、66.5%/0.5%的1.000h占比、customers系数符号翻转（+0.336→−0.196），并额外追溯到原始`ukpn-iis.csv`发现这批事件100%单stage、97.5%共享Cause Code "71"——比导师报告更深一层的机制证据。**站得住**。
+4. 3b（结点/样条分歧，最高优先级）：独立编写脚本在自己数据上重新拟合df=4/6/8/10的自由样条，发现更高自由度样条的CV RMSE确实全面优于二次型，但最低点始终停在10.7-11.7 m/s、**没有**随自由度提高滑向导师声称的14 m/s，"我们的样条被过度平滑"这个具体归因未获独立支持；同时指出样条（光滑）和分段线性结点估计（允许尖角）测试的不是同一件事，这一方法论区分是本次审查的独立贡献。**结论混杂，如实呈现**。
+5. 3c（LAD固定效应陷阱）：独立复现，E0/R0c的AIC/BIC/CV RMSE/校准斜率四组数字与导师报告精确吻合（多项精确到小数点后四位）。**站得住**。
+6. 3d（district-day面板）：代码审查（高斯核IDW实现、真正的leave-district-out验证、面板构造无C01类代表行隐患）+ 核对已保存的`interp_validation.json`（RMSE 2.221/r 0.854，与声称的2.2/0.85吻合）。**站得住，但注明这是代码审查级别而非完整重建级别的验证**。
+7. 3e（脆弱性曲线方法论）：独立复现weather_natural占比随阵风的梯度（6.98%→90.64%，与声称的7%/91%吻合），与自己Appendix G十分位数字方向一致。**站得住**。
+8. 3f：其余6个脚本审查汇总，未发现新增问题。
+9. Step 3：对`Paper_reorganisation_plan.docx` Claims audit表格全部11条逐一三档分类——6条"站得住"、2条"存在问题"（样条过度平滑归因不成立；SE倍数量级部分出入但可能因比较对象不同）、3条"尚未充分验证"（development/confirmation结点、R²分解、恢复时长低众数细节，均已注明卡在哪里）。
+
+**产出文件**：`results/advisor_review_20260908/{00_README,01_docx_reading_summary,02_code_review,03a-03f_*,04_step3_claims_audit}.md` + `verification/{3a,3b,3c}_*.py` 及对应 `_results.json`。
+
+对 `STST2603_review/` 包全程只读；对 `pyOutageGust` 自身其他文件（`review_package/data/`、`paper_revision_work_v2/code/snapshots/H0/rebuild_v3_full_stage/`、`results/appendix_h_20260906/`、`results/c09_final_cleanup_20260905/`）只读，用于交叉核对；本任务唯一的写入范围是 `results/advisor_review_20260908/` 目录。
