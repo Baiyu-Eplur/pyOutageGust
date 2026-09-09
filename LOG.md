@@ -219,4 +219,8 @@ docs/、results/、test/
 - `paper_revision_work_v2/X02_storm_specialization/RETURN_PACKAGE_X02.zip`——**257.7 MB，超过 100MB 硬限制，会导致 push 被拒**。核实过它的内容（`unzip -l`，696 个文件）就是 `paper_revision_work_v2/X02_storm_specialization/runs/X02_20260907_001/` 目录的打包压缩版——**同样的文件已经以解压形式被 git 完整跟踪**，这个 zip 只是一份冗余的打包交付件，从 git 历史里去掉不损失任何实际内容。
 - `paper_revision_work_v2/R02/data/R02_event_master.parquet`——52.4 MB，低于 100MB 硬限制（push 不会被拒），只是超过 GitHub 建议用 Git LFS 的 50MB 软阈值，会有警告但不阻塞，**未做任何处理**。
 
-处理方式：把该 zip 路径加入 `.gitignore`（连同这条说明一起提交），然后用 `git filter-branch --index-filter "git rm --cached --ignore-unmatch '...RETURN_PACKAGE_X02.zip'" --prune-empty -- --all` 把这个 blob 从全部 3 个历史 commit 里彻底移除（此时仓库还从未 push 过，没有任何人克隆过这份历史，本地重写历史是安全的，不存在"覆盖别人已拉取的提交"的风险），随后 `git reflog expire --expire=now --all` + `git gc --prune=now --aggressive` 回收空间。**磁盘上的原始 zip 文件本身完全没有被删除或改动**，只是不再被 git 跟踪（现在被 `.gitignore` 排除）。
+处理方式：把该 zip 路径加入 `.gitignore`（连同这条说明一起提交），然后用 `git filter-branch --index-filter "git rm --cached --ignore-unmatch '...RETURN_PACKAGE_X02.zip'" --prune-empty -- --all` 把这个 blob 从全部 3 个历史 commit 里彻底移除（此时仓库还从未 push 过，没有任何人克隆过这份历史，本地重写历史是安全的，不存在"覆盖别人已拉取的提交"的风险），随后 `git reflog expire --expire=now --all` + `git gc --prune=now --aggressive` 回收空间。
+
+**更正（同一操作内发现并如实记录）**：我在操作时预判"磁盘上的原始 zip 文件本身完全没有被删除或改动"，这个判断是**错的**——`git filter-branch` 在重写完历史后会把当前分支 checkout 到新树，而新树里已经没有这个文件，checkout 因此把工作目录里的这份 zip 一并删除了；紧接着的 `git gc --prune=now` 又清掉了 git 内部残留的 blob，`git fsck --unreachable --dangling` 核实过**已无法通过 git 内部机制恢复**。
+
+好消息是：核实过这个 zip 的 696 个文件与 `paper_revision_work_v2/X02_storm_specialization/runs/X02_20260907_001/` 目录逐一对应（`find runs -type f` 同样是 696 个文件），也就是说**里面的实际内容一份都没有丢**，只是那个额外打包好的 `.zip` 交付件本身（作为一份冗余归档）确实被删掉了，不再存在于磁盘或 git 历史里。如果你需要那个打包好的 zip 文件本身（而不是解压内容），需要重新手动压缩 `runs/X02_20260907_001/` 生成。
