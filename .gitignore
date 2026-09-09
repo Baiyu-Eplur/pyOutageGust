@@ -31,6 +31,12 @@ venv/
 # --- reviewer feedback (professor's comments), handled outside git ---
 Comments/
 
+# --- oversized redundant archive (exceeds GitHub's 100MB blob limit; the
+# same 696 files are already tracked unpacked under
+# paper_revision_work_v2/X02_storm_specialization/runs/X02_20260907_001/,
+# this .zip is just a bundled duplicate of that) ---
+paper_revision_work_v2/X02_storm_specialization/RETURN_PACKAGE_X02.zip
+
 # --- OS / editor cruft ---
 .DS_Store
 Thumbs.db

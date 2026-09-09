@@ -210,3 +210,13 @@ docs/、results/、test/
 ## 2026-09-09 — Comments/ 加入 .gitignore
 
 `Comments/`（含 `Comments_for_Haoyan/` 和 `Comments_for_Haoyan.zip`，约 32MB）是用户后续用来处理导师批注的目录，刚出现在工作区、尚未被 git 跟踪（`git status` 显示 `?? Comments/`）。在 [`.gitignore`](.gitignore) 里加了一条 `Comments/` 规则（放在"reviewer feedback"独立分组下），并用 `git check-ignore -v` 确认生效。未修改该目录下任何内容。
+
+## 2026-09-09 — 排除超限大文件 + 推送到 GitHub 首个里程碑节点
+
+**背景**：用户要求把当前状态推到 GitHub（`https://github.com/Baiyu-Eplur/pyOutageGust`），作为"导师修改前的最终版本"这个关键节点保存。推送前照例检查了仓库里的大文件——GitHub 对单个 blob 有 100MB 硬限制，超过会被服务器直接拒绝整个 push。
+
+扫描全部历史 git blob（`git rev-list --objects --all` + `git cat-file --batch-check`）发现 2 个超过 50MB 的文件：
+- `paper_revision_work_v2/X02_storm_specialization/RETURN_PACKAGE_X02.zip`——**257.7 MB，超过 100MB 硬限制，会导致 push 被拒**。核实过它的内容（`unzip -l`，696 个文件）就是 `paper_revision_work_v2/X02_storm_specialization/runs/X02_20260907_001/` 目录的打包压缩版——**同样的文件已经以解压形式被 git 完整跟踪**，这个 zip 只是一份冗余的打包交付件，从 git 历史里去掉不损失任何实际内容。
+- `paper_revision_work_v2/R02/data/R02_event_master.parquet`——52.4 MB，低于 100MB 硬限制（push 不会被拒），只是超过 GitHub 建议用 Git LFS 的 50MB 软阈值，会有警告但不阻塞，**未做任何处理**。
+
+处理方式：把该 zip 路径加入 `.gitignore`（连同这条说明一起提交），然后用 `git filter-branch --index-filter "git rm --cached --ignore-unmatch '...RETURN_PACKAGE_X02.zip'" --prune-empty -- --all` 把这个 blob 从全部 3 个历史 commit 里彻底移除（此时仓库还从未 push 过，没有任何人克隆过这份历史，本地重写历史是安全的，不存在"覆盖别人已拉取的提交"的风险），随后 `git reflog expire --expire=now --all` + `git gc --prune=now --aggressive` 回收空间。**磁盘上的原始 zip 文件本身完全没有被删除或改动**，只是不再被 git 跟踪（现在被 `.gitignore` 排除）。
