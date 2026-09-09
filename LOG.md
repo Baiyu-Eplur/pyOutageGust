@@ -316,3 +316,12 @@ docs/、results/、test/
 - 修正里程碑说明中的 Markdown 行尾空格，重新暂存并检查；随后核对暂存区 blob 与 721 项归档 SHA256 及活动源码校验，而不只检查工作区文件。
 
 - 步骤 2 检查后的修正：活动源码现有字节包含 CRLF/LF 混合，若统一 LF，同样会改变既有运行记录中的源码 SHA256。因此 .gitattributes 的最终规则对活动源码也使用 -text，原样保存本节点真实字节，而不进行换行重写。旧数据中的 CRLF 不作为待修复空格；代码/新增文档检查与归档字节检查分开执行。
+
+## 2026-09-09 — pretest 主要里程碑发布：步骤 3 / GitHub 发布成功
+
+- 主要里程碑提交：b21a2a4fc9c435791a754984838b65ab5a9c606e（Milestone: unify analysis entry and archive legacy results under pretest）。附注标签：pretest-unified-entry-20260909。
+- 使用原子推送将 main 与该标签上传成功：远程 main 从 8906897 前进至 b21a2a4；此前已有的 c529ff3 导师材料只读审查提交随祖先历史一并同步。未强制推送、未重写历史。
+- 暂存区真实 Git blob 校验：721 个历史输出 + 121 个活动源码，共 842 项 SHA256 全部与本地验收清单一致；Comments/data/external 没有误加入暂存区。活动代码和新增文档的空白检查通过；原始结果字节保留不作格式改写。
+- GitHub Release 已正式发布（非 draft、非 prerelease）：https://github.com/Baiyu-Eplur/pyOutageGust/releases/tag/pretest-unified-entry-20260909 ，标题“主要里程碑：统一分析入口与 pretest 归档”，Release ID 385624543。
+- 发布正文来自里程碑说明文件，文档链接转换为指向本标签的 GitHub 固定版本链接；API 回读确认正文一致。发布回执保存在 docs/milestones/2026-09-09_pretest-publication.json。
+- 本成功记录与发布回执作为单独的文档提交同步到 main；主要里程碑标签保持指向 b21a2a4，不移动已发布的版本标签。

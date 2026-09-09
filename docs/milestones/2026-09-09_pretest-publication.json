@@ -1,0 +1,13 @@
+{
+  "repository": "Baiyu-Eplur/pyOutageGust",
+  "tag": "pretest-unified-entry-20260909",
+  "milestone_commit": "b21a2a4fc9c435791a754984838b65ab5a9c606e",
+  "release_id": 385624543,
+  "release_url": "https://github.com/Baiyu-Eplur/pyOutageGust/releases/tag/pretest-unified-entry-20260909",
+  "release_title": "主要里程碑：统一分析入口与 pretest 归档",
+  "published_at": "2026-09-09T15:11:30Z",
+  "verified_at": "2026-09-09T16:11:31.023275+01:00",
+  "release_notes_match_milestone_document": true,
+  "staged_sha256_checks": 842,
+  "staged_sha256_mismatches": 0
+}
