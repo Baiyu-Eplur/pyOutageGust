@@ -8,6 +8,13 @@ E0'/R0c'_B samples built via clean_sample_builder.build_clean_wt_samples().
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import importlib.util
 import json
 import sys
@@ -17,11 +24,11 @@ import numpy as np
 import pandas as pd
 import statsmodels.api as sm
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\c02_c08_repair_20260905")))
+sys.path.insert(0, str(project_path('scripts/c02_c08_repair_20260905')))
 from corrected_sample_builder import _patch_v9  # noqa: E402
 
-RAW_C0208 = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c02_c08_repair_20260905\raw")
-RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\appendix_h_legacy_followup_20260906\raw")
+RAW_C0208 = result_path('c02_c08_repair_20260905/raw')
+RAW_DIR = result_path('appendix_h_legacy_followup_20260906/raw')
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 Z95 = 1.959963984540054
@@ -47,7 +54,7 @@ def js(obj):
 
 
 def pooled_estimate(fold_csv, term):
-    df = pd.read_csv(fold_csv)
+    df = pd.read_csv(read_input(fold_csv))
     sub = df[df["term"] == term]
     w = 1.0 / (sub["std_error"].astype(float) ** 2)
     pooled = float((w * sub["coefficient"].astype(float)).sum() / w.sum())
@@ -108,7 +115,7 @@ def main():
     v9, clean_sample_builder, build_holdout_sample = _patch_v9()
 
     # -------- option (a): genuine single full-sample fit on the dev-only corrected sample --------
-    V11_SCRIPT = Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\critical_wind_speed\critical_wind_speed_pipeline.py")
+    V11_SCRIPT = project_path('scripts/critical_wind_speed/critical_wind_speed_pipeline.py')
     spec11 = importlib.util.spec_from_file_location("critical_wind_speed_pipeline", V11_SCRIPT)
     v11 = importlib.util.module_from_spec(spec11)
     spec11.loader.exec_module(v11)

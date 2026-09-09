@@ -1,0 +1,277 @@
+{
+  "note": "Static literal input references. Empty root prefixes and dynamically constructed filenames need full-file resolution at read_input; runtime inputs.jsonl records actual reads.",
+  "references": [
+    {
+      "script": "scripts/a02_log_scale_20260905/figure6_regional_map_log_scale.py",
+      "line": 32,
+      "input": "data/Local_Authority_Districts_December_2021_UK_BGC_2022/LAD_DEC_2021_UK_BGC.shp",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\gis\\LAD_DEC_2021_UK_BGC\\LAD_DEC_2021_UK_BGC.shp",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/borrowed_from_main/coef_fold_stability_E0_R0.py",
+      "line": 28,
+      "input": "",
+      "resolved": "D:\\Pyprogramme\\STST2603",
+      "exists": true,
+      "legacy_read_only": true
+    },
+    {
+      "script": "scripts/borrowed_from_main/coef_fold_stability_expansion_validation.py",
+      "line": 39,
+      "input": "",
+      "resolved": "D:\\Pyprogramme\\STST2603",
+      "exists": true,
+      "legacy_read_only": true
+    },
+    {
+      "script": "scripts/borrowed_from_main/coef_fold_stability_R0_custadj.py",
+      "line": 38,
+      "input": "",
+      "resolved": "D:\\Pyprogramme\\STST2603",
+      "exists": true,
+      "legacy_read_only": true
+    },
+    {
+      "script": "scripts/c01_repair_20260905/step1_representative_row.py",
+      "line": 26,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/c01_repair_20260905/step2_weather_reextraction.py",
+      "line": 34,
+      "input": "data/weather_request_cache",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\weather_request_cache",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/c01_repair_20260905/step3_4_corrected_sample_and_refit.py",
+      "line": 37,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/c01_repair_20260905/step4b_fold_stability_and_variance.py",
+      "line": 27,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/c02_c08_repair_20260905/figure1_study_area.py",
+      "line": 29,
+      "input": "data/dno_license_areas_20200506/DNO_License_Areas_20200506.shp",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\gis\\DNO_License_Areas_20200506\\DNO_License_Areas_20200506.shp",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/c02_c08_repair_20260905/figure1_study_area.py",
+      "line": 30,
+      "input": "data/Local_Authority_Districts_December_2021_UK_BGC_2022/LAD_DEC_2021_UK_BGC.shp",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\gis\\LAD_DEC_2021_UK_BGC\\LAD_DEC_2021_UK_BGC.shp",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/c02_c08_repair_20260905/figure1_study_area.py",
+      "line": 46,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/c02_c08_repair_20260905/figure6_regional_map.py",
+      "line": 31,
+      "input": "data/Local_Authority_Districts_December_2021_UK_BGC_2022/LAD_DEC_2021_UK_BGC.shp",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\gis\\LAD_DEC_2021_UK_BGC\\LAD_DEC_2021_UK_BGC.shp",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/c02_c08_repair_20260905/figureD1_composition_effect.py",
+      "line": 26,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/code_audit_20260905/audit_pipeline.py",
+      "line": 40,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/customers_duration_shape_investigation/step1_binned_relationship.py",
+      "line": 25,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/customers_duration_shape_investigation/step5_n_stages_stratification.py",
+      "line": 58,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/dev_sample_decontamination/step1_rebuild_clean_sample.py",
+      "line": 21,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/figure_relabel_20260906/figureD1_composition_effect.py",
+      "line": 31,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/final_combined_analysis/figure1_study_area.py",
+      "line": 28,
+      "input": "data/dno_license_areas_20200506/DNO_License_Areas_20200506.shp",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\gis\\DNO_License_Areas_20200506\\DNO_License_Areas_20200506.shp",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/final_combined_analysis/figure1_study_area.py",
+      "line": 29,
+      "input": "data/Local_Authority_Districts_December_2021_UK_BGC_2022/LAD_DEC_2021_UK_BGC.shp",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\gis\\LAD_DEC_2021_UK_BGC\\LAD_DEC_2021_UK_BGC.shp",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/final_combined_analysis/figure1_study_area.py",
+      "line": 50,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/final_combined_analysis/figure6_regional_map.py",
+      "line": 27,
+      "input": "data/Local_Authority_Districts_December_2021_UK_BGC_2022/LAD_DEC_2021_UK_BGC.shp",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\gis\\LAD_DEC_2021_UK_BGC\\LAD_DEC_2021_UK_BGC.shp",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/final_combined_analysis/step10_named_storms.py",
+      "line": 63,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/final_combined_analysis/step38_F4_customers_mean_ratio.py",
+      "line": 23,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/final_combined_analysis/step38_M6_decompose_sample_vs_definition.py",
+      "line": 36,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/final_combined_analysis/step42_appendixD_composition_crosstab.py",
+      "line": 38,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/final_combined_analysis/step4_baseline_regional_map.py",
+      "line": 33,
+      "input": "data/Local_Authority_Districts_December_2021_UK_BGC_2022/LAD_DEC_2021_UK_BGC.shp",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\gis\\LAD_DEC_2021_UK_BGC\\LAD_DEC_2021_UK_BGC.shp",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/module_e_final_confirmation/fit_holdout_models.py",
+      "line": 148,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/test1/test1_full_pipeline.py",
+      "line": 26,
+      "input": "analysis_step2/02_incident_analysis_master_v1_1.parquet",
+      "resolved": "D:\\Pyprogramme\\STST2603\\analysis_step2\\02_incident_analysis_master_v1_1.parquet",
+      "exists": true,
+      "legacy_read_only": true
+    },
+    {
+      "script": "scripts/test1/test1_step0_inventory.py",
+      "line": 22,
+      "input": "analysis_step2/02_incident_analysis_master_v1_1.parquet",
+      "resolved": "D:\\Pyprogramme\\STST2603\\analysis_step2\\02_incident_analysis_master_v1_1.parquet",
+      "exists": true,
+      "legacy_read_only": true
+    },
+    {
+      "script": "scripts/test1b/test1b_independence_pipeline.py",
+      "line": 29,
+      "input": "analysis_step2/02_incident_analysis_master_v1_1.parquet",
+      "resolved": "D:\\Pyprogramme\\STST2603\\analysis_step2\\02_incident_analysis_master_v1_1.parquet",
+      "exists": true,
+      "legacy_read_only": true
+    },
+    {
+      "script": "scripts/v3_audit/audit_v3_dataset.py",
+      "line": 21,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    },
+    {
+      "script": "scripts/v3_audit/audit_v3_dataset.py",
+      "line": 22,
+      "input": "data/new/ukpn_master_with_lad_features_updated.csv",
+      "resolved": "D:\\Pyprogramme\\STST2603\\data\\new\\ukpn_master_with_lad_features_updated.csv",
+      "exists": true,
+      "legacy_read_only": true
+    },
+    {
+      "script": "scripts/v3_controlled_comparison/controlled_comparison_pipeline.py",
+      "line": 25,
+      "input": "rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv",
+      "resolved": "D:\\Pyprogramme\\pyOutageGust\\data\\external\\ukpn_full_stage_dataset_v3.csv",
+      "exists": true,
+      "legacy_read_only": false
+    }
+  ]
+}

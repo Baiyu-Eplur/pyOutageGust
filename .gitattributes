@@ -1,0 +1,10 @@
+# Preserve archived and generated output bytes: run manifests record SHA256.
+results/pretest/** -text
+
+# Preserve the exact active-source bytes recorded by the verification manifests.
+/main.py -text
+/pretestmain.py -text
+/pretest_paths.py -text
+scripts/**/*.py -text
+review_package/code/*.py -text
+test/test_pretest_entry.py -text

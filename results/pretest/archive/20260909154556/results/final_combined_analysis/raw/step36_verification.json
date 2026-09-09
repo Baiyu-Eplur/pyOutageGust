@@ -1,0 +1,13 @@
+{
+  "dev_n": 94384,
+  "holdout_n": 22914,
+  "combined_n": 117298,
+  "sum_check_passed": true,
+  "date_overlap_count": 0,
+  "id_overlap_count": 0,
+  "combined_unique_ids": 117298,
+  "wt_main_spec_r0c_n_command21": 59834,
+  "six_group_r0c_n": 116064,
+  "six_group_p99_cap_hours": 125.28833333333313,
+  "ratio_six_group_to_wt_main_spec": 1.9397666878363473
+}

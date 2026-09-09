@@ -1,0 +1,12 @@
+{
+  "n_stage_rows_total_v3": 237901,
+  "n_event_total_v3": 135025,
+  "n_event_clean_dev_sample": 109250,
+  "n_event_excluded_locked_window": 25775,
+  "excluded_pct_of_total": 19.08905758192927,
+  "overlap_dates_check": 0,
+  "max_date_in_clean_sample": "2023-09-29 00:00:00",
+  "min_date_in_excluded_sample": "2023-09-30 00:00:00",
+  "n_wt_cause_code_clean": 53114,
+  "n_wt_weather_matched_clean": 50345
+}

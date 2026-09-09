@@ -7,6 +7,13 @@ the old raw-scale range) with an explicit log-scale legend label.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
@@ -16,15 +23,15 @@ import numpy as np
 import pandas as pd
 import statsmodels.api as sm
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\c02_c08_repair_20260905")))
+sys.path.insert(0, str(project_path('scripts/c02_c08_repair_20260905')))
 from corrected_sample_builder import build_corrected_combined_samples, _patch_v9  # noqa: E402
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis")))
+sys.path.insert(0, str(project_path('scripts/final_combined_analysis')))
 from figure_style import apply_style, add_north_arrow, add_scale_bar, add_locator_inset  # noqa: E402
 
-BOUNDARY_FILE = Path(r"D:\Pyprogramme\STST2603\data\Local_Authority_Districts_December_2021_UK_BGC_2022\LAD_DEC_2021_UK_BGC.shp")
-RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\a02_log_scale_20260905\raw")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\a02_log_scale_20260905\figures")
+BOUNDARY_FILE = external_path('data/Local_Authority_Districts_December_2021_UK_BGC_2022/LAD_DEC_2021_UK_BGC.shp')
+RAW_DIR = result_path('a02_log_scale_20260905/raw')
+OUT_DIR = result_path('a02_log_scale_20260905/figures')
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -103,7 +110,7 @@ def main():
               "LAD rank ordering itself, must be identical to the raw-scale version, since log is a "
               "strictly monotonic transform and does not change ranks.)")
 
-    gdf = gpd.read_file(BOUNDARY_FILE)
+    gdf = gpd.read_file(read_input(BOUNDARY_FILE))
     gdf = gdf.to_crs(epsg=27700)
     gdf_gb = gdf[gdf["LAD21CD"].astype(str).str.startswith(("E", "W", "S"))].copy()
     gb_outline = gdf_gb.dissolve()

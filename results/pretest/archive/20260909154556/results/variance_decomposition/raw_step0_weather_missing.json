@@ -1,0 +1,11 @@
+{
+  "n_wt_total_from_v3": 66079,
+  "n_weather_missing_or_invalid": 3152,
+  "pct_weather_missing_or_invalid": 4.7700479728809455,
+  "n_weather_matched": 62927,
+  "pct_weather_matched": 95.22995202711905,
+  "n_other_covariate_missing_amongst_weather_matched": 2474,
+  "pct_other_covariate_missing_amongst_weather_matched_of_wt_total": 3.744003389881808,
+  "n_final_complete_predictors": 60453,
+  "pct_final_complete_of_wt_total": 91.48594863723724
+}

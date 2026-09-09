@@ -7,12 +7,19 @@ speed (m/s) to quantify how much of Figure 4's "steeper right arm" is a
 geometric artifact of the right-skewed, zero-bounded gust distribution."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import json
 from pathlib import Path
 
 import numpy as np
 
-RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\raw")
+RAW_DIR = result_path('final_combined_analysis/raw')
 
 # command #21 final full-sample no-cubic coefficients (step1_E0/R0c_final_full_coefs.csv,
 # identical values also in step28_E0/R0c_lad_cluster.csv)

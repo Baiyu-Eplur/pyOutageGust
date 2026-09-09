@@ -1,3 +1,10 @@
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 import pandas as pd
 import numpy as np
 from pathlib import Path
@@ -6,7 +13,7 @@ from pathlib import Path
 # 路径
 # =========================
 BASE = Path(__file__).resolve().parent
-DATA = BASE / "data"
+DATA = data_path()
 
 MAIN_FILE = DATA / "new//ukpn_master_with_income_deprivation_crosswalk.csv"
 GVA_FILE = DATA / "gva_industry_2016.csv"
@@ -19,9 +26,9 @@ OUTPUT = DATA / "new//ukpn_master_final.csv"
 # =========================
 # 读取
 # =========================
-main = pd.read_csv(MAIN_FILE, low_memory=False)
-gva = pd.read_csv(GVA_FILE, low_memory=False)
-pop = pd.read_csv(POP_FILE, low_memory=False)
+main = pd.read_csv(read_input(MAIN_FILE), low_memory=False)
+gva = pd.read_csv(read_input(GVA_FILE), low_memory=False)
+pop = pd.read_csv(read_input(POP_FILE), low_memory=False)
 
 # =========================
 # 标准化 LAD code

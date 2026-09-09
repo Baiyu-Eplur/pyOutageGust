@@ -1,0 +1,30 @@
+{
+  "E0": [
+    {
+      "model": "E0 (exposure)",
+      "pair": "gust_z x pressure_z",
+      "S2": 0.049963287177904325,
+      "S2_conf": 0.16527078559151231
+    }
+  ],
+  "R0c": [
+    {
+      "model": "R0c (recovery)",
+      "pair": "gust_z x pressure_z",
+      "S2": 0.004211727039968473,
+      "S2_conf": 0.03494260079446693
+    },
+    {
+      "model": "R0c (recovery)",
+      "pair": "gust_z x customers_z",
+      "S2": 0.000977466812135508,
+      "S2_conf": 0.03735448054651147
+    },
+    {
+      "model": "R0c (recovery)",
+      "pair": "pressure_z x customers_z",
+      "S2": -0.00014591390524532066,
+      "S2_conf": 0.0058391252415857615
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "n_single_stage_holdout": 7279,
+  "n_total_holdout": 11992,
+  "single_stage_bins_performed": true,
+  "single_stage_bins": [
+    {
+      "decile": "(-0.001, 1.0]",
+      "count": "5345",
+      "mean": "9.25623947614593",
+      "median": "4.333333333333333"
+    },
+    {
+      "decile": "(1.0, 3.0]",
+      "count": "598",
+      "mean": "9.205602006688963",
+      "median": "6.675000000000001"
+    },
+    {
+      "decile": "(3.0, 7509.0]",
+      "count": "1336",
+      "mean": "3.664184131736527",
+      "median": "1.8583333333333334"
+    }
+  ]
+}

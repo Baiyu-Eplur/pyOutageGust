@@ -5,14 +5,21 @@ GroupKFold-by-date discipline.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import json
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-SRC = Path(r"D:\Pyprogramme\STST2603\rebuild_v3_full_stage\outputs\ukpn_full_stage_dataset_v3.csv")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\dev_sample_decontamination")
+SRC = external_path('rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv')
+OUT_DIR = result_path('dev_sample_decontamination')
 RAW_DIR = OUT_DIR / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -39,7 +46,7 @@ def log_step(msg):
 def main():
     log_step("Loading v3 stage-level dataset...")
     df = pd.read_csv(
-        SRC,
+        read_input(SRC),
         usecols=[
             INCIDENT_COL, "incident_date_utc", "clean_start", "Start Date and Time", "End Date and Time",
             "cause_group_official", "weather_status_v3",

@@ -1,7 +1,0 @@
-model,term,n_folds,same_sign_folds,significant_folds,mean_coefficient,coef_cv_pct
-E0_weather_natural,z_gust_0h,5,5,5,0.13323312573628793,11.542506658775926
-E0_weather_natural,z_gust_0h_sq,5,5,1,0.050960446726519636,118.16518229584545
-R0c_weather_natural,z_gust_0h,5,5,5,0.23232195021472907,17.435720908389168
-R0c_weather_natural,z_gust_0h_sq,5,5,5,0.08234061930160201,24.504100607648553
-R0c_weather_natural,z_log1p_customers_v2,5,5,5,-0.16539256363951071,5.2104176572333145
-R0c_weather_natural,z_log1p_customers_v2_sq,5,5,3,-0.05820008153668976,8.921922775565498

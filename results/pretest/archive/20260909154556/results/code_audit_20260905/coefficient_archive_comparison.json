@@ -1,0 +1,14 @@
+[
+  {
+    "sample": "main_E0",
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\results\\final_combined_analysis\\raw\\step1_E0_final_full_coefs.csv",
+    "max_abs_coef_diff": 9.71445146547012e-17,
+    "max_abs_se_diff": 1.1102230246251565e-16
+  },
+  {
+    "sample": "main_R0c",
+    "archive": "D:\\Pyprogramme\\STST2603\\claude_branch\\results\\final_combined_analysis\\raw\\step1_R0c_final_full_coefs.csv",
+    "max_abs_coef_diff": 9.540979117872439e-17,
+    "max_abs_se_diff": 9.71445146547012e-17
+  }
+]

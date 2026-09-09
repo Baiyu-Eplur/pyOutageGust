@@ -1,0 +1,3 @@
+term,n_folds,same_sign_folds,significant_folds,mean_coefficient,coef_cv_pct
+z_gust_0h,5,5,5,0.025662501299300543,30.060985195022806
+z_gust_0h_sq,5,5,5,0.06078906405969622,19.817879480567193

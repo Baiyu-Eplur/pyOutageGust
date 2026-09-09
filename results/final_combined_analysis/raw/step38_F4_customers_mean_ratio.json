@@ -1,7 +1,0 @@
-{
-  "n_final_sample": 60437,
-  "n_legacy_valid": 60437,
-  "legacy_first_stage_only_mean": 47.12755431275543,
-  "customers_v2_mean": 93.02420702549763,
-  "ratio_v2_over_legacy": 1.9738814878479685
-}

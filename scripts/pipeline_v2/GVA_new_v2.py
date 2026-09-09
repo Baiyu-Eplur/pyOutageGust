@@ -1,3 +1,10 @@
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 # 这个LAD数据合成的第三步，是gva的合并
 import pandas as pd
 from pathlib import Path
@@ -6,7 +13,7 @@ from pathlib import Path
 # 路径配置
 # =========================================
 BASE_DIR = Path(__file__).resolve().parent
-DATA_DIR = BASE_DIR / "data"
+DATA_DIR = data_path()
 
 FILE = DATA_DIR / "regionalgvabbylainuk.xlsx"
 OUTPUT_FILE = DATA_DIR / "gva_industry_2016.csv"
@@ -56,7 +63,7 @@ MANUAL_CROSSWALKS = [
 # =========================================
 # 读取所有 sheet 名，并 strip
 # =========================================
-xls = pd.ExcelFile(FILE)
+xls = pd.ExcelFile(read_input(FILE))
 raw_sheets = xls.sheet_names
 sheet_map = {s.strip(): s for s in raw_sheets}
 
@@ -69,7 +76,7 @@ print(raw_sheets)
 if POP_SHEET not in sheet_map:
     raise ValueError(f"找不到 Population sheet: {POP_SHEET}")
 
-pop_df = pd.read_excel(FILE, sheet_name=sheet_map[POP_SHEET], header=2)
+pop_df = pd.read_excel(read_input(FILE), sheet_name=sheet_map[POP_SHEET], header=2)
 pop_df.columns = [str(c).strip() for c in pop_df.columns]
 
 print("\nPopulation 列名：")
@@ -108,7 +115,7 @@ for target_sheet, varname in GVA_SHEETS.items():
     actual_sheet = sheet_map[target_sheet]
     print(f"\n读取 sheet: {actual_sheet}")
 
-    df = pd.read_excel(FILE, sheet_name=actual_sheet, header=2)
+    df = pd.read_excel(read_input(FILE), sheet_name=actual_sheet, header=2)
     df.columns = [str(c).strip() for c in df.columns]
 
     print("列名示例：", df.columns[:10].tolist())

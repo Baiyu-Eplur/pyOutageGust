@@ -1,0 +1,114 @@
+{
+  "e0": {
+    "n": 60437,
+    "log_ols_gust_terms_clustered": [
+      {
+        "term": "z_gust_0h",
+        "coefficient": -0.036014312441059675,
+        "p_value": 0.009958278233748605
+      },
+      {
+        "term": "z_gust_0h_sq",
+        "coefficient": 0.10599692045043266,
+        "p_value": 6.078652069292915e-37
+      }
+    ],
+    "negative_binomial_gust_terms": {
+      "terms": [
+        {
+          "term": "z_gust_0h",
+          "coefficient": -0.1373551476460831,
+          "p_value": 4.041830244521229e-06
+        },
+        {
+          "term": "z_gust_0h_sq",
+          "coefficient": 0.09425607653319255,
+          "p_value": 4.746958561830856e-13
+        }
+      ],
+      "alpha": 4.710440244545814,
+      "converged": true,
+      "llf": -256253.15241078465,
+      "n": 60437
+    },
+    "tweedie_gust_terms": {
+      "terms": [
+        {
+          "term": "z_gust_0h",
+          "coefficient": -0.13126520517749793,
+          "p_value": 3.118935607237816e-05
+        },
+        {
+          "term": "z_gust_0h_sq",
+          "coefficient": 0.07793405062739095,
+          "p_value": 3.267618305445262e-12
+        }
+      ],
+      "converged": true,
+      "n": 60437
+    },
+    "residual_diagnostics": {
+      "model": "E0 (log1p customers_v2, corrected)",
+      "n": 60437,
+      "skewness": 0.8682479789311232,
+      "excess_kurtosis": -0.23574626386583386,
+      "jarque_bera_stat": 7733.121779000146,
+      "jarque_bera_p": 0.0
+    }
+  },
+  "r0c": {
+    "n": 59834,
+    "log_ols_gust_terms_clustered": [
+      {
+        "term": "z_gust_0h",
+        "coefficient": -0.000992638820534675,
+        "p_value": 0.9130322962270901
+      },
+      {
+        "term": "z_gust_0h_sq",
+        "coefficient": 0.08495442319039566,
+        "p_value": 1.010863939013968e-43
+      }
+    ],
+    "gamma_gust_terms": {
+      "terms": [
+        {
+          "term": "z_gust_0h",
+          "coefficient": -0.0013284505833874964,
+          "p_value": 0.8923773401387468
+        },
+        {
+          "term": "z_gust_0h_sq",
+          "coefficient": 0.0812568856941592,
+          "p_value": 1.9486910699816838e-48
+        }
+      ],
+      "converged": true,
+      "n": 59834
+    },
+    "tweedie_gust_terms": {
+      "terms": [
+        {
+          "term": "z_gust_0h",
+          "coefficient": 0.012341255280265594,
+          "p_value": 0.20122708835010017
+        },
+        {
+          "term": "z_gust_0h_sq",
+          "coefficient": 0.07634236193243245,
+          "p_value": 6.414779511249749e-51
+        }
+      ],
+      "converged": true,
+      "n": 59834
+    },
+    "residual_diagnostics": {
+      "model": "R0c (log duration_B, corrected)",
+      "n": 59834,
+      "skewness": -0.27797587931310136,
+      "excess_kurtosis": 0.8116056216000338,
+      "jarque_bera_stat": 2412.052439756877,
+      "jarque_bera_p": 0.0
+    }
+  }
+}

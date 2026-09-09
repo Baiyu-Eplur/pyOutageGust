@@ -1,0 +1,32 @@
+--- 步骤 1: 读取原始全量数据 ---
+成功加载数据。初始总记录数: 237,901 行
+识别到事故列: Incident Reference
+识别到原因列: Cause Code
+
+--- 步骤 2: 官方 Cause Code 分组统计（仅统计，不筛选）---
+cause_group_official
+technical_asset         118229
+non_fault_or_unknown     71318
+weather_natural          25796
+third_party              14799
+external_or_customer      6872
+human_error                887
+Name: count, dtype: int64
+
+技术性时间清洗：剔除 Start/End 无法解析的行 0 条，剩余 237,901 条
+
+--- 步骤 3: 按 Incident Reference 分组聚合（规则2核心）---
+
+边界情况（全部阶段均为 Re-interruption='Y'，customers_v2 无法计算）：69 个事件，已单独导出到 D:\Pyprogramme\pyOutageGust\results\pretest\data\20260909155522\001\pipeline_v2_output\event_level_boundary_cases_v2.csv
+
+Cause Code 一致性审计：2 个事件在其内部不同阶段记录之间 Cause Code 不一致（共 135,025 个事件），已导出到 D:\Pyprogramme\pyOutageGust\results\pretest\data\20260909155522\001\pipeline_v2_output\event_level_cause_code_consistency_v2.csv
+
+==================================================
+【事件级聚合完成报告（规则1+规则2）】
+1. 原始记录总数: 237,901
+2. 技术性时间清洗后剩余记录: 237,901
+3. 聚合后事件总数（未按 Cause Code 筛选）: 135,025
+4. 边界情况（全阶段重复中断）事件数: 69
+5. Cause Code 内部不一致事件数: 2
+6. 主输出文件: D:\Pyprogramme\pyOutageGust\results\pretest\data\20260909155522\001\pipeline_v2_output\unplanned_incidents_event_level_v2.csv
+==================================================

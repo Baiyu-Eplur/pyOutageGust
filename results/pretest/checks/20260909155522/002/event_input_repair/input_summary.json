@@ -1,0 +1,25 @@
+{
+  "input_version": "R02_input_20260905",
+  "event_manifest": "D:\\Pyprogramme\\pyOutageGust\\paper_revision_work_v2\\R02\\data\\EVENT_MANIFEST.json",
+  "event_sha256": "8ac332cdb59d5eb961a01146757665a2600ebaada4265c8ac1ac30218c6f066d",
+  "n_total_events_v3": 135025,
+  "n_weather_matched_events": 121178,
+  "weather_matched_pct": 89.744862062581,
+  "cause_group_counts_in_matched_sample": {
+    "technical_asset": 52310,
+    "non_fault_or_unknown": 46240,
+    "weather_natural": 10616,
+    "third_party": 9668,
+    "external_or_customer": 1807,
+    "human_error": 536,
+    "unresolved": 1
+  },
+  "scope": "R02 input only; independent of historical v9 and its output directories",
+  "models_run": 0,
+  "coverage": {
+    "n_events_in_sample": 121178,
+    "n_missing_LAD21CD_after": 135,
+    "gapfill_performed": false,
+    "note": "R02 producer already rejoined LAD and population; read-only coverage check"
+  }
+}

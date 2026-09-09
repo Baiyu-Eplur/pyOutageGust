@@ -5,6 +5,13 @@ if sample size allows. All using the exact locked-in specs from commands #9-18.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import importlib.util
 import json
 import sys
@@ -16,15 +23,15 @@ import statsmodels.api as sm
 from scipy import stats
 from statsmodels.stats.sandwich_covariance import cov_cluster
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\dev_sample_decontamination")))
+sys.path.insert(0, str(project_path('scripts/dev_sample_decontamination')))
 from clean_sample_builder import v9  # noqa: E402
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\module_e_final_confirmation")))
+sys.path.insert(0, str(project_path('scripts/module_e_final_confirmation')))
 from build_holdout_sample import build_holdout_wt_samples  # noqa: E402
 
-V11_SCRIPT = Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\critical_wind_speed\critical_wind_speed_pipeline.py")
-V14_SCRIPT = Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\variance_decomposition\variance_decomposition_pipeline.py")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\module_e_final_confirmation")
+V11_SCRIPT = project_path('scripts/critical_wind_speed/critical_wind_speed_pipeline.py')
+V14_SCRIPT = project_path('scripts/variance_decomposition/variance_decomposition_pipeline.py')
+OUT_DIR = result_path('module_e_final_confirmation')
 RAW_DIR = OUT_DIR / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -138,8 +145,8 @@ def main():
 
     # ---- n_stages stratification check for customers_v2 (command #18 replication) ----
     log_step("n_stages stratification check on holdout (replicating command #18)...")
-    SRC = Path(r"D:\Pyprogramme\STST2603\rebuild_v3_full_stage\outputs\ukpn_full_stage_dataset_v3.csv")
-    stage_counts = pd.read_csv(SRC, usecols=["Incident Reference", "stage_row_count"], low_memory=False)
+    SRC = external_path('rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv')
+    stage_counts = pd.read_csv(read_input(SRC), usecols=["Incident Reference", "stage_row_count"], low_memory=False)
     stage_counts = stage_counts.drop_duplicates("Incident Reference").set_index("Incident Reference")["stage_row_count"]
     r0cb_sample = r0cb_sample.copy()
     r0cb_sample["stage_row_count"] = r0cb_sample["Incident Reference"].map(stage_counts)

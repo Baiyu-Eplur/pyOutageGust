@@ -3,6 +3,13 @@ C01-corrected variance-decomposition numbers already computed in
 c01_repair_20260905/raw/step4b_*_corrected_variance_decomposition*.csv."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
@@ -10,11 +17,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis")))
+sys.path.insert(0, str(project_path('scripts/final_combined_analysis')))
 from figure_style import apply_style, mm_to_in, save_fig, SINGLE_COL_MM  # noqa: E402
 
-C01_RAW = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c01_repair_20260905\raw")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c02_c08_repair_20260905\figures")
+C01_RAW = result_path('c01_repair_20260905/raw')
+OUT_DIR = result_path('c02_c08_repair_20260905/figures')
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -24,8 +31,8 @@ def log_step(msg):
 
 def main():
     apply_style()
-    e0 = pd.read_csv(C01_RAW / "step4b_E0_corrected_variance_decomposition.csv")
-    r0c = pd.read_csv(C01_RAW / "step4b_R0c_corrected_variance_decomposition_gust_first.csv")
+    e0 = pd.read_csv(read_input(C01_RAW / "step4b_E0_corrected_variance_decomposition.csv"))
+    r0c = pd.read_csv(read_input(C01_RAW / "step4b_R0c_corrected_variance_decomposition_gust_first.csv"))
 
     e0_vals = {
         "Baseline\n(region+FE)": e0.loc[e0["step"] == "baseline", "r2_oos_5fold"].iloc[0] * 100,

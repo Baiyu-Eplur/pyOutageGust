@@ -13,6 +13,13 @@ while holding the variable definition fixed at 'legacy'.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import json
 import sys
 import time
@@ -26,14 +33,14 @@ from sklearn.feature_selection import mutual_info_regression
 sys.path.insert(0, str(Path(__file__).parent))
 from combined_sample_builder import build_combined_samples  # noqa: E402
 
-SRC = Path(r"D:\Pyprogramme\STST2603\rebuild_v3_full_stage\outputs\ukpn_full_stage_dataset_v3.csv")
+SRC = external_path('rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv')
 INCIDENT_COL = "Incident Reference"
 STAGE_COL = "Restoration Stage"
 CUSTOMER_COL = "Number of Customers Restored"
 START_COL = "Start Date and Time"
 END_COL = "End Date and Time"
 
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+OUT_DIR = result_path('final_combined_analysis')
 RAW_DIR = OUT_DIR / "raw"
 RNG = np.random.default_rng(20260901)
 N_PERM = 200
@@ -72,7 +79,7 @@ def main():
     log_step("Loading stage-level v3 data for these incidents (legacy customers + legacy duration)...")
     usecols = [INCIDENT_COL, STAGE_COL, CUSTOMER_COL, START_COL, END_COL]
     chunks = []
-    for chunk in pd.read_csv(SRC, usecols=usecols, low_memory=False, chunksize=500_000):
+    for chunk in pd.read_csv(read_input(SRC), usecols=usecols, low_memory=False, chunksize=500_000):
         chunk = chunk[chunk[INCIDENT_COL].astype(str).isin(final_ids)]
         if len(chunk):
             chunks.append(chunk)

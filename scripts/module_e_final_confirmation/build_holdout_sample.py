@@ -5,6 +5,13 @@ weather-matched, complete predictors), just inverting the date filter.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import importlib.util
 import json
 import sys
@@ -17,7 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "dev_sample_deconta
 import clean_sample_builder as csb  # noqa: E402
 from clean_sample_builder import v9  # noqa: E402
 
-OUT_DIR = Path(r"D:\Pyprogramme\pyOutageGust\results\module_e_final_confirmation")
+OUT_DIR = result_path('module_e_final_confirmation')
 RAW_DIR = OUT_DIR / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -104,8 +111,8 @@ def main():
     dev_cause = dev_sample_wt["cause_group_official"].value_counts(normalize=True) * 100
 
     # ---- n_stages comparison ----
-    SRC = Path(r"D:\Pyprogramme\pyOutageGust\data\external\ukpn_full_stage_dataset_v3.csv")
-    stage_counts = pd.read_csv(SRC, usecols=["Incident Reference", "stage_row_count"], low_memory=False)
+    SRC = project_path('data/external/ukpn_full_stage_dataset_v3.csv')
+    stage_counts = pd.read_csv(read_input(SRC), usecols=["Incident Reference", "stage_row_count"], low_memory=False)
     stage_counts = stage_counts.drop_duplicates("Incident Reference").set_index("Incident Reference")["stage_row_count"]
 
     def n_stages_dist(df):

@@ -1,0 +1,17 @@
+Using shapefile: D:\Pyprogramme\pyOutageGust\results\pretest\data\20260909154903\001\pipeline_v2_data\Local_Authority_Districts_December_2021_UK_BGC_2022\LAD_DEC_2021_UK_BGC.shp
+CRS: EPSG:27700
+Index(['LAD21CD', 'LAD21NM', 'LAD21NMW', 'BNG_E', 'BNG_N', 'LONG', 'LAT',
+       'GlobalID', 'geometry'],
+      dtype='str')
+Done. Saved to: D:\Pyprogramme\pyOutageGust\results\pretest\data\20260909154903\001\pipeline_v2_data\Local_Authority_Districts_December_2021_UK_BGC_2022\LAD_area.csv
+       LADCD                        LADNM    area_km2
+0  E06000001                   Hartlepool   93.771495
+1  E06000002                Middlesbrough   53.858569
+2  E06000003         Redcar and Cleveland  245.142932
+3  E06000004             Stockton-on-Tees  204.902304
+4  E06000005                   Darlington  197.489020
+5  E06000006                       Halton   79.078666
+6  E06000007                   Warrington  180.622689
+7  E06000008        Blackburn with Darwen  137.059784
+8  E06000009                    Blackpool   34.867952
+9  E06000010  Kingston upon Hull, City of   71.610864

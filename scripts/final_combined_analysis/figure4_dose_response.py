@@ -3,6 +3,13 @@
 (03_阵风剂量反应曲线.csv) -- no new modeling, pure visualization."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
@@ -12,7 +19,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).parent))
 from figure_style import apply_style, mm_to_in, save_fig, panel_label, DOUBLE_COL_MM  # noqa: E402
 
-RESULTS_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+RESULTS_DIR = result_path('final_combined_analysis')
 OUT_DIR = RESULTS_DIR / "figures"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -28,7 +35,7 @@ def log_step(msg):
 
 def main():
     apply_style()
-    df = pd.read_csv(RESULTS_DIR / "03_阵风剂量反应曲线.csv")
+    df = pd.read_csv(read_input(RESULTS_DIR / "03_阵风剂量反应曲线.csv"))
     e0 = df[df["model"] == "E0_gust_dose_response"].sort_values("gust_ms")
     r0c = df[df["model"] == "R0c_gust_dose_response"].sort_values("gust_ms")
     log_step(f"E0 grid points: {len(e0)}, R0c grid points: {len(r0c)}")

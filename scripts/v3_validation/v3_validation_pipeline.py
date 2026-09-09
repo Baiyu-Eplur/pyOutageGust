@@ -5,6 +5,13 @@ residual LAD gap-fill). Writes all outputs under results/v3_validation/.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import json
 from pathlib import Path
 
@@ -15,9 +22,9 @@ from scipy import stats
 from statsmodels.stats.sandwich_covariance import cov_cluster
 from sklearn.model_selection import GroupKFold
 
-SRC = Path(r"D:\Pyprogramme\pyOutageGust\data\external\ukpn_full_stage_dataset_v3.csv")
-LAD_SHP = Path(r"D:\Pyprogramme\pyOutageGust\data\external\gis\LAD_DEC_2021_UK_BGC\LAD_DEC_2021_UK_BGC.shp")
-OUT_DIR = Path(r"D:\Pyprogramme\pyOutageGust\results\v3_validation")
+SRC = project_path('data/external/ukpn_full_stage_dataset_v3.csv')
+LAD_SHP = project_path('data/external/gis/LAD_DEC_2021_UK_BGC/LAD_DEC_2021_UK_BGC.shp')
+OUT_DIR = result_path('v3_validation')
 RAW_DIR = OUT_DIR / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -60,7 +67,7 @@ def log_step(msg):
 
 def step0_build_sample():
     log_step("Step 0: loading v3 dataset and deduplicating to event level...")
-    df = pd.read_csv(SRC, usecols=USECOLS, low_memory=False)
+    df = pd.read_csv(read_input(SRC), usecols=USECOLS, low_memory=False)
     event = df.drop_duplicates(INCIDENT_COL).copy()
     n_total_events = len(event)
 
@@ -115,7 +122,7 @@ def step1_lad_gapfill(matched: pd.DataFrame):
         geometry=gpd.points_from_xy(to_fill_valid["lon"], to_fill_valid["lat"]),
         crs="EPSG:4326",
     )
-    lad = gpd.read_file(LAD_SHP).to_crs("EPSG:4326")
+    lad = gpd.read_file(read_input(LAD_SHP)).to_crs("EPSG:4326")
     joined = gpd.sjoin(gdf_points, lad, how="left", predicate="within")
     filled_lad = joined["LAD21CD_right"] if "LAD21CD_right" in joined.columns else joined["LAD21CD"]
 

@@ -1,0 +1,20 @@
+{
+  "n": 59834,
+  "distance_correlation_log1p_customers_vs_log_duration": 0.19888939777434755,
+  "distance_correlation_perm_p": 0.004975124378109453,
+  "distance_correlation_null_mean": 0.006543727963184705,
+  "distance_correlation_null_std": 0.0013591412219553748,
+  "distance_correlation_raw_scale": 0.10337390258334485,
+  "mutual_information_nats": 0.28538942508547827,
+  "mutual_information_perm_p": 0.004975124378109453,
+  "mutual_information_z": 160.44378343993833,
+  "mutual_information_null_mean": 0.001267713258854255,
+  "mutual_information_null_std": 0.001770848989814455,
+  "n_permutations": 200,
+  "legacy_reference_distance_correlation_full": 0.375,
+  "legacy_reference_distance_correlation_subset_customers_gt0": 0.519,
+  "legacy_reference_mi_full_nats": 0.399,
+  "legacy_reference_mi_subset_customers_gt0_nats": 0.211,
+  "legacy_reference_n_full": 62928,
+  "legacy_reference_n_subset": 53492
+}

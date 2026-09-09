@@ -1,3 +1,10 @@
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 import pandas as pd
 import geopandas as gpd
 from pathlib import Path
@@ -5,18 +12,18 @@ from pathlib import Path
 # =========================
 # 1. 路径配置
 # =========================
-incident_file = Path(r"D:\Pyprogramme\STST2603\data\new\ukpn_master_weather_matrix.csv")
+incident_file = data_path('new/ukpn_master_weather_matrix.csv')
 
 lad_shp = Path(
-    r"D:\Pyprogramme\STST2603\data\Local_Authority_Districts_December_2021_UK_BGC_2022\LAD_DEC_2021_UK_BGC.shp"
+    str(data_path('Local_Authority_Districts_December_2021_UK_BGC_2022/LAD_DEC_2021_UK_BGC.shp'))
 )
 
-output_file = Path(r"D:\Pyprogramme\STST2603\data\new\ukpn_master_weather_matrix_with_lad.csv")
+output_file = data_path('new/ukpn_master_weather_matrix_with_lad.csv')
 
 # =========================
 # 2. 读取事故数据
 # =========================
-df = pd.read_csv(incident_file)
+df = pd.read_csv(read_input(incident_file))
 
 # 检查经纬度列是否存在
 required_cols = ["lat", "lon"]
@@ -45,7 +52,7 @@ gdf_points = gpd.GeoDataFrame(
 # =========================
 # 4. 读取 LAD shapefile
 # =========================
-lad = gpd.read_file(lad_shp)
+lad = gpd.read_file(read_input(lad_shp))
 
 print("LAD 字段：")
 print(lad.columns.tolist())

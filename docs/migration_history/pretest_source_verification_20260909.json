@@ -1,0 +1,849 @@
+[
+  {
+    "file": "scripts/a02_log_scale_20260905/figure4_dose_response_log_scale.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "b1a0a8f702a732617db79c58eed18519e3214104e37bba967f80962e0b5559ff"
+  },
+  {
+    "file": "scripts/a02_log_scale_20260905/figure6_regional_map_log_scale.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "5a686e1daa38da8af5fe119cec8521331e25add33279ec3b1a22c314399f865b"
+  },
+  {
+    "file": "scripts/appendix_h_20260906/appendix_h_common.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "c7d315d65eacd0d5272394bd7be8b3a63f330cb830cbe0cb2549998b08e4fdf7"
+  },
+  {
+    "file": "scripts/appendix_h_20260906/make_curve_plot.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "a20473266789be2502c802733088a6be3526b598fe115a87dabfc2b3c3dddb4c"
+  },
+  {
+    "file": "scripts/appendix_h_20260906/step_a3_curve_comparison.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "5da5fbf4aeb1c214f2632645734204705c3c1b4eab4c248e4ca947a4d674815d"
+  },
+  {
+    "file": "scripts/appendix_h_20260906/step_b_distribution_check.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "8299e7d7812ac88ace1caff558c6d1f423009d9759dc925eb9c92c0fd2c3d8d9"
+  },
+  {
+    "file": "scripts/appendix_h_legacy_followup_20260906/make_figure10_corrected.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "d84a1121614131da082e013ee649c697af847c2307b7952e4fe8f9fd03e79a64"
+  },
+  {
+    "file": "scripts/appendix_h_legacy_followup_20260906/q1_bootstrap_beta2_check.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "7b631886857e3df65cc9ec93ce6432ba99bb67e855a5fde55a8955508a0c9363"
+  },
+  {
+    "file": "scripts/appendix_h_legacy_followup_20260906/q2_figure10_dev_sample_check.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "f1bbc463d88a29461220aa0dd609e5d3cb0213dd8689d75a1fc28e36fe244db6"
+  },
+  {
+    "file": "scripts/borrowed_from_main/coef_fold_stability_E0_R0.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "e2778cdd3ec7177c8aec48a7b87a3ea5a22841c2c2c895f00a47f4be4d52d8d3"
+  },
+  {
+    "file": "scripts/borrowed_from_main/coef_fold_stability_expansion_validation.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "8db27cfc894911a096e2954447faebc3f709e5d91af69e3d24afc9968f5deff0"
+  },
+  {
+    "file": "scripts/borrowed_from_main/coef_fold_stability_R0_custadj.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "421575e7ae0f2033521ca3652d2e9655de49e2606378d8429709853227d2d1fc"
+  },
+  {
+    "file": "scripts/c01_repair_20260905/step1_representative_row.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "065a9826fd74a04e64f98dcc6875a4f4a0fb799dcb570ade0bd02877ee8aea45"
+  },
+  {
+    "file": "scripts/c01_repair_20260905/step2_weather_reextraction.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "0205a439d957590dd5f1b9c8a943206cae8772cee0bbd92713c3f36f8564fe63"
+  },
+  {
+    "file": "scripts/c01_repair_20260905/step3_4_corrected_sample_and_refit.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "1fd804169b69eedea254902d5211cc0cf8b9890556bc72b9a89f6b4093c43f13"
+  },
+  {
+    "file": "scripts/c01_repair_20260905/step4b_fold_stability_and_variance.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "bef0c2b48ade163c1b59cdcc7c66d354ccec53f7ed90aefcc9a4489e229d9039"
+  },
+  {
+    "file": "scripts/c01_repair_20260905/step4c_original_baseline_for_comparison.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "2f91b9b880109162676b68716e9b4f4827e555af8c688c6ae39bbe667163826c"
+  },
+  {
+    "file": "scripts/c02_c08_repair_20260905/c02_r2_definition_check.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "d43ea657793123ec4c115d49d78aa0d5853df21db41f5a7152e899d11972522d"
+  },
+  {
+    "file": "scripts/c02_c08_repair_20260905/corrected_sample_builder.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "feb1ddd4f42dacd31a127c747826d26a4948e1409cfd406e601e985ed8e8bb8d"
+  },
+  {
+    "file": "scripts/c02_c08_repair_20260905/figure10_robustness_forest.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "d9050c85bacf8bdbd7455cb81ebe46746aa82a03490bbf6c01c438840ec04471"
+  },
+  {
+    "file": "scripts/c02_c08_repair_20260905/figure1_study_area.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "c03f5245510b97a2a17cef5bc060afb68dd52853f3cb104f8ff1513b7613c3cf"
+  },
+  {
+    "file": "scripts/c02_c08_repair_20260905/figure2_distribution.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "9f09a0ad6e1151f291e840f34dccec448fefe898dfd2e757830f8ddfd61712cf"
+  },
+  {
+    "file": "scripts/c02_c08_repair_20260905/figure4_dose_response.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "36bb958bb6156c9e33793e62ca6cac906c5b2eb9b36b7c61f842ed3e7dfcce05"
+  },
+  {
+    "file": "scripts/c02_c08_repair_20260905/figure5_variance_decomposition.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "b51fd0b7457afdc10275d526be84366ea985a00ccbc44b315ea103453c9a47a9"
+  },
+  {
+    "file": "scripts/c02_c08_repair_20260905/figure6_regional_map.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "355ff148c825c263da52154f8ffae10d74d763c0df64999d8e93e71b31939ed6"
+  },
+  {
+    "file": "scripts/c02_c08_repair_20260905/figure7_magnitude_comparison.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "34f8b746d00134cb5b339a22ee51afa40335439625d5e3772eb2821908135ce4"
+  },
+  {
+    "file": "scripts/c02_c08_repair_20260905/figure8_weather_subsample_comparison.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "06454a154ec66e2c13890e36238eb19eb794b74dad1c0f404605ed7a9bee21ad"
+  },
+  {
+    "file": "scripts/c02_c08_repair_20260905/figure9_storm_validation.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "67350fbbee8f4d44adde39d503b0233501bfdd1dbf8d247f9729cd596d89932d"
+  },
+  {
+    "file": "scripts/c02_c08_repair_20260905/figureD1_composition_effect.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "ee985675ffbaec9d458d6519f87ddb596b7038b44515eaa9fb511a841031b59d"
+  },
+  {
+    "file": "scripts/c02_c08_repair_20260905/final_core_tables.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "9d997e454f3af1dacb548bc9b5a43826119ed6055bf593519d75ea3f71e794b7"
+  },
+  {
+    "file": "scripts/c09_final_cleanup_20260905/a02_duan_smearing.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "53ee5952fd47646e41532f7fd7e13a4caa7d49bb8612cb9849fef6b4f0751cc3"
+  },
+  {
+    "file": "scripts/c09_final_cleanup_20260905/appendixG_recompute.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "946c17eb522c47e00bfe43e9812fbf64c02a39e1bd168d23b8941845f56fbb4a"
+  },
+  {
+    "file": "scripts/c09_final_cleanup_20260905/c09_vif_fixed.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "06c709e6a027dfb76289e412d090c386af8c4ec26d0f105bb8f0cdfdf98758e2"
+  },
+  {
+    "file": "scripts/c09_final_cleanup_20260905/c09_vif_recompute.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "6d97d3c3aa6f9e03bc6cf286ca00687f6716219f44f781499ffb02ba6c8787f1"
+  },
+  {
+    "file": "scripts/c09_final_cleanup_20260905/diag_vif_original.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "6a3b42f8b9411f359258ae9a1709770a0887cb169323eba867497fe1d62da9a4"
+  },
+  {
+    "file": "scripts/c09_final_cleanup_20260905/diag_vif_spike.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "70fd9635337e747a1fbd1b84c045d07dd6ad83f7fbe432a02cf2dceaefb9fc14"
+  },
+  {
+    "file": "scripts/c09_final_cleanup_20260905/run_all_c09.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "f656b76cd986310d5954afe39963c8dfdf80c21a0a7586e8c8dffee3506297d5"
+  },
+  {
+    "file": "scripts/cause_code_robustness/step1_composition_diagnostic.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "726d3935e8c0cb3c6d73440c29e32a2e9b57211bbdde57519508577b143926ff"
+  },
+  {
+    "file": "scripts/cause_code_robustness/step2_wt_subset_critical_wind_speed.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "be850f875495e9af43acfa4ee8059b5723283725e8c2b2e72dc35534e4a4bbda"
+  },
+  {
+    "file": "scripts/code_audit_20260905/audit_pipeline.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "f269aa8cb95794840c447bc7d3f47eaff92255dad176ec2af8d0021904278547"
+  },
+  {
+    "file": "scripts/code_audit_20260905/trace_findings.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "359a8b219d4e2a6537806dce40d3b5c402d58c4ee28287e44230bb95d4f6711d"
+  },
+  {
+    "file": "scripts/critical_wind_speed/critical_wind_speed_pipeline.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "12ca03bca621dd74b65f254532ed9a3f2ec3561e6fe1e9ac54bed1e289a8bfff"
+  },
+  {
+    "file": "scripts/customers_duration_shape_investigation/step1_binned_relationship.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "a7640347cc266c2f55cd989652d6854ac3153496b57856846ca7167d00064e35"
+  },
+  {
+    "file": "scripts/customers_duration_shape_investigation/step2_subgroup_check.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "fe4427c344f95ba787ecf0fba222b8a62f088878c78c3392c1d6a46900aba23c"
+  },
+  {
+    "file": "scripts/customers_duration_shape_investigation/step3_flexible_form.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "a1e8d0f750fbeb4dfbddeb7537127788b34132a0541b6e9534315f7ccd4b8466"
+  },
+  {
+    "file": "scripts/customers_duration_shape_investigation/step5_n_stages_stratification.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "9f39a8eb9f144d9f9edfe2433b1ea363a8895d55a6e3138973fab20e7e0b391c"
+  },
+  {
+    "file": "scripts/dev_sample_decontamination/clean_sample_builder.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "5df61c6af180ff31b8655132c5095bf10d0fd12bdc2d22bc590269a13122e9f1"
+  },
+  {
+    "file": "scripts/dev_sample_decontamination/step1_rebuild_clean_sample.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "0295d9eafdaee024452c31aa2ef42a291922ae75990abb2c26515fa33d1d494b"
+  },
+  {
+    "file": "scripts/dev_sample_decontamination/step2_refit_clean.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "dc60b60cde18026f9e592544435b1185798f90b1b057b355650748ef1284ecee"
+  },
+  {
+    "file": "scripts/dev_sample_decontamination/step3_critical_wind_speed_clean.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "4dc72850c2d5c22ba8f9912e28d83be62d9f167c971ded83a99876db3abe4486"
+  },
+  {
+    "file": "scripts/dev_sample_decontamination/step4_variance_decomposition_clean.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "303a217b14603b71579ece6fc457c3410f594b83b4c0a157d5e8eeecc5f171c1"
+  },
+  {
+    "file": "scripts/distribution_gsa_20260907/task1_distribution_fitting.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "360900fa47e22ff4a5e404bd606842537cb3a594a141dd32fc96acc3a53dd2f7"
+  },
+  {
+    "file": "scripts/distribution_gsa_20260907/task1b_ks_supplement.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "173f04992286c134c12417c10c29aa1fc28f27b2c65b7f732b145baabf11dbf4"
+  },
+  {
+    "file": "scripts/distribution_gsa_20260907/task2_global_sensitivity.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "ce5c0bc2a2502c84fa6b9ecbe065794eeabd5e37466bad72bb8681e69a38af2d"
+  },
+  {
+    "file": "scripts/event_input_repair/r02_events.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "4217b514368a34923f8850f2189a4efdc8551dc21d352ae133772998e91f71bc"
+  },
+  {
+    "file": "scripts/event_input_repair/r02_input_pipeline.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "ca7eed5ab1ae4e5f158eef165181d4cb1c8a2b0b9bd594d267762be7cab5b56d"
+  },
+  {
+    "file": "scripts/event_input_repair/test_r02_events.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "3587be17cf295d66396f5e6bcdc150fdebe1e752867bdbd9c9a639c51f54c95c"
+  },
+  {
+    "file": "scripts/figure_relabel_20260906/figure10_robustness_forest.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "dc4d2d297d987d87dc8d5948c1619d23299bdab4605489afd371f7acac49c56e"
+  },
+  {
+    "file": "scripts/figure_relabel_20260906/figure2_distribution.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "9a5b4ce47412ef8016393f4f99c366a555affa2e0241a89b1185bfcbb588c512"
+  },
+  {
+    "file": "scripts/figure_relabel_20260906/figure5_variance_decomposition.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "443cb5f76e8c5a8201c6f32724dfbe2d06089093416be856d6593d0ba805bbce"
+  },
+  {
+    "file": "scripts/figure_relabel_20260906/figure7_magnitude_comparison.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "e62b7c117048d51637e07f07e1b40bcf6565960c90a9ce6cc25e6d6b4b26afdd"
+  },
+  {
+    "file": "scripts/figure_relabel_20260906/figure8_weather_subsample_comparison.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "c4827c38135afaf27c11aa7c51b28e0213e5a547da8cbd1edd39e05a7c6e0d5a"
+  },
+  {
+    "file": "scripts/figure_relabel_20260906/figure9_storm_validation.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "497e87c546674dce5010cd6bd3eda70f9385b6e62bcbc97735c382d84271906b"
+  },
+  {
+    "file": "scripts/figure_relabel_20260906/figureD1_composition_effect.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "03766def77a92717cc19522ad74420f978b6d4e3503661dcd1ba814f880123d0"
+  },
+  {
+    "file": "scripts/figure_relabel_20260906/make_figureH1_curve_plot.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "f2ff30e816531624cc17c0db4265c20a9934ef85deb15522910dcf50f640d3c5"
+  },
+  {
+    "file": "scripts/final_combined_analysis/combined_sample_builder.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "fffb3b252cc224633026f37a65d1d132805c0017f59c7e307d7a035581619891"
+  },
+  {
+    "file": "scripts/final_combined_analysis/figure10_robustness_forest.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "17ab61c9b229632e14c3bb8e32ac498dcba8ef70f8a28e6dd4428041085c9ddc"
+  },
+  {
+    "file": "scripts/final_combined_analysis/figure1_study_area.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "fa3ae6b4aed2828db7ecb11d621afaa2340f8531458a53bf2e0a881e93dc0a76"
+  },
+  {
+    "file": "scripts/final_combined_analysis/figure2_distribution.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "191f9501703037febc5ad8399c28c2b6e5e6b0727155a34d7f04045338789a36"
+  },
+  {
+    "file": "scripts/final_combined_analysis/figure4_dose_response.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "ccebae2221a6397b3b98109b5582be2c54a653c14ab425bd7c8b9eafe15ba15d"
+  },
+  {
+    "file": "scripts/final_combined_analysis/figure5_variance_decomposition.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "21f8f6400be19aa308f5f618a7b043f99381b79e1e523b51e2da72711b71e8b8"
+  },
+  {
+    "file": "scripts/final_combined_analysis/figure6_regional_map.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "87765ee8e09e50d2e206b39ff1d460da842197a708eb4e1e618b6c5399cea9b4"
+  },
+  {
+    "file": "scripts/final_combined_analysis/figure7_magnitude_comparison.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "d70a2e9122fca9b63d1d10a0482640afd58db26d87665ba124c3216b3ca03a5f"
+  },
+  {
+    "file": "scripts/final_combined_analysis/figure8_weather_subsample_comparison.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "d42f9cd43773d6e424d55a44e11950a475f3f7a1442f0a358dda23209e959306"
+  },
+  {
+    "file": "scripts/final_combined_analysis/figure9_storm_validation.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "bbf0ac0631e641dca95d998d856741c9772c18bbb32a1a5b307a8394d6e77cee"
+  },
+  {
+    "file": "scripts/final_combined_analysis/figure_style.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "9666f902151abf8a39d269784aa2192d63529e8f20cb15912cafd93f320cdd3f"
+  },
+  {
+    "file": "scripts/final_combined_analysis/figureD1_composition_effect.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "2c60d9104abda62093dcea96648c1d45edd0551800e0819de5f5cd2d5795366c"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step10_named_storms.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "6eb38571ffec45d8220138e81eecadb3e891c248d80beb9e0036b608501e3361"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step13_storm_prediction_check.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "40ab6359cfd4fb8374e1b7f854fcf922eb4aee576dac8aff0d6598d01c1a7bcc"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step16_range_restriction.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "d6078d0f786b5f9ff78b0125f5b0c640a2034d52fe503247277961751fbc2957"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step17_weather_natural_subsample.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "f6a70b4b14ec10190c04703aae23989a7e89ad1fdce2924415a3acafba2c3d29"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step1_final_fit.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "0f00385c9f9ff642da7d8107912a0dc0cbadf1297ba80945ba8560d90a601b81"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step21_causecode_gust_diagnostic.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "d8fd4c0ef82605b2d4adc4f91e1769813ed89ad048ca16214ed52b0a308b0fad"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step2_critical_wind_and_variance.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "1346a2a01e245f153c046a62f792af83ba9bdd0b2dedb74be3e609f35710904e"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step30_counterfactual.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "be56e5c97f467ff87c85bd47c5579ccdcfc9eed288ed840e63e95983b3700f5f"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step36_six_group_clean_sample.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "9d653b0e5286ec8d5e98b98e0d7ab85f7ab323904ff7be497271fa86a30289df"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step38_F4_customers_mean_ratio.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "487e39e5a8f1918858f70a601049c34ab10cc07ccb5c0508a0b929ecdb78c3ba"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step38_M6_decompose_sample_vs_definition.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "5b0b252a19c58b1112220e041c177b675bb17ea7388f02d99b90362a0dc810ed"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step38_M6_nonlinear_dependence.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "b777be01269749099e943206fbd855fd79174eb1a83b7245bd15dc1eb97ee239"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step3_dose_response_curve.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "f48b9f7c665f2616199b58c4fda222684f739053f710e3549865837af0301b99"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step40_1_cubic_gust_term.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "af8c07fdb5d748edff055d310758264615674dabbe2967da7a94c3d3c4af5c1b"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step40_2_zspace_symmetry.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "d5d6caa3c27e3675d12a559ab40fc85268d880e287384fceee863cb07dd4ebd5"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step40_model_form_check.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "d1ec3172153e768847519230fbd08b37a4f7081961d2796d097c95ef9bf6a97c"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step42_appendixD_composition_crosstab.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "9eaf627d945fc3d250509d062820c4a441bdf131d1ef7d1bd3532bf1667f5958"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step43_M01_M03_M05.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "f8a7f30c885d45e0c5fd8429b434a8a708cc2e94dcd11221557eca7d3c4f21f3"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step4_baseline_regional_map.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "99c0ea3b8d3f0a2dc77d7ae0d00817928e6750be9b8d19559d043aeff553bef7"
+  },
+  {
+    "file": "scripts/final_combined_analysis/step7_customers_dose_response.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "3eb41b6be2af8f983549ef95dfdcb23a43325ca5354fae56ec8c44a4a8140cc8"
+  },
+  {
+    "file": "scripts/independent_review_ir_20260905/ir04_bootstrap_diagnostic.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "0a3b10ad969c6d5101d33b7fe8ecd74be65339ba62026aa9b1e14282cca9cd17"
+  },
+  {
+    "file": "scripts/model_review_package_20260907/materialize_final_data.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "f1a5da480db19d24cf8047560b37354cb720f969977a24befeed16e06fe5f106"
+  },
+  {
+    "file": "scripts/module_e_final_confirmation/build_holdout_sample.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "b209a8e5c84ca19305f79cccea109abbe30cae97460a12a9953249946abde8c7"
+  },
+  {
+    "file": "scripts/module_e_final_confirmation/fit_holdout_models.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "5567e973e4db93f2c92f4e09d59d814bd8cfcb7e9a1c1fbb072ece3e14324fd3"
+  },
+  {
+    "file": "scripts/pipeline_v2/Buckinghamshire_combination_v2.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "db13f6dfd1873b07fe1d47c4ad8608951e1abb0734e556817ea5c6573c1d8855"
+  },
+  {
+    "file": "scripts/pipeline_v2/data_arrange_v2.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "15639203b530b66b3025bcd79bb5a155498e5b4e06729de84103d2b62fe2410f"
+  },
+  {
+    "file": "scripts/pipeline_v2/filter_v2.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "25380c434aa146a5a42f01128fbe8dd4052a1c7f456cd6e0407ffdcc2c569396"
+  },
+  {
+    "file": "scripts/pipeline_v2/GVA_merge_with_crosswalk_v2.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "ee4de3594addec9884b920a3d316fa4c643f344ca568a2948b77d7fb00940d61"
+  },
+  {
+    "file": "scripts/pipeline_v2/GVA_new_v2.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "8a4f44e4f003ff4e02972955b893cf52bc1557a13c48f64f757264b6cecf5ba1"
+  },
+  {
+    "file": "scripts/pipeline_v2/LAD_AreaSummary_v2.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "66ad7df71ff6ab55c06847204bb7b1f7af850dd3340490bb1cf291e89eb5ccbc"
+  },
+  {
+    "file": "scripts/pipeline_v2/LAD_DNO_v2.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "e4a6b14413b11c33f4884b71e879b94dcec43a966ca76e273cf8d030d5298290"
+  },
+  {
+    "file": "scripts/pipeline_v2/LAD_GeoMerge_v2.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "27af797abdfafa570bb4159220be94df503c261ea34741a9c954c7bdb4204cdb"
+  },
+  {
+    "file": "scripts/pipeline_v2/LAD_urban_Summary_v2.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "0a77f053ad397e4065fc33b8f51766a8391c9204c181bd69e5286c8488df0d64"
+  },
+  {
+    "file": "scripts/pipeline_v2/main1_v2.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "816d5b6e903c3533a32f4cb693fb03bbc1d9f5961648bc34c34e85eb7d08c53c"
+  },
+  {
+    "file": "scripts/pipeline_v2/match_lad_v2.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "b46732156006c72704e405cbc3677a92918c15102e1e09bb6232b1ed84902b83"
+  },
+  {
+    "file": "scripts/pipeline_v2/poppulation_merge_v2.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "289a7d51afdb2aa64d1b36b3f34448de4b00b5b96ff2c7e1de088b64a92e0af8"
+  },
+  {
+    "file": "scripts/test1/test1_full_pipeline.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "b0d2119af29dc5610e18b411cc650d2b18dbd229aebb3bf59620cd31c1342f9b"
+  },
+  {
+    "file": "scripts/test1/test1_step0_inventory.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "83db9a2d0fe7ff1b0a25dc44b76634b3876e242d411fcf78499c17019f4bcee9"
+  },
+  {
+    "file": "scripts/test1b/test1b_independence_pipeline.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "a44114ca063743713128b7024a210be053803ab44254fc331444bfa824356c17"
+  },
+  {
+    "file": "scripts/v3_audit/audit_v3_dataset.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "b306c23a371d9236f9de7eb3ea70cefb4fc31559a64057971d644162d5fbb546"
+  },
+  {
+    "file": "scripts/v3_controlled_comparison/controlled_comparison_pipeline.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "b3a9d6ce89440d8c1dfea30cefff01b32e20619a866c07b67aa5e25477b06754"
+  },
+  {
+    "file": "scripts/v3_validation/v3_validation_pipeline.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "b97e090269c0620c3ee9c93baf3f12d65ac040afa26e7c3a78ae9a268be09552"
+  },
+  {
+    "file": "scripts/variance_decomposition/variance_decomposition_pipeline.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "e91aedcb318dd01c765c5bf111f255e6cc40e55b585a96fd4cc032695fb0b511"
+  },
+  {
+    "file": "review_package/code/run_main_regression.py",
+    "same_function_names": true,
+    "function_numeric_constants_unchanged": true,
+    "different_functions": [],
+    "final_sha256": "f96083218a31b7d46c6b00c3dacc4ccf4927540fc9a184e3fd13f5f17d5d15f8"
+  }
+]

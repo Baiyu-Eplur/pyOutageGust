@@ -1,8 +1,0 @@
-{
-  "curve_customer_linear": -3.040059838128583e-17,
-  "curve_customer_square": 0.9999832870942942,
-  "map_customer_linear": 0.0,
-  "map_customer_square": 0.0,
-  "curve_vs_customer_at_z0_multiplicative_factor": 0.6729572228245925,
-  "interpretation": "Curve fixes mean design-matrix columns (mean square ~1); map explicitly fixes customer z and z squared to 0. This changes levels, not the gust grid max/min ratio."
-}

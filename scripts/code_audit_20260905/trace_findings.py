@@ -1,5 +1,12 @@
 """Quantify audit findings without changing inputs, models or manuscripts."""
 from __future__ import annotations
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 import re
 import sys
 from pathlib import Path
@@ -16,7 +23,7 @@ from scipy import stats
 def main():
     cols=[a.ID,'Start Date and Time','End Date and Time','Restoration Stage','Cause Code','Number of Customers Restored','Re-interruption Stage','source_row_number','clean_start','wx_time_used_utc','gust_0h','precipitation_24h_sum','temperature_0h','pressure_msl_0h','lat','lon','LAD21CD','population','income_deprivation_rate','deprivation_gap_pct','morans_i','rural_urban_classification',a.C,a.D,'weather_status_v3','cause_group_official','incident_date_utc']
     print('Tracing representative row, weather and storm calculations',flush=True)
-    stages=pd.read_csv(a.SRC,usecols=cols,low_memory=False)
+    stages=pd.read_csv(read_input(a.SRC),usecols=cols,low_memory=False)
     stages['_start']=pd.to_datetime(stages['Start Date and Time'],utc=True,errors='coerce')
     first=stages.drop_duplicates(a.ID).set_index(a.ID)
     min_idx=stages.groupby(a.ID)['_start'].idxmin().dropna().astype(int)
@@ -36,7 +43,7 @@ def main():
     detail['temporal_partition_change']=(first['_start']>=pd.Timestamp('2023-09-30',tz='UTC'))!=(earliest['_start']>=pd.Timestamp('2023-09-30',tz='UTC'))
     rows=[]
     for label in ['main_E0','main_R0c','weather_E0','weather_R0c']:
-        membership=pd.read_csv(a.OUT/f'{label}_sample_membership.csv')
+        membership=pd.read_csv(read_input(a.OUT/f'{label}_sample_membership.csv'))
         d=detail.loc[membership[a.ID]]
         changed=d[d['lag_hours'].ne(0)]
         comparable=d['gust_0h_earliest'].notna() & d['gust_0h_used'].notna()
@@ -59,11 +66,11 @@ def main():
         d['customers_v2_log1p']=np.log1p(d[a.C])
         return d
     coefs=a.ROOT/'results/final_combined_analysis/raw'
-    storm_tree=ast.parse((a.ROOT/'scripts/final_combined_analysis/step13_storm_prediction_check.py').read_text(encoding='utf-8'))
+    storm_tree=ast.parse((read_input(a.ROOT/'scripts/final_combined_analysis/step13_storm_prediction_check.py')).read_text(encoding='utf-8'))
     storms=next(ast.literal_eval(n.value) for n in storm_tree.body if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='STORMS' for t in n.targets))
-    m_e=pd.read_csv(a.OUT/'main_E0_sample_membership.csv');m_r=pd.read_csv(a.OUT/'main_R0c_sample_membership.csv')
+    m_e=pd.read_csv(read_input(a.OUT/'main_E0_sample_membership.csv'));m_r=pd.read_csv(read_input(a.OUT/'main_R0c_sample_membership.csv'))
     e=prep(first.loc[m_e[a.ID]]).reset_index();r=prep(first.loc[m_r[a.ID]]).reset_index()
-    Xe,_=design(e,e);bet=pd.read_csv(coefs/'step1_E0_final_full_coefs.csv').set_index('term')['coefficient']
+    Xe,_=design(e,e);bet=pd.read_csv(read_input(coefs/'step1_E0_final_full_coefs.csv')).set_index('term')['coefficient']
     eta=(Xe@bet).to_numpy();old_eta=np.logaddexp(0,eta);y=np.log1p(e[a.C]).to_numpy()
     exposure_rows=[];storm_tail=[]
     for storm,interval in [('FULL_SAMPLE',None)]+list(storms.items()):
@@ -77,11 +84,11 @@ def main():
     pd.DataFrame(storm_tail).to_csv(a.OUT/'storm_recovery_membership_audit.csv',index=False)
     # Compare the two explicit reference settings of the recovery gust curve and map.
     Xr,_=design(r,r,extra_scale_cols=['customers_v2_log1p'])
-    br=pd.read_csv(coefs/'step1_R0c_final_full_coefs.csv').set_index('term')['coefficient']
+    br=pd.read_csv(read_input(coefs/'step1_R0c_final_full_coefs.csv')).set_index('term')['coefficient']
     mean_square=float(Xr['z_log1p_customers_v2_sq'].mean())
     a.write_json('curve_reference_audit.json',{'curve_customer_linear':float(Xr['z_log1p_customers_v2'].mean()),'curve_customer_square':mean_square,'map_customer_linear':0.,'map_customer_square':0.,'curve_vs_customer_at_z0_multiplicative_factor':float(np.exp(br['z_log1p_customers_v2_sq']*mean_square)),'interpretation':'Curve fixes mean design-matrix columns (mean square ~1); map explicitly fixes customer z and z squared to 0. This changes levels, not the gust grid max/min ratio.'})
     # Full command history index from LOG, retaining retrospective status labels.
-    log=(a.ROOT/'LOG.md').read_text(encoding='utf-8')
+    log=(read_input(a.ROOT/'LOG.md')).read_text(encoding='utf-8')
     sections=re.split(r'(?m)^## ',log)[1:]
     timeline=[]
     for section in sections:
@@ -101,7 +108,7 @@ def main():
             hashes=[a.sha(p) for p in paths]
             for p,h in zip(paths,hashes):duplicate.append({'filename':name,'path':str(p),'sha256':h,'all_copies_identical':len(set(hashes))==1})
     pd.DataFrame(duplicate).to_csv(a.OUT/'duplicate_report_index.csv',index=False,encoding='utf-8-sig')
-    original=json.loads((a.OUT/'historical_files_before.json').read_text(encoding='utf-8'))
+    original=json.loads((read_input(a.OUT/'historical_files_before.json')).read_text(encoding='utf-8'))
     a.write_json('historical_preservation_check_after_trace.json',{'watched_files':len(original),'changed_files':[p for p,h in original.items() if not Path(p).exists() or a.sha(Path(p))!=h]})
     print('Focused tracing complete',flush=True)
 

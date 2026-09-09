@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "D:\Pyprogramme\pyOutageGust\pretestmain.py", line 239, in <module>
+    runpy.run_path(str(path), run_name="__main__")
+        ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Pyprogramme\pyOutageGust\pretestmain.py", line 233, in _worker
+    if key == "event_input_repair/r02_input_pipeline":
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Pyprogramme\pyOutageGust\scripts\pipeline_v2\filter_v2.py", line 368, in <module>
+    event_df = generate_event_level_table(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Pyprogramme\pyOutageGust\scripts\pipeline_v2\filter_v2.py", line 322, in generate_event_level_table
+    boundary_cases.to_csv(boundary_case_output_path, index=False)
+  File "C:\Users\haoya\.conda\envs\pyoutagegust\Lib\site-packages\pandas\core\generic.py", line 3988, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\haoya\.conda\envs\pyoutagegust\Lib\site-packages\pandas\io\formats\format.py", line 1025, in to_csv
+    csv_formatter.save()
+  File "C:\Users\haoya\.conda\envs\pyoutagegust\Lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\haoya\.conda\envs\pyoutagegust\Lib\site-packages\pandas\io\common.py", line 793, in get_handle
+    check_parent_directory(str(handle))
+  File "C:\Users\haoya\.conda\envs\pyoutagegust\Lib\site-packages\pandas\io\common.py", line 652, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: 'D:\Pyprogramme\pyOutageGust\results\pretest\data\20260909154903\002\pipeline_v2_output'
+--- 步骤 1: 读取原始全量数据 ---
+成功加载数据。初始总记录数: 237,901 行
+识别到事故列: Incident Reference
+识别到原因列: Cause Code
+
+--- 步骤 2: 官方 Cause Code 分组统计（仅统计，不筛选）---
+cause_group_official
+technical_asset         118229
+non_fault_or_unknown     71318
+weather_natural          25796
+third_party              14799
+external_or_customer      6872
+human_error                887
+Name: count, dtype: int64
+
+技术性时间清洗：剔除 Start/End 无法解析的行 0 条，剩余 237,901 条
+
+--- 步骤 3: 按 Incident Reference 分组聚合（规则2核心）---

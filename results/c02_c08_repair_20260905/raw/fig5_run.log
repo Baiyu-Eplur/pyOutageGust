@@ -1,3 +1,0 @@
-[fig5-final] E0: {'Baseline\n(region+FE)': np.float64(0.79453601468658), '+ Non-gust\nweather': np.float64(0.9054166159487099), '+ Gust': np.float64(1.28635822239133), '+ Customers': nan}
-[fig5-final] R0c: {'Baseline\n(region+FE)': np.float64(1.47378537757443), '+ Non-gust\nweather': np.float64(0.9669023420995799), '+ Gust': np.float64(1.06105289387021), '+ Customers': np.float64(7.7986667265955)}
-[fig5-final] Saved Figure_5_variance_decomposition (final).

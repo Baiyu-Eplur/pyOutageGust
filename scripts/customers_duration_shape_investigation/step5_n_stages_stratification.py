@@ -4,6 +4,13 @@ construction: duration_B = full multi-stage span, customers_v2 = cross-stage sum
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
@@ -13,10 +20,10 @@ import statsmodels.api as sm
 from scipy import stats
 from statsmodels.stats.sandwich_covariance import cov_cluster
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\dev_sample_decontamination")))
+sys.path.insert(0, str(project_path('scripts/dev_sample_decontamination')))
 from clean_sample_builder import build_clean_wt_samples, v9  # noqa: E402
 
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\customers_duration_shape_investigation")
+OUT_DIR = result_path('customers_duration_shape_investigation')
 RAW_DIR = OUT_DIR / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -48,8 +55,8 @@ def main():
     r0cb_sample["log1p_customers_v2"] = np.log1p(r0cb_sample["customers_v2_event_excl_reinterruptions"].astype(float))
 
     log_step("Joining stage_row_count (n_stages) from v3 dataset...")
-    SRC = Path(r"D:\Pyprogramme\STST2603\rebuild_v3_full_stage\outputs\ukpn_full_stage_dataset_v3.csv")
-    stage_counts = pd.read_csv(SRC, usecols=["Incident Reference", "stage_row_count"], low_memory=False)
+    SRC = external_path('rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv')
+    stage_counts = pd.read_csv(read_input(SRC), usecols=["Incident Reference", "stage_row_count"], low_memory=False)
     stage_counts = stage_counts.drop_duplicates("Incident Reference").set_index("Incident Reference")["stage_row_count"]
     r0cb_sample["stage_row_count"] = r0cb_sample["Incident Reference"].map(stage_counts)
     assert r0cb_sample["stage_row_count"].notna().all(), "some events missing stage_row_count after join"

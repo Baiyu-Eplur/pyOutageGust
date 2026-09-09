@@ -5,6 +5,13 @@ construction as command #10) on the SAME set of incidents for comparison.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import importlib.util
 import sys
 from pathlib import Path
@@ -12,11 +19,11 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\dev_sample_decontamination")))
+sys.path.insert(0, str(project_path('scripts/dev_sample_decontamination')))
 from clean_sample_builder import build_clean_wt_samples  # noqa: E402
 
-SRC = Path(r"D:\Pyprogramme\STST2603\rebuild_v3_full_stage\outputs\ukpn_full_stage_dataset_v3.csv")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\customers_duration_shape_investigation")
+SRC = external_path('rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv')
+OUT_DIR = result_path('customers_duration_shape_investigation')
 RAW_DIR = OUT_DIR / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -43,7 +50,7 @@ def decile_bin_report(df: pd.DataFrame, x_col: str, y_col: str, label: str) -> p
 def build_naive_variables(event_ids: pd.Index) -> pd.DataFrame:
     log_step("Building naive customers/duration via legacy filter.py dedup logic (same as command #10)...")
     stage = pd.read_csv(
-        SRC,
+        read_input(SRC),
         usecols=[INCIDENT_COL, "Start Date and Time", "Number of Customers Restored", "stage_duration_hours"],
         low_memory=False,
     )

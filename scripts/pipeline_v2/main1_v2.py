@@ -1,3 +1,10 @@
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input, input_files
+
 import json
 import os
 import time
@@ -23,17 +30,17 @@ if getattr(sys, 'frozen', False):
 else:
     # 正常python运行
     BASE_DIR = Path(__file__).resolve().parent
-DATA_DIR = BASE_DIR / "data"
+DATA_DIR = data_path()
 
-INPUT =  "D:\\Pyprogramme\\STST2603\\data\\new\\unplanned_incidents_clean_2.csv"
-OUTPUT = "D:\\Pyprogramme\\STST2603\\data\\new\\ukpn_master_weather_matrix.csv"
+INPUT =  str(data_path('new/unplanned_incidents_clean_2.csv'))
+OUTPUT = str(data_path('new/ukpn_master_weather_matrix.csv'))
 
 UNIQUE_REQUEST_CACHE_DIR = DATA_DIR / "weather_request_cache"
 FAILED_REQUEST_LOG = DATA_DIR / "weather_failed_requests.csv"
 MISSING_INCIDENT_LOG = DATA_DIR / "weather_missing_incidents.csv"
 CHECKPOINT_PATH = DATA_DIR / "weather_checkpoint.json"
 
-REQUESTS_CACHE_PATH = BASE_DIR / ".weather_cache_master"
+REQUESTS_CACHE_PATH = data_path(".weather_cache_master")
 
 
 # =========================================================
@@ -102,7 +109,7 @@ def write_json(obj, path):
 def read_json_if_exists(path):
     path = Path(path)
     if path.exists():
-        with open(path, "r", encoding="utf-8") as f:
+        with open(read_input(path), "r", encoding="utf-8") as f:
             return json.load(f)
     return None
 
@@ -274,7 +281,7 @@ def load_processed_ids(output_path, id_col):
     processed_ids = set()
     if output_path.exists():
         try:
-            existing = pd.read_csv(output_path, usecols=[id_col], dtype={id_col: str})
+            existing = pd.read_csv(read_input(output_path), usecols=[id_col], dtype={id_col: str})
             processed_ids = set(existing[id_col].dropna().astype(str).unique())
         except Exception as e:
             print(f"[警告] 读取已有输出表失败，将视为未完成。错误：{e}")
@@ -282,12 +289,7 @@ def load_processed_ids(output_path, id_col):
 
 
 def get_cached_request_keys(cache_dir):
-    cache_dir = Path(cache_dir)
-    if not cache_dir.exists():
-        return set()
-    return {
-        p.stem for p in cache_dir.glob("*.pkl")
-    }
+    return {p.stem for p in input_files(cache_dir, "*.pkl")}
 
 
 # =========================================================
@@ -511,7 +513,7 @@ def run_power_outage_weather_pipeline(
     print(f"开始运行：{'测试模式' if is_test_mode else '正式模式'}")
     print("=" * 70)
 
-    input_path = Path(input_path)
+    input_path = Path(read_input(input_path))
     output_path = Path(output_path)
     unique_request_cache_path = Path(unique_request_cache_path)
     failed_request_log_path = Path(failed_request_log_path)
@@ -521,8 +523,7 @@ def run_power_outage_weather_pipeline(
     unique_request_cache_path.mkdir(parents=True, exist_ok=True)
 
     if not input_path.exists():
-        print(f"错误：找不到输入文件 -> {input_path}")
-        return
+        raise FileNotFoundError(f"找不到输入文件 -> {input_path}")
 
     TIME_COL = "Start Date and Time"
     COORD_COL = "Spatial Coordinates"
@@ -531,7 +532,7 @@ def run_power_outage_weather_pipeline(
     # -----------------------------
     # A. Read and clean
     # -----------------------------
-    df = pd.read_csv(input_path)
+    df = pd.read_csv(read_input(input_path))
 
     required_cols = [TIME_COL, COORD_COL, ID_COL]
     missing_cols = [c for c in required_cols if c not in df.columns]
@@ -614,9 +615,9 @@ def run_power_outage_weather_pipeline(
 
             pkl_path = unique_request_cache_path / f"{request_key}.pkl"
 
-            if pkl_path.exists():
+            if read_input(pkl_path).exists():
                 try:
-                    weather_request_store[request_key] = pd.read_pickle(pkl_path)
+                    weather_request_store[request_key] = pd.read_pickle(read_input(pkl_path))
                     continue
                 except Exception:
                     # 坏缓存就重抓
@@ -764,7 +765,7 @@ def run_power_outage_weather_pipeline(
 
     if output_path.exists():
         try:
-            final_df = pd.read_csv(output_path)
+            final_df = pd.read_csv(read_input(output_path))
             weather_cols = [
                 "windspeed_0h", "gust_0h", "temperature_0h",
                 "precip_0h", "humidity_0h", "cloud_cover_0h"

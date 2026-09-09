@@ -1,3 +1,10 @@
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 # 这是第三步，合并的是DNO数据，即每个地区的电力公司名字
 import os
 import geopandas as gpd
@@ -6,19 +13,19 @@ import pandas as pd
 # =========================================================
 # 1. 路径设置
 # =========================================================
-lad_folder = r"data\Local_Authority_Districts_December_2021_UK_BGC_2022"
-dno_folder = r"data\dno_license_areas_20200506"
+lad_folder = str(data_path('Local_Authority_Districts_December_2021_UK_BGC_2022'))
+dno_folder = str(data_path('dno_license_areas_20200506'))
 
 # 你当前已经整理好的 LAD 表格
 # 如果你的文件名不是这个，请改成你自己的
 lad_csv_path = os.path.join(lad_folder, "LAD_area_with_bua_gb.csv")
 
 # LAD 边界 shp
-lad_shp = [f for f in os.listdir(lad_folder) if f.lower().endswith(".shp")][0]
+lad_shp = [f for f in os.listdir(read_input(lad_folder)) if f.lower().endswith(".shp")][0]
 lad_shp_path = os.path.join(lad_folder, lad_shp)
 
 # DNO shp
-dno_shp = [f for f in os.listdir(dno_folder) if f.lower().endswith(".shp")][0]
+dno_shp = [f for f in os.listdir(read_input(dno_folder)) if f.lower().endswith(".shp")][0]
 dno_shp_path = os.path.join(dno_folder, dno_shp)
 
 print("LAD csv:", lad_csv_path)
@@ -28,9 +35,9 @@ print("DNO shapefile:", dno_shp_path)
 # =========================================================
 # 2. 读取数据
 # =========================================================
-lad_csv = pd.read_csv(lad_csv_path)
-lad_gdf = gpd.read_file(lad_shp_path)
-dno_gdf = gpd.read_file(dno_shp_path)
+lad_csv = pd.read_csv(read_input(lad_csv_path))
+lad_gdf = gpd.read_file(read_input(lad_shp_path))
+dno_gdf = gpd.read_file(read_input(dno_shp_path))
 
 print("\nLAD shapefile columns:")
 print(lad_gdf.columns)

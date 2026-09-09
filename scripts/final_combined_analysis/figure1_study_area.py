@@ -2,6 +2,13 @@
 using the exact final combined sample (n=60,453)."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
@@ -11,16 +18,16 @@ import numpy as np
 import pandas as pd
 from shapely.geometry import Point
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis")))
+sys.path.insert(0, str(project_path('scripts/final_combined_analysis')))
 from combined_sample_builder import build_combined_samples  # noqa: E402
 from figure_style import (  # noqa: E402
     apply_style, mm_to_in, save_fig, add_north_arrow, add_scale_bar,
     add_locator_inset, DOUBLE_COL_MM,
 )
 
-DNO_SHP = Path(r"D:\Pyprogramme\STST2603\data\dno_license_areas_20200506\DNO_License_Areas_20200506.shp")
-GB_BOUNDARY_SHP = Path(r"D:\Pyprogramme\STST2603\data\Local_Authority_Districts_December_2021_UK_BGC_2022\LAD_DEC_2021_UK_BGC.shp")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\figures")
+DNO_SHP = external_path('data/dno_license_areas_20200506/DNO_License_Areas_20200506.shp')
+GB_BOUNDARY_SHP = external_path('data/Local_Authority_Districts_December_2021_UK_BGC_2022/LAD_DEC_2021_UK_BGC.shp')
+OUT_DIR = result_path('final_combined_analysis/figures')
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 UKPN_AREAS = {"UKPN (East)": "EPN", "UKPN (London)": "LPN", "UKPN (South)": "SPN"}
@@ -40,8 +47,8 @@ def main():
     # need lat/lon: not carried in v9's USECOLS-derived combined_wt frame necessarily -- check
     if "lat" not in combined_wt.columns or "lon" not in combined_wt.columns:
         log_step("lat/lon not in combined sample columns; joining from v3 dataset by Incident Reference...")
-        SRC = Path(r"D:\Pyprogramme\STST2603\rebuild_v3_full_stage\outputs\ukpn_full_stage_dataset_v3.csv")
-        coords = pd.read_csv(SRC, usecols=["Incident Reference", "lat", "lon", "licence_area"], low_memory=False)
+        SRC = external_path('rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv')
+        coords = pd.read_csv(read_input(SRC), usecols=["Incident Reference", "lat", "lon", "licence_area"], low_memory=False)
         coords = coords.drop_duplicates("Incident Reference")
         combined_wt = combined_wt.merge(coords, on="Incident Reference", how="left")
 
@@ -54,7 +61,7 @@ def main():
     ).to_crs(epsg=27700)
 
     log_step("Loading DNO licence area boundaries...")
-    dno = gpd.read_file(DNO_SHP)
+    dno = gpd.read_file(read_input(DNO_SHP))
     ukpn = dno[dno["LongName"].isin(UKPN_AREAS.keys())].copy()
     ukpn["short"] = ukpn["LongName"].map(UKPN_AREAS)
     log_step(f"UKPN areas found: {ukpn['short'].tolist()}")
@@ -90,7 +97,7 @@ def main():
     add_scale_bar(ax)
 
     log_step("Building GB locator inset (dissolved LAD boundary, England+Wales+Scotland)...")
-    gb = gpd.read_file(GB_BOUNDARY_SHP)
+    gb = gpd.read_file(read_input(GB_BOUNDARY_SHP))
     code_col = "LAD21CD" if "LAD21CD" in gb.columns else [c for c in gb.columns if "LAD" in c.upper() and "CD" in c.upper()][0]
     gb = gb.to_crs(epsg=27700)
     gb_gb = gb[gb[code_col].astype(str).str.startswith(("E", "W", "S"))]

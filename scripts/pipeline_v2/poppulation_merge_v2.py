@@ -1,3 +1,10 @@
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 import re
 from pathlib import Path
 import pandas as pd
@@ -6,7 +13,7 @@ import pandas as pd
 # 1. 路径配置
 # =========================================
 BASE_DIR = Path(__file__).resolve().parent
-DATA_DIR = BASE_DIR / "data"
+DATA_DIR = data_path()
 
 POP_FILE = DATA_DIR / "myebtablesuk20112024.xlsx"
 POP_SHEET = "MYEB3"
@@ -23,7 +30,7 @@ POP_LONG_FILE = DATA_DIR / "population_lad_long.csv"
 #    你的说明是“第二行开始是表头”
 #    pandas 里 header=1 表示第2行作为列名
 # =========================================
-pop_raw = pd.read_excel(POP_FILE, sheet_name=POP_SHEET, header=1)
+pop_raw = pd.read_excel(read_input(POP_FILE), sheet_name=POP_SHEET, header=1)
 
 print("原始人口表列名示例：")
 print(pop_raw.columns.tolist()[:20])
@@ -132,7 +139,7 @@ print(f"\n已保存人口长表: {POP_LONG_FILE}")
 # =========================================
 # 6. 读取主数据表
 # =========================================
-main_df = pd.read_csv(MAIN_FILE, low_memory=False)
+main_df = pd.read_csv(read_input(MAIN_FILE), low_memory=False)
 
 print("\n主表列名检查：")
 print([c for c in ["LAD21CD", "clean_start", "date", "LAD21NM"] if c in main_df.columns])

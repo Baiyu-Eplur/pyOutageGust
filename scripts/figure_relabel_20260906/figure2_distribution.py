@@ -4,19 +4,26 @@ panel (a)'s x-axis label no longer includes the internal codename
 panels' formal labels. No data, styling, or statistical content changed."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\c02_c08_repair_20260905")))
+sys.path.insert(0, str(project_path('scripts/c02_c08_repair_20260905')))
 from corrected_sample_builder import build_corrected_combined_samples  # noqa: E402
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis")))
+sys.path.insert(0, str(project_path('scripts/final_combined_analysis')))
 from figure_style import apply_style, mm_to_in, save_fig, DOUBLE_COL_MM  # noqa: E402
 
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\figure_relabel_20260906\figures")
+OUT_DIR = result_path('figure_relabel_20260906/figures')
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 

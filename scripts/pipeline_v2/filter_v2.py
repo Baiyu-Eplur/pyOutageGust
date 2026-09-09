@@ -1,7 +1,11 @@
 """
 filter_v2.py —— 工作命令 #7 新版事件合并逻辑
 
-⚠️ 重要状态声明（写在文件最前面，任何后续使用者必须先看到）：
+2026-09-09 更新：已通过 main.py 在真实原始数据上执行，237901 阶段聚合为
+135025 事件，3 份 CSV 均成功写入 pretest 时间目录。记录见运行
+20260909155522。这验证输入、执行和输出链路，不替代统计定义的独立验证。
+
+以下是工作命令 #7 当时的历史状态声明：
 本脚本已完整编写并可读性自查，但【尚未在真实原始数据上执行过】——
 `D:\\Pyprogramme\\STST2603\\data\\ukpn-iis.csv`（44MB）在本次工作命令 #7 执行过程中，
 经 `device_stage_files` 第三次尝试传输仍失败（错误信息与前两次相同：generic "upload failed"，
@@ -33,6 +37,13 @@ filter_v2.py —— 工作命令 #7 新版事件合并逻辑
          of...incident i...excluding re-interruptions to supply"
   CMLt = Σᵢ Σᵣ NNrit × (TRrit − TIrit)，NNrit = "...including re-interruptions to supply"
 """
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 
 import pandas as pd
 import numpy as np
@@ -169,9 +180,9 @@ def generate_event_level_table(
     """
     print("--- 步骤 1: 读取原始全量数据 ---")
     try:
-        df = pd.read_csv(input_path, low_memory=False)
+        df = pd.read_csv(read_input(input_path), low_memory=False)
     except UnicodeDecodeError:
-        df = pd.read_csv(input_path, encoding="latin1", low_memory=False)
+        df = pd.read_csv(read_input(input_path), encoding="latin1", low_memory=False)
 
     df.columns = [c.strip() for c in df.columns]
 
@@ -352,7 +363,7 @@ def generate_event_level_table(
 
 
 if __name__ == "__main__":
-    ORIGINAL_CSV = r"D:\Pyprogramme\STST2603\data\ukpn-iis.csv"
+    ORIGINAL_CSV = str(read_input(data_path('ukpn-iis.csv')))
 
     # ⚠️ 本脚本尚未执行过——见文件顶部状态声明。以下 __main__ 块保留原版风格
     # （检查文件存在性再运行），但输出路径改为 claude_branch/results/pipeline_v2_output/，
@@ -360,9 +371,9 @@ if __name__ == "__main__":
     if os.path.exists(ORIGINAL_CSV):
         event_df = generate_event_level_table(
             input_path=ORIGINAL_CSV,
-            output_path=r"D:\Pyprogramme\STST2603\claude_branch\results\pipeline_v2_output\unplanned_incidents_event_level_v2.csv",
-            boundary_case_output_path=r"D:\Pyprogramme\STST2603\claude_branch\results\pipeline_v2_output\event_level_boundary_cases_v2.csv",
-            cause_code_consistency_output_path=r"D:\Pyprogramme\STST2603\claude_branch\results\pipeline_v2_output\event_level_cause_code_consistency_v2.csv",
+            output_path=str(result_path('pipeline_v2_output/unplanned_incidents_event_level_v2.csv')),
+            boundary_case_output_path=str(result_path('pipeline_v2_output/event_level_boundary_cases_v2.csv')),
+            cause_code_consistency_output_path=str(result_path('pipeline_v2_output/event_level_cause_code_consistency_v2.csv')),
         )
     else:
-        print(f"错误：未能在指定路径找到文件 {ORIGINAL_CSV}")
+        raise FileNotFoundError(f"未能在指定路径找到文件 {ORIGINAL_CSV}")

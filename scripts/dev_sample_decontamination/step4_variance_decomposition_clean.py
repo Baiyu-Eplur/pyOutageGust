@@ -3,6 +3,13 @@ clean (decontaminated) weather_natural+technical_asset sample.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import importlib.util
 import json
 import sys
@@ -14,8 +21,8 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).parent))
 from clean_sample_builder import build_clean_wt_samples  # noqa: E402
 
-V14_SCRIPT = Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\variance_decomposition\variance_decomposition_pipeline.py")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\dev_sample_decontamination")
+V14_SCRIPT = project_path('scripts/variance_decomposition/variance_decomposition_pipeline.py')
+OUT_DIR = result_path('dev_sample_decontamination')
 RAW_DIR = OUT_DIR / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 

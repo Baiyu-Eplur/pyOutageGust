@@ -6,6 +6,13 @@ sample filter.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import importlib.util
 import json
 from pathlib import Path
@@ -13,9 +20,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-V3_VALIDATION_SCRIPT = Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\v3_validation\v3_validation_pipeline.py")
-V11_SCRIPT = Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\critical_wind_speed\critical_wind_speed_pipeline.py")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\cause_code_robustness")
+V3_VALIDATION_SCRIPT = project_path('scripts/v3_validation/v3_validation_pipeline.py')
+V11_SCRIPT = project_path('scripts/critical_wind_speed/critical_wind_speed_pipeline.py')
+OUT_DIR = result_path('cause_code_robustness')
 RAW_DIR = OUT_DIR / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 

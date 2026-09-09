@@ -1,0 +1,7 @@
+{
+  "e0_prime_n": 117235,
+  "r0c_prime_b_n": 116064,
+  "e0_prime_max_abs_coef_diff_vs_command9": 9.71445146547012e-17,
+  "r0c_prime_b_max_abs_coef_diff_vs_command9": 9.71445146547012e-17,
+  "reproduction_passed": true
+}

@@ -5,13 +5,20 @@ covariates untouched by the C01 date/weather fix, so investigate sample
 composition (n distinct LAD, missingness/imputation, correlation structure)."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\c02_c08_repair_20260905")))
+sys.path.insert(0, str(project_path('scripts/c02_c08_repair_20260905')))
 from corrected_sample_builder import build_corrected_combined_samples, _patch_v9  # noqa: E402
 
 

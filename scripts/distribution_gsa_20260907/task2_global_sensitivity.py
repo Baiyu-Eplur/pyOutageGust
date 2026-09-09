@@ -48,6 +48,13 @@ Design (read-only w.r.t. all fitted coefficients -- NO model refitting):
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import json
 import sys
 from pathlib import Path
@@ -59,15 +66,15 @@ from SALib.sample.sobol import sample as sobol_sample
 from SALib.analyze import sobol as sobol_analyze
 from SALib.analyze import pawn as pawn_analyze
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\c02_c08_repair_20260905")))
+sys.path.insert(0, str(project_path('scripts/c02_c08_repair_20260905')))
 from corrected_sample_builder import build_corrected_combined_samples, _patch_v9  # noqa: E402
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis")))
+sys.path.insert(0, str(project_path('scripts/final_combined_analysis')))
 from figure_style import apply_style, mm_to_in, save_fig, SINGLE_COL_MM  # noqa: E402
 
-C0208_RAW = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c02_c08_repair_20260905\raw")
-RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\distribution_gsa_20260907\raw")
-FIG_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\distribution_gsa_20260907\figures")
+C0208_RAW = result_path('c02_c08_repair_20260905/raw')
+RAW_DIR = result_path('distribution_gsa_20260907/raw')
+FIG_DIR = result_path('distribution_gsa_20260907/figures')
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -92,7 +99,7 @@ def js(obj):
 
 
 def read_coef(csv_path, term):
-    df = pd.read_csv(csv_path)
+    df = pd.read_csv(read_input(csv_path))
     return float(df.loc[df["term"] == term, "coef"].iloc[0])
 
 

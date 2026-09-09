@@ -20,6 +20,13 @@ coef_fold_stability_R0_custadj.py，做最小改动：
 未修改 analysis_step3/run_baseline_models.py 或命令#1/#4的原脚本本身；
 未写入主线任何目录；输入只读；全程未使用 locked_temporal_test 数据。
 """
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -29,11 +36,11 @@ from statsmodels.stats.sandwich_covariance import cov_cluster
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 from sklearn.model_selection import GroupKFold
 
-ROOT = Path('/mnt/user-data/uploads/STST2603')
-OUT = Path('/tmp/branch_work5/results/expansion_pool_validation')
+ROOT = external_path('')
+OUT = result_path('expansion_pool_validation')
 OUT.mkdir(parents=True, exist_ok=True)
-CMD1_RAW_FOLD_COEFS = Path('/tmp/branch_work/results/oof_coef_stability/raw_fold_coefs.csv')
-CMD4_RAW_FOLD_COEFS_R0C = Path('/tmp/branch_work4/results/gust_duration_customer_adjusted/raw_fold_coefs_R0c.csv')
+CMD1_RAW_FOLD_COEFS = result_path('oof_coef_stability/raw_fold_coefs.csv')
+CMD4_RAW_FOLD_COEFS_R0C = result_path('gust_duration_customer_adjusted/raw_fold_coefs_R0c.csv')
 SEED = 20260822
 
 BASE_NUMERIC = ['gust_0h', 'precipitation_24h_sum', 'temperature_0h', 'pressure_msl_0h',
@@ -48,7 +55,7 @@ MODEL_OUTCOMES = ['customers_affected_primary', 'full_restoration_hours_primary'
 # ============ Step 0 数据加载：扩展角色范围为 screening_development + expansion_pool ============
 
 def load_merged_pool():
-    manifest = pd.read_parquet(ROOT / 'analysis_step2/02_split_manifest.parquet')
+    manifest = pd.read_parquet(read_input(ROOT / 'analysis_step2/02_split_manifest.parquet'))
     allowed_roles = ['screening_development', 'expansion_pool']
     assert not (manifest.split_role == 'locked_temporal_test').empty  # sanity: role exists in manifest
     pool = manifest.loc[manifest.split_role.isin(allowed_roles)].copy()
@@ -58,7 +65,7 @@ def load_merged_pool():
     ids = pool.incident_reference_clean.astype(str).tolist()
     columns = ['incident_reference_clean', 'incident_onset_utc', 'LAD21CD', 'substation',
                'rural_urban_classification'] + INPUT_PREDICTOR_COLS + MODEL_OUTCOMES
-    data = pd.read_parquet(ROOT / 'analysis_step2/02_incident_analysis_master_v1_1.parquet',
+    data = pd.read_parquet(read_input(ROOT / 'analysis_step2/02_incident_analysis_master_v1_1.parquet'),
                            columns=list(dict.fromkeys(columns)),
                            filters=[('incident_reference_clean', 'in', ids)])
     data.incident_reference_clean = data.incident_reference_clean.astype(str)
@@ -327,9 +334,9 @@ def main():
     print(big_all.to_string(index=False))
 
     print('=== Step 4: 三方（四组）对比 ===')
-    cmd1_raw = pd.read_csv(CMD1_RAW_FOLD_COEFS)
+    cmd1_raw = pd.read_csv(read_input(CMD1_RAW_FOLD_COEFS))
     cmd1_r0 = cmd1_raw[cmd1_raw.model == 'R0_legacy_log_OLS']
-    cmd4_r0c = pd.read_csv(CMD4_RAW_FOLD_COEFS_R0C)
+    cmd4_r0c = pd.read_csv(read_input(CMD4_RAW_FOLD_COEFS_R0C))
 
     groups = {
         'small_before (n=9122, cmd1)': cmd1_r0,

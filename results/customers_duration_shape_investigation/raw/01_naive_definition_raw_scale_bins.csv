@@ -1,7 +1,0 @@
-label,decile,n,x_min,x_max,x_median,y_mean,y_median,y_std
-naive_customers_vs_naive_duration_raw_scale,"(-0.001, 1.0]",26392,0.0,1.0,1.0,12.226592022835202,5.9,21.91917928640149
-naive_customers_vs_naive_duration_raw_scale,"(1.0, 2.0]",3103,2.0,2.0,2.0,10.979111612418091,7.3,15.733813153887874
-naive_customers_vs_naive_duration_raw_scale,"(2.0, 6.0]",4337,3.0,6.0,4.0,10.080754745984168,5.966666666666667,17.339551939092093
-naive_customers_vs_naive_duration_raw_scale,"(6.0, 17.0]",4559,7.0,17.0,11.0,7.634302113036484,3.6,15.683593327997325
-naive_customers_vs_naive_duration_raw_scale,"(17.0, 60.0]",4685,18.0,60.0,30.0,5.148840270366417,2.2,11.768034274599128
-naive_customers_vs_naive_duration_raw_scale,"(60.0, 11423.0]",4764,61.0,11423.0,157.0,2.2416036943744753,1.0333333333333334,5.505546836036762

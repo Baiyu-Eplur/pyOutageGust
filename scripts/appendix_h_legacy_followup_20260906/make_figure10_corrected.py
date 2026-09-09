@@ -5,6 +5,13 @@ The other three rows (holdout, LAD single cluster, LAD x date two-way
 cluster) are unchanged from command #45's corrected-data outputs."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
@@ -12,18 +19,18 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis")))
+sys.path.insert(0, str(project_path('scripts/final_combined_analysis')))
 from figure_style import apply_style, mm_to_in, save_fig, SINGLE_COL_MM  # noqa: E402
 
-RAW_C0208 = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c02_c08_repair_20260905\raw")
-RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\appendix_h_legacy_followup_20260906\raw")
-FIG_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\appendix_h_legacy_followup_20260906\figures")
+RAW_C0208 = result_path('c02_c08_repair_20260905/raw')
+RAW_DIR = result_path('appendix_h_legacy_followup_20260906/raw')
+FIG_DIR = result_path('appendix_h_legacy_followup_20260906/figures')
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 Z95 = 1.959963984540054
 
 
 def single_estimate(csv_path, term, coef_col="coef", se_col="se"):
-    df = pd.read_csv(csv_path)
+    df = pd.read_csv(read_input(csv_path))
     row = df[df["term"] == term].iloc[0]
     return float(row[coef_col]), float(row[se_col])
 

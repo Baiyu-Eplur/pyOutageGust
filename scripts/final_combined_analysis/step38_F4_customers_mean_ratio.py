@@ -4,6 +4,13 @@ sort+dedup logic as command #8's audit_v3_dataset.py, so it is directly
 comparable to Table 1's customers_v2 mean (93.02)."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
@@ -13,12 +20,12 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).parent))
 from combined_sample_builder import build_combined_samples  # noqa: E402
 
-SRC = Path(r"D:\Pyprogramme\STST2603\rebuild_v3_full_stage\outputs\ukpn_full_stage_dataset_v3.csv")
+SRC = external_path('rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv')
 INCIDENT_COL = "Incident Reference"
 STAGE_COL = "Restoration Stage"
 CUSTOMER_COL = "Number of Customers Restored"
 
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+OUT_DIR = result_path('final_combined_analysis')
 RAW_DIR = OUT_DIR / "raw"
 
 
@@ -36,7 +43,7 @@ def main():
     log_step("Loading full v3 stage-level dataset (subset to the final sample's incidents only)...")
     usecols = [INCIDENT_COL, STAGE_COL, CUSTOMER_COL]
     chunks = []
-    for chunk in pd.read_csv(SRC, usecols=usecols, low_memory=False, chunksize=500_000):
+    for chunk in pd.read_csv(read_input(SRC), usecols=usecols, low_memory=False, chunksize=500_000):
         chunk = chunk[chunk[INCIDENT_COL].astype(str).isin(final_ids)]
         if len(chunk):
             chunks.append(chunk)

@@ -3,6 +3,13 @@ C01-corrected data. No C02-C08 fix applies directly; regenerated for
 consistency with the corrected sample (n_stages/customers bins recomputed)."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
@@ -13,12 +20,12 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).parent))
 from corrected_sample_builder import build_corrected_combined_samples  # noqa: E402
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis")))
+sys.path.insert(0, str(project_path('scripts/final_combined_analysis')))
 from figure_style import apply_style, mm_to_in, save_fig, panel_label, DOUBLE_COL_MM  # noqa: E402
 
-SRC = Path(r"D:\Pyprogramme\STST2603\rebuild_v3_full_stage\outputs\ukpn_full_stage_dataset_v3.csv")
-RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c02_c08_repair_20260905\raw")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c02_c08_repair_20260905\figures")
+SRC = external_path('rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv')
+RAW_DIR = result_path('c02_c08_repair_20260905/raw')
+OUT_DIR = result_path('c02_c08_repair_20260905/figures')
 
 GROUP_ORDER = ["n_stages=1", "n_stages=2", "n_stages=3-4", "n_stages>=5"]
 GROUP_LABELS = {"n_stages=1": "n_stages = 1", "n_stages=2": "n_stages = 2",
@@ -36,7 +43,7 @@ def main():
     apply_style()
     _, _, combined_r0cb, _ = build_corrected_combined_samples()
     ids = combined_r0cb["Incident Reference"].astype(str).unique().tolist()
-    stage_lookup = pd.read_csv(SRC, usecols=["Incident Reference", "stage_row_count"], low_memory=False)
+    stage_lookup = pd.read_csv(read_input(SRC), usecols=["Incident Reference", "stage_row_count"], low_memory=False)
     stage_lookup["Incident Reference"] = stage_lookup["Incident Reference"].astype(str)
     stage_lookup = stage_lookup[stage_lookup["Incident Reference"].isin(ids)].drop_duplicates("Incident Reference")
 

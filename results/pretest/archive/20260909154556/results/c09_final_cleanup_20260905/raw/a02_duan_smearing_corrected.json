@@ -1,0 +1,10 @@
+{
+  "E0_smearing_factor": 10.448541782179323,
+  "E0_pct_underestimate": 90.42928648947391,
+  "R0c_smearing_factor": 2.186898020782464,
+  "R0c_pct_underestimate": 54.273130685709624,
+  "E0_residual_std": 1.984324791492294,
+  "R0c_residual_std": 1.2653857168705158,
+  "E0_n": 60437,
+  "R0c_n": 59834
+}

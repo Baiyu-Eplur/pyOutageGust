@@ -10,6 +10,13 @@ a simple horizontal bar chart is the more natural fit -- a dumbbell plot is
 built for showing two connected points per row, which does not apply here."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
@@ -19,7 +26,7 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).parent))
 from figure_style import apply_style, mm_to_in, save_fig, SINGLE_COL_MM  # noqa: E402
 
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\figures")
+OUT_DIR = result_path('final_combined_analysis/figures')
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # source: 03_阵风剂量反应曲线说明.md, 07_customers_v2剂量反应曲线说明.md

@@ -16,6 +16,13 @@ directories. Writes only under claude_branch/results/c01_repair_20260905/.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import importlib.util
 import json
 import sys
@@ -27,9 +34,9 @@ import statsmodels.api as sm
 from scipy import stats
 from statsmodels.stats.sandwich_covariance import cov_cluster
 
-SRC = Path(r"D:\Pyprogramme\STST2603\rebuild_v3_full_stage\outputs\ukpn_full_stage_dataset_v3.csv")
-RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c01_repair_20260905\raw")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c01_repair_20260905")
+SRC = external_path('rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv')
+RAW_DIR = result_path('c01_repair_20260905/raw')
+OUT_DIR = result_path('c01_repair_20260905')
 
 INCIDENT_COL = "Incident Reference"
 V9_USECOLS = [
@@ -79,15 +86,15 @@ def storm_for_date(date_str):
 
 def build_corrected_matched():
     log_step("Loading OLD-style event table (df.drop_duplicates, matches v9.step0_build_sample exactly)...")
-    df = pd.read_csv(SRC, usecols=V9_USECOLS, low_memory=False)
+    df = pd.read_csv(read_input(SRC), usecols=V9_USECOLS, low_memory=False)
     old_event = df.drop_duplicates(INCIDENT_COL).copy().set_index(INCIDENT_COL, drop=False)
 
     log_step("Loading Step1 (representative row) and Step2 (weather re-extraction) outputs...")
-    comp = pd.read_csv(RAW_DIR / "step1_representative_row_comparison_full.csv")
+    comp = pd.read_csv(read_input(RAW_DIR / "step1_representative_row_comparison_full.csv"))
     comp["new_start_utc"] = pd.to_datetime(comp["new_start_utc"], utc=True)
     comp["new_incident_date_utc"] = comp["new_start_utc"].dt.date.astype(str)
 
-    reext = pd.read_csv(RAW_DIR / "step2_weather_reextraction_full.csv")
+    reext = pd.read_csv(read_input(RAW_DIR / "step2_weather_reextraction_full.csv"))
     reext = reext.set_index("Incident Reference")
 
     changed_ids = comp.loc[comp["representative_row_changed"], "Incident Reference"]
@@ -140,7 +147,7 @@ def main():
     corrected_matched, step0_summary, comp = build_corrected_matched()
 
     # ---------------- monkey-patch v9.step0_build_sample ----------------
-    sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\v3_validation")))
+    sys.path.insert(0, str(project_path('scripts/v3_validation')))
     import v3_validation_pipeline as v9  # noqa: E402
 
     def patched_step0_build_sample():
@@ -152,7 +159,7 @@ def main():
     # import v9 by reference, so patching the v9 module object itself propagates automatically as long
     # as they call v9.step0_build_sample() rather than a bound copy)
     spec = importlib.util.spec_from_file_location(
-        "clean_sample_builder", r"D:\Pyprogramme\STST2603\claude_branch\scripts\dev_sample_decontamination\clean_sample_builder.py")
+        "clean_sample_builder", str(project_path('scripts/dev_sample_decontamination/clean_sample_builder.py')))
     clean_sample_builder = importlib.util.module_from_spec(spec)
     sys.modules["clean_sample_builder"] = clean_sample_builder
     # ensure clean_sample_builder's own "from ... import v9" binds to our already-patched module object
@@ -161,7 +168,7 @@ def main():
     clean_sample_builder.v9.step0_build_sample = patched_step0_build_sample  # belt-and-braces
 
     spec2 = importlib.util.spec_from_file_location(
-        "build_holdout_sample", r"D:\Pyprogramme\STST2603\claude_branch\scripts\module_e_final_confirmation\build_holdout_sample.py")
+        "build_holdout_sample", str(project_path('scripts/module_e_final_confirmation/build_holdout_sample.py')))
     build_holdout_sample = importlib.util.module_from_spec(spec2)
     sys.modules["build_holdout_sample"] = build_holdout_sample
     spec2.loader.exec_module(build_holdout_sample)
@@ -169,7 +176,7 @@ def main():
 
     log_step("=== Step 3: dev/holdout and storm reassignment diagnostics (on corrected dates) ===")
     # recompute using the OLD event-level table too, for a like-for-like before/after comparison
-    old_matched = pd.read_csv(SRC, usecols=V9_USECOLS, low_memory=False).drop_duplicates(INCIDENT_COL).copy()
+    old_matched = pd.read_csv(read_input(SRC), usecols=V9_USECOLS, low_memory=False).drop_duplicates(INCIDENT_COL).copy()
     old_matched = old_matched[old_matched["weather_status_v3"] == "matched"].copy()
 
     def assign_role(date_str):
@@ -244,9 +251,9 @@ def main():
     log_step(f"Sample-specific changed-row rates (cf. audit's 13.57%/13.56%): {sample_specific_rates}")
 
     # ---------------- refit E0 and R0c on the CORRECTED combined sample ----------------
-    sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\critical_wind_speed")))
+    sys.path.insert(0, str(project_path('scripts/critical_wind_speed')))
     spec11 = importlib.util.spec_from_file_location(
-        "critical_wind_speed_pipeline", r"D:\Pyprogramme\STST2603\claude_branch\scripts\critical_wind_speed\critical_wind_speed_pipeline.py")
+        "critical_wind_speed_pipeline", str(project_path('scripts/critical_wind_speed/critical_wind_speed_pipeline.py')))
     v11 = importlib.util.module_from_spec(spec11)
     spec11.loader.exec_module(v11)
 

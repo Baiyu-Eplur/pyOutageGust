@@ -4,6 +4,13 @@ the alternative "simple average of per-fold R^2" number for comparison, on
 the C01-corrected combined sample. No change to the primary method."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import importlib.util
 import json
 import sys
@@ -16,7 +23,7 @@ import statsmodels.api as sm
 sys.path.insert(0, str(Path(__file__).parent))
 from corrected_sample_builder import build_corrected_combined_samples  # noqa: E402
 
-RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c02_c08_repair_20260905\raw")
+RAW_DIR = result_path('c02_c08_repair_20260905/raw')
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -27,7 +34,7 @@ def log_step(msg):
 def main():
     spec14 = importlib.util.spec_from_file_location(
         "variance_decomposition_pipeline",
-        r"D:\Pyprogramme\STST2603\claude_branch\scripts\variance_decomposition\variance_decomposition_pipeline.py")
+        str(project_path('scripts/variance_decomposition/variance_decomposition_pipeline.py')))
     v14 = importlib.util.module_from_spec(spec14)
     spec14.loader.exec_module(v14)
 

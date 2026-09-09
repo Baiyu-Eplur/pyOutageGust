@@ -1,0 +1,7 @@
+{
+  "customers_v2_zero_events": 12648,
+  "customers_v2_nan_events": 69,
+  "duration_A_nan_events": 12650,
+  "duration_A_nan_but_customers_nonzero_nonnan": 0,
+  "duration_A_nan_minus_customers_zero_minus_nan": -67
+}

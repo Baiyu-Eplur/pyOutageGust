@@ -1,4 +1,0 @@
-model,step,blocks_added,r2_in_sample,r2_in_sample_increment,r2_oos_5fold,r2_oos_5fold_increment
-E0_wn_corrected,baseline,region_SES+year_month_FE,0.01680666026480304,,-0.008876190504514048,
-E0_wn_corrected,nongust_weather,nongust_weather,0.03606151477141972,0.01925485450661668,0.01906834618185016,0.027944536686364208
-E0_wn_corrected,gust,gust,0.04519639553478527,0.00913488076336555,0.023607369636239217,0.004539023454389057

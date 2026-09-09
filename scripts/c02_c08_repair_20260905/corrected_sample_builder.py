@@ -12,6 +12,13 @@ filter, design_train_valid standardization, LAD-clustered SE) is untouched.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import importlib.util
 import sys
 from pathlib import Path
@@ -19,8 +26,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-SRC = Path(r"D:\Pyprogramme\pyOutageGust\data\external\ukpn_full_stage_dataset_v3.csv")
-C01_RAW_DIR = Path(r"D:\Pyprogramme\pyOutageGust\results\c01_repair_20260905\raw")
+SRC = project_path('data/external/ukpn_full_stage_dataset_v3.csv')
+C01_RAW_DIR = result_path('c01_repair_20260905/raw')
 
 INCIDENT_COL = "Incident Reference"
 V9_USECOLS = [
@@ -46,13 +53,13 @@ def _build_corrected_matched():
         return _cached_matched.copy()
 
     log_step("Loading OLD-style event table and applying C01 corrections (Step1+Step2 outputs)...")
-    df = pd.read_csv(SRC, usecols=V9_USECOLS, low_memory=False)
+    df = pd.read_csv(read_input(SRC), usecols=V9_USECOLS, low_memory=False)
     old_event = df.drop_duplicates(INCIDENT_COL).copy().set_index(INCIDENT_COL, drop=False)
 
-    comp = pd.read_csv(C01_RAW_DIR / "step1_representative_row_comparison_full.csv")
+    comp = pd.read_csv(read_input(C01_RAW_DIR / "step1_representative_row_comparison_full.csv"))
     comp["new_start_utc"] = pd.to_datetime(comp["new_start_utc"], utc=True)
     comp["new_incident_date_utc"] = comp["new_start_utc"].dt.date.astype(str)
-    reext = pd.read_csv(C01_RAW_DIR / "step2_weather_reextraction_full.csv").set_index("Incident Reference")
+    reext = pd.read_csv(read_input(C01_RAW_DIR / "step2_weather_reextraction_full.csv")).set_index("Incident Reference")
 
     changed_ids = comp.loc[comp["representative_row_changed"], "Incident Reference"]
     comp_indexed = comp.set_index("Incident Reference")

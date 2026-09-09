@@ -9,6 +9,13 @@ R0_legacy_log_OLS（即与 v6 论文口径一致的 legacy 规格）做逐折（
 未修改 analysis_step3/run_baseline_models.py 本身；未写入主线任何目录；输入只读。
 对应执行指令：作命令 #1（检验阵风系数在样本外交叉验证中的稳定性），Step 2 路径 B。
 """
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 from pathlib import Path
 import json
 import numpy as np
@@ -18,8 +25,8 @@ from scipy import stats
 from statsmodels.stats.sandwich_covariance import cov_cluster
 
 # 只读镜像根目录（本地云端沙箱内的 STST2603 只读快照，非用户设备原路径）
-ROOT = Path('/mnt/user-data/uploads/STST2603')
-OUT = Path('/tmp/branch_work/results/oof_coef_stability')
+ROOT = external_path('')
+OUT = result_path('oof_coef_stability')
 OUT.mkdir(parents=True, exist_ok=True)
 
 BASE_NUMERIC = ['gust_0h', 'precipitation_24h_sum', 'temperature_0h', 'pressure_msl_0h',
@@ -35,13 +42,13 @@ MODEL_OUTCOMES = ['customers_affected_primary', 'full_restoration_hours_primary'
 # ---- 未改变任何拟合/筛选/标准化逻辑，仅把 ROOT 指向本地只读镜像。 ----
 
 def load_screening_only():
-    manifest = pd.read_parquet(ROOT / 'analysis_step2/02_split_manifest.parquet')
+    manifest = pd.read_parquet(read_input(ROOT / 'analysis_step2/02_split_manifest.parquet'))
     screen = manifest.loc[manifest.split_role.eq('screening_development')].copy()
     assert len(screen) and screen.incident_reference_clean.is_unique
     ids = screen.incident_reference_clean.astype(str).tolist()
     columns = ['incident_reference_clean', 'incident_onset_utc', 'LAD21CD',
                'rural_urban_classification'] + INPUT_PREDICTOR_COLS + MODEL_OUTCOMES
-    data = pd.read_parquet(ROOT / 'analysis_step2/02_incident_analysis_master_v1_1.parquet',
+    data = pd.read_parquet(read_input(ROOT / 'analysis_step2/02_incident_analysis_master_v1_1.parquet'),
                            columns=list(dict.fromkeys(columns)),
                            filters=[('incident_reference_clean', 'in', ids)])
     data.incident_reference_clean = data.incident_reference_clean.astype(str)

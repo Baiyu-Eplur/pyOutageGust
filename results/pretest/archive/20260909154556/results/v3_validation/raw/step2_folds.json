@@ -1,0 +1,11 @@
+{
+  "n_events_with_valid_date": 97664,
+  "n_dates_crossing_folds": 0,
+  "fold_sizes": {
+    "0": 19530,
+    "1": 19530,
+    "2": 19529,
+    "3": 19529,
+    "4": 19546
+  }
+}

@@ -1,3 +1,0 @@
-model,term,n_folds,same_sign_folds,significant_folds,mean_coefficient,coef_cv_pct,all_same_sign
-R0c_corrected,z_gust_0h,5,3,0,-0.00020704926857656615,3286.507119794888,False
-R0c_corrected,z_gust_0h_sq,5,5,5,0.08096486688487442,20.422724488397055,True

@@ -7,6 +7,13 @@
 
 Steps 1-6（Step 7 综合结论在单独的 Markdown 中撰写）。
 """
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 import json
 import time
 import numpy as np
@@ -19,8 +26,8 @@ from scipy.stats import gaussian_kde, spearmanr, kruskal
 from sklearn.feature_selection import mutual_info_regression
 import dcor
 
-PARQUET = '/mnt/user-data/uploads/STST2603/analysis_step2/02_incident_analysis_master_v1_1.parquet'
-OUT = '/tmp/branch_work3/results/test1b_independence_check'
+PARQUET = str(external_path('analysis_step2/02_incident_analysis_master_v1_1.parquet'))
+OUT = str(result_path('test1b_independence_check'))
 FIG = OUT + '/figures'
 SEED = 20260823
 N_PERM_DCOR = 500
@@ -32,7 +39,7 @@ t_start = time.time()
 # ---------------- Step 1: 数据准备 ----------------
 cols = ['incident_reference_clean', 'Number of Customers Restored', 'Duration (hours)',
         'incident_date', 'substation', 'LAD21CD']
-d = pd.read_parquet(PARQUET, columns=cols)
+d = pd.read_parquet(read_input(PARQUET), columns=cols)
 n0 = len(d)
 d = d.dropna(subset=['Number of Customers Restored', 'Duration (hours)']).copy()
 d = d[(d['Number of Customers Restored'] >= 0) & (d['Duration (hours)'] > 0)].copy()

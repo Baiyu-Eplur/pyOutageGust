@@ -6,6 +6,13 @@ Read-only against rebuild_v3_full_stage/ and the command #9 script/results.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import importlib.util
 import json
 from pathlib import Path
@@ -16,9 +23,9 @@ import statsmodels.api as sm
 from scipy import stats
 from statsmodels.stats.sandwich_covariance import cov_cluster
 
-V3_VALIDATION_SCRIPT = Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\v3_validation\v3_validation_pipeline.py")
-V3_VALIDATION_RAW = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\v3_validation\raw")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\critical_wind_speed")
+V3_VALIDATION_SCRIPT = project_path('scripts/v3_validation/v3_validation_pipeline.py')
+V3_VALIDATION_RAW = result_path('v3_validation/raw')
+OUT_DIR = result_path('critical_wind_speed')
 RAW_DIR = OUT_DIR / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -72,8 +79,8 @@ def reconstruct_and_reproduce():
         v9.TERMS_OF_INTEREST + v9.CUST_TERMS_OF_INTEREST, use_customers_covariate=True,
     )
 
-    e0_hist = pd.read_csv(V3_VALIDATION_RAW / "E0_prime_fold_coefs.csv")
-    r0cb_hist = pd.read_csv(V3_VALIDATION_RAW / "R0c_prime_B_fold_coefs.csv")
+    e0_hist = pd.read_csv(read_input(V3_VALIDATION_RAW / "E0_prime_fold_coefs.csv"))
+    r0cb_hist = pd.read_csv(read_input(V3_VALIDATION_RAW / "R0c_prime_B_fold_coefs.csv"))
 
     def max_diff(new, hist, terms):
         m = new.merge(hist, on=["model", "fold", "term"], suffixes=("_new", "_hist"))

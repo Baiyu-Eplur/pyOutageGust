@@ -7,6 +7,13 @@ marginal contribution is not first "used up" by customers_v2; the full
 order-dependent range (0.62-0.75pp) is disclosed in the accompanying text."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
@@ -17,8 +24,8 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).parent))
 from figure_style import apply_style, mm_to_in, save_fig, SINGLE_COL_MM  # noqa: E402
 
-RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\raw")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\figures")
+RAW_DIR = result_path('final_combined_analysis/raw')
+OUT_DIR = result_path('final_combined_analysis/figures')
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -28,8 +35,8 @@ def log_step(msg):
 
 def main():
     apply_style()
-    e0 = pd.read_csv(RAW_DIR / "step2_E0_variance_decomposition.csv")
-    r0c = pd.read_csv(RAW_DIR / "step2_R0c_order_gust_then_customers.csv")
+    e0 = pd.read_csv(read_input(RAW_DIR / "step2_E0_variance_decomposition.csv"))
+    r0c = pd.read_csv(read_input(RAW_DIR / "step2_R0c_order_gust_then_customers.csv"))
 
     e0_vals = {
         "Baseline\n(region+FE)": e0.loc[e0["step"] == "baseline", "r2_oos_5fold"].iloc[0] * 100,

@@ -13,6 +13,13 @@ original pipeline computed these fields.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import json
 import re
 import sys
@@ -24,8 +31,8 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from src.weather_features import build_incident_features_from_hourly  # noqa: E402
 
-CACHE_DIR = Path(r"D:\Pyprogramme\STST2603\data\weather_request_cache")
-RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c01_repair_20260905\raw")
+CACHE_DIR = external_path('data/weather_request_cache')
+RAW_DIR = result_path('c01_repair_20260905/raw')
 
 FNAME_RE = re.compile(r"^(-?\d+\.\d)_(-?\d+\.\d)_(\d{4}-\d{2}-\d{2})\.pkl$")
 
@@ -79,7 +86,7 @@ def find_cache_file_for_target(index, lat_r, lon_r, target_time_utc):
 
 
 def main():
-    changed = pd.read_csv(RAW_DIR / "step1_changed_events_only.csv")
+    changed = pd.read_csv(read_input(RAW_DIR / "step1_changed_events_only.csv"))
     changed["new_start_utc"] = pd.to_datetime(changed["new_start_utc"], utc=True)
     log_step(f"Loaded {len(changed)} changed events from Step 1.")
 
@@ -112,7 +119,7 @@ def main():
         key = str(cache_path)
         if key not in cache_load_memo:
             try:
-                cache_load_memo[key] = pd.read_pickle(cache_path)
+                cache_load_memo[key] = pd.read_pickle(read_input(cache_path))
             except Exception:
                 cache_load_memo[key] = None
         df_hourly = cache_load_memo[key]

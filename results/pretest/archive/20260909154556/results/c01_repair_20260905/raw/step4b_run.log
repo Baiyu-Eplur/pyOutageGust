@@ -1,0 +1,51 @@
+[C01-step4b] Rebuilding corrected matched sample and combined E0/R0c samples...
+[v16-clean] Building weather-matched sample (command #9 Step0)...
+[v16-clean] Excluding locked_temporal_test date block (>= 2023-09-30) BEFORE fold construction...
+[v16-clean] Weather-matched sample: 121313 -> 97664 after locked-window exclusion (23649 removed, 19.49%).
+[v3_validation] Step 1: checking LAD21CD coverage in the weather-matched sample...
+[v3_validation] Step 1 done: gap-filled 112 events, 112 still missing.
+[v3_validation] Step 2: building GroupKFold(date, 5) folds...
+[v3_validation] Step 2 done: 0 dates crossing folds (expect 0).
+[v16-clean] Clean complete-predictor sample: n=94383.
+[v16-clean] Verified: max date in clean sample = 2023-09-29 00:00:00 (< 2023-09-30 00:00:00).
+[v16-clean] Clean weather_natural+technical_asset sample: n=48339.
+[v16-clean] Clean E0' n=48324; clean R0c'_B n=47841 (p99 cap=194.79h).
+[v19] Building weather-matched sample (command #9 Step0)...
+[v19] Restricting to the locked_temporal_test date block [2023-09-30, 2024-03-31]...
+[v19] Weather-matched sample: 121313 -> 23649 in locked window.
+[v3_validation] Step 1: checking LAD21CD coverage in the weather-matched sample...
+[v3_validation] Step 1 done: gap-filled 25 events, 25 still missing.
+[v19] Holdout complete-predictor sample: n=22913.
+[v19] Verified: holdout date range [2023-09-30 00:00:00, 2024-03-31 00:00:00] within locked window.
+[v19] Holdout weather_natural+technical_asset sample: n=12114.
+[v19] Holdout E0 n=12113; holdout R0c n=11991 (p99 cap=167.39h).
+[C01-step4b] Corrected combined E0 n=60437, R0c n=59834
+[C01-step4b] Building fresh 5-fold GroupKFold splits...
+[C01-step4b] Fitting per-fold coefficients (E0)...
+[C01-step4b] Fitting per-fold coefficients (R0c)...
+[C01-step4b] E0 stability:
+       model         term  n_folds  same_sign_folds  significant_folds  mean_coefficient  coef_cv_pct  all_same_sign
+E0_corrected    z_gust_0h        5                5                  3         -0.038440    44.252707           True
+E0_corrected z_gust_0h_sq        5                5                  5          0.107932    13.188198           True
+[C01-step4b] R0c stability:
+        model         term  n_folds  same_sign_folds  significant_folds  mean_coefficient  coef_cv_pct  all_same_sign
+R0c_corrected    z_gust_0h        5                3                  0         -0.000207  3286.507120          False
+R0c_corrected z_gust_0h_sq        5                5                  5          0.080965    20.422724           True
+[C01-step4b] Running variance decomposition (E0)...
+[C01-step4b]        model            step             blocks_added  r2_in_sample  r2_in_sample_increment  r2_oos_5fold  r2_oos_5fold_increment
+E0_corrected        baseline region_SES+year_month_FE      0.014103                     NaN      0.007945                     NaN
+E0_corrected nongust_weather          nongust_weather      0.022079                0.007976      0.017000                0.009054
+E0_corrected            gust                     gust      0.034011                0.011932      0.029863                0.012864
+[C01-step4b] Running variance decomposition (R0c, gust-then-customers order)...
+[C01-step4b]                                   model            step             blocks_added  r2_in_sample  r2_in_sample_increment  r2_oos_5fold  r2_oos_5fold_increment
+R0c_corrected_order_gust_then_customers        baseline region_SES+year_month_FE      0.022877                     NaN      0.014738                     NaN
+R0c_corrected_order_gust_then_customers nongust_weather          nongust_weather      0.033060                0.010184      0.024407                0.009669
+R0c_corrected_order_gust_then_customers            gust                     gust      0.041412                0.008351      0.035017                0.010611
+R0c_corrected_order_gust_then_customers       customers                customers      0.120452                0.079040      0.113004                0.077987
+[C01-step4b] Running variance decomposition (R0c, customers-then-gust order)...
+[C01-step4b]                                   model            step             blocks_added  r2_in_sample  r2_in_sample_increment  r2_oos_5fold  r2_oos_5fold_increment
+R0c_corrected_order_customers_then_gust        baseline region_SES+year_month_FE      0.022877                     NaN      0.014738                     NaN
+R0c_corrected_order_customers_then_gust nongust_weather          nongust_weather      0.033060                0.010184      0.024407                0.009669
+R0c_corrected_order_customers_then_gust       customers                customers      0.110818                0.077758      0.100671                0.076264
+R0c_corrected_order_customers_then_gust            gust                     gust      0.120452                0.009634      0.113004                0.012333
+[C01-step4b] === Step 4b complete ===

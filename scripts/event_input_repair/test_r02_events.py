@@ -1,8 +1,15 @@
 """Targeted regressions for the known event/time/input failure modes."""
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 import sys,unittest,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
-sys.dont_write_bytecode=True;sys.path.insert(0,str(ROOT.parent/'.venv/Lib/site-packages'))
+sys.dont_write_bytecode=True
 import numpy as np
 import pandas as pd
 import r02_events as m

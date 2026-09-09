@@ -7,6 +7,13 @@ sample (corrected_sample_builder instead of the original combined_sample_builder
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import json
 import sys
 from pathlib import Path
@@ -17,19 +24,19 @@ import statsmodels.api as sm
 import matplotlib.pyplot as plt
 from scipy import stats
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\c02_c08_repair_20260905")))
+sys.path.insert(0, str(project_path('scripts/c02_c08_repair_20260905')))
 from corrected_sample_builder import build_corrected_combined_samples, _patch_v9  # noqa: E402
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis")))
+sys.path.insert(0, str(project_path('scripts/final_combined_analysis')))
 from figure_style import apply_style  # noqa: E402
 
 import importlib.util
-V11_SCRIPT = Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\critical_wind_speed\critical_wind_speed_pipeline.py")
+V11_SCRIPT = project_path('scripts/critical_wind_speed/critical_wind_speed_pipeline.py')
 spec11 = importlib.util.spec_from_file_location("critical_wind_speed_pipeline", V11_SCRIPT)
 v11 = importlib.util.module_from_spec(spec11)
 spec11.loader.exec_module(v11)
 
-RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\appendix_h_20260906\raw")
+RAW_DIR = result_path('appendix_h_20260906/raw')
 DIAG_DIR = RAW_DIR / "stepB_residual_diagnostics"
 DIAG_DIR.mkdir(parents=True, exist_ok=True)
 

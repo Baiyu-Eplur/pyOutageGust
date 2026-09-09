@@ -4,6 +4,13 @@ No C02-C08 fix applies to this figure; regenerated purely for consistency
 which events appear on the map)."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
@@ -16,12 +23,12 @@ from shapely.geometry import Point
 sys.path.insert(0, str(Path(__file__).parent))
 from corrected_sample_builder import build_corrected_combined_samples  # noqa: E402
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis")))
+sys.path.insert(0, str(project_path('scripts/final_combined_analysis')))
 from figure_style import apply_style, mm_to_in, save_fig, add_north_arrow, add_scale_bar, add_locator_inset, DOUBLE_COL_MM  # noqa: E402
 
-DNO_SHP = Path(r"D:\Pyprogramme\STST2603\data\dno_license_areas_20200506\DNO_License_Areas_20200506.shp")
-GB_BOUNDARY_SHP = Path(r"D:\Pyprogramme\STST2603\data\Local_Authority_Districts_December_2021_UK_BGC_2022\LAD_DEC_2021_UK_BGC.shp")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c02_c08_repair_20260905\figures")
+DNO_SHP = external_path('data/dno_license_areas_20200506/DNO_License_Areas_20200506.shp')
+GB_BOUNDARY_SHP = external_path('data/Local_Authority_Districts_December_2021_UK_BGC_2022/LAD_DEC_2021_UK_BGC.shp')
+OUT_DIR = result_path('c02_c08_repair_20260905/figures')
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 UKPN_AREAS = {"UKPN (East)": "EPN", "UKPN (London)": "LPN", "UKPN (South)": "SPN"}
 
@@ -36,8 +43,8 @@ def main():
     log_step(f"n={len(combined_wt)}")
 
     if "lat" not in combined_wt.columns or "lon" not in combined_wt.columns:
-        SRC = Path(r"D:\Pyprogramme\STST2603\rebuild_v3_full_stage\outputs\ukpn_full_stage_dataset_v3.csv")
-        coords = pd.read_csv(SRC, usecols=["Incident Reference", "lat", "lon"], low_memory=False).drop_duplicates("Incident Reference")
+        SRC = external_path('rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv')
+        coords = pd.read_csv(read_input(SRC), usecols=["Incident Reference", "lat", "lon"], low_memory=False).drop_duplicates("Incident Reference")
         combined_wt = combined_wt.merge(coords, on="Incident Reference", how="left")
 
     n_missing = combined_wt["lat"].isna().sum()
@@ -45,7 +52,7 @@ def main():
     gdf_pts = gpd.GeoDataFrame(pts, geometry=[Point(xy) for xy in zip(pts["lon"], pts["lat"])],
                                 crs="EPSG:4326").to_crs(epsg=27700)
 
-    dno = gpd.read_file(DNO_SHP)
+    dno = gpd.read_file(read_input(DNO_SHP))
     ukpn = dno[dno["LongName"].isin(UKPN_AREAS.keys())].copy()
     ukpn["short"] = ukpn["LongName"].map(UKPN_AREAS)
 
@@ -69,7 +76,7 @@ def main():
 
     add_north_arrow(ax)
     add_scale_bar(ax)
-    gb = gpd.read_file(GB_BOUNDARY_SHP).to_crs(epsg=27700)
+    gb = gpd.read_file(read_input(GB_BOUNDARY_SHP)).to_crs(epsg=27700)
     gb_gb = gb[gb["LAD21CD"].astype(str).str.startswith(("E", "W", "S"))]
     add_locator_inset(fig, ax, gb_gb.dissolve(), ukpn)
 

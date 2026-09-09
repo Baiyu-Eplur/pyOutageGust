@@ -1,4 +1,0 @@
-model,step,blocks_added,r2_in_sample,r2_in_sample_increment
-E0_holdout,baseline,region_SES+year_month_FE,0.01778173642826475,
-E0_holdout,nongust_weather,nongust_weather,0.032495096194910644,0.014713359766645895
-E0_holdout,gust,gust,0.050786922177606164,0.01829182598269552

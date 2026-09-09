@@ -9,15 +9,22 @@ staging 均失败（upload failed，很可能是单文件体积超出传输预�
 这两列是否等于 master CSV 的对应列，用 codex 自己独立算的
 `customers_affected_legacy` / `legacy_duration_hours` 做交叉核验（见下方一致性检查）。
 """
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 import pandas as pd
 import numpy as np
 
-PARQUET = '/mnt/user-data/uploads/STST2603/analysis_step2/02_incident_analysis_master_v1_1.parquet'
+PARQUET = str(external_path('analysis_step2/02_incident_analysis_master_v1_1.parquet'))
 
 cols = ['incident_reference_clean', 'Number of Customers Restored', 'Duration (hours)',
         'incident_date', 'substation', 'LAD21CD', 'SiteFunctionalLocation',
         'customers_affected_legacy', 'legacy_duration_hours', 'split_role']
-d = pd.read_parquet(PARQUET, columns=cols)
+d = pd.read_parquet(read_input(PARQUET), columns=cols)
 print('n rows total:', len(d))
 print(d.dtypes)
 print()

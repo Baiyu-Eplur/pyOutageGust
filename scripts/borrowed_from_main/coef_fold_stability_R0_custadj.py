@@ -20,6 +20,13 @@ Claude branch —— 工作命令 #4：控制 customers（调度优先级代理�
 未修改 analysis_step3/run_baseline_models.py 或命令#1的原脚本本身；
 未写入主线任何目录；输入只读。
 """
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -28,10 +35,10 @@ from scipy import stats
 from statsmodels.stats.sandwich_covariance import cov_cluster
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 
-ROOT = Path('/mnt/user-data/uploads/STST2603')
-OUT = Path('/tmp/branch_work4/results/gust_duration_customer_adjusted')
+ROOT = external_path('')
+OUT = result_path('gust_duration_customer_adjusted')
 OUT.mkdir(parents=True, exist_ok=True)
-CMD1_RAW_FOLD_COEFS = Path('/tmp/branch_work/results/oof_coef_stability/raw_fold_coefs.csv')
+CMD1_RAW_FOLD_COEFS = result_path('oof_coef_stability/raw_fold_coefs.csv')
 
 BASE_NUMERIC = ['gust_0h', 'precipitation_24h_sum', 'temperature_0h', 'pressure_msl_0h',
                 'urban_binary', 'log_population', 'income_deprivation_rate',
@@ -45,13 +52,13 @@ MODEL_OUTCOMES = ['customers_affected_primary', 'full_restoration_hours_primary'
 # ============ 以下四个函数 + fit_fold_legacy：与命令#1脚本逐字段一致，未作任何修改 ============
 
 def load_screening_only():
-    manifest = pd.read_parquet(ROOT / 'analysis_step2/02_split_manifest.parquet')
+    manifest = pd.read_parquet(read_input(ROOT / 'analysis_step2/02_split_manifest.parquet'))
     screen = manifest.loc[manifest.split_role.eq('screening_development')].copy()
     assert len(screen) and screen.incident_reference_clean.is_unique
     ids = screen.incident_reference_clean.astype(str).tolist()
     columns = ['incident_reference_clean', 'incident_onset_utc', 'LAD21CD',
                'rural_urban_classification'] + INPUT_PREDICTOR_COLS + MODEL_OUTCOMES
-    data = pd.read_parquet(ROOT / 'analysis_step2/02_incident_analysis_master_v1_1.parquet',
+    data = pd.read_parquet(read_input(ROOT / 'analysis_step2/02_incident_analysis_master_v1_1.parquet'),
                            columns=list(dict.fromkeys(columns)),
                            filters=[('incident_reference_clean', 'in', ids)])
     data.incident_reference_clean = data.incident_reference_clean.astype(str)
@@ -255,7 +262,7 @@ def main():
 
     # ---- Step 1: 复现校验（未改动函数重跑原始 R0_legacy_log_OLS）----
     r0_repro = run_model_original(legacy, 'legacy_duration_hours', 'R0_legacy_log_OLS', 'recovery')
-    cmd1_raw = pd.read_csv(CMD1_RAW_FOLD_COEFS)
+    cmd1_raw = pd.read_csv(read_input(CMD1_RAW_FOLD_COEFS))
     cmd1_r0 = cmd1_raw[cmd1_raw.model == 'R0_legacy_log_OLS'].copy()
 
     merged = r0_repro.merge(cmd1_r0, on=['model', 'outcome_family', 'fold', 'term'],

@@ -1,0 +1,19 @@
+{
+  "dev_wt_n": 48338,
+  "holdout_wt_n": 12115,
+  "combined_wt_n": 60453,
+  "sum_check_passed": true,
+  "date_overlap_count": 0,
+  "id_overlap_count": 0,
+  "combined_unique_ids": 60453,
+  "combined_ids_match_rows": true,
+  "dev_e0_n": 48323,
+  "holdout_e0_n": 12114,
+  "combined_e0_n": 60437,
+  "dev_r0cb_n": 47840,
+  "holdout_r0cb_n": 11992,
+  "combined_p99_cap_hours_recomputed": 192.0833333333333,
+  "dev_p99_cap_hours": 194.79583333333224,
+  "holdout_p99_cap_hours": 167.36533333333452,
+  "combined_r0cb_n_recomputed_cap": 59834
+}

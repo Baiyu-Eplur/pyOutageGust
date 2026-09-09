@@ -6,6 +6,13 @@ requirement that customers_v2 also be fixed (not left free) for the R0c map.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import importlib.util
 import json
 import sys
@@ -19,12 +26,12 @@ import matplotlib.pyplot as plt
 sys.path.insert(0, str(Path(__file__).parent))
 from combined_sample_builder import build_combined_samples  # noqa: E402
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\dev_sample_decontamination")))
+sys.path.insert(0, str(project_path('scripts/dev_sample_decontamination')))
 from clean_sample_builder import v9  # noqa: E402
 
-V11_SCRIPT = Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\critical_wind_speed\critical_wind_speed_pipeline.py")
-BOUNDARY_FILE = Path(r"D:\Pyprogramme\STST2603\data\Local_Authority_Districts_December_2021_UK_BGC_2022\LAD_DEC_2021_UK_BGC.shp")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+V11_SCRIPT = project_path('scripts/critical_wind_speed/critical_wind_speed_pipeline.py')
+BOUNDARY_FILE = external_path('data/Local_Authority_Districts_December_2021_UK_BGC_2022/LAD_DEC_2021_UK_BGC.shp')
+OUT_DIR = result_path('final_combined_analysis')
 RAW_DIR = OUT_DIR / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -115,7 +122,7 @@ def main():
 
     # ---------------- maps ----------------
     log_step("Loading LAD boundary file and plotting maps...")
-    gdf = gpd.read_file(BOUNDARY_FILE)
+    gdf = gpd.read_file(read_input(BOUNDARY_FILE))
     code_col = "LAD21CD" if "LAD21CD" in gdf.columns else [c for c in gdf.columns if "LAD" in c.upper() and "CD" in c.upper()][0]
     gdf = gdf.rename(columns={code_col: "LAD21CD"}) if code_col != "LAD21CD" else gdf
     gdf = gdf.to_crs(epsg=27700)

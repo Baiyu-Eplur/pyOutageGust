@@ -4,6 +4,13 @@ Source rows must retain their frozen 1-based source_row_number before any shuffl
 The separate runner owns all I/O. This module contains no model fitting.
 """
 from __future__ import annotations
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 import hashlib,json
 from pathlib import Path
 import numpy as np
@@ -225,9 +232,9 @@ def load_active_events(manifest_path=None):
     """Actual active pipeline reader; verify the produced file before returning rows."""
     root=Path(__file__).resolve().parents[2]
     mp=Path(manifest_path) if manifest_path else root/'paper_revision_work_v2/R02/data/EVENT_MANIFEST.json'
-    manifest=json.loads(mp.read_text(encoding='utf-8'));p=Path(manifest['event_table']['path'])
-    with p.open('rb') as f:actual=hashlib.file_digest(f,'sha256').hexdigest()
+    manifest=json.loads(read_input(mp).read_text(encoding='utf-8'));p=Path(manifest['event_table']['path'])
+    with read_input(p).open('rb') as f:actual=hashlib.file_digest(f,'sha256').hexdigest()
     if actual!=manifest['event_table']['sha256']:raise ValueError('R02 event table hash mismatch')
-    e=pd.read_parquet(p)
+    e=pd.read_parquet(read_input(p))
     if len(e)!=manifest['event_count'] or not e[ID].is_unique:raise ValueError('Event table cardinality invalid')
     return e,manifest

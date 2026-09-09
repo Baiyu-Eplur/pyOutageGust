@@ -1,0 +1,91 @@
+{
+  "runnable_tasks": 117,
+  "support_modules": 4,
+  "archived_files_sha256_verified": 721,
+  "framework_tests_passed": 11,
+  "existing_r02_tests_passed": 15,
+  "byte_identical_reference_files": 8,
+  "runs": [
+    {
+      "run_id": "20260909154622",
+      "purpose": "迁移验证：仅重新生成 Figure 4，前置拟合保持关闭",
+      "status": "completed",
+      "steps": [
+        {
+          "task": "final_combined_analysis/figure4_dose_response",
+          "status": "completed"
+        }
+      ],
+      "outputs": 2
+    },
+    {
+      "run_id": "20260909154639",
+      "purpose": "迁移验证：重建最终样本并重跑 E0/R0c 回归，核对旧结果",
+      "status": "completed",
+      "steps": [
+        {
+          "task": "model_review_package_20260907/materialize_final_data",
+          "status": "completed"
+        },
+        {
+          "task": "review_package/run_main_regression",
+          "status": "completed"
+        }
+      ],
+      "outputs": 9
+    },
+    {
+      "run_id": "20260909154903",
+      "purpose": "迁移验证：V2 原始事件处理、LAD 面积输出和既有 R02 单元检查",
+      "status": "failed",
+      "steps": [
+        {
+          "task": "pipeline_v2/LAD_AreaSummary_v2",
+          "status": "completed"
+        },
+        {
+          "task": "pipeline_v2/filter_v2",
+          "status": "failed"
+        }
+      ],
+      "outputs": 1
+    },
+    {
+      "run_id": "20260909155522",
+      "purpose": "迁移复验：修复空时间目录父路径后重跑 V2 事件输出与 R02 检查",
+      "status": "completed",
+      "steps": [
+        {
+          "task": "pipeline_v2/filter_v2",
+          "status": "completed"
+        },
+        {
+          "task": "event_input_repair/r02_input_pipeline",
+          "status": "completed"
+        },
+        {
+          "task": "event_input_repair/test_r02_events",
+          "status": "completed"
+        }
+      ],
+      "outputs": 4
+    },
+    {
+      "run_id": "20260909160006",
+      "purpose": "结构调整后检查入口；按需填写本次分析目的",
+      "status": "no_steps",
+      "steps": [],
+      "outputs": 0
+    }
+  ],
+  "unchanged_scopes": [
+    "Comments",
+    "src",
+    "paper_revision_work_v2"
+  ],
+  "remaining_limits": [
+    "Not all historical bootstrap, model or weather-download tasks were rerun",
+    "Some legacy raw inputs retain read-only STST2603 dependency",
+    "Independent frozen research packages were not migrated into the dispatcher"
+  ]
+}

@@ -6,6 +6,13 @@ are documented in PROVENANCE.md.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import json
 from pathlib import Path
 
@@ -15,8 +22,8 @@ import statsmodels.api as sm
 from scipy import stats
 from statsmodels.stats.sandwich_covariance import cov_cluster, cov_cluster_2groups
 
-DATA_DIR = Path(__file__).resolve().parent.parent / "data"
-RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
+DATA_DIR = result_path("review_package/data")
+RESULTS_DIR = result_path("review_package/regression")
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 SCALE_COLS = ["gust_0h", "precipitation_24h_sum", "temperature_0h", "pressure_msl_0h"]
@@ -95,9 +102,9 @@ def coef_table(res, cov):
 
 
 def main():
-    log_step("Loading final analysis samples from ../data/ ...")
-    combined_e0 = pd.read_csv(DATA_DIR / "combined_E0_final.csv")
-    combined_r0cb = pd.read_csv(DATA_DIR / "combined_R0c_final.csv")
+    log_step("Loading final analysis samples via the pretest input resolver ...")
+    combined_e0 = pd.read_csv(read_input(DATA_DIR / "combined_E0_final.csv"))
+    combined_r0cb = pd.read_csv(read_input(DATA_DIR / "combined_R0c_final.csv"))
     log_step(f"combined_E0_final.csv: n={len(combined_e0)}")
     log_step(f"combined_R0c_final.csv: n={len(combined_r0cb)}")
 
@@ -143,7 +150,7 @@ def main():
         "E0_beta1": float(b1), "E0_beta2": float(b2),
     }
     (RESULTS_DIR / "run_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
-    log_step("Saved run_summary.json and all coefficient tables to ../results/")
+    log_step(f"Saved run_summary.json and all coefficient tables to {RESULTS_DIR}")
     log_step("=== Done ===")
 
 

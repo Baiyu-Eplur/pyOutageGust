@@ -42,3 +42,8 @@ paper_revision_work_v2/X02_storm_specialization/RETURN_PACKAGE_X02.zip
 Thumbs.db
 .idea/
 .vscode/
+
+# pretest runtime-only files (keep run manifests and analysis outputs)
+results/pretest/.run.lock
+results/pretest/runs/*/*/tmp/
+results/pretest/runs/*/*/mpl/

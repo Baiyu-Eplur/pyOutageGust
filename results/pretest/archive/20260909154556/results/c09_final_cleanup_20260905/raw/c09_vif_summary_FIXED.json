@@ -1,0 +1,10 @@
+{
+  "E0_restricted_max_vif_FIXED": 3.753147928207246,
+  "R0c_restricted_max_vif_FIXED": 3.7565164106142506,
+  "E0_full_design_max_vif_FIXED": 3.754600247885265,
+  "E0_full_design_n_above_4_FIXED": 0,
+  "E0_full_design_vars_above_4_FIXED": [],
+  "R0c_full_design_max_vif_FIXED": 3.7580464846630472,
+  "R0c_full_design_n_above_4_FIXED": 0,
+  "R0c_full_design_vars_above_4_FIXED": []
+}

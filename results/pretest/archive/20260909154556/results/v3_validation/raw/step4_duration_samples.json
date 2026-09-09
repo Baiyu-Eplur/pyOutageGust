@@ -1,0 +1,7 @@
+{
+  "duration_A_sample_n": 105555,
+  "duration_A_p99_cap_hours": 63.72283333333301,
+  "duration_A_excluded_missing_n": 10676,
+  "duration_B_sample_n": 116125,
+  "duration_B_p99_cap_hours": 125.28833333333313
+}

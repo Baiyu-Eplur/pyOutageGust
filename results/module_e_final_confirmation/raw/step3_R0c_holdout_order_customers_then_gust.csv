@@ -1,5 +1,0 @@
-model,step,blocks_added,r2_in_sample,r2_in_sample_increment
-R0c_holdout_order_customers_then_gust,baseline,region_SES+year_month_FE,0.0037879879864622934,
-R0c_holdout_order_customers_then_gust,nongust_weather,nongust_weather,0.012833317230329877,0.009045329243867584
-R0c_holdout_order_customers_then_gust,customers,customers,0.12017240797509177,0.10733909074476189
-R0c_holdout_order_customers_then_gust,gust,gust,0.12357361458954319,0.003401206614451424

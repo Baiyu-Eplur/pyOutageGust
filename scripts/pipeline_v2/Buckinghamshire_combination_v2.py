@@ -1,3 +1,10 @@
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 from pathlib import Path
 import pandas as pd
 import numpy as np
@@ -6,7 +13,7 @@ import numpy as np
 # 1. 路径配置
 # =========================================
 BASE_DIR = Path(__file__).resolve().parent
-DATA_DIR = BASE_DIR / "data"
+DATA_DIR = data_path()
 
 IMD_FILE = DATA_DIR / "localincomedeprivationdata.xlsx"
 IMD_SHEET = "Rankings for all indicators"
@@ -34,7 +41,7 @@ MANUAL_CROSSWALKS = [
 # =========================================
 # 3. 读取 IMD / deprivation 表
 # =========================================
-imd = pd.read_excel(IMD_FILE, sheet_name=IMD_SHEET, header=1)
+imd = pd.read_excel(read_input(IMD_FILE), sheet_name=IMD_SHEET, header=1)
 imd.columns = [str(c).strip() for c in imd.columns]
 
 print("原始列名：")
@@ -112,7 +119,7 @@ print("\nIMD 表形状：", imd.shape)
 # 6. 读取 population 长表（用于权重）
 #    这里使用 2021 人口做加权
 # =========================================
-pop_long = pd.read_csv(POP_LONG_FILE, low_memory=False)
+pop_long = pd.read_csv(read_input(POP_LONG_FILE), low_memory=False)
 pop_long["LAD23CD"] = pop_long["LAD23CD"].astype(str).str.strip()
 pop_long["year"] = pd.to_numeric(pop_long["year"], errors="coerce")
 pop_long["population"] = pd.to_numeric(pop_long["population"], errors="coerce")
@@ -203,7 +210,7 @@ print("\n追加 crosswalk 后 IMD 表形状：", imd_augmented.shape)
 # =========================================
 # 9. 读取主表并 merge
 # =========================================
-main = pd.read_csv(MAIN_FILE, low_memory=False)
+main = pd.read_csv(read_input(MAIN_FILE), low_memory=False)
 
 if "LAD21CD" in main.columns:
     main["LADCD"] = main["LAD21CD"].astype(str).str.strip()

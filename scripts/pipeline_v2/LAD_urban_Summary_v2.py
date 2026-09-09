@@ -1,3 +1,10 @@
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 # 这个是 lad 数据融合第二步：融合城市化率（基于 BUA 2022 GB 边界）
 import os
 import geopandas as gpd
@@ -6,12 +13,12 @@ import pandas as pd
 # =========================
 # 1. 路径设置
 # =========================
-lad_folder = r"data\Local_Authority_Districts_December_2021_UK_BGC_2022"
-bua_folder = r"data\BUA_2022_GB_-3259870081615132876"
+lad_folder = str(data_path('Local_Authority_Districts_December_2021_UK_BGC_2022'))
+bua_folder = str(data_path('BUA_2022_GB_-3259870081615132876'))
 
 # 自动寻找 shp 文件
-lad_shp = [f for f in os.listdir(lad_folder) if f.lower().endswith(".shp")][0]
-bua_shp = [f for f in os.listdir(bua_folder) if f.lower().endswith(".shp")][0]
+lad_shp = [f for f in os.listdir(read_input(lad_folder)) if f.lower().endswith(".shp")][0]
+bua_shp = [f for f in os.listdir(read_input(bua_folder)) if f.lower().endswith(".shp")][0]
 
 lad_path = os.path.join(lad_folder, lad_shp)
 bua_path = os.path.join(bua_folder, bua_shp)
@@ -22,8 +29,8 @@ print("BUA shapefile:", bua_path)
 # =========================
 # 2. 读取数据
 # =========================
-lad = gpd.read_file(lad_path)
-bua = gpd.read_file(bua_path)
+lad = gpd.read_file(read_input(lad_path))
+bua = gpd.read_file(read_input(bua_path))
 
 print("\nLAD columns:")
 print(lad.columns)

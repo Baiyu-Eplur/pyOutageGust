@@ -1,0 +1,18 @@
+{
+  "sample_size_incidents": 500,
+  "sample_multi_stage": 250,
+  "sample_single_stage": 250,
+  "customers_v2_max_abs_diff_vs_independent_recompute": 0.0,
+  "customers_v2_mismatch_count_over_1e-6": 0,
+  "duration_A_max_abs_diff_vs_independent_recompute": 7.105427357601002e-15,
+  "duration_A_mismatch_count_over_1e-6": 0,
+  "duration_B_max_abs_diff_vs_independent_recompute": 7.105427357601002e-15,
+  "duration_B_mismatch_count_over_1e-6": 0,
+  "reinterruption_excludes_Y_and_legacy_1": true,
+  "reinterruption_treats_legacy_0_as_N": true,
+  "reinterruption_legacy_0_or_1_rows_in_sample": 0,
+  "duration_two_conventions_present": true,
+  "duration_A_definition": "customer-weighted mean stage duration (customers*stage_duration summed / customers summed, across ALL stages incl. reinterruptions)",
+  "duration_B_definition": "full event span: max(End) - min(Start) across all stages",
+  "note_duration_A_includes_reinterruption_stages_in_weighting": true
+}

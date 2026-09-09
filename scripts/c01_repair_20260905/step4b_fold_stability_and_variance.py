@@ -9,6 +9,13 @@ step3_4_corrected_sample_and_refit.py (kept self-contained here rather than
 re-importing that script, to avoid re-running its bootstrap)."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import importlib.util
 import json
 import sys
@@ -17,8 +24,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-SRC = Path(r"D:\Pyprogramme\STST2603\rebuild_v3_full_stage\outputs\ukpn_full_stage_dataset_v3.csv")
-RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c01_repair_20260905\raw")
+SRC = external_path('rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv')
+RAW_DIR = result_path('c01_repair_20260905/raw')
 
 INCIDENT_COL = "Incident Reference"
 V9_USECOLS = [
@@ -49,13 +56,13 @@ def js(obj):
 
 
 def build_corrected_matched():
-    df = pd.read_csv(SRC, usecols=V9_USECOLS, low_memory=False)
+    df = pd.read_csv(read_input(SRC), usecols=V9_USECOLS, low_memory=False)
     old_event = df.drop_duplicates(INCIDENT_COL).copy().set_index(INCIDENT_COL, drop=False)
 
-    comp = pd.read_csv(RAW_DIR / "step1_representative_row_comparison_full.csv")
+    comp = pd.read_csv(read_input(RAW_DIR / "step1_representative_row_comparison_full.csv"))
     comp["new_start_utc"] = pd.to_datetime(comp["new_start_utc"], utc=True)
     comp["new_incident_date_utc"] = comp["new_start_utc"].dt.date.astype(str)
-    reext = pd.read_csv(RAW_DIR / "step2_weather_reextraction_full.csv").set_index("Incident Reference")
+    reext = pd.read_csv(read_input(RAW_DIR / "step2_weather_reextraction_full.csv")).set_index("Incident Reference")
 
     changed_ids = comp.loc[comp["representative_row_changed"], "Incident Reference"]
     comp_indexed = comp.set_index("Incident Reference")
@@ -87,19 +94,19 @@ def main():
     corrected_matched = build_corrected_matched()
     step0_summary = {"n_weather_matched_events": int(len(corrected_matched))}
 
-    sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\v3_validation")))
+    sys.path.insert(0, str(project_path('scripts/v3_validation')))
     import v3_validation_pipeline as v9  # noqa: E402
     v9.step0_build_sample = lambda: (corrected_matched.copy(), step0_summary)
 
     spec = importlib.util.spec_from_file_location(
-        "clean_sample_builder", r"D:\Pyprogramme\STST2603\claude_branch\scripts\dev_sample_decontamination\clean_sample_builder.py")
+        "clean_sample_builder", str(project_path('scripts/dev_sample_decontamination/clean_sample_builder.py')))
     clean_sample_builder = importlib.util.module_from_spec(spec)
     sys.modules["clean_sample_builder"] = clean_sample_builder
     spec.loader.exec_module(clean_sample_builder)
     clean_sample_builder.v9.step0_build_sample = v9.step0_build_sample
 
     spec2 = importlib.util.spec_from_file_location(
-        "build_holdout_sample", r"D:\Pyprogramme\STST2603\claude_branch\scripts\module_e_final_confirmation\build_holdout_sample.py")
+        "build_holdout_sample", str(project_path('scripts/module_e_final_confirmation/build_holdout_sample.py')))
     build_holdout_sample = importlib.util.module_from_spec(spec2)
     sys.modules["build_holdout_sample"] = build_holdout_sample
     spec2.loader.exec_module(build_holdout_sample)
@@ -162,7 +169,7 @@ def main():
     # ---------------- variance decomposition (matches command #21 method exactly) ----------------
     spec14 = importlib.util.spec_from_file_location(
         "variance_decomposition_pipeline",
-        r"D:\Pyprogramme\STST2603\claude_branch\scripts\variance_decomposition\variance_decomposition_pipeline.py")
+        str(project_path('scripts/variance_decomposition/variance_decomposition_pipeline.py')))
     v14 = importlib.util.module_from_spec(spec14)
     spec14.loader.exec_module(v14)
 

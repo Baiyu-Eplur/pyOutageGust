@@ -35,3 +35,7 @@
 ## 路径调整说明
 
 `filter_v2.py`/`data_arrange_v2.py`的`__main__`块中输出路径已改为指向`claude_branch/results/pipeline_v2_output/`（硬性约束2：新数据产出只能放`claude_branch/`之内），而不是原脚本硬编码的`data/new/`路径。LAD相关脚本因为本命令不要求实际跑通下游链路（见`03_下游重跑规模评估.md`），暂未调整其输入路径，仍保留原始的`data/new/...`路径字符串，留待未来真正需要跑通下游链路时再行调整（届时仍需保证只调整路径、不改动计算逻辑本身，与本命令的处理原则一致）。
+
+## 2026-09-09 统一入口调整
+
+上文的“零改动”及哈希表描述当时复制阶段的历史状态。当前用户已授权统一改造全部旧脚本：本目录通过 main.py / pretestmain.py 调用，输入与输出使用 pretest_paths，新增产物进入 results/pretest/data/<时间>/；统计处理公式保留。新的改动清单见 ../../docs/migration_history/pretest_source_changes_20260909.json；步骤日志见 ../../LOG.md。旧哈希记录作为历史证据保留，不能用来声称当前文件仍逐字节未修改。

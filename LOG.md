@@ -247,3 +247,72 @@ docs/、results/、test/
 **产出文件**：`results/advisor_review_20260908/{00_README,01_docx_reading_summary,02_code_review,03a-03f_*,04_step3_claims_audit}.md` + `verification/{3a,3b,3c}_*.py` 及对应 `_results.json`。
 
 对 `STST2603_review/` 包全程只读；对 `pyOutageGust` 自身其他文件（`review_package/data/`、`paper_revision_work_v2/code/snapshots/H0/rebuild_v3_full_stage/`、`results/appendix_h_20260906/`、`results/c09_final_cleanup_20260905/`）只读，用于交叉核对；本任务唯一的写入范围是 `results/advisor_review_20260908/` 目录。
+
+## 2026-09-09 — pretest 收束：步骤 1 / 现状盘点与实施边界
+
+- 用户要求：根目录 main.py 统一开关；pretestmain.py 接入 scripts 全部旧功能；旧输出归入 results/pretest；每次运行记录目的、秒级时间和分类结果。本阶段不迁入导师代码。
+- 已读取 README.md、CLAUDE.md、既有迁移日志和 scripts 路径/输入输出调用。未发现适用的 AGENTS.md。
+- 发现：旧脚本同时存在 Windows STST2603 硬编码、Linux /tmp 输出、相对 data 输出以及本地 review_package 输出；只改入口不能阻止旧路径写入。
+- 实施：保留 scripts 的原有任务分组和科学计算；增加显式路径函数与结果读取回退，独立进程逐项执行；历史结果迁至 pretest 归档，保留校验清单。前置开关为 0 时只复用已有结果，不自动重算。
+- 保护：Comments、data/external、冻结 R03/R04 与历史快照不改写；旧 STST2603 仅保留已存在且尚无本地快照的只读输入依赖，并记录来源。
+- 验证安排：完整脚本登记、语法检查、入口与失败记录测试、结果回退测试、实际绘图及回归链抽查。全量耗时模型不因结构整理而自动启动。
+
+## 2026-09-09 — pretest 收束：步骤 2 / 统一入口及旧源码路径改造
+
+- 新增 main.py：所有独立步骤的 0/1 开关、运行目的、预演、失败继续策略和可选解释器均直接设于文件顶部。默认全部步骤关闭。
+- 新增 pretestmain.py：完整登记 scripts，公共模块通过调用链复用；R02 输入消费模块增加只读检查适配器；额外接入 review_package 回归。每步独立进程，记录开始/结束、退出码、控制台日志、源码校验及输出 SHA256。失败产物不更新成功结果索引。
+- 新增 pretest_paths.py：显式区分输出与读取；输出必须有入口提供的运行上下文。读取优先本步结果、已成功结果索引和归档，再使用本地输入快照；缺少本地副本时保留既有旧项目只读依赖并记录。
+- 修改 scripts 与 review_package/code 的路径和读取调用（首轮 121 文件中 117 个有改动）。逐文件改动数量及前后文本 SHA256 见 docs/migration_history/pretest_source_changes_20260909.json；一次性迁移工具一并保留，禁止重复执行。
+- 本步未更改模型公式、筛样规则、拟合参数及旧图样式。增加进程内写入边界检查，防止残留路径把文件写回外部项目或历史结果。
+- 首轮验证：所有改动脚本通过 ast.parse；确认项目既有 conda Python 可用，numpy/pandas/scipy/statsmodels/sklearn/matplotlib 导入成功。实际运行及边界测试在后续步骤记录。
+
+## 2026-09-09 — pretest 收束：步骤 3 / 历史输出归档
+
+- 执行 docs/migration_history/archive_pretest_results.py，把原 results 下除 pretest 外的所有项目及 review_package/results、data/generated 中已有产物移入 results/pretest/archive/<年月日时分秒>/，不改写文件内容。
+- 每次移动前检查源与目标的解析绝对路径均处于本项目授权范围，拒绝目标冲突；移动前后逐文件计算 SHA256 并核对。迁移过程逐项写入清单与可复用索引。
+- 全部文件/旧新路径/大小/校验值及实际数量见 docs/migration_history/pretest_archive_20260909.json；结果归档内保留相同 archive_manifest.json。此清单是路径迁移依据，历史报告中原有路径文本作为历史记录保留。
+- Comments 及冻结研究包内容未搬移、未改写。review_package/data 的静态输入仍可只读复用；重新生成的样本会写入 pretest/data 时间目录。
+
+## 2026-09-09 — pretest 收束：步骤 4 / 实际复现与边界修正
+
+- 实际运行 main.py 调用链：Figure 4 单独开启（其他前置步骤为 0），成功从历史归档读取 E0/R0c 各 50 个曲线点并输出 PNG/PDF。运行记录：results/pretest/runs/20260909154622。
+- 实际运行样本生成 + review_package 回归，记录：results/pretest/runs/20260909154639。E0 n=60437、R0c n=59834；两份样本与旧 CSV 的 SHA256 完全相同。四份系数 CSV 与 run_summary.json 也全部逐字节一致。详情：docs/migration_history/pretest_numerical_verification_20260909.json。
+- 修正 V2 读取前的存在性检查，使其先解析历史/本地输入；缺失输入由原先打印后退出改为抛错，避免误报成功。V2 数据/缓存写入新结果目录，缓存读取可复用已有文件；清理机械改造产生的多余 Path(str(...)) 包装。
+- read_input 增加旧 JSON 内嵌路径的本地解析，避免改写冻结清单；完整路径解析优先本地快照。缓存索引按子进程读取，避免逐文件重复解析大索引。
+- 新增 test/test_pretest_entry.py。11 项测试全部通过：完整注册、全关闭/预演不启动计算、参数校验、结果读取回退、缺失前置提示、输出越界防护、秒级名称冲突、失败产物不进入成功索引、写入保护及所有活动脚本语法检查。
+- 每次运行补充全部活动源码 SHA256；子进程输出改为无缓冲，便于长任务及时查看日志。以下文档与最终复核将在下一步记录。
+
+## 2026-09-09 — pretest 收束：步骤 5 / 文档、源码校验及新目录边界补正
+
+- 更新 README.md、CLAUDE.md、review_package/README.md 和 pipeline_v2 目录说明，改为 main.py 使用方式，说明旧哈希表仅代表当时复制状态。新增 docs/PRETEST_GUIDE.md 和完整 docs/PRETEST_TASKS.md；.gitignore 排除运行锁和临时/字体缓存，不忽略分析结果和运行日志。
+- 输出路径进一步补正：V2 filter 实际聚合 237901 个原始阶段后，首次写 CSV 因新时间目录下父文件夹不存在而失败（运行 20260909154903）。失败完整留痕，未更新可复用索引；同次 LAD 面积处理步骤成功。
+- 修复 result_path：检查路径边界后创建父目录，适配历史上默认父目录已存在的脚本；新增针对性验证并重跑 V2 filter 与 R02 输入检查，运行编号 20260909155522，结果将在步骤 6 记录。
+- 静态只读输入盘点：34 个明确 external_path 引用全部可找到，7 个仍使用旧项目只读输入；动态拼接路径须以运行 inputs.jsonl 为准。见 docs/migration_history/pretest_input_dependencies_20260909.json。没有为了消除依赖而改造或写入旧项目。
+- 最终活动源码 SHA256、函数集合与函数内数值常量核对见 docs/migration_history/pretest_source_verification_20260909.json；这是对路径改造的检查，不等同于全量科学算法验证。
+
+## 2026-09-09 — pretest 收束：步骤 6 / 最终验收与交付状态
+
+- V2 空目录问题修复后全量复验成功（20260909155522）：237901 原始阶段 → 135025 事件；69 个全阶段重复中断边界事件、2 个 Cause Code 内部不一致事件，3 份 CSV 成功写入 pretest/data 时间目录。该结果是执行验证，不是本阶段新增的科学结论。
+- 同次 R02 只读输入适配器成功读取并校验本地冻结事件表，既有 15 项事件/天气规则测试全部通过。此前 11 项入口框架测试再次通过，共 26 项。LAD 面积生成、纯绘图、样本与回归链均已有真实执行记录。
+- 复核归档 721 文件 SHA256 无变化；2 个样本 + 4 个系数表 + 1 个回归摘要 + Figure 4 PNG，共 8 文件与旧版逐字节相同。函数集合与函数内数值常量核对 121/121 一致。
+- 根目录 results 现在仅含 pretest。git diff 确认 src、Comments 与 paper_revision_work_v2 未改动；git diff --check 通过。既有 test 独立研究资料不变，仅新增入口测试文件。
+- 默认 python main.py 实际检查通过（20260909160006）：所有具体开关为 0，只生成带目的的 no_steps 运行记录，没有启动分析。没有将验证期间临时启用的开关写回 main.py。
+- 更新 filter_v2 顶部历史状态注记，注明本日真实执行结果；更新回归输出提示使用实际 pretest 目录。更新使用指南与源码最终哈希；综合验收记录见 docs/migration_history/pretest_acceptance_20260909.json。第一轮迁移清单中的 after_sha256 代表步骤 2 状态，最终状态以 pretest_source_verification_20260909.json 为准。
+- 完成范围：scripts 全部 120 Python 文件以 116 个步骤 + 4 个公共模块接入，额外接入 review_package 回归，共 117 个开关。未批量重跑全部耗时模型/bootstrap/天气下载；少数早期输入保留旧项目只读依赖，独立冻结研究包原样保留。导师代码迁入留待下一阶段。
+- 本次未创建 Git 提交或推送；所有开发修改与逐步 LOG.md 同留工作区，便于用户审阅后统一提交。
+
+## 2026-09-09 — pretest 主要里程碑发布：步骤 1 / 发布前检查与说明
+
+- 用户授权将本次更新同步到 Baiyu-Eplur/pyOutageGust，并记录主要 milestone 及主要改动。
+- 已核对 origin 为 https://github.com/Baiyu-Eplur/pyOutageGust.git，当前 main；fetch 后本地较 origin/main 领先 1 个既有导师材料只读审查提交，无远程分叉。本次同步包含这个既有祖先提交及统一入口更新。
+- 待上传未跟踪文件大小检查通过，无超过 40 MiB 的新文件；遵守现有 .gitignore，不上传 Comments、外部原始快照及已排除的环境文件。不改写既有提交历史。
+- 新增 docs/milestones/2026-09-09_pretest-unified-entry.md，记录主要改动、执行方式、26 项测试、721 文件归档和 8 文件逐字节一致的证据及范围限制。README 顶部增加里程碑入口。
+- 发布标识确定为 pretest-unified-entry-20260909；以附注 Git 标签和 GitHub Release 保存本节点。后续将提交并推送 main 与标签，再核对远程提交/标签/发布记录。
+
+## 2026-09-09 — pretest 主要里程碑发布：步骤 2 / 暂存与字节一致性保护
+
+- 已将本轮代码、文档、历史结果迁移与验证输出加入暂存区。721 个历史输出的移动由 Git 识别为路径迁移；未将忽略目录强行加入版本控制。
+- 暂存时发现本机 Git 的自动换行转换会改变部分归档文本/CSV 的仓库存储字节，从而使归档 SHA256 在远程失去一致性。新增 .gitattributes：results/pretest/** 使用 -text 原样保存；仅活动 Python 脚本固定 LF，避免跨平台源码校验因换行改变。冻结研究包规则不变。
+- 修正里程碑说明中的 Markdown 行尾空格，重新暂存并检查；随后核对暂存区 blob 与 721 项归档 SHA256 及活动源码校验，而不只检查工作区文件。
+
+- 步骤 2 检查后的修正：活动源码现有字节包含 CRLF/LF 混合，若统一 LF，同样会改变既有运行记录中的源码 SHA256。因此 .gitattributes 的最终规则对活动源码也使用 -text，原样保存本节点真实字节，而不进行换行重写。旧数据中的 CRLF 不作为待修复空格；代码/新增文档检查与归档字节检查分开执行。

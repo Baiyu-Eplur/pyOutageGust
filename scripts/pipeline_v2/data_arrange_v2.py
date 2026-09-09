@@ -18,17 +18,24 @@ data_arrange_v2.py —— 工作命令 #7 相对原版 data_arrange.py 的改动
   Step 6 复用地图里"应原样复用"的范围，只是被搬到这个新文件里延续使用）。
 """
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import pandas as pd
 
 # ==============================
 # File path（占位——本命令不要求真正跑通下游链路，实际路径待后续命令确认）
 # ==============================
-file_path = r"D:\Pyprogramme\STST2603\claude_branch\results\pipeline_v2_output\ukpn_master_v2_with_lad_features.csv"
+file_path = str(result_path('pipeline_v2_output/ukpn_master_v2_with_lad_features.csv'))
 
 # ==============================
 # Read CSV
 # ==============================
-df = pd.read_csv(file_path, low_memory=False)
+df = pd.read_csv(read_input(file_path), low_memory=False)
 df.columns = df.columns.str.strip()
 
 # ==============================
@@ -89,7 +96,7 @@ df = df.copy()
 # ==============================
 # Save
 # ==============================
-output_path = r"D:\Pyprogramme\STST2603\claude_branch\results\pipeline_v2_output\ukpn_master_v2_final.csv"
+output_path = str(result_path('pipeline_v2_output/ukpn_master_v2_final.csv'))
 df.to_csv(output_path, index=False)
 
 print("Finished.")

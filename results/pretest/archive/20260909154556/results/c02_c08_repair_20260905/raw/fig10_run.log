@@ -1,0 +1,9 @@
+[fig10-final] E0 (exposure) / LAD¡Ádate two-way cluster: coef=0.1060, 95% CI=[0.0433, 0.1687]
+[fig10-final] E0 (exposure) / LAD single cluster: coef=0.1060, 95% CI=[0.0896, 0.1224]
+[fig10-final] E0 (exposure) / Holdout (confirmation): coef=0.1708, 95% CI=[0.1382, 0.2033]
+[fig10-final] E0 (exposure) / Development sample (pooled): coef=0.0913, 95% CI=[0.0815, 0.1011]
+[fig10-final] R0c (recovery) / LAD¡Ádate two-way cluster: coef=0.0850, 95% CI=[0.0690, 0.1009]
+[fig10-final] R0c (recovery) / LAD single cluster: coef=0.0850, 95% CI=[0.0729, 0.0970]
+[fig10-final] R0c (recovery) / Holdout (confirmation): coef=0.0730, 95% CI=[0.0517, 0.0942]
+[fig10-final] R0c (recovery) / Development sample (pooled): coef=0.0668, 95% CI=[0.0596, 0.0740]
+[fig10-final] Saved Figure_10_robustness_forest (final).

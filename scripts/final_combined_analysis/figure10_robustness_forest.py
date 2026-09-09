@@ -13,6 +13,13 @@ clustering-robustness check.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
@@ -23,10 +30,10 @@ import matplotlib.pyplot as plt
 sys.path.insert(0, str(Path(__file__).parent))
 from figure_style import apply_style, mm_to_in, save_fig, SINGLE_COL_MM  # noqa: E402
 
-DEV_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\dev_sample_decontamination\raw")
-HOLDOUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\module_e_final_confirmation\raw")
-COMBINED_RAW = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\raw")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\figures")
+DEV_DIR = result_path('dev_sample_decontamination/raw')
+HOLDOUT_DIR = result_path('module_e_final_confirmation/raw')
+COMBINED_RAW = result_path('final_combined_analysis/raw')
+OUT_DIR = result_path('final_combined_analysis/figures')
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 Z95 = 1.959963984540054
@@ -37,7 +44,7 @@ def log_step(msg):
 
 
 def pooled_estimate(fold_csv: Path, term: str):
-    df = pd.read_csv(fold_csv)
+    df = pd.read_csv(read_input(fold_csv))
     sub = df[df["term"] == term]
     w = 1.0 / (sub["std_error"].astype(float) ** 2)
     pooled = float((w * sub["coefficient"].astype(float)).sum() / w.sum())
@@ -46,7 +53,7 @@ def pooled_estimate(fold_csv: Path, term: str):
 
 
 def single_estimate(csv_path: Path, term: str, coef_col="coefficient", se_col="std_error"):
-    df = pd.read_csv(csv_path)
+    df = pd.read_csv(read_input(csv_path))
     row = df[df["term"] == term].iloc[0]
     return float(row[coef_col]), float(row[se_col])
 

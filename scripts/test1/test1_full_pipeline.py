@@ -2,6 +2,13 @@
 Test 1 快速摸底：(duration, customers) 二维结果空间聚类有效性检验。
 Steps 1-5. 数据来源见 test1_step0_inventory.py 顶部注释（同一份 62,928 行全量数据）。
 """
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 import json
 import numpy as np
 import pandas as pd
@@ -16,14 +23,14 @@ from sklearn.metrics import adjusted_rand_score
 from sklearn.preprocessing import StandardScaler
 import diptest
 
-PARQUET = '/mnt/user-data/uploads/STST2603/analysis_step2/02_incident_analysis_master_v1_1.parquet'
-OUT = '/tmp/branch_work2/results/test1_cluster_screening'
+PARQUET = str(external_path('analysis_step2/02_incident_analysis_master_v1_1.parquet'))
+OUT = str(result_path('test1_cluster_screening'))
 FIG = OUT + '/figures'
 SEED = 20260822
 
 cols = ['incident_reference_clean', 'Number of Customers Restored', 'Duration (hours)',
         'incident_date', 'substation', 'LAD21CD']
-d = pd.read_parquet(PARQUET, columns=cols)
+d = pd.read_parquet(read_input(PARQUET), columns=cols)
 
 # ---------------- Step 1: 数据准备 ----------------
 n0 = len(d)

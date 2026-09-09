@@ -5,15 +5,22 @@ which the markdown reports (written separately) are built from.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import json
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-SRC = Path(r"D:\Pyprogramme\STST2603\rebuild_v3_full_stage\outputs\ukpn_full_stage_dataset_v3.csv")
-OLD_MASTER = Path(r"D:\Pyprogramme\STST2603\data\new\ukpn_master_with_lad_features_updated.csv")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\v3_dataset_audit")
+SRC = external_path('rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv')
+OLD_MASTER = external_path('data/new/ukpn_master_with_lad_features_updated.csv')
+OUT_DIR = result_path('v3_dataset_audit')
 RAW_DIR = OUT_DIR / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -42,7 +49,7 @@ def js(obj):
 
 def main():
     print("Loading full v3 dataset (this may take a while, ~1GB CSV)...")
-    df = pd.read_csv(SRC, low_memory=False)
+    df = pd.read_csv(read_input(SRC), low_memory=False)
     print(f"Loaded: {df.shape}")
 
     # ---------- Step 0: grain confirmation ----------

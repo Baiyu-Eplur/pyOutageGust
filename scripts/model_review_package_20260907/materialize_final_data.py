@@ -5,13 +5,20 @@ on -- to static CSV files, for inclusion in the isolated review package.
 This does not touch any historical result file; it only reads."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "c02_c08_repair_20260905"))
 from corrected_sample_builder import build_corrected_combined_samples  # noqa: E402
 
-OUT_DIR = Path(r"D:\Pyprogramme\pyOutageGust\review_package\data")
+OUT_DIR = result_path('review_package/data')
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 

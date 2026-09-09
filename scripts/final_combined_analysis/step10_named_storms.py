@@ -5,6 +5,13 @@ inferring "this looks like storm X" from the data itself.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import json
 import sys
 from pathlib import Path
@@ -12,10 +19,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis")))
+sys.path.insert(0, str(project_path('scripts/final_combined_analysis')))
 from combined_sample_builder import build_combined_samples  # noqa: E402
 
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+OUT_DIR = result_path('final_combined_analysis')
 RAW_DIR = OUT_DIR / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -53,8 +60,8 @@ def main():
     combined_wt["incident_date_utc"] = pd.to_datetime(combined_wt["incident_date_utc"], errors="coerce")
 
     log_step("Joining substation and LAD21NM (not in the base USECOLS) from the v3 dataset...")
-    SRC = Path(r"D:\Pyprogramme\STST2603\rebuild_v3_full_stage\outputs\ukpn_full_stage_dataset_v3.csv")
-    extra_cols = pd.read_csv(SRC, usecols=["Incident Reference", "substation", "LAD21NM"], low_memory=False)
+    SRC = external_path('rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv')
+    extra_cols = pd.read_csv(read_input(SRC), usecols=["Incident Reference", "substation", "LAD21NM"], low_memory=False)
     extra_cols = extra_cols.drop_duplicates("Incident Reference").set_index("Incident Reference")
     combined_wt["substation"] = combined_wt["Incident Reference"].map(extra_cols["substation"])
     combined_wt["LAD21NM"] = combined_wt["Incident Reference"].map(extra_cols["LAD21NM"])

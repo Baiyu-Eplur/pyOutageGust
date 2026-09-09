@@ -18,6 +18,13 @@ Method choices (must match/mirror the legacy analysis for a fair comparison):
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import json
 import sys
 import time
@@ -30,7 +37,7 @@ from sklearn.feature_selection import mutual_info_regression
 sys.path.insert(0, str(Path(__file__).parent))
 from combined_sample_builder import build_combined_samples  # noqa: E402
 
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+OUT_DIR = result_path('final_combined_analysis')
 RAW_DIR = OUT_DIR / "raw"
 RNG = np.random.default_rng(20260901)
 N_PERM = 200

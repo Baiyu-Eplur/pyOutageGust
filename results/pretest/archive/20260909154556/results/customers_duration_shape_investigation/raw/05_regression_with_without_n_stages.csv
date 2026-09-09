@@ -1,0 +1,10 @@
+spec,term,coefficient,p_value
+without_n_stages_control,z_gust_0h,-0.006002553513545934,0.5712541076277132
+without_n_stages_control,z_gust_0h_sq,0.07171403613881368,8.309317244198992e-21
+without_n_stages_control,z_log1p_customers_v2,0.30665386152438456,1.0836711522268038e-49
+without_n_stages_control,z_log1p_customers_v2_sq,-0.3805793557818923,9.919346606741575e-75
+with_n_stages_control,z_gust_0h,0.02700066609712414,0.011081435497466771
+with_n_stages_control,z_gust_0h_sq,0.07714231380824593,6.366953324547642e-27
+with_n_stages_control,z_log1p_customers_v2,-0.2363998508816393,5.560250508781007e-16
+with_n_stages_control,z_log1p_customers_v2_sq,-0.3011492999559565,3.70921876141207e-81
+with_n_stages_control,log_n_stages,0.9708281671946886,1.87871507494629e-174

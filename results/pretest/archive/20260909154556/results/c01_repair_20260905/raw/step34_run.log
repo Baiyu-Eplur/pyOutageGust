@@ -1,0 +1,42 @@
+[C01-step3/4] === Building corrected matched sample ===
+[C01-step3/4] Loading OLD-style event table (df.drop_duplicates, matches v9.step0_build_sample exactly)...
+[C01-step3/4] Loading Step1 (representative row) and Step2 (weather re-extraction) outputs...
+[C01-step3/4] Date corrected for 12886 incidents; weather corrected for 12269; weather nulled (unrecoverable) for 617.
+[C01-step3/4] Corrected matched sample: 121313 events (was 121313 before too -- row selection changes do not change which incidents are 'matched').
+[C01-step3/4] === Step 3: dev/holdout and storm reassignment diagnostics (on corrected dates) ===
+[C01-step3/4] Among 11927 weather-matched incidents with a changed representative row: dev/holdout role changed for 1, storm-window membership changed for 11385.
+[C01-step3/4] === Step 4: rebuild final combined sample (corrected) and refit E0/R0c ===
+[v16-clean] Building weather-matched sample (command #9 Step0)...
+[v16-clean] Excluding locked_temporal_test date block (>= 2023-09-30) BEFORE fold construction...
+[v16-clean] Weather-matched sample: 121313 -> 97664 after locked-window exclusion (23649 removed, 19.49%).
+[v3_validation] Step 1: checking LAD21CD coverage in the weather-matched sample...
+[v3_validation] Step 1 done: gap-filled 112 events, 112 still missing.
+[v3_validation] Step 2: building GroupKFold(date, 5) folds...
+[v3_validation] Step 2 done: 0 dates crossing folds (expect 0).
+[v16-clean] Clean complete-predictor sample: n=94383.
+[v16-clean] Verified: max date in clean sample = 2023-09-29 00:00:00 (< 2023-09-30 00:00:00).
+[v16-clean] Clean weather_natural+technical_asset sample: n=48339.
+[v16-clean] Clean E0' n=48324; clean R0c'_B n=47841 (p99 cap=194.79h).
+[v19] Building weather-matched sample (command #9 Step0)...
+[v19] Restricting to the locked_temporal_test date block [2023-09-30, 2024-03-31]...
+[v19] Weather-matched sample: 121313 -> 23649 in locked window.
+[v3_validation] Step 1: checking LAD21CD coverage in the weather-matched sample...
+[v3_validation] Step 1 done: gap-filled 25 events, 25 still missing.
+[v19] Holdout complete-predictor sample: n=22913.
+[v19] Verified: holdout date range [2023-09-30 00:00:00, 2024-03-31 00:00:00] within locked window.
+[v19] Holdout weather_natural+technical_asset sample: n=12114.
+[v19] Holdout E0 n=12113; holdout R0c n=11991 (p99 cap=167.39h).
+[C01-step3/4] CORRECTED final combined sample: WT n=60453, E0 n=60437, R0c n=59834 (p99 cap=192.08h)
+[C01-step3/4] Sample-specific changed-row rates (cf. audit's 13.57%/13.56%): {'combined_e0_n': 60437, 'combined_e0_changed': 8199, 'combined_e0_changed_pct': 13.566192895080828, 'combined_r0c_n': 59834, 'combined_r0c_changed': 8113, 'combined_r0c_changed_pct': 13.559180399104187}
+[C01-step3/4] Fitting corrected E0...
+[C01-step3/4] Fitting corrected R0c...
+[C01-step3/4] CORRECTED E0: beta1=-0.036014, beta2=0.105997, turning point z=0.169884 (10.8072 m/s), Delta CI(ms)=[10.1320,11.4823]
+[C01-step3/4] Bootstrap (500 draws, same seed 20260826) for corrected E0 turning point...
+[v11]   bootstrap 100/500 done
+[v11]   bootstrap 200/500 done
+[v11]   bootstrap 300/500 done
+[v11]   bootstrap 400/500 done
+[v11]   bootstrap 500/500 done
+[C01-step3/4] CORRECTED E0 Bootstrap CI(z)=[-0.1428,0.4263], CI(ms)=[9.1563,12.1609], n_failed=0
+[C01-step3/4] Saved raw/step4_corrected_model_summary.json, step4_E0/R0c_corrected_full_coefs.csv
+[C01-step3/4] === Steps 3-4 complete ===

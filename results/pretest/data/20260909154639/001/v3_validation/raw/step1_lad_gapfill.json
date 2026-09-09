@@ -1,0 +1,11 @@
+{
+  "n_events_in_sample": 23649,
+  "n_missing_LAD21CD_before": 25,
+  "missing_LAD21CD_before_pct": 0.10571271512537528,
+  "gapfill_performed": true,
+  "n_events_attempted_gapfill": 25,
+  "n_events_no_coordinates": 0,
+  "n_events_sjoin_matched": 0,
+  "n_events_sjoin_outside_boundary": 25,
+  "n_missing_LAD21CD_after": 25
+}

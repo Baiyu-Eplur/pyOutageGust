@@ -7,6 +7,13 @@ itself never computed a fold-level coefficient stability table for the final
 combined sample (it only reported a single full-sample fit + bootstrap)."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import importlib.util
 import sys
 from pathlib import Path
@@ -14,10 +21,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis")))
+sys.path.insert(0, str(project_path('scripts/final_combined_analysis')))
 from combined_sample_builder import build_combined_samples  # noqa: E402
 
-RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c01_repair_20260905\raw")
+RAW_DIR = result_path('c01_repair_20260905/raw')
 
 
 def log_step(msg):
@@ -29,7 +36,7 @@ def main():
     _, combined_e0, combined_r0cb, _ = build_combined_samples()
     log_step(f"Original combined E0 n={len(combined_e0)}, R0c n={len(combined_r0cb)}")
 
-    sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\v3_validation")))
+    sys.path.insert(0, str(project_path('scripts/v3_validation')))
     import v3_validation_pipeline as v9  # noqa: E402
 
     from sklearn.model_selection import GroupKFold
@@ -69,7 +76,7 @@ def main():
 
     spec14 = importlib.util.spec_from_file_location(
         "variance_decomposition_pipeline",
-        r"D:\Pyprogramme\STST2603\claude_branch\scripts\variance_decomposition\variance_decomposition_pipeline.py")
+        str(project_path('scripts/variance_decomposition/variance_decomposition_pipeline.py')))
     v14 = importlib.util.module_from_spec(spec14)
     spec14.loader.exec_module(v14)
 

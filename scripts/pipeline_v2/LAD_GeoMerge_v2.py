@@ -1,3 +1,10 @@
+
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
 #这是我准备的LAD地理信息因素的合并最后一步，把LAD表格合并到总表格中。
 import pandas as pd
 from pathlib import Path
@@ -6,7 +13,7 @@ from pathlib import Path
 # 路径
 # =========================================
 BASE = Path(__file__).resolve().parent
-DATA = BASE / "data"
+DATA = data_path()
 
 MASTER_FILE = DATA / "new//ukpn_master_final.csv"
 LAD_FILE = DATA / "Local_Authority_Districts_December_2021_UK_BGC_2022" / "LAD_full_dataset_with_dno.csv"
@@ -16,8 +23,8 @@ OUTPUT_FILE = DATA / "new//ukpn_master_with_lad_features.csv"
 # =========================================
 # 读取数据
 # =========================================
-master = pd.read_csv(MASTER_FILE, low_memory=False)
-lad = pd.read_csv(LAD_FILE, low_memory=False)
+master = pd.read_csv(read_input(MASTER_FILE), low_memory=False)
+lad = pd.read_csv(read_input(LAD_FILE), low_memory=False)
 
 print("Master shape:", master.shape)
 print("LAD shape:", lad.shape)

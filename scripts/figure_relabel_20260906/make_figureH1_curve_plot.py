@@ -4,17 +4,24 @@ ONLY change: panel annotation text "Exposure margin (E0)" / "Recovery margin
 Data unchanged (reuses the already-saved a3_curves_*.csv files)."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import pandas as pd
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis")))
+sys.path.insert(0, str(project_path('scripts/final_combined_analysis')))
 from figure_style import apply_style, mm_to_in, save_fig, panel_label, DOUBLE_COL_MM  # noqa: E402
 
-RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\appendix_h_20260906\raw")
-FIG_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\figure_relabel_20260906\figures")
+RAW_DIR = result_path('appendix_h_20260906/raw')
+FIG_DIR = result_path('figure_relabel_20260906/figures')
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 COLORS = {"quad": "#333333", "spline4": "#1b9e77", "ushape": "#d95f02", "softplus": "#7570b3"}
@@ -32,7 +39,7 @@ def main():
             axes, ["E0", "R0c"],
             ["Exposure margin", "Recovery margin"],
             ["log(1 + affected customers)", "log(restoration duration)"]):
-        df = pd.read_csv(RAW_DIR / f"a3_curves_{target}.csv")
+        df = pd.read_csv(read_input(RAW_DIR / f"a3_curves_{target}.csv"))
         for model in ["quad", "spline4", "ushape", "softplus"]:
             sub = df[df.model == model].sort_values("gust_ms")
             ax.plot(sub["gust_ms"], sub["pred_log"], color=COLORS[model], linewidth=1.3, label=LABELS[model])

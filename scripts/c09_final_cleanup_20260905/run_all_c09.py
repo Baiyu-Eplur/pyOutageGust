@@ -4,6 +4,13 @@ build_corrected_combined_samples() step (full corrected sample construction)
 only runs once instead of three times."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import json
 import sys
 from pathlib import Path
@@ -12,10 +19,10 @@ import numpy as np
 import pandas as pd
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\c02_c08_repair_20260905")))
+sys.path.insert(0, str(project_path('scripts/c02_c08_repair_20260905')))
 from corrected_sample_builder import build_corrected_combined_samples, _patch_v9  # noqa: E402
 
-RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c09_final_cleanup_20260905\raw")
+RAW_DIR = result_path('c09_final_cleanup_20260905/raw')
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 TURNING_POINT_MS = 10.80715790164296

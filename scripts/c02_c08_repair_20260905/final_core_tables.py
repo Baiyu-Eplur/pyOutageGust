@@ -8,6 +8,13 @@ outputs rather than recomputing them independently.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import importlib.util
 import json
 import sys
@@ -22,7 +29,7 @@ from statsmodels.stats.sandwich_covariance import cov_cluster, cov_cluster_2grou
 sys.path.insert(0, str(Path(__file__).parent))
 from corrected_sample_builder import _patch_v9, build_corrected_combined_samples  # noqa: E402
 
-RAW_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\c02_c08_repair_20260905\raw")
+RAW_DIR = result_path('c02_c08_repair_20260905/raw')
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 WT_GROUPS = {"weather_natural", "technical_asset"}
@@ -47,7 +54,7 @@ def js(obj):
 def load_v11():
     spec = importlib.util.spec_from_file_location(
         "critical_wind_speed_pipeline",
-        r"D:\Pyprogramme\STST2603\claude_branch\scripts\critical_wind_speed\critical_wind_speed_pipeline.py")
+        str(project_path('scripts/critical_wind_speed/critical_wind_speed_pipeline.py')))
     v11 = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(v11)
     return v11
@@ -164,7 +171,7 @@ def main():
 
     spec14 = importlib.util.spec_from_file_location(
         "variance_decomposition_pipeline",
-        r"D:\Pyprogramme\STST2603\claude_branch\scripts\variance_decomposition\variance_decomposition_pipeline.py")
+        str(project_path('scripts/variance_decomposition/variance_decomposition_pipeline.py')))
     v14 = importlib.util.module_from_spec(spec14)
     spec14.loader.exec_module(v14)
 

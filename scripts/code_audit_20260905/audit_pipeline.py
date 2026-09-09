@@ -7,6 +7,13 @@ All outputs are confined to results/code_audit_20260905.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import ast
 import hashlib
 import json
@@ -16,8 +23,8 @@ from types import SimpleNamespace
 
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[2]
-PROJECT = ROOT.parent
-sys.path.insert(0, str(PROJECT / '.venv/Lib/site-packages'))
+PROJECT = external_path()
+# Use the interpreter selected by main.py.
 import numpy as np
 import pandas as pd
 import scipy
@@ -27,10 +34,10 @@ from scipy import stats
 from sklearn.model_selection import GroupKFold
 from statsmodels.stats.sandwich_covariance import cov_cluster
 
-OUT = ROOT / 'results/code_audit_20260905'
+OUT = result_path('code_audit_20260905')
 OUT.mkdir(parents=True, exist_ok=True)
 assert OUT.resolve().is_relative_to(ROOT.resolve())
-SRC = PROJECT / 'rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv'
+SRC = external_path('rebuild_v3_full_stage/outputs/ukpn_full_stage_dataset_v3.csv')
 C = 'customers_v2_event_excl_reinterruptions'
 D = 'duration_B_full_span_hours'
 ID = 'Incident Reference'
@@ -44,7 +51,7 @@ def write_json(name, obj):
 
 def sha(p):
     h = hashlib.sha256()
-    with p.open('rb') as f:
+    with read_input(p).open('rb') as f:
         for chunk in iter(lambda: f.read(1024 * 1024), b''):
             h.update(chunk)
     return h.hexdigest()
@@ -52,7 +59,7 @@ def sha(p):
 
 def load_pure(path, names, env):
     """Execute named definitions only, excluding imports and all top-level I/O."""
-    tree = ast.parse(path.read_text(encoding='utf-8-sig'))
+    tree = ast.parse(read_input(path).read_text(encoding='utf-8-sig'))
     selected = [n for n in tree.body if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef)) and n.name in names]
     assert {n.name for n in selected} == set(names)
     exec(compile(ast.Module(body=selected, type_ignores=[]), str(path), 'exec'), env)
@@ -65,7 +72,7 @@ def inventory():
     files = [p for p in files if 'code_audit_20260905' not in p.parts]
     items = []
     for p in sorted(files):
-        source = p.read_text(encoding='utf-8-sig')
+        source = read_input(p).read_text(encoding='utf-8-sig')
         try:
             tree = ast.parse(source)
             funcs = [{'name': n.name, 'line': n.lineno, 'end': n.end_lineno} for n in ast.walk(tree) if isinstance(n, ast.FunctionDef)]
@@ -85,10 +92,10 @@ def inventory():
 
 def source_and_samples():
     print('Reading raw stages and selected v3 columns', flush=True)
-    raw = pd.read_csv(PROJECT / 'data/ukpn-iis.csv', dtype=str, keep_default_na=False)
+    raw = pd.read_csv(read_input(PROJECT / 'data/ukpn-iis.csv'), dtype=str, keep_default_na=False)
     extras = [C, D, 'duration_A_customer_weighted_hours', 'weather_status_v3', 'cause_group_official', 'LAD21CD', 'population', 'income_deprivation_rate', 'deprivation_gap_pct', 'morans_i', 'rural_urban_classification', 'incident_date_utc', 'clean_start', 'wx_time_used_utc', 'incident_hour_in_window_24h', 'stage_row_count', 'source_row_number'] + WEATHER
     cols = list(dict.fromkeys(list(raw.columns) + extras))
-    stage = pd.read_csv(SRC, usecols=cols, dtype={c: str for c in raw.columns}, keep_default_na=False, low_memory=False)
+    stage = pd.read_csv(read_input(SRC), usecols=cols, dtype={c: str for c in raw.columns}, keep_default_na=False, low_memory=False)
     source_equal = {c: bool(raw[c].equals(stage[c])) for c in raw.columns}
     for c in extras:
         if c not in {'weather_status_v3','cause_group_official','LAD21CD','rural_urban_classification','incident_date_utc','clean_start','wx_time_used_utc'}:
@@ -173,7 +180,7 @@ def replicate(samples):
         tab.to_csv(OUT/f'{label}_full_coefficients.csv',index=False)
         old=archives/f"step1_{'R0c' if recovery else 'E0'}_final_full_coefs.csv"
         if label.startswith('main'):
-            baseline=pd.read_csv(old).set_index('term');now=tab.set_index('term')
+            baseline=pd.read_csv(read_input(old)).set_index('term');now=tab.set_index('term')
             comparisons.append({'sample':label,'archive':str(old),'max_abs_coef_diff':float((now['coefficient']-baseline['coefficient']).abs().max()),'max_abs_se_diff':float((now['std_error']-baseline['std_error']).abs().max())})
         all_fit.append({'sample':label,'n':len(d),'columns':X.shape[1],'rank':int(np.linalg.matrix_rank(X)),'r2_in_sample':float(fit.rsquared),'gust_mean':float(d['gust_0h'].mean()),'gust_sd':float(d['gust_0h'].std()),'physical_minimum_at_mean_pressure':float(d['gust_0h'].mean()-d['gust_0h'].std()*fit.params['z_gust_0h']/(2*fit.params['z_gust_0h_sq']))})
         # Verify gap is not an affine copy of the deprivation rate in model inputs.
@@ -216,7 +223,7 @@ def replicate(samples):
     # Compare pooled scores directly with archived nested sequences.
     rows=[]
     for label,prefix in [('main_E0','step2_E0_variance_decomposition.csv'),('weather_E0','step17_E0_variance_decomposition.csv'),('main_R0c','step2_R0c_order_gust_then_customers.csv'),('weather_R0c','step17_R0c_order_gust_then_customers.csv')]:
-        old=pd.read_csv(archives/prefix)
+        old=pd.read_csv(read_input(archives/prefix))
         lookup={'baseline':'regional_time','nongust_weather':'B','gust':'BG','customers':'BGC'}
         for _,row in old.iterrows():
             b=lookup[row['step']];new=next(z for z in all_metrics if z['sample']==label and z['block']==b)

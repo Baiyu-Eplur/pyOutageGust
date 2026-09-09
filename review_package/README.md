@@ -14,6 +14,10 @@ functional form and estimation method were retained.
 
 ## Files
 
+2026-09-09 入口调整后，下表中的 `results/` 路径为历史路径，已有文件已归档到
+`../results/pretest/archive/20260909154556/review_package/results/`。
+新的回归结果进入 `../results/pretest/models/<YYYYMMDDHHMMSS>/<步骤序号>/review_package/regression/`。
+
 | Path | Contents |
 |---|---|
 | `code/run_main_regression.py` | Model fitting and output |
@@ -30,17 +34,17 @@ functional form and estimation method were retained.
 
 ## Run
 
-The original verification used Python 3.12.6. From the package directory:
+在项目根目录 `main.py` 中填写运行目的，开启 `review_package/run_main_regression`，然后运行：
 
 ```sh
-python -m pip install -r requirements.txt
-python code/run_main_regression.py
+conda activate pyoutagegust
+python main.py
 ```
 
-The script resolves paths relative to its own location, reads the two supplied
-samples and overwrites the four coefficient tables and summary JSON in `results/`.
-No files from the main project are required to run the regression. Construction
-of the analysis samples from raw records is outside this package's scope.
+若需要重新构造样本，同时开启 `model_review_package_20260907/materialize_final_data`。
+否则读取最近成功生成的样本，或复用这里现有的两份静态 CSV。当前代码通过主项目的
+pretest 路径模块运行；不再直接覆盖此目录下的旧结果。原独立交付版本可从
+`pre-review-checkpoint-20260909` Git 标签查阅。
 
 ## Reference output
 

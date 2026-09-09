@@ -1,0 +1,9 @@
+{
+  "n_valid": 59834,
+  "distance_correlation_legacy_def_final_sample": 0.44336136994246067,
+  "distance_correlation_perm_p": 0.004975124378109453,
+  "mutual_information_legacy_def_final_sample_nats": 0.45746049892393614,
+  "mutual_information_perm_p": 0.004975124378109453,
+  "mutual_information_z": 237.6968610218571,
+  "n_permutations": 200
+}

@@ -4,6 +4,13 @@ paired side-by-side with command #21's existing gust dose-response curve.
 """
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import importlib.util
 import json
 import sys
@@ -16,11 +23,11 @@ import matplotlib.pyplot as plt
 sys.path.insert(0, str(Path(__file__).parent))
 from combined_sample_builder import build_combined_samples  # noqa: E402
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\dev_sample_decontamination")))
+sys.path.insert(0, str(project_path('scripts/dev_sample_decontamination')))
 from clean_sample_builder import v9  # noqa: E402
 
-V11_SCRIPT = Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\critical_wind_speed\critical_wind_speed_pipeline.py")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis")
+V11_SCRIPT = project_path('scripts/critical_wind_speed/critical_wind_speed_pipeline.py')
+OUT_DIR = result_path('final_combined_analysis')
 RAW_DIR = OUT_DIR / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -116,7 +123,7 @@ def main():
 
     # ---------------- Step 2: paired plot ----------------
     log_step("Loading command #21 Step3's gust dose-response curve for the paired plot...")
-    gust_curve_all = pd.read_csv(OUT_DIR / "03_阵风剂量反应曲线.csv")
+    gust_curve_all = pd.read_csv(read_input(OUT_DIR / "03_阵风剂量反应曲线.csv"))
     gust_curve_r0c = gust_curve_all[gust_curve_all["model"] == "R0c_gust_dose_response"].copy()
     gust_ratio = float(gust_curve_r0c["predicted_level"].max() / gust_curve_r0c["predicted_level"].min())
     log_step(f"Gust (R0c) max/min ratio from command #21 Step3: {gust_ratio:.4f}")

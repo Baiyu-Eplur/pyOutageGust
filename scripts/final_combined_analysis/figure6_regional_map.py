@@ -6,6 +6,13 @@ scale bar + north arrow + GB locator inset, and raised in-figure text to the
 from command #21's original script."""
 from __future__ import annotations
 
+# Shared pretest paths; all execution is dispatched from main.py.
+import sys as _pretest_sys
+from pathlib import Path as _PretestPath
+_pretest_sys.path.insert(0, str(_PretestPath(__file__).resolve().parents[2]))
+from pretest_paths import project_path, result_path, external_path, data_path, read_input
+
+
 import sys
 from pathlib import Path
 
@@ -14,12 +21,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, str(Path(r"D:\Pyprogramme\STST2603\claude_branch\scripts\final_combined_analysis")))
+sys.path.insert(0, str(project_path('scripts/final_combined_analysis')))
 from figure_style import apply_style, add_north_arrow, add_scale_bar, add_locator_inset  # noqa: E402
 
-BOUNDARY_FILE = Path(r"D:\Pyprogramme\STST2603\data\Local_Authority_Districts_December_2021_UK_BGC_2022\LAD_DEC_2021_UK_BGC.shp")
-DATA_CSV = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\04_基线区域差异地图数据.csv")
-OUT_DIR = Path(r"D:\Pyprogramme\STST2603\claude_branch\results\final_combined_analysis\figures")
+BOUNDARY_FILE = external_path('data/Local_Authority_Districts_December_2021_UK_BGC_2022/LAD_DEC_2021_UK_BGC.shp')
+DATA_CSV = result_path('final_combined_analysis/04_基线区域差异地图数据.csv')
+OUT_DIR = result_path('final_combined_analysis/figures')
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -70,11 +77,11 @@ def main():
     apply_style()
 
     log_step(f"Loading existing prediction data from {DATA_CSV} (no recomputation)...")
-    pred_lad = pd.read_csv(DATA_CSV)
+    pred_lad = pd.read_csv(read_input(DATA_CSV))
     log_step(f"n_lads with data: customers={pred_lad['pred_customers_v2'].notna().sum()}, "
               f"duration={pred_lad['pred_duration_B'].notna().sum()}")
 
-    gdf = gpd.read_file(BOUNDARY_FILE)
+    gdf = gpd.read_file(read_input(BOUNDARY_FILE))
     code_col = "LAD21CD" if "LAD21CD" in gdf.columns else [c for c in gdf.columns if "LAD" in c.upper() and "CD" in c.upper()][0]
     gdf = gdf.rename(columns={code_col: "LAD21CD"}) if code_col != "LAD21CD" else gdf
     gdf = gdf.to_crs(epsg=27700)

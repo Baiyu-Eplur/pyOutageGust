@@ -1,9 +1,0 @@
-model,term,n_folds,same_sign_folds,significant_folds,mean_coefficient,coef_cv_pct,all_same_sign
-E0_naive_large_sample,z_gust_0h,5,5,5,-0.03034867641422868,19.296239424316514,True
-E0_naive_large_sample,z_gust_0h_sq,5,5,5,0.0646415496129072,13.537925344888984,True
-R0_naive_large_sample,z_gust_0h,5,5,5,0.031698613727193195,13.264438855986386,True
-R0_naive_large_sample,z_gust_0h_sq,5,5,5,0.043270254148064714,22.765951357530838,True
-R0c_naive_large_sample,z_gust_0h,5,5,5,0.024654674851318024,18.884143190663252,True
-R0c_naive_large_sample,z_gust_0h_sq,5,5,5,0.0681015525446439,13.261114433921318,True
-R0c_naive_large_sample,z_log1p_customers_naive,5,5,5,-0.37486962914810484,1.1243092344984627,True
-R0c_naive_large_sample,z_log1p_customers_naive_sq,5,5,5,-0.13990644578398026,2.1154896072266496,True
