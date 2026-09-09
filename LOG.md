@@ -224,3 +224,7 @@ docs/、results/、test/
 **更正（同一操作内发现并如实记录）**：我在操作时预判"磁盘上的原始 zip 文件本身完全没有被删除或改动"，这个判断是**错的**——`git filter-branch` 在重写完历史后会把当前分支 checkout 到新树，而新树里已经没有这个文件，checkout 因此把工作目录里的这份 zip 一并删除了；紧接着的 `git gc --prune=now` 又清掉了 git 内部残留的 blob，`git fsck --unreachable --dangling` 核实过**已无法通过 git 内部机制恢复**。
 
 好消息是：核实过这个 zip 的 696 个文件与 `paper_revision_work_v2/X02_storm_specialization/runs/X02_20260907_001/` 目录逐一对应（`find runs -type f` 同样是 696 个文件），也就是说**里面的实际内容一份都没有丢**，只是那个额外打包好的 `.zip` 交付件本身（作为一份冗余归档）确实被删掉了，不再存在于磁盘或 git 历史里。如果你需要那个打包好的 zip 文件本身（而不是解压内容），需要重新手动压缩 `runs/X02_20260907_001/` 生成。
+
+**推送结果**：`git remote add origin https://github.com/Baiyu-Eplur/pyOutageGust.git`，`git branch -m master main`（对齐远程默认分支名），`git push -u origin main` 一次性成功（远程仓库此前为空，无需处理冲突）。用 GitHub API 核对过：远程 5 个 commit 的 SHA 与本地完全一致。
+
+按用户要求，把这个刚推送上去的状态记录为**"导师修改前的最终版本"关键节点**：打了标签 `pre-review-checkpoint-20260909` 并 push 到远程；详细的节点记录（时间、项目结构统计、内容概述、已知未处理事项）写在 [`docs/milestones/2026-09-09_pre-review-checkpoint.md`](docs/milestones/2026-09-09_pre-review-checkpoint.md)。
