@@ -1,0 +1,126 @@
+{
+  "combination": "R0c_all",
+  "model_id": "H06",
+  "family": "historical",
+  "cache_key": "f1bb3d196fe6464910248f7a2fc87c4640df0060ca2a4a8542da0dd19b190561",
+  "cache_used": true,
+  "configuration": {
+    "sample": {
+      "combination": "R0c_all",
+      "n": 51173,
+      "lads": 111,
+      "zero_customers": 0,
+      "source": "review_package/data/combined_R0c_final.csv",
+      "source_sha256": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+      "sample_id_sha256": "177c17dcd65b1796342780d7fbde690ecf2a6ab2cace39b356253f6628ac9068",
+      "fold_sha256": "428ec3f84f42728897b3fcd4fbcdef0f6e9f34adfbda81cc13a6fc3ce9a7433c",
+      "response": "log_duration_B_full_span_hours",
+      "filtering": "accepted curated R0c; customers > 0",
+      "scope_filter": "none",
+      "missing_random_folds": 9996
+    },
+    "model": {
+      "model_id": "H06",
+      "family": "historical",
+      "form": "A1_gust_cubic",
+      "original": "A1_gust_cubic"
+    },
+    "seed": 20260908,
+    "code": {
+      "analysis_new/appendix/c_models.py": "fdeb746fc34bec61f0925e115254b7045699f0da8136ea9da567ef50a0c5b128",
+      "analysis_new/model_selection.py": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d",
+      "analysis_new/final_models.py": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310",
+      "analysis_new/weather_only_regression.py": "b7db64e8bd350dfbcabacd3f2ad7d2514ad26a4fb5d7f622d9989072b80ff9bd",
+      "analysis_new/knot_estimation.py": "69c07f14a33db4942cf7e43db19f1de0fe9094088d1488297a05a3a10606bf8f",
+      "analysis_new/plateau_model.py": "672d8ee3fc667b9192f4fe6f40bde033d27306e6298677e51af5e411eb3f3bdd",
+      "analysis_new/basis_solver.py": "ab181c3628721a83aac4d2d2bbe5cd2fbed2074de8ebaa427769f6a1c914cb9a",
+      "analysis_new/appendix/design_adapter.py": "7f4b4ed2c1647f6c759bcb45017c172d008dfe6b9a8abda11d00c5c3b8781529",
+      "completion_numeric_functions": "526809043c66394f7475459011efc84d599587296ea2dc6173fc9b47c98e0fdd"
+    },
+    "sources": {
+      "review_package/data/combined_E0_final.csv": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+      "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+      "analysis_new/model_selection.py": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d",
+      "analysis_new/final_models.py": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310",
+      "analysis_new/weather_only_regression.py": "b7db64e8bd350dfbcabacd3f2ad7d2514ad26a4fb5d7f622d9989072b80ff9bd",
+      "analysis_new/knot_estimation.py": "69c07f14a33db4942cf7e43db19f1de0fe9094088d1488297a05a3a10606bf8f",
+      "analysis_new/plateau_model.py": "672d8ee3fc667b9192f4fe6f40bde033d27306e6298677e51af5e411eb3f3bdd",
+      "analysis_new/basis_solver.py": "ab181c3628721a83aac4d2d2bbe5cd2fbed2074de8ebaa427769f6a1c914cb9a",
+      "results/new/20260909183317/results/model_selection/E0_model_comparison.csv": "5be68241e8581134a3ef3f54cebe6e5152c73db65e6be184c04aff4aafd3fc8a",
+      "results/new/20260909183317/results/model_selection/E0_coefficients.xlsx": "d889100fd6c2b0de04260114f1ad100655fb3e496643023c28759bdb4b0f6ea5",
+      "results/new/20260909183317/results/model_selection/knots.json": "af506c6ec5b9ba4c3f3450bf88a02afb87e4116f798233bb5920341c95f5bb3b",
+      "results/new/20260909183317/results/model_selection/ramp_model.json": "ce9f95991d1f2d96e084103021153f1c5be63e833f923ae8564b8562b3083623",
+      "results/new/20260909183317/results/model_selection/ramp_model_R0c.json": "521d363cc4e001e8ff10ae47605d31591014f5f846447bfa9fee1577ae64e3ef",
+      "results/new/20260909183317/results/final_models/final_summary.json": "3432d0bdbd3a6ccfb3a689613c8483dde5ad26489f49f960a37a9f9abe264741",
+      "results/new/20260909183317/results/weather_only/weather_only_summary.json": "286b36e35231108b8403bda654ec05e2d41550001797fd365e39b98e086ec555",
+      "results/new/20260909183317/results/final_models/E0_final_twoway.csv": "491c75aea00d6a4a60a04026978eba65072e1576e0974dfaa211c96954487f94",
+      "results/new/20260909183317/results/final_models/R0c_final_twoway.csv": "0dab57b08504cba609ca93c282fa3ccf8b1bde92a9b679286efd965255cb54a2",
+      "results/new/20260909183317/results/weather_only/E0_weather_paper_twoway.csv": "3127bb1e88f37f2ad617beb4ae89d56175f088a1e7dbd032f7a2be7823366632",
+      "results/new/20260909183317/results/weather_only/E0_weather_hinge_twoway.csv": "f0f47980a4cebdda9722e7d7180e29a7b9f54035179d8018b6fa7f158c3c35ac",
+      "results/new/20260909183317/results/weather_only/E0_weather_final_twoway.csv": "994d2218bae8a395f72905e708e6f34763ea5990285d5792bf9de0ea890c400a",
+      "results/new/20260909183317/results/weather_only/R0c_weather_paper_twoway.csv": "aff72a4663243d0d92816628206ca830c55fcf12ca84a01d4600d213207e554e",
+      "results/new/20260909183317/results/weather_only/R0c_weather_hinge_twoway.csv": "cb846e2ab94541dc74843302eee67fd1da910eeebd1cad64a03be57f70afb9e8",
+      "results/new/20260909183317/results/weather_only/R0c_weather_final_twoway.csv": "ba69ee5391716b3273a38bb6203da0781b63623dd49be5491a2addf89f7ba220"
+    },
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "statsmodels": "0.14.6"
+  },
+  "metrics": [
+    {
+      "prediction_type": "in_sample",
+      "n": 51173,
+      "k": 29,
+      "sse": 67325.00224613195,
+      "aic": 159318.44117994653,
+      "bic": 159574.88723246384,
+      "r2": 0.11246938264488582,
+      "adj_r2": 0.11198348288565807,
+      "rmse": 1.147011439412,
+      "n_columns": 29,
+      "knots": "[]",
+      "component_action": "REFIT",
+      "source": "APP-C-COMPLETE",
+      "predictions_saved": true,
+      "knots_mode": "none_or_fixed10.8"
+    },
+    {
+      "prediction_type": "LAD_OOF",
+      "n": 51173,
+      "rmse": 1.1506572683661096,
+      "component_action": "REFIT",
+      "source": "APP-C-COMPLETE",
+      "predictions_saved": true,
+      "knots_mode": "none_or_fixed10.8"
+    },
+    {
+      "prediction_type": "random_OOF",
+      "n": 41177,
+      "rmse": 1.1566256124256764,
+      "component_action": "REFIT",
+      "source": "APP-C-COMPLETE",
+      "predictions_saved": true,
+      "knots_mode": "none_or_fixed10.8"
+    },
+    {
+      "prediction_type": "year_holdout",
+      "n": 51173,
+      "rmse": 1.1729701033291584,
+      "component_action": "REFIT",
+      "source": "APP-C-COMPLETE",
+      "predictions_saved": true,
+      "knots_mode": "none_or_fixed10.8"
+    }
+  ],
+  "files": {
+    "coefficients.csv": "c4ada2cf2795fda3ea8cb472e271550ddf2b6e6a5db56363794adf9109a1916b",
+    "in_sample.csv.gz": "4607e76e35770ce1a5bbc195f2fda19e5530e03506fdf73d9da4ea583f81d9e3",
+    "LAD_OOF.csv.gz": "a5be0ee2af786624716ff07a9564326671b910f329a8b5670a869cc9ba03c1b5",
+    "LAD_OOF_folds.csv": "ce621d415250a796f041faf8d776dedccc19433a721cdbfcc6349f3ffbf2899c",
+    "preprocessing.json": "526fa4bf8057ea774e7759af1b7f014419798ab913ab46a32d831cdd915c49b1",
+    "random_OOF.csv.gz": "e2ca576fe2f3c0d6dbe56b3e350965a8bc4ee3836baa1d112de53785042eac57",
+    "random_OOF_folds.csv": "be1f796e174cca53fa476ee8ee3c11f7a4d6605e256215a8ac7ba70d427f4cbe",
+    "year_holdout.csv.gz": "fd15383bcd23b249535a1e9dab2451421a6aaaf8da27a4ac514edd86bc22ad80",
+    "year_holdout_folds.csv": "dcd8b8ad42cae887ca7c134d832effe0905305819029e5ff347050ce59eaf832"
+  }
+}

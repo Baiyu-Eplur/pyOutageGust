@@ -1,0 +1,97 @@
+{
+  "status": "FINDINGS",
+  "candidate_sha256": "bb8c72733ec15f6a3f4e6b76c092952a817cea352ca86e4c3f7b360a85da45f6",
+  "profile_loaded": true,
+  "findings": [
+    {
+      "code": "PROSE007",
+      "artifact": "APP-WRITE-AE exact delivery candidate",
+      "match": "syntactic dash punctuation",
+      "count": 40,
+      "message": "review em/en dash punctuation in context; retain when functional, not by default"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-WRITE-AE exact delivery candidate",
+      "match": "Weather-related, Asset-related, Third-party, weather-attributed",
+      "count": 4,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-WRITE-AE exact delivery candidate",
+      "match": "Asset-related, Weather-related, Asset-related, Weather-related, affected-customer",
+      "count": 5,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-WRITE-AE exact delivery candidate",
+      "match": "all-incident, all-incident, weather-attributed, weather-attributed",
+      "count": 4,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-WRITE-AE exact delivery candidate",
+      "match": "training-quantile, two-hinge, training-quantile, main-function, non-gust",
+      "count": 5,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-WRITE-AE exact delivery candidate",
+      "match": "All-incident, All-incident, Weather-attributed, Weather-attributed, all-incident, all-incident",
+      "count": 6,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-WRITE-AE exact delivery candidate",
+      "match": "All-incident, Weather-attributed, Weather-attributed, Weather-attributed, All-incident, Weather-attributed, Weather-attributed, Weather-attributed",
+      "count": 8,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-WRITE-AE exact delivery candidate",
+      "match": "All-incident, Full-sample, All-incident, Full-sample, Weather-attributed, Full-sample, Weather-attributed, Full-sample, all-incident, matched-control",
+      "count": 10,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-WRITE-AE exact delivery candidate",
+      "match": "All-incident, All-incident, Weather-attributed, Weather-attributed, All-incident, All-incident, Weather-attributed, Weather-attributed, all-incident",
+      "count": 9,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-WRITE-AE exact delivery candidate",
+      "match": "weather-attributed, weather-attributed, weather-attributed, weather-attributed, all-incident, full-sample",
+      "count": 6,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-WRITE-AE exact delivery candidate",
+      "match": "low-segment, low-segment, low-segment, lower-segment",
+      "count": 4,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    }
+  ],
+  "manual_checks_required": [
+    "paragraph contract and adjacent-paragraph flow",
+    "claim scope and preservation of locked meaning",
+    "functional transitions and cumulative information flow",
+    "literature-example ordering from broad context to the closest precedent and gap, or another explicit evidentiary logic",
+    "function-preserving concision and sentence rhythm",
+    "natural scholarly subjects, syntax, and disciplinary accessibility",
+    "reader accessibility, including nonessential field shorthand, transition templates, and indirect verbs",
+    "claim-to-citation support and reference-list changes",
+    "observable stock or AI-like prose features without authorship inference",
+    "dash and hyphen style, including grammatical role, established open compounds, density, and suspended compounds",
+    "necessary technical repetition versus avoidable restatement"
+  ]
+}

@@ -1,0 +1,15 @@
+﻿item,value
+url,https://archive-api.open-meteo.com/v1/archive
+model,era5
+field,wind_gusts_10m
+unit,m/s
+timezone,GMT
+start,2021-04-01
+end,2024-03-31
+daily_aggregation,Maximum of 24 hourly wind_gusts_10m values per GMT day
+LAD_centroids,111
+distinct_returned_grid_coordinates,52
+panel_rows,121656
+coverage_complete_record,True
+spatial_definition,December 2021 LAD geometric centroid queried at nearest returned ERA5 cell; differs from main incident-coordinate mean location
+interpretation,"ERA5 reanalysis at centroid nearest cell, not station truth or LAD-wide maximum."

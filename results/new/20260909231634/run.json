@@ -1,0 +1,428 @@
+{
+  "started_at": "2026-09-09T23:16:34.281765+01:00",
+  "purpose": "DD-AGG01：固定 ERA5 网格、标签、模型与 LAD 折号，比较五种日度阵风聚合",
+  "status": "completed",
+  "switches": {
+    "baseline": 0,
+    "model_selection": 0,
+    "hinge_search": 0,
+    "knot_estimation": 0,
+    "plateau_E0": 0,
+    "plateau_R0c": 0,
+    "select_final_knots": 0,
+    "plot_model_selection": 0,
+    "fragility_demo": 0,
+    "fragility_surfaces": 0,
+    "final_models": 0,
+    "district_day_fragility": 0,
+    "weather_only_regression": 0,
+    "paper_extras": 0,
+    "report_tables": 0,
+    "documents": 0,
+    "p03_p04_grid_weather": 0,
+    "dd_agg01": 1
+  },
+  "settings": {
+    "knot_bootstraps": 500,
+    "plateau_bootstraps": 300,
+    "blas_threads": 1,
+    "p03_p04": {
+      "base_run": "20260909183317",
+      "weather_cache_run": "",
+      "request_interval": 10,
+      "bootstraps": 1000,
+      "min_relative_gain": 0.05
+    },
+    "dd_agg01": {
+      "source_run": "20260909205214"
+    }
+  },
+  "inputs": [
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\review_package\\data\\combined_E0_final.csv",
+      "sha256": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\review_package\\data\\combined_R0c_final.csv",
+      "sha256": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9"
+    }
+  ],
+  "sources": [
+    {
+      "path": "main_new.py",
+      "sha256": "2bcb30392ac47604e54a58a014e4eecdf020b28b01e7b477d461854c3045b84b"
+    },
+    {
+      "path": "pretestmain.py",
+      "sha256": "3769093cf873675126df683d976a919555d0b662fd6e30e2a6eed220f709378d"
+    },
+    {
+      "path": "pretest_paths.py",
+      "sha256": "b107a9d687a1fbaf4d82130785eb6367e2359250d3e29d2629971c01b7dc2e6c"
+    },
+    {
+      "path": "review_package\\code\\run_main_regression.py",
+      "sha256": "f96083218a31b7d46c6b00c3dacc4ccf4927540fc9a184e3fd13f5f17d5d15f8"
+    },
+    {
+      "path": "docs\\Draft.docx",
+      "sha256": "d9366c6d491439ad7d331c4cd7767a582b9962f76d002273168a21bceb37e682"
+    },
+    {
+      "path": "analysis_new\\__init__.py",
+      "sha256": "6e9c5f0cad8931a51b7fb7acb3e57e5b5404dd7873db0198de005146c63b7818"
+    },
+    {
+      "path": "analysis_new\\basis_solver.py",
+      "sha256": "ab181c3628721a83aac4d2d2bbe5cd2fbed2074de8ebaa427769f6a1c914cb9a"
+    },
+    {
+      "path": "analysis_new\\daily_aggregations.py",
+      "sha256": "161239fe26d75759bba058dafb994e3963cddf818be9b0bf57161ae6e7036224"
+    },
+    {
+      "path": "analysis_new\\dd_agg01.py",
+      "sha256": "ebb968d247c824d36208bbe5ccd9c588b81788f8193a71df4fe774d4c6e2bf17"
+    },
+    {
+      "path": "analysis_new\\dd_agg01_evaluation.py",
+      "sha256": "772f322d417eb39a3f8a561b00bcdd89d519303cb6eeb19bd9f55007af59ff16"
+    },
+    {
+      "path": "analysis_new\\dd_agg01_report.py",
+      "sha256": "c5cdba2558c9349adaff68602660576ab5f816950715bd664f4e277e4d5f418b"
+    },
+    {
+      "path": "analysis_new\\district_day_core.py",
+      "sha256": "837334b479bc5cc12433c1fd9af006abf19bba789340e509721605914c5e6121"
+    },
+    {
+      "path": "analysis_new\\district_day_fragility.py",
+      "sha256": "da695df1697e7cc1bce6d5846b9a306b79c263898175c23ae33d6a7b2fcf4f7b"
+    },
+    {
+      "path": "analysis_new\\document_plan.py",
+      "sha256": "3396d0f4af90d582de1d054d9c2368d466f4c383f93018160d4a43f87017a019"
+    },
+    {
+      "path": "analysis_new\\documents.py",
+      "sha256": "188350ade4add00164ca83e144fd99a0eb5ef85f5dcb385451972ff02426a1bd"
+    },
+    {
+      "path": "analysis_new\\final_models.py",
+      "sha256": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310"
+    },
+    {
+      "path": "analysis_new\\fragility_demo.py",
+      "sha256": "c16165bceac0b7a71a837606d67c17710a887762cb0f35f195b18778df90a72f"
+    },
+    {
+      "path": "analysis_new\\fragility_optimizer.py",
+      "sha256": "98adee5f7916913a6c858b00765aa26a25d3396665f87eefd32a9af95cbba12b"
+    },
+    {
+      "path": "analysis_new\\fragility_surfaces.py",
+      "sha256": "c3367c1d843f5ef7aeec6e0281a68b16544649f01b071b16ec0cd7bdce65906c"
+    },
+    {
+      "path": "analysis_new\\grid_fragility_validation.py",
+      "sha256": "1ec3ffbcd9a1e1a86fd2339bf8b1c8d9b42e062cd3e1531c41ee7ed427c18634"
+    },
+    {
+      "path": "analysis_new\\grid_weather.py",
+      "sha256": "ca884fb1aa19e57952f7bf218d9b4fcff6ae549ba30691759cf7c1853c03fb6b"
+    },
+    {
+      "path": "analysis_new\\hinge_search.py",
+      "sha256": "1a7a32494ba491d4bfdd75b8b9bdc44d7ca9d73b11eef822759fcea932e68987"
+    },
+    {
+      "path": "analysis_new\\knot_estimation.py",
+      "sha256": "69c07f14a33db4942cf7e43db19f1de0fe9094088d1488297a05a3a10606bf8f"
+    },
+    {
+      "path": "analysis_new\\model_selection.py",
+      "sha256": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d"
+    },
+    {
+      "path": "analysis_new\\p03_p04_grid_weather.py",
+      "sha256": "c5f8c88ae3d5e2a45d5df761e3273b88e3ac96206405a79c49c4bd5a95ac1261"
+    },
+    {
+      "path": "analysis_new\\paper_extras.py",
+      "sha256": "a6699f2b0ae820d0a5766041b1db217185c70cc931452686ee953595e7075b70"
+    },
+    {
+      "path": "analysis_new\\plateau_model.py",
+      "sha256": "672d8ee3fc667b9192f4fe6f40bde033d27306e6298677e51af5e411eb3f3bdd"
+    },
+    {
+      "path": "analysis_new\\plot_model_selection.py",
+      "sha256": "5a0c8ce85b0f3228c773f51b78b12a72e538c33ce377a92186de0ccd0d53e392"
+    },
+    {
+      "path": "analysis_new\\report_tables.py",
+      "sha256": "3e4055f5b42618f9bada05fc5ff717d24e939ba0b3279cc22f37b7d565cd6d60"
+    },
+    {
+      "path": "analysis_new\\runner.py",
+      "sha256": "dcdf4db46e7e23fce3c64a691fd04e82bb2a3bfb8568d68f43c08336c7f9c8d5"
+    },
+    {
+      "path": "analysis_new\\runtime.py",
+      "sha256": "f7dc6fd8588c5206752d9a22df807f9c11f3c351d73748bd5d3bbad5a899c90f"
+    },
+    {
+      "path": "analysis_new\\select_final_knots.py",
+      "sha256": "6328eca03219a1f8e39408e19be097098829ad85fe2cf1fb3dd37aefac3522ee"
+    },
+    {
+      "path": "analysis_new\\weather_only_regression.py",
+      "sha256": "b7db64e8bd350dfbcabacd3f2ad7d2514ad26a4fb5d7f622d9989072b80ff9bd"
+    },
+    {
+      "path": "analysis_new\\build_doc.js",
+      "sha256": "4098be3a02cc634a64e360c63f47af73c597a9ba969c09728f5c1bde5976ac7d"
+    },
+    {
+      "path": "analysis_new\\build_papers.js",
+      "sha256": "e1f6c70a10c9e6333e219017c98c5b4cc4f73b9403073c3f156b298dc79b3ecd"
+    }
+  ],
+  "environment": {
+    "python": "3.12.6 | packaged by Anaconda, Inc. | (main, Oct  3 2024, 07:22:25) [MSC v.1929 64 bit (AMD64)]",
+    "executable": "C:\\Users\\haoya\\.conda\\envs\\pyoutagegust\\python.exe",
+    "packages": {
+      "numpy": "2.4.3",
+      "pandas": "3.0.1",
+      "scipy": "1.17.1",
+      "statsmodels": "0.14.6",
+      "matplotlib": "3.10.8",
+      "openpyxl": "3.1.5"
+    }
+  },
+  "reuse_run": "",
+  "steps": [
+    {
+      "stage": "dd_agg01",
+      "status": "completed",
+      "started_at": "2026-09-09T23:16:34.358310+01:00",
+      "returncode": 0,
+      "seconds": 147.985,
+      "finished_at": "2026-09-09T23:19:02.349040+01:00"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "results/dd_agg01/aggregation_correlation.csv",
+      "bytes": 576,
+      "sha256": "ed6e8b40a60515eaeb607cf72af94b0fd355312a987ce950720c227756407d9c"
+    },
+    {
+      "path": "results/dd_agg01/aggregation_summary.csv",
+      "bytes": 862,
+      "sha256": "a19723b8e274618eac3174c83551d768bf069f0be365b472bbce7500dd1be574"
+    },
+    {
+      "path": "results/dd_agg01/baseline_repair_comparison.csv",
+      "bytes": 11576,
+      "sha256": "e3f631c7b1b6b139c47201c9430cc8ec124d71c5422f6630552a130e349295c3"
+    },
+    {
+      "path": "results/dd_agg01/calibration_bins.csv",
+      "bytes": 55279,
+      "sha256": "121f607c711016979165a1a380b28cd398bbcfc458e19d1c4eeb5809d5133791"
+    },
+    {
+      "path": "results/dd_agg01/calibration_edges.json",
+      "bytes": 2660,
+      "sha256": "c8f1d380dbe3fc92933163a00848dc07705f67296aebc092d74ade10727da9bd"
+    },
+    {
+      "path": "results/dd_agg01/daily_aggregations.csv.gz",
+      "bytes": 1553659,
+      "sha256": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884"
+    },
+    {
+      "path": "results/dd_agg01/data_validation.json",
+      "bytes": 259,
+      "sha256": "6a4c2ff52c0d56d52e85df9934228fc61d2776bdb1c0c9c2a02ce9c1346765a0"
+    },
+    {
+      "path": "results/dd_agg01/execution.jsonl",
+      "bytes": 39372,
+      "sha256": "ed3116e7083175b48ff877e542f51136397b8e3cba5d11c2fa03d67210cc2b80"
+    },
+    {
+      "path": "results/dd_agg01/experiment.json",
+      "bytes": 36623,
+      "sha256": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547"
+    },
+    {
+      "path": "results/dd_agg01/figures/calibration_any_gt0.png",
+      "bytes": 81715,
+      "sha256": "8e4367f6892d0f6c8fd56ad391364d12c4abb72f831a7b6af2ec41b1ef7719af"
+    },
+    {
+      "path": "results/dd_agg01/figures/calibration_any_gt100.png",
+      "bytes": 78584,
+      "sha256": "038dfabf2967ba081854b8c8254c39907214dc90e8b71a804ff582c7398806e6"
+    },
+    {
+      "path": "results/dd_agg01/figures/calibration_any_gt1000.png",
+      "bytes": 81116,
+      "sha256": "7eb4f6c843d3693e0354148d1541e8878dbde46f5c2e846b6d36103f3c96d427"
+    },
+    {
+      "path": "results/dd_agg01/figures/calibration_any_gt5.png",
+      "bytes": 79855,
+      "sha256": "2c611e7b2b7a14d02c2b0168ae81421672950b1e338250075ab68e98f6af394b"
+    },
+    {
+      "path": "results/dd_agg01/figures/calibration_wthr_gt0.png",
+      "bytes": 79449,
+      "sha256": "b8814e27903fbf512b886cd5e9c5c15a7ac29957aa404a20fd9df6352430bf2c"
+    },
+    {
+      "path": "results/dd_agg01/figures/calibration_wthr_gt100.png",
+      "bytes": 78007,
+      "sha256": "fe17c56c9227d495901d39a907917df8240bab6d17e8aabbd6b09173de380578"
+    },
+    {
+      "path": "results/dd_agg01/figures/calibration_wthr_gt1000.png",
+      "bytes": 77486,
+      "sha256": "ed30793e711858782cd0cef0e2f5025e4dd6302ebb24191ec5b5021eb33a3d73"
+    },
+    {
+      "path": "results/dd_agg01/figures/calibration_wthr_gt5.png",
+      "bytes": 78847,
+      "sha256": "c11b91da78da45f2e23c02397a60d8c2f687e8ec8eaaacc96c60b0ecaa5a0c57"
+    },
+    {
+      "path": "results/dd_agg01/figures/occurrence_any_gt0.png",
+      "bytes": 93851,
+      "sha256": "422412e76e30683d3b0f00a36204c8e4db53abeeae67b23da085ccd33d41e430"
+    },
+    {
+      "path": "results/dd_agg01/figures/occurrence_any_gt100.png",
+      "bytes": 94820,
+      "sha256": "baaa17851ea0730227e5f2ea2ac2a05a57f77325cc54bf2f3e2b5ca162fe0d77"
+    },
+    {
+      "path": "results/dd_agg01/figures/occurrence_any_gt1000.png",
+      "bytes": 82235,
+      "sha256": "463cd37bec8557770397397a712054971a10a12df8bfc4bcca2cfc079ea26ed8"
+    },
+    {
+      "path": "results/dd_agg01/figures/occurrence_any_gt5.png",
+      "bytes": 96093,
+      "sha256": "affe20b4841843dc92e3b085253becdabf49832d9cb8fe971f5660d04ca682a5"
+    },
+    {
+      "path": "results/dd_agg01/figures/occurrence_wthr_gt0.png",
+      "bytes": 98771,
+      "sha256": "190db00716d389797b1e324fc6ebcdc928454c977cfe306ad3d5ada706c4ce55"
+    },
+    {
+      "path": "results/dd_agg01/figures/occurrence_wthr_gt100.png",
+      "bytes": 94546,
+      "sha256": "b92b2c9164cb4b3480eabb9ff66e2ac27cfb85667bc23fcf0a259a19c582712b"
+    },
+    {
+      "path": "results/dd_agg01/figures/occurrence_wthr_gt1000.png",
+      "bytes": 78998,
+      "sha256": "c846bc47f2cd07ef8ccf4af5c594d877dbda9b80a6ae5308860419d2f3b97514"
+    },
+    {
+      "path": "results/dd_agg01/figures/occurrence_wthr_gt5.png",
+      "bytes": 96959,
+      "sha256": "bdb1f45e0d35c3a462b5bdf8915be061b376dbfe466ca7e4dc33fd3f54ae1e17"
+    },
+    {
+      "path": "results/dd_agg01/fit_checkpoint.jsonl",
+      "bytes": 4083933,
+      "sha256": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace"
+    },
+    {
+      "path": "results/dd_agg01/fit_summary.csv",
+      "bytes": 113510,
+      "sha256": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b"
+    },
+    {
+      "path": "results/dd_agg01/fold_metrics.csv",
+      "bytes": 27919,
+      "sha256": "ac327d910f476fa426b73b2b85ac4575c231b98bdfc721a1013681c4cf9c5e62"
+    },
+    {
+      "path": "results/dd_agg01/inventory.json",
+      "bytes": 34609,
+      "sha256": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4"
+    },
+    {
+      "path": "results/dd_agg01/MANUSCRIPT_RECORD.md",
+      "bytes": 1999,
+      "sha256": "bd3d9afe76093656d8b1c14ee04d6010e4e46aa48b392a9a36b609e8feee941f"
+    },
+    {
+      "path": "results/dd_agg01/metrics.csv",
+      "bytes": 9012,
+      "sha256": "eb1ebc0a7baff80a947ff65e1bb4d2a5da101bd5f8bd3a1f3d16b559bd74ee16"
+    },
+    {
+      "path": "results/dd_agg01/occurrence_curve_data.csv",
+      "bytes": 598770,
+      "sha256": "71f97a88b1a5cd8758dd073504781cc1cf910f11430ae8eb005e7eeca50dc87a"
+    },
+    {
+      "path": "results/dd_agg01/oof_predictions.csv.gz",
+      "bytes": 33825868,
+      "sha256": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b"
+    },
+    {
+      "path": "results/dd_agg01/optimizer_candidates.csv.gz",
+      "bytes": 289246,
+      "sha256": "0083c7f62bdf9870903cc7392df98cf59e5bd323726f2da4fce3666cb5819b75"
+    },
+    {
+      "path": "results/dd_agg01/paired_uncertainty.csv",
+      "bytes": 4999,
+      "sha256": "61832f93e84720db36775d90a03f16229b06949c0ed9be4448ec1c0981196210"
+    },
+    {
+      "path": "results/dd_agg01/parameters.csv",
+      "bytes": 113510,
+      "sha256": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b"
+    },
+    {
+      "path": "results/dd_agg01/PROTOCOL.md",
+      "bytes": 4225,
+      "sha256": "a9789616355669559ef0b6f6c3a34fd0c40f86087a65ffa1bff92964f1ab98cd"
+    },
+    {
+      "path": "results/dd_agg01/rare_repair_gate.json",
+      "bytes": 6727,
+      "sha256": "93b0cf4190050f38e2dc13032662f6269b26e4c174072d28fab2955e93ef1f40"
+    },
+    {
+      "path": "results/dd_agg01/REPORT.md",
+      "bytes": 21207,
+      "sha256": "58a97aab472792095985250858fb32bafc1af6ae21f2ed373d3850816e3ff9e0"
+    },
+    {
+      "path": "results/dd_agg01/RETURN_TO_CHATGPT.md",
+      "bytes": 21207,
+      "sha256": "58a97aab472792095985250858fb32bafc1af6ae21f2ed373d3850816e3ff9e0"
+    },
+    {
+      "path": "results/dd_agg01/secondary_summary.csv",
+      "bytes": 528,
+      "sha256": "fbe413051ee9c3cf2d49b8daa8047dd64b16d5b27def78a84f8117e3daf2d993"
+    },
+    {
+      "path": "results/dd_agg01/validation.json",
+      "bytes": 3700,
+      "sha256": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199"
+    }
+  ],
+  "finished_at": "2026-09-09T23:19:02.350404+01:00"
+}

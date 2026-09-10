@@ -1,0 +1,11 @@
+{
+  "time": "2026-09-10T19:27:58+01:00",
+  "command": "C:\\Users\\haoya\\.conda\\envs\\pyoutagegust\\python.exe D:\\Pyprogramme\\pyOutageGust\\main_appendix.py --appendices G I --gi-only --render-only-gi",
+  "cached": true,
+  "recomputed": false,
+  "model_components_reused": true,
+  "new_ols_fits": 0,
+  "force": false,
+  "render_only": true,
+  "cache_key": "f1ffadfde04e7e06fa673added6bada123e96b5c50bfb81e8160d6199d1c0654"
+}

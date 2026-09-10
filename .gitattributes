@@ -12,3 +12,15 @@ test/test_new_analysis.py -text
 scripts/**/*.py -text
 review_package/code/*.py -text
 test/test_pretest_entry.py -text
+
+# Appendix manifests and writing checks refer to exact source/output bytes.
+/main_appendix.py -text
+/AGENTS.md -text
+results/Appendix/** -text
+docs/new_analysis/** -text
+test/*.py -text
+/LOG.md -text
+/README.md -text
+/dailylog.md -text
+docs/milestones/** -text
+docs/APPENDIX_PRODUCTION* -text

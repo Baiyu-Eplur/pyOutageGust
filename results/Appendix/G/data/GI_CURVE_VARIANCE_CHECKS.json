@@ -1,0 +1,68 @@
+[
+  {
+    "combination": "E0_all",
+    "model_id": "final",
+    "points": 300,
+    "negative_variance_points": 0,
+    "nonfinite_variance_points": 0,
+    "min_variance": 4.910049643902267e-06,
+    "minimum_cov_eigenvalue": 1.8662396689597236e-06,
+    "clipping": "none",
+    "variance_basis": "uncentred gust component basis; original displayed band rule; shift not propagated"
+  },
+  {
+    "combination": "E0_weather",
+    "model_id": "final",
+    "points": 300,
+    "negative_variance_points": 0,
+    "nonfinite_variance_points": 0,
+    "min_variance": 5.8385071383384505e-05,
+    "minimum_cov_eigenvalue": -9.41676332847944e-06,
+    "clipping": "none",
+    "variance_basis": "uncentred gust component basis; original displayed band rule; shift not propagated"
+  },
+  {
+    "combination": "E0_weather",
+    "model_id": "hinge",
+    "points": 300,
+    "negative_variance_points": 0,
+    "nonfinite_variance_points": 0,
+    "min_variance": 5.846756778090741e-05,
+    "minimum_cov_eigenvalue": -1.5305270786913205e-06,
+    "clipping": "none",
+    "variance_basis": "uncentred gust component basis; original displayed band rule; shift not propagated"
+  },
+  {
+    "combination": "R0c_all",
+    "model_id": "final",
+    "points": 300,
+    "negative_variance_points": 0,
+    "nonfinite_variance_points": 0,
+    "min_variance": 6.5328238058806674e-09,
+    "minimum_cov_eigenvalue": 1.0984861630231442e-06,
+    "clipping": "none",
+    "variance_basis": "uncentred gust component basis; original displayed band rule; shift not propagated"
+  },
+  {
+    "combination": "R0c_weather",
+    "model_id": "final",
+    "points": 300,
+    "negative_variance_points": 0,
+    "nonfinite_variance_points": 0,
+    "min_variance": 0.0017554965895829203,
+    "minimum_cov_eigenvalue": 1.143738801562012e-06,
+    "clipping": "none",
+    "variance_basis": "uncentred gust component basis; original displayed band rule; shift not propagated"
+  },
+  {
+    "combination": "R0c_weather",
+    "model_id": "hinge",
+    "points": 300,
+    "negative_variance_points": 0,
+    "nonfinite_variance_points": 0,
+    "min_variance": 0.0019874553670105213,
+    "minimum_cov_eigenvalue": 1.8624860388669405e-06,
+    "clipping": "none",
+    "variance_basis": "uncentred gust component basis; original displayed band rule; shift not propagated"
+  }
+]

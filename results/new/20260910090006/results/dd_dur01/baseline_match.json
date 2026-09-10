@@ -1,0 +1,338 @@
+{
+  "checked_at": "2026-09-10T09:00:34.150359+01:00",
+  "same_inputs_labels_folds": true,
+  "G_max_error": 0.0,
+  "parameter_constraints_unchanged": true,
+  "scope_matches": [
+    {
+      "target": "wthr_gt1000",
+      "scope": "full",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt1000",
+      "scope": "fold_0",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt1000",
+      "scope": "fold_1",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt1000",
+      "scope": "fold_2",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt1000",
+      "scope": "fold_3",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt1000",
+      "scope": "fold_4",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt0",
+      "scope": "full",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt0",
+      "scope": "fold_0",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt0",
+      "scope": "fold_1",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt0",
+      "scope": "fold_2",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt0",
+      "scope": "fold_3",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt0",
+      "scope": "fold_4",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt5",
+      "scope": "full",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt5",
+      "scope": "fold_0",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt5",
+      "scope": "fold_1",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt5",
+      "scope": "fold_2",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt5",
+      "scope": "fold_3",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt5",
+      "scope": "fold_4",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt100",
+      "scope": "full",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt100",
+      "scope": "fold_0",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt100",
+      "scope": "fold_1",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt100",
+      "scope": "fold_2",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt100",
+      "scope": "fold_3",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt100",
+      "scope": "fold_4",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt1000",
+      "scope": "full",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt1000",
+      "scope": "fold_0",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt1000",
+      "scope": "fold_1",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt1000",
+      "scope": "fold_2",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt1000",
+      "scope": "fold_3",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "any_gt1000",
+      "scope": "fold_4",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt0",
+      "scope": "full",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt0",
+      "scope": "fold_0",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt0",
+      "scope": "fold_1",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt0",
+      "scope": "fold_2",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt0",
+      "scope": "fold_3",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt0",
+      "scope": "fold_4",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt5",
+      "scope": "full",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt5",
+      "scope": "fold_0",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt5",
+      "scope": "fold_1",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt5",
+      "scope": "fold_2",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt5",
+      "scope": "fold_3",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt5",
+      "scope": "fold_4",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt100",
+      "scope": "full",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt100",
+      "scope": "fold_0",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt100",
+      "scope": "fold_1",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt100",
+      "scope": "fold_2",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt100",
+      "scope": "fold_3",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    },
+    {
+      "target": "wthr_gt100",
+      "scope": "fold_4",
+      "nll_absolute_error": 0.0,
+      "max_prediction_error": 0.0
+    }
+  ],
+  "score_matches": [
+    {
+      "target": "any_gt0",
+      "brier": 0.22386934973446987,
+      "absolute_error": 0.0
+    },
+    {
+      "target": "any_gt5",
+      "brier": 0.13722531427289486,
+      "absolute_error": 0.0
+    },
+    {
+      "target": "any_gt100",
+      "brier": 0.05601043629989143,
+      "absolute_error": 0.0
+    },
+    {
+      "target": "any_gt1000",
+      "brier": 0.008233490096094406,
+      "absolute_error": 0.0
+    },
+    {
+      "target": "wthr_gt0",
+      "brier": 0.0453053326894635,
+      "absolute_error": 0.0
+    },
+    {
+      "target": "wthr_gt5",
+      "brier": 0.03313680060636064,
+      "absolute_error": 0.0
+    },
+    {
+      "target": "wthr_gt100",
+      "brier": 0.01898541726272093,
+      "absolute_error": 0.0
+    },
+    {
+      "target": "wthr_gt1000",
+      "brier": 0.002474856739557275,
+      "absolute_error": 0.0
+    }
+  ]
+}

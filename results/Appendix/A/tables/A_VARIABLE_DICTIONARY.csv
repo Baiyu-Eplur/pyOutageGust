@@ -1,0 +1,16 @@
+﻿variable,unit,source,transform_definition,reference_scope
+customers_v2_event_excl_reinterruptions,customers,监管阶段记录,非再中断阶段客户数求和；E0响应ln(1+C),零保留于E0，R0最终排除
+duration_B_full_span_hours,h,监管阶段起止,全部阶段最迟结束减最早开始；R0响应ln(D),恢复输入已有D>0和上端截断，最终再排C=0
+duration_A_customer_weighted_hours,h,监管阶段客户/时长,客户加权时长；只作构造比较,不作为最终恢复响应
+gust_0h,m/s,匹配事件小时ERA5,训练均值/样本SD标准化；E0主效应使用原m/s截断基函数,全体E0结点14/25；天气11/24；交互仍保留
+precipitation_24h_sum,mm,已匹配事件24小时天气,训练均值/样本SD标准化,R0最终含gust×precip
+temperature_0h,deg C,事件小时ERA5,标准化后一次及平方项,最终规格
+pressure_msl_0h,hPa,事件小时ERA5,标准化,E0最终含gust×pressure
+log_population,log(persons),ONS LAD population,人口自然对数,使用输入已保存值
+urban_binary,0/1,LAD城乡分类,文本含urban为1,参考=0
+income_deprivation_rate,source rate,English Indices of Deprivation 2019,发布的LAD收入贫困率,使用输入已保存值
+deprivation_gap_pct,source percentage,English Indices of Deprivation 2019,LAD内收入贫困差距,使用输入已保存值
+morans_i,index,English Indices of Deprivation 2019,LAD贫困空间聚集指标,使用输入已保存值
+incident_year / incident_month,calendar category,输入UTC事件日期,按训练期排序类别的虚拟变量,省略训练最小类别；当前全期year2021、month1
+customers_v2_log1p,log(1+customers),同一事件C,R0协变量先log1p再训练标准化，含平方,不解释为因果恢复效应
+LAD21CD / cv_fold_v3,identifier,December 2021 LAD / 保存折号,区域分组 / 既定随机折,不是连续协变量

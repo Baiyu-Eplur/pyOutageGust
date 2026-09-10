@@ -1,0 +1,100 @@
+{
+  "owner": "main_appendix.py",
+  "appendix": "E",
+  "last_attempt": "2026-09-10T13:17:05+01:00",
+  "status": "success",
+  "update_state": "本次已更新",
+  "requirements": {
+    "E01": "已生成"
+  },
+  "outputs": [
+    {
+      "path": "tables/E_PERIOD_COEFFICIENTS.csv",
+      "sha256": "7695956451fe33e76d0abfd41c5891a8c571825d96bcdcc9e328de4708dfa43b",
+      "bytes": 2148,
+      "requirement_id": "E01",
+      "claim_id": "CL_E01",
+      "source_paths": [
+        "results/new/20260909183317/results/paper/paper_extras.json",
+        "analysis_new/paper_extras.py"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/paper/paper_extras.json": "3ed00f4f19ab19fe3fdf32ad17a79500e13f0eae5262d280f88830d6bcd4090e",
+        "analysis_new/paper_extras.py": "a6699f2b0ae820d0a5766041b1db217185c70cc931452686ee953595e7075b70"
+      },
+      "producer": "analysis_new/paper_extras.py",
+      "export_function": "analysis_new.appendix.exporters.period",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/E_PERIOD_COEFFICIENTS.md",
+      "sha256": "42852c69f4b34b191b48eed6bd8cd2ce8d32cdde0b5c92b4c41da2460c0f8293",
+      "bytes": 2717,
+      "requirement_id": "E01",
+      "claim_id": "CL_E01",
+      "source_paths": [
+        "results/new/20260909183317/results/paper/paper_extras.json",
+        "analysis_new/paper_extras.py"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/paper/paper_extras.json": "3ed00f4f19ab19fe3fdf32ad17a79500e13f0eae5262d280f88830d6bcd4090e",
+        "analysis_new/paper_extras.py": "a6699f2b0ae820d0a5766041b1db217185c70cc931452686ee953595e7075b70"
+      },
+      "producer": "analysis_new/paper_extras.py",
+      "export_function": "analysis_new.appendix.exporters.period",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/E_TEMPORAL_DESIGN.csv",
+      "sha256": "cbd1d4fca3137aea9dccba81c13de3421d7f7075b91d922329bc3300396d6b86",
+      "bytes": 638,
+      "requirement_id": "E01",
+      "claim_id": "CL_E01",
+      "source_paths": [
+        "results/new/20260909183317/results/paper/paper_extras.json",
+        "analysis_new/paper_extras.py"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/paper/paper_extras.json": "3ed00f4f19ab19fe3fdf32ad17a79500e13f0eae5262d280f88830d6bcd4090e",
+        "analysis_new/paper_extras.py": "a6699f2b0ae820d0a5766041b1db217185c70cc931452686ee953595e7075b70"
+      },
+      "producer": "analysis_new/paper_extras.py",
+      "export_function": "analysis_new.appendix.exporters.period",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/E_TEMPORAL_DESIGN.md",
+      "sha256": "3a7108b3eefc27e891319742f004f22b955539e912054f98f275635109f07165",
+      "bytes": 1408,
+      "requirement_id": "E01",
+      "claim_id": "CL_E01",
+      "source_paths": [
+        "results/new/20260909183317/results/paper/paper_extras.json",
+        "analysis_new/paper_extras.py"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/paper/paper_extras.json": "3ed00f4f19ab19fe3fdf32ad17a79500e13f0eae5262d280f88830d6bcd4090e",
+        "analysis_new/paper_extras.py": "a6699f2b0ae820d0a5766041b1db217185c70cc931452686ee953595e7075b70"
+      },
+      "producer": "analysis_new/paper_extras.py",
+      "export_function": "analysis_new.appendix.exporters.period",
+      "configuration": {},
+      "status": "已生成"
+    }
+  ],
+  "managed_files": [
+    "README.md",
+    "logs/execution.log",
+    "logs/validation.json",
+    "manifest.json",
+    "tables/E_PERIOD_COEFFICIENTS.csv",
+    "tables/E_PERIOD_COEFFICIENTS.md",
+    "tables/E_TEMPORAL_DESIGN.csv",
+    "tables/E_TEMPORAL_DESIGN.md"
+  ],
+  "preserved_unmanaged_files": [],
+  "removed_obsolete_managed_files": []
+}

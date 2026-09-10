@@ -1,0 +1,20 @@
+[2026-09-09T20:52:18.036018+01:00] P03/P04 baseline_and_geometry_verified
+[2026-09-09T21:11:16.448980+01:00] P03/P04 complete_hourly_data_aggregated_and_aligned
+[2026-09-09T21:11:17.110416+01:00] P03/P04 data_comparison_and_spatial_loo_saved_before_fits
+fit any_gt0 / proxy
+fit any_gt0 / era5_daily_max
+fit any_gt5 / proxy
+fit any_gt5 / era5_daily_max
+fit any_gt100 / proxy
+fit any_gt100 / era5_daily_max
+fit any_gt1000 / proxy
+fit any_gt1000 / era5_daily_max
+fit wthr_gt0 / proxy
+fit wthr_gt0 / era5_daily_max
+fit wthr_gt5 / proxy
+fit wthr_gt5 / era5_daily_max
+fit wthr_gt100 / proxy
+fit wthr_gt100 / era5_daily_max
+fit wthr_gt1000 / proxy
+fit wthr_gt1000 / era5_daily_max
+[2026-09-09T21:14:43.685814+01:00] P03/P04 both_versions_fitted_and_validated

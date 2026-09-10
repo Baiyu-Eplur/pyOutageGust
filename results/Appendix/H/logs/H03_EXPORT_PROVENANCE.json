@@ -1,0 +1,13 @@
+{
+  "time": "2026-09-10T20:18:39+01:00",
+  "code": {
+    "analysis_new/appendix/h03_completion.py": "936b08811d44e31db59ba398261b40859056fca8d127bc3c0f62ed04378d16e0",
+    "analysis_new/appendix/h03_evidence.py": "f7fc17f020cc077b1db658ba8f36c6664a344dd6fc491e98bafd6a47406da360",
+    "analysis_new/appendix/h03_models.py": "ee35bd8c4aa79490b94b89b1bc1a44ba9739adb631963ef62cb7f880eb8d78b3",
+    "analysis_new/appendix/gi_core.py": "fa4e68001d488bb4417216d3f5425db2361d2d0ec020c1b3017f91754a807735",
+    "analysis_new/appendix/design_adapter.py": "7f4b4ed2c1647f6c759bcb45017c172d008dfe6b9a8abda11d00c5c3b8781529",
+    "analysis_new/appendix/c_models.py": "fdeb746fc34bec61f0925e115254b7045699f0da8136ea9da567ef50a0c5b128"
+  },
+  "cache_key": "4863245f054339d770764c4f12257956ee37fa5723424e0bb5d07ee843cfc2e9",
+  "cache_scope": "all input and statistical code/library/configuration fingerprints; full export code separately recorded; pure comparison/report regenerated"
+}

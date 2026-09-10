@@ -1,0 +1,3 @@
+model,status,action,new_ols_fits,reason
+E0_weather_final,complete,REUSE_C_IN_SAMPLE_AND_FINAL_COEFFICIENTS,0,
+R0c_weather_final,complete,REUSE_C_IN_SAMPLE_AND_FINAL_COEFFICIENTS,0,

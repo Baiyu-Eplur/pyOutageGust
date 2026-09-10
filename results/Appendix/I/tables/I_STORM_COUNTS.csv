@@ -1,0 +1,17 @@
+﻿margin,storm,start,end,n,customers_sum,fraction_of_sample,overlap_rule
+E0,Arwen,2021-11-25,2021-11-28,270,25061,0.0044674619852077373,Inclusive windows; overlapping dates appear in both named rows
+E0,Dudley,2022-02-15,2022-02-17,291,30092,0.0048149312507238945,Inclusive windows; overlapping dates appear in both named rows
+E0,Eunice,2022-02-17,2022-02-19,1659,395470,0.027450071975776428,Inclusive windows; overlapping dates appear in both named rows
+E0,Franklin,2022-02-19,2022-02-22,1132,165963,0.018730248026870955,Inclusive windows; overlapping dates appear in both named rows
+E0,Babet,2023-10-17,2023-10-22,509,56696,0.0084219931498916226,Inclusive windows; overlapping dates appear in both named rows
+E0,Ciaran,2023-10-31,2023-11-03,576,69801,0.0095305855684431721,Inclusive windows; overlapping dates appear in both named rows
+E0,Henk,2024-01-01,2024-01-03,494,68536,0.0081738008173800822,Inclusive windows; overlapping dates appear in both named rows
+E0,UNION_DEDUPLICATED,,,4452,745372,0.073663484289425346,Each incident counted once across all windows
+R0c,Arwen,2021-11-25,2021-11-28,242,25054,0.0047290563383034024,Inclusive windows; overlapping dates appear in both named rows
+R0c,Dudley,2022-02-15,2022-02-17,254,30090,0.0049635549997068765,Inclusive windows; overlapping dates appear in both named rows
+R0c,Eunice,2022-02-17,2022-02-19,1518,394913,0.029664080667539523,Inclusive windows; overlapping dates appear in both named rows
+R0c,Franklin,2022-02-19,2022-02-22,1064,165959,0.020792214644441406,Inclusive windows; overlapping dates appear in both named rows
+R0c,Babet,2023-10-17,2023-10-22,449,56695,0.0087741582475133369,Inclusive windows; overlapping dates appear in both named rows
+R0c,Ciaran,2023-10-31,2023-11-03,466,69592,0.009106364684501593,Inclusive windows; overlapping dates appear in both named rows
+R0c,Henk,2024-01-01,2024-01-03,439,68199,0.0085787426963437746,Inclusive windows; overlapping dates appear in both named rows
+R0c,UNION_DEDUPLICATED,,,3990,744255,0.07797080491665527,Each incident counted once across all windows

@@ -1,0 +1,9 @@
+{
+  "other_managed_outputs": {
+    "logs/execution.log": true,
+    "logs/validation.json": true,
+    "tables/I_STORM_COUNTS.csv": true,
+    "tables/I_STORM_COUNTS.md": true
+  },
+  "all_unchanged": true
+}

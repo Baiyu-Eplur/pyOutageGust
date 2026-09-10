@@ -1,0 +1,3311 @@
+{
+  "A": {
+    "files": {
+      "manifest.json": [
+        15676,
+        1789042623274658600
+      ],
+      "README.md": [
+        3971,
+        1789042623233888100
+      ],
+      "logs\\execution.log": [
+        300,
+        1789042623235349700
+      ],
+      "logs\\validation.json": [
+        257,
+        1789042623235349700
+      ],
+      "tables\\A03_EXISTING_DEFINITION.csv": [
+        443,
+        1789042622444827700
+      ],
+      "tables\\A03_EXISTING_DEFINITION.md": [
+        1075,
+        1789042622448150000
+      ],
+      "tables\\A05_APPENDIXG_TABLE_G1_CORRECTED.csv": [
+        658,
+        1789042623217856700
+      ],
+      "tables\\A05_APPENDIXG_TABLE_G1_CORRECTED.md": [
+        1292,
+        1789042623221934100
+      ],
+      "tables\\A_CAUSE_COUNTS.csv": [
+        554,
+        1789042622110935900
+      ],
+      "tables\\A_CAUSE_COUNTS.md": [
+        1259,
+        1789042622114782800
+      ],
+      "tables\\A_COVARIATE_SUMMARY.csv": [
+        2743,
+        1789042622117181100
+      ],
+      "tables\\A_COVARIATE_SUMMARY.md": [
+        3081,
+        1789042622123192900
+      ],
+      "tables\\A_FINAL_DESIGN_VIF.csv": [
+        8074,
+        1789042623120387900
+      ],
+      "tables\\A_FINAL_DESIGN_VIF.md": [
+        9378,
+        1789042623123393000
+      ],
+      "tables\\A_SAMPLE_FLOW.csv": [
+        615,
+        1789042622105134500
+      ],
+      "tables\\A_SAMPLE_FLOW.md": [
+        1387,
+        1789042622109485700
+      ],
+      "tables\\A_VARIABLE_DICTIONARY.csv": [
+        1866,
+        1789042622343001700
+      ],
+      "tables\\A_VARIABLE_DICTIONARY.md": [
+        2731,
+        1789042622345464400
+      ]
+    },
+    "manifest_sha256": "30a4feb64fcdfe6aa939df894f9c9fdb8578de31b4ef7259b4e6d46e9a5f9226"
+  },
+  "B": {
+    "files": {
+      "manifest.json": [
+        8990,
+        1789042624022194700
+      ],
+      "README.md": [
+        2246,
+        1789042623977001600
+      ],
+      "logs\\execution.log": [
+        187,
+        1789042623977001600
+      ],
+      "logs\\validation.json": [
+        255,
+        1789042623978288100
+      ],
+      "tables\\B03_EXISTING_DEFINITION.csv": [
+        516,
+        1789042623959211200
+      ],
+      "tables\\B03_EXISTING_DEFINITION.md": [
+        1175,
+        1789042623963538300
+      ],
+      "tables\\B_CONSTRUCTION_RULES.csv": [
+        598,
+        1789042623286304000
+      ],
+      "tables\\B_CONSTRUCTION_RULES.md": [
+        1267,
+        1789042623290161900
+      ],
+      "tables\\B_RECOVERY_DEFINITION.csv": [
+        524,
+        1789042623883878800
+      ],
+      "tables\\B_RECOVERY_DEFINITION.md": [
+        1246,
+        1789042623890990000
+      ],
+      "tables\\B_REPRESENTATIVE_REPAIR.csv": [
+        1808,
+        1789042623291244600
+      ],
+      "tables\\B_REPRESENTATIVE_REPAIR.md": [
+        2588,
+        1789042623293645200
+      ]
+    },
+    "manifest_sha256": "f94a58a56856f819d1fa031e736e211171b747d2cc3cef500f02f9e0451abd09"
+  },
+  "C": {
+    "files": {
+      "manifest.json": [
+        3970283,
+        1789050546958642700
+      ],
+      "README.md": [
+        6879,
+        1789050542006252100
+      ],
+      "data\\candidate_definitions.csv": [
+        96850,
+        1789050502105834900
+      ],
+      "data\\component_metrics.csv": [
+        42433,
+        1789050508898182900
+      ],
+      "data\\C_PERFORMANCE_FIGURE.csv": [
+        11704,
+        1789050511212810200
+      ],
+      "figures\\C_GUST_PERFORMANCE.png": [
+        192461,
+        1789050511941423900
+      ],
+      "logs\\APP_C_COMPLETE.md": [
+        6879,
+        1789050542006252100
+      ],
+      "logs\\coverage_before.csv": [
+        51739,
+        1789050502099425900
+      ],
+      "logs\\execution.log": [
+        5010,
+        1789050542007248600
+      ],
+      "logs\\protocol.json": [
+        11568,
+        1789050502093679000
+      ],
+      "logs\\technical_checks.json": [
+        55891,
+        1789050541970073100
+      ],
+      "tables\\C_CANDIDATE_DEFINITIONS.csv": [
+        97015,
+        1789050508904746100
+      ],
+      "tables\\C_CANDIDATE_DEFINITIONS.md": [
+        100433,
+        1789050508936537400
+      ],
+      "tables\\C_COVERAGE_MATRIX.csv": [
+        59936,
+        1789050509159435900
+      ],
+      "tables\\C_COVERAGE_MATRIX.md": [
+        58315,
+        1789050509191958600
+      ],
+      "tables\\C_COVERAGE_OVERVIEW.csv": [
+        689,
+        1789050509204804200
+      ],
+      "tables\\C_COVERAGE_OVERVIEW.md": [
+        1664,
+        1789050509211782500
+      ],
+      "tables\\C_EXISTING_FIXED_AND_D_REFERENCES.csv": [
+        5139,
+        1789050510425169900
+      ],
+      "tables\\C_EXISTING_FIXED_AND_D_REFERENCES.md": [
+        6452,
+        1789050510437468900
+      ],
+      "tables\\C_GUST_FUNCTION_COMPARISON.csv": [
+        11707,
+        1789050509279889800
+      ],
+      "tables\\C_GUST_FUNCTION_COMPARISON.md": [
+        13948,
+        1789050509313499000
+      ],
+      "tables\\C_HISTORICAL_LADDER.csv": [
+        29301,
+        1789050509225829200
+      ],
+      "tables\\C_HISTORICAL_LADDER.md": [
+        30840,
+        1789050509270594900
+      ],
+      "tables\\C_LAD_FE_COMPARISON.csv": [
+        5153,
+        1789050509319533600
+      ],
+      "tables\\C_LAD_FE_COMPARISON.md": [
+        6151,
+        1789050509337931500
+      ],
+      "tables\\C_REFERENCE_COVERAGE.csv": [
+        4060,
+        1789050510489118100
+      ],
+      "tables\\C_REFERENCE_COVERAGE.md": [
+        5176,
+        1789050510497287300
+      ],
+      "tables\\C_SAMPLE_DEFINITIONS.csv": [
+        1551,
+        1789050508941982200
+      ],
+      "tables\\C_SAMPLE_DEFINITIONS.md": [
+        2414,
+        1789050508971912200
+      ],
+      "data\\samples\\E0_all.csv.gz": [
+        763183,
+        1789050489300656100
+      ],
+      "data\\samples\\E0_weather.csv.gz": [
+        142566,
+        1789050492782007500
+      ],
+      "data\\samples\\R0c_all.csv.gz": [
+        932690,
+        1789050495917610400
+      ],
+      "data\\samples\\R0c_weather.csv.gz": [
+        166295,
+        1789050500048202600
+      ],
+      "data\\models\\E0_all\\F01\\coefficients.csv": [
+        1064,
+        1789049860157662900
+      ],
+      "data\\models\\E0_all\\F01\\in_sample.csv.gz": [
+        990437,
+        1789049861388625700
+      ],
+      "data\\models\\E0_all\\F01\\preprocessing.json": [
+        4199,
+        1789049861464547300
+      ],
+      "data\\models\\E0_all\\F01\\result.json": [
+        6458,
+        1789050502710749300
+      ],
+      "data\\models\\E0_all\\F02\\coefficients.csv": [
+        1097,
+        1789049861995607200
+      ],
+      "data\\models\\E0_all\\F02\\in_sample.csv.gz": [
+        991592,
+        1789049863180045900
+      ],
+      "data\\models\\E0_all\\F02\\LAD_OOF.csv.gz": [
+        1022893,
+        1789049866749661800
+      ],
+      "data\\models\\E0_all\\F02\\LAD_OOF_folds.csv": [
+        310,
+        1789049866753772600
+      ],
+      "data\\models\\E0_all\\F02\\preprocessing.json": [
+        30705,
+        1789049866759312500
+      ],
+      "data\\models\\E0_all\\F02\\result.json": [
+        6563,
+        1789050502804863000
+      ],
+      "data\\models\\E0_all\\F03\\coefficients.csv": [
+        1034,
+        1789049867120265600
+      ],
+      "data\\models\\E0_all\\F03\\in_sample.csv.gz": [
+        990682,
+        1789049868055051700
+      ],
+      "data\\models\\E0_all\\F03\\LAD_OOF.csv.gz": [
+        1021259,
+        1789049871257355500
+      ],
+      "data\\models\\E0_all\\F03\\LAD_OOF_folds.csv": [
+        309,
+        1789049871260793000
+      ],
+      "data\\models\\E0_all\\F03\\preprocessing.json": [
+        30064,
+        1789049871264283800
+      ],
+      "data\\models\\E0_all\\F03\\result.json": [
+        6563,
+        1789050502875937500
+      ],
+      "data\\models\\E0_all\\F04\\coefficients.csv": [
+        1131,
+        1789049871652096600
+      ],
+      "data\\models\\E0_all\\F04\\in_sample.csv.gz": [
+        990964,
+        1789049872547181200
+      ],
+      "data\\models\\E0_all\\F04\\LAD_OOF.csv.gz": [
+        1021807,
+        1789049875912184500
+      ],
+      "data\\models\\E0_all\\F04\\LAD_OOF_folds.csv": [
+        311,
+        1789049875916711800
+      ],
+      "data\\models\\E0_all\\F04\\preprocessing.json": [
+        31069,
+        1789049875920327100
+      ],
+      "data\\models\\E0_all\\F04\\result.json": [
+        6560,
+        1789050502946914800
+      ],
+      "data\\models\\E0_all\\F05\\coefficients.csv": [
+        1069,
+        1789049876289107100
+      ],
+      "data\\models\\E0_all\\F05\\in_sample.csv.gz": [
+        991588,
+        1789049877355373600
+      ],
+      "data\\models\\E0_all\\F05\\LAD_OOF.csv.gz": [
+        1022640,
+        1789049880080904100
+      ],
+      "data\\models\\E0_all\\F05\\LAD_OOF_folds.csv": [
+        311,
+        1789049880083738500
+      ],
+      "data\\models\\E0_all\\F05\\preprocessing.json": [
+        30451,
+        1789049880086559800
+      ],
+      "data\\models\\E0_all\\F05\\result.json": [
+        6567,
+        1789050503039649800
+      ],
+      "data\\models\\E0_all\\F06\\coefficients.csv": [
+        1068,
+        1789049880498179300
+      ],
+      "data\\models\\E0_all\\F06\\in_sample.csv.gz": [
+        991358,
+        1789049881366482900
+      ],
+      "data\\models\\E0_all\\F06\\LAD_OOF.csv.gz": [
+        1022132,
+        1789049884291808600
+      ],
+      "data\\models\\E0_all\\F06\\LAD_OOF_folds.csv": [
+        312,
+        1789049884294974600
+      ],
+      "data\\models\\E0_all\\F06\\preprocessing.json": [
+        30535,
+        1789049884300438000
+      ],
+      "data\\models\\E0_all\\F06\\result.json": [
+        6563,
+        1789050503105325300
+      ],
+      "data\\models\\E0_all\\F07\\preprocessing.json": [
+        4255,
+        1789049884486242300
+      ],
+      "data\\models\\E0_all\\F07\\result.json": [
+        6352,
+        1789050503123973800
+      ],
+      "data\\models\\E0_all\\F08\\coefficients.csv": [
+        1055,
+        1789049885489628200
+      ],
+      "data\\models\\E0_all\\F08\\in_sample.csv.gz": [
+        991377,
+        1789049885484333500
+      ],
+      "data\\models\\E0_all\\F08\\preprocessing.json": [
+        4235,
+        1789049885525709300
+      ],
+      "data\\models\\E0_all\\F08\\result.json": [
+        6523,
+        1789050503182198400
+      ],
+      "data\\models\\E0_all\\H01\\coefficients.csv": [
+        197,
+        1789049843993039300
+      ],
+      "data\\models\\E0_all\\H01\\in_sample.csv.gz": [
+        984225,
+        1789049843988197500
+      ],
+      "data\\models\\E0_all\\H01\\preprocessing.json": [
+        3599,
+        1789049844033668400
+      ],
+      "data\\models\\E0_all\\H01\\result.json": [
+        7221,
+        1789050502145141000
+      ],
+      "data\\models\\E0_all\\H02\\coefficients.csv": [
+        231,
+        1789049845204771400
+      ],
+      "data\\models\\E0_all\\H02\\in_sample.csv.gz": [
+        982598,
+        1789049845199248900
+      ],
+      "data\\models\\E0_all\\H02\\preprocessing.json": [
+        3619,
+        1789049845237560600
+      ],
+      "data\\models\\E0_all\\H02\\result.json": [
+        7185,
+        1789050502179398300
+      ],
+      "data\\models\\E0_all\\H03\\coefficients.csv": [
+        269,
+        1789049846506452600
+      ],
+      "data\\models\\E0_all\\H03\\in_sample.csv.gz": [
+        982662,
+        1789049846499602900
+      ],
+      "data\\models\\E0_all\\H03\\preprocessing.json": [
+        3645,
+        1789049846536917300
+      ],
+      "data\\models\\E0_all\\H03\\result.json": [
+        7234,
+        1789050502216823900
+      ],
+      "data\\models\\E0_all\\H04\\coefficients.csv": [
+        459,
+        1789049847616907800
+      ],
+      "data\\models\\E0_all\\H04\\in_sample.csv.gz": [
+        989028,
+        1789049847613839300
+      ],
+      "data\\models\\E0_all\\H04\\preprocessing.json": [
+        3777,
+        1789049847644700500
+      ],
+      "data\\models\\E0_all\\H04\\result.json": [
+        7175,
+        1789050502249895300
+      ],
+      "data\\models\\E0_all\\H05\\coefficients.csv": [
+        1026,
+        1789049848851460300
+      ],
+      "data\\models\\E0_all\\H05\\in_sample.csv.gz": [
+        990239,
+        1789049848846876700
+      ],
+      "data\\models\\E0_all\\H05\\preprocessing.json": [
+        4178,
+        1789049848878929500
+      ],
+      "data\\models\\E0_all\\H05\\result.json": [
+        7219,
+        1789050502294875400
+      ],
+      "data\\models\\E0_all\\H06\\coefficients.csv": [
+        1062,
+        1789049850052277500
+      ],
+      "data\\models\\E0_all\\H06\\in_sample.csv.gz": [
+        991216,
+        1789049850050266300
+      ],
+      "data\\models\\E0_all\\H06\\preprocessing.json": [
+        4198,
+        1789049850080879200
+      ],
+      "data\\models\\E0_all\\H06\\result.json": [
+        7199,
+        1789050502341208000
+      ],
+      "data\\models\\E0_all\\H07\\coefficients.csv": [
+        996,
+        1789049851331524400
+      ],
+      "data\\models\\E0_all\\H07\\in_sample.csv.gz": [
+        990140,
+        1789049851327536600
+      ],
+      "data\\models\\E0_all\\H07\\preprocessing.json": [
+        4157,
+        1789049851364364000
+      ],
+      "data\\models\\E0_all\\H07\\result.json": [
+        7189,
+        1789050502386584200
+      ],
+      "data\\models\\E0_all\\H08\\coefficients.csv": [
+        1028,
+        1789049852732316300
+      ],
+      "data\\models\\E0_all\\H08\\in_sample.csv.gz": [
+        991181,
+        1789049852727333900
+      ],
+      "data\\models\\E0_all\\H08\\preprocessing.json": [
+        4179,
+        1789049852767183800
+      ],
+      "data\\models\\E0_all\\H08\\result.json": [
+        7200,
+        1789050502423476400
+      ],
+      "data\\models\\E0_all\\H09\\coefficients.csv": [
+        1087,
+        1789049854279971800
+      ],
+      "data\\models\\E0_all\\H09\\in_sample.csv.gz": [
+        990263,
+        1789049854275983600
+      ],
+      "data\\models\\E0_all\\H09\\preprocessing.json": [
+        4222,
+        1789049854311541900
+      ],
+      "data\\models\\E0_all\\H09\\result.json": [
+        7194,
+        1789050502455529400
+      ],
+      "data\\models\\E0_all\\H10\\coefficients.csv": [
+        1123,
+        1789049855434538500
+      ],
+      "data\\models\\E0_all\\H10\\in_sample.csv.gz": [
+        990862,
+        1789049855431045500
+      ],
+      "data\\models\\E0_all\\H10\\preprocessing.json": [
+        4244,
+        1789049855463689300
+      ],
+      "data\\models\\E0_all\\H10\\result.json": [
+        7241,
+        1789050502504629800
+      ],
+      "data\\models\\E0_all\\H11\\coefficients.csv": [
+        5003,
+        1789049857696135100
+      ],
+      "data\\models\\E0_all\\H11\\in_sample.csv.gz": [
+        992779,
+        1789049857691034600
+      ],
+      "data\\models\\E0_all\\H11\\preprocessing.json": [
+        6929,
+        1789049857729777600
+      ],
+      "data\\models\\E0_all\\H11\\result.json": [
+        7200,
+        1789050502565404500
+      ],
+      "data\\models\\E0_all\\H12\\coefficients.csv": [
+        835,
+        1789049859156269100
+      ],
+      "data\\models\\E0_all\\H12\\in_sample.csv.gz": [
+        985446,
+        1789049859151437500
+      ],
+      "data\\models\\E0_all\\H12\\preprocessing.json": [
+        4047,
+        1789049859192556000
+      ],
+      "data\\models\\E0_all\\H12\\result.json": [
+        7206,
+        1789050502612767600
+      ],
+      "data\\models\\E0_all\\H13\\preprocessing.json": [
+        4200,
+        1789049859460001100
+      ],
+      "data\\models\\E0_all\\H13\\result.json": [
+        6320,
+        1789050502634104000
+      ],
+      "data\\models\\E0_all\\H14\\preprocessing.json": [
+        4228,
+        1789049859730073400
+      ],
+      "data\\models\\E0_all\\H14\\result.json": [
+        6329,
+        1789050502660828200
+      ],
+      "data\\models\\E0_weather\\F01\\coefficients.csv": [
+        1054,
+        1789049919732000200
+      ],
+      "data\\models\\E0_weather\\F01\\in_sample.csv.gz": [
+        177541,
+        1789049919862146100
+      ],
+      "data\\models\\E0_weather\\F01\\preprocessing.json": [
+        4106,
+        1789049919872393500
+      ],
+      "data\\models\\E0_weather\\F01\\result.json": [
+        6497,
+        1789050504675696100
+      ],
+      "data\\models\\E0_weather\\F02\\coefficients.csv": [
+        1081,
+        1789049920004663100
+      ],
+      "data\\models\\E0_weather\\F02\\in_sample.csv.gz": [
+        177730,
+        1789049920150327200
+      ],
+      "data\\models\\E0_weather\\F02\\LAD_OOF.csv.gz": [
+        182532,
+        1789049921097148100
+      ],
+      "data\\models\\E0_weather\\F02\\LAD_OOF_folds.csv": [
+        301,
+        1789049921100584800
+      ],
+      "data\\models\\E0_weather\\F02\\preprocessing.json": [
+        30135,
+        1789049921102578400
+      ],
+      "data\\models\\E0_weather\\F02\\result.json": [
+        6599,
+        1789050504737910800
+      ],
+      "data\\models\\E0_weather\\F03\\coefficients.csv": [
+        1017,
+        1789049921283867100
+      ],
+      "data\\models\\E0_weather\\F03\\in_sample.csv.gz": [
+        177509,
+        1789049921448337300
+      ],
+      "data\\models\\E0_weather\\F03\\LAD_OOF.csv.gz": [
+        182526,
+        1789049922302733100
+      ],
+      "data\\models\\E0_weather\\F03\\LAD_OOF_folds.csv": [
+        300,
+        1789049922304852100
+      ],
+      "data\\models\\E0_weather\\F03\\preprocessing.json": [
+        29471,
+        1789049922308018700
+      ],
+      "data\\models\\E0_weather\\F03\\result.json": [
+        6598,
+        1789050504803335000
+      ],
+      "data\\models\\E0_weather\\F04\\coefficients.csv": [
+        1119,
+        1789049922468052200
+      ],
+      "data\\models\\E0_weather\\F04\\in_sample.csv.gz": [
+        177794,
+        1789049922605093700
+      ],
+      "data\\models\\E0_weather\\F04\\LAD_OOF.csv.gz": [
+        182547,
+        1789049923498028700
+      ],
+      "data\\models\\E0_weather\\F04\\LAD_OOF_folds.csv": [
+        301,
+        1789049923501018700
+      ],
+      "data\\models\\E0_weather\\F04\\preprocessing.json": [
+        30508,
+        1789049923504009600
+      ],
+      "data\\models\\E0_weather\\F04\\result.json": [
+        6601,
+        1789050504861962200
+      ],
+      "data\\models\\E0_weather\\F05\\coefficients.csv": [
+        1059,
+        1789049923665404200
+      ],
+      "data\\models\\E0_weather\\F05\\in_sample.csv.gz": [
+        177706,
+        1789049923787383800
+      ],
+      "data\\models\\E0_weather\\F05\\LAD_OOF.csv.gz": [
+        182756,
+        1789049924604463800
+      ],
+      "data\\models\\E0_weather\\F05\\LAD_OOF_folds.csv": [
+        302,
+        1789049924608927100
+      ],
+      "data\\models\\E0_weather\\F05\\preprocessing.json": [
+        29887,
+        1789049924612136900
+      ],
+      "data\\models\\E0_weather\\F05\\result.json": [
+        6604,
+        1789050504931620300
+      ],
+      "data\\models\\E0_weather\\F06\\coefficients.csv": [
+        1050,
+        1789049924784113700
+      ],
+      "data\\models\\E0_weather\\F06\\in_sample.csv.gz": [
+        177605,
+        1789049924915918700
+      ],
+      "data\\models\\E0_weather\\F06\\LAD_OOF.csv.gz": [
+        182691,
+        1789049925834622500
+      ],
+      "data\\models\\E0_weather\\F06\\LAD_OOF_folds.csv": [
+        301,
+        1789049925838718700
+      ],
+      "data\\models\\E0_weather\\F06\\preprocessing.json": [
+        29962,
+        1789049925842190200
+      ],
+      "data\\models\\E0_weather\\F06\\result.json": [
+        6604,
+        1789050504990976800
+      ],
+      "data\\models\\E0_weather\\F07\\preprocessing.json": [
+        4162,
+        1789049926002262900
+      ],
+      "data\\models\\E0_weather\\F07\\result.json": [
+        6394,
+        1789050505006679200
+      ],
+      "data\\models\\E0_weather\\F08\\coefficients.csv": [
+        1048,
+        1789049926238366900
+      ],
+      "data\\models\\E0_weather\\F08\\in_sample.csv.gz": [
+        177794,
+        1789049926233701500
+      ],
+      "data\\models\\E0_weather\\F08\\preprocessing.json": [
+        4142,
+        1789049926246238200
+      ],
+      "data\\models\\E0_weather\\F08\\result.json": [
+        6578,
+        1789050505038353600
+      ],
+      "data\\models\\E0_weather\\H01\\coefficients.csv": [
+        197,
+        1789049885620242200
+      ],
+      "data\\models\\E0_weather\\H01\\in_sample.csv.gz": [
+        176428,
+        1789049885787040800
+      ],
+      "data\\models\\E0_weather\\H01\\LAD_OOF.csv.gz": [
+        181310,
+        1789049886408503800
+      ],
+      "data\\models\\E0_weather\\H01\\LAD_OOF_folds.csv": [
+        296,
+        1789049886412870800
+      ],
+      "data\\models\\E0_weather\\H01\\preprocessing.json": [
+        55293,
+        1789049887444037500
+      ],
+      "data\\models\\E0_weather\\H01\\random_OOF.csv.gz": [
+        143879,
+        1789049886941296500
+      ],
+      "data\\models\\E0_weather\\H01\\random_OOF_folds.csv": [
+        294,
+        1789049886945036700
+      ],
+      "data\\models\\E0_weather\\H01\\result.json": [
+        7488,
+        1789050503300102700
+      ],
+      "data\\models\\E0_weather\\H01\\year_holdout.csv.gz": [
+        181789,
+        1789049887434922300
+      ],
+      "data\\models\\E0_weather\\H01\\year_holdout_folds.csv": [
+        255,
+        1789049887438910200
+      ],
+      "data\\models\\E0_weather\\H02\\coefficients.csv": [
+        229,
+        1789049887622456900
+      ],
+      "data\\models\\E0_weather\\H02\\in_sample.csv.gz": [
+        176608,
+        1789049887789582200
+      ],
+      "data\\models\\E0_weather\\H02\\LAD_OOF.csv.gz": [
+        181703,
+        1789049888396024200
+      ],
+      "data\\models\\E0_weather\\H02\\LAD_OOF_folds.csv": [
+        297,
+        1789049888399677600
+      ],
+      "data\\models\\E0_weather\\H02\\preprocessing.json": [
+        56179,
+        1789049889514786700
+      ],
+      "data\\models\\E0_weather\\H02\\random_OOF.csv.gz": [
+        144362,
+        1789049888888668400
+      ],
+      "data\\models\\E0_weather\\H02\\random_OOF_folds.csv": [
+        297,
+        1789049888893701000
+      ],
+      "data\\models\\E0_weather\\H02\\result.json": [
+        7473,
+        1789050503421763300
+      ],
+      "data\\models\\E0_weather\\H02\\year_holdout.csv.gz": [
+        182421,
+        1789049889506468100
+      ],
+      "data\\models\\E0_weather\\H02\\year_holdout_folds.csv": [
+        255,
+        1789049889510612500
+      ],
+      "data\\models\\E0_weather\\H03\\coefficients.csv": [
+        266,
+        1789049889684708100
+      ],
+      "data\\models\\E0_weather\\H03\\in_sample.csv.gz": [
+        176802,
+        1789049889834394700
+      ],
+      "data\\models\\E0_weather\\H03\\LAD_OOF.csv.gz": [
+        181580,
+        1789049890432141000
+      ],
+      "data\\models\\E0_weather\\H03\\LAD_OOF_folds.csv": [
+        296,
+        1789049890436910800
+      ],
+      "data\\models\\E0_weather\\H03\\preprocessing.json": [
+        57242,
+        1789049891330083200
+      ],
+      "data\\models\\E0_weather\\H03\\random_OOF.csv.gz": [
+        144368,
+        1789049890861560100
+      ],
+      "data\\models\\E0_weather\\H03\\random_OOF_folds.csv": [
+        296,
+        1789049890865462700
+      ],
+      "data\\models\\E0_weather\\H03\\result.json": [
+        7487,
+        1789050503540594700
+      ],
+      "data\\models\\E0_weather\\H03\\year_holdout.csv.gz": [
+        182452,
+        1789049891321289900
+      ],
+      "data\\models\\E0_weather\\H03\\year_holdout_folds.csv": [
+        255,
+        1789049891325230200
+      ],
+      "data\\models\\E0_weather\\H04\\coefficients.csv": [
+        457,
+        1789049891510356400
+      ],
+      "data\\models\\E0_weather\\H04\\in_sample.csv.gz": [
+        177014,
+        1789049891667236100
+      ],
+      "data\\models\\E0_weather\\H04\\LAD_OOF.csv.gz": [
+        181964,
+        1789049892166322200
+      ],
+      "data\\models\\E0_weather\\H04\\LAD_OOF_folds.csv": [
+        300,
+        1789049892170013700
+      ],
+      "data\\models\\E0_weather\\H04\\preprocessing.json": [
+        62521,
+        1789049893194689100
+      ],
+      "data\\models\\E0_weather\\H04\\random_OOF.csv.gz": [
+        144628,
+        1789049892667418200
+      ],
+      "data\\models\\E0_weather\\H04\\random_OOF_folds.csv": [
+        301,
+        1789049892670454200
+      ],
+      "data\\models\\E0_weather\\H04\\result.json": [
+        7471,
+        1789050503668415100
+      ],
+      "data\\models\\E0_weather\\H04\\year_holdout.csv.gz": [
+        182835,
+        1789049893186818100
+      ],
+      "data\\models\\E0_weather\\H04\\year_holdout_folds.csv": [
+        258,
+        1789049893191169300
+      ],
+      "data\\models\\E0_weather\\H05\\coefficients.csv": [
+        1006,
+        1789049893487205600
+      ],
+      "data\\models\\E0_weather\\H05\\in_sample.csv.gz": [
+        177444,
+        1789049893481614300
+      ],
+      "data\\models\\E0_weather\\H05\\preprocessing.json": [
+        52130,
+        1789049894957895700
+      ],
+      "data\\models\\E0_weather\\H05\\random_OOF.csv.gz": [
+        144994,
+        1789049894217867600
+      ],
+      "data\\models\\E0_weather\\H05\\random_OOF_folds.csv": [
+        301,
+        1789049894222314500
+      ],
+      "data\\models\\E0_weather\\H05\\result.json": [
+        7456,
+        1789050503745199700
+      ],
+      "data\\models\\E0_weather\\H05\\year_holdout.csv.gz": [
+        183259,
+        1789049894947884800
+      ],
+      "data\\models\\E0_weather\\H05\\year_holdout_folds.csv": [
+        260,
+        1789049894952005800
+      ],
+      "data\\models\\E0_weather\\H06\\coefficients.csv": [
+        1042,
+        1789049895173941000
+      ],
+      "data\\models\\E0_weather\\H06\\in_sample.csv.gz": [
+        177844,
+        1789049895353705400
+      ],
+      "data\\models\\E0_weather\\H06\\LAD_OOF.csv.gz": [
+        182556,
+        1789049896094992700
+      ],
+      "data\\models\\E0_weather\\H06\\LAD_OOF_folds.csv": [
+        301,
+        1789049896098998900
+      ],
+      "data\\models\\E0_weather\\H06\\preprocessing.json": [
+        78311,
+        1789049897421146400
+      ],
+      "data\\models\\E0_weather\\H06\\random_OOF.csv.gz": [
+        144951,
+        1789049896794893900
+      ],
+      "data\\models\\E0_weather\\H06\\random_OOF_folds.csv": [
+        301,
+        1789049896797379500
+      ],
+      "data\\models\\E0_weather\\H06\\result.json": [
+        7480,
+        1789050503853955400
+      ],
+      "data\\models\\E0_weather\\H06\\year_holdout.csv.gz": [
+        183194,
+        1789049897411964700
+      ],
+      "data\\models\\E0_weather\\H06\\year_holdout_folds.csv": [
+        259,
+        1789049897415872400
+      ],
+      "data\\models\\E0_weather\\H07\\coefficients.csv": [
+        982,
+        1789049897647079100
+      ],
+      "data\\models\\E0_weather\\H07\\in_sample.csv.gz": [
+        177431,
+        1789049897818461100
+      ],
+      "data\\models\\E0_weather\\H07\\LAD_OOF.csv.gz": [
+        182292,
+        1789049898617793300
+      ],
+      "data\\models\\E0_weather\\H07\\LAD_OOF_folds.csv": [
+        301,
+        1789049898622115700
+      ],
+      "data\\models\\E0_weather\\H07\\preprocessing.json": [
+        76556,
+        1789049900017575600
+      ],
+      "data\\models\\E0_weather\\H07\\random_OOF.csv.gz": [
+        144664,
+        1789049899390857500
+      ],
+      "data\\models\\E0_weather\\H07\\random_OOF_folds.csv": [
+        301,
+        1789049899394349700
+      ],
+      "data\\models\\E0_weather\\H07\\result.json": [
+        7476,
+        1789050503967112300
+      ],
+      "data\\models\\E0_weather\\H07\\year_holdout.csv.gz": [
+        182918,
+        1789049900008063300
+      ],
+      "data\\models\\E0_weather\\H07\\year_holdout_folds.csv": [
+        259,
+        1789049900011052700
+      ],
+      "data\\models\\E0_weather\\H08\\coefficients.csv": [
+        1011,
+        1789049900253973500
+      ],
+      "data\\models\\E0_weather\\H08\\in_sample.csv.gz": [
+        177516,
+        1789049900410513500
+      ],
+      "data\\models\\E0_weather\\H08\\LAD_OOF.csv.gz": [
+        182456,
+        1789049901125925600
+      ],
+      "data\\models\\E0_weather\\H08\\LAD_OOF_folds.csv": [
+        300,
+        1789049901129611400
+      ],
+      "data\\models\\E0_weather\\H08\\preprocessing.json": [
+        77491,
+        1789049902406101000
+      ],
+      "data\\models\\E0_weather\\H08\\random_OOF.csv.gz": [
+        144787,
+        1789049901810682000
+      ],
+      "data\\models\\E0_weather\\H08\\random_OOF_folds.csv": [
+        301,
+        1789049901813649500
+      ],
+      "data\\models\\E0_weather\\H08\\result.json": [
+        7479,
+        1789050504084636300
+      ],
+      "data\\models\\E0_weather\\H08\\year_holdout.csv.gz": [
+        183252,
+        1789049902396945900
+      ],
+      "data\\models\\E0_weather\\H08\\year_holdout_folds.csv": [
+        259,
+        1789049902400130600
+      ],
+      "data\\models\\E0_weather\\H09\\coefficients.csv": [
+        1078,
+        1789049902629576400
+      ],
+      "data\\models\\E0_weather\\H09\\in_sample.csv.gz": [
+        177672,
+        1789049902785520400
+      ],
+      "data\\models\\E0_weather\\H09\\LAD_OOF.csv.gz": [
+        182446,
+        1789049903615675500
+      ],
+      "data\\models\\E0_weather\\H09\\LAD_OOF_folds.csv": [
+        302,
+        1789049903619058000
+      ],
+      "data\\models\\E0_weather\\H09\\preprocessing.json": [
+        79303,
+        1789049905205813400
+      ],
+      "data\\models\\E0_weather\\H09\\random_OOF.csv.gz": [
+        144798,
+        1789049904482885900
+      ],
+      "data\\models\\E0_weather\\H09\\random_OOF_folds.csv": [
+        302,
+        1789049904486429700
+      ],
+      "data\\models\\E0_weather\\H09\\result.json": [
+        7473,
+        1789050504217537700
+      ],
+      "data\\models\\E0_weather\\H09\\year_holdout.csv.gz": [
+        183027,
+        1789049905195637800
+      ],
+      "data\\models\\E0_weather\\H09\\year_holdout_folds.csv": [
+        258,
+        1789049905199621100
+      ],
+      "data\\models\\E0_weather\\H10\\coefficients.csv": [
+        1115,
+        1789049905445570100
+      ],
+      "data\\models\\E0_weather\\H10\\in_sample.csv.gz": [
+        177448,
+        1789049905623963200
+      ],
+      "data\\models\\E0_weather\\H10\\LAD_OOF.csv.gz": [
+        182551,
+        1789049906400683200
+      ],
+      "data\\models\\E0_weather\\H10\\LAD_OOF_folds.csv": [
+        302,
+        1789049906404904600
+      ],
+      "data\\models\\E0_weather\\H10\\preprocessing.json": [
+        80275,
+        1789049907755132500
+      ],
+      "data\\models\\E0_weather\\H10\\random_OOF.csv.gz": [
+        144999,
+        1789049907080478400
+      ],
+      "data\\models\\E0_weather\\H10\\random_OOF_folds.csv": [
+        302,
+        1789049907085038600
+      ],
+      "data\\models\\E0_weather\\H10\\result.json": [
+        7491,
+        1789050504308865600
+      ],
+      "data\\models\\E0_weather\\H10\\year_holdout.csv.gz": [
+        183312,
+        1789049907745458700
+      ],
+      "data\\models\\E0_weather\\H10\\year_holdout_folds.csv": [
+        259,
+        1789049907749611800
+      ],
+      "data\\models\\E0_weather\\H11\\coefficients.csv": [
+        4739,
+        1789049908364289100
+      ],
+      "data\\models\\E0_weather\\H11\\in_sample.csv.gz": [
+        178053,
+        1789049908505097700
+      ],
+      "data\\models\\E0_weather\\H11\\LAD_OOF.csv.gz": [
+        185524,
+        1789049910898561100
+      ],
+      "data\\models\\E0_weather\\H11\\LAD_OOF_folds.csv": [
+        303,
+        1789049910902376800
+      ],
+      "data\\models\\E0_weather\\H11\\preprocessing.json": [
+        173146,
+        1789049915516290000
+      ],
+      "data\\models\\E0_weather\\H11\\random_OOF.csv.gz": [
+        145279,
+        1789049913131221800
+      ],
+      "data\\models\\E0_weather\\H11\\random_OOF_folds.csv": [
+        306,
+        1789049913133721100
+      ],
+      "data\\models\\E0_weather\\H11\\result.json": [
+        7481,
+        1789050504416774100
+      ],
+      "data\\models\\E0_weather\\H11\\year_holdout.csv.gz": [
+        183806,
+        1789049915501442100
+      ],
+      "data\\models\\E0_weather\\H11\\year_holdout_folds.csv": [
+        264,
+        1789049915505059500
+      ],
+      "data\\models\\E0_weather\\H12\\coefficients.csv": [
+        818,
+        1789049915700711200
+      ],
+      "data\\models\\E0_weather\\H12\\in_sample.csv.gz": [
+        177201,
+        1789049915835116600
+      ],
+      "data\\models\\E0_weather\\H12\\LAD_OOF.csv.gz": [
+        181945,
+        1789049916386591200
+      ],
+      "data\\models\\E0_weather\\H12\\LAD_OOF_folds.csv": [
+        301,
+        1789049916390786000
+      ],
+      "data\\models\\E0_weather\\H12\\preprocessing.json": [
+        72187,
+        1789049917472428200
+      ],
+      "data\\models\\E0_weather\\H12\\random_OOF.csv.gz": [
+        144806,
+        1789049916946061200
+      ],
+      "data\\models\\E0_weather\\H12\\random_OOF_folds.csv": [
+        296,
+        1789049916950543500
+      ],
+      "data\\models\\E0_weather\\H12\\result.json": [
+        7480,
+        1789050504548217300
+      ],
+      "data\\models\\E0_weather\\H12\\year_holdout.csv.gz": [
+        183069,
+        1789049917463685200
+      ],
+      "data\\models\\E0_weather\\H12\\year_holdout_folds.csv": [
+        260,
+        1789049917467311900
+      ],
+      "data\\models\\E0_weather\\H13\\LAD_OOF.csv.gz": [
+        182418,
+        1789049918541345000
+      ],
+      "data\\models\\E0_weather\\H13\\LAD_OOF_folds.csv": [
+        300,
+        1789049918545201300
+      ],
+      "data\\models\\E0_weather\\H13\\preprocessing.json": [
+        29566,
+        1789049918549012900
+      ],
+      "data\\models\\E0_weather\\H13\\result.json": [
+        6485,
+        1789050504595798200
+      ],
+      "data\\models\\E0_weather\\H14\\LAD_OOF.csv.gz": [
+        182673,
+        1789049919578367700
+      ],
+      "data\\models\\E0_weather\\H14\\LAD_OOF_folds.csv": [
+        302,
+        1789049919582404500
+      ],
+      "data\\models\\E0_weather\\H14\\preprocessing.json": [
+        29923,
+        1789049919586285800
+      ],
+      "data\\models\\E0_weather\\H14\\result.json": [
+        6493,
+        1789050504639944400
+      ],
+      "data\\models\\R0c_all\\F01\\coefficients.csv": [
+        1139,
+        1789050054422448400
+      ],
+      "data\\models\\R0c_all\\F01\\in_sample.csv.gz": [
+        1065819,
+        1789050054419031500
+      ],
+      "data\\models\\R0c_all\\F01\\preprocessing.json": [
+        4377,
+        1789050054447470000
+      ],
+      "data\\models\\R0c_all\\F01\\result.json": [
+        6517,
+        1789050506398346300
+      ],
+      "data\\models\\R0c_all\\F02\\coefficients.csv": [
+        1171,
+        1789050054786923500
+      ],
+      "data\\models\\R0c_all\\F02\\in_sample.csv.gz": [
+        1065624,
+        1789050055583863800
+      ],
+      "data\\models\\R0c_all\\F02\\LAD_OOF.csv.gz": [
+        1091889,
+        1789050058302094100
+      ],
+      "data\\models\\R0c_all\\F02\\LAD_OOF_folds.csv": [
+        307,
+        1789050058306656200
+      ],
+      "data\\models\\R0c_all\\F02\\preprocessing.json": [
+        32082,
+        1789050058310645300
+      ],
+      "data\\models\\R0c_all\\F02\\result.json": [
+        6567,
+        1789050506461333600
+      ],
+      "data\\models\\R0c_all\\F03\\coefficients.csv": [
+        1108,
+        1789050058561970700
+      ],
+      "data\\models\\R0c_all\\F03\\in_sample.csv.gz": [
+        1065067,
+        1789050059379237500
+      ],
+      "data\\models\\R0c_all\\F03\\LAD_OOF.csv.gz": [
+        1091724,
+        1789050062219391600
+      ],
+      "data\\models\\R0c_all\\F03\\LAD_OOF_folds.csv": [
+        306,
+        1789050062221894900
+      ],
+      "data\\models\\R0c_all\\F03\\preprocessing.json": [
+        31410,
+        1789050062226439300
+      ],
+      "data\\models\\R0c_all\\F03\\result.json": [
+        6566,
+        1789050506535791200
+      ],
+      "data\\models\\R0c_all\\F04\\coefficients.csv": [
+        1206,
+        1789050062526187000
+      ],
+      "data\\models\\R0c_all\\F04\\in_sample.csv.gz": [
+        1065665,
+        1789050063350865900
+      ],
+      "data\\models\\R0c_all\\F04\\LAD_OOF.csv.gz": [
+        1092350,
+        1789050066242006500
+      ],
+      "data\\models\\R0c_all\\F04\\LAD_OOF_folds.csv": [
+        307,
+        1789050066243998600
+      ],
+      "data\\models\\R0c_all\\F04\\preprocessing.json": [
+        32447,
+        1789050066247868400
+      ],
+      "data\\models\\R0c_all\\F04\\result.json": [
+        6565,
+        1789050506609154600
+      ],
+      "data\\models\\R0c_all\\F05\\coefficients.csv": [
+        1148,
+        1789050066492432500
+      ],
+      "data\\models\\R0c_all\\F05\\in_sample.csv.gz": [
+        1065926,
+        1789050067268925000
+      ],
+      "data\\models\\R0c_all\\F05\\LAD_OOF.csv.gz": [
+        1092177,
+        1789050069854900500
+      ],
+      "data\\models\\R0c_all\\F05\\LAD_OOF_folds.csv": [
+        308,
+        1789050069857409500
+      ],
+      "data\\models\\R0c_all\\F05\\preprocessing.json": [
+        31801,
+        1789050069860790300
+      ],
+      "data\\models\\R0c_all\\F05\\result.json": [
+        6572,
+        1789050506682779800
+      ],
+      "data\\models\\R0c_all\\F06\\coefficients.csv": [
+        1144,
+        1789050070267124600
+      ],
+      "data\\models\\R0c_all\\F06\\in_sample.csv.gz": [
+        1065491,
+        1789050071236389200
+      ],
+      "data\\models\\R0c_all\\F06\\LAD_OOF.csv.gz": [
+        1092092,
+        1789050075016770900
+      ],
+      "data\\models\\R0c_all\\F06\\LAD_OOF_folds.csv": [
+        308,
+        1789050075020398500
+      ],
+      "data\\models\\R0c_all\\F06\\preprocessing.json": [
+        31910,
+        1789050075024617400
+      ],
+      "data\\models\\R0c_all\\F06\\result.json": [
+        6572,
+        1789050506750752500
+      ],
+      "data\\models\\R0c_all\\F07\\coefficients.csv": [
+        1172,
+        1789050075509296300
+      ],
+      "data\\models\\R0c_all\\F07\\in_sample.csv.gz": [
+        1065667,
+        1789050076520767000
+      ],
+      "data\\models\\R0c_all\\F07\\LAD_OOF.csv.gz": [
+        1091912,
+        1789050080718225300
+      ],
+      "data\\models\\R0c_all\\F07\\LAD_OOF_folds.csv": [
+        307,
+        1789050080722211600
+      ],
+      "data\\models\\R0c_all\\F07\\preprocessing.json": [
+        32261,
+        1789050080726732300
+      ],
+      "data\\models\\R0c_all\\F07\\result.json": [
+        6581,
+        1789050506833808000
+      ],
+      "data\\models\\R0c_all\\F08\\coefficients.csv": [
+        1141,
+        1789050081298387000
+      ],
+      "data\\models\\R0c_all\\F08\\in_sample.csv.gz": [
+        1065627,
+        1789050082435414200
+      ],
+      "data\\models\\R0c_all\\F08\\LAD_OOF.csv.gz": [
+        1091937,
+        1789050086451305900
+      ],
+      "data\\models\\R0c_all\\F08\\LAD_OOF_folds.csv": [
+        307,
+        1789050086456049500
+      ],
+      "data\\models\\R0c_all\\F08\\preprocessing.json": [
+        31929,
+        1789050086459442200
+      ],
+      "data\\models\\R0c_all\\F08\\result.json": [
+        6580,
+        1789050506915508400
+      ],
+      "data\\models\\R0c_all\\H01\\coefficients.csv": [
+        272,
+        1789049926389400300
+      ],
+      "data\\models\\R0c_all\\H01\\in_sample.csv.gz": [
+        1062391,
+        1789049927252377300
+      ],
+      "data\\models\\R0c_all\\H01\\LAD_OOF.csv.gz": [
+        1089184,
+        1789049929131140800
+      ],
+      "data\\models\\R0c_all\\H01\\LAD_OOF_folds.csv": [
+        303,
+        1789049929133639900
+      ],
+      "data\\models\\R0c_all\\H01\\preprocessing.json": [
+        60917,
+        1789049932520071200
+      ],
+      "data\\models\\R0c_all\\H01\\random_OOF.csv.gz": [
+        883651,
+        1789049930600656400
+      ],
+      "data\\models\\R0c_all\\H01\\random_OOF_folds.csv": [
+        300,
+        1789049930605017700
+      ],
+      "data\\models\\R0c_all\\H01\\result.json": [
+        7454,
+        1789050505160712400
+      ],
+      "data\\models\\R0c_all\\H01\\year_holdout.csv.gz": [
+        1094887,
+        1789049932503606000
+      ],
+      "data\\models\\R0c_all\\H01\\year_holdout_folds.csv": [
+        263,
+        1789049932510161000
+      ],
+      "data\\models\\R0c_all\\H02\\coefficients.csv": [
+        307,
+        1789049932744427600
+      ],
+      "data\\models\\R0c_all\\H02\\in_sample.csv.gz": [
+        1062528,
+        1789049933575759300
+      ],
+      "data\\models\\R0c_all\\H02\\LAD_OOF.csv.gz": [
+        1088592,
+        1789049935835462500
+      ],
+      "data\\models\\R0c_all\\H02\\LAD_OOF_folds.csv": [
+        304,
+        1789049935838454000
+      ],
+      "data\\models\\R0c_all\\H02\\preprocessing.json": [
+        61819,
+        1789049940279173800
+      ],
+      "data\\models\\R0c_all\\H02\\random_OOF.csv.gz": [
+        882912,
+        1789049937800454500
+      ],
+      "data\\models\\R0c_all\\H02\\random_OOF_folds.csv": [
+        301,
+        1789049937805046100
+      ],
+      "data\\models\\R0c_all\\H02\\result.json": [
+        7443,
+        1789050505273484800
+      ],
+      "data\\models\\R0c_all\\H02\\year_holdout.csv.gz": [
+        1094970,
+        1789049940268549200
+      ],
+      "data\\models\\R0c_all\\H02\\year_holdout_folds.csv": [
+        263,
+        1789049940272686400
+      ],
+      "data\\models\\R0c_all\\H03\\coefficients.csv": [
+        345,
+        1789049940595261900
+      ],
+      "data\\models\\R0c_all\\H03\\in_sample.csv.gz": [
+        1062322,
+        1789049941575719000
+      ],
+      "data\\models\\R0c_all\\H03\\LAD_OOF.csv.gz": [
+        1088442,
+        1789049944245368900
+      ],
+      "data\\models\\R0c_all\\H03\\LAD_OOF_folds.csv": [
+        303,
+        1789049944251351600
+      ],
+      "data\\models\\R0c_all\\H03\\preprocessing.json": [
+        62868,
+        1789049948623765600
+      ],
+      "data\\models\\R0c_all\\H03\\random_OOF.csv.gz": [
+        883261,
+        1789049946541442100
+      ],
+      "data\\models\\R0c_all\\H03\\random_OOF_folds.csv": [
+        301,
+        1789049946544958900
+      ],
+      "data\\models\\R0c_all\\H03\\result.json": [
+        7458,
+        1789050505368874000
+      ],
+      "data\\models\\R0c_all\\H03\\year_holdout.csv.gz": [
+        1094792,
+        1789049948616035500
+      ],
+      "data\\models\\R0c_all\\H03\\year_holdout_folds.csv": [
+        262,
+        1789049948619027900
+      ],
+      "data\\models\\R0c_all\\H04\\coefficients.csv": [
+        532,
+        1789049948896551700
+      ],
+      "data\\models\\R0c_all\\H04\\in_sample.csv.gz": [
+        1064898,
+        1789049949751669300
+      ],
+      "data\\models\\R0c_all\\H04\\LAD_OOF.csv.gz": [
+        1090914,
+        1789049951904344800
+      ],
+      "data\\models\\R0c_all\\H04\\LAD_OOF_folds.csv": [
+        309,
+        1789049951907696200
+      ],
+      "data\\models\\R0c_all\\H04\\preprocessing.json": [
+        68136,
+        1789049955639998600
+      ],
+      "data\\models\\R0c_all\\H04\\random_OOF.csv.gz": [
+        884871,
+        1789049953563061000
+      ],
+      "data\\models\\R0c_all\\H04\\random_OOF_folds.csv": [
+        306,
+        1789049953566556200
+      ],
+      "data\\models\\R0c_all\\H04\\result.json": [
+        7441,
+        1789050505463366100
+      ],
+      "data\\models\\R0c_all\\H04\\year_holdout.csv.gz": [
+        1098240,
+        1789049955632126100
+      ],
+      "data\\models\\R0c_all\\H04\\year_holdout_folds.csv": [
+        266,
+        1789049955633629000
+      ],
+      "data\\models\\R0c_all\\H05\\preprocessing.json": [
+        33176,
+        1789049958075042400
+      ],
+      "data\\models\\R0c_all\\H05\\random_OOF.csv.gz": [
+        885805,
+        1789049958070515900
+      ],
+      "data\\models\\R0c_all\\H05\\random_OOF_folds.csv": [
+        305,
+        1789049958072509900
+      ],
+      "data\\models\\R0c_all\\H05\\result.json": [
+        7095,
+        1789050505505880600
+      ],
+      "data\\models\\R0c_all\\H06\\coefficients.csv": [
+        1132,
+        1789049958339312300
+      ],
+      "data\\models\\R0c_all\\H06\\in_sample.csv.gz": [
+        1065596,
+        1789049959170859500
+      ],
+      "data\\models\\R0c_all\\H06\\LAD_OOF.csv.gz": [
+        1092036,
+        1789049961721830400
+      ],
+      "data\\models\\R0c_all\\H06\\LAD_OOF_folds.csv": [
+        309,
+        1789049961726685100
+      ],
+      "data\\models\\R0c_all\\H06\\preprocessing.json": [
+        84140,
+        1789049966126669600
+      ],
+      "data\\models\\R0c_all\\H06\\random_OOF.csv.gz": [
+        885466,
+        1789049963741419500
+      ],
+      "data\\models\\R0c_all\\H06\\random_OOF_folds.csv": [
+        305,
+        1789049963746521700
+      ],
+      "data\\models\\R0c_all\\H06\\result.json": [
+        7447,
+        1789050505606926500
+      ],
+      "data\\models\\R0c_all\\H06\\year_holdout.csv.gz": [
+        1098868,
+        1789049966115812400
+      ],
+      "data\\models\\R0c_all\\H06\\year_holdout_folds.csv": [
+        267,
+        1789049966120016900
+      ],
+      "data\\models\\R0c_all\\H07\\coefficients.csv": [
+        1071,
+        1789049966529397200
+      ],
+      "data\\models\\R0c_all\\H07\\in_sample.csv.gz": [
+        1065624,
+        1789049967442764400
+      ],
+      "data\\models\\R0c_all\\H07\\LAD_OOF.csv.gz": [
+        1091954,
+        1789049970377435300
+      ],
+      "data\\models\\R0c_all\\H07\\LAD_OOF_folds.csv": [
+        305,
+        1789049970380478900
+      ],
+      "data\\models\\R0c_all\\H07\\preprocessing.json": [
+        82320,
+        1789049975138066200
+      ],
+      "data\\models\\R0c_all\\H07\\random_OOF.csv.gz": [
+        885704,
+        1789049972566625000
+      ],
+      "data\\models\\R0c_all\\H07\\random_OOF_folds.csv": [
+        307,
+        1789049972571611500
+      ],
+      "data\\models\\R0c_all\\H07\\result.json": [
+        7444,
+        1789050505704457200
+      ],
+      "data\\models\\R0c_all\\H07\\year_holdout.csv.gz": [
+        1098857,
+        1789049975120338400
+      ],
+      "data\\models\\R0c_all\\H07\\year_holdout_folds.csv": [
+        263,
+        1789049975130385900
+      ],
+      "data\\models\\R0c_all\\H08\\coefficients.csv": [
+        1106,
+        1789049975547984100
+      ],
+      "data\\models\\R0c_all\\H08\\in_sample.csv.gz": [
+        1065670,
+        1789049976580619000
+      ],
+      "data\\models\\R0c_all\\H08\\LAD_OOF.csv.gz": [
+        1092115,
+        1789049979859996200
+      ],
+      "data\\models\\R0c_all\\H08\\LAD_OOF_folds.csv": [
+        308,
+        1789049979864590000
+      ],
+      "data\\models\\R0c_all\\H08\\preprocessing.json": [
+        83275,
+        1789049985221838400
+      ],
+      "data\\models\\R0c_all\\H08\\random_OOF.csv.gz": [
+        885500,
+        1789049982615829900
+      ],
+      "data\\models\\R0c_all\\H08\\random_OOF_folds.csv": [
+        306,
+        1789049982619818200
+      ],
+      "data\\models\\R0c_all\\H08\\result.json": [
+        7449,
+        1789050505803619900
+      ],
+      "data\\models\\R0c_all\\H08\\year_holdout.csv.gz": [
+        1098967,
+        1789049985210821700
+      ],
+      "data\\models\\R0c_all\\H08\\year_holdout_folds.csv": [
+        266,
+        1789049985214313600
+      ],
+      "data\\models\\R0c_all\\H09\\coefficients.csv": [
+        1172,
+        1789049985588397600
+      ],
+      "data\\models\\R0c_all\\H09\\in_sample.csv.gz": [
+        1065656,
+        1789049986484528700
+      ],
+      "data\\models\\R0c_all\\H09\\LAD_OOF.csv.gz": [
+        1092035,
+        1789049988885347600
+      ],
+      "data\\models\\R0c_all\\H09\\LAD_OOF_folds.csv": [
+        309,
+        1789049988889744300
+      ],
+      "data\\models\\R0c_all\\H09\\preprocessing.json": [
+        85110,
+        1789049992671421600
+      ],
+      "data\\models\\R0c_all\\H09\\random_OOF.csv.gz": [
+        885835,
+        1789049990870814400
+      ],
+      "data\\models\\R0c_all\\H09\\random_OOF_folds.csv": [
+        305,
+        1789049990876901900
+      ],
+      "data\\models\\R0c_all\\H09\\result.json": [
+        7449,
+        1789050505910511100
+      ],
+      "data\\models\\R0c_all\\H09\\year_holdout.csv.gz": [
+        1099065,
+        1789049992665440200
+      ],
+      "data\\models\\R0c_all\\H09\\year_holdout_folds.csv": [
+        265,
+        1789049992668431600
+      ],
+      "data\\models\\R0c_all\\H10\\coefficients.csv": [
+        1204,
+        1789049992995712500
+      ],
+      "data\\models\\R0c_all\\H10\\in_sample.csv.gz": [
+        1066122,
+        1789049993777636400
+      ],
+      "data\\models\\R0c_all\\H10\\LAD_OOF.csv.gz": [
+        1092076,
+        1789049997013620900
+      ],
+      "data\\models\\R0c_all\\H10\\LAD_OOF_folds.csv": [
+        307,
+        1789049997019750500
+      ],
+      "data\\models\\R0c_all\\H10\\preprocessing.json": [
+        86074,
+        1789050004693855400
+      ],
+      "data\\models\\R0c_all\\H10\\random_OOF.csv.gz": [
+        885494,
+        1789050001212562100
+      ],
+      "data\\models\\R0c_all\\H10\\random_OOF_folds.csv": [
+        303,
+        1789050001216089700
+      ],
+      "data\\models\\R0c_all\\H10\\result.json": [
+        7464,
+        1789050506010226700
+      ],
+      "data\\models\\R0c_all\\H10\\year_holdout.csv.gz": [
+        1098990,
+        1789050004679360000
+      ],
+      "data\\models\\R0c_all\\H10\\year_holdout_folds.csv": [
+        267,
+        1789050004684882800
+      ],
+      "data\\models\\R0c_all\\H11\\coefficients.csv": [
+        5072,
+        1789050008086494900
+      ],
+      "data\\models\\R0c_all\\H11\\in_sample.csv.gz": [
+        1067249,
+        1789050009057328100
+      ],
+      "data\\models\\R0c_all\\H11\\LAD_OOF.csv.gz": [
+        1093720,
+        1789050017017015400
+      ],
+      "data\\models\\R0c_all\\H11\\LAD_OOF_folds.csv": [
+        313,
+        1789050017020116800
+      ],
+      "data\\models\\R0c_all\\H11\\preprocessing.json": [
+        187011,
+        1789050035563524700
+      ],
+      "data\\models\\R0c_all\\H11\\random_OOF.csv.gz": [
+        887026,
+        1789050026785881300
+      ],
+      "data\\models\\R0c_all\\H11\\random_OOF_folds.csv": [
+        310,
+        1789050026788873700
+      ],
+      "data\\models\\R0c_all\\H11\\result.json": [
+        7448,
+        1789050506106024400
+      ],
+      "data\\models\\R0c_all\\H11\\year_holdout.csv.gz": [
+        1100607,
+        1789050035549904400
+      ],
+      "data\\models\\R0c_all\\H11\\year_holdout_folds.csv": [
+        271,
+        1789050035553825900
+      ],
+      "data\\models\\R0c_all\\H12\\coefficients.csv": [
+        920,
+        1789050035898673200
+      ],
+      "data\\models\\R0c_all\\H12\\in_sample.csv.gz": [
+        1063869,
+        1789050036720820600
+      ],
+      "data\\models\\R0c_all\\H12\\LAD_OOF.csv.gz": [
+        1089802,
+        1789050039011878200
+      ],
+      "data\\models\\R0c_all\\H12\\LAD_OOF_folds.csv": [
+        307,
+        1789050039014375900
+      ],
+      "data\\models\\R0c_all\\H12\\preprocessing.json": [
+        77998,
+        1789050043696668600
+      ],
+      "data\\models\\R0c_all\\H12\\random_OOF.csv.gz": [
+        883646,
+        1789050041054854500
+      ],
+      "data\\models\\R0c_all\\H12\\random_OOF_folds.csv": [
+        305,
+        1789050041059548100
+      ],
+      "data\\models\\R0c_all\\H12\\result.json": [
+        7452,
+        1789050506209470300
+      ],
+      "data\\models\\R0c_all\\H12\\year_holdout.csv.gz": [
+        1096746,
+        1789050043686005500
+      ],
+      "data\\models\\R0c_all\\H12\\year_holdout_folds.csv": [
+        265,
+        1789050043689992800
+      ],
+      "data\\models\\R0c_all\\H13\\coefficients.csv": [
+        1108,
+        1789050044319827800
+      ],
+      "data\\models\\R0c_all\\H13\\in_sample.csv.gz": [
+        1065758,
+        1789050045267059000
+      ],
+      "data\\models\\R0c_all\\H13\\LAD_OOF.csv.gz": [
+        1092160,
+        1789050049151326900
+      ],
+      "data\\models\\R0c_all\\H13\\LAD_OOF_folds.csv": [
+        307,
+        1789050049155883100
+      ],
+      "data\\models\\R0c_all\\H13\\preprocessing.json": [
+        31514,
+        1789050049167738500
+      ],
+      "data\\models\\R0c_all\\H13\\result.json": [
+        6560,
+        1789050506298726100
+      ],
+      "data\\models\\R0c_all\\H14\\coefficients.csv": [
+        1134,
+        1789050049568231000
+      ],
+      "data\\models\\R0c_all\\H14\\in_sample.csv.gz": [
+        1065780,
+        1789050050425458700
+      ],
+      "data\\models\\R0c_all\\H14\\LAD_OOF.csv.gz": [
+        1092038,
+        1789050053445217500
+      ],
+      "data\\models\\R0c_all\\H14\\LAD_OOF_folds.csv": [
+        308,
+        1789050053447213100
+      ],
+      "data\\models\\R0c_all\\H14\\preprocessing.json": [
+        31883,
+        1789050053449699200
+      ],
+      "data\\models\\R0c_all\\H14\\result.json": [
+        6566,
+        1789050506358706900
+      ],
+      "data\\models\\R0c_weather\\F01\\coefficients.csv": [
+        1133,
+        1789050132433583500
+      ],
+      "data\\models\\R0c_weather\\F01\\in_sample.csv.gz": [
+        192887,
+        1789050132587004400
+      ],
+      "data\\models\\R0c_weather\\F01\\LAD_OOF.csv.gz": [
+        197304,
+        1789050133607640900
+      ],
+      "data\\models\\R0c_weather\\F01\\LAD_OOF_folds.csv": [
+        302,
+        1789050133610633400
+      ],
+      "data\\models\\R0c_weather\\F01\\preprocessing.json": [
+        31067,
+        1789050133613624200
+      ],
+      "data\\models\\R0c_weather\\F01\\result.json": [
+        6612,
+        1789050508337515100
+      ],
+      "data\\models\\R0c_weather\\F02\\coefficients.csv": [
+        1163,
+        1789050133819247200
+      ],
+      "data\\models\\R0c_weather\\F02\\in_sample.csv.gz": [
+        193021,
+        1789050133985728900
+      ],
+      "data\\models\\R0c_weather\\F02\\LAD_OOF.csv.gz": [
+        197420,
+        1789050135069140300
+      ],
+      "data\\models\\R0c_weather\\F02\\LAD_OOF_folds.csv": [
+        300,
+        1789050135073613400
+      ],
+      "data\\models\\R0c_weather\\F02\\preprocessing.json": [
+        31389,
+        1789050135076794200
+      ],
+      "data\\models\\R0c_weather\\F02\\result.json": [
+        6605,
+        1789050508407299500
+      ],
+      "data\\models\\R0c_weather\\F03\\coefficients.csv": [
+        1101,
+        1789050135269728700
+      ],
+      "data\\models\\R0c_weather\\F03\\in_sample.csv.gz": [
+        192833,
+        1789050135444145300
+      ],
+      "data\\models\\R0c_weather\\F03\\LAD_OOF.csv.gz": [
+        197357,
+        1789050136502606100
+      ],
+      "data\\models\\R0c_weather\\F03\\LAD_OOF_folds.csv": [
+        302,
+        1789050136507098400
+      ],
+      "data\\models\\R0c_weather\\F03\\preprocessing.json": [
+        30735,
+        1789050136510089000
+      ],
+      "data\\models\\R0c_weather\\F03\\result.json": [
+        6605,
+        1789050508473385200
+      ],
+      "data\\models\\R0c_weather\\F04\\coefficients.csv": [
+        1197,
+        1789050136738717600
+      ],
+      "data\\models\\R0c_weather\\F04\\in_sample.csv.gz": [
+        193000,
+        1789050136928694800
+      ],
+      "data\\models\\R0c_weather\\F04\\LAD_OOF.csv.gz": [
+        197461,
+        1789050137929509600
+      ],
+      "data\\models\\R0c_weather\\F04\\LAD_OOF_folds.csv": [
+        302,
+        1789050137934003900
+      ],
+      "data\\models\\R0c_weather\\F04\\preprocessing.json": [
+        31742,
+        1789050137939204600
+      ],
+      "data\\models\\R0c_weather\\F04\\result.json": [
+        6606,
+        1789050508529577800
+      ],
+      "data\\models\\R0c_weather\\F05\\coefficients.csv": [
+        1138,
+        1789050138205140200
+      ],
+      "data\\models\\R0c_weather\\F05\\in_sample.csv.gz": [
+        192953,
+        1789050138386863600
+      ],
+      "data\\models\\R0c_weather\\F05\\LAD_OOF.csv.gz": [
+        197408,
+        1789050139456589900
+      ],
+      "data\\models\\R0c_weather\\F05\\LAD_OOF_folds.csv": [
+        301,
+        1789050139460578000
+      ],
+      "data\\models\\R0c_weather\\F05\\preprocessing.json": [
+        31136,
+        1789050139465068100
+      ],
+      "data\\models\\R0c_weather\\F05\\result.json": [
+        6611,
+        1789050508586120100
+      ],
+      "data\\models\\R0c_weather\\F06\\coefficients.csv": [
+        1130,
+        1789050139851693200
+      ],
+      "data\\models\\R0c_weather\\F06\\in_sample.csv.gz": [
+        192994,
+        1789050139846655200
+      ],
+      "data\\models\\R0c_weather\\F06\\LAD_OOF.csv.gz": [
+        197530,
+        1789050140955621000
+      ],
+      "data\\models\\R0c_weather\\F06\\LAD_OOF_folds.csv": [
+        301,
+        1789050140959610500
+      ],
+      "data\\models\\R0c_weather\\F06\\preprocessing.json": [
+        31217,
+        1789050140964099600
+      ],
+      "data\\models\\R0c_weather\\F06\\result.json": [
+        6685,
+        1789050508645367700
+      ],
+      "data\\models\\R0c_weather\\F07\\coefficients.csv": [
+        1159,
+        1789050141288502500
+      ],
+      "data\\models\\R0c_weather\\F07\\in_sample.csv.gz": [
+        192972,
+        1789050141506425700
+      ],
+      "data\\models\\R0c_weather\\F07\\LAD_OOF.csv.gz": [
+        197337,
+        1789050142993760500
+      ],
+      "data\\models\\R0c_weather\\F07\\LAD_OOF_folds.csv": [
+        301,
+        1789050142998166300
+      ],
+      "data\\models\\R0c_weather\\F07\\preprocessing.json": [
+        31568,
+        1789050143001504800
+      ],
+      "data\\models\\R0c_weather\\F07\\result.json": [
+        6621,
+        1789050508719885800
+      ],
+      "data\\models\\R0c_weather\\F08\\coefficients.csv": [
+        1132,
+        1789050143333718900
+      ],
+      "data\\models\\R0c_weather\\F08\\in_sample.csv.gz": [
+        193031,
+        1789050143534970600
+      ],
+      "data\\models\\R0c_weather\\F08\\LAD_OOF.csv.gz": [
+        197337,
+        1789050144931306100
+      ],
+      "data\\models\\R0c_weather\\F08\\LAD_OOF_folds.csv": [
+        301,
+        1789050144934998800
+      ],
+      "data\\models\\R0c_weather\\F08\\preprocessing.json": [
+        31255,
+        1789050144938350800
+      ],
+      "data\\models\\R0c_weather\\F08\\result.json": [
+        6617,
+        1789050508829850100
+      ],
+      "data\\models\\R0c_weather\\H01\\coefficients.csv": [
+        272,
+        1789050086576623900
+      ],
+      "data\\models\\R0c_weather\\H01\\in_sample.csv.gz": [
+        192804,
+        1789050086720954300
+      ],
+      "data\\models\\R0c_weather\\H01\\LAD_OOF.csv.gz": [
+        197015,
+        1789050087232283400
+      ],
+      "data\\models\\R0c_weather\\H01\\LAD_OOF_folds.csv": [
+        296,
+        1789050087236092100
+      ],
+      "data\\models\\R0c_weather\\H01\\preprocessing.json": [
+        58520,
+        1789050088213896100
+      ],
+      "data\\models\\R0c_weather\\H01\\random_OOF.csv.gz": [
+        157039,
+        1789050087731088500
+      ],
+      "data\\models\\R0c_weather\\H01\\random_OOF_folds.csv": [
+        297,
+        1789050087734879100
+      ],
+      "data\\models\\R0c_weather\\H01\\result.json": [
+        7494,
+        1789050507031426800
+      ],
+      "data\\models\\R0c_weather\\H01\\year_holdout.csv.gz": [
+        198157,
+        1789050088203920400
+      ],
+      "data\\models\\R0c_weather\\H01\\year_holdout_folds.csv": [
+        256,
+        1789050088207409800
+      ],
+      "data\\models\\R0c_weather\\H02\\coefficients.csv": [
+        305,
+        1789050088415518200
+      ],
+      "data\\models\\R0c_weather\\H02\\in_sample.csv.gz": [
+        192537,
+        1789050088604962800
+      ],
+      "data\\models\\R0c_weather\\H02\\LAD_OOF.csv.gz": [
+        196784,
+        1789050089213656100
+      ],
+      "data\\models\\R0c_weather\\H02\\LAD_OOF_folds.csv": [
+        296,
+        1789050089218471300
+      ],
+      "data\\models\\R0c_weather\\H02\\preprocessing.json": [
+        59402,
+        1789050090384989800
+      ],
+      "data\\models\\R0c_weather\\H02\\random_OOF.csv.gz": [
+        156926,
+        1789050089799811000
+      ],
+      "data\\models\\R0c_weather\\H02\\random_OOF_folds.csv": [
+        297,
+        1789050089804795400
+      ],
+      "data\\models\\R0c_weather\\H02\\result.json": [
+        7483,
+        1789050507132078700
+      ],
+      "data\\models\\R0c_weather\\H02\\year_holdout.csv.gz": [
+        198118,
+        1789050090375455400
+      ],
+      "data\\models\\R0c_weather\\H02\\year_holdout_folds.csv": [
+        255,
+        1789050090378920700
+      ],
+      "data\\models\\R0c_weather\\H03\\coefficients.csv": [
+        340,
+        1789050090568107100
+      ],
+      "data\\models\\R0c_weather\\H03\\in_sample.csv.gz": [
+        192386,
+        1789050090741431200
+      ],
+      "data\\models\\R0c_weather\\H03\\LAD_OOF.csv.gz": [
+        196808,
+        1789050091525412800
+      ],
+      "data\\models\\R0c_weather\\H03\\LAD_OOF_folds.csv": [
+        295,
+        1789050091529402900
+      ],
+      "data\\models\\R0c_weather\\H03\\preprocessing.json": [
+        60458,
+        1789050092649586900
+      ],
+      "data\\models\\R0c_weather\\H03\\random_OOF.csv.gz": [
+        156822,
+        1789050092067329200
+      ],
+      "data\\models\\R0c_weather\\H03\\random_OOF_folds.csv": [
+        295,
+        1789050092072313100
+      ],
+      "data\\models\\R0c_weather\\H03\\result.json": [
+        7497,
+        1789050507222657700
+      ],
+      "data\\models\\R0c_weather\\H03\\year_holdout.csv.gz": [
+        198097,
+        1789050092641193300
+      ],
+      "data\\models\\R0c_weather\\H03\\year_holdout_folds.csv": [
+        255,
+        1789050092643713600
+      ],
+      "data\\models\\R0c_weather\\H04\\coefficients.csv": [
+        533,
+        1789050092829514300
+      ],
+      "data\\models\\R0c_weather\\H04\\in_sample.csv.gz": [
+        192527,
+        1789050092976991900
+      ],
+      "data\\models\\R0c_weather\\H04\\LAD_OOF.csv.gz": [
+        196822,
+        1789050093568539700
+      ],
+      "data\\models\\R0c_weather\\H04\\LAD_OOF_folds.csv": [
+        302,
+        1789050093572968900
+      ],
+      "data\\models\\R0c_weather\\H04\\preprocessing.json": [
+        65717,
+        1789050094701218200
+      ],
+      "data\\models\\R0c_weather\\H04\\random_OOF.csv.gz": [
+        156886,
+        1789050094095175600
+      ],
+      "data\\models\\R0c_weather\\H04\\random_OOF_folds.csv": [
+        302,
+        1789050094100476000
+      ],
+      "data\\models\\R0c_weather\\H04\\result.json": [
+        7479,
+        1789050507330044800
+      ],
+      "data\\models\\R0c_weather\\H04\\year_holdout.csv.gz": [
+        198261,
+        1789050094694743700
+      ],
+      "data\\models\\R0c_weather\\H04\\year_holdout_folds.csv": [
+        259,
+        1789050094696738600
+      ],
+      "data\\models\\R0c_weather\\H05\\coefficients.csv": [
+        1090,
+        1789050095132963300
+      ],
+      "data\\models\\R0c_weather\\H05\\in_sample.csv.gz": [
+        192785,
+        1789050095114249300
+      ],
+      "data\\models\\R0c_weather\\H05\\preprocessing.json": [
+        54310,
+        1789050097171634000
+      ],
+      "data\\models\\R0c_weather\\H05\\random_OOF.csv.gz": [
+        157267,
+        1789050096430756300
+      ],
+      "data\\models\\R0c_weather\\H05\\random_OOF_folds.csv": [
+        299,
+        1789050096434287400
+      ],
+      "data\\models\\R0c_weather\\H05\\result.json": [
+        7463,
+        1789050507422316100
+      ],
+      "data\\models\\R0c_weather\\H05\\year_holdout.csv.gz": [
+        198524,
+        1789050097155773100
+      ],
+      "data\\models\\R0c_weather\\H05\\year_holdout_folds.csv": [
+        256,
+        1789050097164251100
+      ],
+      "data\\models\\R0c_weather\\H06\\coefficients.csv": [
+        1128,
+        1789050097514265000
+      ],
+      "data\\models\\R0c_weather\\H06\\in_sample.csv.gz": [
+        193019,
+        1789050097747937800
+      ],
+      "data\\models\\R0c_weather\\H06\\LAD_OOF.csv.gz": [
+        197322,
+        1789050099416458900
+      ],
+      "data\\models\\R0c_weather\\H06\\LAD_OOF_folds.csv": [
+        300,
+        1789050099420728300
+      ],
+      "data\\models\\R0c_weather\\H06\\preprocessing.json": [
+        81644,
+        1789050101522629600
+      ],
+      "data\\models\\R0c_weather\\H06\\random_OOF.csv.gz": [
+        157135,
+        1789050100553661900
+      ],
+      "data\\models\\R0c_weather\\H06\\random_OOF_folds.csv": [
+        299,
+        1789050100570233300
+      ],
+      "data\\models\\R0c_weather\\H06\\result.json": [
+        7486,
+        1789050507516982900
+      ],
+      "data\\models\\R0c_weather\\H06\\year_holdout.csv.gz": [
+        198777,
+        1789050101511927900
+      ],
+      "data\\models\\R0c_weather\\H06\\year_holdout_folds.csv": [
+        259,
+        1789050101516421000
+      ],
+      "data\\models\\R0c_weather\\H07\\coefficients.csv": [
+        1068,
+        1789050101818263200
+      ],
+      "data\\models\\R0c_weather\\H07\\in_sample.csv.gz": [
+        192866,
+        1789050102120998200
+      ],
+      "data\\models\\R0c_weather\\H07\\LAD_OOF.csv.gz": [
+        197147,
+        1789050103306356500
+      ],
+      "data\\models\\R0c_weather\\H07\\LAD_OOF_folds.csv": [
+        300,
+        1789050103311337000
+      ],
+      "data\\models\\R0c_weather\\H07\\preprocessing.json": [
+        79873,
+        1789050105400888400
+      ],
+      "data\\models\\R0c_weather\\H07\\random_OOF.csv.gz": [
+        157243,
+        1789050104337065500
+      ],
+      "data\\models\\R0c_weather\\H07\\random_OOF_folds.csv": [
+        301,
+        1789050104348574400
+      ],
+      "data\\models\\R0c_weather\\H07\\result.json": [
+        7485,
+        1789050507609325000
+      ],
+      "data\\models\\R0c_weather\\H07\\year_holdout.csv.gz": [
+        198424,
+        1789050105387392300
+      ],
+      "data\\models\\R0c_weather\\H07\\year_holdout_folds.csv": [
+        259,
+        1789050105392375100
+      ],
+      "data\\models\\R0c_weather\\H08\\coefficients.csv": [
+        1102,
+        1789050105756362000
+      ],
+      "data\\models\\R0c_weather\\H08\\in_sample.csv.gz": [
+        192953,
+        1789050105995011200
+      ],
+      "data\\models\\R0c_weather\\H08\\LAD_OOF.csv.gz": [
+        197304,
+        1789050107160743900
+      ],
+      "data\\models\\R0c_weather\\H08\\LAD_OOF_folds.csv": [
+        301,
+        1789050107164236300
+      ],
+      "data\\models\\R0c_weather\\H08\\preprocessing.json": [
+        80815,
+        1789050109110224700
+      ],
+      "data\\models\\R0c_weather\\H08\\random_OOF.csv.gz": [
+        157166,
+        1789050108226965200
+      ],
+      "data\\models\\R0c_weather\\H08\\random_OOF_folds.csv": [
+        298,
+        1789050108232189200
+      ],
+      "data\\models\\R0c_weather\\H08\\result.json": [
+        7487,
+        1789050507745941400
+      ],
+      "data\\models\\R0c_weather\\H08\\year_holdout.csv.gz": [
+        198589,
+        1789050109098148600
+      ],
+      "data\\models\\R0c_weather\\H08\\year_holdout_folds.csv": [
+        259,
+        1789050109102555100
+      ],
+      "data\\models\\R0c_weather\\H09\\coefficients.csv": [
+        1159,
+        1789050109390251100
+      ],
+      "data\\models\\R0c_weather\\H09\\in_sample.csv.gz": [
+        192876,
+        1789050109579595200
+      ],
+      "data\\models\\R0c_weather\\H09\\LAD_OOF.csv.gz": [
+        197283,
+        1789050110528274000
+      ],
+      "data\\models\\R0c_weather\\H09\\LAD_OOF_folds.csv": [
+        301,
+        1789050110531961900
+      ],
+      "data\\models\\R0c_weather\\H09\\preprocessing.json": [
+        82622,
+        1789050112602399800
+      ],
+      "data\\models\\R0c_weather\\H09\\random_OOF.csv.gz": [
+        157218,
+        1789050111519784000
+      ],
+      "data\\models\\R0c_weather\\H09\\random_OOF_folds.csv": [
+        300,
+        1789050111524912000
+      ],
+      "data\\models\\R0c_weather\\H09\\result.json": [
+        7485,
+        1789050507873636900
+      ],
+      "data\\models\\R0c_weather\\H09\\year_holdout.csv.gz": [
+        198710,
+        1789050112592470500
+      ],
+      "data\\models\\R0c_weather\\H09\\year_holdout_folds.csv": [
+        259,
+        1789050112596003600
+      ],
+      "data\\models\\R0c_weather\\H10\\coefficients.csv": [
+        1202,
+        1789050112899213000
+      ],
+      "data\\models\\R0c_weather\\H10\\in_sample.csv.gz": [
+        192959,
+        1789050113186016200
+      ],
+      "data\\models\\R0c_weather\\H10\\LAD_OOF.csv.gz": [
+        197244,
+        1789050114396977800
+      ],
+      "data\\models\\R0c_weather\\H10\\LAD_OOF_folds.csv": [
+        302,
+        1789050114403577800
+      ],
+      "data\\models\\R0c_weather\\H10\\preprocessing.json": [
+        83583,
+        1789050116354227000
+      ],
+      "data\\models\\R0c_weather\\H10\\random_OOF.csv.gz": [
+        157231,
+        1789050115440330100
+      ],
+      "data\\models\\R0c_weather\\H10\\random_OOF_folds.csv": [
+        301,
+        1789050115446855900
+      ],
+      "data\\models\\R0c_weather\\H10\\result.json": [
+        7501,
+        1789050507977268900
+      ],
+      "data\\models\\R0c_weather\\H10\\year_holdout.csv.gz": [
+        198771,
+        1789050116336190400
+      ],
+      "data\\models\\R0c_weather\\H10\\year_holdout_folds.csv": [
+        258,
+        1789050116342173100
+      ],
+      "data\\models\\R0c_weather\\H11\\coefficients.csv": [
+        4787,
+        1789050117412353800
+      ],
+      "data\\models\\R0c_weather\\H11\\in_sample.csv.gz": [
+        192994,
+        1789050117596827000
+      ],
+      "data\\models\\R0c_weather\\H11\\LAD_OOF.csv.gz": [
+        201129,
+        1789050121048518000
+      ],
+      "data\\models\\R0c_weather\\H11\\LAD_OOF_folds.csv": [
+        306,
+        1789050121052504600
+      ],
+      "data\\models\\R0c_weather\\H11\\preprocessing.json": [
+        175664,
+        1789050126536688900
+      ],
+      "data\\models\\R0c_weather\\H11\\random_OOF.csv.gz": [
+        157385,
+        1789050123671024800
+      ],
+      "data\\models\\R0c_weather\\H11\\random_OOF_folds.csv": [
+        307,
+        1789050123674694400
+      ],
+      "data\\models\\R0c_weather\\H11\\result.json": [
+        7488,
+        1789050508088050100
+      ],
+      "data\\models\\R0c_weather\\H11\\year_holdout.csv.gz": [
+        199216,
+        1789050126522851500
+      ],
+      "data\\models\\R0c_weather\\H11\\year_holdout_folds.csv": [
+        264,
+        1789050126527976900
+      ],
+      "data\\models\\R0c_weather\\H12\\coefficients.csv": [
+        910,
+        1789050126783690800
+      ],
+      "data\\models\\R0c_weather\\H12\\in_sample.csv.gz": [
+        192907,
+        1789050127057716800
+      ],
+      "data\\models\\R0c_weather\\H12\\LAD_OOF.csv.gz": [
+        197146,
+        1789050127982178100
+      ],
+      "data\\models\\R0c_weather\\H12\\LAD_OOF_folds.csv": [
+        302,
+        1789050127985802400
+      ],
+      "data\\models\\R0c_weather\\H12\\preprocessing.json": [
+        75516,
+        1789050129593667100
+      ],
+      "data\\models\\R0c_weather\\H12\\random_OOF.csv.gz": [
+        157256,
+        1789050128794701100
+      ],
+      "data\\models\\R0c_weather\\H12\\random_OOF_folds.csv": [
+        301,
+        1789050128799933500
+      ],
+      "data\\models\\R0c_weather\\H12\\result.json": [
+        7489,
+        1789050508185882200
+      ],
+      "data\\models\\R0c_weather\\H12\\year_holdout.csv.gz": [
+        198683,
+        1789050129583989000
+      ],
+      "data\\models\\R0c_weather\\H12\\year_holdout_folds.csv": [
+        259,
+        1789050129587536500
+      ],
+      "data\\models\\R0c_weather\\H13\\LAD_OOF.csv.gz": [
+        197295,
+        1789050130870822100
+      ],
+      "data\\models\\R0c_weather\\H13\\LAD_OOF_folds.csv": [
+        302,
+        1789050130874744800
+      ],
+      "data\\models\\R0c_weather\\H13\\preprocessing.json": [
+        30838,
+        1789050130877738300
+      ],
+      "data\\models\\R0c_weather\\H13\\result.json": [
+        6494,
+        1789050508229396900
+      ],
+      "data\\models\\R0c_weather\\H14\\LAD_OOF.csv.gz": [
+        197208,
+        1789050132228000700
+      ],
+      "data\\models\\R0c_weather\\H14\\LAD_OOF_folds.csv": [
+        300,
+        1789050132230529300
+      ],
+      "data\\models\\R0c_weather\\H14\\preprocessing.json": [
+        31216,
+        1789050132234022500
+      ],
+      "data\\models\\R0c_weather\\H14\\result.json": [
+        6501,
+        1789050508280424900
+      ]
+    },
+    "manifest_sha256": "27474016dfd9c8644daf90cd44ffa4d834c8c0db4399a0cc9f377bf7b1308a3e"
+  },
+  "D": {
+    "files": {
+      "manifest.json": [
+        13011,
+        1789042625914047100
+      ],
+      "README.md": [
+        1856,
+        1789042625859450200
+      ],
+      "data\\E0_all_plateau_bootstrap.csv": [
+        3307,
+        1789042625798795000
+      ],
+      "data\\E0_all_plateau_profile.csv": [
+        9589,
+        1789042625797641300
+      ],
+      "data\\E0_weather_plateau_bootstrap.csv": [
+        3304,
+        1789042625800908900
+      ],
+      "data\\E0_weather_plateau_profile.csv": [
+        9501,
+        1789042625799903600
+      ],
+      "figures\\D_PLATEAU_PROFILE_BOOTSTRAP.png": [
+        400030,
+        1789042625795264200
+      ],
+      "logs\\execution.log": [
+        149,
+        1789042625860447500
+      ],
+      "logs\\validation.json": [
+        255,
+        1789042625860447500
+      ],
+      "tables\\D_KNOT_SUMMARY.csv": [
+        779,
+        1789042624178157400
+      ],
+      "tables\\D_KNOT_SUMMARY.md": [
+        1896,
+        1789042624186118300
+      ],
+      "tables\\D_NESTED_FOLD_KNOTS.csv": [
+        506,
+        1789042624188389800
+      ],
+      "tables\\D_NESTED_FOLD_KNOTS.md": [
+        1448,
+        1789042624193410200
+      ]
+    },
+    "manifest_sha256": "9e0459e4b9a8498f0d08f30e787711d222e17c1992f877e3e8a8f7b749b5f7ef"
+  },
+  "E": {
+    "files": {
+      "manifest.json": [
+        3936,
+        1789042626014465600
+      ],
+      "README.md": [
+        1453,
+        1789042625973235400
+      ],
+      "logs\\execution.log": [
+        111,
+        1789042625974232400
+      ],
+      "logs\\validation.json": [
+        255,
+        1789042625974232400
+      ],
+      "tables\\E_PERIOD_COEFFICIENTS.csv": [
+        2148,
+        1789042625936329600
+      ],
+      "tables\\E_PERIOD_COEFFICIENTS.md": [
+        2717,
+        1789042625942453800
+      ],
+      "tables\\E_TEMPORAL_DESIGN.csv": [
+        638,
+        1789042625945873200
+      ],
+      "tables\\E_TEMPORAL_DESIGN.md": [
+        1408,
+        1789042625948973200
+      ]
+    },
+    "manifest_sha256": "73140f464f3ae47b5430fc8a52a257b56109816ec6baf93df10619c5d1ad9d45"
+  },
+  "F": {
+    "files": {
+      "manifest.json": [
+        5860,
+        1789042626165812000
+      ],
+      "README.md": [
+        1978,
+        1789042626129204800
+      ],
+      "logs\\execution.log": [
+        187,
+        1789042626130326300
+      ],
+      "logs\\validation.json": [
+        255,
+        1789042626130326300
+      ],
+      "tables\\F03_R2_DECOMPOSITION.csv": [
+        1058,
+        1789042626112639800
+      ],
+      "tables\\F03_R2_DECOMPOSITION.md": [
+        1722,
+        1789042626118669000
+      ],
+      "tables\\F_FULL_COEFFICIENTS.csv": [
+        33002,
+        1789042626060157600
+      ],
+      "tables\\F_FULL_COEFFICIENTS.md": [
+        33061,
+        1789042626090211800
+      ]
+    },
+    "manifest_sha256": "914c6b50a541677c6f7e51f42b597432d02a030fb86e8bb1052a9c389bd8b234"
+  },
+  "G": {
+    "files": {
+      "manifest.json": [
+        4165,
+        1789042626251346900
+      ],
+      "README.md": [
+        2040,
+        1789042626215757300
+      ],
+      "logs\\execution.log": [
+        187,
+        1789042626215757300
+      ],
+      "logs\\validation.json": [
+        255,
+        1789042626216757900
+      ],
+      "tables\\G01_PREDICTED_VS_OBSERVED_SUMMARY.csv": [
+        3152,
+        1789042626183382300
+      ],
+      "tables\\G01_PREDICTED_VS_OBSERVED_SUMMARY.md": [
+        3335,
+        1789042626188585600
+      ],
+      "tables\\G_FINAL_METRICS.csv": [
+        873,
+        1789042626200851000
+      ],
+      "tables\\G_FINAL_METRICS.md": [
+        1600,
+        1789042626206477900
+      ]
+    },
+    "manifest_sha256": "d8af110e25ad06bb31ffc5fdd7bbadfdc864311c3dcfda5e3173f2f0ed202ce1"
+  },
+  "H": {
+    "files": {
+      "manifest.json": [
+        6700,
+        1789042626364037400
+      ],
+      "README.md": [
+        2243,
+        1789042626318514600
+      ],
+      "data\\H_OPTIMIZER_DIAGNOSTICS.json": [
+        1211,
+        1789042626305093300
+      ],
+      "logs\\execution.log": [
+        187,
+        1789042626319863000
+      ],
+      "logs\\validation.json": [
+        255,
+        1789042626319863000
+      ],
+      "tables\\H_CONDITIONAL_COEFFICIENTS.csv": [
+        1782,
+        1789042626278508400
+      ],
+      "tables\\H_CONDITIONAL_COEFFICIENTS.md": [
+        2571,
+        1789042626282972800
+      ],
+      "tables\\H_CONDITIONAL_LOGNORMAL.csv": [
+        3901,
+        1789042626297600400
+      ],
+      "tables\\H_CONDITIONAL_LOGNORMAL.md": [
+        4465,
+        1789042626304096800
+      ],
+      "tables\\H_ORDINAL_SUMMARY.csv": [
+        690,
+        1789042626270769000
+      ],
+      "tables\\H_ORDINAL_SUMMARY.md": [
+        1409,
+        1789042626276514800
+      ]
+    },
+    "manifest_sha256": "e07bf992f44df9d93ccf3951e08855f035ada4c1e7c6bdaf12a71942a66349fe"
+  },
+  "I": {
+    "files": {
+      "manifest.json": [
+        2725,
+        1789042629077543600
+      ],
+      "README.md": [
+        1732,
+        1789042629046187600
+      ],
+      "logs\\execution.log": [
+        149,
+        1789042629046187600
+      ],
+      "logs\\validation.json": [
+        255,
+        1789042629047200600
+      ],
+      "tables\\I_STORM_COUNTS.csv": [
+        2081,
+        1789042628953405400
+      ],
+      "tables\\I_STORM_COUNTS.md": [
+        2938,
+        1789042628959699100
+      ]
+    },
+    "manifest_sha256": "2fbc0a2ea4a84e9214f5185a389bcac7b13ab54b43fd0974e474ce66a3fbf668"
+  },
+  "_previous_register": [
+    {
+      "semantic_id": "A_SAMPLE_FLOW",
+      "display_number": "Table A1",
+      "appendix": "A",
+      "requirement_id": "A01",
+      "path": "A/tables/A_SAMPLE_FLOW.csv"
+    },
+    {
+      "semantic_id": "A_CAUSE_COUNTS",
+      "display_number": "Table A2",
+      "appendix": "A",
+      "requirement_id": "A01",
+      "path": "A/tables/A_CAUSE_COUNTS.csv"
+    },
+    {
+      "semantic_id": "A_COVARIATE_SUMMARY",
+      "display_number": "Table A3",
+      "appendix": "A",
+      "requirement_id": "A01",
+      "path": "A/tables/A_COVARIATE_SUMMARY.csv"
+    },
+    {
+      "semantic_id": "A_VARIABLE_DICTIONARY",
+      "display_number": "Table A4",
+      "appendix": "A",
+      "requirement_id": "A02",
+      "path": "A/tables/A_VARIABLE_DICTIONARY.csv"
+    },
+    {
+      "semantic_id": "A03_EXISTING_DEFINITION",
+      "display_number": "Table A5",
+      "appendix": "A",
+      "requirement_id": "A03",
+      "path": "A/tables/A03_EXISTING_DEFINITION.csv"
+    },
+    {
+      "semantic_id": "A_FINAL_DESIGN_VIF",
+      "display_number": "Table A6",
+      "appendix": "A",
+      "requirement_id": "A04",
+      "path": "A/tables/A_FINAL_DESIGN_VIF.csv"
+    },
+    {
+      "semantic_id": "A05_APPENDIXG_TABLE_G1_CORRECTED",
+      "display_number": "Table A7",
+      "appendix": "A",
+      "requirement_id": "A05",
+      "path": "A/tables/A05_APPENDIXG_TABLE_G1_CORRECTED.csv"
+    },
+    {
+      "semantic_id": "B_CONSTRUCTION_RULES",
+      "display_number": "Table B1",
+      "appendix": "B",
+      "requirement_id": "B01",
+      "path": "B/tables/B_CONSTRUCTION_RULES.csv"
+    },
+    {
+      "semantic_id": "B_REPRESENTATIVE_REPAIR",
+      "display_number": "Table B2",
+      "appendix": "B",
+      "requirement_id": "B01",
+      "path": "B/tables/B_REPRESENTATIVE_REPAIR.csv"
+    },
+    {
+      "semantic_id": "B_RECOVERY_DEFINITION",
+      "display_number": "Table B3",
+      "appendix": "B",
+      "requirement_id": "B02",
+      "path": "B/tables/B_RECOVERY_DEFINITION.csv"
+    },
+    {
+      "semantic_id": "B03_EXISTING_DEFINITION",
+      "display_number": "Table B4",
+      "appendix": "B",
+      "requirement_id": "B03",
+      "path": "B/tables/B03_EXISTING_DEFINITION.csv"
+    },
+    {
+      "semantic_id": "C_GUST_PERFORMANCE",
+      "display_number": "Figure C1",
+      "appendix": "C",
+      "requirement_id": "C03",
+      "path": "C/figures/C_GUST_PERFORMANCE.png"
+    },
+    {
+      "semantic_id": "C_CANDIDATE_DEFINITIONS",
+      "display_number": "Table C1",
+      "appendix": "C",
+      "requirement_id": "C01",
+      "path": "C/tables/C_CANDIDATE_DEFINITIONS.csv"
+    },
+    {
+      "semantic_id": "C_COVERAGE_MATRIX",
+      "display_number": "Table C2",
+      "appendix": "C",
+      "requirement_id": "C04",
+      "path": "C/tables/C_COVERAGE_MATRIX.csv"
+    },
+    {
+      "semantic_id": "C_COVERAGE_OVERVIEW",
+      "display_number": "Table C3",
+      "appendix": "C",
+      "requirement_id": "C04",
+      "path": "C/tables/C_COVERAGE_OVERVIEW.csv"
+    },
+    {
+      "semantic_id": "C_EXISTING_FIXED_AND_D_REFERENCES",
+      "display_number": "Table C4",
+      "appendix": "C",
+      "requirement_id": "C03",
+      "path": "C/tables/C_EXISTING_FIXED_AND_D_REFERENCES.csv"
+    },
+    {
+      "semantic_id": "C_GUST_FUNCTION_COMPARISON",
+      "display_number": "Table C5",
+      "appendix": "C",
+      "requirement_id": "C03",
+      "path": "C/tables/C_GUST_FUNCTION_COMPARISON.csv"
+    },
+    {
+      "semantic_id": "C_HISTORICAL_LADDER",
+      "display_number": "Table C6",
+      "appendix": "C",
+      "requirement_id": "C02",
+      "path": "C/tables/C_HISTORICAL_LADDER.csv"
+    },
+    {
+      "semantic_id": "C_LAD_FE_COMPARISON",
+      "display_number": "Table C7",
+      "appendix": "C",
+      "requirement_id": "C03",
+      "path": "C/tables/C_LAD_FE_COMPARISON.csv"
+    },
+    {
+      "semantic_id": "C_REFERENCE_COVERAGE",
+      "display_number": "Table C8",
+      "appendix": "C",
+      "requirement_id": "C04",
+      "path": "C/tables/C_REFERENCE_COVERAGE.csv"
+    },
+    {
+      "semantic_id": "C_SAMPLE_DEFINITIONS",
+      "display_number": "Table C9",
+      "appendix": "C",
+      "requirement_id": "C01",
+      "path": "C/tables/C_SAMPLE_DEFINITIONS.csv"
+    },
+    {
+      "semantic_id": "D_KNOT_SUMMARY",
+      "display_number": "Table D1",
+      "appendix": "D",
+      "requirement_id": "D01",
+      "path": "D/tables/D_KNOT_SUMMARY.csv"
+    },
+    {
+      "semantic_id": "D_NESTED_FOLD_KNOTS",
+      "display_number": "Table D2",
+      "appendix": "D",
+      "requirement_id": "D01",
+      "path": "D/tables/D_NESTED_FOLD_KNOTS.csv"
+    },
+    {
+      "semantic_id": "D_PLATEAU_PROFILE_BOOTSTRAP",
+      "display_number": "Figure D1",
+      "appendix": "D",
+      "requirement_id": "D02",
+      "path": "D/figures/D_PLATEAU_PROFILE_BOOTSTRAP.png"
+    },
+    {
+      "semantic_id": "E_PERIOD_COEFFICIENTS",
+      "display_number": "Table E1",
+      "appendix": "E",
+      "requirement_id": "E01",
+      "path": "E/tables/E_PERIOD_COEFFICIENTS.csv"
+    },
+    {
+      "semantic_id": "E_TEMPORAL_DESIGN",
+      "display_number": "Table E2",
+      "appendix": "E",
+      "requirement_id": "E01",
+      "path": "E/tables/E_TEMPORAL_DESIGN.csv"
+    },
+    {
+      "semantic_id": "F_FULL_COEFFICIENTS",
+      "display_number": "Table F1",
+      "appendix": "F",
+      "requirement_id": "F01",
+      "path": "F/tables/F_FULL_COEFFICIENTS.csv"
+    },
+    {
+      "semantic_id": "F03_R2_DECOMPOSITION",
+      "display_number": "Table F2",
+      "appendix": "F",
+      "requirement_id": "F03",
+      "path": "F/tables/F03_R2_DECOMPOSITION.csv"
+    },
+    {
+      "semantic_id": "G01_PREDICTED_VS_OBSERVED_SUMMARY",
+      "display_number": "Table G1",
+      "appendix": "G",
+      "requirement_id": "G01",
+      "path": "G/tables/G01_PREDICTED_VS_OBSERVED_SUMMARY.csv"
+    },
+    {
+      "semantic_id": "G_FINAL_METRICS",
+      "display_number": "Table G2",
+      "appendix": "G",
+      "requirement_id": "G02",
+      "path": "G/tables/G_FINAL_METRICS.csv"
+    },
+    {
+      "semantic_id": "H_ORDINAL_SUMMARY",
+      "display_number": "Table H1",
+      "appendix": "H",
+      "requirement_id": "H01",
+      "path": "H/tables/H_ORDINAL_SUMMARY.csv"
+    },
+    {
+      "semantic_id": "H_CONDITIONAL_COEFFICIENTS",
+      "display_number": "Table H2",
+      "appendix": "H",
+      "requirement_id": "H01",
+      "path": "H/tables/H_CONDITIONAL_COEFFICIENTS.csv"
+    },
+    {
+      "semantic_id": "H_CONDITIONAL_LOGNORMAL",
+      "display_number": "Table H3",
+      "appendix": "H",
+      "requirement_id": "H02",
+      "path": "H/tables/H_CONDITIONAL_LOGNORMAL.csv"
+    },
+    {
+      "semantic_id": "I_STORM_COUNTS",
+      "display_number": "Table I1",
+      "appendix": "I",
+      "requirement_id": "I01",
+      "path": "I/tables/I_STORM_COUNTS.csv"
+    },
+    {
+      "semantic_id": "J_PROXY_DEFINITIONS",
+      "display_number": "Table J1",
+      "appendix": "J",
+      "requirement_id": "J01",
+      "path": "J/tables/J_PROXY_DEFINITIONS.csv"
+    },
+    {
+      "semantic_id": "J_PROXY_LABELS",
+      "display_number": "Table J2",
+      "appendix": "J",
+      "requirement_id": "J01",
+      "path": "J/tables/J_PROXY_LABELS.csv"
+    },
+    {
+      "semantic_id": "J02_GUST_COMPARISON",
+      "display_number": "Table J3",
+      "appendix": "J",
+      "requirement_id": "J02",
+      "path": "J/tables/J02_GUST_COMPARISON.csv"
+    },
+    {
+      "semantic_id": "J02_GRID_CELLS",
+      "display_number": "Table J4",
+      "appendix": "J",
+      "requirement_id": "J02",
+      "path": "J/tables/J02_GRID_CELLS.csv"
+    },
+    {
+      "semantic_id": "J02_CENTROIDS",
+      "display_number": "Table J5",
+      "appendix": "J",
+      "requirement_id": "J02",
+      "path": "J/tables/J02_CENTROIDS.csv"
+    },
+    {
+      "semantic_id": "J_INDEPENDENT_WEATHER_DEFINITIONS",
+      "display_number": "Table J6",
+      "appendix": "J",
+      "requirement_id": "J02",
+      "path": "J/tables/J_INDEPENDENT_WEATHER_DEFINITIONS.csv"
+    },
+    {
+      "semantic_id": "J04_METRICS",
+      "display_number": "Table J7",
+      "appendix": "J",
+      "requirement_id": "J04",
+      "path": "J/tables/J04_METRICS.csv"
+    },
+    {
+      "semantic_id": "J04_PAIRED_UNCERTAINTY",
+      "display_number": "Table J8",
+      "appendix": "J",
+      "requirement_id": "J04",
+      "path": "J/tables/J04_PAIRED_UNCERTAINTY.csv"
+    },
+    {
+      "semantic_id": "J04_AGGREGATION_SUMMARY",
+      "display_number": "Table J9",
+      "appendix": "J",
+      "requirement_id": "J04",
+      "path": "J/tables/J04_AGGREGATION_SUMMARY.csv"
+    },
+    {
+      "semantic_id": "J05_METRICS",
+      "display_number": "Table J10",
+      "appendix": "J",
+      "requirement_id": "J05",
+      "path": "J/tables/J05_METRICS.csv"
+    },
+    {
+      "semantic_id": "J05_PAIRED_UNCERTAINTY",
+      "display_number": "Table J11",
+      "appendix": "J",
+      "requirement_id": "J05",
+      "path": "J/tables/J05_PAIRED_UNCERTAINTY.csv"
+    },
+    {
+      "semantic_id": "J05_THRESHOLDS",
+      "display_number": "Table J12",
+      "appendix": "J",
+      "requirement_id": "J05",
+      "path": "J/tables/J05_THRESHOLDS.csv"
+    },
+    {
+      "semantic_id": "J_TIME_METRICS",
+      "display_number": "Table J13",
+      "appendix": "J",
+      "requirement_id": "J06",
+      "path": "J/tables/J_TIME_METRICS.csv"
+    },
+    {
+      "semantic_id": "J_TIME_MONTHLY",
+      "display_number": "Table J14",
+      "appendix": "J",
+      "requirement_id": "J06",
+      "path": "J/tables/J_TIME_MONTHLY.csv"
+    },
+    {
+      "semantic_id": "J_TIME_SUPPORT",
+      "display_number": "Table J15",
+      "appendix": "J",
+      "requirement_id": "J06",
+      "path": "J/tables/J_TIME_SUPPORT.csv"
+    },
+    {
+      "semantic_id": "J_TIME_DEVELOPMENT_FIT",
+      "display_number": "Table J16",
+      "appendix": "J",
+      "requirement_id": "J06",
+      "path": "J/tables/J_TIME_DEVELOPMENT_FIT.csv"
+    },
+    {
+      "semantic_id": "J_TIME_CALIBRATION_BINS",
+      "display_number": "Table J17",
+      "appendix": "J",
+      "requirement_id": "J07",
+      "path": "J/tables/J_TIME_CALIBRATION_BINS.csv"
+    },
+    {
+      "semantic_id": "J_TIME_CALIBRATION_MONTHLY",
+      "display_number": "Figure J1",
+      "appendix": "J",
+      "requirement_id": "J07",
+      "path": "J/figures/J_TIME_CALIBRATION_MONTHLY.png"
+    },
+    {
+      "semantic_id": "J_INTERPRETATION_BOUNDARIES",
+      "display_number": "Table J18",
+      "appendix": "J",
+      "requirement_id": "J08",
+      "path": "J/tables/J_INTERPRETATION_BOUNDARIES.csv"
+    },
+    {
+      "semantic_id": "J_FROZEN_EXPERIMENT_DEFINITIONS",
+      "display_number": "Table J19",
+      "appendix": "J",
+      "requirement_id": "J08",
+      "path": "J/tables/J_FROZEN_EXPERIMENT_DEFINITIONS.csv"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "time": "2026-09-10T22:55:28.322039+01:00",
+  "files_checked": 1519,
+  "staged_byte_mismatches": [],
+  "staged_deletions": [],
+  "existing_local_deletions_retained": 469,
+  "excluded_shortcuts": [
+    "docs/pyOutageGust.lnk"
+  ],
+  "inventory_sha256": "e25145b04efd80104235439b1a9d0a95ab6bc7a52dddbfe4b40c9c06e40b533d",
+  "scope": "Byte/staging publication check only; no new statistical validation."
+}

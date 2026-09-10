@@ -1,0 +1,19 @@
+{
+  "rows": 121656,
+  "lads": 111,
+  "days": 1096,
+  "start": "2021-04-01",
+  "end": "2024-03-31",
+  "same_keys": true,
+  "same_labels": true,
+  "same_saved_folds": true,
+  "equal_row_weights": true,
+  "timezone": "UTC",
+  "unit": "m/s",
+  "key_label_sha256": "7521838fe26d74f97cbefd9780f9561b3fdaf3cc6f003c7d13f0e400cc49130d",
+  "fold_sha256": "f2da4b80f3b5bfc1710ae4fa416c194e432670f9a20d652a7697aed64d03a12f",
+  "scheme_hashes": {
+    "PROXY": "ae2c0a1fd45590f6fb88940c1287c358da03eb1183734b0a1eb8f7b74c7a1f89",
+    "GRID_MAX": "276af1fb8522c034cc5f4634ceb8397269d7a7f3ce33c8c1ea4af6d4f3b52c1b"
+  }
+}

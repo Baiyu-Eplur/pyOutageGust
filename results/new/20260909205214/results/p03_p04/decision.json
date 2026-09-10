@@ -1,0 +1,11 @@
+{
+  "status": "intermediate",
+  "reason": "存在未收敛拟合；不据此自动接受或宣称有效比较。",
+  "mean_relative_brier_gain": -0.007188340529907139,
+  "mean_relative_calibration_rmse_gain": -0.061437062265349174,
+  "brier_gain_ci95": [
+    -0.009902395994560696,
+    -0.004086534979271705
+  ],
+  "candidate_min_gain": 0.05
+}

@@ -1,0 +1,44 @@
+{
+  "checks": {
+    "empirical_counts_valid": true,
+    "empirical_nonempty_frequencies": true,
+    "empirical_bins_cover_each_sample": true,
+    "no_conditional_model_fits": true,
+    "two_formal_samples_and_saved_OLS_matched": true,
+    "response_legality_checked_no_rounding_or_dropping": true,
+    "four_original_candidate_attempts": true,
+    "all_attempts_have_explicit_status": true,
+    "covariance_uses_score_Hessian": true,
+    "full_NB_alpha_dimension": true,
+    "coefficient_interval_formula": true,
+    "no_OLS_CV_knot_or_H2_H3_fits": true
+  },
+  "all_checks_passed": true,
+  "candidate_availability": [
+    {
+      "combination": "E0_all",
+      "model": "NB2",
+      "point_valid": true,
+      "inference_valid": true
+    },
+    {
+      "combination": "E0_all",
+      "model": "Tweedie",
+      "point_valid": true,
+      "inference_valid": true
+    },
+    {
+      "combination": "R0c_all",
+      "model": "Gamma",
+      "point_valid": true,
+      "inference_valid": true
+    },
+    {
+      "combination": "R0c_all",
+      "model": "Tweedie",
+      "point_valid": true,
+      "inference_valid": true
+    }
+  ],
+  "scope": "execution and saved input/inference checks; unavailable candidate is reported, not suppressed"
+}

@@ -1,0 +1,91 @@
+{
+  "time": "2026-09-10T17:24:19.260172+01:00",
+  "checks": {
+    "A_preserved": true,
+    "B_preserved": true,
+    "C_preserved": true,
+    "D_preserved": true,
+    "E_preserved": true,
+    "G_preserved": true,
+    "H_preserved": true,
+    "I_preserved": true,
+    "J_preserved": true,
+    "all_prior_numbers_unchanged": true,
+    "current_managed_hashes_valid": true,
+    "other_F_preserved": true,
+    "cache_without_calculation": true,
+    "scientific_cache_hashes_unchanged": true,
+    "sources_unchanged": true,
+    "technical_all_passed": true
+  },
+  "all_passed": true,
+  "scope": {
+    "A": {
+      "files": 18,
+      "metadata_same": true,
+      "manifest_same": true
+    },
+    "B": {
+      "files": 12,
+      "metadata_same": true,
+      "manifest_same": true
+    },
+    "C": {
+      "files": 637,
+      "metadata_same": true,
+      "manifest_same": true
+    },
+    "D": {
+      "files": 13,
+      "metadata_same": true,
+      "manifest_same": true
+    },
+    "E": {
+      "files": 8,
+      "metadata_same": true,
+      "manifest_same": true
+    },
+    "G": {
+      "files": 8,
+      "metadata_same": true,
+      "manifest_same": true
+    },
+    "H": {
+      "files": 11,
+      "metadata_same": true,
+      "manifest_same": true
+    },
+    "I": {
+      "files": 6,
+      "metadata_same": true,
+      "manifest_same": true
+    },
+    "J": {
+      "files": 79,
+      "metadata_same": true,
+      "manifest_same": true
+    }
+  },
+  "technical_checks": 42,
+  "new_ols_fits": 0,
+  "cached_data_tables": 21,
+  "F02_display_register": [
+    {
+      "semantic_id": "F02_COEFFICIENT_COMPARISON",
+      "display_number": "Table F3",
+      "appendix": "F",
+      "requirement_id": "F02",
+      "claim_id": "CL_F02",
+      "path": "F/tables/F02_COEFFICIENT_COMPARISON.csv",
+      "status": "本次仅F02更新/其他F结果保留",
+      "source_sha256": "{\"review_package/data/combined_E0_final.csv\": \"6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38\", \"review_package/data/combined_R0c_final.csv\": \"313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9\", \"analysis_new/weather_only_regression.py\": \"b7db64e8bd350dfbcabacd3f2ad7d2514ad26a4fb5d7f622d9989072b80ff9bd\", \"analysis_new/model_selection.py\": \"a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d\", \"analysis_new/final_models.py\": \"4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310\", \"analysis_new/appendix/design_adapter.py\": \"7f4b4ed2c1647f6c759bcb45017c172d008dfe6b9a8abda11d00c5c3b8781529\", \"results/new/20260909183317/results/weather_only/weather_only_summary.json\": \"286b36e35231108b8403bda654ec05e2d41550001797fd365e39b98e086ec555\", \"results/Appendix/C/tables/C_SAMPLE_DEFINITIONS.csv\": \"a55abc79b7bdd3c065944de4b74cb4a8aaf7f7b10f089e4dc70fef056288ac41\", \"results/new/20260909183317/results/weather_only/E0_weather_final_twoway.csv\": \"994d2218bae8a395f72905e708e6f34763ea5990285d5792bf9de0ea890c400a\", \"results/Appendix/C/data/models/E0_weather/F08/result.json\": \"a5f2bc6ceaa6111fa627e7954f19686afe9c9b9055f03ff0c18f7b9780a901d7\", \"results/Appendix/C/data/models/E0_weather/F08/preprocessing.json\": \"59a9f3d7aff2533f9d27a89d4d02d854991c4d54563d08a511bb6d05161f3648\", \"results/Appendix/C/data/models/E0_weather/F08/in_sample.csv.gz\": \"e55e747678b2a928a6c0130df2740452b2a0e54416a3193cf6960d0b921b85aa\", \"results/Appendix/C/data/models/E0_weather/F08/coefficients.csv\": \"a53cf97477a4f04ebd837a8ddfb9e2156a11a54d5a8ee3fdd98aa5987d9bc7d8\", \"results/new/20260909183317/results/weather_only/R0c_weather_final_twoway.csv\": \"ba69ee5391716b3273a38bb6203da0781b63623dd49be5491a2addf89f7ba220\", \"results/Appendix/C/data/models/R0c_weather/F06/result.json\": \"1678db65d47d4e5684eca6210cf58950e4f070ff8f0b63b97fd93c52a8eafd3e\", \"results/Appendix/C/data/models/R0c_weather/F06/preprocessing.json\": \"bce2375bd8fdc03c9069b90f9281ffc4e26a2eb07a80e1e8a54371b167d1c3fa\", \"results/Appendix/C/data/models/R0c_weather/F06/in_sample.csv.gz\": \"e20b35e9d3ca550352f2e3b4d7652c94c1a71182e0ea94a1d2be0765e83f3d21\", \"results/Appendix/C/data/models/R0c_weather/F06/coefficients.csv\": \"7843f66c35a5e8ae2acc012e96168f633c9c1a352ce27557ed99d933875e77fe\"}"
+    }
+  ],
+  "scope_boundary": "Unselected files: list/size/mtime and manifest SHA256; F managed outputs: SHA256. No historical numerical audit.",
+  "final_cache_repeat": {
+    "time": "2026-09-10T17:26:27.018204+01:00",
+    "scientific_hashes_unchanged": true,
+    "managed_hashes_valid": true,
+    "new_ols_fits": 0
+  }
+}

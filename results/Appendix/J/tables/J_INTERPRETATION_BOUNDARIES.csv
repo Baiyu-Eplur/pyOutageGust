@@ -1,0 +1,7 @@
+﻿section,definition,supports,does_not_support
+J.1,Main event-anchor proxy,Includes no-event days under existing retrospective weather interpolation,Does not remove event-anchor dependence
+J.2,Independent ERA5 centroid daily maximum,Different location/sampling/time aggregation,No valid complete repaired proxy-vs-grid model ranking located
+J.3,Five aggregations on fixed ERA5,Within-task same-sample aggregation comparison,Not a validation of main proxy; no cross-experiment raw Brier ranking
+J.4,G plus H/24 or log1p(square cumulative excess),Increment of two specified duration indicators,Not top3/rolling3; not precise consecutive duration or structural damage
+J.5,"Frozen development fit, later retrospective period","BSS versus development constant, calibration and monthly description","Not a pristine independent confirmation set, advance forecast, full calibration or significance claim"
+J.6,Descriptive scope,Mixed/adverse results preserved; no posthoc adoption cutoff,"No equivalence, replacement decision, manuscript revision or closed audit"

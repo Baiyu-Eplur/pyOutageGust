@@ -1,0 +1,7 @@
+﻿margin,scope,n,lads,start,end,zero_customers,source
+E0,saved_input,60437,111,2021-04-01,2024-03-31,8979,review_package/data/combined_E0_final.csv
+E0,final,60437,111,2021-04-01,2024-03-31,8979,review_package/data/combined_E0_final.csv
+E0,weather_final,9857,105,2021-04-01,2024-03-31,572,review_package/data/combined_E0_final.csv
+R0c,saved_input,59834,111,2021-04-01,2024-03-31,8661,review_package/data/combined_R0c_final.csv
+R0c,final,51173,111,2021-04-01,2024-03-31,0,review_package/data/combined_R0c_final.csv
+R0c,weather_final,9254,104,2021-04-01,2024-03-31,0,review_package/data/combined_R0c_final.csv

@@ -1,0 +1,11 @@
+﻿margin,sample,n,form,fold_order,k1,k2
+E0,all,60437,unconstrained_two_hinge,0,14,25
+E0,all,60437,unconstrained_two_hinge,1,13,29
+E0,all,60437,unconstrained_two_hinge,2,14,26
+E0,all,60437,unconstrained_two_hinge,3,14,25
+E0,all,60437,unconstrained_two_hinge,4,14,26
+R0c,all,59834,unconstrained_two_hinge,0,15,20
+R0c,all,59834,unconstrained_two_hinge,1,13,19
+R0c,all,59834,unconstrained_two_hinge,2,13,20
+R0c,all,59834,unconstrained_two_hinge,3,13,19
+R0c,all,59834,unconstrained_two_hinge,4,8,18

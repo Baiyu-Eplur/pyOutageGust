@@ -1,0 +1,395 @@
+{
+  "started_at": "2026-09-10T09:00:06.998899+01:00",
+  "purpose": "DD-DUR01：日最大阵风与超阈小时比例/平方累计指标的增量测试",
+  "status": "completed",
+  "switches": {
+    "baseline": 0,
+    "model_selection": 0,
+    "hinge_search": 0,
+    "knot_estimation": 0,
+    "plateau_E0": 0,
+    "plateau_R0c": 0,
+    "select_final_knots": 0,
+    "plot_model_selection": 0,
+    "fragility_demo": 0,
+    "fragility_surfaces": 0,
+    "final_models": 0,
+    "district_day_fragility": 0,
+    "weather_only_regression": 0,
+    "paper_extras": 0,
+    "report_tables": 0,
+    "documents": 0,
+    "p03_p04_grid_weather": 0,
+    "dd_agg01": 0,
+    "dd_dur01": 1
+  },
+  "settings": {
+    "knot_bootstraps": 500,
+    "plateau_bootstraps": 300,
+    "blas_threads": 1,
+    "p03_p04": {
+      "base_run": "20260909183317",
+      "weather_cache_run": "",
+      "request_interval": 10,
+      "bootstraps": 1000,
+      "min_relative_gain": 0.05
+    },
+    "dd_agg01": {
+      "source_run": "20260909205214"
+    },
+    "dd_dur01": {
+      "base_run": "20260909231634",
+      "weather_run": "20260909205214"
+    }
+  },
+  "inputs": [
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\review_package\\data\\combined_E0_final.csv",
+      "sha256": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\review_package\\data\\combined_R0c_final.csv",
+      "sha256": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9"
+    }
+  ],
+  "sources": [
+    {
+      "path": "main_new.py",
+      "sha256": "cb050942e55a8a29a6a251c4191bdf7eb86e5f3cf07091c7abfaae3ef9463756"
+    },
+    {
+      "path": "pretestmain.py",
+      "sha256": "3769093cf873675126df683d976a919555d0b662fd6e30e2a6eed220f709378d"
+    },
+    {
+      "path": "pretest_paths.py",
+      "sha256": "b107a9d687a1fbaf4d82130785eb6367e2359250d3e29d2629971c01b7dc2e6c"
+    },
+    {
+      "path": "review_package\\code\\run_main_regression.py",
+      "sha256": "f96083218a31b7d46c6b00c3dacc4ccf4927540fc9a184e3fd13f5f17d5d15f8"
+    },
+    {
+      "path": "docs\\Draft.docx",
+      "sha256": "d9366c6d491439ad7d331c4cd7767a582b9962f76d002273168a21bceb37e682"
+    },
+    {
+      "path": "analysis_new\\__init__.py",
+      "sha256": "6e9c5f0cad8931a51b7fb7acb3e57e5b5404dd7873db0198de005146c63b7818"
+    },
+    {
+      "path": "analysis_new\\basis_solver.py",
+      "sha256": "ab181c3628721a83aac4d2d2bbe5cd2fbed2074de8ebaa427769f6a1c914cb9a"
+    },
+    {
+      "path": "analysis_new\\daily_aggregations.py",
+      "sha256": "161239fe26d75759bba058dafb994e3963cddf818be9b0bf57161ae6e7036224"
+    },
+    {
+      "path": "analysis_new\\dd_agg01.py",
+      "sha256": "ebb968d247c824d36208bbe5ccd9c588b81788f8193a71df4fe774d4c6e2bf17"
+    },
+    {
+      "path": "analysis_new\\dd_agg01_evaluation.py",
+      "sha256": "02093c536bdfceda47a0a374f1c9b7bf6f6b0d13762fdc1992ed273ffc65d367"
+    },
+    {
+      "path": "analysis_new\\dd_agg01_report.py",
+      "sha256": "c5cdba2558c9349adaff68602660576ab5f816950715bd664f4e277e4d5f418b"
+    },
+    {
+      "path": "analysis_new\\dd_dur01.py",
+      "sha256": "414d26b7e734b8e30eb5497435976bb9a65f1d2c52e80f96f0be757fe90fa7ad"
+    },
+    {
+      "path": "analysis_new\\dd_dur01_outputs.py",
+      "sha256": "ad6f847438588470d353fc7de39a4d17b3920f712778954921a6016353bd0a39"
+    },
+    {
+      "path": "analysis_new\\district_day_core.py",
+      "sha256": "837334b479bc5cc12433c1fd9af006abf19bba789340e509721605914c5e6121"
+    },
+    {
+      "path": "analysis_new\\district_day_fragility.py",
+      "sha256": "da695df1697e7cc1bce6d5846b9a306b79c263898175c23ae33d6a7b2fcf4f7b"
+    },
+    {
+      "path": "analysis_new\\document_plan.py",
+      "sha256": "3396d0f4af90d582de1d054d9c2368d466f4c383f93018160d4a43f87017a019"
+    },
+    {
+      "path": "analysis_new\\documents.py",
+      "sha256": "188350ade4add00164ca83e144fd99a0eb5ef85f5dcb385451972ff02426a1bd"
+    },
+    {
+      "path": "analysis_new\\duration_features.py",
+      "sha256": "e9e430c9eb12808771e93186cf77e54c716dbcfa0cb2aea34b8c4eee0f36d54e"
+    },
+    {
+      "path": "analysis_new\\final_models.py",
+      "sha256": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310"
+    },
+    {
+      "path": "analysis_new\\fragility_demo.py",
+      "sha256": "c16165bceac0b7a71a837606d67c17710a887762cb0f35f195b18778df90a72f"
+    },
+    {
+      "path": "analysis_new\\fragility_optimizer.py",
+      "sha256": "8de12747daa0966b8ab0a93508ca4e76dab58a3ebb9450d22f053e7a0fb2bca2"
+    },
+    {
+      "path": "analysis_new\\fragility_surfaces.py",
+      "sha256": "c3367c1d843f5ef7aeec6e0281a68b16544649f01b071b16ec0cd7bdce65906c"
+    },
+    {
+      "path": "analysis_new\\grid_fragility_validation.py",
+      "sha256": "1ec3ffbcd9a1e1a86fd2339bf8b1c8d9b42e062cd3e1531c41ee7ed427c18634"
+    },
+    {
+      "path": "analysis_new\\grid_weather.py",
+      "sha256": "ca884fb1aa19e57952f7bf218d9b4fcff6ae549ba30691759cf7c1853c03fb6b"
+    },
+    {
+      "path": "analysis_new\\hinge_search.py",
+      "sha256": "1a7a32494ba491d4bfdd75b8b9bdc44d7ca9d73b11eef822759fcea932e68987"
+    },
+    {
+      "path": "analysis_new\\knot_estimation.py",
+      "sha256": "69c07f14a33db4942cf7e43db19f1de0fe9094088d1488297a05a3a10606bf8f"
+    },
+    {
+      "path": "analysis_new\\model_selection.py",
+      "sha256": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d"
+    },
+    {
+      "path": "analysis_new\\p03_p04_grid_weather.py",
+      "sha256": "c5f8c88ae3d5e2a45d5df761e3273b88e3ac96206405a79c49c4bd5a95ac1261"
+    },
+    {
+      "path": "analysis_new\\paper_extras.py",
+      "sha256": "a6699f2b0ae820d0a5766041b1db217185c70cc931452686ee953595e7075b70"
+    },
+    {
+      "path": "analysis_new\\plateau_model.py",
+      "sha256": "672d8ee3fc667b9192f4fe6f40bde033d27306e6298677e51af5e411eb3f3bdd"
+    },
+    {
+      "path": "analysis_new\\plot_model_selection.py",
+      "sha256": "5a0c8ce85b0f3228c773f51b78b12a72e538c33ce377a92186de0ccd0d53e392"
+    },
+    {
+      "path": "analysis_new\\report_tables.py",
+      "sha256": "3e4055f5b42618f9bada05fc5ff717d24e939ba0b3279cc22f37b7d565cd6d60"
+    },
+    {
+      "path": "analysis_new\\runner.py",
+      "sha256": "665b593b40bd1fa5f0275038786cb2ee907891805d4155fd3af880107a2ff4ea"
+    },
+    {
+      "path": "analysis_new\\runtime.py",
+      "sha256": "f7dc6fd8588c5206752d9a22df807f9c11f3c351d73748bd5d3bbad5a899c90f"
+    },
+    {
+      "path": "analysis_new\\select_final_knots.py",
+      "sha256": "6328eca03219a1f8e39408e19be097098829ad85fe2cf1fb3dd37aefac3522ee"
+    },
+    {
+      "path": "analysis_new\\weather_only_regression.py",
+      "sha256": "b7db64e8bd350dfbcabacd3f2ad7d2514ad26a4fb5d7f622d9989072b80ff9bd"
+    },
+    {
+      "path": "analysis_new\\build_doc.js",
+      "sha256": "4098be3a02cc634a64e360c63f47af73c597a9ba969c09728f5c1bde5976ac7d"
+    },
+    {
+      "path": "analysis_new\\build_papers.js",
+      "sha256": "e1f6c70a10c9e6333e219017c98c5b4cc4f73b9403073c3f156b298dc79b3ecd"
+    }
+  ],
+  "environment": {
+    "python": "3.12.6 | packaged by Anaconda, Inc. | (main, Oct  3 2024, 07:22:25) [MSC v.1929 64 bit (AMD64)]",
+    "executable": "C:\\Users\\haoya\\.conda\\envs\\pyoutagegust\\python.exe",
+    "packages": {
+      "numpy": "2.4.3",
+      "pandas": "3.0.1",
+      "scipy": "1.17.1",
+      "statsmodels": "0.14.6",
+      "matplotlib": "3.10.8",
+      "openpyxl": "3.1.5"
+    }
+  },
+  "reuse_run": "",
+  "steps": [
+    {
+      "stage": "dd_dur01",
+      "status": "completed",
+      "started_at": "2026-09-10T09:00:07.411086+01:00",
+      "returncode": 0,
+      "seconds": 239.891,
+      "finished_at": "2026-09-10T09:04:07.299102+01:00"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "results/dd_dur01/baseline_match.json",
+      "bytes": 7793,
+      "sha256": "b7cdc3fcf8b3d324c1052fe23850d8584cbebd9b95ab9fea1f7463cfa0a2f33a"
+    },
+    {
+      "path": "results/dd_dur01/calibration_bins.csv",
+      "bytes": 29845,
+      "sha256": "a19c5bd1392bb668a48a16b3feb9abf5a4dcefdbbe6c362d494b8df14094469d"
+    },
+    {
+      "path": "results/dd_dur01/calibration_edges.json",
+      "bytes": 2663,
+      "sha256": "88416d132df823fab5e71cc09147f027a3591028ef5b2cab465d9e2c50a9d52f"
+    },
+    {
+      "path": "results/dd_dur01/execution.jsonl",
+      "bytes": 18107,
+      "sha256": "9c6e44ed467be2bb6372961dea72250b5ddbf757b194e00ad3ddf35f4f31e284"
+    },
+    {
+      "path": "results/dd_dur01/feature_support.csv",
+      "bytes": 84670,
+      "sha256": "c2937fa65f99b6fe09404eedf715b93eb2f426fd17e7ff3a8dc37be272796ce1"
+    },
+    {
+      "path": "results/dd_dur01/features_by_fold.csv.gz",
+      "bytes": 6545782,
+      "sha256": "bc976a889ecb0c1da1ba79cdc152447d2158bb55c68ddd95168198f8a4d11ee0"
+    },
+    {
+      "path": "results/dd_dur01/figure_axes.json",
+      "bytes": 908,
+      "sha256": "5af084fca1dcbc6675cccb1f89142988748c934874d0b9c161f45b347cce113f"
+    },
+    {
+      "path": "results/dd_dur01/figures/calibration_any_gt0.png",
+      "bytes": 78678,
+      "sha256": "58e90bfae200fa5202e24e1b03b22c68bcf363cebd6c240c41a13b5d90a72d4b"
+    },
+    {
+      "path": "results/dd_dur01/figures/calibration_any_gt100.png",
+      "bytes": 87333,
+      "sha256": "f81321eb31dbdfc05e36d8286e76d0aebd3a19afdc39f42bd8c22aefc8761ce1"
+    },
+    {
+      "path": "results/dd_dur01/figures/calibration_any_gt1000.png",
+      "bytes": 98677,
+      "sha256": "37d629489bc9e3a5507c794ddb6dcf8bd05eb530c8b0aee03aa4a1e97948ae09"
+    },
+    {
+      "path": "results/dd_dur01/figures/calibration_any_gt5.png",
+      "bytes": 84824,
+      "sha256": "406e788bd7000bf481b7ed43502da381dc5022dcea642d4237fff0801104cbfc"
+    },
+    {
+      "path": "results/dd_dur01/figures/calibration_wthr_gt0.png",
+      "bytes": 91752,
+      "sha256": "0b5a4d214cb2efaebd8831620633f69c23c1baf700b418e948cd4aafcc503d16"
+    },
+    {
+      "path": "results/dd_dur01/figures/calibration_wthr_gt100.png",
+      "bytes": 89993,
+      "sha256": "3660eb41ec9ec5e9c291a6834cc03e137a4004b528da6cf20c2ced4259ed65e9"
+    },
+    {
+      "path": "results/dd_dur01/figures/calibration_wthr_gt1000.png",
+      "bytes": 98846,
+      "sha256": "8daa3c463dc8a493c3eeb9083c5090be15cec23a425fb5c1590b36b4ab595d68"
+    },
+    {
+      "path": "results/dd_dur01/figures/calibration_wthr_gt5.png",
+      "bytes": 89179,
+      "sha256": "3b1de2fda23ac2a766514a9f901c177aac050ddd257d0224a5cee17137221b98"
+    },
+    {
+      "path": "results/dd_dur01/figures/observed_joint_support.png",
+      "bytes": 74971,
+      "sha256": "a717f78519dcfeb9982d143bb54232563dc36a71e311bfa3732ec2e25c93db84"
+    },
+    {
+      "path": "results/dd_dur01/fit_checkpoint.jsonl",
+      "bytes": 2156323,
+      "sha256": "61a9001795ee3347f3ee837aac39995d5070f19ebb632f6e9d7f5f1b821cb54e"
+    },
+    {
+      "path": "results/dd_dur01/fit_summary.csv",
+      "bytes": 79919,
+      "sha256": "934591a3a8ddd97fa9075251f0acee63430408407622e019a864c299f963b9e4"
+    },
+    {
+      "path": "results/dd_dur01/fold_metrics.csv",
+      "bytes": 17074,
+      "sha256": "903d232e80e04d6cea5ffb141241a77b55baab29a5bf1f2d3a2ad3b586bde962"
+    },
+    {
+      "path": "results/dd_dur01/full_predictions.csv.gz",
+      "bytes": 8958797,
+      "sha256": "7b7f3a8c0816926fe20df300ef0db62445bd901b3131c5d564bd332d939fae84"
+    },
+    {
+      "path": "results/dd_dur01/inventory.json",
+      "bytes": 33098,
+      "sha256": "adab8472dc1f73ba0668e5c32ed3b909a1c7b1bed4e61f659edaad7408eed714"
+    },
+    {
+      "path": "results/dd_dur01/joint_support_bins.csv",
+      "bytes": 9315,
+      "sha256": "d9c16d7570e4e5c6c44415aa83f735f0b40f7a9ef62f63fb45aea0f1ffe76eb6"
+    },
+    {
+      "path": "results/dd_dur01/metrics.csv",
+      "bytes": 5461,
+      "sha256": "961b7679457a124ac133b75a28a00f8d364e9ce2641a7fe8b509709d90d3b3fe"
+    },
+    {
+      "path": "results/dd_dur01/oof_predictions.csv.gz",
+      "bytes": 19586198,
+      "sha256": "06f166bf95d60b0938fa6ebff30c64d34d12c468ad765958a602400c0d318de5"
+    },
+    {
+      "path": "results/dd_dur01/optimizer_candidates.csv.gz",
+      "bytes": 221602,
+      "sha256": "0d4798193c7997449bb22181f80bf9af8ea81dace122b2b8b3bde0fd69350d38"
+    },
+    {
+      "path": "results/dd_dur01/paired_uncertainty.csv",
+      "bytes": 2493,
+      "sha256": "05226c6f67469e4cefda88bbb259f8ac1b1b420e579c49513aa04acf98228427"
+    },
+    {
+      "path": "results/dd_dur01/parameters.csv",
+      "bytes": 79919,
+      "sha256": "934591a3a8ddd97fa9075251f0acee63430408407622e019a864c299f963b9e4"
+    },
+    {
+      "path": "results/dd_dur01/protocol.json",
+      "bytes": 38058,
+      "sha256": "172dc5400dd2301fc1fff6fc505fa1d315e9ab4fecff667eb6e7ec6bf064f288"
+    },
+    {
+      "path": "results/dd_dur01/PROTOCOL.md",
+      "bytes": 3017,
+      "sha256": "e2096bcd8533d207e2b70b4a4f8525cc6d9aab62b319c0135f794b0f9d2240f0"
+    },
+    {
+      "path": "results/dd_dur01/RESULTS_README.md",
+      "bytes": 5235,
+      "sha256": "ea928ff4692f5b59cff40ca376b6a84e3ca2f63f4e5a0c8a624c3dd29954d3ee"
+    },
+    {
+      "path": "results/dd_dur01/thresholds.csv",
+      "bytes": 343,
+      "sha256": "56b626c927b766d1a1be6f503fb377f1454fb9cc3ccfe9ea9b43a9a9884729e5"
+    },
+    {
+      "path": "results/dd_dur01/validation.json",
+      "bytes": 25941,
+      "sha256": "f724ec64796ca205d5689058bd774a0136295880679f241b8d533912eda318f1"
+    }
+  ],
+  "finished_at": "2026-09-10T09:04:07.300103+01:00"
+}

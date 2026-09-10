@@ -1,0 +1,16 @@
+[E0] final: adjR2=0.0372 (paper 0.0336)  BIC 254416.1 vs 254630.4  CV-LAD 1.9848 vs 1.9887  CV-year 1.9897 vs 1.9940
+            term    coef     se  p_normal  p_t_G1
+z_temperature_0h -0.0341 0.0288    0.2364  0.2390
+ z_gust_pressure -0.0349 0.0158    0.0268  0.0288
+z_temperature_sq  0.0566 0.0221    0.0104  0.0117
+        gust_low -0.0270 0.0044    0.0000  0.0000
+       gust_ramp  0.1215 0.0138    0.0000  0.0000
+[R0c] final: adjR2=0.1124 (paper 0.1119)  BIC 159553.6 vs 159571.1  CV-LAD 1.1503 vs 1.1506  CV-year 1.1753 vs 1.1760
+                term    coef     se  p_normal  p_t_G1
+           z_gust_0h -0.0002 0.0192    0.9898  0.9898
+    z_temperature_0h -0.0724 0.0190    0.0001  0.0002
+           z_gust_sq  0.0810 0.0074    0.0000  0.0000
+z_customers_v2_log1p -0.1964 0.0171    0.0000  0.0000
+           z_cust_sq -0.1113 0.0155    0.0000  0.0000
+    z_temperature_sq  0.0168 0.0058    0.0039  0.0047
+       z_gust_precip -0.0245 0.0100    0.0144  0.0160

@@ -1,0 +1,200 @@
+{
+  "owner": "main_appendix.py",
+  "appendix": "B",
+  "last_attempt": "2026-09-10T13:17:03+01:00",
+  "status": "success",
+  "update_state": "本次已更新",
+  "requirements": {
+    "B01": "已生成",
+    "B02": "已生成",
+    "B03": "已生成"
+  },
+  "outputs": [
+    {
+      "path": "tables/B_CONSTRUCTION_RULES.csv",
+      "sha256": "45e33bb1b97e124b40545b4b12ec90c52f327253a59fe6b30b3df62008edac2c",
+      "bytes": 598,
+      "requirement_id": "B01",
+      "claim_id": "CL_B01",
+      "source_paths": [
+        "results/pretest/archive/20260909154556/results/c01_repair_20260905/raw/step1_summary.json",
+        "scripts/code_audit_20260905/audit_pipeline.py",
+        "scripts/c02_c08_repair_20260905/corrected_sample_builder.py",
+        "docs/Appendix_revised_copy.docx"
+      ],
+      "source_sha256": {
+        "results/pretest/archive/20260909154556/results/c01_repair_20260905/raw/step1_summary.json": "c114e516f2f947dd0edca5f572c0a209ce325d60e5987e9f89b65c4b23d637d8",
+        "scripts/code_audit_20260905/audit_pipeline.py": "f269aa8cb95794840c447bc7d3f47eaff92255dad176ec2af8d0021904278547",
+        "scripts/c02_c08_repair_20260905/corrected_sample_builder.py": "feb1ddd4f42dacd31a127c747826d26a4948e1409cfd406e601e985ed8e8bb8d",
+        "docs/Appendix_revised_copy.docx": "12d43bb807be5b412b614bceccf4634379976aecd0be7f65dd6bd1be0233313e"
+      },
+      "producer": "C01 representative row repair; corrected_sample_builder",
+      "export_function": "analysis_new.appendix.exporters.construction",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/B_CONSTRUCTION_RULES.md",
+      "sha256": "dcbe3c054a84f99957adcd134e78a989d0c1a4b0d6ea80263bef83f7dd6712f6",
+      "bytes": 1267,
+      "requirement_id": "B01",
+      "claim_id": "CL_B01",
+      "source_paths": [
+        "results/pretest/archive/20260909154556/results/c01_repair_20260905/raw/step1_summary.json",
+        "scripts/code_audit_20260905/audit_pipeline.py",
+        "scripts/c02_c08_repair_20260905/corrected_sample_builder.py",
+        "docs/Appendix_revised_copy.docx"
+      ],
+      "source_sha256": {
+        "results/pretest/archive/20260909154556/results/c01_repair_20260905/raw/step1_summary.json": "c114e516f2f947dd0edca5f572c0a209ce325d60e5987e9f89b65c4b23d637d8",
+        "scripts/code_audit_20260905/audit_pipeline.py": "f269aa8cb95794840c447bc7d3f47eaff92255dad176ec2af8d0021904278547",
+        "scripts/c02_c08_repair_20260905/corrected_sample_builder.py": "feb1ddd4f42dacd31a127c747826d26a4948e1409cfd406e601e985ed8e8bb8d",
+        "docs/Appendix_revised_copy.docx": "12d43bb807be5b412b614bceccf4634379976aecd0be7f65dd6bd1be0233313e"
+      },
+      "producer": "C01 representative row repair; corrected_sample_builder",
+      "export_function": "analysis_new.appendix.exporters.construction",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/B_REPRESENTATIVE_REPAIR.csv",
+      "sha256": "2a8cc57d0c183a1197b3ae1f29dbfbac0a6636c3ca2ff8f4479c65ed07a99d0e",
+      "bytes": 1808,
+      "requirement_id": "B01",
+      "claim_id": "CL_B01",
+      "source_paths": [
+        "results/pretest/archive/20260909154556/results/c01_repair_20260905/raw/step1_summary.json",
+        "scripts/code_audit_20260905/audit_pipeline.py",
+        "scripts/c02_c08_repair_20260905/corrected_sample_builder.py",
+        "docs/Appendix_revised_copy.docx"
+      ],
+      "source_sha256": {
+        "results/pretest/archive/20260909154556/results/c01_repair_20260905/raw/step1_summary.json": "c114e516f2f947dd0edca5f572c0a209ce325d60e5987e9f89b65c4b23d637d8",
+        "scripts/code_audit_20260905/audit_pipeline.py": "f269aa8cb95794840c447bc7d3f47eaff92255dad176ec2af8d0021904278547",
+        "scripts/c02_c08_repair_20260905/corrected_sample_builder.py": "feb1ddd4f42dacd31a127c747826d26a4948e1409cfd406e601e985ed8e8bb8d",
+        "docs/Appendix_revised_copy.docx": "12d43bb807be5b412b614bceccf4634379976aecd0be7f65dd6bd1be0233313e"
+      },
+      "producer": "C01 representative row repair; corrected_sample_builder",
+      "export_function": "analysis_new.appendix.exporters.construction",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/B_REPRESENTATIVE_REPAIR.md",
+      "sha256": "f76ca9e1175958f62e652f82434527682603810d9d109897156f8493991d0a59",
+      "bytes": 2588,
+      "requirement_id": "B01",
+      "claim_id": "CL_B01",
+      "source_paths": [
+        "results/pretest/archive/20260909154556/results/c01_repair_20260905/raw/step1_summary.json",
+        "scripts/code_audit_20260905/audit_pipeline.py",
+        "scripts/c02_c08_repair_20260905/corrected_sample_builder.py",
+        "docs/Appendix_revised_copy.docx"
+      ],
+      "source_sha256": {
+        "results/pretest/archive/20260909154556/results/c01_repair_20260905/raw/step1_summary.json": "c114e516f2f947dd0edca5f572c0a209ce325d60e5987e9f89b65c4b23d637d8",
+        "scripts/code_audit_20260905/audit_pipeline.py": "f269aa8cb95794840c447bc7d3f47eaff92255dad176ec2af8d0021904278547",
+        "scripts/c02_c08_repair_20260905/corrected_sample_builder.py": "feb1ddd4f42dacd31a127c747826d26a4948e1409cfd406e601e985ed8e8bb8d",
+        "docs/Appendix_revised_copy.docx": "12d43bb807be5b412b614bceccf4634379976aecd0be7f65dd6bd1be0233313e"
+      },
+      "producer": "C01 representative row repair; corrected_sample_builder",
+      "export_function": "analysis_new.appendix.exporters.construction",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/B_RECOVERY_DEFINITION.csv",
+      "sha256": "fd06c8e0b13adb42808e3a73d1e48ad7097ce67f4b107e51bbbcadb94fb62f43",
+      "bytes": 524,
+      "requirement_id": "B02",
+      "claim_id": "CL_B02",
+      "source_paths": [
+        "review_package/data/combined_R0c_final.csv"
+      ],
+      "source_sha256": {
+        "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9"
+      },
+      "producer": "固定输入字段 duration_A_customer_weighted_hours / duration_B_full_span_hours",
+      "export_function": "analysis_new.appendix.exporters.duration",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/B_RECOVERY_DEFINITION.md",
+      "sha256": "828b4b7690ed9e1ff477e1fa977c555f1307dd04db870ce15341da297721a50e",
+      "bytes": 1246,
+      "requirement_id": "B02",
+      "claim_id": "CL_B02",
+      "source_paths": [
+        "review_package/data/combined_R0c_final.csv"
+      ],
+      "source_sha256": {
+        "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9"
+      },
+      "producer": "固定输入字段 duration_A_customer_weighted_hours / duration_B_full_span_hours",
+      "export_function": "analysis_new.appendix.exporters.duration",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/B03_EXISTING_DEFINITION.csv",
+      "sha256": "34b99b26632214ba24a6e09d3fd7a6ed93d9363e03750a2f358534018ebe14a4",
+      "bytes": 516,
+      "requirement_id": "B03",
+      "claim_id": "CL_B03",
+      "source_paths": [
+        "docs/Appendix_revised_copy.docx"
+      ],
+      "source_sha256": {
+        "docs/Appendix_revised_copy.docx": "12d43bb807be5b412b614bceccf4634379976aecd0be7f65dd6bd1be0233313e"
+      },
+      "producer": "已成型附录B.1",
+      "export_function": "analysis_new.appendix.exporters.docx_table",
+      "configuration": {
+        "paragraphs": [
+          17,
+          18
+        ]
+      },
+      "status": "已生成"
+    },
+    {
+      "path": "tables/B03_EXISTING_DEFINITION.md",
+      "sha256": "02e835b8e6e8aa7387253c5c41ed7e9eee37a67b4647611d183fbde8b0f5b088",
+      "bytes": 1175,
+      "requirement_id": "B03",
+      "claim_id": "CL_B03",
+      "source_paths": [
+        "docs/Appendix_revised_copy.docx"
+      ],
+      "source_sha256": {
+        "docs/Appendix_revised_copy.docx": "12d43bb807be5b412b614bceccf4634379976aecd0be7f65dd6bd1be0233313e"
+      },
+      "producer": "已成型附录B.1",
+      "export_function": "analysis_new.appendix.exporters.docx_table",
+      "configuration": {
+        "paragraphs": [
+          17,
+          18
+        ]
+      },
+      "status": "已生成"
+    }
+  ],
+  "managed_files": [
+    "README.md",
+    "logs/execution.log",
+    "logs/validation.json",
+    "manifest.json",
+    "tables/B03_EXISTING_DEFINITION.csv",
+    "tables/B03_EXISTING_DEFINITION.md",
+    "tables/B_CONSTRUCTION_RULES.csv",
+    "tables/B_CONSTRUCTION_RULES.md",
+    "tables/B_RECOVERY_DEFINITION.csv",
+    "tables/B_RECOVERY_DEFINITION.md",
+    "tables/B_REPRESENTATIVE_REPAIR.csv",
+    "tables/B_REPRESENTATIVE_REPAIR.md"
+  ],
+  "preserved_unmanaged_files": [],
+  "removed_obsolete_managed_files": []
+}

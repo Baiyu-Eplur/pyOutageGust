@@ -1,0 +1,6 @@
+E0 {'development': {'z_gust_pressure': (-0.038, 0.017), 'gust_low': (-0.031, 0.005), 'gust_ramp': (0.1, 0.014)}, 'confirmation': {'z_gust_pressure': (-0.009, 0.025), 'gust_low': (-0.025, 0.01), 'gust_ramp': (0.149, 0.02)}, 'combined': {'z_gust_pressure': (-0.035, 0.016), 'gust_low': (-0.027, 0.004), 'gust_ramp': (0.121, 0.014)}}
+R0c {'development': {'z_gust_0h': (-0.01, 0.019), 'z_gust_sq': (0.075, 0.008), 'z_gust_precip': (-0.007, 0.008)}, 'confirmation': {'z_gust_0h': (-0.015, 0.022), 'z_gust_sq': (0.087, 0.015), 'z_gust_precip': (-0.044, 0.02)}, 'combined': {'z_gust_0h': (-0.0, 0.019), 'z_gust_sq': (0.081, 0.007), 'z_gust_precip': (-0.024, 0.01)}}
+all E0 [0.96, 1.87, 3.36]
+all R0c [3.46, 4.07, 4.78, 10.74]
+weather E0 [0.78, 2.87, 4.43]
+weather R0c [20.18, 22.7, 24.58, 28.12]

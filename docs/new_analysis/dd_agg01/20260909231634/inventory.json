@@ -1,0 +1,57 @@
+{
+  "recorded_at": "2026-09-09T23:25:35.488447+01:00",
+  "source_result_inventory": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909231634\\results\\dd_agg01\\inventory.json",
+  "source_result_inventory_sha256": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+  "files": [
+    {
+      "path": "calibration_any_gt100_supported_view.png",
+      "bytes": 100359,
+      "sha256": "acc959cebaf6971bff8257d5ff5385772cac906d37900cee92b215e9c67094be"
+    },
+    {
+      "path": "calibration_support_review.csv",
+      "bytes": 1515,
+      "sha256": "027928196a80117d3a48868ac118117b19d3d4847dc8f687359223f63db2e444"
+    },
+    {
+      "path": "calibration_wthr_gt1000_supported_view.png",
+      "bytes": 115553,
+      "sha256": "aad4ec471b456b2844dba6b9f916d4ee6c8390d17cec94615d30ce550c71a45e"
+    },
+    {
+      "path": "calibration_wthr_gt100_supported_view.png",
+      "bytes": 97528,
+      "sha256": "1cd39814ae21e206cf03be053f3a43aa3cbb2c4b91065ccc94694a2caeaf402a"
+    },
+    {
+      "path": "FINDINGS.md",
+      "bytes": 8063,
+      "sha256": "3f7fa22b5fb0c0efdfb30e3e0d112383627561c2e3fb6b36448abac5205ad71c"
+    },
+    {
+      "path": "MANUSCRIPT_RECORD.md",
+      "bytes": 2419,
+      "sha256": "e7af985023ac79bb9189e47351858a0c25c54e89098ab09512d546c2d557bcc7"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 30727,
+      "sha256": "a037e02ed4a0c6731ce9bc63cf277b699c21f52d17c5f5ee9b4f9969ffd7ba04"
+    },
+    {
+      "path": "RETURN_TO_CHATGPT.md",
+      "bytes": 8286,
+      "sha256": "831aa98dc748d7491f9629db5480507e61291707ff42613bafffefd7ec098061"
+    },
+    {
+      "path": "review_checks.json",
+      "bytes": 1041,
+      "sha256": "759732cb85f9f88d652f703b52e6c43207cda196c67132575ba5fc8ed7f1320b"
+    },
+    {
+      "path": "review_outputs.py",
+      "bytes": 4704,
+      "sha256": "f063e24aab5ad8477dac0fa8445e96c197bb0e7ea3e44cf819a4df9adb02d0c0"
+    }
+  ]
+}

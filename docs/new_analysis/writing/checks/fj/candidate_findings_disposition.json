@@ -1,0 +1,469 @@
+{
+  "candidate_sha256": "ca590b801dcf54b90c71a44a30f5cd686a1a3b41becb5c4873b503722e0702c3",
+  "dispositions": [
+    {
+      "finding_index": 0,
+      "code": "PROSE007",
+      "match": "syntactic dash punctuation",
+      "action": "retain after contextual writing check",
+      "reason": "All five em dashes occur as missing/not-applicable table cells (four absent second recovery hinges and development-range NA). They are not rhetorical dash punctuation; preserve explicit NA rather than zero.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 1,
+      "code": "PROSE010",
+      "match": "All-incident, two-way, two-way, Two-way",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 2,
+      "code": "PROSE010",
+      "match": "All-incident, two-way, two-way, Two-way",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 3,
+      "code": "PROSE010",
+      "match": "Weather-attributed, two-way, two-way, Two-way",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 4,
+      "code": "PROSE010",
+      "match": "Weather-attributed, two-way, two-way, Two-way",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 5,
+      "code": "PROSE010",
+      "match": "Weather-attributed, gust-term, Two-way, Weather-attributed, Weather-attributed, Weather-attributed, Weather-attributed, Weather-attributed, Weather-attributed, two-way, LAD-only",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 6,
+      "code": "PROSE010",
+      "match": "LAD-out-of-fold, Non-gust, Non-gust, Non-gust, Non-gust",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 7,
+      "code": "PROSE010",
+      "match": "All-incident, All-incident, Weather-attributed, Weather-attributed, All-incident, All-incident, Weather-attributed, Weather-attributed",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 8,
+      "code": "PROSE010",
+      "match": "LAD-OOF, All-incident, Weather-attributed, Weather-attributed, All-incident, Weather-attributed, Weather-attributed",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 9,
+      "code": "PROSE010",
+      "match": "all-incident, all-incident, weather-attributed, weather-attributed",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 10,
+      "code": "PROSE010",
+      "match": "LAD-OOF, log-hours, log-hours, weather-attributed",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 11,
+      "code": "PROSE010",
+      "match": "gust-basis, raw-outcome, All-incident, All-incident, two-way",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 12,
+      "code": "PROSE010",
+      "match": "full-sample, All-incident, All-incident, all-incident",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 13,
+      "code": "PROSE010",
+      "match": "District-day, LAD-days, LAD-days, LAD-day",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 14,
+      "code": "PROSE010",
+      "match": "LAD-out-of-fold, event-anchor, Grid-maximum, LAD-days, outcome-specific",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 15,
+      "code": "PROSE010",
+      "match": "grid-maximum, LAD-day, all-incident, weather-attributed, event-anchor",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 16,
+      "code": "PROSE010",
+      "match": "LAD-out-of-fold, peak-only, duration-increment, above-threshold, log-transformed, squared-gust",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 17,
+      "code": "PROSE010",
+      "match": "Later-period, district-day, all-incident, weather-attributed",
+      "action": "retain after contextual writing check",
+      "reason": "Cluster/sample/prediction terms and table headers required to distinguish identities; the scanner also concatenates adjacent table rows. In prose these are defined technical terms (including log-hours), not invented ornament. Retained under the user requirement to keep existing terminology and readable independent captions.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 18,
+      "code": "PROSE004",
+      "match": "all customers all customers all",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 19,
+      "code": "PROSE004",
+      "match": "all customers all customers weather",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 20,
+      "code": "PROSE004",
+      "match": "customers all customers all customers",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 21,
+      "code": "PROSE004",
+      "match": "customers table j end notes",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 22,
+      "code": "PROSE004",
+      "match": "customers weather customers table j",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 23,
+      "code": "PROSE004",
+      "match": "customers weather customers weather customers",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 24,
+      "code": "PROSE004",
+      "match": "weather customers table j end",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 25,
+      "code": "PROSE004",
+      "match": "weather customers weather customers table",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 26,
+      "code": "PROSE004",
+      "match": "weather customers weather customers weather",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 27,
+      "code": "PROSE004",
+      "match": "customers all customers weather any",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 28,
+      "code": "PROSE004",
+      "match": "income deprivation rate deprivation gap",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 29,
+      "code": "PROSE004",
+      "match": "log population income deprivation rate",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 30,
+      "code": "PROSE004",
+      "match": "population income deprivation rate deprivation",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 31,
+      "code": "PROSE004",
+      "match": "ci two-way two-way p intercept",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 32,
+      "code": "PROSE004",
+      "match": "deprivation gap moran's i year",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 33,
+      "code": "PROSE004",
+      "match": "deprivation rate deprivation gap moran's",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 34,
+      "code": "PROSE004",
+      "match": "e month month month month",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 35,
+      "code": "PROSE004",
+      "match": "indicator log population income deprivation",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 36,
+      "code": "PROSE004",
+      "match": "month e month month month",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 37,
+      "code": "PROSE004",
+      "match": "month month month month month",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 38,
+      "code": "PROSE004",
+      "match": "n reference t term coefficient",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 39,
+      "code": "PROSE004",
+      "match": "rate deprivation gap moran's i",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 40,
+      "code": "PROSE004",
+      "match": "reference t term coefficient se",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 41,
+      "code": "PROSE004",
+      "match": "two-way two-way p intercept z",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 42,
+      "code": "PROSE004",
+      "match": "urban indicator log population income",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 43,
+      "code": "PROSE004",
+      "match": "z g z p table",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 44,
+      "code": "PROSE004",
+      "match": "b gp z p s",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 45,
+      "code": "PROSE004",
+      "match": "brier paired interval all any",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 46,
+      "code": "PROSE004",
+      "match": "e z g z p",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 47,
+      "code": "PROSE004",
+      "match": "for the two c outcomes",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 48,
+      "code": "PROSE004",
+      "match": "g z p table f",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 49,
+      "code": "PROSE004",
+      "match": "gp z p s g",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 50,
+      "code": "PROSE004",
+      "match": "h table h end notes",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 51,
+      "code": "PROSE004",
+      "match": "mae mean prediction bias r",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 52,
+      "code": "PROSE004",
+      "match": "month month month month z",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 53,
+      "code": "PROSE004",
+      "match": "p urban indicator log population",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 54,
+      "code": "PROSE004",
+      "match": "p z t z p",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 55,
+      "code": "PROSE004",
+      "match": "table h end notes exposure",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 56,
+      "code": "PROSE004",
+      "match": "z p urban indicator log",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    },
+    {
+      "finding_index": 57,
+      "code": "PROSE004",
+      "match": "z p z t z",
+      "action": "retain after contextual writing check",
+      "reason": "Repeated complete coefficient headers, unchanged variable names/equations, eight outcome labels, or the two focal outcome names. Retained to meet the user requirements for complete tables and consistent terminology; not duplicate argumentative paragraphs.",
+      "authority": "APP-FJ-DRAFT: preserve complete coefficients/eight tasks, terminology and independent captions; existing skill style_profile allowed_repetitions"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+﻿period,start,end,fit,information_history,prediction_test
+development,2021-04-01,2023-09-29,Each period fitted separately; full-period selected specification,Later period previously explored,No frozen development prediction in this incident analysis
+confirmation,2023-09-30,2024-03-31,Each period fitted separately; full-period selected specification,Later period previously explored,No frozen development prediction in this incident analysis
+combined,2021-04-01,2024-03-31,Each period fitted separately; full-period selected specification,Later period previously explored,No frozen development prediction in this incident analysis

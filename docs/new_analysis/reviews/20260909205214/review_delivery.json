@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-09-09T22:27:08.656928+01:00",
+  "review_sha256": "c16eb9ec124a01562b908a872872811fd883a649957c801c88aa2a79534f5c2d",
+  "local_links_resolve": true,
+  "ordered_standard_results_conclusion": true,
+  "original_outputs_unchanged": 136,
+  "record_checks_passed": 1106,
+  "scope": "Review only; no production code edits, refits, weather downloads or manuscript changes",
+  "four_passes": [
+    "criteria and structure",
+    "evidence and claim scope",
+    "Chinese prose and notation",
+    "exact artifact links and source integrity"
+  ],
+  "evidence_files": [
+    {
+      "path": "docs\\new_analysis\\reviews\\20260909205214\\audit.json",
+      "sha256": "3df1721753ee34bcbfbe9c873ed93c90564178b53c914c9046c7cfa136efda3d"
+    },
+    {
+      "path": "docs\\new_analysis\\reviews\\20260909205214\\audit_results.py",
+      "sha256": "5b1099ae34a048dfe84fe16dc186c912dabfb38b9b1d2a883162d5502fa07de9"
+    },
+    {
+      "path": "docs\\new_analysis\\reviews\\20260909205214\\REVIEW.md",
+      "sha256": "c16eb9ec124a01562b908a872872811fd883a649957c801c88aa2a79534f5c2d"
+    },
+    {
+      "path": "docs\\new_analysis\\reviews\\20260909205214\\review_constant_baseline.csv",
+      "sha256": "1957a82bab75fe77983cb74d71a8a660724f9407d747b66021f61bc08b69cb74"
+    },
+    {
+      "path": "docs\\new_analysis\\reviews\\20260909205214\\review_file_coverage.csv",
+      "sha256": "1510e7a50afce73d8cae92876849e874d6d2de94afd2d0fedacc8e599ac00a68"
+    },
+    {
+      "path": "docs\\new_analysis\\reviews\\20260909205214\\review_metric_details.csv",
+      "sha256": "253878a6978c21e51c98825c481bcab267d32a8cbdac5fad9a38c24c90556039"
+    },
+    {
+      "path": "docs\\new_analysis\\reviews\\20260909205214\\review_small_calibration_bins.csv",
+      "sha256": "654031d77f91a701b56dee71b1f90de3f8ececd4be3129d3d23b8b8dc76d8ab1"
+    }
+  ]
+}

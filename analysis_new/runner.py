@@ -15,7 +15,7 @@ PROJECT = Path(__file__).resolve().parents[1]
 STAGES = ['baseline', 'model_selection', 'hinge_search', 'knot_estimation',
           'plateau_E0', 'plateau_R0c', 'select_final_knots', 'plot_model_selection',
           'fragility_demo', 'fragility_surfaces', 'final_models', 'district_day_fragility',
-          'weather_only_regression', 'paper_extras', 'report_tables', 'documents']
+          'weather_only_regression', 'paper_extras', 'report_tables', 'documents', 'p03_p04_grid_weather', 'dd_agg01', 'dd_dur01', 'dd_time01']
 REQUIRES = {
     'plateau_E0': ['model_selection/knots.json'],
     'plateau_R0c': ['model_selection/knots.json'],
@@ -44,7 +44,7 @@ def now():
     return datetime.now().astimezone().isoformat()
 
 
-def run(switches, purpose, *, dry_run=0, reuse_run='', knot_bootstraps=500, plateau_bootstraps=300, blas_threads=1):
+def run(switches, purpose, *, dry_run=0, reuse_run='', knot_bootstraps=500, plateau_bootstraps=300, blas_threads=1, p03_settings=None, dd_agg01_settings=None, dd_dur01_settings=None, dd_time01_settings=None):
     if not purpose.strip() or set(switches) != set(STAGES) or any(v not in (0, 1) for v in switches.values()):
         raise ValueError('Provide a purpose and exactly the documented 0/1 stage switches')
     if min(knot_bootstraps, plateau_bootstraps, blas_threads) < 1:
@@ -62,7 +62,7 @@ def run(switches, purpose, *, dry_run=0, reuse_run='', knot_bootstraps=500, plat
     sources = [PROJECT/'main_new.py', PROJECT/'pretestmain.py', PROJECT/'pretest_paths.py', PROJECT/'review_package/code/run_main_regression.py', PROJECT/'docs/Draft.docx', *sorted((PROJECT/'analysis_new').rglob('*.py')), *sorted((PROJECT/'analysis_new').rglob('*.js'))]
     inputs = [PROJECT/'review_package/data'/f'combined_{m}_final.csv' for m in ['E0', 'R0c']]
     manifest = dict(started_at=now(), purpose=purpose, status='running', switches=switches,
-                    settings=dict(knot_bootstraps=knot_bootstraps, plateau_bootstraps=plateau_bootstraps, blas_threads=blas_threads),
+                    settings=dict(knot_bootstraps=knot_bootstraps, plateau_bootstraps=plateau_bootstraps, blas_threads=blas_threads, p03_p04=p03_settings, dd_agg01=dd_agg01_settings, dd_dur01=dd_dur01_settings, dd_time01=dd_time01_settings),
                     inputs=[dict(path=str(p), sha256=digest(p)) for p in inputs],
                     sources=[dict(path=str(p.relative_to(PROJECT)), sha256=digest(p)) for p in sources],
                     environment=dict(python=sys.version, executable=sys.executable,
@@ -87,7 +87,8 @@ def run(switches, purpose, *, dry_run=0, reuse_run='', knot_bootstraps=500, plat
         env.update(NEW_ANALYSIS_RUN=str(root), NEW_KNOT_BOOTSTRAPS=str(knot_bootstraps),
                    NEW_PLATEAU_BOOTSTRAPS=str(plateau_bootstraps), PYTHONUTF8='1', PYTHONDONTWRITEBYTECODE='1',
                    MPLBACKEND='Agg', MPLCONFIGDIR=str(root/'mpl'), TEMP=str(root/'tmp'), TMP=str(root/'tmp'),
-                   PRETEST_OUTPUT_ROOT=str(root/'results'), PYTHONUNBUFFERED='1')
+                   PRETEST_OUTPUT_ROOT=str(root/'results'), PYTHONUNBUFFERED='1',
+                   P03_SETTINGS=json.dumps(p03_settings or {}), DD_AGG01_SETTINGS=json.dumps(dd_agg01_settings or {}), DD_DUR01_SETTINGS=json.dumps(dd_dur01_settings or {}), DD_TIME01_SETTINGS=json.dumps(dd_time01_settings or {}))
         for k in ['OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'OMP_NUM_THREADS', 'NUMEXPR_NUM_THREADS']:
             env[k] = str(blas_threads)
         for stage in selected:

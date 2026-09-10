@@ -1,0 +1,9 @@
+[main-regression] Loading final analysis samples via the pretest input resolver ...
+[main-regression] combined_E0_final.csv: n=60437
+[main-regression] combined_R0c_final.csv: n=59834
+[main-regression] === Combined sample: LAD single + two-way cluster (E0 & R0c) ===
+[main-regression] E0 gust_sq: LAD se=0.0083, 2way se=0.0320
+[main-regression] R0c gust_sq: LAD se=0.0061, 2way se=0.0081
+[main-regression] E0 turning point: z*=0.169884, 10.8072 m/s (gust_mean=9.9102, gust_sd=5.2799)
+[main-regression] Saved run_summary.json and all coefficient tables to D:\Pyprogramme\pyOutageGust\results\new\20260909183317\results
+[main-regression] === Done ===

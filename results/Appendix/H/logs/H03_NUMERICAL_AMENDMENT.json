@@ -1,0 +1,8 @@
+{
+  "time": "2026-09-10T20:09:52+01:00",
+  "reason": "original NB2 alpha0, nonfinite likelihood/score/Hessian and overflow",
+  "rule": "one retry: constant mu=sample mean; intercept log(mu), other beta0; alpha=max(.05, original _estimate_dispersion(mu,y-mu,n-rankX)); all beta and alpha jointly estimated",
+  "unchanged": "X,y,knots,family,likelihood,BFGS max200 gtol1e-5, score validity and covariance",
+  "other_GLM_components_reused": true,
+  "selection": "only invalid original fit triggers retry; no ranking of valid estimates"
+}

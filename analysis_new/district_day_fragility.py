@@ -31,7 +31,7 @@ import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
 from analysis_new.runtime import ROOT, DATA
 OUT = ROOT / "results" / "final_models"; FIG = ROOT / "results" / "figures"
 plt.rcParams.update({"font.size": 9, "axes.spines.top": False, "axes.spines.right": False})
-BW_KM = 40.0; KMIN = 5
+from analysis_new.district_day_core import BW_KM, KMIN
 THR = [0, 5, 100, 1000]; LAB = ["≥1 incident", ">5 cust.", ">100 cust.", ">1000 cust."]
 
 d = pd.read_csv(DATA / "combined_E0_final.csv")
@@ -43,21 +43,7 @@ cent = d.groupby("LAD21CD")[["lat", "lon"]].mean().loc[lads]
 static = d.groupby("LAD21CD")[["log_population", "urban_binary", "income_deprivation_rate"]].first().loc[lads]
 
 
-def km(lat1, lon1, lat2, lon2):
-    """Approximate planar distance in km (region spans ~2 deg)."""
-    return np.sqrt(((lat1 - lat2) * 111.0) ** 2 + ((lon1 - lon2) * 111.0 * np.cos(np.radians(51.8))) ** 2)
-
-
-def interp(obs, target_lat, target_lon, exclude_lad=None):
-    """Gaussian-kernel IDW of gust and precip from one day's incidents to a point."""
-    o = obs if exclude_lad is None else obs[obs.LAD21CD != exclude_lad]
-    if len(o) == 0: return np.nan, np.nan
-    dist = km(target_lat, target_lon, o.lat.to_numpy(), o.lon.to_numpy())
-    w = np.exp(-0.5 * (dist / BW_KM) ** 2)
-    if (w > 1e-3).sum() < KMIN:  # fall back to nearest KMIN
-        idx = np.argsort(dist)[:KMIN]; w = np.zeros_like(w); w[idx] = 1.0 / (dist[idx] + 1.0)
-    w /= w.sum()
-    return float(w @ o.gust_0h.to_numpy()), float(w @ o.precipitation_24h_sum.to_numpy())
+from analysis_new.district_day_core import km, interp, lognormal_mle as shared_lognormal_mle
 
 
 # ---------------------------------------------------------------- build panel
@@ -95,21 +81,7 @@ else:
 OPTIMIZER_DIAGNOSTICS = []
 
 def lognormal_mle(g, y, floor=True):
-    """P = p0 + (1-p0) * Phi((ln g - ln theta)/beta); p0 = gust-independent background rate."""
-    lg = np.log(np.clip(g, 0.3, None))
-    def nll(par):
-        p0 = 1 / (1 + np.exp(-par[2])) if floor else 0.0
-        p = np.clip(p0 + (1 - p0) * stats.norm.cdf((lg - np.log(par[0])) / par[1]), 1e-9, 1 - 1e-9)
-        return -np.sum(y * np.log(p) + (1 - y) * np.log(1 - p))
-    best = None
-    for th0 in (15, 20, 25, 30):
-        x0 = [th0, 0.4, np.log(max(y.mean(), 1e-3) / (1 - y.mean()))] if floor else [th0, 0.4]
-        bnds = [(2, 200), (0.05, 5)] + ([(-12, 5)] if floor else [])
-        r = optimize.minimize(nll, x0, method="L-BFGS-B", bounds=bnds)
-        if best is None or r.fun < best.fun: best = r
-    OPTIMIZER_DIAGNOSTICS.append(dict(n=len(g), successes=float(y.sum()), success=bool(best.success), message=str(best.message), nll=float(best.fun), iterations=int(best.nit)))
-    p0 = float(1 / (1 + np.exp(-best.x[2]))) if floor else 0.0
-    return dict(theta=float(best.x[0]), beta=float(best.x[1]), p0=p0, nll=float(best.fun))
+    return shared_lognormal_mle(g, y, floor, diagnostics=OPTIMIZER_DIAGNOSTICS)
 
 
 BINS = [0, 4, 6, 8, 10, 12, 14, 16, 18, 20, 23, 26, 30, 45]; MIDS = [(a + b) / 2 for a, b in zip(BINS[:-1], BINS[1:])]

@@ -1,0 +1,13 @@
+{"time": "2026-09-10T10:47:22.573932+01:00", "message": "Protocol frozen and original panel verified", "coverage": {"source_rows": 121656, "actual_lads": 111, "actual_days": 1096, "expected_lads": 111, "expected_days": 1096, "expected_rows": 121656, "missing_keys_count": 0, "missing_keys": [], "outside_study_rows": 0, "outside_study_keys": [], "handling": "No fabricated observations; saved rows only; same LAD sets required in both periods"}}
+{"time": "2026-09-10T10:47:24.237676+01:00", "message": "Development labels loaded; evaluation labels not collected", "rows": 101232}
+{"time": "2026-09-10T10:47:39.514905+01:00", "message": "Development fit any_gt0", "valid": true, "message_detail": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"}
+{"time": "2026-09-10T10:47:54.833230+01:00", "message": "Development fit any_gt5", "valid": true, "message_detail": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"}
+{"time": "2026-09-10T10:48:10.143516+01:00", "message": "Development fit any_gt100", "valid": true, "message_detail": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"}
+{"time": "2026-09-10T10:48:26.262642+01:00", "message": "Development fit any_gt1000", "valid": true, "message_detail": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"}
+{"time": "2026-09-10T10:48:41.931254+01:00", "message": "Development fit wthr_gt0", "valid": true, "message_detail": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"}
+{"time": "2026-09-10T10:48:56.541013+01:00", "message": "Development fit wthr_gt5", "valid": true, "message_detail": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"}
+{"time": "2026-09-10T10:49:11.184302+01:00", "message": "Development fit wthr_gt100", "valid": true, "message_detail": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"}
+{"time": "2026-09-10T10:49:26.955618+01:00", "message": "Development fit wthr_gt1000", "valid": true, "message_detail": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"}
+{"time": "2026-09-10T10:49:35.214927+01:00", "message": "Development parameters and bins frozen", "sha256": "3e7ec9bbbaf42575d2f6595884d72a5acda5b446ca62f325ec72449746a8fa64"}
+{"time": "2026-09-10T10:49:36.284445+01:00", "message": "Evaluation labels loaded after freeze", "rows": 20424}
+{"time": "2026-09-10T10:49:57.726742+01:00", "message": "All technical outputs complete", "valid_tasks": 8, "checks": 117}

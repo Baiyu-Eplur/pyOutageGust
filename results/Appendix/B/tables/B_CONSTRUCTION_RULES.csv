@@ -1,0 +1,6 @@
+﻿quantity,rule,meaning
+C,sum(stage_customers where reinterruption is excluded),不对再中断阶段重复计客户
+D_B,"max(all_stage_end)-min(all_stage_start), in hours",再中断阶段仍计时
+representative,stable sort by stage start; existing deterministic source-row tie breaker,复用C01修复，不以输入顺序任意挑选天气/原因字段
+missing,retain undefined outcomes as missing; use existing curated samples,不把未定义结果填零
+R0_final,"existing positive-duration trimmed R0c input, then C>0",现有上端截断先于此处读取；本入口不重算截断点

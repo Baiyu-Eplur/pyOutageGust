@@ -1,0 +1,102 @@
+{
+  "combination": "E0_all",
+  "model_id": "F08",
+  "family": "matched",
+  "cache_key": "37d5c4b46626c5e0346b04840eedabb87a6a4b808cb5e3f7e86771a31e548e9a",
+  "cache_used": true,
+  "configuration": {
+    "sample": {
+      "combination": "E0_all",
+      "n": 60437,
+      "lads": 111,
+      "zero_customers": 8979,
+      "source": "review_package/data/combined_E0_final.csv",
+      "source_sha256": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+      "sample_id_sha256": "9822b53edfc840d7c823d220988e6180708fc3f04a4f429e9d971a9b991a1f94",
+      "fold_sha256": "2b77c93b5578e492b0ec603c46d9f21b38b314713f2a642ad6d31932f28d4585",
+      "response": "log1p_customers_v2",
+      "filtering": "accepted curated E0; no additional filter",
+      "scope_filter": "none",
+      "missing_random_folds": 12113
+    },
+    "model": {
+      "model_id": "F08",
+      "family": "matched",
+      "form": "plateau",
+      "original": "既定阵风函数 + 当前最终控制项"
+    },
+    "seed": 20260908,
+    "code": {
+      "analysis_new/appendix/c_models.py": "fdeb746fc34bec61f0925e115254b7045699f0da8136ea9da567ef50a0c5b128",
+      "analysis_new/model_selection.py": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d",
+      "analysis_new/final_models.py": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310",
+      "analysis_new/weather_only_regression.py": "b7db64e8bd350dfbcabacd3f2ad7d2514ad26a4fb5d7f622d9989072b80ff9bd",
+      "analysis_new/knot_estimation.py": "69c07f14a33db4942cf7e43db19f1de0fe9094088d1488297a05a3a10606bf8f",
+      "analysis_new/plateau_model.py": "672d8ee3fc667b9192f4fe6f40bde033d27306e6298677e51af5e411eb3f3bdd",
+      "analysis_new/basis_solver.py": "ab181c3628721a83aac4d2d2bbe5cd2fbed2074de8ebaa427769f6a1c914cb9a",
+      "analysis_new/appendix/design_adapter.py": "7f4b4ed2c1647f6c759bcb45017c172d008dfe6b9a8abda11d00c5c3b8781529",
+      "completion_numeric_functions": "526809043c66394f7475459011efc84d599587296ea2dc6173fc9b47c98e0fdd"
+    },
+    "sources": {
+      "review_package/data/combined_E0_final.csv": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+      "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+      "analysis_new/model_selection.py": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d",
+      "analysis_new/final_models.py": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310",
+      "analysis_new/weather_only_regression.py": "b7db64e8bd350dfbcabacd3f2ad7d2514ad26a4fb5d7f622d9989072b80ff9bd",
+      "analysis_new/knot_estimation.py": "69c07f14a33db4942cf7e43db19f1de0fe9094088d1488297a05a3a10606bf8f",
+      "analysis_new/plateau_model.py": "672d8ee3fc667b9192f4fe6f40bde033d27306e6298677e51af5e411eb3f3bdd",
+      "analysis_new/basis_solver.py": "ab181c3628721a83aac4d2d2bbe5cd2fbed2074de8ebaa427769f6a1c914cb9a",
+      "results/new/20260909183317/results/model_selection/E0_model_comparison.csv": "5be68241e8581134a3ef3f54cebe6e5152c73db65e6be184c04aff4aafd3fc8a",
+      "results/new/20260909183317/results/model_selection/E0_coefficients.xlsx": "d889100fd6c2b0de04260114f1ad100655fb3e496643023c28759bdb4b0f6ea5",
+      "results/new/20260909183317/results/model_selection/knots.json": "af506c6ec5b9ba4c3f3450bf88a02afb87e4116f798233bb5920341c95f5bb3b",
+      "results/new/20260909183317/results/model_selection/ramp_model.json": "ce9f95991d1f2d96e084103021153f1c5be63e833f923ae8564b8562b3083623",
+      "results/new/20260909183317/results/model_selection/ramp_model_R0c.json": "521d363cc4e001e8ff10ae47605d31591014f5f846447bfa9fee1577ae64e3ef",
+      "results/new/20260909183317/results/final_models/final_summary.json": "3432d0bdbd3a6ccfb3a689613c8483dde5ad26489f49f960a37a9f9abe264741",
+      "results/new/20260909183317/results/weather_only/weather_only_summary.json": "286b36e35231108b8403bda654ec05e2d41550001797fd365e39b98e086ec555",
+      "results/new/20260909183317/results/final_models/E0_final_twoway.csv": "491c75aea00d6a4a60a04026978eba65072e1576e0974dfaa211c96954487f94",
+      "results/new/20260909183317/results/final_models/R0c_final_twoway.csv": "0dab57b08504cba609ca93c282fa3ccf8b1bde92a9b679286efd965255cb54a2",
+      "results/new/20260909183317/results/weather_only/E0_weather_paper_twoway.csv": "3127bb1e88f37f2ad617beb4ae89d56175f088a1e7dbd032f7a2be7823366632",
+      "results/new/20260909183317/results/weather_only/E0_weather_hinge_twoway.csv": "f0f47980a4cebdda9722e7d7180e29a7b9f54035179d8018b6fa7f158c3c35ac",
+      "results/new/20260909183317/results/weather_only/E0_weather_final_twoway.csv": "994d2218bae8a395f72905e708e6f34763ea5990285d5792bf9de0ea890c400a",
+      "results/new/20260909183317/results/weather_only/R0c_weather_paper_twoway.csv": "aff72a4663243d0d92816628206ca830c55fcf12ca84a01d4600d213207e554e",
+      "results/new/20260909183317/results/weather_only/R0c_weather_hinge_twoway.csv": "cb846e2ab94541dc74843302eee67fd1da910eeebd1cad64a03be57f70afb9e8",
+      "results/new/20260909183317/results/weather_only/R0c_weather_final_twoway.csv": "ba69ee5391716b3273a38bb6203da0781b63623dd49be5491a2addf89f7ba220"
+    },
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "statsmodels": "0.14.6"
+  },
+  "metrics": [
+    {
+      "prediction_type": "in_sample",
+      "n": 60437,
+      "k": 27,
+      "sse": 237084.04103533734,
+      "aic": 254172.86452092353,
+      "bic": 254416.11715396063,
+      "r2": 0.03760537297445432,
+      "adj_r2": 0.03719116571898895,
+      "rmse": 1.980613392290753,
+      "n_columns": 27,
+      "knots": "[14.0, 25.0]",
+      "component_action": "DERIVE",
+      "source": "results/new/20260909183317/results/final_models/final_summary.json#E0/final",
+      "predictions_saved": true,
+      "knots_mode": "full_sample_selected"
+    },
+    {
+      "prediction_type": "LAD_OOF",
+      "n": 60437,
+      "rmse": 1.984977852482861,
+      "component_action": "REUSE",
+      "source": "results/new/20260909183317/results/model_selection/ramp_model.json#all/nested_cv/ramp",
+      "predictions_saved": false,
+      "knots_mode": "train_selected"
+    }
+  ],
+  "files": {
+    "coefficients.csv": "635ec287fc53ff2869d2292ec11676c0020173fe2b18bd0e812a03bbf56f6e7a",
+    "in_sample.csv.gz": "f1ec4caee7b7f2665cb96a8e3e41f69fd4722734cb239961998f6c3cda45b6e6",
+    "preprocessing.json": "b989f299d5fcaedf9f51135dc0b0e40255fddaa7db91102908915be93f4addea"
+  }
+}

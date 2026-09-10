@@ -1,0 +1,8 @@
+storm,start,end,timezone,endpoints,overlap
+Arwen,2021-11-25,2021-11-28,UTC existing incident date,inclusive date bounds,each window separately; union deduplicated by observation ID
+Dudley,2022-02-15,2022-02-17,UTC existing incident date,inclusive date bounds,each window separately; union deduplicated by observation ID
+Eunice,2022-02-17,2022-02-19,UTC existing incident date,inclusive date bounds,each window separately; union deduplicated by observation ID
+Franklin,2022-02-19,2022-02-22,UTC existing incident date,inclusive date bounds,each window separately; union deduplicated by observation ID
+Babet,2023-10-17,2023-10-22,UTC existing incident date,inclusive date bounds,each window separately; union deduplicated by observation ID
+Ciaran,2023-10-31,2023-11-03,UTC existing incident date,inclusive date bounds,each window separately; union deduplicated by observation ID
+Henk,2024-01-01,2024-01-03,UTC existing incident date,inclusive date bounds,each window separately; union deduplicated by observation ID

@@ -1,0 +1,147 @@
+{
+  "model": "E0_weather_final",
+  "margin": "E0",
+  "n": 9857,
+  "response": "log1p_customers_v2",
+  "sample_id_sha256": "a9fbb6b83c432d5518e046bb51b978b4fc6a08a6477e99a0f8c5870a1a250906",
+  "source": "review_package/data/combined_E0_final.csv",
+  "source_sha256": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+  "filtering": "weather_natural; no additional customer filter",
+  "zero_customers": 572,
+  "columns": [
+    "Intercept",
+    "z_precipitation_24h_sum",
+    "z_temperature_0h",
+    "z_pressure_msl_0h",
+    "z_gust_pressure",
+    "urban_binary",
+    "log_population",
+    "income_deprivation_rate",
+    "deprivation_gap_pct",
+    "morans_i",
+    "incident_year[2022]",
+    "incident_year[2023]",
+    "incident_year[2024]",
+    "incident_month[2]",
+    "incident_month[3]",
+    "incident_month[4]",
+    "incident_month[5]",
+    "incident_month[6]",
+    "incident_month[7]",
+    "incident_month[8]",
+    "incident_month[9]",
+    "incident_month[10]",
+    "incident_month[11]",
+    "incident_month[12]",
+    "gust_low",
+    "gust_ramp",
+    "z_temperature_sq"
+  ],
+  "means": {
+    "gust_0h": 14.386994021622419,
+    "precipitation_24h_sum": 5.077609838797479,
+    "temperature_0h": 12.117216643396501,
+    "pressure_msl_0h": 1004.9836055248253
+  },
+  "sd_ddof1": {
+    "gust_0h": 7.27851349208238,
+    "precipitation_24h_sum": 6.304151827340657,
+    "temperature_0h": 6.065969161046151,
+    "pressure_msl_0h": 13.924378503624627
+  },
+  "knots": [
+    11.0,
+    24.0
+  ],
+  "knot_treatment": "accepted fixed full-sample final; no selection this task",
+  "calendar_levels": {
+    "incident_year": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "incident_month": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "reference_levels": {
+    "incident_year": 2021,
+    "incident_month": 1
+  },
+  "socio_unscaled": [
+    "urban_binary",
+    "log_population",
+    "income_deprivation_rate",
+    "deprivation_gap_pct",
+    "morans_i"
+  ],
+  "interactions": [
+    "z_gust_pressure"
+  ],
+  "lad_key": "LAD21CD",
+  "date_key": "pd.to_datetime(incident_date_utc).dt.date.astype(str); existing UTC date, no conversion",
+  "group_encoding": "pandas.factorize in row encounter order",
+  "X_sha256": "be6f8d02d9b39a49833f779ea87b477b67dba99c5ca19bf0c8bf57a2f3970a1a",
+  "design_function": "weather_only_regression.build(d,d,margin,cust,final,accepted_selected_knots)",
+  "design_rank": 27,
+  "design_columns": 27,
+  "clusters": {
+    "LAD": 105,
+    "date": 1001,
+    "intersection": 6122
+  },
+  "small_sample_factors": {
+    "LAD": 1.0122857813600439,
+    "date": 1.0036476093591047,
+    "intersection": 1.0028087685058675
+  },
+  "correction_formula": "G/(G-1)*(n-1)/(n-k_columns), separately LAD/date/intersection; two-way=LAD+date-intersection",
+  "reference_distribution": "Student t",
+  "df": 104,
+  "df_rule": "G_LAD-1 for both, follows final p_t_G1",
+  "alpha": 0.05,
+  "action": "REUSE_C_IN_SAMPLE_AND_FINAL_COEFFICIENTS",
+  "new_ols_fits": 0,
+  "compatible_C_in_sample": true,
+  "matrix_diagnostics": {
+    "LAD": {
+      "negative_diagonal_terms": [],
+      "minimum_eigenvalue": 2.0505683003988154e-06,
+      "numerical_correction": "none"
+    },
+    "TWO_WAY": {
+      "negative_diagonal_terms": [],
+      "minimum_eigenvalue": -9.41676332847944e-06,
+      "numerical_correction": "none"
+    },
+    "DATE": {
+      "negative_diagonal_terms": [],
+      "minimum_eigenvalue": 1.3259872100579484e-06,
+      "numerical_correction": "none"
+    },
+    "INTERSECTION": {
+      "negative_diagonal_terms": [],
+      "minimum_eigenvalue": 1.9254074901272973e-06,
+      "numerical_correction": "none"
+    },
+    "BREAD": {
+      "negative_diagonal_terms": [],
+      "minimum_eigenvalue": 3.89138210479831e-07,
+      "numerical_correction": "none"
+    }
+  },
+  "c_predictions": "results\\Appendix\\C\\data\\models\\E0_weather\\F08\\in_sample.csv.gz",
+  "residual_definition": "saved final in-sample y-prediction"
+}

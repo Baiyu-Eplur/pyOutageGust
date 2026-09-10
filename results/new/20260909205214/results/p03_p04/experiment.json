@@ -1,0 +1,87 @@
+{
+  "started_at": "2026-09-09T20:52:16.463185+01:00",
+  "settings": {
+    "base_run": "20260909183317",
+    "weather_cache_run": "",
+    "request_interval": 10,
+    "bootstraps": 1000,
+    "min_relative_gain": 0.05
+  },
+  "status": "completed",
+  "completed": [
+    "baseline_and_geometry_verified",
+    "complete_hourly_data_aggregated_and_aligned",
+    "data_comparison_and_spatial_loo_saved_before_fits",
+    "both_versions_fitted_and_validated"
+  ],
+  "sources": [
+    {
+      "path": "analysis_new/p03_p04_grid_weather.py",
+      "sha256": "c5f8c88ae3d5e2a45d5df761e3273b88e3ac96206405a79c49c4bd5a95ac1261"
+    },
+    {
+      "path": "analysis_new/grid_weather.py",
+      "sha256": "ca884fb1aa19e57952f7bf218d9b4fcff6ae549ba30691759cf7c1853c03fb6b"
+    },
+    {
+      "path": "analysis_new/grid_fragility_validation.py",
+      "sha256": "1ec3ffbcd9a1e1a86fd2339bf8b1c8d9b42e062cd3e1531c41ee7ed427c18634"
+    },
+    {
+      "path": "analysis_new/district_day_core.py",
+      "sha256": "837334b479bc5cc12433c1fd9af006abf19bba789340e509721605914c5e6121"
+    }
+  ],
+  "api": {
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "model": "era5",
+    "field": "wind_gusts_10m",
+    "unit": "m/s",
+    "timezone": "GMT",
+    "start": "2021-04-01",
+    "end": "2024-03-31"
+  },
+  "criteria": {
+    "mean_relative_gain": 0.05,
+    "negligible_gain": 0.01,
+    "ci95_lower_above_zero": true,
+    "no_endpoint_worse_than_relative_limit": true,
+    "mean_calibration_rmse_gain": 0.05,
+    "visual_review_required": true
+  },
+  "baseline": {
+    "base_run": "20260909183317",
+    "manifest_sha256": "c9e211b6fd5df0730bbddec2c9a55ab1df8552888d33a1a4f6361de2aff4353b",
+    "panel_sha256": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+    "sample_sha256": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+    "old_interpolation_validation": {
+      "n": 41926,
+      "rmse": 2.221061185829268,
+      "corr": 0.8540266001451742,
+      "bias": -0.08184577212513594
+    }
+  },
+  "boundary": [
+    {
+      "path": "data\\external\\gis\\LAD_DEC_2021_UK_BGC\\LAD_DEC_2021_UK_BGC.shp",
+      "sha256": "c2972210e6ed58eac9b4162110391d016b9946458320bac67af84369bf8326fe"
+    },
+    {
+      "path": "data\\external\\gis\\LAD_DEC_2021_UK_BGC\\LAD_DEC_2021_UK_BGC.shx",
+      "sha256": "82d3bcdb178f0ed91989e84e689e298dfb5e317c98a9a38839da0156561bc3a4"
+    },
+    {
+      "path": "data\\external\\gis\\LAD_DEC_2021_UK_BGC\\LAD_DEC_2021_UK_BGC.dbf",
+      "sha256": "4bc7e07eef4ff0eb020f82e7a7b7288822dd5a9fbca2e9e0063444a350600d41"
+    },
+    {
+      "path": "data\\external\\gis\\LAD_DEC_2021_UK_BGC\\LAD_DEC_2021_UK_BGC.prj",
+      "sha256": "78799974d480d1c5048a850e8590cb080ddf9b485494228c276146105d151015"
+    },
+    {
+      "path": "data\\external\\gis\\LAD_DEC_2021_UK_BGC\\LAD_DEC_2021_UK_BGC.cpg",
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+    }
+  ],
+  "finished_at": "2026-09-09T21:14:43.692304+01:00"
+}

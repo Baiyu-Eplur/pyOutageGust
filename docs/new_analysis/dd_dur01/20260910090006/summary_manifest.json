@@ -1,0 +1,153 @@
+{
+  "created_at": "2026-09-10T09:12:40.986111+01:00",
+  "source": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260910090006\\results\\dd_dur01",
+  "source_inventory_sha256": "adab8472dc1f73ba0668e5c32ed3b909a1c7b1bed4e61f659edaad7408eed714",
+  "source_hashes_match": true,
+  "summary_sha256": "9d3e1d91159ce3d815b842e455c028fa6333ac0f714487a20a05d78e32c2865b",
+  "script_sha256": "a62e5710d2d05e7b1a2405620113b13b95e6b10bec6b4747ac24bfa057ffeec3",
+  "source_files": [
+    {
+      "path": "baseline_match.json",
+      "sha256": "b7cdc3fcf8b3d324c1052fe23850d8584cbebd9b95ab9fea1f7463cfa0a2f33a"
+    },
+    {
+      "path": "calibration_bins.csv",
+      "sha256": "a19c5bd1392bb668a48a16b3feb9abf5a4dcefdbbe6c362d494b8df14094469d"
+    },
+    {
+      "path": "calibration_edges.json",
+      "sha256": "88416d132df823fab5e71cc09147f027a3591028ef5b2cab465d9e2c50a9d52f"
+    },
+    {
+      "path": "execution.jsonl",
+      "sha256": "9c6e44ed467be2bb6372961dea72250b5ddbf757b194e00ad3ddf35f4f31e284"
+    },
+    {
+      "path": "feature_support.csv",
+      "sha256": "c2937fa65f99b6fe09404eedf715b93eb2f426fd17e7ff3a8dc37be272796ce1"
+    },
+    {
+      "path": "features_by_fold.csv.gz",
+      "sha256": "bc976a889ecb0c1da1ba79cdc152447d2158bb55c68ddd95168198f8a4d11ee0"
+    },
+    {
+      "path": "figure_axes.json",
+      "sha256": "5af084fca1dcbc6675cccb1f89142988748c934874d0b9c161f45b347cce113f"
+    },
+    {
+      "path": "figures/calibration_any_gt0.png",
+      "sha256": "58e90bfae200fa5202e24e1b03b22c68bcf363cebd6c240c41a13b5d90a72d4b"
+    },
+    {
+      "path": "figures/calibration_any_gt100.png",
+      "sha256": "f81321eb31dbdfc05e36d8286e76d0aebd3a19afdc39f42bd8c22aefc8761ce1"
+    },
+    {
+      "path": "figures/calibration_any_gt1000.png",
+      "sha256": "37d629489bc9e3a5507c794ddb6dcf8bd05eb530c8b0aee03aa4a1e97948ae09"
+    },
+    {
+      "path": "figures/calibration_any_gt5.png",
+      "sha256": "406e788bd7000bf481b7ed43502da381dc5022dcea642d4237fff0801104cbfc"
+    },
+    {
+      "path": "figures/calibration_wthr_gt0.png",
+      "sha256": "0b5a4d214cb2efaebd8831620633f69c23c1baf700b418e948cd4aafcc503d16"
+    },
+    {
+      "path": "figures/calibration_wthr_gt100.png",
+      "sha256": "3660eb41ec9ec5e9c291a6834cc03e137a4004b528da6cf20c2ced4259ed65e9"
+    },
+    {
+      "path": "figures/calibration_wthr_gt1000.png",
+      "sha256": "8daa3c463dc8a493c3eeb9083c5090be15cec23a425fb5c1590b36b4ab595d68"
+    },
+    {
+      "path": "figures/calibration_wthr_gt5.png",
+      "sha256": "3b1de2fda23ac2a766514a9f901c177aac050ddd257d0224a5cee17137221b98"
+    },
+    {
+      "path": "figures/observed_joint_support.png",
+      "sha256": "a717f78519dcfeb9982d143bb54232563dc36a71e311bfa3732ec2e25c93db84"
+    },
+    {
+      "path": "fit_checkpoint.jsonl",
+      "sha256": "61a9001795ee3347f3ee837aac39995d5070f19ebb632f6e9d7f5f1b821cb54e"
+    },
+    {
+      "path": "fit_summary.csv",
+      "sha256": "934591a3a8ddd97fa9075251f0acee63430408407622e019a864c299f963b9e4"
+    },
+    {
+      "path": "fold_metrics.csv",
+      "sha256": "903d232e80e04d6cea5ffb141241a77b55baab29a5bf1f2d3a2ad3b586bde962"
+    },
+    {
+      "path": "full_predictions.csv.gz",
+      "sha256": "7b7f3a8c0816926fe20df300ef0db62445bd901b3131c5d564bd332d939fae84"
+    },
+    {
+      "path": "joint_support_bins.csv",
+      "sha256": "d9c16d7570e4e5c6c44415aa83f735f0b40f7a9ef62f63fb45aea0f1ffe76eb6"
+    },
+    {
+      "path": "metrics.csv",
+      "sha256": "961b7679457a124ac133b75a28a00f8d364e9ce2641a7fe8b509709d90d3b3fe"
+    },
+    {
+      "path": "oof_predictions.csv.gz",
+      "sha256": "06f166bf95d60b0938fa6ebff30c64d34d12c468ad765958a602400c0d318de5"
+    },
+    {
+      "path": "optimizer_candidates.csv.gz",
+      "sha256": "0d4798193c7997449bb22181f80bf9af8ea81dace122b2b8b3bde0fd69350d38"
+    },
+    {
+      "path": "paired_uncertainty.csv",
+      "sha256": "05226c6f67469e4cefda88bbb259f8ac1b1b420e579c49513aa04acf98228427"
+    },
+    {
+      "path": "parameters.csv",
+      "sha256": "934591a3a8ddd97fa9075251f0acee63430408407622e019a864c299f963b9e4"
+    },
+    {
+      "path": "protocol.json",
+      "sha256": "172dc5400dd2301fc1fff6fc505fa1d315e9ab4fecff667eb6e7ec6bf064f288"
+    },
+    {
+      "path": "PROTOCOL.md",
+      "sha256": "e2096bcd8533d207e2b70b4a4f8525cc6d9aab62b319c0135f794b0f9d2240f0"
+    },
+    {
+      "path": "RESULTS_README.md",
+      "sha256": "ea928ff4692f5b59cff40ca376b6a84e3ca2f63f4e5a0c8a624c3dd29954d3ee"
+    },
+    {
+      "path": "thresholds.csv",
+      "sha256": "56b626c927b766d1a1be6f503fb377f1454fb9cc3ccfe9ea9b43a9a9884729e5"
+    },
+    {
+      "path": "validation.json",
+      "sha256": "f724ec64796ca205d5689058bd774a0136295880679f241b8d533912eda318f1"
+    }
+  ],
+  "coverage": {
+    "models": 3,
+    "tasks": 8,
+    "metric_rows": 24,
+    "fit_rows": 144,
+    "fold_metric_rows": 120
+  },
+  "no_refit": true,
+  "no_weather_requests": true,
+  "no_manuscript_edits": true,
+  "exact_candidate_checked_at": "2026-09-10T09:14:56.366504+01:00",
+  "checks": {
+    "performance_rows_validated": 24,
+    "all_tasks_models_present": true,
+    "linked_paths_checked": 21,
+    "all_links_exist": true,
+    "source_unchanged": true
+  },
+  "prose_check": "Exact delivered text checked for evidence alignment, percentage scales, calibration support, conditional intervals, and no inferred user adoption decision; bounded result summary, not a full manuscript audit"
+}

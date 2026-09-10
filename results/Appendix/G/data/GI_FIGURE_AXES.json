@@ -1,0 +1,69 @@
+{
+  "density_panels": [
+    {
+      "figure": "GI_PREDICTION_CALIBRATION",
+      "panel": "E0_all density",
+      "n": 60437,
+      "xlim": [
+        1.4400614788137494,
+        3.8469760370981216
+      ],
+      "ylim": [
+        0.0,
+        8.06853010848987
+      ],
+      "outside_display": 726,
+      "scoring_exclusions": 0
+    },
+    {
+      "figure": "GI_PREDICTION_CALIBRATION",
+      "panel": "R0c_all density",
+      "n": 51173,
+      "xlim": [
+        0.5412892258654103,
+        3.259464955784384
+      ],
+      "ylim": [
+        -2.708050201102211,
+        5.025954635430171
+      ],
+      "outside_display": 663,
+      "scoring_exclusions": 0
+    },
+    {
+      "figure": "GI_PREDICTION_CALIBRATION",
+      "panel": "E0_weather density",
+      "n": 9857,
+      "xlim": [
+        2.199201835327665,
+        4.845021174423263
+      ],
+      "ylim": [
+        0.0,
+        8.062489471562099
+      ],
+      "outside_display": 120,
+      "scoring_exclusions": 0
+    },
+    {
+      "figure": "GI_PREDICTION_CALIBRATION",
+      "panel": "R0c_weather density",
+      "n": 9254,
+      "xlim": [
+        0.3763011776102361,
+        4.034925758499602
+      ],
+      "ylim": [
+        -2.708050201102211,
+        5.104483146891346
+      ],
+      "outside_display": 126,
+      "scoring_exclusions": 0
+    }
+  ],
+  "all_rows_drawn": true,
+  "hexbin_aggregation": "log count; no row sampling",
+  "calibration": "original quantiles; connected bin means, counts saved",
+  "residual_intervals": "unclustered bin SEM, not two-way curve bands",
+  "curve_bands": "original uncentred component covariance; see GI_RESPONSE_CURVES.csv"
+}

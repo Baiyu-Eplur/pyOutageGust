@@ -1,0 +1,92 @@
+{
+  "task": "APP-H03-LINK",
+  "inputs": {
+    "docs/new_analysis/instructions/附录FGHIJ四步推进台账与第一步J03执行指令 (3).md": "05e8aa046c61aa93f77d05073496635727b6fc2629d4e1c17b29c4faf2bb215b",
+    "results/new/20260909183317/results/paper/Extended_paper_draft.docx": "a4f926edbc5bb1732806c251bc72775d3caea5a1f9482beb7be2965e34efbfd8",
+    "review_package/data/combined_E0_final.csv": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+    "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+    "results/pretest/archive/20260909154556/results/appendix_h_20260906/raw/stepB_distribution_check_corrected.json": "4bfdffc73d02628e21f79f1b541a64c7d985da0fbab2d404199eb58ef902fb64",
+    "scripts/appendix_h_20260906/step_b_distribution_check.py": "8299e7d7812ac88ace1caff558c6d1f423009d9759dc925eb9c92c0fd2c3d8d9",
+    "analysis_new/fragility_demo.py": "c16165bceac0b7a71a837606d67c17710a887762cb0f35f195b18778df90a72f",
+    "analysis_new/fragility_surfaces.py": "c3367c1d843f5ef7aeec6e0281a68b16544649f01b071b16ec0cd7bdce65906c",
+    "analysis_new/model_selection.py": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d",
+    "analysis_new/final_models.py": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310",
+    "analysis_new/weather_only_regression.py": "b7db64e8bd350dfbcabacd3f2ad7d2514ad26a4fb5d7f622d9989072b80ff9bd",
+    "results/new/20260909183317/results/model_selection/knots.json": "af506c6ec5b9ba4c3f3450bf88a02afb87e4116f798233bb5920341c95f5bb3b",
+    "results/new/20260909183317/results/weather_only/weather_only_summary.json": "286b36e35231108b8403bda654ec05e2d41550001797fd365e39b98e086ec555",
+    "results/new/20260909183317/results/model_selection/fragility_summary.json": "3b6732df959c7fec4ca65d289689998f617edabce354a5ae36f693371fb3b79c",
+    "results/new/20260909183317/results/model_selection/fragility_lognormal.json": "022d45a861d7ef0c9b9d3c6b9ca58072dbd735e67d7624bbd122909a504e5b58",
+    "results/new/20260909183317/results/model_selection/fragility_optimizer_diagnostics.json": "2080150b3016fe5b74d64b8932429768773cb3e92527a80e27d88c01bf68b3cb",
+    "results/Appendix/G/data/GI_PREPROCESSING.json": "09b4537ee1b9ae320de58f5bf318d2fe4c5020208a5de8869cc3605037019a11",
+    "results/Appendix/G/data/GI_COEFFICIENTS.csv": "2e56be9bab0e795dd3b094723a8dc550238d4d3f1fda2e2bbc82975647581c2b",
+    "results/Appendix/G/data/GI_PREDICTIONS.csv.gz": "683c85ca6ea11a149bac4c8284ef882d9b7ed1136f4f6861996a0710d54b6225",
+    "results/new/20260909183317/results/final_models/E0_final_twoway.csv": "491c75aea00d6a4a60a04026978eba65072e1576e0974dfaa211c96954487f94",
+    "results/Appendix/G/data/GI_E0_all_final_COV.csv": "83fae87713a657bb90f4a4a56178e96b342b4883a37bb71690ffd271127d9c7d",
+    "results/Appendix/C/data/samples/E0_all.csv.gz": "9b701cc1fdd09ad31dee46c80791b3f01e66f745b8a7a616f98343f39de97595",
+    "results/new/20260909183317/results/final_models/R0c_final_twoway.csv": "0dab57b08504cba609ca93c282fa3ccf8b1bde92a9b679286efd965255cb54a2",
+    "results/Appendix/G/data/GI_R0c_all_final_COV.csv": "56593364dff7156d10a365d65843cc9a66ced3194e538eca885127655d2cfcb7",
+    "results/Appendix/C/data/samples/R0c_all.csv.gz": "121e987997369520d4474d343e9f7e6cabc1280b8af39ef6433c889ec8cc7a0e"
+  },
+  "code": {
+    "analysis_new/appendix/h03_completion.py": "87f25e250fe71a9245bbc36cf8505f7eb5a3c0c9412b8b60499e5707c94ae28f",
+    "analysis_new/appendix/h03_evidence.py": "f7fc17f020cc077b1db658ba8f36c6664a344dd6fc491e98bafd6a47406da360",
+    "analysis_new/appendix/h03_models.py": "ee35bd8c4aa79490b94b89b1bc1a44ba9739adb631963ef62cb7f880eb8d78b3",
+    "analysis_new/appendix/gi_core.py": "fa4e68001d488bb4417216d3f5425db2361d2d0ec020c1b3017f91754a807735",
+    "analysis_new/appendix/design_adapter.py": "7f4b4ed2c1647f6c759bcb45017c172d008dfe6b9a8abda11d00c5c3b8781529",
+    "analysis_new/appendix/c_models.py": "fdeb746fc34bec61f0925e115254b7045699f0da8136ea9da567ef50a0c5b128"
+  },
+  "rules": {
+    "nb2": {
+      "method": "bfgs",
+      "maxiter": 200,
+      "gtol": 1e-05,
+      "alpha": "joint MLE in current sample; NB2 parameter alpha after internal log-alpha optimisation",
+      "initial": "original statsmodels default internal Poisson fit and dispersion estimate"
+    },
+    "glm": {
+      "method": "IRLS",
+      "maxiter": 100,
+      "tol": 1e-08,
+      "scale": "X2 (Pearson chi square / residual df)",
+      "link": "Log"
+    },
+    "tweedie": {
+      "var_power": 1.5,
+      "eql": true,
+      "power_search": false,
+      "likelihood": "quasi-score; full likelihood and AIC/BIC not reported"
+    },
+    "inference": {
+      "use_correction": true,
+      "reference": "Student t",
+      "df": "G_LAD-1",
+      "alpha": 0.05,
+      "correction": "G/(G-1)*(n-1)/(n-k), separate LAD/date/intersection; k includes joint NB alpha",
+      "score": "model.score_obs; GLM at fitted Pearson scale; NB in full beta/alpha coordinates",
+      "bread": "inverse negative observed Hessian, full joint NB parameters",
+      "negative_variance": "invalid individual interval, no abs/clipping/PSD projection"
+    },
+    "validity": {
+      "max_abs_mean_score": 0.0001,
+      "required": "solver convergence, finite parameters/positive fitted mean/objective, finite score, maximum absolute mean score <=1e-4",
+      "retry": "one NB-only constant-mean numerical recovery after invalid original attempt; same BFGS max200/gtol, no candidate or result-based selection"
+    },
+    "scope": "four full-sample GLM candidates, two saved OLS references; no weather GLM claim found in H1 or body P030; no CV/selection"
+  },
+  "software": {
+    "python": "3.12.6 | packaged by Anaconda, Inc. | (main, Oct  3 2024, 07:22:25) [MSC v.1929 64 bit (AMD64)]",
+    "statsmodels": "0.14.6",
+    "numpy": "2.4.3",
+    "pandas": "3.0.1"
+  },
+  "library_source_sha256": {
+    "C:\\Users\\haoya\\.conda\\envs\\pyoutagegust\\Lib\\site-packages\\statsmodels\\genmod\\generalized_linear_model.py": "cd16d119bd6f731d641efac918ab443ddd8496fd2aae20e249af25db6ce8af48",
+    "C:\\Users\\haoya\\.conda\\envs\\pyoutagegust\\Lib\\site-packages\\statsmodels\\discrete\\discrete_model.py": "072797c06ba897d0bd92f4946bb06409b266c9945e4df3754ef0b52aaf95c783",
+    "C:\\Users\\haoya\\.conda\\envs\\pyoutagegust\\Lib\\site-packages\\statsmodels\\stats\\sandwich_covariance.py": "eed5c01e32ee7c74164c03e15c8067d33159c26c364fa32afec59ee02f1815d9"
+  },
+  "random_seed": null,
+  "random_operations": "none",
+  "weather_GLM": "not required by located H1 or body claim",
+  "frozen_at": "2026-09-10T20:09:29+01:00",
+  "command": "C:\\Users\\haoya\\.conda\\envs\\pyoutagegust\\python.exe D:\\Pyprogramme\\pyOutageGust\\main_appendix.py --appendices H --h03-only"
+}

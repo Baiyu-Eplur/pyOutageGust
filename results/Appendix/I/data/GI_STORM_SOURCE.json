@@ -1,0 +1,15 @@
+{
+  "shared_predictions": "results/Appendix/G/data/GI_PREDICTIONS.csv.gz",
+  "sha256": "683c85ca6ea11a149bac4c8284ef882d9b7ed1136f4f6861996a0710d54b6225",
+  "input_scope": "current accepted E0 incidents; current R0c membership exactly checked; no raw event reconstruction",
+  "upstream_missing_customers": "16 records absent from accepted E0 cannot be assigned to windows from this input; not silently counted as zero and no raw reconstruction initiated",
+  "formal_cap": 192.0833333333333,
+  "cap_source": "results/pretest/archive/20260909154556/results/final_combined_analysis/raw/step0_verification.json",
+  "cap_sha256": "70e47eb17b8ce7559c280dae1fcb5c06521d7c40951c56cf787b80febd620ab8",
+  "cap_rule": "original combined positive-duration WT p99 before dropping missing customers; final recovery then positive customers; no storm quantile",
+  "current_compatibility": "reconstructed membership on all E0 equals formal positive R0c IDs exactly",
+  "observed_one_hour": "reported characteristic, not a verified operational placeholder flag",
+  "display_only": "positive customers, finite model covariates and duration above original cap; no primary metric inclusion",
+  "response": "natural log scales; eta directly; no exponentiation or double transform",
+  "prediction_identity": "full-study fixed final OLS for in_sample/display_only; G fixed LAD_OOF slices supplement; not temporal holdout"
+}

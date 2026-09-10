@@ -1,0 +1,13 @@
+{
+  "source_rows": 121656,
+  "actual_lads": 111,
+  "actual_days": 1096,
+  "expected_lads": 111,
+  "expected_days": 1096,
+  "expected_rows": 121656,
+  "missing_keys_count": 0,
+  "missing_keys": [],
+  "outside_study_rows": 0,
+  "outside_study_keys": [],
+  "handling": "No fabricated observations; saved rows only; same LAD sets required in both periods"
+}

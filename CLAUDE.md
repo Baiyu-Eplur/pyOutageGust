@@ -1,5 +1,9 @@
 # CLAUDE.md — AI collaboration rules for pyOutageGust
 
+## 每次新实验的共同操作规则
+
+用户已将“复用代码、main_new.py 独立末尾开关、逐变量中文注释、默认关闭、逐改动/测试日志和时间目录输出”确认为基本规则。所有后续测试遵守根目录 [AGENTS.md](AGENTS.md)。当轮用户指令决定是否实际运行及是否发布，不沿用之前实验的限制或论文采用结论。
+
 ## Origin
 
 This project was split out of `D:\Pyprogramme\STST2603\claude_branch` on

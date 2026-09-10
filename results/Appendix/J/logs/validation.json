@@ -1,0 +1,8 @@
+{
+  "expected_outputs": 40,
+  "actual_outputs": 40,
+  "expected_set_matches": true,
+  "table_numeric_serialization_checked": true,
+  "source_fingerprints_match": true,
+  "scope": "Export and serialization only; no independent scientific validation"
+}

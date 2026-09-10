@@ -1,0 +1,13 @@
+{
+  "time": "2026-09-10T20:18:39+01:00",
+  "command": "C:\\Users\\haoya\\.conda\\envs\\pyoutagegust\\python.exe D:\\Pyprogramme\\pyOutageGust\\main_appendix.py --appendices H --h03-only",
+  "cached": true,
+  "new_primary_GLM_fits": 0,
+  "new_OLS_fits": 0,
+  "NB_internal_Poisson_initial_fit": 0,
+  "NB_numerical_recovery_attempts": 0,
+  "reused_components": [],
+  "H2_H3_fits": 0,
+  "cache_key": "4863245f054339d770764c4f12257956ee37fa5723424e0bb5d07ee843cfc2e9",
+  "force_recompute": false
+}

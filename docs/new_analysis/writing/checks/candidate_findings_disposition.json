@@ -1,0 +1,84 @@
+{
+  "candidate_sha256": "bb8c72733ec15f6a3f4e6b76c092952a817cea352ca86e4c3f7b360a85da45f6",
+  "reviewed_at": "2026-09-10T16:08:23+01:00",
+  "findings": [
+    {
+      "code": "PROSE007",
+      "match": "syntactic dash punctuation",
+      "count": 40,
+      "disposition": "RETAIN_WITH_CONTEXT",
+      "reason": "40处破折号均为表格缺项符号；表注明确其含义。按用户保留真实缺项及编号要求保留，不是正文插入式破折号。"
+    },
+    {
+      "code": "PROSE010",
+      "match": "Weather-related, Asset-related, Third-party, weather-attributed",
+      "count": 4,
+      "disposition": "RETAIN_WITH_CONTEXT",
+      "reason": "已在上下文逐项查看：匹配来自表格连续行、表头或四组合/既定术语的并列；按用户“术语与正文一致、四组合明确、候选不删减”的要求保留。句子分割器把无句号的表格串作一句，不以同义替换模糊模型或样本身份。"
+    },
+    {
+      "code": "PROSE010",
+      "match": "Asset-related, Weather-related, Asset-related, Weather-related, affected-customer",
+      "count": 5,
+      "disposition": "RETAIN_WITH_CONTEXT",
+      "reason": "已在上下文逐项查看：匹配来自表格连续行、表头或四组合/既定术语的并列；按用户“术语与正文一致、四组合明确、候选不删减”的要求保留。句子分割器把无句号的表格串作一句，不以同义替换模糊模型或样本身份。"
+    },
+    {
+      "code": "PROSE010",
+      "match": "all-incident, all-incident, weather-attributed, weather-attributed",
+      "count": 4,
+      "disposition": "RETAIN_WITH_CONTEXT",
+      "reason": "已在上下文逐项查看：匹配来自表格连续行、表头或四组合/既定术语的并列；按用户“术语与正文一致、四组合明确、候选不删减”的要求保留。句子分割器把无句号的表格串作一句，不以同义替换模糊模型或样本身份。"
+    },
+    {
+      "code": "PROSE010",
+      "match": "training-quantile, two-hinge, training-quantile, main-function, non-gust",
+      "count": 5,
+      "disposition": "RETAIN_WITH_CONTEXT",
+      "reason": "已在上下文逐项查看：匹配来自表格连续行、表头或四组合/既定术语的并列；按用户“术语与正文一致、四组合明确、候选不删减”的要求保留。句子分割器把无句号的表格串作一句，不以同义替换模糊模型或样本身份。"
+    },
+    {
+      "code": "PROSE010",
+      "match": "All-incident, All-incident, Weather-attributed, Weather-attributed, all-incident, all-incident",
+      "count": 6,
+      "disposition": "RETAIN_WITH_CONTEXT",
+      "reason": "已在上下文逐项查看：匹配来自表格连续行、表头或四组合/既定术语的并列；按用户“术语与正文一致、四组合明确、候选不删减”的要求保留。句子分割器把无句号的表格串作一句，不以同义替换模糊模型或样本身份。"
+    },
+    {
+      "code": "PROSE010",
+      "match": "All-incident, Weather-attributed, Weather-attributed, Weather-attributed, All-incident, Weather-attributed, Weather-attributed, Weather-attributed",
+      "count": 8,
+      "disposition": "RETAIN_WITH_CONTEXT",
+      "reason": "已在上下文逐项查看：匹配来自表格连续行、表头或四组合/既定术语的并列；按用户“术语与正文一致、四组合明确、候选不删减”的要求保留。句子分割器把无句号的表格串作一句，不以同义替换模糊模型或样本身份。"
+    },
+    {
+      "code": "PROSE010",
+      "match": "All-incident, Full-sample, All-incident, Full-sample, Weather-attributed, Full-sample, Weather-attributed, Full-sample, all-incident, matched-control",
+      "count": 10,
+      "disposition": "RETAIN_WITH_CONTEXT",
+      "reason": "已在上下文逐项查看：匹配来自表格连续行、表头或四组合/既定术语的并列；按用户“术语与正文一致、四组合明确、候选不删减”的要求保留。句子分割器把无句号的表格串作一句，不以同义替换模糊模型或样本身份。"
+    },
+    {
+      "code": "PROSE010",
+      "match": "All-incident, All-incident, Weather-attributed, Weather-attributed, All-incident, All-incident, Weather-attributed, Weather-attributed, all-incident",
+      "count": 9,
+      "disposition": "RETAIN_WITH_CONTEXT",
+      "reason": "已在上下文逐项查看：匹配来自表格连续行、表头或四组合/既定术语的并列；按用户“术语与正文一致、四组合明确、候选不删减”的要求保留。句子分割器把无句号的表格串作一句，不以同义替换模糊模型或样本身份。"
+    },
+    {
+      "code": "PROSE010",
+      "match": "weather-attributed, weather-attributed, weather-attributed, weather-attributed, all-incident, full-sample",
+      "count": 6,
+      "disposition": "RETAIN_WITH_CONTEXT",
+      "reason": "已在上下文逐项查看：匹配来自表格连续行、表头或四组合/既定术语的并列；按用户“术语与正文一致、四组合明确、候选不删减”的要求保留。句子分割器把无句号的表格串作一句，不以同义替换模糊模型或样本身份。"
+    },
+    {
+      "code": "PROSE010",
+      "match": "low-segment, low-segment, low-segment, lower-segment",
+      "count": 4,
+      "disposition": "RETAIN_WITH_CONTEXT",
+      "reason": "已在上下文逐项查看：匹配来自表格连续行、表头或四组合/既定术语的并列；按用户“术语与正文一致、四组合明确、候选不删减”的要求保留。句子分割器把无句号的表格串作一句，不以同义替换模糊模型或样本身份。"
+    }
+  ],
+  "limit": "Documented writing judgment under explicit terminology/table preservation instructions; no claim of human approval of the draft."
+}

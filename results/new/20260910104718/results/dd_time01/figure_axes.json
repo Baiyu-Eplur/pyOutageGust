@@ -1,0 +1,50 @@
+[
+  {
+    "target": "any_gt0",
+    "zoom_upper": 0.9184724406008931,
+    "zoom_source": "1.2*maximum development fitted probability, constrained [.01,1]",
+    "points_outside_zoom": 0
+  },
+  {
+    "target": "any_gt5",
+    "zoom_upper": 0.80554972856744,
+    "zoom_source": "1.2*maximum development fitted probability, constrained [.01,1]",
+    "points_outside_zoom": 0
+  },
+  {
+    "target": "any_gt100",
+    "zoom_upper": 0.7113939761836908,
+    "zoom_source": "1.2*maximum development fitted probability, constrained [.01,1]",
+    "points_outside_zoom": 0
+  },
+  {
+    "target": "any_gt1000",
+    "zoom_upper": 0.4263107000395925,
+    "zoom_source": "1.2*maximum development fitted probability, constrained [.01,1]",
+    "points_outside_zoom": 0
+  },
+  {
+    "target": "wthr_gt0",
+    "zoom_upper": 0.7963981146046774,
+    "zoom_source": "1.2*maximum development fitted probability, constrained [.01,1]",
+    "points_outside_zoom": 0
+  },
+  {
+    "target": "wthr_gt5",
+    "zoom_upper": 0.7327386330175912,
+    "zoom_source": "1.2*maximum development fitted probability, constrained [.01,1]",
+    "points_outside_zoom": 0
+  },
+  {
+    "target": "wthr_gt100",
+    "zoom_upper": 0.6713582727919422,
+    "zoom_source": "1.2*maximum development fitted probability, constrained [.01,1]",
+    "points_outside_zoom": 0
+  },
+  {
+    "target": "wthr_gt1000",
+    "zoom_upper": 0.34990607257280637,
+    "zoom_source": "1.2*maximum development fitted probability, constrained [.01,1]",
+    "points_outside_zoom": 0
+  }
+]

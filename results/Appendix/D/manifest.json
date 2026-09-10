@@ -1,0 +1,229 @@
+{
+  "owner": "main_appendix.py",
+  "appendix": "D",
+  "last_attempt": "2026-09-10T13:17:05+01:00",
+  "status": "success",
+  "update_state": "本次已更新",
+  "requirements": {
+    "D01": "已生成",
+    "D02": "已生成"
+  },
+  "outputs": [
+    {
+      "path": "tables/D_KNOT_SUMMARY.csv",
+      "sha256": "abe4563b5f3d2ef8c3a27e70e33a0ccbac4040eaee7117790295c58f5e0859e2",
+      "bytes": 779,
+      "requirement_id": "D01",
+      "claim_id": "CL_D01",
+      "source_paths": [
+        "results/new/20260909183317/results/model_selection/knots.json",
+        "results/new/20260909183317/results/model_selection/ramp_model.json",
+        "results/new/20260909183317/results/model_selection/ramp_model_R0c.json"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/model_selection/knots.json": "af506c6ec5b9ba4c3f3450bf88a02afb87e4116f798233bb5920341c95f5bb3b",
+        "results/new/20260909183317/results/model_selection/ramp_model.json": "ce9f95991d1f2d96e084103021153f1c5be63e833f923ae8564b8562b3083623",
+        "results/new/20260909183317/results/model_selection/ramp_model_R0c.json": "521d363cc4e001e8ff10ae47605d31591014f5f846447bfa9fee1577ae64e3ef"
+      },
+      "producer": "analysis_new/knot_estimation.py; plateau_model.py",
+      "export_function": "analysis_new.appendix.exporters.knots",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/D_KNOT_SUMMARY.md",
+      "sha256": "0955e55c74c3495310c861e60a8e47e63296d05c77d76240ab9589be5a08f652",
+      "bytes": 1896,
+      "requirement_id": "D01",
+      "claim_id": "CL_D01",
+      "source_paths": [
+        "results/new/20260909183317/results/model_selection/knots.json",
+        "results/new/20260909183317/results/model_selection/ramp_model.json",
+        "results/new/20260909183317/results/model_selection/ramp_model_R0c.json"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/model_selection/knots.json": "af506c6ec5b9ba4c3f3450bf88a02afb87e4116f798233bb5920341c95f5bb3b",
+        "results/new/20260909183317/results/model_selection/ramp_model.json": "ce9f95991d1f2d96e084103021153f1c5be63e833f923ae8564b8562b3083623",
+        "results/new/20260909183317/results/model_selection/ramp_model_R0c.json": "521d363cc4e001e8ff10ae47605d31591014f5f846447bfa9fee1577ae64e3ef"
+      },
+      "producer": "analysis_new/knot_estimation.py; plateau_model.py",
+      "export_function": "analysis_new.appendix.exporters.knots",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/D_NESTED_FOLD_KNOTS.csv",
+      "sha256": "a412787824dc31047a0700cf7aa5af6a4d6a3b9f648eb1b6fce13705a8b8598a",
+      "bytes": 506,
+      "requirement_id": "D01",
+      "claim_id": "CL_D01",
+      "source_paths": [
+        "results/new/20260909183317/results/model_selection/knots.json",
+        "results/new/20260909183317/results/model_selection/ramp_model.json",
+        "results/new/20260909183317/results/model_selection/ramp_model_R0c.json"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/model_selection/knots.json": "af506c6ec5b9ba4c3f3450bf88a02afb87e4116f798233bb5920341c95f5bb3b",
+        "results/new/20260909183317/results/model_selection/ramp_model.json": "ce9f95991d1f2d96e084103021153f1c5be63e833f923ae8564b8562b3083623",
+        "results/new/20260909183317/results/model_selection/ramp_model_R0c.json": "521d363cc4e001e8ff10ae47605d31591014f5f846447bfa9fee1577ae64e3ef"
+      },
+      "producer": "analysis_new/knot_estimation.py; plateau_model.py",
+      "export_function": "analysis_new.appendix.exporters.knots",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/D_NESTED_FOLD_KNOTS.md",
+      "sha256": "636bfc3e6523d6d20024c1f31a82a25921a51131dbdf8a4e4184263f5fd30c4f",
+      "bytes": 1448,
+      "requirement_id": "D01",
+      "claim_id": "CL_D01",
+      "source_paths": [
+        "results/new/20260909183317/results/model_selection/knots.json",
+        "results/new/20260909183317/results/model_selection/ramp_model.json",
+        "results/new/20260909183317/results/model_selection/ramp_model_R0c.json"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/model_selection/knots.json": "af506c6ec5b9ba4c3f3450bf88a02afb87e4116f798233bb5920341c95f5bb3b",
+        "results/new/20260909183317/results/model_selection/ramp_model.json": "ce9f95991d1f2d96e084103021153f1c5be63e833f923ae8564b8562b3083623",
+        "results/new/20260909183317/results/model_selection/ramp_model_R0c.json": "521d363cc4e001e8ff10ae47605d31591014f5f846447bfa9fee1577ae64e3ef"
+      },
+      "producer": "analysis_new/knot_estimation.py; plateau_model.py",
+      "export_function": "analysis_new.appendix.exporters.knots",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "figures/D_PLATEAU_PROFILE_BOOTSTRAP.png",
+      "sha256": "bb647f61f4b6612b1c493e50bfd759b8b3f8ba24b2fba7781498e79df398163d",
+      "bytes": 400030,
+      "requirement_id": "D02",
+      "claim_id": "CL_D02",
+      "source_paths": [
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_profile.csv",
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_bootstrap.csv",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_profile.csv",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_bootstrap.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_profile.csv": "3547170e114283ce44efea242a8d7220fae02bd62b2d16c6109c1af6bd43ef3c",
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_bootstrap.csv": "9f117c89925071619d0e5ec257095b13b9feb5601195cc1ef12a5bd4e8e68a86",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_profile.csv": "b2f44fe02e3d584231a2673236e52ee8ed2886f2502349a21588e2521c7d2c18",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_bootstrap.csv": "30cfb33b76731a5cadad5cac86e48d38b335c4509ff4c871349a14afbdde2041"
+      },
+      "producer": "analysis_new/plateau_model.py",
+      "export_function": "analysis_new.appendix.exporters.profiles",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "data/E0_all_plateau_profile.csv",
+      "sha256": "3547170e114283ce44efea242a8d7220fae02bd62b2d16c6109c1af6bd43ef3c",
+      "bytes": 9589,
+      "requirement_id": "D02",
+      "claim_id": "CL_D02",
+      "source_paths": [
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_profile.csv",
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_bootstrap.csv",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_profile.csv",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_bootstrap.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_profile.csv": "3547170e114283ce44efea242a8d7220fae02bd62b2d16c6109c1af6bd43ef3c",
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_bootstrap.csv": "9f117c89925071619d0e5ec257095b13b9feb5601195cc1ef12a5bd4e8e68a86",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_profile.csv": "b2f44fe02e3d584231a2673236e52ee8ed2886f2502349a21588e2521c7d2c18",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_bootstrap.csv": "30cfb33b76731a5cadad5cac86e48d38b335c4509ff4c871349a14afbdde2041"
+      },
+      "producer": "analysis_new/plateau_model.py",
+      "export_function": "analysis_new.appendix.exporters.profiles",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "data/E0_all_plateau_bootstrap.csv",
+      "sha256": "9f117c89925071619d0e5ec257095b13b9feb5601195cc1ef12a5bd4e8e68a86",
+      "bytes": 3307,
+      "requirement_id": "D02",
+      "claim_id": "CL_D02",
+      "source_paths": [
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_profile.csv",
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_bootstrap.csv",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_profile.csv",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_bootstrap.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_profile.csv": "3547170e114283ce44efea242a8d7220fae02bd62b2d16c6109c1af6bd43ef3c",
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_bootstrap.csv": "9f117c89925071619d0e5ec257095b13b9feb5601195cc1ef12a5bd4e8e68a86",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_profile.csv": "b2f44fe02e3d584231a2673236e52ee8ed2886f2502349a21588e2521c7d2c18",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_bootstrap.csv": "30cfb33b76731a5cadad5cac86e48d38b335c4509ff4c871349a14afbdde2041"
+      },
+      "producer": "analysis_new/plateau_model.py",
+      "export_function": "analysis_new.appendix.exporters.profiles",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "data/E0_weather_plateau_profile.csv",
+      "sha256": "b2f44fe02e3d584231a2673236e52ee8ed2886f2502349a21588e2521c7d2c18",
+      "bytes": 9501,
+      "requirement_id": "D02",
+      "claim_id": "CL_D02",
+      "source_paths": [
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_profile.csv",
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_bootstrap.csv",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_profile.csv",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_bootstrap.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_profile.csv": "3547170e114283ce44efea242a8d7220fae02bd62b2d16c6109c1af6bd43ef3c",
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_bootstrap.csv": "9f117c89925071619d0e5ec257095b13b9feb5601195cc1ef12a5bd4e8e68a86",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_profile.csv": "b2f44fe02e3d584231a2673236e52ee8ed2886f2502349a21588e2521c7d2c18",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_bootstrap.csv": "30cfb33b76731a5cadad5cac86e48d38b335c4509ff4c871349a14afbdde2041"
+      },
+      "producer": "analysis_new/plateau_model.py",
+      "export_function": "analysis_new.appendix.exporters.profiles",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "data/E0_weather_plateau_bootstrap.csv",
+      "sha256": "30cfb33b76731a5cadad5cac86e48d38b335c4509ff4c871349a14afbdde2041",
+      "bytes": 3304,
+      "requirement_id": "D02",
+      "claim_id": "CL_D02",
+      "source_paths": [
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_profile.csv",
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_bootstrap.csv",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_profile.csv",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_bootstrap.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_profile.csv": "3547170e114283ce44efea242a8d7220fae02bd62b2d16c6109c1af6bd43ef3c",
+        "results/new/20260909183317/results/model_selection/E0_all_plateau_bootstrap.csv": "9f117c89925071619d0e5ec257095b13b9feb5601195cc1ef12a5bd4e8e68a86",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_profile.csv": "b2f44fe02e3d584231a2673236e52ee8ed2886f2502349a21588e2521c7d2c18",
+        "results/new/20260909183317/results/model_selection/E0_weather_plateau_bootstrap.csv": "30cfb33b76731a5cadad5cac86e48d38b335c4509ff4c871349a14afbdde2041"
+      },
+      "producer": "analysis_new/plateau_model.py",
+      "export_function": "analysis_new.appendix.exporters.profiles",
+      "configuration": {},
+      "status": "已生成"
+    }
+  ],
+  "managed_files": [
+    "README.md",
+    "data/E0_all_plateau_bootstrap.csv",
+    "data/E0_all_plateau_profile.csv",
+    "data/E0_weather_plateau_bootstrap.csv",
+    "data/E0_weather_plateau_profile.csv",
+    "figures/D_PLATEAU_PROFILE_BOOTSTRAP.png",
+    "logs/execution.log",
+    "logs/validation.json",
+    "manifest.json",
+    "tables/D_KNOT_SUMMARY.csv",
+    "tables/D_KNOT_SUMMARY.md",
+    "tables/D_NESTED_FOLD_KNOTS.csv",
+    "tables/D_NESTED_FOLD_KNOTS.md"
+  ],
+  "preserved_unmanaged_files": [],
+  "removed_obsolete_managed_files": []
+}

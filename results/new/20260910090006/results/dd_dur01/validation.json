@@ -1,0 +1,984 @@
+{
+  "checked_at": "2026-09-10T09:04:06.624410+01:00",
+  "checks": {
+    "target_matrix_144": true,
+    "oof_keys_unique": true,
+    "preserved_labels": true,
+    "preserved_keys": true,
+    "fixed_folds": true,
+    "one_fold_per_lad": true,
+    "train_threshold_full": true,
+    "features_full": true,
+    "train_threshold_fold_0": true,
+    "features_fold_0": true,
+    "train_threshold_fold_1": true,
+    "features_fold_1": true,
+    "train_threshold_fold_2": true,
+    "features_fold_2": true,
+    "train_threshold_fold_3": true,
+    "features_fold_3": true,
+    "train_threshold_fold_4": true,
+    "features_fold_4": true,
+    "train_rate_any_gt0_0": true,
+    "train_rate_any_gt0_1": true,
+    "train_rate_any_gt0_2": true,
+    "train_rate_any_gt0_3": true,
+    "train_rate_any_gt0_4": true,
+    "BS_any_gt0_M0": true,
+    "prediction_any_gt0_M0_0": true,
+    "prediction_any_gt0_M0_1": true,
+    "prediction_any_gt0_M0_2": true,
+    "prediction_any_gt0_M0_3": true,
+    "prediction_any_gt0_M0_4": true,
+    "BS_any_gt0_M1": true,
+    "prediction_any_gt0_M1_0": true,
+    "prediction_any_gt0_M1_1": true,
+    "prediction_any_gt0_M1_2": true,
+    "prediction_any_gt0_M1_3": true,
+    "prediction_any_gt0_M1_4": true,
+    "BS_any_gt0_M2": true,
+    "prediction_any_gt0_M2_0": true,
+    "prediction_any_gt0_M2_1": true,
+    "prediction_any_gt0_M2_2": true,
+    "prediction_any_gt0_M2_3": true,
+    "prediction_any_gt0_M2_4": true,
+    "train_rate_any_gt5_0": true,
+    "train_rate_any_gt5_1": true,
+    "train_rate_any_gt5_2": true,
+    "train_rate_any_gt5_3": true,
+    "train_rate_any_gt5_4": true,
+    "BS_any_gt5_M0": true,
+    "prediction_any_gt5_M0_0": true,
+    "prediction_any_gt5_M0_1": true,
+    "prediction_any_gt5_M0_2": true,
+    "prediction_any_gt5_M0_3": true,
+    "prediction_any_gt5_M0_4": true,
+    "BS_any_gt5_M1": true,
+    "prediction_any_gt5_M1_0": true,
+    "prediction_any_gt5_M1_1": true,
+    "prediction_any_gt5_M1_2": true,
+    "prediction_any_gt5_M1_3": true,
+    "prediction_any_gt5_M1_4": true,
+    "BS_any_gt5_M2": true,
+    "prediction_any_gt5_M2_0": true,
+    "prediction_any_gt5_M2_1": true,
+    "prediction_any_gt5_M2_2": true,
+    "prediction_any_gt5_M2_3": true,
+    "prediction_any_gt5_M2_4": true,
+    "train_rate_any_gt100_0": true,
+    "train_rate_any_gt100_1": true,
+    "train_rate_any_gt100_2": true,
+    "train_rate_any_gt100_3": true,
+    "train_rate_any_gt100_4": true,
+    "BS_any_gt100_M0": true,
+    "prediction_any_gt100_M0_0": true,
+    "prediction_any_gt100_M0_1": true,
+    "prediction_any_gt100_M0_2": true,
+    "prediction_any_gt100_M0_3": true,
+    "prediction_any_gt100_M0_4": true,
+    "BS_any_gt100_M1": true,
+    "prediction_any_gt100_M1_0": true,
+    "prediction_any_gt100_M1_1": true,
+    "prediction_any_gt100_M1_2": true,
+    "prediction_any_gt100_M1_3": true,
+    "prediction_any_gt100_M1_4": true,
+    "BS_any_gt100_M2": true,
+    "prediction_any_gt100_M2_0": true,
+    "prediction_any_gt100_M2_1": true,
+    "prediction_any_gt100_M2_2": true,
+    "prediction_any_gt100_M2_3": true,
+    "prediction_any_gt100_M2_4": true,
+    "train_rate_any_gt1000_0": true,
+    "train_rate_any_gt1000_1": true,
+    "train_rate_any_gt1000_2": true,
+    "train_rate_any_gt1000_3": true,
+    "train_rate_any_gt1000_4": true,
+    "BS_any_gt1000_M0": true,
+    "prediction_any_gt1000_M0_0": true,
+    "prediction_any_gt1000_M0_1": true,
+    "prediction_any_gt1000_M0_2": true,
+    "prediction_any_gt1000_M0_3": true,
+    "prediction_any_gt1000_M0_4": true,
+    "BS_any_gt1000_M1": true,
+    "prediction_any_gt1000_M1_0": true,
+    "prediction_any_gt1000_M1_1": true,
+    "prediction_any_gt1000_M1_2": true,
+    "prediction_any_gt1000_M1_3": true,
+    "prediction_any_gt1000_M1_4": true,
+    "BS_any_gt1000_M2": true,
+    "prediction_any_gt1000_M2_0": true,
+    "prediction_any_gt1000_M2_1": true,
+    "prediction_any_gt1000_M2_2": true,
+    "prediction_any_gt1000_M2_3": true,
+    "prediction_any_gt1000_M2_4": true,
+    "train_rate_wthr_gt0_0": true,
+    "train_rate_wthr_gt0_1": true,
+    "train_rate_wthr_gt0_2": true,
+    "train_rate_wthr_gt0_3": true,
+    "train_rate_wthr_gt0_4": true,
+    "BS_wthr_gt0_M0": true,
+    "prediction_wthr_gt0_M0_0": true,
+    "prediction_wthr_gt0_M0_1": true,
+    "prediction_wthr_gt0_M0_2": true,
+    "prediction_wthr_gt0_M0_3": true,
+    "prediction_wthr_gt0_M0_4": true,
+    "BS_wthr_gt0_M1": true,
+    "prediction_wthr_gt0_M1_0": true,
+    "prediction_wthr_gt0_M1_1": true,
+    "prediction_wthr_gt0_M1_2": true,
+    "prediction_wthr_gt0_M1_3": true,
+    "prediction_wthr_gt0_M1_4": true,
+    "BS_wthr_gt0_M2": true,
+    "prediction_wthr_gt0_M2_0": true,
+    "prediction_wthr_gt0_M2_1": true,
+    "prediction_wthr_gt0_M2_2": true,
+    "prediction_wthr_gt0_M2_3": true,
+    "prediction_wthr_gt0_M2_4": true,
+    "train_rate_wthr_gt5_0": true,
+    "train_rate_wthr_gt5_1": true,
+    "train_rate_wthr_gt5_2": true,
+    "train_rate_wthr_gt5_3": true,
+    "train_rate_wthr_gt5_4": true,
+    "BS_wthr_gt5_M0": true,
+    "prediction_wthr_gt5_M0_0": true,
+    "prediction_wthr_gt5_M0_1": true,
+    "prediction_wthr_gt5_M0_2": true,
+    "prediction_wthr_gt5_M0_3": true,
+    "prediction_wthr_gt5_M0_4": true,
+    "BS_wthr_gt5_M1": true,
+    "prediction_wthr_gt5_M1_0": true,
+    "prediction_wthr_gt5_M1_1": true,
+    "prediction_wthr_gt5_M1_2": true,
+    "prediction_wthr_gt5_M1_3": true,
+    "prediction_wthr_gt5_M1_4": true,
+    "BS_wthr_gt5_M2": true,
+    "prediction_wthr_gt5_M2_0": true,
+    "prediction_wthr_gt5_M2_1": true,
+    "prediction_wthr_gt5_M2_2": true,
+    "prediction_wthr_gt5_M2_3": true,
+    "prediction_wthr_gt5_M2_4": true,
+    "train_rate_wthr_gt100_0": true,
+    "train_rate_wthr_gt100_1": true,
+    "train_rate_wthr_gt100_2": true,
+    "train_rate_wthr_gt100_3": true,
+    "train_rate_wthr_gt100_4": true,
+    "BS_wthr_gt100_M0": true,
+    "prediction_wthr_gt100_M0_0": true,
+    "prediction_wthr_gt100_M0_1": true,
+    "prediction_wthr_gt100_M0_2": true,
+    "prediction_wthr_gt100_M0_3": true,
+    "prediction_wthr_gt100_M0_4": true,
+    "BS_wthr_gt100_M1": true,
+    "prediction_wthr_gt100_M1_0": true,
+    "prediction_wthr_gt100_M1_1": true,
+    "prediction_wthr_gt100_M1_2": true,
+    "prediction_wthr_gt100_M1_3": true,
+    "prediction_wthr_gt100_M1_4": true,
+    "BS_wthr_gt100_M2": true,
+    "prediction_wthr_gt100_M2_0": true,
+    "prediction_wthr_gt100_M2_1": true,
+    "prediction_wthr_gt100_M2_2": true,
+    "prediction_wthr_gt100_M2_3": true,
+    "prediction_wthr_gt100_M2_4": true,
+    "train_rate_wthr_gt1000_0": true,
+    "train_rate_wthr_gt1000_1": true,
+    "train_rate_wthr_gt1000_2": true,
+    "train_rate_wthr_gt1000_3": true,
+    "train_rate_wthr_gt1000_4": true,
+    "BS_wthr_gt1000_M0": true,
+    "prediction_wthr_gt1000_M0_0": true,
+    "prediction_wthr_gt1000_M0_1": true,
+    "prediction_wthr_gt1000_M0_2": true,
+    "prediction_wthr_gt1000_M0_3": true,
+    "prediction_wthr_gt1000_M0_4": true,
+    "BS_wthr_gt1000_M1": true,
+    "prediction_wthr_gt1000_M1_0": true,
+    "prediction_wthr_gt1000_M1_1": true,
+    "prediction_wthr_gt1000_M1_2": true,
+    "prediction_wthr_gt1000_M1_3": true,
+    "prediction_wthr_gt1000_M1_4": true,
+    "BS_wthr_gt1000_M2": true,
+    "prediction_wthr_gt1000_M2_0": true,
+    "prediction_wthr_gt1000_M2_1": true,
+    "prediction_wthr_gt1000_M2_2": true,
+    "prediction_wthr_gt1000_M2_3": true,
+    "prediction_wthr_gt1000_M2_4": true,
+    "calibration_counts": true,
+    "calibration_values": true,
+    "all_valid_fits_pass_legal_points": true
+  },
+  "all_checks_passed": true,
+  "valid_fits": 144,
+  "invalid_fits": 0,
+  "weak_identification": 0,
+  "selection_checks": [
+    {
+      "candidate": "M1",
+      "target": "any_gt0",
+      "scope": "full",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt0",
+      "scope": "fold_0",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt0",
+      "scope": "fold_1",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt0",
+      "scope": "fold_2",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt0",
+      "scope": "fold_3",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt0",
+      "scope": "fold_4",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt5",
+      "scope": "full",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt5",
+      "scope": "fold_0",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt5",
+      "scope": "fold_1",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt5",
+      "scope": "fold_2",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt5",
+      "scope": "fold_3",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt5",
+      "scope": "fold_4",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt100",
+      "scope": "full",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt100",
+      "scope": "fold_0",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt100",
+      "scope": "fold_1",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt100",
+      "scope": "fold_2",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt100",
+      "scope": "fold_3",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt100",
+      "scope": "fold_4",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt1000",
+      "scope": "full",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt1000",
+      "scope": "fold_0",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt1000",
+      "scope": "fold_1",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt1000",
+      "scope": "fold_2",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt1000",
+      "scope": "fold_3",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "any_gt1000",
+      "scope": "fold_4",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt0",
+      "scope": "full",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt0",
+      "scope": "fold_0",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt0",
+      "scope": "fold_1",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt0",
+      "scope": "fold_2",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt0",
+      "scope": "fold_3",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt0",
+      "scope": "fold_4",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt5",
+      "scope": "full",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt5",
+      "scope": "fold_0",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt5",
+      "scope": "fold_1",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt5",
+      "scope": "fold_2",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt5",
+      "scope": "fold_3",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt5",
+      "scope": "fold_4",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt100",
+      "scope": "full",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt100",
+      "scope": "fold_0",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt100",
+      "scope": "fold_1",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt100",
+      "scope": "fold_2",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt100",
+      "scope": "fold_3",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt100",
+      "scope": "fold_4",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt1000",
+      "scope": "full",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt1000",
+      "scope": "fold_0",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt1000",
+      "scope": "fold_1",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt1000",
+      "scope": "fold_2",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt1000",
+      "scope": "fold_3",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M1",
+      "target": "wthr_gt1000",
+      "scope": "fold_4",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt0",
+      "scope": "full",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt0",
+      "scope": "fold_0",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt0",
+      "scope": "fold_1",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt0",
+      "scope": "fold_2",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt0",
+      "scope": "fold_3",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt0",
+      "scope": "fold_4",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt5",
+      "scope": "full",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt5",
+      "scope": "fold_0",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt5",
+      "scope": "fold_1",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt5",
+      "scope": "fold_2",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt5",
+      "scope": "fold_3",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt5",
+      "scope": "fold_4",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt100",
+      "scope": "full",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt100",
+      "scope": "fold_0",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt100",
+      "scope": "fold_1",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt100",
+      "scope": "fold_2",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt100",
+      "scope": "fold_3",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt100",
+      "scope": "fold_4",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt1000",
+      "scope": "full",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt1000",
+      "scope": "fold_0",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt1000",
+      "scope": "fold_1",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt1000",
+      "scope": "fold_2",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt1000",
+      "scope": "fold_3",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "any_gt1000",
+      "scope": "fold_4",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt0",
+      "scope": "full",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt0",
+      "scope": "fold_0",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt0",
+      "scope": "fold_1",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt0",
+      "scope": "fold_2",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt0",
+      "scope": "fold_3",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt0",
+      "scope": "fold_4",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt5",
+      "scope": "full",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt5",
+      "scope": "fold_0",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt5",
+      "scope": "fold_1",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt5",
+      "scope": "fold_2",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt5",
+      "scope": "fold_3",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt5",
+      "scope": "fold_4",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt100",
+      "scope": "full",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt100",
+      "scope": "fold_0",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt100",
+      "scope": "fold_1",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt100",
+      "scope": "fold_2",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt100",
+      "scope": "fold_3",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt100",
+      "scope": "fold_4",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt1000",
+      "scope": "full",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt1000",
+      "scope": "fold_0",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt1000",
+      "scope": "fold_1",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt1000",
+      "scope": "fold_2",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt1000",
+      "scope": "fold_3",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    },
+    {
+      "candidate": "M2",
+      "target": "wthr_gt1000",
+      "scope": "fold_4",
+      "valid": true,
+      "no_better_evaluated_point": true,
+      "no_better_m0": true
+    }
+  ]
+}

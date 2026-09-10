@@ -1,0 +1,31 @@
+combination,model_id,prediction_type,action,new_fits,source
+E0_all,final,in_sample,DERIVE_SAVED_COEFFICIENTS,0,results/new/20260909183317/results/final_models/E0_final_twoway.csv
+E0_all,final,LAD_OOF,REFIT_ORIGINAL_FIXED_FOLDS,5,final_models.main or weather_only_regression.cv_lad; same seed and fixed knots
+E0_all,paper,in_sample,DERIVE_SAVED_COEFFICIENTS,0,results/Appendix/C/data/models/E0_all/H05/coefficients.csv
+E0_all,paper,LAD_OOF,REFIT_ORIGINAL_FIXED_FOLDS,5,final_models.main or weather_only_regression.cv_lad; same seed and fixed knots
+E0_all,control,control_residual,REFIT_FIXED_OLS,1,
+E0_all,cubic,in_sample,DERIVE_SAVED_COEFFICIENTS,0,results/Appendix/C/data/models/E0_all/H06/coefficients.csv
+E0_all,log,in_sample,DERIVE_SAVED_COEFFICIENTS,0,results/Appendix/C/data/models/E0_all/H07/coefficients.csv
+E0_all,legacy_hinge,in_sample,REFIT_FIXED_OLS,1,
+E0_weather,final,in_sample,DERIVE_SAVED_COEFFICIENTS,0,results/new/20260909183317/results/weather_only/E0_weather_final_twoway.csv
+E0_weather,final,LAD_OOF,REFIT_ORIGINAL_FIXED_FOLDS,5,final_models.main or weather_only_regression.cv_lad; same seed and fixed knots
+E0_weather,paper,in_sample,DERIVE_SAVED_COEFFICIENTS,0,results/new/20260909183317/results/weather_only/E0_weather_paper_twoway.csv
+E0_weather,paper,LAD_OOF,REFIT_ORIGINAL_FIXED_FOLDS,5,final_models.main or weather_only_regression.cv_lad; same seed and fixed knots
+E0_weather,control,control_residual,REFIT_FIXED_OLS,1,
+E0_weather,hinge,in_sample,DERIVE_SAVED_COEFFICIENTS,0,results/new/20260909183317/results/weather_only/E0_weather_hinge_twoway.csv
+E0_weather,hinge,LAD_OOF,REFIT_ORIGINAL_FIXED_FOLDS,5,final_models.main or weather_only_regression.cv_lad; same seed and fixed knots
+R0c_all,final,in_sample,DERIVE_SAVED_COEFFICIENTS,0,results/new/20260909183317/results/final_models/R0c_final_twoway.csv
+R0c_all,final,LAD_OOF,REFIT_ORIGINAL_FIXED_FOLDS,5,final_models.main or weather_only_regression.cv_lad; same seed and fixed knots
+R0c_all,paper,in_sample,REFIT_FIXED_OLS,1,
+R0c_all,paper,LAD_OOF,REFIT_ORIGINAL_FIXED_FOLDS,5,final_models.main or weather_only_regression.cv_lad; same seed and fixed knots
+R0c_all,control,control_residual,REFIT_FIXED_OLS,1,
+R0c_all,cubic,in_sample,DERIVE_SAVED_COEFFICIENTS,0,results/Appendix/C/data/models/R0c_all/H06/coefficients.csv
+R0c_all,log,in_sample,DERIVE_SAVED_COEFFICIENTS,0,results/Appendix/C/data/models/R0c_all/H07/coefficients.csv
+R0c_all,legacy_hinge,in_sample,REFIT_FIXED_OLS,1,
+R0c_weather,final,in_sample,DERIVE_SAVED_COEFFICIENTS,0,results/new/20260909183317/results/weather_only/R0c_weather_final_twoway.csv
+R0c_weather,final,LAD_OOF,REFIT_ORIGINAL_FIXED_FOLDS,5,final_models.main or weather_only_regression.cv_lad; same seed and fixed knots
+R0c_weather,paper,in_sample,DERIVE_SAVED_COEFFICIENTS,0,results/new/20260909183317/results/weather_only/R0c_weather_paper_twoway.csv
+R0c_weather,paper,LAD_OOF,REFIT_ORIGINAL_FIXED_FOLDS,5,final_models.main or weather_only_regression.cv_lad; same seed and fixed knots
+R0c_weather,control,control_residual,REFIT_FIXED_OLS,1,
+R0c_weather,hinge,in_sample,DERIVE_SAVED_COEFFICIENTS,0,results/new/20260909183317/results/weather_only/R0c_weather_hinge_twoway.csv
+R0c_weather,hinge,LAD_OOF,REFIT_ORIGINAL_FIXED_FOLDS,5,final_models.main or weather_only_regression.cv_lad; same seed and fixed knots

@@ -1,0 +1,1958 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "sample_unique_and_fold_consistent",
+      "combination": "E0_all",
+      "passed": true,
+      "n": 60437
+    },
+    {
+      "check": "sample_unique_and_fold_consistent",
+      "combination": "E0_weather",
+      "passed": true,
+      "n": 9857
+    },
+    {
+      "check": "sample_unique_and_fold_consistent",
+      "combination": "R0c_all",
+      "passed": true,
+      "n": 51173
+    },
+    {
+      "check": "sample_unique_and_fold_consistent",
+      "combination": "R0c_weather",
+      "passed": true,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "H01",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.006680202927935,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "H02",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.994508113976132,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "H03",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.994232257378596,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "H04",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.9872625601397944,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "H05",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.984308374951104,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "H06",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.9828215069224402,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "H07",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.9878783300608962,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "H08",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.983144189474818,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "H09",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.9839678331372532,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "H10",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.9826580265710274,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "H11",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.9637933103897474,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "H12",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.9908937841744807,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "F01",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.9828817420388816,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "F02",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.9813843530161341,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "F02",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.9856983185077843,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "F03",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.9866204897957187,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "F03",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.9910713770060258,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "F04",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.982396969791788,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "F04",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.986661188002425,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "F05",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.98166976627074,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "F05",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.9858436812057567,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "F06",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.9813114748011003,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "F06",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.98550706416819,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_all",
+      "model_id": "F08",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.9806133922907527,
+      "n": 60437
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H01",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.187440071014054,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H01",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.1895929236056633,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H01",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 2.1933036302774296,
+      "n": 7750
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H01",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 2.193612290876687,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H02",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.1832208331902585,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H02",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.1860411395239803,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H02",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 2.1938892868894913,
+      "n": 7750
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H02",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 2.2047120840647536,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H03",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.18157098459654,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H03",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.18463276238856,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H03",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 2.193978431152873,
+      "n": 7750
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H03",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 2.2012797284522807,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H04",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.1786164727278465,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H04",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.1881251914307467,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H04",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 2.193367416905679,
+      "n": 7750
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H04",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 2.2005446096824444,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H05",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.1669585585689832,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H05",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 2.18892921634952,
+      "n": 7750
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H05",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 2.214786120563034,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H06",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.160135848376757,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H06",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.171365824861959,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H06",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 2.1754554468152874,
+      "n": 7750
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H06",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 2.1952208127234423,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H07",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.1685111290460615,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H07",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.1799100526618918,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H07",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 2.178052919376078,
+      "n": 7750
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H07",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 2.1989918852029158,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H08",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.1629313337800418,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H08",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.174091043314168,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H08",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 2.1756522043330837,
+      "n": 7750
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H08",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 2.19783347165656,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H09",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.162094628605773,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H09",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.174042213534458,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H09",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 2.17746904265977,
+      "n": 7750
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H09",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 2.198370629506992,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H10",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.1627224312057787,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H10",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.17470642865654,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H10",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 2.1896858667575816,
+      "n": 7750
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H10",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 2.2062804715294226,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H11",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.1414467437554356,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H11",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.889994324783585,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H11",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 2.193250785926818,
+      "n": 7750
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H11",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 2.213788227970104,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H12",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.169966701268489,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H12",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.174844861939424,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H12",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 2.18967688872189,
+      "n": 7750
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H12",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 2.216018651722458,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H13",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.1742993432399964,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "H14",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.171718085677299,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "F01",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.163034913894658,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "F02",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.1559346798838046,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "F02",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.1671684323917595,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "F03",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.165037264254524,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "F03",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.1764542291402647,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "F04",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.1575586393362918,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "F04",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.1695556815485717,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "F05",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.1589114055053344,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "F05",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.170040771150901,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "F06",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.1589465328176294,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "F06",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 2.1702720566215543,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "E0_weather",
+      "model_id": "F08",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 2.1558260632581034,
+      "n": 9857
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H01",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1742804125331385,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H01",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.174877837978436,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H01",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.1889905681772888,
+      "n": 41177
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H01",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.1960942909268122,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H02",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1652354954046265,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H02",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.1658635292874198,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H02",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.1771194153255764,
+      "n": 41177
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H02",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.1841332565678842,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H03",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1649581768159722,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H03",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.165657773701552,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H03",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.1778011311307313,
+      "n": 41177
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H03",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.1836261424114485,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H04",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1565933549791252,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H04",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.1597471421607148,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H04",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.1694906161234861,
+      "n": 41177
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H04",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.1759734636324135,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H05",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.156673366030498,
+      "n": 41177
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H06",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1470114394119997,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H06",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.1506572683661096,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H06",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.1566256124256764,
+      "n": 41177
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H06",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.1729701033291584,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H07",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1516186997375335,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H07",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.1551417082949205,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H07",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.162946439795158,
+      "n": 41177
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H07",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.1878953353165493,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H08",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1491289621359289,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H08",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.152618076335176,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H08",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.1617255954918315,
+      "n": 41177
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H08",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.1833862424674322,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H09",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1480922634456554,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H09",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.1516540620553541,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H09",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.1627539560290105,
+      "n": 41177
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H09",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.1796931474226136,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H10",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1467503802258618,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H10",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.1503369240679924,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H10",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.1568632479121694,
+      "n": 41177
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H10",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.1755649132788062,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H11",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1338962134688415,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H11",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.1938156558504707,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H11",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.147989367020191,
+      "n": 41177
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H11",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.167717084272503,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H12",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1560065720206258,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H12",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.1570908453842441,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H12",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.1659587823517483,
+      "n": 41177
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H12",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.1823779262777576,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H13",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1467570937576232,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H13",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.1503512768607238,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H14",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1465972161794447,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "H14",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.1502997471828955,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "F01",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.146772879609136,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "F02",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1467219036952772,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "F02",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.1503422643333616,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "F03",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1543813093550361,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "F03",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.1578086923629891,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "F04",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1477296208365193,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "F04",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.151292357461194,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "F05",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1486766412742084,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "F05",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.1521141658972451,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "F06",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.1464634474736328,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "F06",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.1500286686603933,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "F07",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.146330648758912,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "F07",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.1500106537651427,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "F08",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.146433062671381,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_all",
+      "model_id": "F08",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.1500115839726939,
+      "n": 51173
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H01",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.325576156704527,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H01",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.3299990830247075,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H01",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.4016837364888852,
+      "n": 7277
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H01",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.4662631784259237,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H02",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.3176897328998176,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H02",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.3222087141837324,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H02",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.3946970745467178,
+      "n": 7277
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H02",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.4307180407675415,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H03",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.316505625151755,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H03",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.3209519580944713,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H03",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.408499776010251,
+      "n": 7277
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H03",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.426634968721177,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H04",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.3136389579316692,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H04",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.3209384677367344,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H04",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.4060127278738277,
+      "n": 7277
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H04",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.427891719292847,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H05",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.241071946551417,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H05",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.283746659202809,
+      "n": 7277
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H05",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.459336494351976,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H06",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.2390419252533338,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H06",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.248872612728697,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H06",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.303895922317556,
+      "n": 7277
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H06",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.4692982588430055,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H07",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.2497762306101856,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H07",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.2603830478507434,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H07",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.2970597566089621,
+      "n": 7277
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H07",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.5236864532950147,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H08",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.239920243285666,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H08",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.2496816753269224,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H08",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.2943952779031647,
+      "n": 7277
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H08",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.4870888542264937,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H09",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.2420352131848107,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H09",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.2519664031495057,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H09",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.2979288998218064,
+      "n": 7277
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H09",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.4885729158308978,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H10",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.237563382366006,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H10",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.2480105914381658,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H10",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.2755483010802349,
+      "n": 7277
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H10",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.4516180913540933,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H11",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.222366031489151,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H11",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.6557456900491179,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H11",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.282750588167937,
+      "n": 7277
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H11",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.467778240649782,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H12",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.2432208501317061,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H12",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.2499980227545118,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H12",
+      "prediction_type": "random_OOF",
+      "passed": true,
+      "rmse": 1.2862999862179985,
+      "n": 7277
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H12",
+      "prediction_type": "year_holdout",
+      "passed": true,
+      "rmse": 1.4578983347780752,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H13",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.250846197658552,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "H14",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.2499652652401476,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "F01",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.2377091588923166,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "F01",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.2476084810292576,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "F02",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.2353662777646883,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "F02",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.2456389069675513,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "F03",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.2490911445735349,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "F03",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.2591377863218876,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "F04",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.2381152958481056,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "F04",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.2484170054577681,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "F05",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.236055193587856,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "F05",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.2458950866764695,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "F06",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.2360940447885886,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "F06",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.246755510877912,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "F07",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.2357405070268725,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "F07",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.2473586169279702,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "F08",
+      "prediction_type": "in_sample",
+      "passed": true,
+      "rmse": 1.2358140391896273,
+      "n": 9254
+    },
+    {
+      "check": "saved_predictions_ids_labels_folds_pooled_RMSE",
+      "combination": "R0c_weather",
+      "model_id": "F08",
+      "prediction_type": "LAD_OOF",
+      "passed": true,
+      "rmse": 1.2469240975988847,
+      "n": 9254
+    }
+  ],
+  "scope": "new or parameter-derived predictions independently re-read and recomputed; source-only CV scores checked for compatibility, not re-audited",
+  "preprocessing": "cm.matrices receives training rows plus test covariates; knots solver receives tr.y only; saved training IDs/statistics/coefficients",
+  "source_only_prediction_limitation": "original compatible CV provides pooled score, not per-row OOF; not refitted solely to duplicate an already compatible score"
+}

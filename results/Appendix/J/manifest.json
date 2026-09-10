@@ -1,0 +1,2444 @@
+{
+  "owner": "main_appendix.py",
+  "appendix": "J",
+  "last_attempt": "2026-09-10T16:52:01+01:00",
+  "status": "success",
+  "update_state": "本次仅J03更新/其他J结果保留",
+  "requirements": {
+    "J01": "已生成",
+    "J02": "已生成",
+    "J03": "产物已补齐/待研究负责人反馈分析",
+    "J04": "已生成",
+    "J05": "已生成",
+    "J06": "已生成",
+    "J07": "已生成",
+    "J08": "已生成",
+    "J09": "用户已关闭",
+    "J10": "用户已关闭",
+    "J11": "用户已关闭",
+    "J12": "用户已关闭"
+  },
+  "outputs": [
+    {
+      "path": "tables/J_PROXY_DEFINITIONS.csv",
+      "sha256": "598c2236274019ed84d4d309106e71cf460e3436eb92d87539b0fa61a0c3fe6a",
+      "bytes": 816,
+      "requirement_id": "J01",
+      "claim_id": "CL_J01",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "analysis_new/district_day_core.py",
+        "analysis_new/district_day_fragility.py"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "analysis_new/district_day_core.py": "837334b479bc5cc12433c1fd9af006abf19bba789340e509721605914c5e6121",
+        "analysis_new/district_day_fragility.py": "da695df1697e7cc1bce6d5846b9a306b79c263898175c23ae33d6a7b2fcf4f7b"
+      },
+      "producer": "district_day_core:BW_KM,KMIN; district_day_fragility.py标签构造",
+      "export_function": "analysis_new.appendix.exporters.panel",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_PROXY_DEFINITIONS.md",
+      "sha256": "f4d860d19d344fd9478d8e59d0bd4a0e456471ca49a82d50867901915f1b3d37",
+      "bytes": 1532,
+      "requirement_id": "J01",
+      "claim_id": "CL_J01",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "analysis_new/district_day_core.py",
+        "analysis_new/district_day_fragility.py"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "analysis_new/district_day_core.py": "837334b479bc5cc12433c1fd9af006abf19bba789340e509721605914c5e6121",
+        "analysis_new/district_day_fragility.py": "da695df1697e7cc1bce6d5846b9a306b79c263898175c23ae33d6a7b2fcf4f7b"
+      },
+      "producer": "district_day_core:BW_KM,KMIN; district_day_fragility.py标签构造",
+      "export_function": "analysis_new.appendix.exporters.panel",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_PROXY_LABELS.csv",
+      "sha256": "dac3638f6c741ba8f6d050e37c215952b37d5cb0b53f026e2051ad088fe68420",
+      "bytes": 641,
+      "requirement_id": "J01",
+      "claim_id": "CL_J01",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "analysis_new/district_day_core.py",
+        "analysis_new/district_day_fragility.py"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "analysis_new/district_day_core.py": "837334b479bc5cc12433c1fd9af006abf19bba789340e509721605914c5e6121",
+        "analysis_new/district_day_fragility.py": "da695df1697e7cc1bce6d5846b9a306b79c263898175c23ae33d6a7b2fcf4f7b"
+      },
+      "producer": "district_day_core:BW_KM,KMIN; district_day_fragility.py标签构造",
+      "export_function": "analysis_new.appendix.exporters.panel",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_PROXY_LABELS.md",
+      "sha256": "01158e949d1ca8554a9cf354c51b315f52f7796c668e90558268415b139bae83",
+      "bytes": 1429,
+      "requirement_id": "J01",
+      "claim_id": "CL_J01",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "analysis_new/district_day_core.py",
+        "analysis_new/district_day_fragility.py"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "analysis_new/district_day_core.py": "837334b479bc5cc12433c1fd9af006abf19bba789340e509721605914c5e6121",
+        "analysis_new/district_day_fragility.py": "da695df1697e7cc1bce6d5846b9a306b79c263898175c23ae33d6a7b2fcf4f7b"
+      },
+      "producer": "district_day_core:BW_KM,KMIN; district_day_fragility.py标签构造",
+      "export_function": "analysis_new.appendix.exporters.panel",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J02_GUST_COMPARISON.csv",
+      "sha256": "d6ecc9785c1c20ee5b19291d2c52f3a667dd8f8f2299427a06a166291ec395ef",
+      "bytes": 347,
+      "requirement_id": "J02",
+      "claim_id": "CL_J02",
+      "source_paths": [
+        "results/new/20260909205214/results/p03_p04/gust_comparison.csv",
+        "results/new/20260909205214/results/p03_p04/grid_cells.csv",
+        "results/new/20260909205214/results/p03_p04/centroids.csv",
+        "results/new/20260909205214/results/p03_p04/experiment.json",
+        "results/new/20260909205214/results/p03_p04/quality.json"
+      ],
+      "source_sha256": {
+        "results/new/20260909205214/results/p03_p04/gust_comparison.csv": "fbbea310a1ada46defbc962dbcc5c6942118f81fc628e7e2dc365bb24ffea3b5",
+        "results/new/20260909205214/results/p03_p04/grid_cells.csv": "422f0de5e28990207b2bc92a55cf4304f743e9dc4528a671d01db09622e0ef52",
+        "results/new/20260909205214/results/p03_p04/centroids.csv": "9c9d5cfaabbb3619a0d81aecc47b5a3a3e31faaf6466360550a47ddc10b736ef",
+        "results/new/20260909205214/results/p03_p04/experiment.json": "11dc9c65413fec62700dafeb9e28941d37cd371c75cf75666325229e731612b7",
+        "results/new/20260909205214/results/p03_p04/quality.json": "9d829551e4d26a469fa9e63787c43c4024d11ba1b934e55974dc017ac0835b33"
+      },
+      "producer": "analysis_new/grid_weather.py; p03_p04_grid_weather.py",
+      "export_function": "analysis_new.appendix.exporters.grid",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J02_GUST_COMPARISON.md",
+      "sha256": "0710fd97eb923e87b57d492ffb62672110ca0059cb09364fa74594de04f99e07",
+      "bytes": 988,
+      "requirement_id": "J02",
+      "claim_id": "CL_J02",
+      "source_paths": [
+        "results/new/20260909205214/results/p03_p04/gust_comparison.csv",
+        "results/new/20260909205214/results/p03_p04/grid_cells.csv",
+        "results/new/20260909205214/results/p03_p04/centroids.csv",
+        "results/new/20260909205214/results/p03_p04/experiment.json",
+        "results/new/20260909205214/results/p03_p04/quality.json"
+      ],
+      "source_sha256": {
+        "results/new/20260909205214/results/p03_p04/gust_comparison.csv": "fbbea310a1ada46defbc962dbcc5c6942118f81fc628e7e2dc365bb24ffea3b5",
+        "results/new/20260909205214/results/p03_p04/grid_cells.csv": "422f0de5e28990207b2bc92a55cf4304f743e9dc4528a671d01db09622e0ef52",
+        "results/new/20260909205214/results/p03_p04/centroids.csv": "9c9d5cfaabbb3619a0d81aecc47b5a3a3e31faaf6466360550a47ddc10b736ef",
+        "results/new/20260909205214/results/p03_p04/experiment.json": "11dc9c65413fec62700dafeb9e28941d37cd371c75cf75666325229e731612b7",
+        "results/new/20260909205214/results/p03_p04/quality.json": "9d829551e4d26a469fa9e63787c43c4024d11ba1b934e55974dc017ac0835b33"
+      },
+      "producer": "analysis_new/grid_weather.py; p03_p04_grid_weather.py",
+      "export_function": "analysis_new.appendix.exporters.grid",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J02_GRID_CELLS.csv",
+      "sha256": "540868dd021200d53ffd4d69ad7b7ca48f9bbe471421cb9f3d1e4cf64c263357",
+      "bytes": 8825,
+      "requirement_id": "J02",
+      "claim_id": "CL_J02",
+      "source_paths": [
+        "results/new/20260909205214/results/p03_p04/gust_comparison.csv",
+        "results/new/20260909205214/results/p03_p04/grid_cells.csv",
+        "results/new/20260909205214/results/p03_p04/centroids.csv",
+        "results/new/20260909205214/results/p03_p04/experiment.json",
+        "results/new/20260909205214/results/p03_p04/quality.json"
+      ],
+      "source_sha256": {
+        "results/new/20260909205214/results/p03_p04/gust_comparison.csv": "fbbea310a1ada46defbc962dbcc5c6942118f81fc628e7e2dc365bb24ffea3b5",
+        "results/new/20260909205214/results/p03_p04/grid_cells.csv": "422f0de5e28990207b2bc92a55cf4304f743e9dc4528a671d01db09622e0ef52",
+        "results/new/20260909205214/results/p03_p04/centroids.csv": "9c9d5cfaabbb3619a0d81aecc47b5a3a3e31faaf6466360550a47ddc10b736ef",
+        "results/new/20260909205214/results/p03_p04/experiment.json": "11dc9c65413fec62700dafeb9e28941d37cd371c75cf75666325229e731612b7",
+        "results/new/20260909205214/results/p03_p04/quality.json": "9d829551e4d26a469fa9e63787c43c4024d11ba1b934e55974dc017ac0835b33"
+      },
+      "producer": "analysis_new/grid_weather.py; p03_p04_grid_weather.py",
+      "export_function": "analysis_new.appendix.exporters.grid",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J02_GRID_CELLS.md",
+      "sha256": "172d608cec9fd5593126c6528fcab3f1e5ab43f54606a3ee43cd4a69345c8b76",
+      "bytes": 8725,
+      "requirement_id": "J02",
+      "claim_id": "CL_J02",
+      "source_paths": [
+        "results/new/20260909205214/results/p03_p04/gust_comparison.csv",
+        "results/new/20260909205214/results/p03_p04/grid_cells.csv",
+        "results/new/20260909205214/results/p03_p04/centroids.csv",
+        "results/new/20260909205214/results/p03_p04/experiment.json",
+        "results/new/20260909205214/results/p03_p04/quality.json"
+      ],
+      "source_sha256": {
+        "results/new/20260909205214/results/p03_p04/gust_comparison.csv": "fbbea310a1ada46defbc962dbcc5c6942118f81fc628e7e2dc365bb24ffea3b5",
+        "results/new/20260909205214/results/p03_p04/grid_cells.csv": "422f0de5e28990207b2bc92a55cf4304f743e9dc4528a671d01db09622e0ef52",
+        "results/new/20260909205214/results/p03_p04/centroids.csv": "9c9d5cfaabbb3619a0d81aecc47b5a3a3e31faaf6466360550a47ddc10b736ef",
+        "results/new/20260909205214/results/p03_p04/experiment.json": "11dc9c65413fec62700dafeb9e28941d37cd371c75cf75666325229e731612b7",
+        "results/new/20260909205214/results/p03_p04/quality.json": "9d829551e4d26a469fa9e63787c43c4024d11ba1b934e55974dc017ac0835b33"
+      },
+      "producer": "analysis_new/grid_weather.py; p03_p04_grid_weather.py",
+      "export_function": "analysis_new.appendix.exporters.grid",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J02_CENTROIDS.csv",
+      "sha256": "07a0444c62ed119a6487839f86dc4b1d0b911de090e63b7ee001a6e865ade363",
+      "bytes": 5619,
+      "requirement_id": "J02",
+      "claim_id": "CL_J02",
+      "source_paths": [
+        "results/new/20260909205214/results/p03_p04/gust_comparison.csv",
+        "results/new/20260909205214/results/p03_p04/grid_cells.csv",
+        "results/new/20260909205214/results/p03_p04/centroids.csv",
+        "results/new/20260909205214/results/p03_p04/experiment.json",
+        "results/new/20260909205214/results/p03_p04/quality.json"
+      ],
+      "source_sha256": {
+        "results/new/20260909205214/results/p03_p04/gust_comparison.csv": "fbbea310a1ada46defbc962dbcc5c6942118f81fc628e7e2dc365bb24ffea3b5",
+        "results/new/20260909205214/results/p03_p04/grid_cells.csv": "422f0de5e28990207b2bc92a55cf4304f743e9dc4528a671d01db09622e0ef52",
+        "results/new/20260909205214/results/p03_p04/centroids.csv": "9c9d5cfaabbb3619a0d81aecc47b5a3a3e31faaf6466360550a47ddc10b736ef",
+        "results/new/20260909205214/results/p03_p04/experiment.json": "11dc9c65413fec62700dafeb9e28941d37cd371c75cf75666325229e731612b7",
+        "results/new/20260909205214/results/p03_p04/quality.json": "9d829551e4d26a469fa9e63787c43c4024d11ba1b934e55974dc017ac0835b33"
+      },
+      "producer": "analysis_new/grid_weather.py; p03_p04_grid_weather.py",
+      "export_function": "analysis_new.appendix.exporters.grid",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J02_CENTROIDS.md",
+      "sha256": "9075573a998bafe9c9bede9007c2aad115c6e8464d16dfbf9fb0ac6b406e88e8",
+      "bytes": 5607,
+      "requirement_id": "J02",
+      "claim_id": "CL_J02",
+      "source_paths": [
+        "results/new/20260909205214/results/p03_p04/gust_comparison.csv",
+        "results/new/20260909205214/results/p03_p04/grid_cells.csv",
+        "results/new/20260909205214/results/p03_p04/centroids.csv",
+        "results/new/20260909205214/results/p03_p04/experiment.json",
+        "results/new/20260909205214/results/p03_p04/quality.json"
+      ],
+      "source_sha256": {
+        "results/new/20260909205214/results/p03_p04/gust_comparison.csv": "fbbea310a1ada46defbc962dbcc5c6942118f81fc628e7e2dc365bb24ffea3b5",
+        "results/new/20260909205214/results/p03_p04/grid_cells.csv": "422f0de5e28990207b2bc92a55cf4304f743e9dc4528a671d01db09622e0ef52",
+        "results/new/20260909205214/results/p03_p04/centroids.csv": "9c9d5cfaabbb3619a0d81aecc47b5a3a3e31faaf6466360550a47ddc10b736ef",
+        "results/new/20260909205214/results/p03_p04/experiment.json": "11dc9c65413fec62700dafeb9e28941d37cd371c75cf75666325229e731612b7",
+        "results/new/20260909205214/results/p03_p04/quality.json": "9d829551e4d26a469fa9e63787c43c4024d11ba1b934e55974dc017ac0835b33"
+      },
+      "producer": "analysis_new/grid_weather.py; p03_p04_grid_weather.py",
+      "export_function": "analysis_new.appendix.exporters.grid",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_INDEPENDENT_WEATHER_DEFINITIONS.csv",
+      "sha256": "493a06bc928a3d51f2150bed6466f8199c44b136df654b3dda9648197079239a",
+      "bytes": 587,
+      "requirement_id": "J02",
+      "claim_id": "CL_J02",
+      "source_paths": [
+        "results/new/20260909205214/results/p03_p04/gust_comparison.csv",
+        "results/new/20260909205214/results/p03_p04/grid_cells.csv",
+        "results/new/20260909205214/results/p03_p04/centroids.csv",
+        "results/new/20260909205214/results/p03_p04/experiment.json",
+        "results/new/20260909205214/results/p03_p04/quality.json"
+      ],
+      "source_sha256": {
+        "results/new/20260909205214/results/p03_p04/gust_comparison.csv": "fbbea310a1ada46defbc962dbcc5c6942118f81fc628e7e2dc365bb24ffea3b5",
+        "results/new/20260909205214/results/p03_p04/grid_cells.csv": "422f0de5e28990207b2bc92a55cf4304f743e9dc4528a671d01db09622e0ef52",
+        "results/new/20260909205214/results/p03_p04/centroids.csv": "9c9d5cfaabbb3619a0d81aecc47b5a3a3e31faaf6466360550a47ddc10b736ef",
+        "results/new/20260909205214/results/p03_p04/experiment.json": "11dc9c65413fec62700dafeb9e28941d37cd371c75cf75666325229e731612b7",
+        "results/new/20260909205214/results/p03_p04/quality.json": "9d829551e4d26a469fa9e63787c43c4024d11ba1b934e55974dc017ac0835b33"
+      },
+      "producer": "analysis_new/grid_weather.py; p03_p04_grid_weather.py",
+      "export_function": "analysis_new.appendix.exporters.grid",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_INDEPENDENT_WEATHER_DEFINITIONS.md",
+      "sha256": "42ae1628c523f8ad4e94d15cd07768976d8e0408344df52f9840ad5d1fa97904",
+      "bytes": 1336,
+      "requirement_id": "J02",
+      "claim_id": "CL_J02",
+      "source_paths": [
+        "results/new/20260909205214/results/p03_p04/gust_comparison.csv",
+        "results/new/20260909205214/results/p03_p04/grid_cells.csv",
+        "results/new/20260909205214/results/p03_p04/centroids.csv",
+        "results/new/20260909205214/results/p03_p04/experiment.json",
+        "results/new/20260909205214/results/p03_p04/quality.json"
+      ],
+      "source_sha256": {
+        "results/new/20260909205214/results/p03_p04/gust_comparison.csv": "fbbea310a1ada46defbc962dbcc5c6942118f81fc628e7e2dc365bb24ffea3b5",
+        "results/new/20260909205214/results/p03_p04/grid_cells.csv": "422f0de5e28990207b2bc92a55cf4304f743e9dc4528a671d01db09622e0ef52",
+        "results/new/20260909205214/results/p03_p04/centroids.csv": "9c9d5cfaabbb3619a0d81aecc47b5a3a3e31faaf6466360550a47ddc10b736ef",
+        "results/new/20260909205214/results/p03_p04/experiment.json": "11dc9c65413fec62700dafeb9e28941d37cd371c75cf75666325229e731612b7",
+        "results/new/20260909205214/results/p03_p04/quality.json": "9d829551e4d26a469fa9e63787c43c4024d11ba1b934e55974dc017ac0835b33"
+      },
+      "producer": "analysis_new/grid_weather.py; p03_p04_grid_weather.py",
+      "export_function": "analysis_new.appendix.exporters.grid",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J04_METRICS.csv",
+      "sha256": "e9ae7a513b272c24492ea5e3981f83c0367e6ea63e21459fca1439361152ee61",
+      "bytes": 9139,
+      "requirement_id": "J04",
+      "claim_id": "CL_J04",
+      "source_paths": [
+        "results/new/20260909231634/results/dd_agg01/metrics.csv",
+        "results/new/20260909231634/results/dd_agg01/paired_uncertainty.csv",
+        "results/new/20260909231634/results/dd_agg01/aggregation_summary.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909231634/results/dd_agg01/metrics.csv": "eb1ebc0a7baff80a947ff65e1bb4d2a5da101bd5f8bd3a1f3d16b559bd74ee16",
+        "results/new/20260909231634/results/dd_agg01/paired_uncertainty.csv": "61832f93e84720db36775d90a03f16229b06949c0ed9be4448ec1c0981196210",
+        "results/new/20260909231634/results/dd_agg01/aggregation_summary.csv": "a19723b8e274618eac3174c83551d768bf069f0be365b472bbce7500dd1be574"
+      },
+      "producer": "analysis_new/daily_aggregations.py; dd_agg01_evaluation.py",
+      "export_function": "analysis_new.appendix.exporters.csv",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J04_METRICS.md",
+      "sha256": "bc2ae2c22bfed646525c725b14ef0dcc591425f28305d6d0095aac533316f0e8",
+      "bytes": 8761,
+      "requirement_id": "J04",
+      "claim_id": "CL_J04",
+      "source_paths": [
+        "results/new/20260909231634/results/dd_agg01/metrics.csv",
+        "results/new/20260909231634/results/dd_agg01/paired_uncertainty.csv",
+        "results/new/20260909231634/results/dd_agg01/aggregation_summary.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909231634/results/dd_agg01/metrics.csv": "eb1ebc0a7baff80a947ff65e1bb4d2a5da101bd5f8bd3a1f3d16b559bd74ee16",
+        "results/new/20260909231634/results/dd_agg01/paired_uncertainty.csv": "61832f93e84720db36775d90a03f16229b06949c0ed9be4448ec1c0981196210",
+        "results/new/20260909231634/results/dd_agg01/aggregation_summary.csv": "a19723b8e274618eac3174c83551d768bf069f0be365b472bbce7500dd1be574"
+      },
+      "producer": "analysis_new/daily_aggregations.py; dd_agg01_evaluation.py",
+      "export_function": "analysis_new.appendix.exporters.csv",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J04_PAIRED_UNCERTAINTY.csv",
+      "sha256": "b35ed7126b2b3cbc27b8655fd90632358fe144d9fb68b2836768648c73b9a237",
+      "bytes": 5002,
+      "requirement_id": "J04",
+      "claim_id": "CL_J04",
+      "source_paths": [
+        "results/new/20260909231634/results/dd_agg01/metrics.csv",
+        "results/new/20260909231634/results/dd_agg01/paired_uncertainty.csv",
+        "results/new/20260909231634/results/dd_agg01/aggregation_summary.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909231634/results/dd_agg01/metrics.csv": "eb1ebc0a7baff80a947ff65e1bb4d2a5da101bd5f8bd3a1f3d16b559bd74ee16",
+        "results/new/20260909231634/results/dd_agg01/paired_uncertainty.csv": "61832f93e84720db36775d90a03f16229b06949c0ed9be4448ec1c0981196210",
+        "results/new/20260909231634/results/dd_agg01/aggregation_summary.csv": "a19723b8e274618eac3174c83551d768bf069f0be365b472bbce7500dd1be574"
+      },
+      "producer": "analysis_new/daily_aggregations.py; dd_agg01_evaluation.py",
+      "export_function": "analysis_new.appendix.exporters.csv",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J04_PAIRED_UNCERTAINTY.md",
+      "sha256": "253bc99730ba434f52e227cb5f0723dee71fdbf36c4a6ba4388e204d15324f87",
+      "bytes": 5621,
+      "requirement_id": "J04",
+      "claim_id": "CL_J04",
+      "source_paths": [
+        "results/new/20260909231634/results/dd_agg01/metrics.csv",
+        "results/new/20260909231634/results/dd_agg01/paired_uncertainty.csv",
+        "results/new/20260909231634/results/dd_agg01/aggregation_summary.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909231634/results/dd_agg01/metrics.csv": "eb1ebc0a7baff80a947ff65e1bb4d2a5da101bd5f8bd3a1f3d16b559bd74ee16",
+        "results/new/20260909231634/results/dd_agg01/paired_uncertainty.csv": "61832f93e84720db36775d90a03f16229b06949c0ed9be4448ec1c0981196210",
+        "results/new/20260909231634/results/dd_agg01/aggregation_summary.csv": "a19723b8e274618eac3174c83551d768bf069f0be365b472bbce7500dd1be574"
+      },
+      "producer": "analysis_new/daily_aggregations.py; dd_agg01_evaluation.py",
+      "export_function": "analysis_new.appendix.exporters.csv",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J04_AGGREGATION_SUMMARY.csv",
+      "sha256": "89b04b384d32c3c17989d093e73fcef3d93beee49bd1c7588c4aec227cdce590",
+      "bytes": 1070,
+      "requirement_id": "J04",
+      "claim_id": "CL_J04",
+      "source_paths": [
+        "results/new/20260909231634/results/dd_agg01/metrics.csv",
+        "results/new/20260909231634/results/dd_agg01/paired_uncertainty.csv",
+        "results/new/20260909231634/results/dd_agg01/aggregation_summary.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909231634/results/dd_agg01/metrics.csv": "eb1ebc0a7baff80a947ff65e1bb4d2a5da101bd5f8bd3a1f3d16b559bd74ee16",
+        "results/new/20260909231634/results/dd_agg01/paired_uncertainty.csv": "61832f93e84720db36775d90a03f16229b06949c0ed9be4448ec1c0981196210",
+        "results/new/20260909231634/results/dd_agg01/aggregation_summary.csv": "a19723b8e274618eac3174c83551d768bf069f0be365b472bbce7500dd1be574"
+      },
+      "producer": "analysis_new/daily_aggregations.py; dd_agg01_evaluation.py",
+      "export_function": "analysis_new.appendix.exporters.csv",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J04_AGGREGATION_SUMMARY.md",
+      "sha256": "a6243a9b8fffb48b238aa45654d7fdc38d3da28ce4ae08a4cf18f45f723e83a5",
+      "bytes": 1539,
+      "requirement_id": "J04",
+      "claim_id": "CL_J04",
+      "source_paths": [
+        "results/new/20260909231634/results/dd_agg01/metrics.csv",
+        "results/new/20260909231634/results/dd_agg01/paired_uncertainty.csv",
+        "results/new/20260909231634/results/dd_agg01/aggregation_summary.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909231634/results/dd_agg01/metrics.csv": "eb1ebc0a7baff80a947ff65e1bb4d2a5da101bd5f8bd3a1f3d16b559bd74ee16",
+        "results/new/20260909231634/results/dd_agg01/paired_uncertainty.csv": "61832f93e84720db36775d90a03f16229b06949c0ed9be4448ec1c0981196210",
+        "results/new/20260909231634/results/dd_agg01/aggregation_summary.csv": "a19723b8e274618eac3174c83551d768bf069f0be365b472bbce7500dd1be574"
+      },
+      "producer": "analysis_new/daily_aggregations.py; dd_agg01_evaluation.py",
+      "export_function": "analysis_new.appendix.exporters.csv",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J05_METRICS.csv",
+      "sha256": "4b48b747b69f1fca2abf69b3631953b038804e811a30d5ab11d986b9faaf4620",
+      "bytes": 5519,
+      "requirement_id": "J05",
+      "claim_id": "CL_J05",
+      "source_paths": [
+        "results/new/20260910090006/results/dd_dur01/metrics.csv",
+        "results/new/20260910090006/results/dd_dur01/paired_uncertainty.csv",
+        "results/new/20260910090006/results/dd_dur01/thresholds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260910090006/results/dd_dur01/metrics.csv": "961b7679457a124ac133b75a28a00f8d364e9ce2641a7fe8b509709d90d3b3fe",
+        "results/new/20260910090006/results/dd_dur01/paired_uncertainty.csv": "05226c6f67469e4cefda88bbb259f8ac1b1b420e579c49513aa04acf98228427",
+        "results/new/20260910090006/results/dd_dur01/thresholds.csv": "56b626c927b766d1a1be6f503fb377f1454fb9cc3ccfe9ea9b43a9a9884729e5"
+      },
+      "producer": "analysis_new/duration_features.py; dd_dur01.py",
+      "export_function": "analysis_new.appendix.exporters.csv",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J05_METRICS.md",
+      "sha256": "0e24e4b5c69cc54cc51ecca7185ed091f12ed91cb0f59a9a1cbe5e6b4211139f",
+      "bytes": 5598,
+      "requirement_id": "J05",
+      "claim_id": "CL_J05",
+      "source_paths": [
+        "results/new/20260910090006/results/dd_dur01/metrics.csv",
+        "results/new/20260910090006/results/dd_dur01/paired_uncertainty.csv",
+        "results/new/20260910090006/results/dd_dur01/thresholds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260910090006/results/dd_dur01/metrics.csv": "961b7679457a124ac133b75a28a00f8d364e9ce2641a7fe8b509709d90d3b3fe",
+        "results/new/20260910090006/results/dd_dur01/paired_uncertainty.csv": "05226c6f67469e4cefda88bbb259f8ac1b1b420e579c49513aa04acf98228427",
+        "results/new/20260910090006/results/dd_dur01/thresholds.csv": "56b626c927b766d1a1be6f503fb377f1454fb9cc3ccfe9ea9b43a9a9884729e5"
+      },
+      "producer": "analysis_new/duration_features.py; dd_dur01.py",
+      "export_function": "analysis_new.appendix.exporters.csv",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J05_PAIRED_UNCERTAINTY.csv",
+      "sha256": "5c3ecc78c3556f7b4d2e860240bc2a18d7872fb80601216325a9dbfd337c4a0b",
+      "bytes": 2475,
+      "requirement_id": "J05",
+      "claim_id": "CL_J05",
+      "source_paths": [
+        "results/new/20260910090006/results/dd_dur01/metrics.csv",
+        "results/new/20260910090006/results/dd_dur01/paired_uncertainty.csv",
+        "results/new/20260910090006/results/dd_dur01/thresholds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260910090006/results/dd_dur01/metrics.csv": "961b7679457a124ac133b75a28a00f8d364e9ce2641a7fe8b509709d90d3b3fe",
+        "results/new/20260910090006/results/dd_dur01/paired_uncertainty.csv": "05226c6f67469e4cefda88bbb259f8ac1b1b420e579c49513aa04acf98228427",
+        "results/new/20260910090006/results/dd_dur01/thresholds.csv": "56b626c927b766d1a1be6f503fb377f1454fb9cc3ccfe9ea9b43a9a9884729e5"
+      },
+      "producer": "analysis_new/duration_features.py; dd_dur01.py",
+      "export_function": "analysis_new.appendix.exporters.csv",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J05_PAIRED_UNCERTAINTY.md",
+      "sha256": "aeca63acb2294615f8963257a87e76fb2080ca9ba77a0652a9331930f9d3d3f6",
+      "bytes": 3251,
+      "requirement_id": "J05",
+      "claim_id": "CL_J05",
+      "source_paths": [
+        "results/new/20260910090006/results/dd_dur01/metrics.csv",
+        "results/new/20260910090006/results/dd_dur01/paired_uncertainty.csv",
+        "results/new/20260910090006/results/dd_dur01/thresholds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260910090006/results/dd_dur01/metrics.csv": "961b7679457a124ac133b75a28a00f8d364e9ce2641a7fe8b509709d90d3b3fe",
+        "results/new/20260910090006/results/dd_dur01/paired_uncertainty.csv": "05226c6f67469e4cefda88bbb259f8ac1b1b420e579c49513aa04acf98228427",
+        "results/new/20260910090006/results/dd_dur01/thresholds.csv": "56b626c927b766d1a1be6f503fb377f1454fb9cc3ccfe9ea9b43a9a9884729e5"
+      },
+      "producer": "analysis_new/duration_features.py; dd_dur01.py",
+      "export_function": "analysis_new.appendix.exporters.csv",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J05_THRESHOLDS.csv",
+      "sha256": "0308b59277260d9999e7d2fa4e55890cef7bfc373651c7231dd042bcda6fa4ec",
+      "bytes": 456,
+      "requirement_id": "J05",
+      "claim_id": "CL_J05",
+      "source_paths": [
+        "results/new/20260910090006/results/dd_dur01/metrics.csv",
+        "results/new/20260910090006/results/dd_dur01/paired_uncertainty.csv",
+        "results/new/20260910090006/results/dd_dur01/thresholds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260910090006/results/dd_dur01/metrics.csv": "961b7679457a124ac133b75a28a00f8d364e9ce2641a7fe8b509709d90d3b3fe",
+        "results/new/20260910090006/results/dd_dur01/paired_uncertainty.csv": "05226c6f67469e4cefda88bbb259f8ac1b1b420e579c49513aa04acf98228427",
+        "results/new/20260910090006/results/dd_dur01/thresholds.csv": "56b626c927b766d1a1be6f503fb377f1454fb9cc3ccfe9ea9b43a9a9884729e5"
+      },
+      "producer": "analysis_new/duration_features.py; dd_dur01.py",
+      "export_function": "analysis_new.appendix.exporters.csv",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J05_THRESHOLDS.md",
+      "sha256": "c59e99ce757dc27760a30f4596b4f3c1f4ec835520ee28993df095cacf109741",
+      "bytes": 1182,
+      "requirement_id": "J05",
+      "claim_id": "CL_J05",
+      "source_paths": [
+        "results/new/20260910090006/results/dd_dur01/metrics.csv",
+        "results/new/20260910090006/results/dd_dur01/paired_uncertainty.csv",
+        "results/new/20260910090006/results/dd_dur01/thresholds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260910090006/results/dd_dur01/metrics.csv": "961b7679457a124ac133b75a28a00f8d364e9ce2641a7fe8b509709d90d3b3fe",
+        "results/new/20260910090006/results/dd_dur01/paired_uncertainty.csv": "05226c6f67469e4cefda88bbb259f8ac1b1b420e579c49513aa04acf98228427",
+        "results/new/20260910090006/results/dd_dur01/thresholds.csv": "56b626c927b766d1a1be6f503fb377f1454fb9cc3ccfe9ea9b43a9a9884729e5"
+      },
+      "producer": "analysis_new/duration_features.py; dd_dur01.py",
+      "export_function": "analysis_new.appendix.exporters.csv",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_TIME_METRICS.csv",
+      "sha256": "333896937a5844017acf5785adc1dc3804d4c30eaca8771eea6568add419a364",
+      "bytes": 2332,
+      "requirement_id": "J06",
+      "claim_id": "CL_J06",
+      "source_paths": [
+        "results/new/20260910104718/results/dd_time01/temporal_metrics.csv",
+        "results/new/20260910104718/results/dd_time01/sample_summary.csv",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv",
+        "results/new/20260910104718/results/dd_time01/covariate_support.csv",
+        "results/new/20260910104718/results/dd_time01/development_fit.csv",
+        "results/new/20260910104718/results/dd_time01/protocol.json"
+      ],
+      "source_sha256": {
+        "results/new/20260910104718/results/dd_time01/temporal_metrics.csv": "3c2816ae37b3c3dc65ae374b211ba6c60b9d481c00fae1208a16756d74065b33",
+        "results/new/20260910104718/results/dd_time01/sample_summary.csv": "838f9a2de78cfddbac26678c4c989dfd89038464774295dcff112bfc5db15e7e",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv": "0a299deb2623e3f79d1daebd39045f04806239cff8e501cdbef6050da9559096",
+        "results/new/20260910104718/results/dd_time01/covariate_support.csv": "83c21662455779c73118c51c780b8a73f3ab9d4d98269eeae5a75e0c8f3fd49c",
+        "results/new/20260910104718/results/dd_time01/development_fit.csv": "ef70e67193579bf63b77637d1ad3e73f8582bb938e6c2b311655b89febce2cc9",
+        "results/new/20260910104718/results/dd_time01/protocol.json": "967df04e5cc3e078beb1aec816badc567640e9b8dbea7047578840a2d5334167"
+      },
+      "producer": "analysis_new/temporal_fragility.py; dd_time01_outputs.py",
+      "export_function": "analysis_new.appendix.exporters.time",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_TIME_METRICS.md",
+      "sha256": "45dbe42afc34227b5b4716bc254ff41a2c37c4eb4a0f6aa9af788f7aab5f3ad4",
+      "bytes": 2786,
+      "requirement_id": "J06",
+      "claim_id": "CL_J06",
+      "source_paths": [
+        "results/new/20260910104718/results/dd_time01/temporal_metrics.csv",
+        "results/new/20260910104718/results/dd_time01/sample_summary.csv",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv",
+        "results/new/20260910104718/results/dd_time01/covariate_support.csv",
+        "results/new/20260910104718/results/dd_time01/development_fit.csv",
+        "results/new/20260910104718/results/dd_time01/protocol.json"
+      ],
+      "source_sha256": {
+        "results/new/20260910104718/results/dd_time01/temporal_metrics.csv": "3c2816ae37b3c3dc65ae374b211ba6c60b9d481c00fae1208a16756d74065b33",
+        "results/new/20260910104718/results/dd_time01/sample_summary.csv": "838f9a2de78cfddbac26678c4c989dfd89038464774295dcff112bfc5db15e7e",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv": "0a299deb2623e3f79d1daebd39045f04806239cff8e501cdbef6050da9559096",
+        "results/new/20260910104718/results/dd_time01/covariate_support.csv": "83c21662455779c73118c51c780b8a73f3ab9d4d98269eeae5a75e0c8f3fd49c",
+        "results/new/20260910104718/results/dd_time01/development_fit.csv": "ef70e67193579bf63b77637d1ad3e73f8582bb938e6c2b311655b89febce2cc9",
+        "results/new/20260910104718/results/dd_time01/protocol.json": "967df04e5cc3e078beb1aec816badc567640e9b8dbea7047578840a2d5334167"
+      },
+      "producer": "analysis_new/temporal_fragility.py; dd_time01_outputs.py",
+      "export_function": "analysis_new.appendix.exporters.time",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_TIME_MONTHLY.csv",
+      "sha256": "2cbaefca4474d15d70b00afd5726d6363812c067ec2e43fe2d98ed3f6377c8ca",
+      "bytes": 12876,
+      "requirement_id": "J06",
+      "claim_id": "CL_J06",
+      "source_paths": [
+        "results/new/20260910104718/results/dd_time01/temporal_metrics.csv",
+        "results/new/20260910104718/results/dd_time01/sample_summary.csv",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv",
+        "results/new/20260910104718/results/dd_time01/covariate_support.csv",
+        "results/new/20260910104718/results/dd_time01/development_fit.csv",
+        "results/new/20260910104718/results/dd_time01/protocol.json"
+      ],
+      "source_sha256": {
+        "results/new/20260910104718/results/dd_time01/temporal_metrics.csv": "3c2816ae37b3c3dc65ae374b211ba6c60b9d481c00fae1208a16756d74065b33",
+        "results/new/20260910104718/results/dd_time01/sample_summary.csv": "838f9a2de78cfddbac26678c4c989dfd89038464774295dcff112bfc5db15e7e",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv": "0a299deb2623e3f79d1daebd39045f04806239cff8e501cdbef6050da9559096",
+        "results/new/20260910104718/results/dd_time01/covariate_support.csv": "83c21662455779c73118c51c780b8a73f3ab9d4d98269eeae5a75e0c8f3fd49c",
+        "results/new/20260910104718/results/dd_time01/development_fit.csv": "ef70e67193579bf63b77637d1ad3e73f8582bb938e6c2b311655b89febce2cc9",
+        "results/new/20260910104718/results/dd_time01/protocol.json": "967df04e5cc3e078beb1aec816badc567640e9b8dbea7047578840a2d5334167"
+      },
+      "producer": "analysis_new/temporal_fragility.py; dd_time01_outputs.py",
+      "export_function": "analysis_new.appendix.exporters.time",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_TIME_MONTHLY.md",
+      "sha256": "f766058b59337b929c3ca8ee5b80f010ee44d55d195987bf42d83ff800491289",
+      "bytes": 12504,
+      "requirement_id": "J06",
+      "claim_id": "CL_J06",
+      "source_paths": [
+        "results/new/20260910104718/results/dd_time01/temporal_metrics.csv",
+        "results/new/20260910104718/results/dd_time01/sample_summary.csv",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv",
+        "results/new/20260910104718/results/dd_time01/covariate_support.csv",
+        "results/new/20260910104718/results/dd_time01/development_fit.csv",
+        "results/new/20260910104718/results/dd_time01/protocol.json"
+      ],
+      "source_sha256": {
+        "results/new/20260910104718/results/dd_time01/temporal_metrics.csv": "3c2816ae37b3c3dc65ae374b211ba6c60b9d481c00fae1208a16756d74065b33",
+        "results/new/20260910104718/results/dd_time01/sample_summary.csv": "838f9a2de78cfddbac26678c4c989dfd89038464774295dcff112bfc5db15e7e",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv": "0a299deb2623e3f79d1daebd39045f04806239cff8e501cdbef6050da9559096",
+        "results/new/20260910104718/results/dd_time01/covariate_support.csv": "83c21662455779c73118c51c780b8a73f3ab9d4d98269eeae5a75e0c8f3fd49c",
+        "results/new/20260910104718/results/dd_time01/development_fit.csv": "ef70e67193579bf63b77637d1ad3e73f8582bb938e6c2b311655b89febce2cc9",
+        "results/new/20260910104718/results/dd_time01/protocol.json": "967df04e5cc3e078beb1aec816badc567640e9b8dbea7047578840a2d5334167"
+      },
+      "producer": "analysis_new/temporal_fragility.py; dd_time01_outputs.py",
+      "export_function": "analysis_new.appendix.exporters.time",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_TIME_SUPPORT.csv",
+      "sha256": "2388cd13d447d34a67bfcc3fe87da09cb03ca4c2183bd502b1007013ae880dd6",
+      "bytes": 658,
+      "requirement_id": "J06",
+      "claim_id": "CL_J06",
+      "source_paths": [
+        "results/new/20260910104718/results/dd_time01/temporal_metrics.csv",
+        "results/new/20260910104718/results/dd_time01/sample_summary.csv",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv",
+        "results/new/20260910104718/results/dd_time01/covariate_support.csv",
+        "results/new/20260910104718/results/dd_time01/development_fit.csv",
+        "results/new/20260910104718/results/dd_time01/protocol.json"
+      ],
+      "source_sha256": {
+        "results/new/20260910104718/results/dd_time01/temporal_metrics.csv": "3c2816ae37b3c3dc65ae374b211ba6c60b9d481c00fae1208a16756d74065b33",
+        "results/new/20260910104718/results/dd_time01/sample_summary.csv": "838f9a2de78cfddbac26678c4c989dfd89038464774295dcff112bfc5db15e7e",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv": "0a299deb2623e3f79d1daebd39045f04806239cff8e501cdbef6050da9559096",
+        "results/new/20260910104718/results/dd_time01/covariate_support.csv": "83c21662455779c73118c51c780b8a73f3ab9d4d98269eeae5a75e0c8f3fd49c",
+        "results/new/20260910104718/results/dd_time01/development_fit.csv": "ef70e67193579bf63b77637d1ad3e73f8582bb938e6c2b311655b89febce2cc9",
+        "results/new/20260910104718/results/dd_time01/protocol.json": "967df04e5cc3e078beb1aec816badc567640e9b8dbea7047578840a2d5334167"
+      },
+      "producer": "analysis_new/temporal_fragility.py; dd_time01_outputs.py",
+      "export_function": "analysis_new.appendix.exporters.time",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_TIME_SUPPORT.md",
+      "sha256": "dfdc9a32ac6bf1bd96e6848c0d4822728387b761cc7bf9374cc1b0cc25502b95",
+      "bytes": 1443,
+      "requirement_id": "J06",
+      "claim_id": "CL_J06",
+      "source_paths": [
+        "results/new/20260910104718/results/dd_time01/temporal_metrics.csv",
+        "results/new/20260910104718/results/dd_time01/sample_summary.csv",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv",
+        "results/new/20260910104718/results/dd_time01/covariate_support.csv",
+        "results/new/20260910104718/results/dd_time01/development_fit.csv",
+        "results/new/20260910104718/results/dd_time01/protocol.json"
+      ],
+      "source_sha256": {
+        "results/new/20260910104718/results/dd_time01/temporal_metrics.csv": "3c2816ae37b3c3dc65ae374b211ba6c60b9d481c00fae1208a16756d74065b33",
+        "results/new/20260910104718/results/dd_time01/sample_summary.csv": "838f9a2de78cfddbac26678c4c989dfd89038464774295dcff112bfc5db15e7e",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv": "0a299deb2623e3f79d1daebd39045f04806239cff8e501cdbef6050da9559096",
+        "results/new/20260910104718/results/dd_time01/covariate_support.csv": "83c21662455779c73118c51c780b8a73f3ab9d4d98269eeae5a75e0c8f3fd49c",
+        "results/new/20260910104718/results/dd_time01/development_fit.csv": "ef70e67193579bf63b77637d1ad3e73f8582bb938e6c2b311655b89febce2cc9",
+        "results/new/20260910104718/results/dd_time01/protocol.json": "967df04e5cc3e078beb1aec816badc567640e9b8dbea7047578840a2d5334167"
+      },
+      "producer": "analysis_new/temporal_fragility.py; dd_time01_outputs.py",
+      "export_function": "analysis_new.appendix.exporters.time",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_TIME_DEVELOPMENT_FIT.csv",
+      "sha256": "b703b9bb2b0170e03b0ea9c5ee2ac1e9b9adc7b09c2c0e9df2f1025d514fa2b1",
+      "bytes": 4364,
+      "requirement_id": "J06",
+      "claim_id": "CL_J06",
+      "source_paths": [
+        "results/new/20260910104718/results/dd_time01/temporal_metrics.csv",
+        "results/new/20260910104718/results/dd_time01/sample_summary.csv",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv",
+        "results/new/20260910104718/results/dd_time01/covariate_support.csv",
+        "results/new/20260910104718/results/dd_time01/development_fit.csv",
+        "results/new/20260910104718/results/dd_time01/protocol.json"
+      ],
+      "source_sha256": {
+        "results/new/20260910104718/results/dd_time01/temporal_metrics.csv": "3c2816ae37b3c3dc65ae374b211ba6c60b9d481c00fae1208a16756d74065b33",
+        "results/new/20260910104718/results/dd_time01/sample_summary.csv": "838f9a2de78cfddbac26678c4c989dfd89038464774295dcff112bfc5db15e7e",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv": "0a299deb2623e3f79d1daebd39045f04806239cff8e501cdbef6050da9559096",
+        "results/new/20260910104718/results/dd_time01/covariate_support.csv": "83c21662455779c73118c51c780b8a73f3ab9d4d98269eeae5a75e0c8f3fd49c",
+        "results/new/20260910104718/results/dd_time01/development_fit.csv": "ef70e67193579bf63b77637d1ad3e73f8582bb938e6c2b311655b89febce2cc9",
+        "results/new/20260910104718/results/dd_time01/protocol.json": "967df04e5cc3e078beb1aec816badc567640e9b8dbea7047578840a2d5334167"
+      },
+      "producer": "analysis_new/temporal_fragility.py; dd_time01_outputs.py",
+      "export_function": "analysis_new.appendix.exporters.time",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_TIME_DEVELOPMENT_FIT.md",
+      "sha256": "b1941af3b01a4be3f91150d4cdb03cf1dc58731f03e395bbe65bd54b0aa01d6b",
+      "bytes": 5128,
+      "requirement_id": "J06",
+      "claim_id": "CL_J06",
+      "source_paths": [
+        "results/new/20260910104718/results/dd_time01/temporal_metrics.csv",
+        "results/new/20260910104718/results/dd_time01/sample_summary.csv",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv",
+        "results/new/20260910104718/results/dd_time01/covariate_support.csv",
+        "results/new/20260910104718/results/dd_time01/development_fit.csv",
+        "results/new/20260910104718/results/dd_time01/protocol.json"
+      ],
+      "source_sha256": {
+        "results/new/20260910104718/results/dd_time01/temporal_metrics.csv": "3c2816ae37b3c3dc65ae374b211ba6c60b9d481c00fae1208a16756d74065b33",
+        "results/new/20260910104718/results/dd_time01/sample_summary.csv": "838f9a2de78cfddbac26678c4c989dfd89038464774295dcff112bfc5db15e7e",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv": "0a299deb2623e3f79d1daebd39045f04806239cff8e501cdbef6050da9559096",
+        "results/new/20260910104718/results/dd_time01/covariate_support.csv": "83c21662455779c73118c51c780b8a73f3ab9d4d98269eeae5a75e0c8f3fd49c",
+        "results/new/20260910104718/results/dd_time01/development_fit.csv": "ef70e67193579bf63b77637d1ad3e73f8582bb938e6c2b311655b89febce2cc9",
+        "results/new/20260910104718/results/dd_time01/protocol.json": "967df04e5cc3e078beb1aec816badc567640e9b8dbea7047578840a2d5334167"
+      },
+      "producer": "analysis_new/temporal_fragility.py; dd_time01_outputs.py",
+      "export_function": "analysis_new.appendix.exporters.time",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_TIME_CALIBRATION_BINS.csv",
+      "sha256": "203c553171b8740336cceeffd7af402ea44f5ac4f084155d497c46876cbaab7d",
+      "bytes": 11436,
+      "requirement_id": "J07",
+      "claim_id": "CL_J07",
+      "source_paths": [
+        "results/new/20260910104718/results/dd_time01/calibration_bins.csv",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260910104718/results/dd_time01/calibration_bins.csv": "44eff7df0d5663cf17e2a906a78271dd54e366721a6f69aff365f580b8909c08",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv": "0a299deb2623e3f79d1daebd39045f04806239cff8e501cdbef6050da9559096"
+      },
+      "producer": "analysis_new/dd_time01_outputs.py已存分箱/预测；复用项目figure_style",
+      "export_function": "analysis_new.appendix.exporters.time_figure",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_TIME_CALIBRATION_BINS.md",
+      "sha256": "2f0235879adc5e73a43493d3b22cf24c503d71e5c4faed19082010b4a39f3c43",
+      "bytes": 12331,
+      "requirement_id": "J07",
+      "claim_id": "CL_J07",
+      "source_paths": [
+        "results/new/20260910104718/results/dd_time01/calibration_bins.csv",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260910104718/results/dd_time01/calibration_bins.csv": "44eff7df0d5663cf17e2a906a78271dd54e366721a6f69aff365f580b8909c08",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv": "0a299deb2623e3f79d1daebd39045f04806239cff8e501cdbef6050da9559096"
+      },
+      "producer": "analysis_new/dd_time01_outputs.py已存分箱/预测；复用项目figure_style",
+      "export_function": "analysis_new.appendix.exporters.time_figure",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "figures/J_TIME_CALIBRATION_MONTHLY.png",
+      "sha256": "698f64412f4c7e511e2fb0447f3c74d7e250b37660e492e217be10a961488e1b",
+      "bytes": 633474,
+      "requirement_id": "J07",
+      "claim_id": "CL_J07",
+      "source_paths": [
+        "results/new/20260910104718/results/dd_time01/calibration_bins.csv",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260910104718/results/dd_time01/calibration_bins.csv": "44eff7df0d5663cf17e2a906a78271dd54e366721a6f69aff365f580b8909c08",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv": "0a299deb2623e3f79d1daebd39045f04806239cff8e501cdbef6050da9559096"
+      },
+      "producer": "analysis_new/dd_time01_outputs.py已存分箱/预测；复用项目figure_style",
+      "export_function": "analysis_new.appendix.exporters.time_figure",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "data/J_TIME_MONTHLY.csv",
+      "sha256": "b5953698c6f669926e872f11fd8f6bb331d946cd9d643c7e5f1e143df7d30c1b",
+      "bytes": 12873,
+      "requirement_id": "J07",
+      "claim_id": "CL_J07",
+      "source_paths": [
+        "results/new/20260910104718/results/dd_time01/calibration_bins.csv",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260910104718/results/dd_time01/calibration_bins.csv": "44eff7df0d5663cf17e2a906a78271dd54e366721a6f69aff365f580b8909c08",
+        "results/new/20260910104718/results/dd_time01/monthly_metrics.csv": "0a299deb2623e3f79d1daebd39045f04806239cff8e501cdbef6050da9559096"
+      },
+      "producer": "analysis_new/dd_time01_outputs.py已存分箱/预测；复用项目figure_style",
+      "export_function": "analysis_new.appendix.exporters.time_figure",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_INTERPRETATION_BOUNDARIES.csv",
+      "sha256": "0e53543badc499c5334e001a45f0b5d2bcd76a1a8246616a1b20efd0cb9eef95",
+      "bytes": 1063,
+      "requirement_id": "J08",
+      "claim_id": "CL_J08",
+      "source_paths": [
+        "docs/new_analysis/instructions/论文整合计划_v9_附录成文与正文衔接.md",
+        "results/new/20260910104718/results/dd_time01/protocol.json",
+        "results/new/20260909231634/results/dd_agg01/PROTOCOL.md",
+        "results/new/20260910090006/results/dd_dur01/PROTOCOL.md",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260910090006/results/dd_dur01/protocol.json"
+      ],
+      "source_sha256": {
+        "docs/new_analysis/instructions/论文整合计划_v9_附录成文与正文衔接.md": "565ba4e4811418448c9f1299e13fbcd83cff60123ccec939dc0d632e63c27636",
+        "results/new/20260910104718/results/dd_time01/protocol.json": "967df04e5cc3e078beb1aec816badc567640e9b8dbea7047578840a2d5334167",
+        "results/new/20260909231634/results/dd_agg01/PROTOCOL.md": "a9789616355669559ef0b6f6c3a34fd0c40f86087a65ffa1bff92964f1ab98cd",
+        "results/new/20260910090006/results/dd_dur01/PROTOCOL.md": "e2096bcd8533d207e2b70b4a4f8525cc6d9aab62b319c0135f794b0f9d2240f0",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260910090006/results/dd_dur01/protocol.json": "172dc5400dd2301fc1fff6fc505fa1d315e9ab4fecff667eb6e7ec6bf064f288"
+      },
+      "producer": "已接受v9及三实验冻结协议",
+      "export_function": "analysis_new.appendix.exporters.boundaries",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_INTERPRETATION_BOUNDARIES.md",
+      "sha256": "7568f3b7aac7ff5980fb9f92d14b247d9e647ff8a6ae85c62b721cfc4baed5de",
+      "bytes": 1750,
+      "requirement_id": "J08",
+      "claim_id": "CL_J08",
+      "source_paths": [
+        "docs/new_analysis/instructions/论文整合计划_v9_附录成文与正文衔接.md",
+        "results/new/20260910104718/results/dd_time01/protocol.json",
+        "results/new/20260909231634/results/dd_agg01/PROTOCOL.md",
+        "results/new/20260910090006/results/dd_dur01/PROTOCOL.md",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260910090006/results/dd_dur01/protocol.json"
+      ],
+      "source_sha256": {
+        "docs/new_analysis/instructions/论文整合计划_v9_附录成文与正文衔接.md": "565ba4e4811418448c9f1299e13fbcd83cff60123ccec939dc0d632e63c27636",
+        "results/new/20260910104718/results/dd_time01/protocol.json": "967df04e5cc3e078beb1aec816badc567640e9b8dbea7047578840a2d5334167",
+        "results/new/20260909231634/results/dd_agg01/PROTOCOL.md": "a9789616355669559ef0b6f6c3a34fd0c40f86087a65ffa1bff92964f1ab98cd",
+        "results/new/20260910090006/results/dd_dur01/PROTOCOL.md": "e2096bcd8533d207e2b70b4a4f8525cc6d9aab62b319c0135f794b0f9d2240f0",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260910090006/results/dd_dur01/protocol.json": "172dc5400dd2301fc1fff6fc505fa1d315e9ab4fecff667eb6e7ec6bf064f288"
+      },
+      "producer": "已接受v9及三实验冻结协议",
+      "export_function": "analysis_new.appendix.exporters.boundaries",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_FROZEN_EXPERIMENT_DEFINITIONS.csv",
+      "sha256": "ad42d8ce0eb63d2677847f3f919364a39942088ddfa77569869644a2e9a1f1b5",
+      "bytes": 2553,
+      "requirement_id": "J08",
+      "claim_id": "CL_J08",
+      "source_paths": [
+        "docs/new_analysis/instructions/论文整合计划_v9_附录成文与正文衔接.md",
+        "results/new/20260910104718/results/dd_time01/protocol.json",
+        "results/new/20260909231634/results/dd_agg01/PROTOCOL.md",
+        "results/new/20260910090006/results/dd_dur01/PROTOCOL.md",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260910090006/results/dd_dur01/protocol.json"
+      ],
+      "source_sha256": {
+        "docs/new_analysis/instructions/论文整合计划_v9_附录成文与正文衔接.md": "565ba4e4811418448c9f1299e13fbcd83cff60123ccec939dc0d632e63c27636",
+        "results/new/20260910104718/results/dd_time01/protocol.json": "967df04e5cc3e078beb1aec816badc567640e9b8dbea7047578840a2d5334167",
+        "results/new/20260909231634/results/dd_agg01/PROTOCOL.md": "a9789616355669559ef0b6f6c3a34fd0c40f86087a65ffa1bff92964f1ab98cd",
+        "results/new/20260910090006/results/dd_dur01/PROTOCOL.md": "e2096bcd8533d207e2b70b4a4f8525cc6d9aab62b319c0135f794b0f9d2240f0",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260910090006/results/dd_dur01/protocol.json": "172dc5400dd2301fc1fff6fc505fa1d315e9ab4fecff667eb6e7ec6bf064f288"
+      },
+      "producer": "已接受v9及三实验冻结协议",
+      "export_function": "analysis_new.appendix.exporters.boundaries",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/J_FROZEN_EXPERIMENT_DEFINITIONS.md",
+      "sha256": "78f752e7423e31489a78c7487dd775be5825600c656b43cdf867308619267f64",
+      "bytes": 3384,
+      "requirement_id": "J08",
+      "claim_id": "CL_J08",
+      "source_paths": [
+        "docs/new_analysis/instructions/论文整合计划_v9_附录成文与正文衔接.md",
+        "results/new/20260910104718/results/dd_time01/protocol.json",
+        "results/new/20260909231634/results/dd_agg01/PROTOCOL.md",
+        "results/new/20260910090006/results/dd_dur01/PROTOCOL.md",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260910090006/results/dd_dur01/protocol.json"
+      ],
+      "source_sha256": {
+        "docs/new_analysis/instructions/论文整合计划_v9_附录成文与正文衔接.md": "565ba4e4811418448c9f1299e13fbcd83cff60123ccec939dc0d632e63c27636",
+        "results/new/20260910104718/results/dd_time01/protocol.json": "967df04e5cc3e078beb1aec816badc567640e9b8dbea7047578840a2d5334167",
+        "results/new/20260909231634/results/dd_agg01/PROTOCOL.md": "a9789616355669559ef0b6f6c3a34fd0c40f86087a65ffa1bff92964f1ab98cd",
+        "results/new/20260910090006/results/dd_dur01/PROTOCOL.md": "e2096bcd8533d207e2b70b4a4f8525cc6d9aab62b319c0135f794b0f9d2240f0",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260910090006/results/dd_dur01/protocol.json": "172dc5400dd2301fc1fff6fc505fa1d315e9ab4fecff667eb6e7ec6bf064f288"
+      },
+      "producer": "已接受v9及三实验冻结协议",
+      "export_function": "analysis_new.appendix.exporters.boundaries",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "data/J03_BOOTSTRAP_DRAWS.csv.gz",
+      "sha256": "47ff1b5cab9e0cfe4768972deb9e373d5868179fcf98b6c4f13fa71023da72d1",
+      "bytes": 123930,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "data/J03_BOOTSTRAP_LADS.json",
+      "sha256": "76808737af94423be459b05e824adf33b199aaaadcc12f49c328df103babc20c",
+      "bytes": 1779,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "data/J03_CALIBRATION_EDGES.json",
+      "sha256": "25deae8588c5c3c3253864ce75b1bd3e86b58a51c524eb172ab021ec8b98ac3e",
+      "bytes": 2663,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "data/J03_FIT_COMPONENTS.jsonl",
+      "sha256": "57337d9b8f3f6d4ab82196555079fc701041a00fc027332d1f5345038d7dd330",
+      "bytes": 1294742,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "data/J03_MATCHED_PANEL.csv.gz",
+      "sha256": "0cbf868b2e869a453f9230e3563282289500db5b8164c56e6c853c4d263c8543",
+      "bytes": 1895976,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "data/J03_OOF_PREDICTIONS.csv.gz",
+      "sha256": "cbe00a7247b45ef560aeedf7dad71ceed7b0b6504cebe3d19cdf8462647a1f20",
+      "bytes": 15781239,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "figures/J03_BRIER_COMPARISON.png",
+      "sha256": "a1f512480548cf68681a21a7e4a594e2d99bd9b707ed5223c262bca47c0e9337",
+      "bytes": 150983,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "figures/J03_PRIMARY_CALIBRATION.png",
+      "sha256": "465b4eb9952bd219f7004fb5c6ae18ef47781c2b32a6704155417b843be988a1",
+      "bytes": 693309,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "logs/J03_EXECUTION.jsonl",
+      "sha256": "f0847315f7d00323b868b1c42625a87f6ce174a294e565c7cc442fda8d4f61ba",
+      "bytes": 7781,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "logs/J03_EXECUTION_REPORT.md",
+      "sha256": "51ad596b8aecc4a9782580d6ca36f7a13a09e241aa3a06b9bbe438ce10567bd3",
+      "bytes": 6707,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "logs/J03_INPUT_MATCH.json",
+      "sha256": "4f44cb99f1edff909302b6d5043d4dc2ae7158457b2c312076758d3f5a2c90b8",
+      "bytes": 621,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "logs/J03_LAST_EXECUTION.json",
+      "sha256": "7c7861c276b61ad56dcd55eef28c77a6cc57e0efc141f7d9a45f771903c00fd3",
+      "bytes": 464,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "logs/J03_PRESERVATION.json",
+      "sha256": "9e9111d33232dffa11f47366b6fb25c0ad5d9af018d7aebb9cee6362d0a09136",
+      "bytes": 2057,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "logs/J03_PROTOCOL.json",
+      "sha256": "223ebce2f1184a6455d5f6ebf018e85b1cab0c091ae081ddc24475757c05f139",
+      "bytes": 5335,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "logs/J03_TECHNICAL_CHECKS.json",
+      "sha256": "b27bfb10fe435c74b4b1e30a6bf364e159fdba250d7b6aa225fdf6b9a4bc0753",
+      "bytes": 9528,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_CALIBRATION.csv",
+      "sha256": "03a2354db2c3ed5085f7345acdbd30faa410211f80c848ad9276c52ab060b316",
+      "bytes": 21024,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_CALIBRATION.md",
+      "sha256": "272490939686eb53879b7ebb026aa319a2a989a71e75c24449705bc705956e6c",
+      "bytes": 21473,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_COMPONENT_MANIFEST.csv",
+      "sha256": "16d50dacc94d0f74230d25dbe6f16388c831ffc53f3ba25c9b4a08f1986ec7ac",
+      "bytes": 27477,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_COMPONENT_MANIFEST.md",
+      "sha256": "a1887dfebe56fc4bbf0e039151cd3d009732f691ffb8f29c3f23ee5b7429e204",
+      "bytes": 30748,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_COMPONENT_PLAN.csv",
+      "sha256": "cdcc958cc3fa9bc1c314bbe8d5d65075b057a5324ca553fb97b6cb1e8062cb9c",
+      "bytes": 24081,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_COMPONENT_PLAN.md",
+      "sha256": "a417ceec718d827f934c5bf877295eb2221395231518459eea31a09bcaf82872",
+      "bytes": 26748,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_FOLD_FITS.csv",
+      "sha256": "cc9fc91f2df79ce959d6f5850e3cde58e95e733c6ab96e5f55efd0f57bffdb1b",
+      "bytes": 39068,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_FOLD_FITS.md",
+      "sha256": "446b03cc82a00079f05fe52ea429b6fb062d988c8cf4364c9c016b53f3d8e49d",
+      "bytes": 38176,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_FOLD_METRICS.csv",
+      "sha256": "58cfdc208296937f957f47315ab3bfe63140e307610caa52a9676707123fa355",
+      "bytes": 6574,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_FOLD_METRICS.md",
+      "sha256": "d752d8a6ea1560713995c63df67b443e57f1312933d5ddcfa4118de835fe91c6",
+      "bytes": 6793,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_FULL_PARAMETERS.csv",
+      "sha256": "4100bbf6a6f75c7de5f7470a169343ed63f911ae1faaaf2d88b39f47e8c3cc5a",
+      "bytes": 8055,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_FULL_PARAMETERS.md",
+      "sha256": "4fcf7fe60dff38c5946eea761b0cdc2188ed58d329b0e90d02bfcc8098e07478",
+      "bytes": 8672,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_MATCHED_SAMPLE.csv",
+      "sha256": "9d669c0fe2cdeb6d3f050c32c807f382c256ac00e855cdb390a16f815b5b34ee",
+      "bytes": 455,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_MATCHED_SAMPLE.md",
+      "sha256": "98a85abdfd0b889d94934d01fbd18a902a9c1cbed0dd5117c7b997e435ae2774",
+      "bytes": 1333,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_PAIRED_INTERVALS.csv",
+      "sha256": "4f67f93afd63f5e62e6fb2cca97486f1d6b53328daea71d76b7c520463408f4a",
+      "bytes": 1547,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_PAIRED_INTERVALS.md",
+      "sha256": "0693ace31a6460b7fce0c7be1151ca639f91456a320ae29b4e96153f440cb697",
+      "bytes": 2253,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_PAIRED_METRICS.csv",
+      "sha256": "9b201fa78a3d672984477856924c66e73e82848a81adcbf3a80794bf8754ee16",
+      "bytes": 3927,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_PAIRED_METRICS.md",
+      "sha256": "f9cabb55766903bb47c79c1a155b325cceb938b47b54be09b54e1f25f8f68b04",
+      "bytes": 4316,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_PROXY_HISTORY_COMPARISON.csv",
+      "sha256": "6e1f61db76b75e901e858236a7feca6e2914adb47f6ed42c56521881cd106ada",
+      "bytes": 3042,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    },
+    {
+      "path": "tables/J03_PROXY_HISTORY_COMPARISON.md",
+      "sha256": "9bf03ec24216cf1348bdb18f56d4d2539e464e7e63fc4f31bb64e6758f6f45f3",
+      "bytes": 3446,
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "source_paths": [
+        "results/new/20260909183317/results/final_models/district_day_panel.csv",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json",
+        "results/new/20260909231634/results/dd_agg01/experiment.json",
+        "results/new/20260909231634/results/dd_agg01/inventory.json",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz",
+        "results/new/20260909231634/results/dd_agg01/validation.json",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv"
+      ],
+      "source_sha256": {
+        "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+        "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+        "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+        "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+        "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+        "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+        "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+        "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+        "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+        "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+      },
+      "producer": "analysis_new.appendix.j03_compare:generate",
+      "export_function": "analysis_new.appendix.j03_compare:generate",
+      "configuration": {
+        "task": "APP-J03-COMPARE",
+        "repeats": 1000,
+        "seed": 20260909,
+        "calibration": "pooled two-source prediction quantiles, same edges, no labels"
+      },
+      "status": "产物已补齐/待研究负责人反馈分析"
+    }
+  ],
+  "managed_files": [
+    "README.md",
+    "data/J03_BOOTSTRAP_DRAWS.csv.gz",
+    "data/J03_BOOTSTRAP_LADS.json",
+    "data/J03_CALIBRATION_EDGES.json",
+    "data/J03_FIT_COMPONENTS.jsonl",
+    "data/J03_MATCHED_PANEL.csv.gz",
+    "data/J03_OOF_PREDICTIONS.csv.gz",
+    "data/J_TIME_MONTHLY.csv",
+    "figures/J03_BRIER_COMPARISON.png",
+    "figures/J03_PRIMARY_CALIBRATION.png",
+    "figures/J_TIME_CALIBRATION_MONTHLY.png",
+    "logs/J03_EXECUTION.jsonl",
+    "logs/J03_EXECUTION_REPORT.md",
+    "logs/J03_INPUT_MATCH.json",
+    "logs/J03_LAST_EXECUTION.json",
+    "logs/J03_PRESERVATION.json",
+    "logs/J03_PROTOCOL.json",
+    "logs/J03_TECHNICAL_CHECKS.json",
+    "logs/execution.log",
+    "logs/validation.json",
+    "manifest.json",
+    "tables/J02_CENTROIDS.csv",
+    "tables/J02_CENTROIDS.md",
+    "tables/J02_GRID_CELLS.csv",
+    "tables/J02_GRID_CELLS.md",
+    "tables/J02_GUST_COMPARISON.csv",
+    "tables/J02_GUST_COMPARISON.md",
+    "tables/J03_CALIBRATION.csv",
+    "tables/J03_CALIBRATION.md",
+    "tables/J03_COMPONENT_MANIFEST.csv",
+    "tables/J03_COMPONENT_MANIFEST.md",
+    "tables/J03_COMPONENT_PLAN.csv",
+    "tables/J03_COMPONENT_PLAN.md",
+    "tables/J03_FOLD_FITS.csv",
+    "tables/J03_FOLD_FITS.md",
+    "tables/J03_FOLD_METRICS.csv",
+    "tables/J03_FOLD_METRICS.md",
+    "tables/J03_FULL_PARAMETERS.csv",
+    "tables/J03_FULL_PARAMETERS.md",
+    "tables/J03_MATCHED_SAMPLE.csv",
+    "tables/J03_MATCHED_SAMPLE.md",
+    "tables/J03_PAIRED_INTERVALS.csv",
+    "tables/J03_PAIRED_INTERVALS.md",
+    "tables/J03_PAIRED_METRICS.csv",
+    "tables/J03_PAIRED_METRICS.md",
+    "tables/J03_PROXY_HISTORY_COMPARISON.csv",
+    "tables/J03_PROXY_HISTORY_COMPARISON.md",
+    "tables/J04_AGGREGATION_SUMMARY.csv",
+    "tables/J04_AGGREGATION_SUMMARY.md",
+    "tables/J04_METRICS.csv",
+    "tables/J04_METRICS.md",
+    "tables/J04_PAIRED_UNCERTAINTY.csv",
+    "tables/J04_PAIRED_UNCERTAINTY.md",
+    "tables/J05_METRICS.csv",
+    "tables/J05_METRICS.md",
+    "tables/J05_PAIRED_UNCERTAINTY.csv",
+    "tables/J05_PAIRED_UNCERTAINTY.md",
+    "tables/J05_THRESHOLDS.csv",
+    "tables/J05_THRESHOLDS.md",
+    "tables/J_FROZEN_EXPERIMENT_DEFINITIONS.csv",
+    "tables/J_FROZEN_EXPERIMENT_DEFINITIONS.md",
+    "tables/J_INDEPENDENT_WEATHER_DEFINITIONS.csv",
+    "tables/J_INDEPENDENT_WEATHER_DEFINITIONS.md",
+    "tables/J_INTERPRETATION_BOUNDARIES.csv",
+    "tables/J_INTERPRETATION_BOUNDARIES.md",
+    "tables/J_PROXY_DEFINITIONS.csv",
+    "tables/J_PROXY_DEFINITIONS.md",
+    "tables/J_PROXY_LABELS.csv",
+    "tables/J_PROXY_LABELS.md",
+    "tables/J_TIME_CALIBRATION_BINS.csv",
+    "tables/J_TIME_CALIBRATION_BINS.md",
+    "tables/J_TIME_DEVELOPMENT_FIT.csv",
+    "tables/J_TIME_DEVELOPMENT_FIT.md",
+    "tables/J_TIME_METRICS.csv",
+    "tables/J_TIME_METRICS.md",
+    "tables/J_TIME_MONTHLY.csv",
+    "tables/J_TIME_MONTHLY.md",
+    "tables/J_TIME_SUPPORT.csv",
+    "tables/J_TIME_SUPPORT.md"
+  ],
+  "preserved_unmanaged_files": [],
+  "removed_obsolete_managed_files": [],
+  "last_successful_artifact_time": "2026-09-10T13:17:12+01:00",
+  "j03_cache_key": "9b4e23afc779ea5cf8c8849b51c0c6ee27f313e468c99af4eb5d47f675c5e92c"
+}

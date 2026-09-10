@@ -1,0 +1,118 @@
+{
+  "task": "APP-J03-COMPARE",
+  "rules": {
+    "version": "ddagg01-stable-v1",
+    "theta_bounds": [
+      0.1,
+      200.0
+    ],
+    "beta_bounds": [
+      0.05,
+      5.0
+    ],
+    "p0_bounds": [
+      0.0,
+      0.999999999999
+    ],
+    "start_quantiles": [
+      0.75,
+      0.9,
+      0.98
+    ],
+    "start_beta": [
+      0.25,
+      0.6
+    ],
+    "start_background_fraction": [
+      0.25,
+      0.8
+    ],
+    "fixed_legal_start": [
+      40.0,
+      0.27,
+      0.0014
+    ],
+    "starts": 13,
+    "maxiter": 600,
+    "maxls": 40,
+    "ftol": 1e-13,
+    "gtol": 1e-09,
+    "fallback": "at most two Powell starts, maxiter=300, maxfev=3000",
+    "stationary_tolerance": 1e-05,
+    "nll_tolerance": 1e-05,
+    "prediction_std_min": 1e-08,
+    "weak_id_nll_tolerance": 0.01,
+    "weak_id_parameter_ratio": 1.25,
+    "seed": 20260909
+  },
+  "matching": {
+    "rows": 121656,
+    "lads": 111,
+    "days": 1096,
+    "start": "2021-04-01",
+    "end": "2024-03-31",
+    "same_keys": true,
+    "same_labels": true,
+    "same_saved_folds": true,
+    "equal_row_weights": true,
+    "timezone": "UTC",
+    "unit": "m/s",
+    "key_label_sha256": "7521838fe26d74f97cbefd9780f9561b3fdaf3cc6f003c7d13f0e400cc49130d",
+    "fold_sha256": "f2da4b80f3b5bfc1710ae4fa416c194e432670f9a20d652a7697aed64d03a12f",
+    "scheme_hashes": {
+      "PROXY": "ae2c0a1fd45590f6fb88940c1287c358da03eb1183734b0a1eb8f7b74c7a1f89",
+      "GRID_MAX": "276af1fb8522c034cc5f4634ceb8397269d7a7f3ce33c8c1ea4af6d4f3b52c1b"
+    }
+  },
+  "inputs": {
+    "results/new/20260909183317/results/final_models/district_day_panel.csv": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a",
+    "results/new/20260909183317/results/final_models/district_day_fragility.json": "dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb",
+    "results/new/20260909231634/results/dd_agg01/experiment.json": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547",
+    "results/new/20260909231634/results/dd_agg01/inventory.json": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+    "results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884",
+    "results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl": "a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace",
+    "results/new/20260909231634/results/dd_agg01/fit_summary.csv": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b",
+    "results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b",
+    "results/new/20260909231634/results/dd_agg01/validation.json": "c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199",
+    "results/new/20260909205214/results/p03_p04/lad_folds.csv": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+  },
+  "code": {
+    "analysis_new/fragility_optimizer.py": "8de12747daa0966b8ab0a93508ca4e76dab58a3ebb9450d22f053e7a0fb2bca2",
+    "analysis_new/dd_agg01_evaluation.py": "08291b277a25165c96c66e7ca9d0ee1f44f2bee956eafabadf76e8ae863a7e42",
+    "analysis_new/grid_fragility_validation.py": "1ec3ffbcd9a1e1a86fd2339bf8b1c8d9b42e062cd3e1531c41ee7ed427c18634",
+    "analysis_new/appendix/j03_compare.py": "67eab118c2b577f422c382592b3747f74a16b0678f48f1a930aab6aec3aeb0e4",
+    "analysis_new/appendix/j03_report.py": "e0ba4807aa4c884962c3ee82b7f9f66a46730b3505d9bf1db30720095543e6c9"
+  },
+  "seed": 20260909,
+  "repeats": 1000,
+  "calibration": "common pooled two-source OOF quantiles, unique +0/1; side right; sparse<100",
+  "frozen_at": "2026-09-10T16:43:52+01:00",
+  "command": "C:\\Users\\haoya\\.conda\\envs\\pyoutagegust\\python.exe D:\\Pyprogramme\\pyOutageGust\\main_appendix.py --appendices J --j03-only",
+  "workers": 2,
+  "plan": "docs/new_analysis/instructions/附录FGHIJ四步推进台账与第一步J03执行指令.md",
+  "plan_sha256_at_execution": "8da4dbd53872f9622522d3c72a55f3c40c08df6256023210a3d4bddaa6f153f9",
+  "primary": "any_gt100",
+  "important_secondary": "wthr_gt100",
+  "target_rule": "at least one incident; gt0 includes zero-customer incidents, other thresholds strictly >; no daily sums",
+  "weather_definition": {
+    "PROXY": "same-day event-anchor interpolation, not daily maximum",
+    "GRID_MAX": "independent downloaded ERA5 hourly gust daily maximum at established LAD locations"
+  },
+  "scope": "overall exposure-construction comparison; neither source is observed truth; no new weather or anchoring analysis",
+  "uncertainty": "paired whole LAD fixed OOF, 1000 draws; no refit/selection/full shared storm-date uncertainty",
+  "score_sign": "delta=BS_PROXY-BS_GRID_MAX; relative_pct=100*delta/BS_PROXY; BSS uses common training-fold rate",
+  "force_recompute": false,
+  "cached_export": false,
+  "python": "3.12.6 | packaged by Anaconda, Inc. | (main, Oct  3 2024, 07:22:25) [MSC v.1929 64 bit (AMD64)]",
+  "previous_attempt_error": "KeyError: 'grid_max_brier'",
+  "reuse_oof_max_abs_error": {
+    "any_gt0": 0.0,
+    "any_gt5": 0.0,
+    "any_gt100": 0.0,
+    "any_gt1000": 0.0,
+    "wthr_gt0": 0.0,
+    "wthr_gt5": 0.0,
+    "wthr_gt100": 0.0,
+    "wthr_gt1000": 0.0
+  }
+}

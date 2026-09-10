@@ -1,0 +1,658 @@
+{
+  "created_at": "2026-09-10T09:04:06.650956+01:00",
+  "inputs": [
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909231634\\results\\dd_agg01\\experiment.json",
+      "sha256": "64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909231634\\results\\dd_agg01\\PROTOCOL.md",
+      "sha256": "a9789616355669559ef0b6f6c3a34fd0c40f86087a65ffa1bff92964f1ab98cd"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909231634\\results\\dd_agg01\\fit_summary.csv",
+      "sha256": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909231634\\results\\dd_agg01\\parameters.csv",
+      "sha256": "42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909231634\\results\\dd_agg01\\metrics.csv",
+      "sha256": "eb1ebc0a7baff80a947ff65e1bb4d2a5da101bd5f8bd3a1f3d16b559bd74ee16"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909231634\\results\\dd_agg01\\oof_predictions.csv.gz",
+      "sha256": "0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909231634\\results\\dd_agg01\\optimizer_candidates.csv.gz",
+      "sha256": "0083c7f62bdf9870903cc7392df98cf59e5bd323726f2da4fce3666cb5819b75"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909231634\\results\\dd_agg01\\daily_aggregations.csv.gz",
+      "sha256": "874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\panel_grid.csv",
+      "sha256": "9cd7cc2dba142f10bf5dfdc489882d19eb70fc6966b6c7e18b485f841fe4f976"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\lad_folds.csv",
+      "sha256": "b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E06000031.json.gz",
+      "sha256": "4f3baa166ce3a36b7b50881cceb739836b6a5c184d8cf7cf4c3d2cc085d4cd48"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E06000032.json.gz",
+      "sha256": "18c8b12d89d2b145d74b7b154241a658a43a44c915b06c536cd4536ac52dccf7"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E06000033.json.gz",
+      "sha256": "8c1be280a7f2c1da19d870231317c5fccfb89ba2746f3ea5811c41a35a0d3fdb"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E06000034.json.gz",
+      "sha256": "7af2355e1889e7c9ddfab50f52889b3c10d0d24f281ff0fa7f3abc7eda577c6d"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E06000035.json.gz",
+      "sha256": "800664cabd6d3edb1204d702c853bbb3ece72055fa0405982e9ea9c0b7f26073"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E06000043.json.gz",
+      "sha256": "e0b816ad11044a1669d38909e631d38686d908a850c5b171d132ce01c54880b2"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E06000055.json.gz",
+      "sha256": "ad3905ffef44c1821a53897f03255a665db11eb3bd0d6d013393f52dc45b7c16"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E06000056.json.gz",
+      "sha256": "88104d145676083e8f0d4f6e52b0cbb2bb46e9d37beb73e9798d968d3017cf3a"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E06000060.json.gz",
+      "sha256": "8e5bccc5df9ae001745eb11d317fd1cbdbb37505d9cc3acbec60219085ba7d84"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000008.json.gz",
+      "sha256": "958bf1766c9662f06a44b28f58596f3c35f52038edcfa49f6aa6f113cf08902c"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000009.json.gz",
+      "sha256": "13079f2a11b8d4a56c976f548e2b759350618442ee4cc88afee619dced025f6e"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000010.json.gz",
+      "sha256": "26a688a8c313e60c6981563fd315aa0fb9d0f0bd8cb0de7b852109464f6bd815"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000011.json.gz",
+      "sha256": "223be30285bd6a6c31a926420b0df0ffc1f57b18a0dd8b2ec489d1a39d09f011"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000012.json.gz",
+      "sha256": "d0324b2290557ee5a7c9f83b3a0826c7c08bf245d5576a6e80d0d2f6bfecb1d5"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000061.json.gz",
+      "sha256": "c867f9175e42927f68847993b3bf953a0812ee6c2fc8e8c709d09641c85f13c1"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000062.json.gz",
+      "sha256": "26a4b40ae97ad0ffbca0b9d0d110700d6f04c0223c145ab4d1f1af2ab3300d08"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000063.json.gz",
+      "sha256": "ad793ffa7600374762086e1e6b3c73c7d5e507806608dcfdc8395926f78d54ce"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000064.json.gz",
+      "sha256": "93ed74816692f5a3c56f012a61dd5aab0c7804ca0a2ca3f85d32ddaa41959097"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000065.json.gz",
+      "sha256": "b6d60d18a26df3566b9815ac558d7fff5d765c2c5a44d3f64110ae9da7e6cec7"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000066.json.gz",
+      "sha256": "acb830c3eb5e84f03dca1dcb37b92252164a5a2625073e59d4cbef55522e8c8e"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000067.json.gz",
+      "sha256": "88e3ecdf12351adae7a7153e8ae5adb624a0d895c32826d9ffe90b4b7f8758af"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000068.json.gz",
+      "sha256": "57155cd2d98a643c3a81d040b65219ab56415f08e8d25a5eb1ccfb509bb98f16"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000069.json.gz",
+      "sha256": "5be9cf14fe2a9ba21a3c2d1f8de4c0ae325a62afd42248942b1bbcbaac3993fb"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000070.json.gz",
+      "sha256": "6eaeb67c9c1a9a878288d985632126df43de741c0b875d1d177615c38a93dc49"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000071.json.gz",
+      "sha256": "04d47d0dbcc65bdbb2d2c44c98cc2893d1f9c4cbca611d019af6ac1f1d9b05ab"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000072.json.gz",
+      "sha256": "0ba733ebfd9cfbdc9173a46246262fa088794bcf91f784322f068a104ea6e0d9"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000073.json.gz",
+      "sha256": "2bd54357b8128394951e2d9ff93fc2156eaa0f421ea34055484091ad79ca112b"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000074.json.gz",
+      "sha256": "5dd1ff26952dcb3942f9f09a7248de1d6dfa3fd845be6d9f17259d40022258aa"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000075.json.gz",
+      "sha256": "b471426c21b444fd125519a11a1b671052b4062033adf70442069f0e918de2d7"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000076.json.gz",
+      "sha256": "9370dcbaf56d9c1275290e441a29d5a59ae0bfe4390d017c9a9a3ef2e61e7614"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000077.json.gz",
+      "sha256": "8683d68d7649a8167f2c6868f7f6fb693d73aaa31d0d91c719c23f3577c1195a"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000095.json.gz",
+      "sha256": "346f3a176d810249384d2b997e0450aec40339a1c38869f8c57ceaf8bdbdddd2"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000096.json.gz",
+      "sha256": "94e746c3c07a121a5a821693163ce5676ac3177c207edeb6ba925acf1f5333f7"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000098.json.gz",
+      "sha256": "1a84da72f7cfc8cd0ac2e3ffe36b2a19af96e033934e5da5d982d0cbf428da4e"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000099.json.gz",
+      "sha256": "8f43c28dae85c411561b6222b82b926e8a040faea72f0f505103f4f8d74d5dea"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000102.json.gz",
+      "sha256": "7a75bd7a81b0ab0c024887a91b0dc5eded2745e795c0f15c33f064392439b152"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000103.json.gz",
+      "sha256": "6844d62cbd1a9ad7a44ce4d15e7a774a5a1ea3e7a26cdae1a31c06d7ccf7b09a"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000105.json.gz",
+      "sha256": "c629e3cd364948178db11cd24a15f138bc0b116119033314f7ba0fe4cb0ffe88"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000106.json.gz",
+      "sha256": "5347e98edd96551ba5d4a5d4bb6f4f094cb9698bc803dcb8c4d6bb471e619582"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000107.json.gz",
+      "sha256": "2d510f4f62f15a9df93625f624487e513d4e7f6c0ed4f456a701d757ade32b1a"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000108.json.gz",
+      "sha256": "aaef231ae468c3adfa4ef9bd320299cfa72ad761d33db622d91ae36da2096d48"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000109.json.gz",
+      "sha256": "a7ba0d01fd7d479395f887448e7800fec5f50a3955c8634ddfad90bce65031a4"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000110.json.gz",
+      "sha256": "b687a980e4754f158a924e5b69ab84b1f315696b9e0e132b69715e39e80573a2"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000111.json.gz",
+      "sha256": "1bdeccdf7d1bbbdc6a2b6046ff36b154adc7e2542e414fa08fc2d3062c1e75a6"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000112.json.gz",
+      "sha256": "1f2dec121c25c9bd99291be80051d4e4d658e47cde84b9020818a77e8a6ba89e"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000113.json.gz",
+      "sha256": "f3b32ae8be6d2805d627da2b9661f86c18b6586e4beb9a4d5f62d5ad0d14896f"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000114.json.gz",
+      "sha256": "0806f767049b94b0a715c22a01547dc99cfdbb15f8a0178d1376f05124a7dc83"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000115.json.gz",
+      "sha256": "f1e37f90284eb0b5e6f7acdb3485403aa623ff7b696b13b5eda99ca29d89551e"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000116.json.gz",
+      "sha256": "1b2487034540c6705525762e088f104806b212b6d2b997312cf393fb7070cd4b"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000143.json.gz",
+      "sha256": "80a3316d1a32626a5efe53c0eae0d550efda16e197c44860676418bab9dfbe60"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000144.json.gz",
+      "sha256": "c8668605add538f14d3476623282db3aeb9d163074308da3fa4dd1c79da2624f"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000145.json.gz",
+      "sha256": "f7323b54a5d1105e9813e15c843b3ca50a4f486068fa84370b544d320b46e24a"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000146.json.gz",
+      "sha256": "e446ebf96cbc7583f2b80d36ad386477ff12a34042f423c2dbaf85ccc1f7f3d2"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000147.json.gz",
+      "sha256": "bef43c81d89dbaaafd79ebaeb92561f036b1221527f49bed8a3081eefa2004d9"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000148.json.gz",
+      "sha256": "358e123fd13340caa01e9b0f336314e856bff63f637e89826b21b28dfa512203"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000149.json.gz",
+      "sha256": "6d14f67c7e5d0b59600ce248519a60bc66735c9f7795c59f7545aad04657c452"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000179.json.gz",
+      "sha256": "10fa4fb7aac47507237ff8263f1abfeda8486ac5122b2162ecb7b5e5446cee50"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000200.json.gz",
+      "sha256": "cb3f88fc867c155e3a17af0b3cb0f04f1d6d3d5866c89bd52eafa1db2812f873"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000202.json.gz",
+      "sha256": "6f077a9b6447c1e56783cd2f321e0938d36834a8b879ba22e378d355b4c4df30"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000203.json.gz",
+      "sha256": "b6cabf2aab182044185533ebd5133332ade57f966005edd3a74a60d589dd2673"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000207.json.gz",
+      "sha256": "91037f0b21fbf7c99d017681ada86fb39cad133a1eedac2c4e17400e080a99b9"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000208.json.gz",
+      "sha256": "6c3c20f76a03a97c29e63ed0883f8f8c80c2daf56019953b9c9831e855cdd8ac"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000209.json.gz",
+      "sha256": "115e90a94290b0086e76cf496779e9e7d4c0b6036fa1f2c01ddc687da1610280"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000210.json.gz",
+      "sha256": "d6292e897b99467aaaefd59278323b0f98b1c66c2c64e280c80e888272f97392"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000211.json.gz",
+      "sha256": "89eaeceb5dab59446c33356d7a2eea85a8e6c4a10fab0816994265c7cc80e8fb"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000212.json.gz",
+      "sha256": "cdd2fb2c705f0a7d7c863db40634eee855d76d9c52b68fa57d5522ca00db6962"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000213.json.gz",
+      "sha256": "f7dae817a2d1ec704debd3780294e8b6ffc8fb15604cf23000d9dde3c93b56bc"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000215.json.gz",
+      "sha256": "759886f3dd4df7c22e9303faa770ea778f6e639199f404e7b8ffc44db5c81b90"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000216.json.gz",
+      "sha256": "95e97361be1f4539110b90ccf8c0944b636f20329ce57f2522b35ebb239c22b2"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000217.json.gz",
+      "sha256": "bb0ed1f72044c584a637bf37f1fc16ae866352cf80b612f29db7c494844f660c"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000223.json.gz",
+      "sha256": "c82d88bb0a66e64962e30f348e66fc24e1dccd8bd03ba2e10b63d76349442de4"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000224.json.gz",
+      "sha256": "18170ddcde246dba7e551e35f23111dc22397a79bd954d01771b5f566d036a0f"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000226.json.gz",
+      "sha256": "b455636c5baf62befd5cdc53dd78578a90629ad24c5e6cd6e6f793c88337b405"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000227.json.gz",
+      "sha256": "8c453e82b746014ab6f2867358d17104e4d3f1a9abc70bb53bd2784eb9038d19"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000228.json.gz",
+      "sha256": "78edef9462ee5386dce46dd4ec3eadb579a6ba87e7b174476ae4a48f4ea0a655"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000229.json.gz",
+      "sha256": "1707fea9138a63a6c09e837d3d069d10c8706b7cbf516834cb1fbbb4d4de9694"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000240.json.gz",
+      "sha256": "8b542cf5ea759709ec2bad894d50aff87e13ceaaee2bcb9b33bc4f480957d2d1"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000241.json.gz",
+      "sha256": "8ccabdba78a521cdd641c1d7e69493ed273d3ab0de9e86d2fb1988d7f88d5288"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000242.json.gz",
+      "sha256": "7b8ca89cfabf6b99007c2f2f6b104b8ea3587372ccea06b0ce9cb45d94f2ca10"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E07000243.json.gz",
+      "sha256": "b6f582339b7c71541e5199aaaed92920b19bbfc4674dc663048cbf5ff5cfc700"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000001.json.gz",
+      "sha256": "55e185e63bb94c7ab5472b0d6e243090cb7b57b900fe1838e451dba384517670"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000002.json.gz",
+      "sha256": "65b18ca5b7695797e851e2318e69653b6b21ed9f3134c7b9c3ee94da44aad3a5"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000003.json.gz",
+      "sha256": "4af354693ea2879faed05460a22af5dcdb5eb0633a1dedb6ad9634d2272bf88b"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000004.json.gz",
+      "sha256": "18560884c7a8ec09c8094c8c0a38da2a42c7e31b6597b7a9ee59de81ab761620"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000005.json.gz",
+      "sha256": "8da233bac07b436d5ce0604c4590b54660000daf0e83aff35013383b9b83388b"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000006.json.gz",
+      "sha256": "2c726a2b50f74420bdc50274bdf911955d874a5b247aff1c2cc5089eb871bf53"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000007.json.gz",
+      "sha256": "108e9d71bd073c3e69795f2996af1e2342ff31f8de40ca0fd532b2ba82d73983"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000008.json.gz",
+      "sha256": "9d980ceeea882a85f54f6888b8c472469a285e9c44b1ae6bf165627f7cf4590b"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000010.json.gz",
+      "sha256": "48907390386a0ad0a00db792111d99a45fb34c82dace7840ec448e870f5d33ac"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000011.json.gz",
+      "sha256": "1e0ed8c4612a6e8d1ec9d9aa6e4d41153735eb61ceb92a65d4c60bf0b78a54dd"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000012.json.gz",
+      "sha256": "a9ab0e710ad6ecab02dc5f8d1764444e103ec311fdff4aa3e44062c16895fa65"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000013.json.gz",
+      "sha256": "07fb540b0929c82e80fa1eb4b8d5acf4193dbdf22b1e467fa2dc6df6d30f86bb"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000014.json.gz",
+      "sha256": "51c6f3bcc15cb60d2b5006d0bddbdfedd1aed2cb7ee883c629d2ec464151471d"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000015.json.gz",
+      "sha256": "b646a7b9618dde644482bdc3340307a227ab78c17738eeb319eecde661c3c91a"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000016.json.gz",
+      "sha256": "34b6a2395e5bae839f9504b6321ca2ce9d1fbe0e943b5dc8d4ffa1aeb1c7ee8e"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000017.json.gz",
+      "sha256": "0a442c824b52bc334414b02d21becaa12d49ba2fb85e501eb7dd7de1194d52f6"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000019.json.gz",
+      "sha256": "6ccb785233c504e84da89a4a9982a5ce38dec61454d9415beb16d18d6de6c185"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000020.json.gz",
+      "sha256": "4484325378da6610bab253ddc324ed2d7e66ed0c34f437dd7927bfb7463923a7"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000021.json.gz",
+      "sha256": "4aa931cc18eb64c0bb50d7eded8d8ad5a02ceba2b9af8f41b3c1776867e0aec7"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000022.json.gz",
+      "sha256": "3be74dc7c95bdbb5c9c6ca58236cca3802d0bc94bf81806629e251d1b10982ed"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000023.json.gz",
+      "sha256": "b37fdae18b0726740c90baf7c62d6aa98aa24c382ca2c07c15be8a01620fc62f"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000024.json.gz",
+      "sha256": "ffc6c138971d3ea43589d6c871d4c5958d6ae6976e4de50818cfb173d77d1447"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000025.json.gz",
+      "sha256": "54fab67ed24fd73d93afb16601fd6db968729cbe2dd9bd69a747d77af00aeafa"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000026.json.gz",
+      "sha256": "ad3552baa17ae9318bc842e7d5c99e0e26f13e14874182672cf839c0fa50b73c"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000027.json.gz",
+      "sha256": "d4b91836c9beb7dafc1c82c09d3e46739f132fb3806f0ad4d17666f61d452571"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000028.json.gz",
+      "sha256": "c1b7986aa4cc7fd439eeaea977324eb79a092905271c5bbc13d553211d3e7343"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000029.json.gz",
+      "sha256": "173d7add3daae49b1a4e74a804ec9e8ca4c05d0a693f942e1eb33a38e207ca89"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000030.json.gz",
+      "sha256": "1fd313ef8fff381e85d8de3385248506ada3567fbf7ffcf0ee1b87c352185496"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000031.json.gz",
+      "sha256": "7c1275db3321765fe125f41158f5197c9636e70fb58902f11496c77e2ebf4018"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000032.json.gz",
+      "sha256": "3c8b336e2029b667d9695b8272ef6aad5228faeff41fea0894c8e8f1e91e9b19"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\results\\p03_p04\\weather_raw\\E09000033.json.gz",
+      "sha256": "ed5aea852afb049705dffe98f7b47f8479f0683393e1cb84bd01d05913bb18a5"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909231634\\run.json",
+      "sha256": "5b6871edc1c0b543f19b583bdfbf06137b2ed8cdfbd61b68cee72c46aa217c5f"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214\\run.json",
+      "sha256": "3cd6ce2d7e70b08d3d63ae2b3fdc6dd59cf3c135d2c9c44041eea4d7592520cc"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\docs\\new_analysis\\instructions\\Codex_DD_DUR01_持续强风增量测试.md",
+      "sha256": "a84d7904203dfcaefd7213364b0d2617d2b7553d648e7d07e8e6dc8346e1badf"
+    }
+  ],
+  "files": [
+    {
+      "path": "baseline_match.json",
+      "bytes": 7793,
+      "sha256": "b7cdc3fcf8b3d324c1052fe23850d8584cbebd9b95ab9fea1f7463cfa0a2f33a"
+    },
+    {
+      "path": "calibration_bins.csv",
+      "bytes": 29845,
+      "sha256": "a19c5bd1392bb668a48a16b3feb9abf5a4dcefdbbe6c362d494b8df14094469d"
+    },
+    {
+      "path": "calibration_edges.json",
+      "bytes": 2663,
+      "sha256": "88416d132df823fab5e71cc09147f027a3591028ef5b2cab465d9e2c50a9d52f"
+    },
+    {
+      "path": "execution.jsonl",
+      "bytes": 18107,
+      "sha256": "9c6e44ed467be2bb6372961dea72250b5ddbf757b194e00ad3ddf35f4f31e284"
+    },
+    {
+      "path": "feature_support.csv",
+      "bytes": 84670,
+      "sha256": "c2937fa65f99b6fe09404eedf715b93eb2f426fd17e7ff3a8dc37be272796ce1"
+    },
+    {
+      "path": "features_by_fold.csv.gz",
+      "bytes": 6545782,
+      "sha256": "bc976a889ecb0c1da1ba79cdc152447d2158bb55c68ddd95168198f8a4d11ee0"
+    },
+    {
+      "path": "figure_axes.json",
+      "bytes": 908,
+      "sha256": "5af084fca1dcbc6675cccb1f89142988748c934874d0b9c161f45b347cce113f"
+    },
+    {
+      "path": "figures/calibration_any_gt0.png",
+      "bytes": 78678,
+      "sha256": "58e90bfae200fa5202e24e1b03b22c68bcf363cebd6c240c41a13b5d90a72d4b"
+    },
+    {
+      "path": "figures/calibration_any_gt100.png",
+      "bytes": 87333,
+      "sha256": "f81321eb31dbdfc05e36d8286e76d0aebd3a19afdc39f42bd8c22aefc8761ce1"
+    },
+    {
+      "path": "figures/calibration_any_gt1000.png",
+      "bytes": 98677,
+      "sha256": "37d629489bc9e3a5507c794ddb6dcf8bd05eb530c8b0aee03aa4a1e97948ae09"
+    },
+    {
+      "path": "figures/calibration_any_gt5.png",
+      "bytes": 84824,
+      "sha256": "406e788bd7000bf481b7ed43502da381dc5022dcea642d4237fff0801104cbfc"
+    },
+    {
+      "path": "figures/calibration_wthr_gt0.png",
+      "bytes": 91752,
+      "sha256": "0b5a4d214cb2efaebd8831620633f69c23c1baf700b418e948cd4aafcc503d16"
+    },
+    {
+      "path": "figures/calibration_wthr_gt100.png",
+      "bytes": 89993,
+      "sha256": "3660eb41ec9ec5e9c291a6834cc03e137a4004b528da6cf20c2ced4259ed65e9"
+    },
+    {
+      "path": "figures/calibration_wthr_gt1000.png",
+      "bytes": 98846,
+      "sha256": "8daa3c463dc8a493c3eeb9083c5090be15cec23a425fb5c1590b36b4ab595d68"
+    },
+    {
+      "path": "figures/calibration_wthr_gt5.png",
+      "bytes": 89179,
+      "sha256": "3b1de2fda23ac2a766514a9f901c177aac050ddd257d0224a5cee17137221b98"
+    },
+    {
+      "path": "figures/observed_joint_support.png",
+      "bytes": 74971,
+      "sha256": "a717f78519dcfeb9982d143bb54232563dc36a71e311bfa3732ec2e25c93db84"
+    },
+    {
+      "path": "fit_checkpoint.jsonl",
+      "bytes": 2156323,
+      "sha256": "61a9001795ee3347f3ee837aac39995d5070f19ebb632f6e9d7f5f1b821cb54e"
+    },
+    {
+      "path": "fit_summary.csv",
+      "bytes": 79919,
+      "sha256": "934591a3a8ddd97fa9075251f0acee63430408407622e019a864c299f963b9e4"
+    },
+    {
+      "path": "fold_metrics.csv",
+      "bytes": 17074,
+      "sha256": "903d232e80e04d6cea5ffb141241a77b55baab29a5bf1f2d3a2ad3b586bde962"
+    },
+    {
+      "path": "full_predictions.csv.gz",
+      "bytes": 8958797,
+      "sha256": "7b7f3a8c0816926fe20df300ef0db62445bd901b3131c5d564bd332d939fae84"
+    },
+    {
+      "path": "joint_support_bins.csv",
+      "bytes": 9315,
+      "sha256": "d9c16d7570e4e5c6c44415aa83f735f0b40f7a9ef62f63fb45aea0f1ffe76eb6"
+    },
+    {
+      "path": "metrics.csv",
+      "bytes": 5461,
+      "sha256": "961b7679457a124ac133b75a28a00f8d364e9ce2641a7fe8b509709d90d3b3fe"
+    },
+    {
+      "path": "oof_predictions.csv.gz",
+      "bytes": 19586198,
+      "sha256": "06f166bf95d60b0938fa6ebff30c64d34d12c468ad765958a602400c0d318de5"
+    },
+    {
+      "path": "optimizer_candidates.csv.gz",
+      "bytes": 221602,
+      "sha256": "0d4798193c7997449bb22181f80bf9af8ea81dace122b2b8b3bde0fd69350d38"
+    },
+    {
+      "path": "paired_uncertainty.csv",
+      "bytes": 2493,
+      "sha256": "05226c6f67469e4cefda88bbb259f8ac1b1b420e579c49513aa04acf98228427"
+    },
+    {
+      "path": "parameters.csv",
+      "bytes": 79919,
+      "sha256": "934591a3a8ddd97fa9075251f0acee63430408407622e019a864c299f963b9e4"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 38058,
+      "sha256": "172dc5400dd2301fc1fff6fc505fa1d315e9ab4fecff667eb6e7ec6bf064f288"
+    },
+    {
+      "path": "PROTOCOL.md",
+      "bytes": 3017,
+      "sha256": "e2096bcd8533d207e2b70b4a4f8525cc6d9aab62b319c0135f794b0f9d2240f0"
+    },
+    {
+      "path": "RESULTS_README.md",
+      "bytes": 5235,
+      "sha256": "ea928ff4692f5b59cff40ca376b6a84e3ca2f63f4e5a0c8a624c3dd29954d3ee"
+    },
+    {
+      "path": "thresholds.csv",
+      "bytes": 343,
+      "sha256": "56b626c927b766d1a1be6f503fb377f1454fb9cc3ccfe9ea9b43a9a9884729e5"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 25941,
+      "sha256": "f724ec64796ca205d5689058bd774a0136295880679f241b8d533912eda318f1"
+    }
+  ]
+}

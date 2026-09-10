@@ -1,0 +1,24 @@
+{
+  "time": "2026-09-10T20:18:44.183653+01:00",
+  "command": "C:\\Users\\haoya\\.conda\\envs\\pyoutagegust\\python.exe -X utf8 -B main_appendix.py --appendices H --h03-only",
+  "all_passed": true,
+  "checks": {
+    "entry_exit_zero": true,
+    "validated_cache": true,
+    "no_GLM_fitting": true,
+    "no_OLS_fitting": true,
+    "no_H2_H3_fitting": true,
+    "arrays_diagnostics_unchanged": true,
+    "other_appendix_files_unchanged": true,
+    "manifest_output_hashes_valid": true,
+    "H01_H02_preserved": true
+  },
+  "stable_H_files": 72,
+  "protected_other_files": 884,
+  "changed": [],
+  "other_changes": [],
+  "manifest_mismatches": [],
+  "stdout": "H03: validated cache; no GLM/OLS fitting\n{\n  \"root\": \"D:\\\\Pyprogramme\\\\pyOutageGust\\\\results\\\\Appendix\",\n  \"tables\": 70,\n  \"figures\": 9,\n  \"requirement_status_counts\": {\n    \"已生成\": 28,\n    \"已有且被明确复用\": 1,\n    \"有具体原因的缺失\": 1,\n    \"产物已补齐/研究负责人已关闭推断补全缺口\": 1,\n    \"产物已补齐/研究负责人已关闭第三包结果缺口\": 2,\n    \"产物完成/待研究负责人反馈分析\": 1,\n    \"产物已补齐/研究负责人已关闭匹配比较缺口\": 1,\n    \"用户已关闭\": 4\n  },\n  \"appendices\": {\n    \"A\": {\n      \"selected\": false,\n      \"last_attempt_status\": \"not_selected\",\n      \"artifact_status\": \"success_with_gaps\",\n      \"update_state\": \"本次已更新\",\n      \"manifest\": \"A/manifest.json\"\n    },\n    \"B\": {\n      \"selected\": false,\n      \"last_attempt_status\": \"not_selected\",\n      \"artifact_status\": \"success\",\n      \"update_state\": \"本次已更新\",\n      \"manifest\": \"B/manifest.json\"\n    },\n    \"C\": {\n      \"selected\": false,\n      \"last_attempt_status\": \"not_selected\",\n      \"artifact_status\": \"success\",\n      \"update_state\": \"本次已更新\",\n      \"manifest\": \"C/manifest.json\"\n    },\n    \"D\": {\n      \"selected\": false,\n      \"last_attempt_status\": \"not_selected\",\n      \"artifact_status\": \"success\",\n      \"update_state\": \"本次已更新\",\n      \"manifest\": \"D/manifest.json\"\n    },\n    \"E\": {\n      \"selected\": false,\n      \"last_attempt_status\": \"not_selected\",\n      \"artifact_status\": \"success\",\n      \"update_state\": \"本次已更新\",\n      \"manifest\": \"E/manifest.json\"\n    },\n    \"F\": {\n      \"selected\": false,\n      \"last_attempt_status\": \"not_selected\",\n      \"artifact_status\": \"success\",\n      \"update_state\": \"本次仅F02更新/其他F结果保留\",\n      \"manifest\": \"F/manifest.json\"\n    },\n    \"G\": {\n      \"selected\": false,\n      \"last_attempt_status\": \"not_selected\",\n      \"artifact_status\": \"success\",\n      \"update_state\": \"本次仅G/I任务产物更新，其余保留\",\n      \"manifest\": \"G/manifest.json\"\n    },\n    \"H\": {\n      \"selected\": true,\n      \"last_attempt_status\": \"updated\",\n      \"artifact_status\": \"success\",\n      \"update_state\": \"本次H03更新，H01/H02来源结果保留\",\n      \"manifest\": \"H/manifest.json\"\n    },\n    \"I\": {\n      \"selected\": false,\n      \"last_attempt_status\": \"not_selected\",\n      \"artifact_status\": \"success\",\n      \"update_state\": \"本次仅G/I任务产物更新，其余保留\",\n      \"manifest\": \"I/manifest.json\"\n    },\n    \"J\": {\n      \"selected\": false,\n      \"last_attempt_status\": \"not_selected\",\n      \"artifact_status\": \"success\",\n      \"update_state\": \"本次仅J03更新/其他J结果保留\",\n      \"manifest\": \"J/manifest.json\"\n    }\n  }\n}\n",
+  "stderr": "",
+  "scope": "cache and publication only; no repeated statistical reconstruction"
+}

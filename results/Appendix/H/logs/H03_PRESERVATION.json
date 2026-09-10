@@ -1,0 +1,14 @@
+{
+  "other_H_managed_outputs": {
+    "data/H_OPTIMIZER_DIAGNOSTICS.json": true,
+    "logs/execution.log": true,
+    "logs/validation.json": true,
+    "tables/H_CONDITIONAL_COEFFICIENTS.csv": true,
+    "tables/H_CONDITIONAL_COEFFICIENTS.md": true,
+    "tables/H_CONDITIONAL_LOGNORMAL.csv": true,
+    "tables/H_CONDITIONAL_LOGNORMAL.md": true,
+    "tables/H_ORDINAL_SUMMARY.csv": true,
+    "tables/H_ORDINAL_SUMMARY.md": true
+  },
+  "all_unchanged": true
+}

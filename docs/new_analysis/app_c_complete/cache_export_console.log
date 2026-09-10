@@ -1,0 +1,171 @@
+2026-09-10T15:25:57+01:00 C E0_all H01 M1_weather_linear
+2026-09-10T15:25:57+01:00 C E0_all H02 M2_+gust_sq
+2026-09-10T15:25:57+01:00 C E0_all H03 M3_+gust_x_pressure
+2026-09-10T15:25:57+01:00 C E0_all H04 M4_+socio
+2026-09-10T15:25:57+01:00 C E0_all H05 M5_+year_month_FE
+2026-09-10T15:25:57+01:00 C E0_all H06 A1_gust_cubic
+2026-09-10T15:25:57+01:00 C E0_all H07 A2_log_gust
+2026-09-10T15:25:57+01:00 C E0_all H08 A3_hinge_10.8
+2026-09-10T15:25:57+01:00 C E0_all H09 A4_gust_bins
+2026-09-10T15:25:58+01:00 C E0_all H10 A5_full_quad_weather
+2026-09-10T15:25:58+01:00 C E0_all H11 A6_M5_+LAD_FE
+2026-09-10T15:25:58+01:00 C E0_all H12 A7_M5_no_socio
+2026-09-10T15:25:58+01:00 C E0_all H13 single
+2026-09-10T15:25:58+01:00 C E0_all H14 free_two
+2026-09-10T15:25:58+01:00 C E0_all F01 quadratic
+2026-09-10T15:25:58+01:00 C E0_all F02 cubic
+2026-09-10T15:25:58+01:00 C E0_all F03 log
+2026-09-10T15:25:58+01:00 C E0_all F04 bins
+2026-09-10T15:25:58+01:00 C E0_all F05 fixed10.8
+2026-09-10T15:25:58+01:00 C E0_all F06 single
+2026-09-10T15:25:58+01:00 C E0_all F07 free_two
+2026-09-10T15:25:58+01:00 C E0_all F08 plateau
+2026-09-10T15:25:58+01:00 C E0_weather H01 M1_weather_linear
+2026-09-10T15:25:58+01:00 C E0_weather H02 M2_+gust_sq
+2026-09-10T15:25:58+01:00 C E0_weather H03 M3_+gust_x_pressure
+2026-09-10T15:25:58+01:00 C E0_weather H04 M4_+socio
+2026-09-10T15:25:58+01:00 C E0_weather H05 M5_+year_month_FE
+2026-09-10T15:25:58+01:00 C E0_weather H06 A1_gust_cubic
+2026-09-10T15:25:58+01:00 C E0_weather H07 A2_log_gust
+2026-09-10T15:25:58+01:00 C E0_weather H08 A3_hinge_10.8
+2026-09-10T15:25:58+01:00 C E0_weather H09 A4_gust_bins
+2026-09-10T15:25:58+01:00 C E0_weather H10 A5_full_quad_weather
+2026-09-10T15:25:58+01:00 C E0_weather H11 A6_M5_+LAD_FE
+2026-09-10T15:25:58+01:00 C E0_weather H12 A7_M5_no_socio
+2026-09-10T15:25:59+01:00 C E0_weather H13 single
+2026-09-10T15:25:59+01:00 C E0_weather H14 free_two
+2026-09-10T15:25:59+01:00 C E0_weather F01 quadratic
+2026-09-10T15:25:59+01:00 C E0_weather F02 cubic
+2026-09-10T15:25:59+01:00 C E0_weather F03 log
+2026-09-10T15:25:59+01:00 C E0_weather F04 bins
+2026-09-10T15:25:59+01:00 C E0_weather F05 fixed10.8
+2026-09-10T15:25:59+01:00 C E0_weather F06 single
+2026-09-10T15:25:59+01:00 C E0_weather F07 free_two
+2026-09-10T15:25:59+01:00 C E0_weather F08 plateau
+2026-09-10T15:25:59+01:00 C R0c_all H01 M1_weather_linear
+2026-09-10T15:25:59+01:00 C R0c_all H02 M2_+gust_sq
+2026-09-10T15:25:59+01:00 C R0c_all H03 M3_+gust_x_pressure
+2026-09-10T15:25:59+01:00 C R0c_all H04 M4_+socio
+2026-09-10T15:25:59+01:00 C R0c_all H05 M5_+year_month_FE
+2026-09-10T15:25:59+01:00 C R0c_all H06 A1_gust_cubic
+2026-09-10T15:25:59+01:00 C R0c_all H07 A2_log_gust
+2026-09-10T15:25:59+01:00 C R0c_all H08 A3_hinge_10.8
+2026-09-10T15:26:00+01:00 C R0c_all H09 A4_gust_bins
+2026-09-10T15:26:00+01:00 C R0c_all H10 A5_full_quad_weather
+2026-09-10T15:26:00+01:00 C R0c_all H11 A6_M5_+LAD_FE
+2026-09-10T15:26:00+01:00 C R0c_all H12 A7_M5_no_socio
+2026-09-10T15:26:00+01:00 C R0c_all H13 single
+2026-09-10T15:26:00+01:00 C R0c_all H14 free_two
+2026-09-10T15:26:00+01:00 C R0c_all F01 quadratic
+2026-09-10T15:26:00+01:00 C R0c_all F02 cubic
+2026-09-10T15:26:00+01:00 C R0c_all F03 log
+2026-09-10T15:26:00+01:00 C R0c_all F04 bins
+2026-09-10T15:26:00+01:00 C R0c_all F05 fixed10.8
+2026-09-10T15:26:00+01:00 C R0c_all F06 single
+2026-09-10T15:26:00+01:00 C R0c_all F07 free_two
+2026-09-10T15:26:00+01:00 C R0c_all F08 plateau
+2026-09-10T15:26:00+01:00 C R0c_weather H01 M1_weather_linear
+2026-09-10T15:26:01+01:00 C R0c_weather H02 M2_+gust_sq
+2026-09-10T15:26:01+01:00 C R0c_weather H03 M3_+gust_x_pressure
+2026-09-10T15:26:01+01:00 C R0c_weather H04 M4_+socio
+2026-09-10T15:26:01+01:00 C R0c_weather H05 M5_+year_month_FE
+2026-09-10T15:26:01+01:00 C R0c_weather H06 A1_gust_cubic
+2026-09-10T15:26:01+01:00 C R0c_weather H07 A2_log_gust
+2026-09-10T15:26:01+01:00 C R0c_weather H08 A3_hinge_10.8
+2026-09-10T15:26:01+01:00 C R0c_weather H09 A4_gust_bins
+2026-09-10T15:26:01+01:00 C R0c_weather H10 A5_full_quad_weather
+2026-09-10T15:26:01+01:00 C R0c_weather H11 A6_M5_+LAD_FE
+2026-09-10T15:26:01+01:00 C R0c_weather H12 A7_M5_no_socio
+2026-09-10T15:26:01+01:00 C R0c_weather H13 single
+2026-09-10T15:26:01+01:00 C R0c_weather H14 free_two
+2026-09-10T15:26:01+01:00 C R0c_weather F01 quadratic
+2026-09-10T15:26:01+01:00 C R0c_weather F02 cubic
+2026-09-10T15:26:01+01:00 C R0c_weather F03 log
+2026-09-10T15:26:01+01:00 C R0c_weather F04 bins
+2026-09-10T15:26:01+01:00 C R0c_weather F05 fixed10.8
+2026-09-10T15:26:01+01:00 C R0c_weather F06 single
+2026-09-10T15:26:01+01:00 C R0c_weather F07 free_two
+2026-09-10T15:26:01+01:00 C R0c_weather F08 plateau
+{
+  "root": "D:\\Pyprogramme\\pyOutageGust\\results\\Appendix",
+  "tables": 51,
+  "figures": 3,
+  "requirement_status_counts": {
+    "已生成": 28,
+    "已有且被明确复用": 1,
+    "有具体原因的缺失": 6,
+    "用户已关闭": 4
+  },
+  "appendices": {
+    "A": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success_with_gaps",
+      "update_state": "本次已更新",
+      "manifest": "A/manifest.json"
+    },
+    "B": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success",
+      "update_state": "本次已更新",
+      "manifest": "B/manifest.json"
+    },
+    "C": {
+      "selected": true,
+      "last_attempt_status": "updated",
+      "artifact_status": "success",
+      "update_state": "本次已更新",
+      "manifest": "C/manifest.json"
+    },
+    "D": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success",
+      "update_state": "本次已更新",
+      "manifest": "D/manifest.json"
+    },
+    "E": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success",
+      "update_state": "本次已更新",
+      "manifest": "E/manifest.json"
+    },
+    "F": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success_with_gaps",
+      "update_state": "本次已更新",
+      "manifest": "F/manifest.json"
+    },
+    "G": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success_with_gaps",
+      "update_state": "本次已更新",
+      "manifest": "G/manifest.json"
+    },
+    "H": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success_with_gaps",
+      "update_state": "本次已更新",
+      "manifest": "H/manifest.json"
+    },
+    "I": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success_with_gaps",
+      "update_state": "本次已更新",
+      "manifest": "I/manifest.json"
+    },
+    "J": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success_with_gaps",
+      "update_state": "本次已更新",
+      "manifest": "J/manifest.json"
+    }
+  }
+}

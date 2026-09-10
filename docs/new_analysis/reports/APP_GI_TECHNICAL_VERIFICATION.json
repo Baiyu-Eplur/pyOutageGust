@@ -1,0 +1,33 @@
+{
+  "time": "2026-09-10T19:27:36+01:00",
+  "command": "python -X utf8 -B test/verify_gi_outputs.py",
+  "passed": true,
+  "checks": {
+    "saved_parameter_components_recomputed": 70,
+    "largest_saved_prediction_abs_difference": 0.0,
+    "pooled_metrics_groups_recomputed": 30,
+    "actual_curve_variances_recomputed": 6,
+    "storm_metrics_groups_recomputed": 40,
+    "storm_union_exact": true,
+    "protected_file_count": 812,
+    "protected_changes": [],
+    "manifest_hashes_match": true
+  },
+  "publication_tests": {
+    "selected_cleanup_and_human_preservation": "passed",
+    "repeated_publication_stable_paths": "passed",
+    "transaction_rolls_back_after_directory_move": "passed"
+  },
+  "scope": "current GI artifacts only; saved coefficients multiplied by rebuilt design, no fitting or independent scientific review",
+  "cache_redraw_verification": {
+    "time": "2026-09-10T19:30:17+01:00",
+    "numeric_files_checked": 55,
+    "changed": [],
+    "new_OLS": 0,
+    "letters": [
+      "G",
+      "I"
+    ],
+    "command": "python -X utf8 -B main_appendix.py --appendices G I --gi-only --render-only-gi"
+  }
+}

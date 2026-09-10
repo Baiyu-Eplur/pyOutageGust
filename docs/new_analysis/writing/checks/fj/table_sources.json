@@ -1,0 +1,384 @@
+{
+  "results/Appendix/F/tables/F_FULL_COEFFICIENTS.csv": {
+    "rows": 168,
+    "columns": [
+      "margin",
+      "sample",
+      "SE_method",
+      "term",
+      "coef",
+      "se",
+      "p_normal",
+      "p_t_G1",
+      "source",
+      "se_lad"
+    ]
+  },
+  "results/Appendix/F/tables/F02_COEFFICIENT_COMPARISON.csv": {
+    "rows": 56,
+    "columns": [
+      "model",
+      "term",
+      "coef",
+      "se_lad",
+      "se_twoway",
+      "se_ratio",
+      "ci_lad_lower",
+      "ci_lad_upper",
+      "ci_twoway_lower",
+      "ci_twoway_upper",
+      "p_lad_t_G1",
+      "p_twoway_t_G1",
+      "df"
+    ]
+  },
+  "results/Appendix/H/tables/H03_FULL_COEFFICIENTS.csv": {
+    "rows": 169,
+    "columns": [
+      "combination",
+      "model",
+      "term",
+      "coef",
+      "se_twoway",
+      "ci_lower",
+      "ci_upper",
+      "p_t_G1",
+      "df",
+      "variance",
+      "point_valid",
+      "interval_valid",
+      "reference"
+    ]
+  },
+  "results/Appendix/F/tables/F03_R2_DECOMPOSITION.csv": {
+    "rows": 14,
+    "columns": [
+      "sample",
+      "margin",
+      "group",
+      "cum_r2",
+      "marginal",
+      "n"
+    ]
+  },
+  "results/Appendix/G/tables/GI_PREDICTION_METRICS.csv": {
+    "rows": 30,
+    "columns": [
+      "combination",
+      "model_id",
+      "prediction_type",
+      "n",
+      "rmse",
+      "mae",
+      "mean_observed",
+      "mean_prediction",
+      "bias",
+      "r2",
+      "correlation"
+    ]
+  },
+  "results/Appendix/H/tables/H03_GUST_COMPARISON.csv": {
+    "rows": 12,
+    "columns": [
+      "combination",
+      "alternative",
+      "term",
+      "ols_coef",
+      "glm_coef",
+      "ols_se_twoway",
+      "glm_se_twoway",
+      "ols_ci_lower",
+      "ols_ci_upper",
+      "glm_ci_lower",
+      "glm_ci_upper",
+      "ols_p_t_G1",
+      "glm_p_t_G1",
+      "df",
+      "same_sign",
+      "ols_95_excludes_zero",
+      "glm_95_excludes_zero",
+      "same_95_evidence",
+      "supported_same_direction_and_95_evidence",
+      "status",
+      "interpretation"
+    ]
+  },
+  "results/Appendix/H/tables/H_ORDINAL_SUMMARY.csv": {
+    "rows": 9,
+    "columns": [
+      "margin",
+      "category",
+      "share",
+      "knots_m_s",
+      "ordinal_llf",
+      "ordinal_converged",
+      "McFadden_R2"
+    ]
+  },
+  "results/Appendix/H/tables/H_CONDITIONAL_COEFFICIENTS.csv": {
+    "rows": 28,
+    "columns": [
+      "margin",
+      "model",
+      "term_or_diagnostic",
+      "value",
+      "knots_m_s"
+    ]
+  },
+  "results/Appendix/H/tables/H_CONDITIONAL_LOGNORMAL.csv": {
+    "rows": 18,
+    "columns": [
+      "margin",
+      "spec",
+      "n",
+      "state",
+      "theta_m_s",
+      "beta",
+      "LR_common_vs_free",
+      "LR_p",
+      "interpretation"
+    ]
+  },
+  "results/Appendix/H/tables/H03_EVENT_CONDITIONAL_FREQUENCIES.csv": {
+    "rows": 182,
+    "columns": [
+      "combination",
+      "sample_version",
+      "threshold_label",
+      "exact_numeric_threshold",
+      "operator",
+      "bin",
+      "left",
+      "right",
+      "closed",
+      "denominator",
+      "numerator",
+      "frequency",
+      "mean_gust",
+      "binomial_se",
+      "original_95_lower",
+      "original_95_upper",
+      "interval_rule",
+      "excluded_gust_count"
+    ]
+  },
+  "results/Appendix/I/tables/GI_STORM_SAMPLES.csv": {
+    "rows": 8,
+    "columns": [
+      "storm",
+      "exposure_n",
+      "recovery_before_duration_cap_positive_customers",
+      "recovery_final_n",
+      "excluded_zero_or_negative_customers",
+      "excluded_duration",
+      "display_only_above_cap",
+      "exactly_one_hour_positive_customer_included",
+      "missing_covariates_in_exposure_source",
+      "source_scope",
+      "cap_hours"
+    ]
+  },
+  "results/Appendix/I/data/GI_STORM_WINDOWS.csv": {
+    "rows": 7,
+    "columns": [
+      "storm",
+      "start",
+      "end",
+      "timezone",
+      "endpoints",
+      "overlap"
+    ]
+  },
+  "results/Appendix/I/tables/GI_STORM_METRICS.csv": {
+    "rows": 40,
+    "columns": [
+      "storm",
+      "combination",
+      "prediction_type",
+      "excluded_from_primary_metrics",
+      "n",
+      "rmse",
+      "mae",
+      "mean_observed",
+      "mean_prediction",
+      "bias",
+      "r2",
+      "correlation",
+      "correlation_p_value"
+    ]
+  },
+  "results/Appendix/J/tables/J_PROXY_LABELS.csv": {
+    "rows": 8,
+    "columns": [
+      "target",
+      "n",
+      "events",
+      "rate",
+      "lads",
+      "days",
+      "start",
+      "end"
+    ]
+  },
+  "results/Appendix/J/tables/J03_PAIRED_METRICS.csv": {
+    "rows": 8,
+    "columns": [
+      "target",
+      "n",
+      "events",
+      "observed_rate",
+      "valid_proxy",
+      "valid_grid",
+      "proxy_brier",
+      "grid_brier",
+      "constant_brier",
+      "proxy_bss",
+      "grid_bss",
+      "delta_brier",
+      "relative_improvement_pct",
+      "proxy_mean_prediction",
+      "proxy_bias",
+      "grid_max_mean_prediction",
+      "grid_max_bias",
+      "valid_comparison",
+      "delta_brier_lo",
+      "delta_brier_hi",
+      "relative_gain_lo",
+      "relative_gain_hi",
+      "repeats",
+      "seed",
+      "relative_improvement_pct_lo",
+      "relative_improvement_pct_hi"
+    ]
+  },
+  "results/Appendix/J/tables/J04_METRICS.csv": {
+    "rows": 40,
+    "columns": [
+      "target",
+      "candidate",
+      "n",
+      "events",
+      "valid_cv",
+      "brier",
+      "brier_a01",
+      "absolute_gain",
+      "relative_gain",
+      "constant_brier",
+      "brier_skill",
+      "calibration_rmse",
+      "calibration_absolute_gain",
+      "calibration_relative_gain"
+    ]
+  },
+  "results/Appendix/J/tables/J04_PAIRED_UNCERTAINTY.csv": {
+    "rows": 40,
+    "columns": [
+      "candidate",
+      "target",
+      "valid_comparison",
+      "absolute_gain_lo",
+      "absolute_gain_hi",
+      "relative_gain_lo",
+      "relative_gain_hi",
+      "repeats",
+      "seed"
+    ]
+  },
+  "results/Appendix/J/tables/J05_METRICS.csv": {
+    "rows": 24,
+    "columns": [
+      "target",
+      "candidate",
+      "n",
+      "events",
+      "valid_cv",
+      "brier",
+      "brier_m0",
+      "absolute_gain",
+      "relative_gain",
+      "constant_brier",
+      "brier_skill",
+      "calibration_rmse",
+      "calibration_absolute_gain",
+      "calibration_relative_gain",
+      "diagnostic_brier"
+    ]
+  },
+  "results/Appendix/J/tables/J05_PAIRED_UNCERTAINTY.csv": {
+    "rows": 24,
+    "columns": [
+      "candidate",
+      "target",
+      "valid_comparison",
+      "absolute_gain_lo",
+      "absolute_gain_hi",
+      "relative_gain_lo",
+      "relative_gain_hi",
+      "repeats",
+      "seed"
+    ]
+  },
+  "results/Appendix/J/tables/J_TIME_METRICS.csv": {
+    "rows": 8,
+    "columns": [
+      "target",
+      "n",
+      "events",
+      "valid_prediction",
+      "model_brier",
+      "baseline_brier",
+      "brier_skill",
+      "mean_prediction",
+      "observed_rate",
+      "prediction_minus_observed",
+      "baseline_probability",
+      "baseline_minus_observed",
+      "calibration_rmse",
+      "development_rate",
+      "bias_probability_percentage_points"
+    ]
+  },
+  "results/Appendix/J/tables/J_TIME_MONTHLY.csv": {
+    "rows": 56,
+    "columns": [
+      "target",
+      "month",
+      "start",
+      "end",
+      "lads",
+      "n",
+      "events",
+      "valid_prediction",
+      "model_brier",
+      "baseline_brier",
+      "brier_skill",
+      "mean_prediction",
+      "observed_rate",
+      "prediction_minus_observed",
+      "baseline_probability",
+      "baseline_minus_observed"
+    ]
+  },
+  "results/Appendix/J/tables/J_TIME_SUPPORT.csv": {
+    "rows": 2,
+    "columns": [
+      "period",
+      "n",
+      "mean",
+      "sd",
+      "min",
+      "p05",
+      "p25",
+      "p50",
+      "p75",
+      "p95",
+      "max",
+      "below_development_range",
+      "above_development_range",
+      "outside_development_range",
+      "outside_fraction",
+      "unit",
+      "definition"
+    ]
+  }
+}

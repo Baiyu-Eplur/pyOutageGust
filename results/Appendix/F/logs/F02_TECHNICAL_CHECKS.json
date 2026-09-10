@@ -1,0 +1,69 @@
+{
+  "time": "2026-09-10T17:22:51+01:00",
+  "checks": {
+    "E0": {
+      "ids_unique": true,
+      "same_columns": true,
+      "old_new_coefficients": true,
+      "old_new_twoway_se": true,
+      "old_new_lad_se": true,
+      "old_new_p": true,
+      "common_residual_prediction": true,
+      "normal_equations": true,
+      "lad_component_matches_direct": true,
+      "cluster_row_keys": true,
+      "lad_se_diagonal": true,
+      "two_se_diagonal": true,
+      "intervals_t_rule": true,
+      "LAD_finite_symmetric": true,
+      "TWO_WAY_finite_symmetric": true,
+      "DATE_finite_symmetric": true,
+      "INTERSECTION_finite_symmetric": true,
+      "BREAD_finite_symmetric": true,
+      "no_negative_inference_variance": true,
+      "serialized_row_alignment": true,
+      "saved_inputs_covariance_roundtrip": true
+    },
+    "R0c": {
+      "ids_unique": true,
+      "same_columns": true,
+      "old_new_coefficients": true,
+      "old_new_twoway_se": true,
+      "old_new_lad_se": true,
+      "old_new_p": true,
+      "common_residual_prediction": true,
+      "normal_equations": true,
+      "lad_component_matches_direct": true,
+      "cluster_row_keys": true,
+      "lad_se_diagonal": true,
+      "two_se_diagonal": true,
+      "intervals_t_rule": true,
+      "LAD_finite_symmetric": true,
+      "TWO_WAY_finite_symmetric": true,
+      "DATE_finite_symmetric": true,
+      "INTERSECTION_finite_symmetric": true,
+      "BREAD_finite_symmetric": true,
+      "no_negative_inference_variance": true,
+      "serialized_row_alignment": true,
+      "saved_inputs_covariance_roundtrip": true
+    }
+  },
+  "all_passed": true,
+  "status": [
+    {
+      "model": "E0_weather_final",
+      "status": "complete",
+      "action": "REUSE_C_IN_SAMPLE_AND_FINAL_COEFFICIENTS",
+      "new_ols_fits": 0,
+      "reason": ""
+    },
+    {
+      "model": "R0c_weather_final",
+      "status": "complete",
+      "action": "REUSE_C_IN_SAMPLE_AND_FINAL_COEFFICIENTS",
+      "new_ols_fits": 0,
+      "reason": ""
+    }
+  ],
+  "no_covariance_clipping": true
+}

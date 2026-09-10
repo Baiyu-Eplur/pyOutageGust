@@ -1,0 +1,257 @@
+{
+  "task": "APP-F02-COV",
+  "inputs": {
+    "review_package/data/combined_E0_final.csv": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+    "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+    "analysis_new/weather_only_regression.py": "b7db64e8bd350dfbcabacd3f2ad7d2514ad26a4fb5d7f622d9989072b80ff9bd",
+    "analysis_new/model_selection.py": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d",
+    "analysis_new/final_models.py": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310",
+    "analysis_new/appendix/design_adapter.py": "7f4b4ed2c1647f6c759bcb45017c172d008dfe6b9a8abda11d00c5c3b8781529",
+    "results/new/20260909183317/results/weather_only/weather_only_summary.json": "286b36e35231108b8403bda654ec05e2d41550001797fd365e39b98e086ec555",
+    "results/Appendix/C/tables/C_SAMPLE_DEFINITIONS.csv": "a55abc79b7bdd3c065944de4b74cb4a8aaf7f7b10f089e4dc70fef056288ac41",
+    "results/new/20260909183317/results/weather_only/E0_weather_final_twoway.csv": "994d2218bae8a395f72905e708e6f34763ea5990285d5792bf9de0ea890c400a",
+    "results/Appendix/C/data/models/E0_weather/F08/result.json": "a5f2bc6ceaa6111fa627e7954f19686afe9c9b9055f03ff0c18f7b9780a901d7",
+    "results/Appendix/C/data/models/E0_weather/F08/preprocessing.json": "59a9f3d7aff2533f9d27a89d4d02d854991c4d54563d08a511bb6d05161f3648",
+    "results/Appendix/C/data/models/E0_weather/F08/in_sample.csv.gz": "e55e747678b2a928a6c0130df2740452b2a0e54416a3193cf6960d0b921b85aa",
+    "results/Appendix/C/data/models/E0_weather/F08/coefficients.csv": "a53cf97477a4f04ebd837a8ddfb9e2156a11a54d5a8ee3fdd98aa5987d9bc7d8",
+    "results/new/20260909183317/results/weather_only/R0c_weather_final_twoway.csv": "ba69ee5391716b3273a38bb6203da0781b63623dd49be5491a2addf89f7ba220",
+    "results/Appendix/C/data/models/R0c_weather/F06/result.json": "1678db65d47d4e5684eca6210cf58950e4f070ff8f0b63b97fd93c52a8eafd3e",
+    "results/Appendix/C/data/models/R0c_weather/F06/preprocessing.json": "bce2375bd8fdc03c9069b90f9281ffc4e26a2eb07a80e1e8a54371b167d1c3fa",
+    "results/Appendix/C/data/models/R0c_weather/F06/in_sample.csv.gz": "e20b35e9d3ca550352f2e3b4d7652c94c1a71182e0ea94a1d2be0765e83f3d21",
+    "results/Appendix/C/data/models/R0c_weather/F06/coefficients.csv": "7843f66c35a5e8ae2acc012e96168f633c9c1a352ce27557ed99d933875e77fe"
+  },
+  "rules": {
+    "task": "APP-F02-COV",
+    "use_correction": true,
+    "reference": "t",
+    "df": "G_LAD-1",
+    "alpha": 0.05
+  },
+  "code": {
+    "analysis_new/appendix/f02_cov.py": "d8d847b635be4eebb31b65971a770de31981d8cafd538dfa7faa8562c81cb93f",
+    "analysis_new/appendix/design_adapter.py": "7f4b4ed2c1647f6c759bcb45017c172d008dfe6b9a8abda11d00c5c3b8781529"
+  },
+  "software": {
+    "statsmodels": "0.14.6",
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1"
+  },
+  "covariance_implementation_sha256": "eed5c01e32ee7c74164c03e15c8067d33159c26c364fa32afec59ee02f1815d9",
+  "pinv_implementation_sha256": "749782188ab95acd13081aa034e7669b298212074786d6bdbc05cc97a5031b1c",
+  "frozen_at": "2026-09-10T17:22:50+01:00",
+  "command": "C:\\Users\\haoya\\.conda\\envs\\pyoutagegust\\python.exe D:\\Pyprogramme\\pyOutageGust\\main_appendix.py --appendices F --f02-only",
+  "python": "3.12.6 | packaged by Anaconda, Inc. | (main, Oct  3 2024, 07:22:25) [MSC v.1929 64 bit (AMD64)]",
+  "random_seed": null,
+  "random_operations": "none",
+  "plan": "docs/new_analysis/instructions/附录FGHIJ四步推进台账与第一步J03执行指令.md",
+  "plan_sha256": "f84c09b6a6fa46bc11fcc262219da4c933f647b64bc5dda21406e1ddd23dac43",
+  "samples": [
+    {
+      "model": "E0_weather_final",
+      "margin": "E0",
+      "n": 9857,
+      "response": "log1p_customers_v2",
+      "sample_id_sha256": "a9fbb6b83c432d5518e046bb51b978b4fc6a08a6477e99a0f8c5870a1a250906",
+      "source": "review_package/data/combined_E0_final.csv",
+      "source_sha256": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+      "filtering": "weather_natural; no additional customer filter",
+      "zero_customers": 572,
+      "columns": [
+        "Intercept",
+        "z_precipitation_24h_sum",
+        "z_temperature_0h",
+        "z_pressure_msl_0h",
+        "z_gust_pressure",
+        "urban_binary",
+        "log_population",
+        "income_deprivation_rate",
+        "deprivation_gap_pct",
+        "morans_i",
+        "incident_year[2022]",
+        "incident_year[2023]",
+        "incident_year[2024]",
+        "incident_month[2]",
+        "incident_month[3]",
+        "incident_month[4]",
+        "incident_month[5]",
+        "incident_month[6]",
+        "incident_month[7]",
+        "incident_month[8]",
+        "incident_month[9]",
+        "incident_month[10]",
+        "incident_month[11]",
+        "incident_month[12]",
+        "gust_low",
+        "gust_ramp",
+        "z_temperature_sq"
+      ],
+      "means": {
+        "gust_0h": 14.386994021622419,
+        "precipitation_24h_sum": 5.077609838797479,
+        "temperature_0h": 12.117216643396501,
+        "pressure_msl_0h": 1004.9836055248253
+      },
+      "sd_ddof1": {
+        "gust_0h": 7.27851349208238,
+        "precipitation_24h_sum": 6.304151827340657,
+        "temperature_0h": 6.065969161046151,
+        "pressure_msl_0h": 13.924378503624627
+      },
+      "knots": [
+        11.0,
+        24.0
+      ],
+      "knot_treatment": "accepted fixed full-sample final; no selection this task",
+      "calendar_levels": {
+        "incident_year": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "incident_month": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "reference_levels": {
+        "incident_year": 2021,
+        "incident_month": 1
+      },
+      "socio_unscaled": [
+        "urban_binary",
+        "log_population",
+        "income_deprivation_rate",
+        "deprivation_gap_pct",
+        "morans_i"
+      ],
+      "interactions": [
+        "z_gust_pressure"
+      ],
+      "lad_key": "LAD21CD",
+      "date_key": "pd.to_datetime(incident_date_utc).dt.date.astype(str); existing UTC date, no conversion",
+      "group_encoding": "pandas.factorize in row encounter order",
+      "X_sha256": "be6f8d02d9b39a49833f779ea87b477b67dba99c5ca19bf0c8bf57a2f3970a1a",
+      "design_function": "weather_only_regression.build(d,d,margin,cust,final,accepted_selected_knots)"
+    },
+    {
+      "model": "R0c_weather_final",
+      "margin": "R0c",
+      "n": 9254,
+      "response": "log_duration_B_full_span_hours",
+      "sample_id_sha256": "19e0fee1995048631c582d84cc96bb2842c38ca63f26108ad3ac03833db04ddb",
+      "source": "review_package/data/combined_R0c_final.csv",
+      "source_sha256": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+      "filtering": "weather_natural; customers>0",
+      "zero_customers": 0,
+      "columns": [
+        "Intercept",
+        "z_gust_0h",
+        "z_precipitation_24h_sum",
+        "z_temperature_0h",
+        "z_pressure_msl_0h",
+        "urban_binary",
+        "log_population",
+        "income_deprivation_rate",
+        "deprivation_gap_pct",
+        "morans_i",
+        "incident_year[2022]",
+        "incident_year[2023]",
+        "incident_year[2024]",
+        "incident_month[2]",
+        "incident_month[3]",
+        "incident_month[4]",
+        "incident_month[5]",
+        "incident_month[6]",
+        "incident_month[7]",
+        "incident_month[8]",
+        "incident_month[9]",
+        "incident_month[10]",
+        "incident_month[11]",
+        "incident_month[12]",
+        "z_customers_v2_log1p",
+        "z_cust_sq",
+        "gust_hinge_11",
+        "z_temperature_sq",
+        "z_gust_precip"
+      ],
+      "means": {
+        "gust_0h": 14.379554794749046,
+        "precipitation_24h_sum": 5.1068186909000595,
+        "temperature_0h": 12.141153172836809,
+        "pressure_msl_0h": 1005.011249120946,
+        "customers_v2_log1p": 3.5665369260716298
+      },
+      "sd_ddof1": {
+        "gust_0h": 7.240501683430245,
+        "precipitation_24h_sum": 6.309348146499209,
+        "temperature_0h": 6.065464689641577,
+        "pressure_msl_0h": 13.865920104129394,
+        "customers_v2_log1p": 2.1166693577333673
+      },
+      "knots": [
+        11.0
+      ],
+      "knot_treatment": "accepted fixed full-sample final; no selection this task",
+      "calendar_levels": {
+        "incident_year": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "incident_month": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "reference_levels": {
+        "incident_year": 2021,
+        "incident_month": 1
+      },
+      "socio_unscaled": [
+        "urban_binary",
+        "log_population",
+        "income_deprivation_rate",
+        "deprivation_gap_pct",
+        "morans_i"
+      ],
+      "interactions": [
+        "z_gust_precip"
+      ],
+      "lad_key": "LAD21CD",
+      "date_key": "pd.to_datetime(incident_date_utc).dt.date.astype(str); existing UTC date, no conversion",
+      "group_encoding": "pandas.factorize in row encounter order",
+      "X_sha256": "46a64b45d9b8b1d82afc5b318ed8dc7037d3f6bbfd776d36cabac9d037058a21",
+      "design_function": "weather_only_regression.build(d,d,margin,cust,final,accepted_selected_knots)"
+    }
+  ],
+  "comparison_tolerance": {
+    "atol": 1e-09,
+    "rtol": 1e-08
+  },
+  "interval": "coef ± t.ppf(.975,G_LAD-1)*SE; two-sided p=2*t.sf(abs(coef/SE),G_LAD-1)",
+  "prior_final_negative_variance_rule": "legacy sqrt(max(diag,0)); F02 no clipping; any negatives recorded",
+  "no_other_work": "no model search, knots, CV, bootstrap, F03, GI/H or J rerun"
+}

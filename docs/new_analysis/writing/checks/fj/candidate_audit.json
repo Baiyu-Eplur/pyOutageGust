@@ -1,0 +1,426 @@
+{
+  "status": "FINDINGS",
+  "candidate_sha256": "ca590b801dcf54b90c71a44a30f5cd686a1a3b41becb5c4873b503722e0702c3",
+  "profile_loaded": true,
+  "findings": [
+    {
+      "code": "PROSE007",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "syntactic dash punctuation",
+      "count": 5,
+      "message": "review em/en dash punctuation in context; retain when functional, not by default"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "All-incident, two-way, two-way, Two-way",
+      "count": 4,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "All-incident, two-way, two-way, Two-way",
+      "count": 4,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "Weather-attributed, two-way, two-way, Two-way",
+      "count": 4,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "Weather-attributed, two-way, two-way, Two-way",
+      "count": 4,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "Weather-attributed, gust-term, Two-way, Weather-attributed, Weather-attributed, Weather-attributed, Weather-attributed, Weather-attributed, Weather-attributed, two-way, LAD-only",
+      "count": 11,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "LAD-out-of-fold, Non-gust, Non-gust, Non-gust, Non-gust",
+      "count": 5,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "All-incident, All-incident, Weather-attributed, Weather-attributed, All-incident, All-incident, Weather-attributed, Weather-attributed",
+      "count": 8,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "LAD-OOF, All-incident, Weather-attributed, Weather-attributed, All-incident, Weather-attributed, Weather-attributed",
+      "count": 7,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "all-incident, all-incident, weather-attributed, weather-attributed",
+      "count": 4,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "LAD-OOF, log-hours, log-hours, weather-attributed",
+      "count": 4,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "gust-basis, raw-outcome, All-incident, All-incident, two-way",
+      "count": 5,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "full-sample, All-incident, All-incident, all-incident",
+      "count": 4,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "District-day, LAD-days, LAD-days, LAD-day",
+      "count": 4,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "LAD-out-of-fold, event-anchor, Grid-maximum, LAD-days, outcome-specific",
+      "count": 5,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "grid-maximum, LAD-day, all-incident, weather-attributed, event-anchor",
+      "count": 5,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "LAD-out-of-fold, peak-only, duration-increment, above-threshold, log-transformed, squared-gust",
+      "count": 6,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "Later-period, district-day, all-incident, weather-attributed",
+      "count": 4,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "all customers all customers all",
+      "count": 6,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "all customers all customers weather",
+      "count": 6,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "customers all customers all customers",
+      "count": 6,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "customers table j end notes",
+      "count": 6,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "customers weather customers table j",
+      "count": 6,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "customers weather customers weather customers",
+      "count": 6,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "weather customers table j end",
+      "count": 6,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "weather customers weather customers table",
+      "count": 6,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "weather customers weather customers weather",
+      "count": 6,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "customers all customers weather any",
+      "count": 5,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "income deprivation rate deprivation gap",
+      "count": 5,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "log population income deprivation rate",
+      "count": 5,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "population income deprivation rate deprivation",
+      "count": 5,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "ci two-way two-way p intercept",
+      "count": 4,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "deprivation gap moran's i year",
+      "count": 4,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "deprivation rate deprivation gap moran's",
+      "count": 4,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "e month month month month",
+      "count": 4,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "indicator log population income deprivation",
+      "count": 4,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "month e month month month",
+      "count": 4,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "month month month month month",
+      "count": 4,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "n reference t term coefficient",
+      "count": 4,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "rate deprivation gap moran's i",
+      "count": 4,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "reference t term coefficient se",
+      "count": 4,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "two-way two-way p intercept z",
+      "count": 4,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "urban indicator log population income",
+      "count": 4,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "z g z p table",
+      "count": 4,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "b gp z p s",
+      "count": 3,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "brier paired interval all any",
+      "count": 3,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "e z g z p",
+      "count": 3,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "for the two c outcomes",
+      "count": 3,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "g z p table f",
+      "count": 3,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "gp z p s g",
+      "count": 3,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "h table h end notes",
+      "count": 3,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "mae mean prediction bias r",
+      "count": 3,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "month month month month z",
+      "count": 3,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "p urban indicator log population",
+      "count": 3,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "p z t z p",
+      "count": 3,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "table h end notes exposure",
+      "count": 3,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "z p urban indicator log",
+      "count": 3,
+      "message": "repeated multiword phrase across sentences"
+    },
+    {
+      "code": "PROSE004",
+      "artifact": "APP-FJ-DRAFT",
+      "match": "z p z t z",
+      "count": 3,
+      "message": "repeated multiword phrase across sentences"
+    }
+  ],
+  "manual_checks_required": [
+    "paragraph contract and adjacent-paragraph flow",
+    "claim scope and preservation of locked meaning",
+    "functional transitions and cumulative information flow",
+    "literature-example ordering from broad context to the closest precedent and gap, or another explicit evidentiary logic",
+    "function-preserving concision and sentence rhythm",
+    "natural scholarly subjects, syntax, and disciplinary accessibility",
+    "reader accessibility, including nonessential field shorthand, transition templates, and indirect verbs",
+    "claim-to-citation support and reference-list changes",
+    "observable stock or AI-like prose features without authorship inference",
+    "dash and hyphen style, including grammatical role, established open compounds, density, and suspended compounds",
+    "necessary technical repetition versus avoidable restatement"
+  ]
+}

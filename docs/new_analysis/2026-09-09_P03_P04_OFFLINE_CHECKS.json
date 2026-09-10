@@ -1,0 +1,80 @@
+{
+  "recorded_at": "2026-09-09T20:51:06.196761+01:00",
+  "scope": "offline tests only; no weather acquisition or real experiment execution",
+  "tests": [
+    {
+      "command": "python -X utf8 -B -m unittest discover -s test -p test_grid_weather_experiment.py -v",
+      "passed": 18,
+      "failed": 0
+    },
+    {
+      "command": "python -X utf8 -B -m unittest discover -s test -p test_new_analysis.py -v",
+      "passed": 1,
+      "failed": 0
+    },
+    {
+      "command": "python -X utf8 -B -m unittest discover -s test -p test_pretest_entry.py -v",
+      "passed": 11,
+      "failed": 0
+    }
+  ],
+  "ast_files": 25,
+  "whitespace_check": "passed with cr-at-eol",
+  "shared_algorithm_comparison": "MLE parameters/nll and interpolation exactly equal to prior committed functions on synthetic fixtures",
+  "readonly_preflight": {
+    "base_run": "20260909183317",
+    "panel_rows": 121656,
+    "lad_count": 111,
+    "labels_match_own_incidents": true,
+    "valid_2021_boundary_centroids": 111
+  },
+  "live_weather_requests": 0,
+  "formal_experiment_runs": 0,
+  "all_17_switches_disabled": true,
+  "files": [
+    {
+      "path": "main_new.py",
+      "sha256": "1fe53de2b792a1a9511bb33022be9d5a3ea1e6b017276923badcd81cde04d4df"
+    },
+    {
+      "path": "analysis_new/runner.py",
+      "sha256": "75fe2087a137af714a27288c1b65f3aea8ab75f17572aed5dd32fcc1c9b5a6b1"
+    },
+    {
+      "path": "analysis_new/district_day_fragility.py",
+      "sha256": "da695df1697e7cc1bce6d5846b9a306b79c263898175c23ae33d6a7b2fcf4f7b"
+    },
+    {
+      "path": "analysis_new/district_day_core.py",
+      "sha256": "837334b479bc5cc12433c1fd9af006abf19bba789340e509721605914c5e6121"
+    },
+    {
+      "path": "analysis_new/grid_weather.py",
+      "sha256": "ca884fb1aa19e57952f7bf218d9b4fcff6ae549ba30691759cf7c1853c03fb6b"
+    },
+    {
+      "path": "analysis_new/grid_fragility_validation.py",
+      "sha256": "1ec3ffbcd9a1e1a86fd2339bf8b1c8d9b42e062cd3e1531c41ee7ed427c18634"
+    },
+    {
+      "path": "analysis_new/p03_p04_grid_weather.py",
+      "sha256": "c5f8c88ae3d5e2a45d5df761e3273b88e3ac96206405a79c49c4bd5a95ac1261"
+    },
+    {
+      "path": "test/test_grid_weather_experiment.py",
+      "sha256": "e51c30894fc280e6141bddfd8dbd0c81da8fcc1e8a22f3d70aa03839863daf5f"
+    },
+    {
+      "path": "docs/new_analysis/P03_P04_GRID_WEATHER.md",
+      "sha256": "64ff6724051aa39cd4194b2789d189f3a5fd7784c0ac9583d5fbf8bceea783d2"
+    },
+    {
+      "path": "docs/NEW_ANALYSIS_GUIDE.md",
+      "sha256": "c5f659ff1a9cb0e239013ff895a151507ce7747b5cf6b98015d678bd150c3a45"
+    },
+    {
+      "path": "README.md",
+      "sha256": "567d7b026e88d69b33999ea905d2897bfdaecaf3dccac460d50e83207bb8c0f1"
+    }
+  ]
+}

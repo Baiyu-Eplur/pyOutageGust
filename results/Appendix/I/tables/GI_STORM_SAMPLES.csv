@@ -1,0 +1,9 @@
+﻿storm,exposure_n,recovery_before_duration_cap_positive_customers,recovery_final_n,excluded_zero_or_negative_customers,excluded_duration,display_only_above_cap,exactly_one_hour_positive_customer_included,missing_covariates_in_exposure_source,source_scope,cap_hours
+Arwen,270,243,242,27,0,1,1,0,accepted complete-covariate E0 universe; upstream missing-customers rows not part of this universe,192.08333333333329
+Dudley,291,256,254,35,0,2,0,0,accepted complete-covariate E0 universe; upstream missing-customers rows not part of this universe,192.08333333333329
+Eunice,1659,1532,1518,127,0,14,1,0,accepted complete-covariate E0 universe; upstream missing-customers rows not part of this universe,192.08333333333329
+Franklin,1132,1068,1064,64,0,4,3,0,accepted complete-covariate E0 universe; upstream missing-customers rows not part of this universe,192.08333333333329
+Babet,509,450,449,59,0,1,2,0,accepted complete-covariate E0 universe; upstream missing-customers rows not part of this universe,192.08333333333329
+Ciaran,576,468,466,108,0,2,1,0,accepted complete-covariate E0 universe; upstream missing-customers rows not part of this universe,192.08333333333329
+Henk,494,443,439,51,0,4,1,0,accepted complete-covariate E0 universe; upstream missing-customers rows not part of this universe,192.08333333333329
+UNION_DEDUPLICATED,4452,4018,3990,434,0,28,9,0,accepted complete-covariate E0 universe; upstream missing-customers rows not part of this universe,192.08333333333329

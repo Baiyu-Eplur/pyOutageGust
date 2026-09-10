@@ -1,0 +1,333 @@
+{
+  "owner": "main_appendix.py",
+  "appendix": "A",
+  "last_attempt": "2026-09-10T13:17:03+01:00",
+  "status": "success_with_gaps",
+  "update_state": "本次已更新",
+  "requirements": {
+    "A01": "已生成",
+    "A02": "已生成",
+    "A03": "已有且被明确复用",
+    "A04": "已生成",
+    "A05": "已生成",
+    "A06": "有具体原因的缺失"
+  },
+  "outputs": [
+    {
+      "path": "tables/A_SAMPLE_FLOW.csv",
+      "sha256": "a7e8a7004c7c99d28d9c65926fa4ccaac9893867b0a309592d3fa7b3fd4c5d9b",
+      "bytes": 615,
+      "requirement_id": "A01",
+      "claim_id": "CL_A01",
+      "source_paths": [
+        "review_package/data/combined_E0_final.csv",
+        "review_package/data/combined_R0c_final.csv"
+      ],
+      "source_sha256": {
+        "review_package/data/combined_E0_final.csv": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+        "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9"
+      },
+      "producer": "analysis_new/final_models.py; weather_only_regression.py",
+      "export_function": "analysis_new.appendix.exporters.samples",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/A_SAMPLE_FLOW.md",
+      "sha256": "db55dfbaceae9b9c7f55a30be9babe110eb7d2b9962efb5fd65a6710ed4ec800",
+      "bytes": 1387,
+      "requirement_id": "A01",
+      "claim_id": "CL_A01",
+      "source_paths": [
+        "review_package/data/combined_E0_final.csv",
+        "review_package/data/combined_R0c_final.csv"
+      ],
+      "source_sha256": {
+        "review_package/data/combined_E0_final.csv": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+        "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9"
+      },
+      "producer": "analysis_new/final_models.py; weather_only_regression.py",
+      "export_function": "analysis_new.appendix.exporters.samples",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/A_CAUSE_COUNTS.csv",
+      "sha256": "82bc4014c3d2e2b4276b172d3e552dedcb5a487dd9afa94f262fd8157007fb49",
+      "bytes": 554,
+      "requirement_id": "A01",
+      "claim_id": "CL_A01",
+      "source_paths": [
+        "review_package/data/combined_E0_final.csv",
+        "review_package/data/combined_R0c_final.csv"
+      ],
+      "source_sha256": {
+        "review_package/data/combined_E0_final.csv": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+        "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9"
+      },
+      "producer": "analysis_new/final_models.py; weather_only_regression.py",
+      "export_function": "analysis_new.appendix.exporters.samples",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/A_CAUSE_COUNTS.md",
+      "sha256": "9b6d8c2378fcc61bdd76c15e3f7872f9629839ebb29d082d9a811ea7248834b1",
+      "bytes": 1259,
+      "requirement_id": "A01",
+      "claim_id": "CL_A01",
+      "source_paths": [
+        "review_package/data/combined_E0_final.csv",
+        "review_package/data/combined_R0c_final.csv"
+      ],
+      "source_sha256": {
+        "review_package/data/combined_E0_final.csv": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+        "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9"
+      },
+      "producer": "analysis_new/final_models.py; weather_only_regression.py",
+      "export_function": "analysis_new.appendix.exporters.samples",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/A_COVARIATE_SUMMARY.csv",
+      "sha256": "9d76b25539358af3bcd8867cb3f5102224b4eeebc7e36a78e5079f451ad745ff",
+      "bytes": 2743,
+      "requirement_id": "A01",
+      "claim_id": "CL_A01",
+      "source_paths": [
+        "review_package/data/combined_E0_final.csv",
+        "review_package/data/combined_R0c_final.csv"
+      ],
+      "source_sha256": {
+        "review_package/data/combined_E0_final.csv": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+        "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9"
+      },
+      "producer": "analysis_new/final_models.py; weather_only_regression.py",
+      "export_function": "analysis_new.appendix.exporters.samples",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/A_COVARIATE_SUMMARY.md",
+      "sha256": "5271b668f445009e81f1c1e83921b8a909b952c1e17e01c32d142617fc782352",
+      "bytes": 3081,
+      "requirement_id": "A01",
+      "claim_id": "CL_A01",
+      "source_paths": [
+        "review_package/data/combined_E0_final.csv",
+        "review_package/data/combined_R0c_final.csv"
+      ],
+      "source_sha256": {
+        "review_package/data/combined_E0_final.csv": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+        "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9"
+      },
+      "producer": "analysis_new/final_models.py; weather_only_regression.py",
+      "export_function": "analysis_new.appendix.exporters.samples",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/A_VARIABLE_DICTIONARY.csv",
+      "sha256": "f802a4a4f9a7187791397c27414de5f323f917d63207cc7cf8f016d72deff77d",
+      "bytes": 1866,
+      "requirement_id": "A02",
+      "claim_id": "CL_A02",
+      "source_paths": [
+        "review_package/data/combined_E0_final.csv",
+        "review_package/data/combined_R0c_final.csv",
+        "docs/Appendix_revised_copy.docx",
+        "analysis_new/final_models.py",
+        "analysis_new/model_selection.py"
+      ],
+      "source_sha256": {
+        "review_package/data/combined_E0_final.csv": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+        "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+        "docs/Appendix_revised_copy.docx": "12d43bb807be5b412b614bceccf4634379976aecd0be7f65dd6bd1be0233313e",
+        "analysis_new/final_models.py": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310",
+        "analysis_new/model_selection.py": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d"
+      },
+      "producer": "analysis_new/model_selection.py:design; final_models.py:final_design",
+      "export_function": "analysis_new.appendix.exporters.dictionary",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/A_VARIABLE_DICTIONARY.md",
+      "sha256": "3a204ebc854aaac6ef6d30daf7553ec08f6c7379dd78edef6f2841324926aceb",
+      "bytes": 2731,
+      "requirement_id": "A02",
+      "claim_id": "CL_A02",
+      "source_paths": [
+        "review_package/data/combined_E0_final.csv",
+        "review_package/data/combined_R0c_final.csv",
+        "docs/Appendix_revised_copy.docx",
+        "analysis_new/final_models.py",
+        "analysis_new/model_selection.py"
+      ],
+      "source_sha256": {
+        "review_package/data/combined_E0_final.csv": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+        "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+        "docs/Appendix_revised_copy.docx": "12d43bb807be5b412b614bceccf4634379976aecd0be7f65dd6bd1be0233313e",
+        "analysis_new/final_models.py": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310",
+        "analysis_new/model_selection.py": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d"
+      },
+      "producer": "analysis_new/model_selection.py:design; final_models.py:final_design",
+      "export_function": "analysis_new.appendix.exporters.dictionary",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/A03_EXISTING_DEFINITION.csv",
+      "sha256": "0bf94e84990be97c61d4fa677bf645da861d1ad8b1b5321cf2201d4f78855b79",
+      "bytes": 443,
+      "requirement_id": "A03",
+      "claim_id": "CL_A03",
+      "source_paths": [
+        "docs/Appendix_revised_copy.docx"
+      ],
+      "source_sha256": {
+        "docs/Appendix_revised_copy.docx": "12d43bb807be5b412b614bceccf4634379976aecd0be7f65dd6bd1be0233313e"
+      },
+      "producer": "已成型附录A Table A1",
+      "export_function": "analysis_new.appendix.exporters.docx_table",
+      "configuration": {
+        "table": 0
+      },
+      "status": "已有且被明确复用"
+    },
+    {
+      "path": "tables/A03_EXISTING_DEFINITION.md",
+      "sha256": "886ba083bc3e17d8f5ee729090ff9dadd0d0e28e85bd73611d67d951e07aff59",
+      "bytes": 1075,
+      "requirement_id": "A03",
+      "claim_id": "CL_A03",
+      "source_paths": [
+        "docs/Appendix_revised_copy.docx"
+      ],
+      "source_sha256": {
+        "docs/Appendix_revised_copy.docx": "12d43bb807be5b412b614bceccf4634379976aecd0be7f65dd6bd1be0233313e"
+      },
+      "producer": "已成型附录A Table A1",
+      "export_function": "analysis_new.appendix.exporters.docx_table",
+      "configuration": {
+        "table": 0
+      },
+      "status": "已有且被明确复用"
+    },
+    {
+      "path": "tables/A_FINAL_DESIGN_VIF.csv",
+      "sha256": "6c467b3d6cdeb086272747441fa9019d8cdf5d88a075e70c422a3aa8aeb69c13",
+      "bytes": 8074,
+      "requirement_id": "A04",
+      "claim_id": "CL_A04",
+      "source_paths": [
+        "review_package/data/combined_E0_final.csv",
+        "review_package/data/combined_R0c_final.csv",
+        "analysis_new/model_selection.py",
+        "analysis_new/final_models.py",
+        "results/new/20260909183317/results/model_selection/knots.json",
+        "results/new/20260909183317/results/final_models/E0_final_twoway.csv",
+        "results/new/20260909183317/results/final_models/R0c_final_twoway.csv"
+      ],
+      "source_sha256": {
+        "review_package/data/combined_E0_final.csv": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+        "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+        "analysis_new/model_selection.py": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d",
+        "analysis_new/final_models.py": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310",
+        "results/new/20260909183317/results/model_selection/knots.json": "af506c6ec5b9ba4c3f3450bf88a02afb87e4116f798233bb5920341c95f5bb3b",
+        "results/new/20260909183317/results/final_models/E0_final_twoway.csv": "491c75aea00d6a4a60a04026978eba65072e1576e0974dfaa211c96954487f94",
+        "results/new/20260909183317/results/final_models/R0c_final_twoway.csv": "0dab57b08504cba609ca93c282fa3ccf8b1bde92a9b679286efd965255cb54a2"
+      },
+      "producer": "analysis_new/model_selection.py:design; final_models.py:final_design",
+      "export_function": "analysis_new.appendix.exporters.vif",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/A_FINAL_DESIGN_VIF.md",
+      "sha256": "b236a28ac271cb125726561c5f7eb2cb1c74b4609a21c3f6bb0c3ee354d88ec6",
+      "bytes": 9378,
+      "requirement_id": "A04",
+      "claim_id": "CL_A04",
+      "source_paths": [
+        "review_package/data/combined_E0_final.csv",
+        "review_package/data/combined_R0c_final.csv",
+        "analysis_new/model_selection.py",
+        "analysis_new/final_models.py",
+        "results/new/20260909183317/results/model_selection/knots.json",
+        "results/new/20260909183317/results/final_models/E0_final_twoway.csv",
+        "results/new/20260909183317/results/final_models/R0c_final_twoway.csv"
+      ],
+      "source_sha256": {
+        "review_package/data/combined_E0_final.csv": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+        "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+        "analysis_new/model_selection.py": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d",
+        "analysis_new/final_models.py": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310",
+        "results/new/20260909183317/results/model_selection/knots.json": "af506c6ec5b9ba4c3f3450bf88a02afb87e4116f798233bb5920341c95f5bb3b",
+        "results/new/20260909183317/results/final_models/E0_final_twoway.csv": "491c75aea00d6a4a60a04026978eba65072e1576e0974dfaa211c96954487f94",
+        "results/new/20260909183317/results/final_models/R0c_final_twoway.csv": "0dab57b08504cba609ca93c282fa3ccf8b1bde92a9b679286efd965255cb54a2"
+      },
+      "producer": "analysis_new/model_selection.py:design; final_models.py:final_design",
+      "export_function": "analysis_new.appendix.exporters.vif",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/A05_APPENDIXG_TABLE_G1_CORRECTED.csv",
+      "sha256": "fac546519441ab4844f8c2f02e3fc200938b5ad6b9da2f50543e636ee44889c6",
+      "bytes": 658,
+      "requirement_id": "A05",
+      "claim_id": "CL_A05",
+      "source_paths": [
+        "results/pretest/archive/20260909154556/results/c09_final_cleanup_20260905/raw/appendixG_table_G1_corrected.csv"
+      ],
+      "source_sha256": {
+        "results/pretest/archive/20260909154556/results/c09_final_cleanup_20260905/raw/appendixG_table_G1_corrected.csv": "2b1957faf4b75a2d517faceabf132da17696bb5516165ae1e3d428d71b60b007"
+      },
+      "producer": "scripts/c09_final_cleanup_20260905/appendixG_recompute.py",
+      "export_function": "analysis_new.appendix.exporters.csv",
+      "configuration": {},
+      "status": "已生成"
+    },
+    {
+      "path": "tables/A05_APPENDIXG_TABLE_G1_CORRECTED.md",
+      "sha256": "47e47fc6c0a146c7197ee3d288629beeec94d3959b55a8451aae8e2f7aceead1",
+      "bytes": 1292,
+      "requirement_id": "A05",
+      "claim_id": "CL_A05",
+      "source_paths": [
+        "results/pretest/archive/20260909154556/results/c09_final_cleanup_20260905/raw/appendixG_table_G1_corrected.csv"
+      ],
+      "source_sha256": {
+        "results/pretest/archive/20260909154556/results/c09_final_cleanup_20260905/raw/appendixG_table_G1_corrected.csv": "2b1957faf4b75a2d517faceabf132da17696bb5516165ae1e3d428d71b60b007"
+      },
+      "producer": "scripts/c09_final_cleanup_20260905/appendixG_recompute.py",
+      "export_function": "analysis_new.appendix.exporters.csv",
+      "configuration": {},
+      "status": "已生成"
+    }
+  ],
+  "managed_files": [
+    "README.md",
+    "logs/execution.log",
+    "logs/validation.json",
+    "manifest.json",
+    "tables/A03_EXISTING_DEFINITION.csv",
+    "tables/A03_EXISTING_DEFINITION.md",
+    "tables/A05_APPENDIXG_TABLE_G1_CORRECTED.csv",
+    "tables/A05_APPENDIXG_TABLE_G1_CORRECTED.md",
+    "tables/A_CAUSE_COUNTS.csv",
+    "tables/A_CAUSE_COUNTS.md",
+    "tables/A_COVARIATE_SUMMARY.csv",
+    "tables/A_COVARIATE_SUMMARY.md",
+    "tables/A_FINAL_DESIGN_VIF.csv",
+    "tables/A_FINAL_DESIGN_VIF.md",
+    "tables/A_SAMPLE_FLOW.csv",
+    "tables/A_SAMPLE_FLOW.md",
+    "tables/A_VARIABLE_DICTIONARY.csv",
+    "tables/A_VARIABLE_DICTIONARY.md"
+  ],
+  "preserved_unmanaged_files": [],
+  "removed_obsolete_managed_files": []
+}

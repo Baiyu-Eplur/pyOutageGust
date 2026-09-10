@@ -1,0 +1,5746 @@
+{
+  "reviewed_at": "2026-09-09T22:20:22.647393+01:00",
+  "run": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909205214",
+  "checks": [
+    {
+      "check": "outer_hash:results/p03_p04/brier_comparison.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/calibration.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/calibration_bins.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/centroids.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/cv_fold_scores.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/decision.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/experiment.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/grid_cells.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/grid_daily.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/gust_comparison.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/gust_comparison.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/inventory.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/lad_folds.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/leave_lad_out.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/leave_shared_grid_cell_out.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/oof_predictions.csv.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/optimizer_diagnostics.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/paired_uncertainty.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/panel_grid.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/parameters_comparison.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/parameters_long.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/quality.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/REPORT.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/spatial_validation.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E06000031.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E06000032.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E06000033.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E06000034.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E06000035.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E06000043.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E06000055.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E06000056.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E06000060.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000008.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000009.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000010.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000011.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000012.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000061.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000062.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000063.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000064.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000065.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000066.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000067.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000068.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000069.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000070.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000071.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000072.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000073.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000074.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000075.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000076.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000077.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000095.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000096.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000098.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000099.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000102.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000103.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000105.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000106.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000107.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000108.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000109.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000110.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000111.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000112.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000113.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000114.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000115.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000116.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000143.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000144.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000145.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000146.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000147.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000148.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000149.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000179.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000200.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000202.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000203.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000207.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000208.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000209.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000210.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000211.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000212.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000213.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000215.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000216.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000217.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000223.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000224.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000226.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000227.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000228.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000229.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000240.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000241.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000242.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E07000243.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000001.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000002.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000003.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000004.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000005.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000006.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000007.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000008.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000010.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000011.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000012.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000013.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000014.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000015.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000016.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000017.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000019.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000020.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000021.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000022.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000023.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000024.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000025.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000026.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000027.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000028.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000029.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000030.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000031.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000032.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/E09000033.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outer_hash:results/p03_p04/weather_raw/requests.jsonl",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\brier_comparison.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\calibration.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\calibration_bins.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\centroids.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\cv_fold_scores.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\decision.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\experiment.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\grid_cells.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\grid_daily.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\gust_comparison.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\gust_comparison.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\lad_folds.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\leave_lad_out.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\leave_shared_grid_cell_out.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\oof_predictions.csv.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\optimizer_diagnostics.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\paired_uncertainty.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\panel_grid.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\parameters_comparison.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\parameters_long.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\quality.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\REPORT.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\spatial_validation.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E06000031.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E06000032.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E06000033.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E06000034.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E06000035.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E06000043.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E06000055.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E06000056.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E06000060.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000008.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000009.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000010.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000011.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000012.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000061.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000062.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000063.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000064.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000065.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000066.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000067.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000068.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000069.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000070.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000071.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000072.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000073.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000074.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000075.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000076.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000077.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000095.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000096.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000098.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000099.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000102.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000103.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000105.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000106.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000107.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000108.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000109.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000110.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000111.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000112.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000113.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000114.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000115.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000116.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000143.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000144.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000145.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000146.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000147.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000148.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000149.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000179.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000200.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000202.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000203.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000207.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000208.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000209.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000210.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000211.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000212.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000213.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000215.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000216.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000217.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000223.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000224.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000226.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000227.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000228.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000229.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000240.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000241.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000242.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E07000243.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000001.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000002.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000003.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000004.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000005.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000006.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000007.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000008.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000010.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000011.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000012.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000013.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000014.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000015.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000016.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000017.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000019.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000020.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000021.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000022.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000023.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000024.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000025.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000026.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000027.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000028.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000029.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000030.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000031.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000032.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\E09000033.json.gz",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "inner_hash:results\\p03_p04\\weather_raw\\requests.jsonl",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_unlisted_experiment_files",
+      "passed": true,
+      "detail": {
+        "actual": 136,
+        "listed": 136
+      }
+    },
+    {
+      "check": "source_or_boundary:analysis_new/p03_p04_grid_weather.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "source_or_boundary:analysis_new/grid_weather.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "source_or_boundary:analysis_new/grid_fragility_validation.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "source_or_boundary:analysis_new/district_day_core.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "source_or_boundary:data\\external\\gis\\LAD_DEC_2021_UK_BGC\\LAD_DEC_2021_UK_BGC.shp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "source_or_boundary:data\\external\\gis\\LAD_DEC_2021_UK_BGC\\LAD_DEC_2021_UK_BGC.shx",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "source_or_boundary:data\\external\\gis\\LAD_DEC_2021_UK_BGC\\LAD_DEC_2021_UK_BGC.dbf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "source_or_boundary:data\\external\\gis\\LAD_DEC_2021_UK_BGC\\LAD_DEC_2021_UK_BGC.prj",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "source_or_boundary:data\\external\\gis\\LAD_DEC_2021_UK_BGC\\LAD_DEC_2021_UK_BGC.cpg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "baseline_manifest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "baseline_panel",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "own_E0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "polygon_centroids",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "full_panel_keys",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:LAD21CD",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:date",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:precip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:n_inc",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:maxc",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:wmaxc",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:log_population",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:urban_binary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:income_deprivation_rate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:year",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:month",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:any_gt0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:wthr_gt0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:any_gt5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:wthr_gt5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:any_gt100",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:wthr_gt100",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:any_gt1000",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged_nongust:wthr_gt1000",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "proxy_backup",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "grid_replaces_gust",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E06000031",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E06000031",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E06000031",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E06000031",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E06000032",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E06000032",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E06000032",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E06000032",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E06000033",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E06000033",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E06000033",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E06000033",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E06000034",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E06000034",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E06000034",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E06000034",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E06000035",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E06000035",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E06000035",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E06000035",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E06000043",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E06000043",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E06000043",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E06000043",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E06000055",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E06000055",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E06000055",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E06000055",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E06000056",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E06000056",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E06000056",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E06000056",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E06000060",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E06000060",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E06000060",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E06000060",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000008",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000008",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000008",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000008",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000009",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000009",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000009",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000009",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000010",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000010",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000010",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000010",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000011",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000011",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000011",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000011",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000012",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000012",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000012",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000012",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000061",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000061",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000061",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000061",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000062",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000062",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000062",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000062",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000063",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000063",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000063",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000063",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000064",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000064",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000064",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000064",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000065",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000065",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000065",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000065",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000066",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000066",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000066",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000066",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000067",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000067",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000067",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000067",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000068",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000068",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000068",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000068",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000069",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000069",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000069",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000069",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000070",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000070",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000070",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000070",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000071",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000071",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000071",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000071",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000072",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000072",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000072",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000072",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000073",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000073",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000073",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000073",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000074",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000074",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000074",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000074",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000075",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000075",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000075",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000075",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000076",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000076",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000076",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000076",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000077",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000077",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000077",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000077",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000095",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000095",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000095",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000095",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000096",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000096",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000096",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000096",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000098",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000098",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000098",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000098",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000099",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000099",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000099",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000099",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000103",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000103",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000103",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000103",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000105",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000105",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000105",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000105",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000106",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000106",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000106",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000106",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000107",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000107",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000107",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000107",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000108",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000108",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000108",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000108",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000109",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000109",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000109",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000109",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000110",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000110",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000110",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000110",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000111",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000111",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000111",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000111",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000112",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000112",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000112",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000112",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000113",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000113",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000113",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000113",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000114",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000114",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000114",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000114",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000115",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000115",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000115",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000115",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000116",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000116",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000116",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000116",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000143",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000143",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000143",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000143",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000144",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000144",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000144",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000144",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000145",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000145",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000145",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000145",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000146",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000146",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000146",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000146",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000147",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000147",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000147",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000147",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000148",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000148",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000148",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000148",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000149",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000149",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000149",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000149",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000179",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000179",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000179",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000179",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000202",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000202",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000202",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000202",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000203",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000203",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000203",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000203",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000207",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000207",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000207",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000207",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000208",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000208",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000208",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000208",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000209",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000209",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000209",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000209",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000210",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000210",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000210",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000210",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000211",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000211",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000211",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000211",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000212",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000212",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000212",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000212",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000213",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000213",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000213",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000213",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000215",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000215",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000215",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000215",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000216",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000216",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000216",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000216",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000217",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000217",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000217",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000217",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000223",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000223",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000223",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000223",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000224",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000224",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000224",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000224",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000226",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000226",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000226",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000226",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000227",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000227",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000227",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000227",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000228",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000228",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000228",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000228",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000229",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000229",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000229",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000229",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000240",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000240",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000240",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000240",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000241",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000241",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000241",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000241",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000242",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000242",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000242",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000242",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E07000243",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E07000243",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E07000243",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E07000243",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000001",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000001",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000001",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000001",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000002",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000002",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000002",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000002",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000003",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000003",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000003",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000003",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000004",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000004",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000004",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000004",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000005",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000005",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000005",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000005",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000006",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000006",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000006",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000006",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000007",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000007",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000007",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000007",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000008",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000008",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000008",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000008",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000010",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000010",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000010",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000010",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000011",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000011",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000011",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000011",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000012",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000012",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000012",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000012",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000013",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000013",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000013",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000013",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000014",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000014",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000014",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000014",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000015",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000015",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000015",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000015",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000016",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000016",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000016",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000016",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000017",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000017",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000017",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000017",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000019",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000019",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000019",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000019",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000020",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000020",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000020",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000020",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000021",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000021",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000021",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000021",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000027",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000027",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000027",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000027",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000028",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000028",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000028",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000028",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000029",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000029",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000029",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000029",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000030",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000030",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000030",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000030",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000031",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000031",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000031",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000031",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000032",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000032",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000032",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000032",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "hourly:E09000033",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_contract:E09000033",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "raw_provenance:E09000033",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "daily_max:E09000033",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "111_raw_responses",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "difference_stats:all",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "difference_stats:with_incident",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "difference_stats:without_incident",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "spatial_truth:leave_lad_out",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "spatial_stats:leave_lad_out",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "spatial_loo_recomputed:leave_lad_out",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "spatial_truth:leave_shared_grid_cell_out",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "spatial_stats:leave_shared_grid_cell_out",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "spatial_loo_recomputed:leave_shared_grid_cell_out",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "oof_key_order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "oof_single_fold_per_lad",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "saved_fold_mapping",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "own_incident_label:any0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "own_incident_label:any5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "own_incident_label:any100",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "own_incident_label:any1000",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "own_incident_label:wthr0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "own_incident_label:wthr5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "own_incident_label:wthr100",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "own_incident_label:wthr1000",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "own_incident_counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original_shuffle_rule",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wide_parameter_table:any_gt0proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wide_parameter_table:any_gt0era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wide_parameter_table:any_gt5proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wide_parameter_table:any_gt5era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wide_parameter_table:any_gt100proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wide_parameter_table:any_gt100era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wide_parameter_table:any_gt1000proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wide_parameter_table:any_gt1000era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wide_parameter_table:wthr_gt0proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wide_parameter_table:wthr_gt0era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wide_parameter_table:wthr_gt5proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wide_parameter_table:wthr_gt5era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wide_parameter_table:wthr_gt100proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wide_parameter_table:wthr_gt100era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wide_parameter_table:wthr_gt1000proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wide_parameter_table:wthr_gt1000era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outcome:any_gt0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "probabilities:any_gt0proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "brier:any_gt0proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt0:proxy:0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt0:proxy:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt0:proxy:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt0:proxy:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt0:proxy:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "parameter_nll:any_gt0proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_rmse:any_gt0proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "probabilities:any_gt0era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "brier:any_gt0era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt0:era5_daily_max:0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt0:era5_daily_max:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt0:era5_daily_max:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt0:era5_daily_max:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt0:era5_daily_max:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "parameter_nll:any_gt0era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_rmse:any_gt0era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:proxy:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:proxy:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:proxy:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:proxy:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:proxy:5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:proxy:6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:proxy:7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:proxy:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:proxy:9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:proxy:10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:era5_daily_max:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:era5_daily_max:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:era5_daily_max:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:era5_daily_max:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:era5_daily_max:5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:era5_daily_max:6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:era5_daily_max:7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:era5_daily_max:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:era5_daily_max:9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:era5_daily_max:10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt0:era5_daily_max:11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outcome:any_gt5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "probabilities:any_gt5proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "brier:any_gt5proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt5:proxy:0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt5:proxy:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt5:proxy:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt5:proxy:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt5:proxy:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "parameter_nll:any_gt5proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_rmse:any_gt5proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "probabilities:any_gt5era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "brier:any_gt5era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt5:era5_daily_max:0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt5:era5_daily_max:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt5:era5_daily_max:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt5:era5_daily_max:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt5:era5_daily_max:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "parameter_nll:any_gt5era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_rmse:any_gt5era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:proxy:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:proxy:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:proxy:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:proxy:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:proxy:5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:proxy:6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:proxy:7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:proxy:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:proxy:9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:proxy:10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:era5_daily_max:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:era5_daily_max:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:era5_daily_max:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:era5_daily_max:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:era5_daily_max:5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:era5_daily_max:6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:era5_daily_max:7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:era5_daily_max:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:era5_daily_max:9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:era5_daily_max:10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt5:era5_daily_max:11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outcome:any_gt100",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "probabilities:any_gt100proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "brier:any_gt100proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt100:proxy:0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt100:proxy:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt100:proxy:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt100:proxy:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt100:proxy:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "parameter_nll:any_gt100proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_rmse:any_gt100proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "probabilities:any_gt100era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "brier:any_gt100era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt100:era5_daily_max:0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt100:era5_daily_max:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt100:era5_daily_max:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt100:era5_daily_max:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt100:era5_daily_max:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "parameter_nll:any_gt100era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_rmse:any_gt100era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:proxy:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:proxy:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:proxy:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:proxy:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:proxy:5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:proxy:6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:proxy:7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:proxy:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:proxy:9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:proxy:10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:era5_daily_max:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:era5_daily_max:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:era5_daily_max:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:era5_daily_max:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:era5_daily_max:5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:era5_daily_max:6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:era5_daily_max:7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:era5_daily_max:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:era5_daily_max:9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:era5_daily_max:10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt100:era5_daily_max:11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outcome:any_gt1000",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "probabilities:any_gt1000proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "brier:any_gt1000proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt1000:proxy:0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt1000:proxy:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt1000:proxy:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt1000:proxy:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt1000:proxy:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "parameter_nll:any_gt1000proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_rmse:any_gt1000proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "probabilities:any_gt1000era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "brier:any_gt1000era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt1000:era5_daily_max:0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt1000:era5_daily_max:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt1000:era5_daily_max:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt1000:era5_daily_max:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:any_gt1000:era5_daily_max:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "parameter_nll:any_gt1000era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_rmse:any_gt1000era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:proxy:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:proxy:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:proxy:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:proxy:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:proxy:5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:proxy:6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:proxy:7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:proxy:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:proxy:9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:proxy:10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:era5_daily_max:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:era5_daily_max:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:era5_daily_max:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:era5_daily_max:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:era5_daily_max:5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:era5_daily_max:6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:era5_daily_max:7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:era5_daily_max:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:era5_daily_max:9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:era5_daily_max:10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:any_gt1000:era5_daily_max:11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outcome:wthr_gt0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "probabilities:wthr_gt0proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "brier:wthr_gt0proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt0:proxy:0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt0:proxy:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt0:proxy:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt0:proxy:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt0:proxy:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "parameter_nll:wthr_gt0proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_rmse:wthr_gt0proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "probabilities:wthr_gt0era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "brier:wthr_gt0era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt0:era5_daily_max:0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt0:era5_daily_max:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt0:era5_daily_max:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt0:era5_daily_max:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt0:era5_daily_max:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "parameter_nll:wthr_gt0era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_rmse:wthr_gt0era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:proxy:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:proxy:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:proxy:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:proxy:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:proxy:5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:proxy:6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:proxy:7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:proxy:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:proxy:9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:proxy:10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:era5_daily_max:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:era5_daily_max:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:era5_daily_max:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:era5_daily_max:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:era5_daily_max:5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:era5_daily_max:6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:era5_daily_max:7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:era5_daily_max:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:era5_daily_max:9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:era5_daily_max:10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt0:era5_daily_max:11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outcome:wthr_gt5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "probabilities:wthr_gt5proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "brier:wthr_gt5proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt5:proxy:0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt5:proxy:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt5:proxy:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt5:proxy:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt5:proxy:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "parameter_nll:wthr_gt5proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_rmse:wthr_gt5proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "probabilities:wthr_gt5era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "brier:wthr_gt5era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt5:era5_daily_max:0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt5:era5_daily_max:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt5:era5_daily_max:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt5:era5_daily_max:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt5:era5_daily_max:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "parameter_nll:wthr_gt5era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_rmse:wthr_gt5era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:proxy:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:proxy:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:proxy:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:proxy:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:proxy:5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:proxy:6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:proxy:7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:proxy:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:proxy:9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:proxy:10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:era5_daily_max:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:era5_daily_max:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:era5_daily_max:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:era5_daily_max:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:era5_daily_max:5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:era5_daily_max:6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:era5_daily_max:7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:era5_daily_max:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:era5_daily_max:9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:era5_daily_max:10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt5:era5_daily_max:11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outcome:wthr_gt100",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "probabilities:wthr_gt100proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "brier:wthr_gt100proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt100:proxy:0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt100:proxy:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt100:proxy:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt100:proxy:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt100:proxy:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "parameter_nll:wthr_gt100proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_rmse:wthr_gt100proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "probabilities:wthr_gt100era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "brier:wthr_gt100era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt100:era5_daily_max:0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt100:era5_daily_max:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt100:era5_daily_max:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt100:era5_daily_max:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt100:era5_daily_max:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "parameter_nll:wthr_gt100era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_rmse:wthr_gt100era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:proxy:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:proxy:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:proxy:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:proxy:5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:proxy:6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:proxy:7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:proxy:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:proxy:9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:proxy:10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:era5_daily_max:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:era5_daily_max:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:era5_daily_max:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:era5_daily_max:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:era5_daily_max:5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:era5_daily_max:6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:era5_daily_max:7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:era5_daily_max:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:era5_daily_max:9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:era5_daily_max:10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt100:era5_daily_max:11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "outcome:wthr_gt1000",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "probabilities:wthr_gt1000proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "brier:wthr_gt1000proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt1000:proxy:0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt1000:proxy:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt1000:proxy:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt1000:proxy:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt1000:proxy:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "parameter_nll:wthr_gt1000proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_rmse:wthr_gt1000proxy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "probabilities:wthr_gt1000era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "brier:wthr_gt1000era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt1000:era5_daily_max:0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt1000:era5_daily_max:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt1000:era5_daily_max:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt1000:era5_daily_max:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fold_score:wthr_gt1000:era5_daily_max:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "parameter_nll:wthr_gt1000era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_rmse:wthr_gt1000era5_daily_max",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt1000:proxy:1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt1000:proxy:2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt1000:proxy:3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt1000:proxy:4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt1000:proxy:5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt1000:proxy:6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt1000:proxy:7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt1000:proxy:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt1000:proxy:9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt1000:proxy:10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt1000:proxy:11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt1000:era5_daily_max:6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt1000:era5_daily_max:7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt1000:era5_daily_max:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt1000:era5_daily_max:9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calibration_bin:wthr_gt1000:era5_daily_max:10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "bootstrap_mean_ci",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "bootstrap_endpoint_ci",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "total_checks": 1106,
+  "failed_checks": [],
+  "files": 136,
+  "raw_responses": 111,
+  "validated_hourly_values": 2919744,
+  "max_daily_max_error": 0.0,
+  "failed_fits": [
+    {
+      "target": "wthr_gt1000",
+      "version": "era5_daily_max",
+      "scope": "full",
+      "n": 121656,
+      "successes": 312.0,
+      "success": false,
+      "message": "ABNORMAL: ",
+      "nll": 2172.9758167098703,
+      "iterations": 6
+    }
+  ],
+  "likelihood_counterexample": {
+    "candidate": {
+      "theta": 40.0,
+      "beta": 0.27,
+      "p0": 0.0014
+    },
+    "candidate_nll": 1889.9445430361523,
+    "saved_nll": 2172.9758167098703,
+    "method": "post-review fixed parameter point; no optimization, no replacement result"
+  },
+  "rare_fold_diagnostics": [
+    {
+      "fold": 0,
+      "reported_success": true,
+      "saved_training_nll": 1660.770269580203,
+      "fixed_candidate_training_nll": 1437.304379578768,
+      "train_events": 237,
+      "test_events": 75
+    },
+    {
+      "fold": 1,
+      "reported_success": true,
+      "saved_training_nll": 1735.3627980591011,
+      "fixed_candidate_training_nll": 1537.19841494629,
+      "train_events": 249,
+      "test_events": 63
+    },
+    {
+      "fold": 2,
+      "reported_success": true,
+      "saved_training_nll": 1788.9141060109164,
+      "fixed_candidate_training_nll": 1532.8994059867332,
+      "train_events": 258,
+      "test_events": 54
+    },
+    {
+      "fold": 3,
+      "reported_success": true,
+      "saved_training_nll": 1782.9797095902454,
+      "fixed_candidate_training_nll": 1541.2006454960956,
+      "train_events": 257,
+      "test_events": 55
+    },
+    {
+      "fold": 4,
+      "reported_success": true,
+      "saved_training_nll": 1723.4186238170341,
+      "fixed_candidate_training_nll": 1511.1753261367217,
+      "train_events": 247,
+      "test_events": 65
+    }
+  ],
+  "mean_brier_gain_pct": -0.7188340529907139,
+  "mean_brier_gain_pct_excluding_failed_endpoint": -0.1626387675574031,
+  "mean_gain_ci95_pct_excluding_failed_endpoint": [
+    -0.38908523291646074,
+    0.07750010479597583
+  ],
+  "serialization_differences": [
+    {
+      "field": "precip",
+      "max_absolute_difference": 3.552713678800501e-15,
+      "explanation": "CSV read/write float rounding; not a changed scientific variable"
+    }
+  ],
+  "grid_gust_range": [
+    2.4,
+    35.9
+  ],
+  "proxy_gust_range": [
+    1.95319581653242,
+    26.79445580971722
+  ],
+  "small_calibration_bins": 10,
+  "tail_examples": [
+    {
+      "target": "any_gt0",
+      "version": "era5_daily_max",
+      "bin": 11,
+      "lower": 0.8330200733516027,
+      "upper": 1.0,
+      "n": 1,
+      "mean_probability": 0.8330200733516027,
+      "observed_frequency": 1.0,
+      "events": 1
+    },
+    {
+      "target": "any_gt5",
+      "version": "era5_daily_max",
+      "bin": 11,
+      "lower": 0.7577413287102764,
+      "upper": 1.0,
+      "n": 1,
+      "mean_probability": 0.7577413287102764,
+      "observed_frequency": 1.0,
+      "events": 1
+    },
+    {
+      "target": "any_gt100",
+      "version": "era5_daily_max",
+      "bin": 11,
+      "lower": 0.6845706794861558,
+      "upper": 1.0,
+      "n": 1,
+      "mean_probability": 0.6845706794861558,
+      "observed_frequency": 1.0,
+      "events": 1
+    },
+    {
+      "target": "any_gt1000",
+      "version": "era5_daily_max",
+      "bin": 11,
+      "lower": 0.3318924159938713,
+      "upper": 1.0,
+      "n": 1,
+      "mean_probability": 0.3318924159938713,
+      "observed_frequency": 1.0,
+      "events": 1
+    },
+    {
+      "target": "wthr_gt0",
+      "version": "era5_daily_max",
+      "bin": 11,
+      "lower": 0.7748370258394199,
+      "upper": 1.0,
+      "n": 1,
+      "mean_probability": 0.7748370258394199,
+      "observed_frequency": 1.0,
+      "events": 1
+    },
+    {
+      "target": "wthr_gt5",
+      "version": "era5_daily_max",
+      "bin": 11,
+      "lower": 0.7289811209695309,
+      "upper": 1.0,
+      "n": 1,
+      "mean_probability": 0.7289811209695309,
+      "observed_frequency": 1.0,
+      "events": 1
+    },
+    {
+      "target": "wthr_gt100",
+      "version": "era5_daily_max",
+      "bin": 11,
+      "lower": 0.6819433192016445,
+      "upper": 1.0,
+      "n": 1,
+      "mean_probability": 0.6819433192016445,
+      "observed_frequency": 1.0,
+      "events": 1
+    },
+    {
+      "target": "wthr_gt1000",
+      "version": "proxy",
+      "bin": 7,
+      "lower": 0.002532191388519211,
+      "upper": 0.002552694448397482,
+      "n": 99,
+      "mean_probability": 0.0025417682375338257,
+      "observed_frequency": 0.0,
+      "events": 0
+    },
+    {
+      "target": "wthr_gt1000",
+      "version": "proxy",
+      "bin": 9,
+      "lower": 0.002634709723841687,
+      "upper": 0.0026449611858056364,
+      "n": 30,
+      "mean_probability": 0.0026389138981714787,
+      "observed_frequency": 0.0,
+      "events": 0
+    },
+    {
+      "target": "wthr_gt1000",
+      "version": "proxy",
+      "bin": 11,
+      "lower": 0.2692213284693819,
+      "upper": 1.0,
+      "n": 1,
+      "mean_probability": 0.2692213284693819,
+      "observed_frequency": 1.0,
+      "events": 1
+    }
+  ],
+  "no_refitting": true,
+  "no_weather_requests": true
+}

@@ -1,0 +1,4 @@
+location,label,left,right,closed,n,numerator,frequency,quoted_value,frequency_minus_quote,qualification
+body P069 / section4.4,first original bin (calm not explicitly defined),0,4,"(left,right]",5544,808,0.14574314574314573,0.40000000000000002,-0.25425685425685429,calm mapping unconfirmed; first original bin shown explicitly
+body P069 / section4.4,12-18 m/s,12,18,"(left,right]",11894,1680,0.14124768790987052,0.28999999999999998,-0.14875231209012946,"pooled original adjacent bins, not unweighted mean of bin probabilities"
+body P069 / section4.4,>23 m/s within existing bins,23,45,"(left,right]",1601,652,0.40724547158026236,0.47999999999999998,-0.072754528419737619,"pooled original adjacent bins, not unweighted mean of bin probabilities"

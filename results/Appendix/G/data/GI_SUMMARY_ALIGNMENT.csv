@@ -1,0 +1,11 @@
+combination,model_id,prediction_type,n,old_rmse,pooled_rmse,difference,within_numeric_tolerance
+E0_all,final,LAD_OOF_fixed_production,60437,1.9847572062476286,1.9847572062476286,0,True
+E0_all,paper,LAD_OOF_fixed_production,60437,1.9886822659446699,1.9886822659446699,0,True
+E0_weather,final,LAD_OOF_fixed_production,9857,2.1668618569786582,2.1668618569786582,0,True
+E0_weather,paper,LAD_OOF_fixed_production,9857,2.1784068292120016,2.1784068292120016,0,True
+E0_weather,hinge,LAD_OOF_fixed_production,9857,2.1713940054430343,2.1713940054430343,0,True
+R0c_all,final,LAD_OOF_fixed_production,51173,1.1502526389581602,1.1502526389581602,0,True
+R0c_all,paper,LAD_OOF_fixed_production,51173,1.1505728095036865,1.1505728095036865,0,True
+R0c_weather,final,LAD_OOF_fixed_production,9254,1.2459205206576509,1.2459205206576509,0,True
+R0c_weather,paper,LAD_OOF_fixed_production,9254,1.250445938476036,1.250445938476036,0,True
+R0c_weather,hinge,LAD_OOF_fixed_production,9254,1.2496658577536097,1.2496658577536097,0,True

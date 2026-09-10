@@ -1,0 +1,38 @@
+{
+  "leave_lad_out": {
+    "n": 121656,
+    "mean_difference": -0.05570123566207714,
+    "sd_difference": 0.7717613016478295,
+    "rmse": 0.7737656224440878,
+    "correlation": 0.9839030158638037,
+    "difference_quantiles": {
+      "p01": -2.7561750121768256,
+      "p05": -1.300159923783391,
+      "p50": 0.010741836970615815,
+      "p95": 0.9971829405285879,
+      "p99": 1.7851262483919599
+    }
+  },
+  "leave_shared_grid_cell_out": {
+    "n": 121656,
+    "mean_difference": -0.05751789232781295,
+    "sd_difference": 0.8087495968385519,
+    "rmse": 0.8107890242761111,
+    "correlation": 0.9822962299133207,
+    "difference_quantiles": {
+      "p01": -2.8700227010499986,
+      "p05": -1.3740972468043258,
+      "p50": 0.0116623623925447,
+      "p95": 1.0472660370896287,
+      "p99": 1.836805247902654
+    }
+  },
+  "old_proxy_reference": {
+    "n": 41926,
+    "rmse": 2.221061185829268,
+    "corr": 0.8540266001451742,
+    "bias": -0.08184577212513594
+  },
+  "n_unique_returned_cells": 52,
+  "interpretation": "Spatial continuity only. Different target/anchors/time aggregation from old LOO; not a truth-quality ranking."
+}

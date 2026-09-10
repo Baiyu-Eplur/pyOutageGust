@@ -1,0 +1,11 @@
+{
+  "other_managed_outputs": {
+    "logs/execution.log": true,
+    "logs/validation.json": true,
+    "tables/G01_PREDICTED_VS_OBSERVED_SUMMARY.csv": true,
+    "tables/G01_PREDICTED_VS_OBSERVED_SUMMARY.md": true,
+    "tables/G_FINAL_METRICS.csv": true,
+    "tables/G_FINAL_METRICS.md": true
+  },
+  "all_unchanged": true
+}

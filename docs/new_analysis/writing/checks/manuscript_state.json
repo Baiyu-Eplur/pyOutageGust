@@ -1,0 +1,290 @@
+{
+  "schema_version": "1.1",
+  "project": {
+    "id": "APP-WRITE-AE",
+    "title": "Supplementary Information A–E",
+    "archetype": "empirical",
+    "study_designs": [
+      "quantitative observational",
+      "computational model comparison"
+    ],
+    "lifecycle_stage": "supplement drafting",
+    "review_maturity": "developmental",
+    "target_venue": "Engineering–statistics journal; no named journal specified",
+    "active_release": "A–E first draft"
+  },
+  "artifacts": [
+    {
+      "id": "appendix-ae",
+      "path": "docs/new_analysis/writing/Supplementary_Information_A_E_draft.md",
+      "role": "supplement",
+      "status": "ACTIVE",
+      "required_for_release": true
+    }
+  ],
+  "authority_sources": [
+    {
+      "id": "main",
+      "kind": "existing project authority",
+      "path_or_reference": "results/new/20260909183317/results/paper/Extended_paper_draft.docx",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    },
+    {
+      "id": "plan",
+      "kind": "existing project authority",
+      "path_or_reference": "docs/new_analysis/instructions/论文整合计划_v9_附录成文与正文衔接.md",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    },
+    {
+      "id": "claims",
+      "kind": "existing project authority",
+      "path_or_reference": "results/Appendix/claim_evidence_map.csv",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    },
+    {
+      "id": "requirements",
+      "kind": "existing project authority",
+      "path_or_reference": "results/Appendix/appendix_requirements.csv",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    },
+    {
+      "id": "results",
+      "kind": "existing project authority",
+      "path_or_reference": "results/Appendix/requirement_result_map.csv",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    },
+    {
+      "id": "register",
+      "kind": "existing project authority",
+      "path_or_reference": "results/Appendix/figure_table_register.csv",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    },
+    {
+      "id": "A",
+      "kind": "existing project authority",
+      "path_or_reference": "results/Appendix/A/manifest.json",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    },
+    {
+      "id": "B",
+      "kind": "existing project authority",
+      "path_or_reference": "results/Appendix/B/manifest.json",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    },
+    {
+      "id": "C",
+      "kind": "existing project authority",
+      "path_or_reference": "results/Appendix/C/manifest.json",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    },
+    {
+      "id": "D",
+      "kind": "existing project authority",
+      "path_or_reference": "results/Appendix/D/manifest.json",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    },
+    {
+      "id": "E",
+      "kind": "existing project authority",
+      "path_or_reference": "results/Appendix/E/manifest.json",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    }
+  ],
+  "contract": {
+    "gap": "Provide methods and complete supporting evidence for the accepted Extended manuscript.",
+    "task": "Draft Appendices A–E in English from accepted results only.",
+    "outcomes": [
+      "One combined editable Markdown draft",
+      "Writing and evidence record"
+    ],
+    "questions": [
+      {
+        "id": "A",
+        "text": "What data and samples support each analysis?",
+        "lock": "SEMANTIC"
+      },
+      {
+        "id": "B",
+        "text": "How are stage records converted to incident outcomes?",
+        "lock": "SEMANTIC"
+      },
+      {
+        "id": "C",
+        "text": "What do established candidate comparisons show on the final samples?",
+        "lock": "SEMANTIC"
+      },
+      {
+        "id": "D",
+        "text": "How were knots estimated and how precisely are they located?",
+        "lock": "SEMANTIC"
+      },
+      {
+        "id": "E",
+        "text": "What does the incident temporal analysis actually compare?",
+        "lock": "SEMANTIC"
+      }
+    ],
+    "contribution": "Reproducible explanation and evidence presentation without changing accepted research decisions.",
+    "nonclaims": [
+      "No new computation or audit of research",
+      "No automatic manuscript/model change",
+      "No F–J writing",
+      "No claim of untouched temporal confirmation or universally optimal model"
+    ]
+  },
+  "semantic_locks": [],
+  "terminology": [],
+  "style_profile": {
+    "language_variant": "British English",
+    "protected_terms": [
+      "LAD",
+      "BIC",
+      "AIC",
+      "RMSE",
+      "log(1+C)",
+      "incident",
+      "plateau"
+    ],
+    "discouraged_phrases": [
+      "it is worth noting",
+      "delve",
+      "proves temporal robustness"
+    ],
+    "preferred_open_compounds": [],
+    "allowed_repetitions": [
+      "Registered table headers and analysis combination names are intentionally repeated for readable independent panels."
+    ],
+    "sentence_opening_words": 4,
+    "phrase_words": 5,
+    "phrase_min_occurrences": 3
+  },
+  "facts": [],
+  "alignment": [
+    {
+      "question_id": "A",
+      "method": "Explain accepted A methods",
+      "evidence": "results/Appendix/A; existing central maps",
+      "result": "Use all relevant favourable and unfavourable accepted results",
+      "interpretation": "Bound to sample, controls and evaluation design",
+      "limitation": "No inference beyond saved evidence",
+      "contribution": "Appendix A reader function",
+      "status": "COMPLETE"
+    },
+    {
+      "question_id": "B",
+      "method": "Explain accepted B methods",
+      "evidence": "results/Appendix/B; existing central maps",
+      "result": "Use all relevant favourable and unfavourable accepted results",
+      "interpretation": "Bound to sample, controls and evaluation design",
+      "limitation": "No inference beyond saved evidence",
+      "contribution": "Appendix B reader function",
+      "status": "COMPLETE"
+    },
+    {
+      "question_id": "C",
+      "method": "Explain accepted C methods",
+      "evidence": "results/Appendix/C; existing central maps",
+      "result": "Use all relevant favourable and unfavourable accepted results",
+      "interpretation": "Bound to sample, controls and evaluation design",
+      "limitation": "No inference beyond saved evidence",
+      "contribution": "Appendix C reader function",
+      "status": "COMPLETE"
+    },
+    {
+      "question_id": "D",
+      "method": "Explain accepted D methods",
+      "evidence": "results/Appendix/D; existing central maps",
+      "result": "Use all relevant favourable and unfavourable accepted results",
+      "interpretation": "Bound to sample, controls and evaluation design",
+      "limitation": "No inference beyond saved evidence",
+      "contribution": "Appendix D reader function",
+      "status": "COMPLETE"
+    },
+    {
+      "question_id": "E",
+      "method": "Explain accepted E methods",
+      "evidence": "results/Appendix/E; existing central maps",
+      "result": "Use all relevant favourable and unfavourable accepted results",
+      "interpretation": "Bound to sample, controls and evaluation design",
+      "limitation": "No inference beyond saved evidence",
+      "contribution": "Appendix E reader function",
+      "status": "COMPLETE"
+    }
+  ],
+  "dimensions": [],
+  "decisions": [
+    {
+      "id": "accepted-results",
+      "text": "User accepts A–E complete; writing only. Preserve current main model and source outputs."
+    }
+  ],
+  "issues": [],
+  "release": {
+    "status": "DRAFT_FOR_REVIEW",
+    "candidate_artifact_ids": [
+      "appendix-ae"
+    ],
+    "required_checks": [
+      "argument_structure",
+      "evidence_scope",
+      "scholarly_writing",
+      "delivery_integrity",
+      "functional_completeness"
+    ],
+    "completed_checks": [
+      "argument_structure",
+      "evidence_scope",
+      "scholarly_writing",
+      "delivery_integrity",
+      "functional_completeness"
+    ],
+    "checked_hashes": {
+      "appendix-ae": "bb8c72733ec15f6a3f4e6b76c092952a817cea352ca86e4c3f7b360a85da45f6"
+    },
+    "visual_check": "Both original figures opened and captions matched; Markdown structure checked; no Word/PDF rendering requested"
+  }
+}

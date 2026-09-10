@@ -1,0 +1,9 @@
+{
+  "formal_recovery_ID_membership_exact": true,
+  "cap_matches_saved_combined_and_actual_max": true,
+  "union_prediction_keys_unique": true,
+  "no_display_only_in_primary": true,
+  "display_only_positive_customers_and_above_cap": true,
+  "prediction_rows_finite": true,
+  "exclusion_counts_partition_exposure": true
+}

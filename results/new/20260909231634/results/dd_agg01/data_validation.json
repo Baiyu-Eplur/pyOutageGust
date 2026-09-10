@@ -1,0 +1,12 @@
+{
+  "rows": 121656,
+  "lads": 111,
+  "days": 1096,
+  "raw_files": 111,
+  "hourly_values": 2919744,
+  "hours_per_day": 24,
+  "a01_max_abs_error": 0.0,
+  "shared_keys_labels_hours_folds": true,
+  "same_returned_grids": true,
+  "network_requests": 0
+}

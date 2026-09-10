@@ -1,0 +1,202 @@
+{
+  "time": "2026-09-10T16:51:04.113619+01:00",
+  "checks": {
+    "A_preserved": true,
+    "B_preserved": true,
+    "C_preserved": true,
+    "D_preserved": true,
+    "E_preserved": true,
+    "F_preserved": true,
+    "G_preserved": true,
+    "H_preserved": true,
+    "I_preserved": true,
+    "previous_numbering_unchanged": true,
+    "all_managed_output_hashes_valid": true,
+    "current_manifest_success": true,
+    "technical_checks_all_passed": true,
+    "other_J_hashes_preserved": true,
+    "26_scientific_files_unchanged_on_reexport": true,
+    "cache_reexport_zero_fits": true,
+    "original_research_input_hashes_unchanged": true
+  },
+  "all_passed": true,
+  "scope": {
+    "A": {
+      "file_count": 18,
+      "file_list_size_mtime_unchanged": true,
+      "manifest_hash_unchanged": true
+    },
+    "B": {
+      "file_count": 12,
+      "file_list_size_mtime_unchanged": true,
+      "manifest_hash_unchanged": true
+    },
+    "C": {
+      "file_count": 637,
+      "file_list_size_mtime_unchanged": true,
+      "manifest_hash_unchanged": true
+    },
+    "D": {
+      "file_count": 13,
+      "file_list_size_mtime_unchanged": true,
+      "manifest_hash_unchanged": true
+    },
+    "E": {
+      "file_count": 8,
+      "file_list_size_mtime_unchanged": true,
+      "manifest_hash_unchanged": true
+    },
+    "F": {
+      "file_count": 8,
+      "file_list_size_mtime_unchanged": true,
+      "manifest_hash_unchanged": true
+    },
+    "G": {
+      "file_count": 8,
+      "file_list_size_mtime_unchanged": true,
+      "manifest_hash_unchanged": true
+    },
+    "H": {
+      "file_count": 11,
+      "file_list_size_mtime_unchanged": true,
+      "manifest_hash_unchanged": true
+    },
+    "I": {
+      "file_count": 6,
+      "file_list_size_mtime_unchanged": true,
+      "manifest_hash_unchanged": true
+    }
+  },
+  "technical_check_count": 206,
+  "valid_components": 96,
+  "J03_register": [
+    {
+      "semantic_id": "J03_BRIER_COMPARISON",
+      "display_number": "Figure J2",
+      "appendix": "J",
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "path": "J/figures/J03_BRIER_COMPARISON.png",
+      "status": "本次仅J03更新/其他J结果保留",
+      "source_sha256": "{\"results/new/20260909183317/results/final_models/district_day_panel.csv\": \"a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a\", \"results/new/20260909183317/results/final_models/district_day_fragility.json\": \"dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb\", \"results/new/20260909231634/results/dd_agg01/experiment.json\": \"64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547\", \"results/new/20260909231634/results/dd_agg01/inventory.json\": \"0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4\", \"results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz\": \"874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884\", \"results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl\": \"a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace\", \"results/new/20260909231634/results/dd_agg01/fit_summary.csv\": \"42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b\", \"results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz\": \"0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b\", \"results/new/20260909231634/results/dd_agg01/validation.json\": \"c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199\", \"results/new/20260909205214/results/p03_p04/lad_folds.csv\": \"b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303\"}"
+    },
+    {
+      "semantic_id": "J03_PRIMARY_CALIBRATION",
+      "display_number": "Figure J3",
+      "appendix": "J",
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "path": "J/figures/J03_PRIMARY_CALIBRATION.png",
+      "status": "本次仅J03更新/其他J结果保留",
+      "source_sha256": "{\"results/new/20260909183317/results/final_models/district_day_panel.csv\": \"a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a\", \"results/new/20260909183317/results/final_models/district_day_fragility.json\": \"dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb\", \"results/new/20260909231634/results/dd_agg01/experiment.json\": \"64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547\", \"results/new/20260909231634/results/dd_agg01/inventory.json\": \"0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4\", \"results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz\": \"874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884\", \"results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl\": \"a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace\", \"results/new/20260909231634/results/dd_agg01/fit_summary.csv\": \"42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b\", \"results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz\": \"0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b\", \"results/new/20260909231634/results/dd_agg01/validation.json\": \"c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199\", \"results/new/20260909205214/results/p03_p04/lad_folds.csv\": \"b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303\"}"
+    },
+    {
+      "semantic_id": "J03_CALIBRATION",
+      "display_number": "Table J20",
+      "appendix": "J",
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "path": "J/tables/J03_CALIBRATION.csv",
+      "status": "本次仅J03更新/其他J结果保留",
+      "source_sha256": "{\"results/new/20260909183317/results/final_models/district_day_panel.csv\": \"a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a\", \"results/new/20260909183317/results/final_models/district_day_fragility.json\": \"dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb\", \"results/new/20260909231634/results/dd_agg01/experiment.json\": \"64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547\", \"results/new/20260909231634/results/dd_agg01/inventory.json\": \"0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4\", \"results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz\": \"874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884\", \"results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl\": \"a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace\", \"results/new/20260909231634/results/dd_agg01/fit_summary.csv\": \"42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b\", \"results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz\": \"0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b\", \"results/new/20260909231634/results/dd_agg01/validation.json\": \"c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199\", \"results/new/20260909205214/results/p03_p04/lad_folds.csv\": \"b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303\"}"
+    },
+    {
+      "semantic_id": "J03_COMPONENT_MANIFEST",
+      "display_number": "Table J21",
+      "appendix": "J",
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "path": "J/tables/J03_COMPONENT_MANIFEST.csv",
+      "status": "本次仅J03更新/其他J结果保留",
+      "source_sha256": "{\"results/new/20260909183317/results/final_models/district_day_panel.csv\": \"a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a\", \"results/new/20260909183317/results/final_models/district_day_fragility.json\": \"dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb\", \"results/new/20260909231634/results/dd_agg01/experiment.json\": \"64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547\", \"results/new/20260909231634/results/dd_agg01/inventory.json\": \"0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4\", \"results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz\": \"874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884\", \"results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl\": \"a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace\", \"results/new/20260909231634/results/dd_agg01/fit_summary.csv\": \"42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b\", \"results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz\": \"0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b\", \"results/new/20260909231634/results/dd_agg01/validation.json\": \"c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199\", \"results/new/20260909205214/results/p03_p04/lad_folds.csv\": \"b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303\"}"
+    },
+    {
+      "semantic_id": "J03_COMPONENT_PLAN",
+      "display_number": "Table J22",
+      "appendix": "J",
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "path": "J/tables/J03_COMPONENT_PLAN.csv",
+      "status": "本次仅J03更新/其他J结果保留",
+      "source_sha256": "{\"results/new/20260909183317/results/final_models/district_day_panel.csv\": \"a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a\", \"results/new/20260909183317/results/final_models/district_day_fragility.json\": \"dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb\", \"results/new/20260909231634/results/dd_agg01/experiment.json\": \"64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547\", \"results/new/20260909231634/results/dd_agg01/inventory.json\": \"0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4\", \"results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz\": \"874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884\", \"results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl\": \"a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace\", \"results/new/20260909231634/results/dd_agg01/fit_summary.csv\": \"42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b\", \"results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz\": \"0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b\", \"results/new/20260909231634/results/dd_agg01/validation.json\": \"c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199\", \"results/new/20260909205214/results/p03_p04/lad_folds.csv\": \"b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303\"}"
+    },
+    {
+      "semantic_id": "J03_FOLD_FITS",
+      "display_number": "Table J23",
+      "appendix": "J",
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "path": "J/tables/J03_FOLD_FITS.csv",
+      "status": "本次仅J03更新/其他J结果保留",
+      "source_sha256": "{\"results/new/20260909183317/results/final_models/district_day_panel.csv\": \"a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a\", \"results/new/20260909183317/results/final_models/district_day_fragility.json\": \"dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb\", \"results/new/20260909231634/results/dd_agg01/experiment.json\": \"64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547\", \"results/new/20260909231634/results/dd_agg01/inventory.json\": \"0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4\", \"results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz\": \"874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884\", \"results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl\": \"a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace\", \"results/new/20260909231634/results/dd_agg01/fit_summary.csv\": \"42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b\", \"results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz\": \"0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b\", \"results/new/20260909231634/results/dd_agg01/validation.json\": \"c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199\", \"results/new/20260909205214/results/p03_p04/lad_folds.csv\": \"b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303\"}"
+    },
+    {
+      "semantic_id": "J03_FOLD_METRICS",
+      "display_number": "Table J24",
+      "appendix": "J",
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "path": "J/tables/J03_FOLD_METRICS.csv",
+      "status": "本次仅J03更新/其他J结果保留",
+      "source_sha256": "{\"results/new/20260909183317/results/final_models/district_day_panel.csv\": \"a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a\", \"results/new/20260909183317/results/final_models/district_day_fragility.json\": \"dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb\", \"results/new/20260909231634/results/dd_agg01/experiment.json\": \"64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547\", \"results/new/20260909231634/results/dd_agg01/inventory.json\": \"0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4\", \"results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz\": \"874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884\", \"results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl\": \"a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace\", \"results/new/20260909231634/results/dd_agg01/fit_summary.csv\": \"42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b\", \"results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz\": \"0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b\", \"results/new/20260909231634/results/dd_agg01/validation.json\": \"c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199\", \"results/new/20260909205214/results/p03_p04/lad_folds.csv\": \"b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303\"}"
+    },
+    {
+      "semantic_id": "J03_FULL_PARAMETERS",
+      "display_number": "Table J25",
+      "appendix": "J",
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "path": "J/tables/J03_FULL_PARAMETERS.csv",
+      "status": "本次仅J03更新/其他J结果保留",
+      "source_sha256": "{\"results/new/20260909183317/results/final_models/district_day_panel.csv\": \"a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a\", \"results/new/20260909183317/results/final_models/district_day_fragility.json\": \"dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb\", \"results/new/20260909231634/results/dd_agg01/experiment.json\": \"64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547\", \"results/new/20260909231634/results/dd_agg01/inventory.json\": \"0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4\", \"results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz\": \"874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884\", \"results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl\": \"a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace\", \"results/new/20260909231634/results/dd_agg01/fit_summary.csv\": \"42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b\", \"results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz\": \"0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b\", \"results/new/20260909231634/results/dd_agg01/validation.json\": \"c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199\", \"results/new/20260909205214/results/p03_p04/lad_folds.csv\": \"b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303\"}"
+    },
+    {
+      "semantic_id": "J03_MATCHED_SAMPLE",
+      "display_number": "Table J26",
+      "appendix": "J",
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "path": "J/tables/J03_MATCHED_SAMPLE.csv",
+      "status": "本次仅J03更新/其他J结果保留",
+      "source_sha256": "{\"results/new/20260909183317/results/final_models/district_day_panel.csv\": \"a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a\", \"results/new/20260909183317/results/final_models/district_day_fragility.json\": \"dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb\", \"results/new/20260909231634/results/dd_agg01/experiment.json\": \"64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547\", \"results/new/20260909231634/results/dd_agg01/inventory.json\": \"0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4\", \"results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz\": \"874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884\", \"results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl\": \"a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace\", \"results/new/20260909231634/results/dd_agg01/fit_summary.csv\": \"42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b\", \"results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz\": \"0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b\", \"results/new/20260909231634/results/dd_agg01/validation.json\": \"c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199\", \"results/new/20260909205214/results/p03_p04/lad_folds.csv\": \"b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303\"}"
+    },
+    {
+      "semantic_id": "J03_PAIRED_INTERVALS",
+      "display_number": "Table J27",
+      "appendix": "J",
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "path": "J/tables/J03_PAIRED_INTERVALS.csv",
+      "status": "本次仅J03更新/其他J结果保留",
+      "source_sha256": "{\"results/new/20260909183317/results/final_models/district_day_panel.csv\": \"a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a\", \"results/new/20260909183317/results/final_models/district_day_fragility.json\": \"dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb\", \"results/new/20260909231634/results/dd_agg01/experiment.json\": \"64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547\", \"results/new/20260909231634/results/dd_agg01/inventory.json\": \"0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4\", \"results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz\": \"874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884\", \"results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl\": \"a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace\", \"results/new/20260909231634/results/dd_agg01/fit_summary.csv\": \"42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b\", \"results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz\": \"0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b\", \"results/new/20260909231634/results/dd_agg01/validation.json\": \"c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199\", \"results/new/20260909205214/results/p03_p04/lad_folds.csv\": \"b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303\"}"
+    },
+    {
+      "semantic_id": "J03_PAIRED_METRICS",
+      "display_number": "Table J28",
+      "appendix": "J",
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "path": "J/tables/J03_PAIRED_METRICS.csv",
+      "status": "本次仅J03更新/其他J结果保留",
+      "source_sha256": "{\"results/new/20260909183317/results/final_models/district_day_panel.csv\": \"a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a\", \"results/new/20260909183317/results/final_models/district_day_fragility.json\": \"dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb\", \"results/new/20260909231634/results/dd_agg01/experiment.json\": \"64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547\", \"results/new/20260909231634/results/dd_agg01/inventory.json\": \"0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4\", \"results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz\": \"874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884\", \"results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl\": \"a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace\", \"results/new/20260909231634/results/dd_agg01/fit_summary.csv\": \"42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b\", \"results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz\": \"0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b\", \"results/new/20260909231634/results/dd_agg01/validation.json\": \"c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199\", \"results/new/20260909205214/results/p03_p04/lad_folds.csv\": \"b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303\"}"
+    },
+    {
+      "semantic_id": "J03_PROXY_HISTORY_COMPARISON",
+      "display_number": "Table J29",
+      "appendix": "J",
+      "requirement_id": "J03",
+      "claim_id": "CL_J03",
+      "path": "J/tables/J03_PROXY_HISTORY_COMPARISON.csv",
+      "status": "本次仅J03更新/其他J结果保留",
+      "source_sha256": "{\"results/new/20260909183317/results/final_models/district_day_panel.csv\": \"a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a\", \"results/new/20260909183317/results/final_models/district_day_fragility.json\": \"dea2046cba7a501bc4bfa8bcb5cc32a7fc1c6dbe9314b4331eac4d54b5cea2fb\", \"results/new/20260909231634/results/dd_agg01/experiment.json\": \"64d9a1e35285f9baebcadd0a203e35fa4d275cacd4a79b8a6647872008d2f547\", \"results/new/20260909231634/results/dd_agg01/inventory.json\": \"0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4\", \"results/new/20260909231634/results/dd_agg01/daily_aggregations.csv.gz\": \"874f773b3a614faa9bc89fdebf2bcd3f1fcd116e0bcb20e767e2250f263fd884\", \"results/new/20260909231634/results/dd_agg01/fit_checkpoint.jsonl\": \"a7d215b23f5b17faf0d2fb70aea2ea9b09ca16c6101a85ea37179e2a2a1daace\", \"results/new/20260909231634/results/dd_agg01/fit_summary.csv\": \"42b08f17825bfabec75492387169f1bdd85bd62ab203ee4bc7db4a009868263b\", \"results/new/20260909231634/results/dd_agg01/oof_predictions.csv.gz\": \"0c5ab02a77c0adf47b9507fef72248d553306b243d2493d06fa202e4ad3d166b\", \"results/new/20260909231634/results/dd_agg01/validation.json\": \"c0931462d1f8a541cfce3444a3a4eb0e6f3b851435e39c2bf83a5e51f20e7199\", \"results/new/20260909205214/results/p03_p04/lad_folds.csv\": \"b3a557dd043cc92c1029a0b6da006231854afb118be7260b649280fe1983b303\"}"
+    }
+  ],
+  "boundary": "A-I: file list/size/mtime and manifest SHA256; J: managed file SHA256; no historical numerical audit",
+  "ordinary_cache_repeat": {
+    "time": "2026-09-10T16:58:35.448494+01:00",
+    "new_fits": 0,
+    "schema_migration": false,
+    "scientific_26_hashes_unchanged": true,
+    "managed_hashes_valid": true
+  }
+}

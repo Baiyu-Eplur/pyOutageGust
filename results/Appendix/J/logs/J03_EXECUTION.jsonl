@@ -1,0 +1,53 @@
+{"time": "2026-09-10T16:43:52+01:00", "message": "Inputs and protocol frozen", "rows": 121656, "targets": 8}
+{"time": "2026-09-10T16:44:11+01:00", "message": "Component plan frozen before new fits", "reuse": 48, "refit": 48}
+{"time": "2026-09-10T16:44:17+01:00", "message": "Fit completed", "component": "PROXY/any_gt0/fold_0", "valid": true, "completed": 49, "total": 96}
+{"time": "2026-09-10T16:44:19+01:00", "message": "Fit completed", "component": "PROXY/any_gt0/full", "valid": true, "completed": 50, "total": 96}
+{"time": "2026-09-10T16:44:25+01:00", "message": "Fit completed", "component": "PROXY/any_gt0/fold_1", "valid": true, "completed": 51, "total": 96}
+{"time": "2026-09-10T16:44:27+01:00", "message": "Fit completed", "component": "PROXY/any_gt0/fold_2", "valid": true, "completed": 52, "total": 96}
+{"time": "2026-09-10T16:44:32+01:00", "message": "Fit completed", "component": "PROXY/any_gt0/fold_3", "valid": true, "completed": 53, "total": 96}
+{"time": "2026-09-10T16:44:33+01:00", "message": "Fit completed", "component": "PROXY/any_gt0/fold_4", "valid": true, "completed": 54, "total": 96}
+{"time": "2026-09-10T16:44:40+01:00", "message": "Fit completed", "component": "PROXY/any_gt5/full", "valid": true, "completed": 55, "total": 96}
+{"time": "2026-09-10T16:44:40+01:00", "message": "Fit completed", "component": "PROXY/any_gt5/fold_0", "valid": true, "completed": 56, "total": 96}
+{"time": "2026-09-10T16:44:46+01:00", "message": "Fit completed", "component": "PROXY/any_gt5/fold_1", "valid": true, "completed": 57, "total": 96}
+{"time": "2026-09-10T16:44:46+01:00", "message": "Fit completed", "component": "PROXY/any_gt5/fold_2", "valid": true, "completed": 58, "total": 96}
+{"time": "2026-09-10T16:44:52+01:00", "message": "Fit completed", "component": "PROXY/any_gt5/fold_3", "valid": true, "completed": 59, "total": 96}
+{"time": "2026-09-10T16:44:52+01:00", "message": "Fit completed", "component": "PROXY/any_gt5/fold_4", "valid": true, "completed": 60, "total": 96}
+{"time": "2026-09-10T16:44:58+01:00", "message": "Fit completed", "component": "PROXY/any_gt100/fold_0", "valid": true, "completed": 61, "total": 96}
+{"time": "2026-09-10T16:45:00+01:00", "message": "Fit completed", "component": "PROXY/any_gt100/full", "valid": true, "completed": 62, "total": 96}
+{"time": "2026-09-10T16:45:05+01:00", "message": "Fit completed", "component": "PROXY/any_gt100/fold_1", "valid": true, "completed": 63, "total": 96}
+{"time": "2026-09-10T16:45:07+01:00", "message": "Fit completed", "component": "PROXY/any_gt100/fold_2", "valid": true, "completed": 64, "total": 96}
+{"time": "2026-09-10T16:45:12+01:00", "message": "Fit completed", "component": "PROXY/any_gt100/fold_3", "valid": true, "completed": 65, "total": 96}
+{"time": "2026-09-10T16:45:13+01:00", "message": "Fit completed", "component": "PROXY/any_gt100/fold_4", "valid": true, "completed": 66, "total": 96}
+{"time": "2026-09-10T16:45:19+01:00", "message": "Fit completed", "component": "PROXY/any_gt1000/fold_0", "valid": true, "completed": 67, "total": 96}
+{"time": "2026-09-10T16:45:19+01:00", "message": "Fit completed", "component": "PROXY/any_gt1000/full", "valid": true, "completed": 68, "total": 96}
+{"time": "2026-09-10T16:45:25+01:00", "message": "Fit completed", "component": "PROXY/any_gt1000/fold_1", "valid": true, "completed": 69, "total": 96}
+{"time": "2026-09-10T16:45:26+01:00", "message": "Fit completed", "component": "PROXY/any_gt1000/fold_2", "valid": true, "completed": 70, "total": 96}
+{"time": "2026-09-10T16:45:31+01:00", "message": "Fit completed", "component": "PROXY/any_gt1000/fold_3", "valid": true, "completed": 71, "total": 96}
+{"time": "2026-09-10T16:45:32+01:00", "message": "Fit completed", "component": "PROXY/any_gt1000/fold_4", "valid": true, "completed": 72, "total": 96}
+{"time": "2026-09-10T16:45:38+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt0/fold_0", "valid": true, "completed": 73, "total": 96}
+{"time": "2026-09-10T16:45:39+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt0/full", "valid": true, "completed": 74, "total": 96}
+{"time": "2026-09-10T16:45:44+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt0/fold_1", "valid": true, "completed": 75, "total": 96}
+{"time": "2026-09-10T16:45:45+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt0/fold_2", "valid": true, "completed": 76, "total": 96}
+{"time": "2026-09-10T16:45:50+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt0/fold_3", "valid": true, "completed": 77, "total": 96}
+{"time": "2026-09-10T16:45:50+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt0/fold_4", "valid": true, "completed": 78, "total": 96}
+{"time": "2026-09-10T16:45:56+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt5/fold_0", "valid": true, "completed": 79, "total": 96}
+{"time": "2026-09-10T16:45:57+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt5/full", "valid": true, "completed": 80, "total": 96}
+{"time": "2026-09-10T16:46:02+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt5/fold_1", "valid": true, "completed": 81, "total": 96}
+{"time": "2026-09-10T16:46:03+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt5/fold_2", "valid": true, "completed": 82, "total": 96}
+{"time": "2026-09-10T16:46:08+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt5/fold_3", "valid": true, "completed": 83, "total": 96}
+{"time": "2026-09-10T16:46:09+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt5/fold_4", "valid": true, "completed": 84, "total": 96}
+{"time": "2026-09-10T16:46:14+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt100/fold_0", "valid": true, "completed": 85, "total": 96}
+{"time": "2026-09-10T16:46:15+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt100/full", "valid": true, "completed": 86, "total": 96}
+{"time": "2026-09-10T16:46:20+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt100/fold_1", "valid": true, "completed": 87, "total": 96}
+{"time": "2026-09-10T16:46:21+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt100/fold_2", "valid": true, "completed": 88, "total": 96}
+{"time": "2026-09-10T16:46:27+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt100/fold_3", "valid": true, "completed": 89, "total": 96}
+{"time": "2026-09-10T16:46:28+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt100/fold_4", "valid": true, "completed": 90, "total": 96}
+{"time": "2026-09-10T16:46:34+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt1000/fold_0", "valid": true, "completed": 91, "total": 96}
+{"time": "2026-09-10T16:46:34+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt1000/full", "valid": true, "completed": 92, "total": 96}
+{"time": "2026-09-10T16:46:39+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt1000/fold_1", "valid": true, "completed": 93, "total": 96}
+{"time": "2026-09-10T16:46:40+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt1000/fold_2", "valid": true, "completed": 94, "total": 96}
+{"time": "2026-09-10T16:46:45+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt1000/fold_3", "valid": true, "completed": 95, "total": 96}
+{"time": "2026-09-10T16:46:46+01:00", "message": "Fit completed", "component": "PROXY/wthr_gt1000/fold_4", "valid": true, "completed": 96, "total": 96}
+{"time": "2026-09-10T16:47:08+01:00", "message": "Paired scores, intervals, calibration and technical checks completed"}
+{"time": "2026-09-10T16:50:27+01:00", "message": "Validated cache reused; no fitting", "components": 96}
+{"time": "2026-09-10T16:51:59+01:00", "message": "Validated cache reused; no fitting", "components": 96}

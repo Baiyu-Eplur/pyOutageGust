@@ -1,0 +1,291 @@
+{
+  "schema_version": "1.1",
+  "project": {
+    "id": "APP-FJ-DRAFT",
+    "title": "Appendices F–J",
+    "archetype": "empirical",
+    "study_designs": [
+      "quantitative observational",
+      "computational model comparison"
+    ],
+    "lifecycle_stage": "supplement drafting",
+    "review_maturity": "developmental",
+    "target_venue": "Engineering–statistics journal; no named journal specified",
+    "active_release": "F–J first draft"
+  },
+  "artifacts": [
+    {
+      "id": "appendix-fj",
+      "path": "docs/new_analysis/writing/Appendices_F_J_draft.md",
+      "role": "supplement",
+      "status": "ACTIVE",
+      "required_for_release": true
+    }
+  ],
+  "authority_sources": [
+    {
+      "id": "main",
+      "kind": "existing project authority",
+      "path_or_reference": "results/new/20260909183317/results/paper/Extended_paper_draft.docx",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    },
+    {
+      "id": "plan",
+      "kind": "existing project authority",
+      "path_or_reference": "docs/new_analysis/instructions/论文整合计划_v9_附录成文与正文衔接.md",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    },
+    {
+      "id": "claims",
+      "kind": "existing project authority",
+      "path_or_reference": "results/Appendix/claim_evidence_map.csv",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    },
+    {
+      "id": "requirements",
+      "kind": "existing project authority",
+      "path_or_reference": "results/Appendix/appendix_requirements.csv",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    },
+    {
+      "id": "results",
+      "kind": "existing project authority",
+      "path_or_reference": "results/Appendix/requirement_result_map.csv",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    },
+    {
+      "id": "register",
+      "kind": "existing project authority",
+      "path_or_reference": "results/Appendix/figure_table_register.csv",
+      "scope": [
+        "writing evidence only; no new scientific audit"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T15:51:17.890173+01:00"
+    },
+    {
+      "id": "F",
+      "kind": "accepted results",
+      "path_or_reference": "results/Appendix/F/README.md",
+      "scope": [
+        "Writing evidence only"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T21:48:32.919550+01:00"
+    },
+    {
+      "id": "G",
+      "kind": "accepted results",
+      "path_or_reference": "results/Appendix/G/README.md",
+      "scope": [
+        "Writing evidence only"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T21:48:32.919550+01:00"
+    },
+    {
+      "id": "H",
+      "kind": "accepted results",
+      "path_or_reference": "results/Appendix/H/README.md",
+      "scope": [
+        "Writing evidence only"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T21:48:32.919550+01:00"
+    },
+    {
+      "id": "I",
+      "kind": "accepted results",
+      "path_or_reference": "results/Appendix/I/README.md",
+      "scope": [
+        "Writing evidence only"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T21:48:32.919550+01:00"
+    },
+    {
+      "id": "J",
+      "kind": "accepted results",
+      "path_or_reference": "results/Appendix/J/README.md",
+      "scope": [
+        "Writing evidence only"
+      ],
+      "status": "VERIFIED",
+      "last_verified": "2026-09-10T21:48:32.919550+01:00"
+    }
+  ],
+  "contract": {
+    "gap": "Provide methods and complete supporting evidence for the accepted Extended manuscript.",
+    "task": "Draft Appendices F–J from accepted results only; no statistical execution.",
+    "outcomes": [
+      "One editable F–J Markdown draft",
+      "Evidence map",
+      "Chinese author notes"
+    ],
+    "questions": [
+      {
+        "id": "F",
+        "text": "What coefficients, clustered uncertainty and sequential OOF contributions are supported?",
+        "lock": "SEMANTIC"
+      },
+      {
+        "id": "G",
+        "text": "What do incident predictions and residuals show on the current samples?",
+        "lock": "SEMANTIC"
+      },
+      {
+        "id": "H",
+        "text": "What do alternative mean models and incident-conditional analyses establish?",
+        "lock": "SEMANTIC"
+      },
+      {
+        "id": "I",
+        "text": "What do descriptive storm-window predictions show?",
+        "lock": "SEMANTIC"
+      },
+      {
+        "id": "J",
+        "text": "What do matched weather, aggregation, duration and retrospective temporal comparisons establish?",
+        "lock": "SEMANTIC"
+      }
+    ],
+    "contribution": "Reproducible explanation and evidence presentation without changing accepted research decisions.",
+    "nonclaims": [
+      "No new fitting, resampling, model selection or scientific audit",
+      "No changes to main text, A–E or scientific outputs",
+      "No universal model optimality or prospective warning validation",
+      "No uncompleted weather coarse-bin frequency alignment claimed"
+    ]
+  },
+  "semantic_locks": [],
+  "terminology": [],
+  "style_profile": {
+    "language_variant": "British English",
+    "protected_terms": [
+      "LAD",
+      "BIC",
+      "AIC",
+      "RMSE",
+      "log(1+C)",
+      "incident",
+      "plateau"
+    ],
+    "discouraged_phrases": [
+      "it is worth noting",
+      "delve",
+      "proves temporal robustness"
+    ],
+    "preferred_open_compounds": [],
+    "allowed_repetitions": [
+      "Registered table headers and analysis combination names are intentionally repeated for readable independent panels."
+    ],
+    "sentence_opening_words": 4,
+    "phrase_words": 5,
+    "phrase_min_occurrences": 3
+  },
+  "facts": [],
+  "alignment": [
+    {
+      "question_id": "F",
+      "method": "Read accepted methods and saved results",
+      "evidence": "results/Appendix/F; writing evidence map",
+      "result": "What coefficients, clustered uncertainty and sequential OOF contributions are supported?",
+      "interpretation": "Restricted to recorded sample, estimand and prediction identity",
+      "limitation": "No new analysis; local unaligned coarse-bin frequencies excluded",
+      "contribution": "Appendix F reader function",
+      "status": "COMPLETE"
+    },
+    {
+      "question_id": "G",
+      "method": "Read accepted methods and saved results",
+      "evidence": "results/Appendix/G; writing evidence map",
+      "result": "What do incident predictions and residuals show on the current samples?",
+      "interpretation": "Restricted to recorded sample, estimand and prediction identity",
+      "limitation": "No new analysis; local unaligned coarse-bin frequencies excluded",
+      "contribution": "Appendix G reader function",
+      "status": "COMPLETE"
+    },
+    {
+      "question_id": "H",
+      "method": "Read accepted methods and saved results",
+      "evidence": "results/Appendix/H; writing evidence map",
+      "result": "What do alternative mean models and incident-conditional analyses establish?",
+      "interpretation": "Restricted to recorded sample, estimand and prediction identity",
+      "limitation": "No new analysis; local unaligned coarse-bin frequencies excluded",
+      "contribution": "Appendix H reader function",
+      "status": "COMPLETE"
+    },
+    {
+      "question_id": "I",
+      "method": "Read accepted methods and saved results",
+      "evidence": "results/Appendix/I; writing evidence map",
+      "result": "What do descriptive storm-window predictions show?",
+      "interpretation": "Restricted to recorded sample, estimand and prediction identity",
+      "limitation": "No new analysis; local unaligned coarse-bin frequencies excluded",
+      "contribution": "Appendix I reader function",
+      "status": "COMPLETE"
+    },
+    {
+      "question_id": "J",
+      "method": "Read accepted methods and saved results",
+      "evidence": "results/Appendix/J; writing evidence map",
+      "result": "What do matched weather, aggregation, duration and retrospective temporal comparisons establish?",
+      "interpretation": "Restricted to recorded sample, estimand and prediction identity",
+      "limitation": "No new analysis; local unaligned coarse-bin frequencies excluded",
+      "contribution": "Appendix J reader function",
+      "status": "COMPLETE"
+    }
+  ],
+  "dimensions": [],
+  "decisions": [
+    {
+      "id": "writing-only",
+      "text": "Latest user prompt and accepted four-step ledger govern. Preserve proxy main model; accept completed outputs."
+    }
+  ],
+  "issues": [],
+  "release": {
+    "status": "DRAFT_FOR_REVIEW",
+    "candidate_artifact_ids": [
+      "appendix-fj"
+    ],
+    "required_checks": [
+      "argument_structure",
+      "evidence_scope",
+      "scholarly_writing",
+      "delivery_integrity",
+      "functional_completeness"
+    ],
+    "completed_checks": [
+      "argument_structure",
+      "evidence_scope",
+      "scholarly_writing",
+      "delivery_integrity",
+      "functional_completeness"
+    ],
+    "checked_hashes": {
+      "appendix-fj": "ca590b801dcf54b90c71a44a30f5cd686a1a3b41becb5c4873b503722e0702c3"
+    },
+    "visual_check": "Five included original PNGs and one omitted comparison PNG opened; captions aligned to axes, samples and marks. Markdown paths/tables checked; no Word/PDF rendering requested."
+  }
+}

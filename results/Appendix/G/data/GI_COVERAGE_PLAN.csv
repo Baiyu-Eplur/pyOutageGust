@@ -1,0 +1,34 @@
+combination,model_id,prediction_type,action,n,reason,target
+E0_all,final,in_sample,DERIVE,60437,compatible coefficient/design reconstruction; verify IDs and X beta against saved predictions,data/GI_PREDICTIONS.csv.gz
+E0_all,final,LAD_OOF,REFIT_NEEDED,60437,"existing fixed-production summaries lack row predictions; same original five LAD folds; fixed knots, not nested family CV",data/GI_PREDICTIONS.csv.gz
+E0_all,paper,in_sample,DERIVE,60437,compatible coefficient/design reconstruction; verify IDs and X beta against saved predictions,data/GI_PREDICTIONS.csv.gz
+E0_all,paper,LAD_OOF,REFIT_NEEDED,60437,"existing fixed-production summaries lack row predictions; same original five LAD folds; fixed knots, not nested family CV",data/GI_PREDICTIONS.csv.gz
+E0_all,control,control_residual,REFIT_NEEDED,60437,no compatible full coefficient object; one fixed OLS,data/GI_PREDICTIONS.csv.gz
+E0_all,cubic,in_sample,DERIVE,60437,compatible coefficient/design reconstruction; verify IDs and X beta against saved predictions,data/GI_PREDICTIONS.csv.gz
+E0_all,log,in_sample,DERIVE,60437,compatible coefficient/design reconstruction; verify IDs and X beta against saved predictions,data/GI_PREDICTIONS.csv.gz
+E0_all,legacy_hinge,in_sample,REFIT_NEEDED,60437,no compatible full coefficient object; one fixed OLS,data/GI_PREDICTIONS.csv.gz
+E0_weather,final,in_sample,DERIVE,9857,compatible coefficient/design reconstruction; verify IDs and X beta against saved predictions,data/GI_PREDICTIONS.csv.gz
+E0_weather,final,LAD_OOF,REFIT_NEEDED,9857,"existing fixed-production summaries lack row predictions; same original five LAD folds; fixed knots, not nested family CV",data/GI_PREDICTIONS.csv.gz
+E0_weather,paper,in_sample,DERIVE,9857,compatible coefficient/design reconstruction; verify IDs and X beta against saved predictions,data/GI_PREDICTIONS.csv.gz
+E0_weather,paper,LAD_OOF,REFIT_NEEDED,9857,"existing fixed-production summaries lack row predictions; same original five LAD folds; fixed knots, not nested family CV",data/GI_PREDICTIONS.csv.gz
+E0_weather,control,control_residual,REFIT_NEEDED,9857,no compatible full coefficient object; one fixed OLS,data/GI_PREDICTIONS.csv.gz
+E0_weather,hinge,in_sample,DERIVE,9857,compatible coefficient/design reconstruction; verify IDs and X beta against saved predictions,data/GI_PREDICTIONS.csv.gz
+E0_weather,hinge,LAD_OOF,REFIT_NEEDED,9857,"existing fixed-production summaries lack row predictions; same original five LAD folds; fixed knots, not nested family CV",data/GI_PREDICTIONS.csv.gz
+R0c_all,final,in_sample,DERIVE,51173,compatible coefficient/design reconstruction; verify IDs and X beta against saved predictions,data/GI_PREDICTIONS.csv.gz
+R0c_all,final,LAD_OOF,REFIT_NEEDED,51173,"existing fixed-production summaries lack row predictions; same original five LAD folds; fixed knots, not nested family CV",data/GI_PREDICTIONS.csv.gz
+R0c_all,paper,in_sample,REFIT_NEEDED,51173,no compatible full coefficient object; one fixed OLS,data/GI_PREDICTIONS.csv.gz
+R0c_all,paper,LAD_OOF,REFIT_NEEDED,51173,"existing fixed-production summaries lack row predictions; same original five LAD folds; fixed knots, not nested family CV",data/GI_PREDICTIONS.csv.gz
+R0c_all,control,control_residual,REFIT_NEEDED,51173,no compatible full coefficient object; one fixed OLS,data/GI_PREDICTIONS.csv.gz
+R0c_all,cubic,in_sample,DERIVE,51173,compatible coefficient/design reconstruction; verify IDs and X beta against saved predictions,data/GI_PREDICTIONS.csv.gz
+R0c_all,log,in_sample,DERIVE,51173,compatible coefficient/design reconstruction; verify IDs and X beta against saved predictions,data/GI_PREDICTIONS.csv.gz
+R0c_all,legacy_hinge,in_sample,REFIT_NEEDED,51173,no compatible full coefficient object; one fixed OLS,data/GI_PREDICTIONS.csv.gz
+R0c_weather,final,in_sample,DERIVE,9254,compatible coefficient/design reconstruction; verify IDs and X beta against saved predictions,data/GI_PREDICTIONS.csv.gz
+R0c_weather,final,LAD_OOF,REFIT_NEEDED,9254,"existing fixed-production summaries lack row predictions; same original five LAD folds; fixed knots, not nested family CV",data/GI_PREDICTIONS.csv.gz
+R0c_weather,paper,in_sample,DERIVE,9254,compatible coefficient/design reconstruction; verify IDs and X beta against saved predictions,data/GI_PREDICTIONS.csv.gz
+R0c_weather,paper,LAD_OOF,REFIT_NEEDED,9254,"existing fixed-production summaries lack row predictions; same original five LAD folds; fixed knots, not nested family CV",data/GI_PREDICTIONS.csv.gz
+R0c_weather,control,control_residual,REFIT_NEEDED,9254,no compatible full coefficient object; one fixed OLS,data/GI_PREDICTIONS.csv.gz
+R0c_weather,hinge,in_sample,DERIVE,9254,compatible coefficient/design reconstruction; verify IDs and X beta against saved predictions,data/GI_PREDICTIONS.csv.gz
+R0c_weather,hinge,LAD_OOF,REFIT_NEEDED,9254,"existing fixed-production summaries lack row predictions; same original five LAD folds; fixed knots, not nested family CV",data/GI_PREDICTIONS.csv.gz
+R0c_weather,C/F06 single family,nested_family_LAD_OOF,REUSE,9254,reference existing C path only; not a fixed11 final prediction,results/Appendix/C/data/models/R0c_weather/F06/LAD_OOF.csv.gz
+storm/all,final,in_sample/LAD_OOF,EXPORT,,slice shared G predictions; no storm-only fits,I/data/GI_STORM_PREDICTIONS.csv.gz
+storm/all,final,temporal_holdout,NOT_APPLICABLE,,no frozen temporal incident model required; later dates alone do not imply holdout,none

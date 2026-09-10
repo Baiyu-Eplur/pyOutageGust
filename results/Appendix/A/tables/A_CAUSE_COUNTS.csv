@@ -1,0 +1,11 @@
+﻿margin,scope,cause,n,share
+E0,saved_input,technical_asset,50580,0.83690454522891611
+E0,saved_input,weather_natural,9857,0.16309545477108395
+E0,final,technical_asset,50580,0.83690454522891611
+E0,final,weather_natural,9857,0.16309545477108395
+E0,weather_final,weather_natural,9857,1
+R0c,saved_input,technical_asset,50028,0.83611324664906239
+R0c,saved_input,weather_natural,9806,0.16388675335093758
+R0c,final,technical_asset,41919,0.81916244894768731
+R0c,final,weather_natural,9254,0.18083755105231275
+R0c,weather_final,weather_natural,9254,1

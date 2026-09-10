@@ -1,0 +1,42 @@
+[
+  {
+    "target": "any_gt0",
+    "zoom_upper": 0.5323737415758382,
+    "tail_points_outside_zoom": 1
+  },
+  {
+    "target": "any_gt5",
+    "zoom_upper": 0.308685232512367,
+    "tail_points_outside_zoom": 1
+  },
+  {
+    "target": "any_gt100",
+    "zoom_upper": 0.13953497976377302,
+    "tail_points_outside_zoom": 1
+  },
+  {
+    "target": "any_gt1000",
+    "zoom_upper": 0.0215253663081223,
+    "tail_points_outside_zoom": 1
+  },
+  {
+    "target": "wthr_gt0",
+    "zoom_upper": 0.18973684482205114,
+    "tail_points_outside_zoom": 1
+  },
+  {
+    "target": "wthr_gt5",
+    "zoom_upper": 0.14356745017178318,
+    "tail_points_outside_zoom": 1
+  },
+  {
+    "target": "wthr_gt100",
+    "zoom_upper": 0.0892382981877609,
+    "tail_points_outside_zoom": 1
+  },
+  {
+    "target": "wthr_gt1000",
+    "zoom_upper": 0.01457801994188906,
+    "tail_points_outside_zoom": 1
+  }
+]

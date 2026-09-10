@@ -1,0 +1,9 @@
+{
+  "time": "2026-09-10T17:25:31+01:00",
+  "command": "C:\\Users\\haoya\\.conda\\envs\\pyoutagegust\\python.exe D:\\Pyprogramme\\pyOutageGust\\main_appendix.py --appendices F --f02-only",
+  "cached_export": true,
+  "new_ols_fits": 0,
+  "covariance_recomputed": false,
+  "cache_key": "e9acaf51bf73869d3d5cc55176e7c9501957a97975e55471f52e7c30a09ccfcc",
+  "force_recompute": false
+}

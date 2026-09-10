@@ -1,0 +1,52 @@
+{
+  "operation": "Formatting/selection of accepted cells only; no statistical calculation",
+  "draft_sha256": "bb8c72733ec15f6a3f4e6b76c092952a817cea352ca86e4c3f7b360a85da45f6",
+  "tables_checked": [
+    "A5",
+    "A2",
+    "A1",
+    "A4",
+    "A3",
+    "A6",
+    "A7",
+    "B2",
+    "B3",
+    "C1",
+    "C6",
+    "C5",
+    "C4",
+    "C7",
+    "D1",
+    "D2",
+    "E1",
+    "E2"
+  ],
+  "mismatched_blocks": [],
+  "source_sha256": {
+    "results/Appendix/A/tables/A03_EXISTING_DEFINITION.csv": "0bf94e84990be97c61d4fa677bf645da861d1ad8b1b5321cf2201d4f78855b79",
+    "results/Appendix/A/tables/A_CAUSE_COUNTS.csv": "82bc4014c3d2e2b4276b172d3e552dedcb5a487dd9afa94f262fd8157007fb49",
+    "results/Appendix/A/tables/A_SAMPLE_FLOW.csv": "a7e8a7004c7c99d28d9c65926fa4ccaac9893867b0a309592d3fa7b3fd4c5d9b",
+    "results/Appendix/A/tables/A_VARIABLE_DICTIONARY.csv": "f802a4a4f9a7187791397c27414de5f323f917d63207cc7cf8f016d72deff77d",
+    "results/Appendix/A/tables/A_COVARIATE_SUMMARY.csv": "9d76b25539358af3bcd8867cb3f5102224b4eeebc7e36a78e5079f451ad745ff",
+    "results/Appendix/A/tables/A_FINAL_DESIGN_VIF.csv": "6c467b3d6cdeb086272747441fa9019d8cdf5d88a075e70c422a3aa8aeb69c13",
+    "results/Appendix/A/tables/A05_APPENDIXG_TABLE_G1_CORRECTED.csv": "fac546519441ab4844f8c2f02e3fc200938b5ad6b9da2f50543e636ee44889c6",
+    "results/Appendix/B/tables/B_REPRESENTATIVE_REPAIR.csv": "2a8cc57d0c183a1197b3ae1f29dbfbac0a6636c3ca2ff8f4479c65ed07a99d0e",
+    "results/Appendix/B/tables/B_RECOVERY_DEFINITION.csv": "fd06c8e0b13adb42808e3a73d1e48ad7097ce67f4b107e51bbbcadb94fb62f43",
+    "results/Appendix/C/tables/C_CANDIDATE_DEFINITIONS.csv": "86761bd30abc0659d63d4939318be38cbf46e8ec1d1a000ae99c34a55cbbd8bf",
+    "results/Appendix/C/tables/C_HISTORICAL_LADDER.csv": "64c487d7a8cdfdf9f0f662b3976b74bb6c19b4c35d43d41101435f04f7b12947",
+    "results/Appendix/C/tables/C_GUST_FUNCTION_COMPARISON.csv": "818c8113c351adc93ab7a6b0d52448be05bbbe142bb1752e436d56d509bbb373",
+    "results/Appendix/C/tables/C_EXISTING_FIXED_AND_D_REFERENCES.csv": "8e68bc1a1e0025d2c359ead056234cea7ae3b1d1f7ec32a3c05aa0146753e856",
+    "results/Appendix/C/tables/C_LAD_FE_COMPARISON.csv": "ee01a855ad1f301b388fa4861ae9cb26885e14398998dcdd49fc70117f6f3f4e",
+    "results/Appendix/D/tables/D_KNOT_SUMMARY.csv": "abe4563b5f3d2ef8c3a27e70e33a0ccbac4040eaee7117790295c58f5e0859e2",
+    "results/Appendix/D/tables/D_NESTED_FOLD_KNOTS.csv": "a412787824dc31047a0700cf7aa5af6a4d6a3b9f648eb1b6fce13705a8b8598a",
+    "results/Appendix/E/tables/E_PERIOD_COEFFICIENTS.csv": "7695956451fe33e76d0abfd41c5891a8c571825d96bcdcc9e328de4708dfa43b",
+    "results/Appendix/E/tables/E_TEMPORAL_DESIGN.csv": "cbd1d4fca3137aea9dccba81c13de3421d7f7075b91d922329bc3300396d6b86"
+  },
+  "display_changes": [
+    "Percentage conversion only for stored proportions",
+    "A7 group 0–9 displayed 1–10",
+    "D2 fold order 0–4 displayed 1–5",
+    "Period confirmation labelled Later"
+  ],
+  "limits": "Checks formatted table blocks only; prose, figures and interpretations require human reading."
+}

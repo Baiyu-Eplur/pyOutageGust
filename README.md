@@ -1,5 +1,9 @@
 # pyOutageGust
 
+**关键里程碑（2026-09-10）**：完成地区日持续性/冻结时间检验、A–J附录生产与C/J03/F02/GI/H03证据补全，交付A–E和F–J两批英文初稿。见[今日更新日志](dailylog.md)、[里程碑记录](docs/milestones/2026-09-10_analysis-appendices-checkpoint.md)及[版本发布](https://github.com/Baiyu-Eplur/pyOutageGust/releases/tag/analysis-appendices-checkpoint-20260910)。初稿与局部待定事项保留人工审核状态，不宣告正文主张全部验证。
+
+**当前入口与结果**：普通实验使用[`main_new.py`](main_new.py)的独立开关；附录使用[`main_appendix.py`](main_appendix.py)，说明见[附录生产指南](docs/APPENDIX_PRODUCTION_GUIDE.md)。已完成的P03/P04、DD-AGG01、DD-DUR01、DD-TIME01及正式J03对照均有保存结果；当前附录位于[`results/Appendix/`](results/Appendix/)，文稿位于[`docs/new_analysis/writing/`](docs/new_analysis/writing/)。
+
 **关键里程碑：导师分析独立复现（2026-09-09）**：新增 [`main_new.py`](main_new.py) 和 [`analysis_new/`](analysis_new/)，直接使用自己的相同样本，完整运行 16 步，交付 83 个产物。学习、方法和开关说明见 [`docs/NEW_ANALYSIS_GUIDE.md`](docs/NEW_ANALYSIS_GUIDE.md)；改动、验证与范围见 [里程碑记录](docs/milestones/2026-09-09_advisor-independent-reproduction.md)。版本标签：`advisor-independent-reproduction-20260909`（[发布说明](https://github.com/Baiyu-Eplur/pyOutageGust/releases/tag/advisor-independent-reproduction-20260909)）。
 
 **主要里程碑（2026-09-09）**：[统一分析入口与 pretest 归档](docs/milestones/2026-09-09_pretest-unified-entry.md) — 新增 main.py 顶部统一开关，接入 117 个运行步骤，归档 721 个历史输出，记录每次运行目的与分类结果；26 项测试通过，8 个验证文件与旧版逐字节一致。版本标签：`pretest-unified-entry-20260909`（[发布说明](https://github.com/Baiyu-Eplur/pyOutageGust/releases/tag/pretest-unified-entry-20260909)）。

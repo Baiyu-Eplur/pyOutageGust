@@ -1,0 +1,13 @@
+[2026-09-10T10:47:22.573932+01:00] Protocol frozen and original panel verified
+[2026-09-10T10:47:24.237676+01:00] Development labels loaded; evaluation labels not collected
+[2026-09-10T10:47:39.514905+01:00] Development fit any_gt0
+[2026-09-10T10:47:54.833230+01:00] Development fit any_gt5
+[2026-09-10T10:48:10.143516+01:00] Development fit any_gt100
+[2026-09-10T10:48:26.262642+01:00] Development fit any_gt1000
+[2026-09-10T10:48:41.931254+01:00] Development fit wthr_gt0
+[2026-09-10T10:48:56.541013+01:00] Development fit wthr_gt5
+[2026-09-10T10:49:11.184302+01:00] Development fit wthr_gt100
+[2026-09-10T10:49:26.955618+01:00] Development fit wthr_gt1000
+[2026-09-10T10:49:35.214927+01:00] Development parameters and bins frozen
+[2026-09-10T10:49:36.284445+01:00] Evaluation labels loaded after freeze
+[2026-09-10T10:49:57.726742+01:00] All technical outputs complete

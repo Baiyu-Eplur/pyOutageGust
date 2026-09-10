@@ -1,0 +1,75 @@
+{
+  "time": "2026-09-10T22:10:52.855267+01:00",
+  "checks": {
+    "five_chapters_and_19_sections": true,
+    "all_112_final_coefficients_present": true,
+    "all_21_table_captions": true,
+    "five_figures_exist": true,
+    "all_figure_captions": true,
+    "all_table_references_have_captions": true,
+    "display_numbers_match_existing_register": true,
+    "table_column_counts_consistent": true,
+    "no_placeholder_markers": true,
+    "no_control_characters": true,
+    "display_equations_balanced": true,
+    "equation_tags_unique": true,
+    "copied_H7_dispersion_values_match_saved_diagnostics": true,
+    "protected_sources_unchanged": true
+  },
+  "protected_file_count": 988,
+  "changed_protected_files": [],
+  "coefficient_rows": 112,
+  "tables": [
+    "F1",
+    "F2",
+    "F3",
+    "G4",
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "H6",
+    "H7",
+    "I2",
+    "I3",
+    "J10",
+    "J11",
+    "J13",
+    "J14",
+    "J15",
+    "J2",
+    "J28",
+    "J7",
+    "J8"
+  ],
+  "figures": [
+    "G1",
+    "G2",
+    "I1",
+    "J1",
+    "J3"
+  ],
+  "image_paths": [
+    "../../../results/Appendix/G/figures/GI_PREDICTION_CALIBRATION.png",
+    "../../../results/Appendix/G/figures/GI_GUST_RESIDUALS.png",
+    "../../../results/Appendix/I/figures/GI_STORM_FINAL_SCATTER.png",
+    "../../../results/Appendix/J/figures/J03_PRIMARY_CALIBRATION.png",
+    "../../../results/Appendix/J/figures/J_TIME_CALIBRATION_MONTHLY.png"
+  ],
+  "headings": {
+    "F": 4,
+    "G": 3,
+    "H": 3,
+    "I": 3,
+    "J": 6
+  },
+  "draft_sha256": "ca590b801dcf54b90c71a44a30f5cd686a1a3b41becb5c4873b503722e0702c3",
+  "scope": "Writing-only checks; no model/prediction/statistical validity audit",
+  "manual_H7_source_checks": {
+    "H03_E0_all_NB2_DIAGNOSTICS.json": true,
+    "H03_E0_all_Tweedie_DIAGNOSTICS.json": true,
+    "H03_R0c_all_Gamma_DIAGNOSTICS.json": true,
+    "H03_R0c_all_Tweedie_DIAGNOSTICS.json": true
+  },
+  "bad_table_rows": []
+}

@@ -1,0 +1,4 @@
+D:\Pyprogramme\pyOutageGust\analysis_new\hinge_search.py:32: UserWarning: you are shuffling a 'ArrowStringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  np.random.default_rng(20260908).shuffle(lads)
+D:\Pyprogramme\pyOutageGust\analysis_new\hinge_search.py:32: UserWarning: you are shuffling a 'ArrowStringArray' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  np.random.default_rng(20260908).shuffle(lads)

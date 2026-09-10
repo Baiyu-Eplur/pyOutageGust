@@ -1,0 +1,35 @@
+{
+  "output_inventory_hashes_match": true,
+  "inventory_files": 41,
+  "target_fits": 240,
+  "candidate_rows": 6240,
+  "selected_rows": 240,
+  "min_evaluated_legal_nll_not_better": true,
+  "all_fit_groups_have_13_initials": true,
+  "max_projected_gradient": 5.139673385768674e-09,
+  "full_theta_outside_support": 10,
+  "checked_at": "2026-09-09T23:21:48.362852+01:00",
+  "supplementary_views": [
+    {
+      "target": "any_gt100",
+      "zoom_upper": 0.13849464298562314,
+      "tail_points_outside_zoom": 1,
+      "bins_unchanged": true
+    },
+    {
+      "target": "wthr_gt100",
+      "zoom_upper": 0.09016585668879486,
+      "tail_points_outside_zoom": 1,
+      "bins_unchanged": true
+    },
+    {
+      "target": "wthr_gt1000",
+      "zoom_upper": 0.014988898188215739,
+      "tail_points_outside_zoom": 1,
+      "bins_unchanged": true
+    }
+  ],
+  "original_source_inventory_sha256": "0a19cc18cd91481a17bf0700a04e737e42bb7330c7754c7b0262b5b1b82f20d4",
+  "no_refit": true,
+  "no_weather_requests": true
+}

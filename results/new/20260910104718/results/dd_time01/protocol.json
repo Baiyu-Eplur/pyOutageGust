@@ -1,0 +1,123 @@
+{
+  "task": "DD-TIME01",
+  "frozen_at": "2026-09-10T10:47:22.177513+01:00",
+  "purpose": "DD-TIME01：正文proxy固定规格回顾性时间留出，仅开发期拟合并冻结预测",
+  "command": "C:/Users/haoya/.conda/envs/pyoutagegust/python.exe -X utf8 -B -c \"import main_new; main_new.STEPS['dd_time01']=1; main_new.main()\"",
+  "periods": {
+    "development": [
+      "2021-04-01",
+      "2023-09-29"
+    ],
+    "evaluation": [
+      "2023-09-30",
+      "2024-03-31"
+    ]
+  },
+  "expected_lads": 111,
+  "expected_days": 1096,
+  "expected_rows": 121656,
+  "input_panel": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909183317\\results\\final_models\\district_day_panel.csv",
+  "source_run": "20260909183317",
+  "inputs": [
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909183317\\results\\final_models\\district_day_panel.csv",
+      "sha256": "a67e9bf64adb9e2054f3c9a34e8474f40b58b8e9a8178628303365bab45f6a3a"
+    },
+    {
+      "path": "D:\\Pyprogramme\\pyOutageGust\\results\\new\\20260909183317\\run.json",
+      "sha256": "c9e211b6fd5df0730bbddec2c9a55ab1df8552888d33a1a4f6361de2aff4353b"
+    }
+  ],
+  "source_selection": "Current manuscript production route, not newest file or predictive performance; district_day_fragility -> report_tables -> documents in this source run",
+  "producer": "analysis_new/district_day_fragility.py: original panel and final_models/district_day_fragility.json; report_tables reads same-run model JSON -> figures/frag_rows.json -> documents",
+  "proxy": {
+    "unit": "m/s",
+    "variable": "gust",
+    "event_weather": "gust_0h",
+    "date": "Saved original panel date strings (original UTC day); no timezone conversion",
+    "centers": "Original mean event latitude/longitude per LAD, preserved through original panel",
+    "interpolation": "Original Gaussian 40 km; fewer than 5 weights >1e-3 uses nearest 5 inverse-distance weights 1/(distance+1); original planar 111 km/degree and cos(51.8 degrees); not reconstructed"
+  },
+  "targets": [
+    "any_gt0",
+    "any_gt5",
+    "any_gt100",
+    "any_gt1000",
+    "wthr_gt0",
+    "wthr_gt5",
+    "wthr_gt100",
+    "wthr_gt1000"
+  ],
+  "primary": "any_gt100",
+  "important_secondary": "wthr_gt100",
+  "labels": "Original daily labels unchanged: at least one qualifying incident, not sum customers; any_gt0 is n_inc>0, wthr_gt0 is weather-attributed max customers>=0, both include zero-customer events; other targets strictly >5/>100/>1000 using corresponding daily max",
+  "model": "p0+(1-p0)*Phi((ln(g)-ln(theta))/beta); g=0 limit p0",
+  "optimizer": {
+    "version": "ddagg01-stable-v1",
+    "theta_bounds": [
+      0.1,
+      200.0
+    ],
+    "beta_bounds": [
+      0.05,
+      5.0
+    ],
+    "p0_bounds": [
+      0.0,
+      0.999999999999
+    ],
+    "start_quantiles": [
+      0.75,
+      0.9,
+      0.98
+    ],
+    "start_beta": [
+      0.25,
+      0.6
+    ],
+    "start_background_fraction": [
+      0.25,
+      0.8
+    ],
+    "fixed_legal_start": [
+      40.0,
+      0.27,
+      0.0014
+    ],
+    "starts": 13,
+    "maxiter": 600,
+    "maxls": 40,
+    "ftol": 1e-13,
+    "gtol": 1e-09,
+    "fallback": "at most two Powell starts, maxiter=300, maxfev=3000",
+    "stationary_tolerance": 1e-05,
+    "nll_tolerance": 1e-05,
+    "prediction_std_min": 1e-08,
+    "weak_id_nll_tolerance": 0.01,
+    "weak_id_parameter_ratio": 1.25,
+    "seed": 20260909
+  },
+  "seed": 20260909,
+  "fit_scope": "Development rows only; 13 established starts and existing finite fallback selected on development NLL; no full-period fit or historical fitted parameters",
+  "freeze": "Fit parameters, development constant rates and bins saved before evaluation labels are loaded; no evaluation fitting, tuning or calibration",
+  "baseline": "Development positive LAD-day fraction for each target, never evaluation event rate",
+  "metrics": "Equal LAD-day evaluation Brier, development-constant Brier, BSS=1-model_Brier/baseline_Brier; means, observed rates and prediction-minus-observed; BSS is not accuracy, R2 or probability percentage points",
+  "calibration": "Unique development fitted probability deciles (numpy linear), add 0/1; searchsorted right with final edge inclusive; empty bins NaN; n<100 isolated; no evaluation-based edges; pooled-OOF edges from prior spatial experiments are not applicable",
+  "support": "Monthly summaries of the same frozen predictions; saved-date partial September included; period gust distribution and evaluation rows outside development range only",
+  "uncertainty": "Descriptive single fixed split; no bootstrap, significance tests, independent-row SE or confidence intervals; no post hoc pass/fail/adoption threshold",
+  "information_boundary": "Retrospective holdout previously explored, not untouched confirmation; same-day incident locations construct proxy. Tests temporal transfer under same post hoc proxy rule, not advance fault forecasting and not removal of anchor dependence",
+  "forbidden": [
+    "historical full-sample/LAD numerical audit",
+    "old proxy limit/tail/g50 audit",
+    "incident knots versus district probability",
+    "anchor coverage/removal",
+    "ERA5/aggregation/duration comparisons",
+    "new variables/models/spatial validation",
+    "precipitation surfaces",
+    "weather requests",
+    "Word/appendix/revision ledger edits",
+    "independent scientific review",
+    "adoption report",
+    "ZIP/return package"
+  ]
+}

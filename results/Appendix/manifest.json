@@ -1,0 +1,170 @@
+{
+  "owner": "main_appendix.py",
+  "updated_at": "2026-09-10T20:18:42+01:00",
+  "command": "C:\\Users\\haoya\\.conda\\envs\\pyoutagegust\\python.exe D:\\Pyprogramme\\pyOutageGust\\main_appendix.py --appendices H --h03-only",
+  "root": "D:\\Pyprogramme\\pyOutageGust\\results\\Appendix",
+  "git_head": "6fa8a4e4a3d59da32dd329e1345d48f1ff766303",
+  "environment": {
+    "python": "3.12.6 | packaged by Anaconda, Inc. | (main, Oct  3 2024, 07:22:25) [MSC v.1929 64 bit (AMD64)]",
+    "executable": "C:\\Users\\haoya\\.conda\\envs\\pyoutagegust\\python.exe",
+    "packages": {
+      "numpy": "2.4.3",
+      "pandas": "3.0.1",
+      "scipy": "1.17.1",
+      "matplotlib": "3.10.8"
+    }
+  },
+  "working_source_sha256": {
+    "analysis_new/appendix/catalog.py": "ad7434dba4f45d5e752659d2a7ae54026cdbe312641e8470cb61ca87af872ade",
+    "analysis_new/appendix/c_completion.py": "3337066c0d9009e3006835d33709b88c5079c6aa32945cc058327a8ea4461432",
+    "analysis_new/appendix/c_models.py": "fdeb746fc34bec61f0925e115254b7045699f0da8136ea9da567ef50a0c5b128",
+    "analysis_new/appendix/design_adapter.py": "7f4b4ed2c1647f6c759bcb45017c172d008dfe6b9a8abda11d00c5c3b8781529",
+    "analysis_new/appendix/exporters.py": "c5b3143d779deac5b6294266ab1bc490ed11f0910e3402d23fd39a266fbc38ee",
+    "analysis_new/appendix/f02_cov.py": "d8d847b635be4eebb31b65971a770de31981d8cafd538dfa7faa8562c81cb93f",
+    "analysis_new/appendix/gi_completion.py": "795069ae29d328abbc55706896936a3a6e5d7db513db71460d33bf0d93126824",
+    "analysis_new/appendix/gi_core.py": "fa4e68001d488bb4417216d3f5425db2361d2d0ec020c1b3017f91754a807735",
+    "analysis_new/appendix/gi_outputs.py": "855c25755c2f4a4d1674bbfd1f2ed9d3875efe0de4fe3d6f0498f996508f9aab",
+    "analysis_new/appendix/gi_storms.py": "97188b1a59069868d138d477c5b910cfba477ff1523b3d89c364ac7d59e96b4a",
+    "analysis_new/appendix/h03_completion.py": "936b08811d44e31db59ba398261b40859056fca8d127bc3c0f62ed04378d16e0",
+    "analysis_new/appendix/h03_evidence.py": "f7fc17f020cc077b1db658ba8f36c6664a344dd6fc491e98bafd6a47406da360",
+    "analysis_new/appendix/h03_models.py": "ee35bd8c4aa79490b94b89b1bc1a44ba9739adb631963ef62cb7f880eb8d78b3",
+    "analysis_new/appendix/j03_compare.py": "8ca5c5f35e41579646ec206052400611c96d7dcb0eb5dd37bcdac0b8592c1788",
+    "analysis_new/appendix/j03_report.py": "651a88c8426978071a2664f67def9e9571be500b5bfdb53a6e5d377852c9244b",
+    "analysis_new/appendix/mapping.py": "1ffdce6bc02ebb0c8ff2f497179986d92cc9e8b378cefb5d1f94d0e94fc066d9",
+    "analysis_new/appendix/runner.py": "e4142984bc11212cd35324a1d5243e6b5d5d9ca102dcc96469f0c1cf7cd4510c",
+    "analysis_new/appendix/__init__.py": "bd46c3a7f7bfc5e224ad7bc276f90fc184d5bc990900a126e1675e19b0c2166e",
+    "main_appendix.py": "272dae3cc5a9f03d7a5427efc8761bb1e19c7ab6aaf966c58e7fe3a0f1662a2c",
+    "scripts/final_combined_analysis/figure_style.py": "9666f902151abf8a39d269784aa2192d63529e8f20cb15912cafd93f320cdd3f",
+    "analysis_new/district_day_core.py": "837334b479bc5cc12433c1fd9af006abf19bba789340e509721605914c5e6121"
+  },
+  "catalog_sha256": "ad7434dba4f45d5e752659d2a7ae54026cdbe312641e8470cb61ca87af872ade",
+  "source_fingerprint_registry_sha256": "b75483043b637c93eb78956aa7aaca48045adf15ed532631515bc32da8edd792",
+  "manuscript": "results/new/20260909183317/results/paper/Extended_paper_draft.docx",
+  "accepted_plan": "docs/new_analysis/instructions/论文整合计划_v9_附录成文与正文衔接.md",
+  "configuration": {
+    "selected": [
+      "H"
+    ],
+    "mode": "fixed_output_scoped_appendix_completion",
+    "random_steps": false,
+    "seed": null
+  },
+  "appendices": {
+    "A": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success_with_gaps",
+      "update_state": "本次已更新",
+      "manifest": "A/manifest.json"
+    },
+    "B": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success",
+      "update_state": "本次已更新",
+      "manifest": "B/manifest.json"
+    },
+    "C": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success",
+      "update_state": "本次已更新",
+      "manifest": "C/manifest.json"
+    },
+    "D": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success",
+      "update_state": "本次已更新",
+      "manifest": "D/manifest.json"
+    },
+    "E": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success",
+      "update_state": "本次已更新",
+      "manifest": "E/manifest.json"
+    },
+    "F": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success",
+      "update_state": "本次仅F02更新/其他F结果保留",
+      "manifest": "F/manifest.json"
+    },
+    "G": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success",
+      "update_state": "本次仅G/I任务产物更新，其余保留",
+      "manifest": "G/manifest.json"
+    },
+    "H": {
+      "selected": true,
+      "last_attempt_status": "updated",
+      "artifact_status": "success",
+      "update_state": "本次H03更新，H01/H02来源结果保留",
+      "manifest": "H/manifest.json"
+    },
+    "I": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success",
+      "update_state": "本次仅G/I任务产物更新，其余保留",
+      "manifest": "I/manifest.json"
+    },
+    "J": {
+      "selected": false,
+      "last_attempt_status": "not_selected",
+      "artifact_status": "success",
+      "update_state": "本次仅J03更新/其他J结果保留",
+      "manifest": "J/manifest.json"
+    }
+  },
+  "requirement_status_counts": {
+    "已生成": 28,
+    "已有且被明确复用": 1,
+    "有具体原因的缺失": 1,
+    "产物已补齐/研究负责人已关闭推断补全缺口": 1,
+    "产物已补齐/研究负责人已关闭第三包结果缺口": 2,
+    "产物完成/待研究负责人反馈分析": 1,
+    "产物已补齐/研究负责人已关闭匹配比较缺口": 1,
+    "用户已关闭": 4
+  },
+  "tables": 70,
+  "figures": 9,
+  "root_files": [
+    {
+      "path": "README.md",
+      "sha256": "00b9a038f8e7e5c5137cabd96af9248f796f89f936a129e25f6290a426fe2f93"
+    },
+    {
+      "path": "claim_evidence_map.csv",
+      "sha256": "cdf4a1b1a568cb87606cd5cc4edc92f884127f1915e1da1dc0b823acc623807f"
+    },
+    {
+      "path": "appendix_requirements.csv",
+      "sha256": "c1917ce74fc3290256e2876986f664544148b367dd4477355789644b34f5ced9"
+    },
+    {
+      "path": "requirement_result_map.csv",
+      "sha256": "09c0259773e3d63b0b582839c884f2c19dc9c5d53ecd1a33ae0dbf5458ee7f7a"
+    },
+    {
+      "path": "figure_table_register.csv",
+      "sha256": "ebc6554e083b4bf2fa284d626edc3ba4d69d3a5663901c7018a54d240740ebc2"
+    },
+    {
+      "path": "result_gaps.md",
+      "sha256": "121668e4e191bab6fe6ba5ac6daa92846b490c2bf994912798676971914e5628"
+    },
+    {
+      "path": "logs/validation.json",
+      "sha256": "c8e068b08824e5462d0c48b1a291972e50b8903704ee3d9b452993ed273c9150"
+    },
+    {
+      "path": "logs/execution.log",
+      "sha256": "4b492b2adb5b593c22455b793d9e1f6404c6c046b4c298c67f9fc3ac51a2c08f"
+    }
+  ]
+}

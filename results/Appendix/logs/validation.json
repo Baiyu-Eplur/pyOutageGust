@@ -1,0 +1,221 @@
+{
+  "time": "2026-09-10T20:18:42+01:00",
+  "source_checks": [
+    {
+      "path": "analysis_new/final_models.py",
+      "exists": true,
+      "expected_sha256": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310",
+      "actual_sha256": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310",
+      "passed": true
+    },
+    {
+      "path": "analysis_new/fragility_demo.py",
+      "exists": true,
+      "expected_sha256": "c16165bceac0b7a71a837606d67c17710a887762cb0f35f195b18778df90a72f",
+      "actual_sha256": "c16165bceac0b7a71a837606d67c17710a887762cb0f35f195b18778df90a72f",
+      "passed": true
+    },
+    {
+      "path": "analysis_new/fragility_surfaces.py",
+      "exists": true,
+      "expected_sha256": "c3367c1d843f5ef7aeec6e0281a68b16544649f01b071b16ec0cd7bdce65906c",
+      "actual_sha256": "c3367c1d843f5ef7aeec6e0281a68b16544649f01b071b16ec0cd7bdce65906c",
+      "passed": true
+    },
+    {
+      "path": "analysis_new/model_selection.py",
+      "exists": true,
+      "expected_sha256": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d",
+      "actual_sha256": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d",
+      "passed": true
+    },
+    {
+      "path": "analysis_new/weather_only_regression.py",
+      "exists": true,
+      "expected_sha256": "b7db64e8bd350dfbcabacd3f2ad7d2514ad26a4fb5d7f622d9989072b80ff9bd",
+      "actual_sha256": "b7db64e8bd350dfbcabacd3f2ad7d2514ad26a4fb5d7f622d9989072b80ff9bd",
+      "passed": true
+    },
+    {
+      "path": "docs/new_analysis/instructions/论文整合计划_v9_附录成文与正文衔接.md",
+      "exists": true,
+      "expected_sha256": "565ba4e4811418448c9f1299e13fbcd83cff60123ccec939dc0d632e63c27636",
+      "actual_sha256": "565ba4e4811418448c9f1299e13fbcd83cff60123ccec939dc0d632e63c27636",
+      "passed": true
+    },
+    {
+      "path": "docs/new_analysis/instructions/附录FGHIJ四步推进台账与第一步J03执行指令 (3).md",
+      "exists": true,
+      "expected_sha256": "05e8aa046c61aa93f77d05073496635727b6fc2629d4e1c17b29c4faf2bb215b",
+      "actual_sha256": "05e8aa046c61aa93f77d05073496635727b6fc2629d4e1c17b29c4faf2bb215b",
+      "passed": true
+    },
+    {
+      "path": "results/Appendix/C/data/samples/E0_all.csv.gz",
+      "exists": true,
+      "expected_sha256": "9b701cc1fdd09ad31dee46c80791b3f01e66f745b8a7a616f98343f39de97595",
+      "actual_sha256": "9b701cc1fdd09ad31dee46c80791b3f01e66f745b8a7a616f98343f39de97595",
+      "passed": true
+    },
+    {
+      "path": "results/Appendix/C/data/samples/R0c_all.csv.gz",
+      "exists": true,
+      "expected_sha256": "121e987997369520d4474d343e9f7e6cabc1280b8af39ef6433c889ec8cc7a0e",
+      "actual_sha256": "121e987997369520d4474d343e9f7e6cabc1280b8af39ef6433c889ec8cc7a0e",
+      "passed": true
+    },
+    {
+      "path": "results/Appendix/G/data/GI_COEFFICIENTS.csv",
+      "exists": true,
+      "expected_sha256": "2e56be9bab0e795dd3b094723a8dc550238d4d3f1fda2e2bbc82975647581c2b",
+      "actual_sha256": "2e56be9bab0e795dd3b094723a8dc550238d4d3f1fda2e2bbc82975647581c2b",
+      "passed": true
+    },
+    {
+      "path": "results/Appendix/G/data/GI_E0_all_final_COV.csv",
+      "exists": true,
+      "expected_sha256": "83fae87713a657bb90f4a4a56178e96b342b4883a37bb71690ffd271127d9c7d",
+      "actual_sha256": "83fae87713a657bb90f4a4a56178e96b342b4883a37bb71690ffd271127d9c7d",
+      "passed": true
+    },
+    {
+      "path": "results/Appendix/G/data/GI_PREDICTIONS.csv.gz",
+      "exists": true,
+      "expected_sha256": "683c85ca6ea11a149bac4c8284ef882d9b7ed1136f4f6861996a0710d54b6225",
+      "actual_sha256": "683c85ca6ea11a149bac4c8284ef882d9b7ed1136f4f6861996a0710d54b6225",
+      "passed": true
+    },
+    {
+      "path": "results/Appendix/G/data/GI_PREPROCESSING.json",
+      "exists": true,
+      "expected_sha256": "09b4537ee1b9ae320de58f5bf318d2fe4c5020208a5de8869cc3605037019a11",
+      "actual_sha256": "09b4537ee1b9ae320de58f5bf318d2fe4c5020208a5de8869cc3605037019a11",
+      "passed": true
+    },
+    {
+      "path": "results/Appendix/G/data/GI_R0c_all_final_COV.csv",
+      "exists": true,
+      "expected_sha256": "56593364dff7156d10a365d65843cc9a66ced3194e538eca885127655d2cfcb7",
+      "actual_sha256": "56593364dff7156d10a365d65843cc9a66ced3194e538eca885127655d2cfcb7",
+      "passed": true
+    },
+    {
+      "path": "results/new/20260909183317/results/final_models/E0_final_twoway.csv",
+      "exists": true,
+      "expected_sha256": "491c75aea00d6a4a60a04026978eba65072e1576e0974dfaa211c96954487f94",
+      "actual_sha256": "491c75aea00d6a4a60a04026978eba65072e1576e0974dfaa211c96954487f94",
+      "passed": true
+    },
+    {
+      "path": "results/new/20260909183317/results/final_models/R0c_final_twoway.csv",
+      "exists": true,
+      "expected_sha256": "0dab57b08504cba609ca93c282fa3ccf8b1bde92a9b679286efd965255cb54a2",
+      "actual_sha256": "0dab57b08504cba609ca93c282fa3ccf8b1bde92a9b679286efd965255cb54a2",
+      "passed": true
+    },
+    {
+      "path": "results/new/20260909183317/results/model_selection/fragility_lognormal.json",
+      "exists": true,
+      "expected_sha256": "022d45a861d7ef0c9b9d3c6b9ca58072dbd735e67d7624bbd122909a504e5b58",
+      "actual_sha256": "022d45a861d7ef0c9b9d3c6b9ca58072dbd735e67d7624bbd122909a504e5b58",
+      "passed": true
+    },
+    {
+      "path": "results/new/20260909183317/results/model_selection/fragility_optimizer_diagnostics.json",
+      "exists": true,
+      "expected_sha256": "2080150b3016fe5b74d64b8932429768773cb3e92527a80e27d88c01bf68b3cb",
+      "actual_sha256": "2080150b3016fe5b74d64b8932429768773cb3e92527a80e27d88c01bf68b3cb",
+      "passed": true
+    },
+    {
+      "path": "results/new/20260909183317/results/model_selection/fragility_summary.json",
+      "exists": true,
+      "expected_sha256": "3b6732df959c7fec4ca65d289689998f617edabce354a5ae36f693371fb3b79c",
+      "actual_sha256": "3b6732df959c7fec4ca65d289689998f617edabce354a5ae36f693371fb3b79c",
+      "passed": true
+    },
+    {
+      "path": "results/new/20260909183317/results/model_selection/knots.json",
+      "exists": true,
+      "expected_sha256": "af506c6ec5b9ba4c3f3450bf88a02afb87e4116f798233bb5920341c95f5bb3b",
+      "actual_sha256": "af506c6ec5b9ba4c3f3450bf88a02afb87e4116f798233bb5920341c95f5bb3b",
+      "passed": true
+    },
+    {
+      "path": "results/new/20260909183317/results/paper/Extended_paper_draft.docx",
+      "exists": true,
+      "expected_sha256": "a4f926edbc5bb1732806c251bc72775d3caea5a1f9482beb7be2965e34efbfd8",
+      "actual_sha256": "a4f926edbc5bb1732806c251bc72775d3caea5a1f9482beb7be2965e34efbfd8",
+      "passed": true
+    },
+    {
+      "path": "results/new/20260909183317/results/weather_only/weather_only_summary.json",
+      "exists": true,
+      "expected_sha256": "286b36e35231108b8403bda654ec05e2d41550001797fd365e39b98e086ec555",
+      "actual_sha256": "286b36e35231108b8403bda654ec05e2d41550001797fd365e39b98e086ec555",
+      "passed": true
+    },
+    {
+      "path": "results/new/20260909183317/run.json",
+      "exists": true,
+      "expected_sha256": "c9e211b6fd5df0730bbddec2c9a55ab1df8552888d33a1a4f6361de2aff4353b",
+      "actual_sha256": "c9e211b6fd5df0730bbddec2c9a55ab1df8552888d33a1a4f6361de2aff4353b",
+      "passed": true
+    },
+    {
+      "path": "results/pretest/archive/20260909154556/results/appendix_h_20260906/raw/stepB_distribution_check_corrected.json",
+      "exists": true,
+      "expected_sha256": "4bfdffc73d02628e21f79f1b541a64c7d985da0fbab2d404199eb58ef902fb64",
+      "actual_sha256": "4bfdffc73d02628e21f79f1b541a64c7d985da0fbab2d404199eb58ef902fb64",
+      "passed": true
+    },
+    {
+      "path": "review_package/data/combined_E0_final.csv",
+      "exists": true,
+      "expected_sha256": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+      "actual_sha256": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+      "passed": true
+    },
+    {
+      "path": "review_package/data/combined_R0c_final.csv",
+      "exists": true,
+      "expected_sha256": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+      "actual_sha256": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+      "passed": true
+    },
+    {
+      "path": "scripts/appendix_h_20260906/step_b_distribution_check.py",
+      "exists": true,
+      "expected_sha256": "8299e7d7812ac88ace1caff558c6d1f423009d9759dc925eb9c92c0fd2c3d8d9",
+      "actual_sha256": "8299e7d7812ac88ace1caff558c6d1f423009d9759dc925eb9c92c0fd2c3d8d9",
+      "passed": true
+    },
+    {
+      "path": "scripts/final_combined_analysis/figure_style.py",
+      "exists": true,
+      "expected_sha256": "9666f902151abf8a39d269784aa2192d63529e8f20cb15912cafd93f320cdd3f",
+      "actual_sha256": "9666f902151abf8a39d269784aa2192d63529e8f20cb15912cafd93f320cdd3f",
+      "passed": true
+    },
+    {
+      "path": "review_package/data/combined_E0_final.csv",
+      "check": "matches_manuscript_run_input",
+      "expected_sha256": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+      "actual_sha256": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+      "passed": true
+    },
+    {
+      "path": "review_package/data/combined_R0c_final.csv",
+      "check": "matches_manuscript_run_input",
+      "expected_sha256": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+      "actual_sha256": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+      "passed": true
+    }
+  ],
+  "selected": [
+    "H"
+  ],
+  "failures": {},
+  "staged_expected_outputs_and_serialization_checked": true,
+  "scope": "This production interface only"
+}

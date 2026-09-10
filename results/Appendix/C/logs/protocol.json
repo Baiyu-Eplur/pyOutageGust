@@ -1,0 +1,243 @@
+{
+  "task": "APP-C-COMPLETE",
+  "frozen_at": "2026-09-10T15:28:21+01:00",
+  "seed": 20260908,
+  "models": [
+    {
+      "model_id": "H01",
+      "family": "historical",
+      "form": "M1_weather_linear",
+      "original": "M1_weather_linear"
+    },
+    {
+      "model_id": "H02",
+      "family": "historical",
+      "form": "M2_+gust_sq",
+      "original": "M2_+gust_sq"
+    },
+    {
+      "model_id": "H03",
+      "family": "historical",
+      "form": "M3_+gust_x_pressure",
+      "original": "M3_+gust_x_pressure"
+    },
+    {
+      "model_id": "H04",
+      "family": "historical",
+      "form": "M4_+socio",
+      "original": "M4_+socio"
+    },
+    {
+      "model_id": "H05",
+      "family": "historical",
+      "form": "M5_+year_month_FE",
+      "original": "M5_+year_month_FE"
+    },
+    {
+      "model_id": "H06",
+      "family": "historical",
+      "form": "A1_gust_cubic",
+      "original": "A1_gust_cubic"
+    },
+    {
+      "model_id": "H07",
+      "family": "historical",
+      "form": "A2_log_gust",
+      "original": "A2_log_gust"
+    },
+    {
+      "model_id": "H08",
+      "family": "historical",
+      "form": "A3_hinge_10.8",
+      "original": "A3_hinge_10.8"
+    },
+    {
+      "model_id": "H09",
+      "family": "historical",
+      "form": "A4_gust_bins",
+      "original": "A4_gust_bins"
+    },
+    {
+      "model_id": "H10",
+      "family": "historical",
+      "form": "A5_full_quad_weather",
+      "original": "A5_full_quad_weather"
+    },
+    {
+      "model_id": "H11",
+      "family": "historical",
+      "form": "A6_M5_+LAD_FE",
+      "original": "A6_M5_+LAD_FE"
+    },
+    {
+      "model_id": "H12",
+      "family": "historical",
+      "form": "A7_M5_no_socio",
+      "original": "A7_M5_no_socio"
+    },
+    {
+      "model_id": "H13",
+      "family": "historical",
+      "form": "single",
+      "original": "one free hinge / Table 3"
+    },
+    {
+      "model_id": "H14",
+      "family": "historical",
+      "form": "free_two",
+      "original": "two free hinges / Table 3"
+    },
+    {
+      "model_id": "F01",
+      "family": "matched",
+      "form": "quadratic",
+      "original": "既定阵风函数 + 当前最终控制项"
+    },
+    {
+      "model_id": "F02",
+      "family": "matched",
+      "form": "cubic",
+      "original": "既定阵风函数 + 当前最终控制项"
+    },
+    {
+      "model_id": "F03",
+      "family": "matched",
+      "form": "log",
+      "original": "既定阵风函数 + 当前最终控制项"
+    },
+    {
+      "model_id": "F04",
+      "family": "matched",
+      "form": "bins",
+      "original": "既定阵风函数 + 当前最终控制项"
+    },
+    {
+      "model_id": "F05",
+      "family": "matched",
+      "form": "fixed10.8",
+      "original": "既定阵风函数 + 当前最终控制项"
+    },
+    {
+      "model_id": "F06",
+      "family": "matched",
+      "form": "single",
+      "original": "既定阵风函数 + 当前最终控制项"
+    },
+    {
+      "model_id": "F07",
+      "family": "matched",
+      "form": "free_two",
+      "original": "既定阵风函数 + 当前最终控制项"
+    },
+    {
+      "model_id": "F08",
+      "family": "matched",
+      "form": "plateau",
+      "original": "既定阵风函数 + 当前最终控制项"
+    }
+  ],
+  "samples": [
+    {
+      "combination": "E0_all",
+      "n": 60437,
+      "lads": 111,
+      "zero_customers": 8979,
+      "source": "review_package/data/combined_E0_final.csv",
+      "source_sha256": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+      "sample_id_sha256": "9822b53edfc840d7c823d220988e6180708fc3f04a4f429e9d971a9b991a1f94",
+      "fold_sha256": "2b77c93b5578e492b0ec603c46d9f21b38b314713f2a642ad6d31932f28d4585",
+      "response": "log1p_customers_v2",
+      "filtering": "accepted curated E0; no additional filter",
+      "scope_filter": "none",
+      "missing_random_folds": 12113
+    },
+    {
+      "combination": "E0_weather",
+      "n": 9857,
+      "lads": 105,
+      "zero_customers": 572,
+      "source": "review_package/data/combined_E0_final.csv",
+      "source_sha256": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+      "sample_id_sha256": "a9fbb6b83c432d5518e046bb51b978b4fc6a08a6477e99a0f8c5870a1a250906",
+      "fold_sha256": "eafbdcb8abb41958faa96ce768a76571423084f160165cb9e5000dbb78ed6619",
+      "response": "log1p_customers_v2",
+      "filtering": "accepted curated E0; no additional filter",
+      "scope_filter": "cause_group_official == weather_natural",
+      "missing_random_folds": 2107
+    },
+    {
+      "combination": "R0c_all",
+      "n": 51173,
+      "lads": 111,
+      "zero_customers": 0,
+      "source": "review_package/data/combined_R0c_final.csv",
+      "source_sha256": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+      "sample_id_sha256": "177c17dcd65b1796342780d7fbde690ecf2a6ab2cace39b356253f6628ac9068",
+      "fold_sha256": "428ec3f84f42728897b3fcd4fbcdef0f6e9f34adfbda81cc13a6fc3ce9a7433c",
+      "response": "log_duration_B_full_span_hours",
+      "filtering": "accepted curated R0c; customers > 0",
+      "scope_filter": "none",
+      "missing_random_folds": 9996
+    },
+    {
+      "combination": "R0c_weather",
+      "n": 9254,
+      "lads": 104,
+      "zero_customers": 0,
+      "source": "review_package/data/combined_R0c_final.csv",
+      "source_sha256": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+      "sample_id_sha256": "19e0fee1995048631c582d84cc96bb2842c38ca63f26108ad3ac03833db04ddb",
+      "fold_sha256": "6281212e10ca6966e84006e10ec59f35d5c40c9c695ee789f7931f733d878a1c",
+      "response": "log_duration_B_full_span_hours",
+      "filtering": "accepted curated R0c; customers > 0",
+      "scope_filter": "cause_group_official == weather_natural",
+      "missing_random_folds": 1977
+    }
+  ],
+  "candidate_universe": "12 literal SPECS + Table 3 one/two free hinges; 8 existing gust forms under final controls; historical weather and D references separately",
+  "exploratory_screen": "hinge_search.py fixed 14/16/18/16+26/14+20+26 are preliminary grid illustrations, not the formal Table 3 ladder; no new grid search/screening included",
+  "primary_validation": "5 LAD folds; shuffle LAD appearance order with seed20260908; same folds within each combination",
+  "additional_validation": "only original 12 ladder: supplied random5 and leave-one-incident-year-out; do not pool designs",
+  "preprocessing": "train-only means/sample SD; train calendar/LAD levels; train percentile cuts; train SSE knot selection",
+  "metric": "pooled row RMSE on log response; full Gaussian OLS AIC/BIC; rank(X), excludes residual variance and selected knots as legacy code",
+  "simplified_bic_conversion": "BIC_full = BIC_simplified + n*(log(2*pi)+1); SSE=n*exp((BIC_full-k*log(n))/n-log(2*pi)-1)",
+  "fixed_source_knots": "existing globally selected fixed-knot CV only in separate reference table, not renamed nested",
+  "no_other_work": "no bootstrap/profile audit, no cause/sample change, no other appendix analyses, no Word modification",
+  "known_source_issue": "R0c D nested quadratic retains gust-pressure; D ramp/free remove it. Matched F uses current final gust-precip for every gust form; no cross-control attribution.",
+  "code_sha256": {
+    "analysis_new/appendix/c_models.py": "fdeb746fc34bec61f0925e115254b7045699f0da8136ea9da567ef50a0c5b128",
+    "analysis_new/appendix/c_completion.py": "3337066c0d9009e3006835d33709b88c5079c6aa32945cc058327a8ea4461432",
+    "analysis_new/model_selection.py": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d",
+    "analysis_new/final_models.py": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310",
+    "analysis_new/weather_only_regression.py": "b7db64e8bd350dfbcabacd3f2ad7d2514ad26a4fb5d7f622d9989072b80ff9bd",
+    "analysis_new/knot_estimation.py": "69c07f14a33db4942cf7e43db19f1de0fe9094088d1488297a05a3a10606bf8f",
+    "analysis_new/plateau_model.py": "672d8ee3fc667b9192f4fe6f40bde033d27306e6298677e51af5e411eb3f3bdd",
+    "analysis_new/basis_solver.py": "ab181c3628721a83aac4d2d2bbe5cd2fbed2074de8ebaa427769f6a1c914cb9a",
+    "analysis_new/appendix/design_adapter.py": "7f4b4ed2c1647f6c759bcb45017c172d008dfe6b9a8abda11d00c5c3b8781529"
+  },
+  "source_sha256": {
+    "review_package/data/combined_E0_final.csv": "6a82fedd4dd77f4218f89f47058cafea7cc7c34867120589cdbeba8fca63ec38",
+    "review_package/data/combined_R0c_final.csv": "313e5cea062eec015b5dbfdd61986ed277e058ab8fe9e0fa33ee773d936e72a9",
+    "analysis_new/model_selection.py": "a1bceefb6a24da496b69d64e0414a879e7e5e5eafa65071b02dfc64f2c83cd1d",
+    "analysis_new/final_models.py": "4ffcc8764848c4c348a5a6aec460d74a1f03c5c90be7365c3ca70345c3f53310",
+    "analysis_new/weather_only_regression.py": "b7db64e8bd350dfbcabacd3f2ad7d2514ad26a4fb5d7f622d9989072b80ff9bd",
+    "analysis_new/knot_estimation.py": "69c07f14a33db4942cf7e43db19f1de0fe9094088d1488297a05a3a10606bf8f",
+    "analysis_new/plateau_model.py": "672d8ee3fc667b9192f4fe6f40bde033d27306e6298677e51af5e411eb3f3bdd",
+    "analysis_new/basis_solver.py": "ab181c3628721a83aac4d2d2bbe5cd2fbed2074de8ebaa427769f6a1c914cb9a",
+    "results/new/20260909183317/results/model_selection/E0_model_comparison.csv": "5be68241e8581134a3ef3f54cebe6e5152c73db65e6be184c04aff4aafd3fc8a",
+    "results/new/20260909183317/results/model_selection/E0_coefficients.xlsx": "d889100fd6c2b0de04260114f1ad100655fb3e496643023c28759bdb4b0f6ea5",
+    "results/new/20260909183317/results/model_selection/knots.json": "af506c6ec5b9ba4c3f3450bf88a02afb87e4116f798233bb5920341c95f5bb3b",
+    "results/new/20260909183317/results/model_selection/ramp_model.json": "ce9f95991d1f2d96e084103021153f1c5be63e833f923ae8564b8562b3083623",
+    "results/new/20260909183317/results/model_selection/ramp_model_R0c.json": "521d363cc4e001e8ff10ae47605d31591014f5f846447bfa9fee1577ae64e3ef",
+    "results/new/20260909183317/results/final_models/final_summary.json": "3432d0bdbd3a6ccfb3a689613c8483dde5ad26489f49f960a37a9f9abe264741",
+    "results/new/20260909183317/results/weather_only/weather_only_summary.json": "286b36e35231108b8403bda654ec05e2d41550001797fd365e39b98e086ec555",
+    "results/new/20260909183317/results/final_models/E0_final_twoway.csv": "491c75aea00d6a4a60a04026978eba65072e1576e0974dfaa211c96954487f94",
+    "results/new/20260909183317/results/final_models/R0c_final_twoway.csv": "0dab57b08504cba609ca93c282fa3ccf8b1bde92a9b679286efd965255cb54a2",
+    "results/new/20260909183317/results/weather_only/E0_weather_paper_twoway.csv": "3127bb1e88f37f2ad617beb4ae89d56175f088a1e7dbd032f7a2be7823366632",
+    "results/new/20260909183317/results/weather_only/E0_weather_hinge_twoway.csv": "f0f47980a4cebdda9722e7d7180e29a7b9f54035179d8018b6fa7f158c3c35ac",
+    "results/new/20260909183317/results/weather_only/E0_weather_final_twoway.csv": "994d2218bae8a395f72905e708e6f34763ea5990285d5792bf9de0ea890c400a",
+    "results/new/20260909183317/results/weather_only/R0c_weather_paper_twoway.csv": "aff72a4663243d0d92816628206ca830c55fcf12ca84a01d4600d213207e554e",
+    "results/new/20260909183317/results/weather_only/R0c_weather_hinge_twoway.csv": "cb846e2ab94541dc74843302eee67fd1da910eeebd1cad64a03be57f70afb9e8",
+    "results/new/20260909183317/results/weather_only/R0c_weather_final_twoway.csv": "ba69ee5391716b3273a38bb6203da0781b63623dd49be5491a2addf89f7ba220"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "computed_cells": 88,
+  "component_actions": {
+    "REFIT": 196,
+    "REUSE": 58,
+    "DERIVE": 18
+  },
+  "saved_prediction_files_recomputed": 214,
+  "training_partition_records_checked": 728,
+  "saved_new_fits": 701,
+  "protected_other_appendix_files_unchanged": 128,
+  "source_files_unchanged": 27,
+  "cache_hits": 0,
+  "scope": "C sample/ID/fold/parameter partition and saved-score reproduction; byte+mtime protection; no model refit"
+}

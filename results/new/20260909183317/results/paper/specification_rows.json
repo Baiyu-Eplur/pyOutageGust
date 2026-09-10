@@ -1,0 +1,58 @@
+[
+  [
+    "Quadratic gust (M5)",
+    "+214.3",
+    "1.9887",
+    "+17.6",
+    "1.2695"
+  ],
+  [
+    "Cubic gust",
+    "+134.7",
+    "1.9871",
+    "+21.7",
+    "1.2695"
+  ],
+  [
+    "Log gust",
+    "+420.5",
+    "1.9923",
+    "+384.0",
+    "1.2735"
+  ],
+  [
+    "Gust percentile steps",
+    "+215.6",
+    "1.9882",
+    "+155.8",
+    "1.2708"
+  ],
+  [
+    "One free hinge (nested knot CV)",
+    "+118.3",
+    "1.9869",
+    "+6.3",
+    "1.2695"
+  ],
+  [
+    "Two free hinges (nested knot CV)",
+    "+85.0",
+    "1.9865",
+    "+0.0",
+    "1.2694"
+  ],
+  [
+    "E0 plateau plus temperature squared (nested knot CV)",
+    "+0.0",
+    "1.9850",
+    "different sample",
+    "—"
+  ],
+  [
+    "Quadratic plus LAD fixed effects",
+    "+125.1",
+    "2.1020",
+    "+477.3",
+    "1.5039"
+  ]
+]

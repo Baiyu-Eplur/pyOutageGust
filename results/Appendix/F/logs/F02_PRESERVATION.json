@@ -1,0 +1,11 @@
+{
+  "other_F_managed_files": {
+    "logs/execution.log": true,
+    "logs/validation.json": true,
+    "tables/F03_R2_DECOMPOSITION.csv": true,
+    "tables/F03_R2_DECOMPOSITION.md": true,
+    "tables/F_FULL_COEFFICIENTS.csv": true,
+    "tables/F_FULL_COEFFICIENTS.md": true
+  },
+  "all_unchanged": true
+}

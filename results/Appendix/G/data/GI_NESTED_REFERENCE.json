@@ -1,0 +1,6 @@
+{
+  "path": "results/Appendix/C/data/models/R0c_weather/F06/LAD_OOF.csv.gz",
+  "sha256": "ef78023ccd23863921cccc916980400cfad3ea63f06027604ce7fc066a4ca698",
+  "identity": "C matched single-knot family: train-fold selected knots; not fixed11 production",
+  "used_for_G_or_I_final_scores": false
+}
