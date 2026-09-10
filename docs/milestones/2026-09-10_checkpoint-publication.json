@@ -1,0 +1,22 @@
+{
+  "repository": "Baiyu-Eplur/pyOutageGust",
+  "tag": "analysis-appendices-checkpoint-20260910",
+  "milestone_commit": "3bcb8b805a6b2d43f521d425cb8feaa613f5da6b",
+  "annotated_tag_object": "9718adeee66d549550048710ca2e81c10a9b0003",
+  "release_id": 386650349,
+  "release_url": "https://github.com/Baiyu-Eplur/pyOutageGust/releases/tag/analysis-appendices-checkpoint-20260910",
+  "release_title": "关键里程碑：2026-09-10 地区日验证、附录证据补全与A–J英文初稿",
+  "published_at": "2026-09-10T21:57:24Z",
+  "verified_at": "2026-09-10T22:57:22.166758+01:00",
+  "remote_main_at_verification": "3bcb8b805a6b2d43f521d425cb8feaa613f5da6b",
+  "release_notes_match_milestone_document": true,
+  "release_notes_sha256": "f9e9dfb5943a5e5d8aed78afdd9ecbd2cdc65d505e8f656a2cba59ce96dea873",
+  "local_historical_deletions_not_published": 469,
+  "committed_file_count": 1520,
+  "git_change_counts": {
+    "A": 1512,
+    "M": 8
+  },
+  "change_type_authority": "2026-09-10_checkpoint-change-types.csv (git diff-tree at immutable milestone commit)",
+  "inventory_scope_note": "The original staged inventory SHA256 values are unchanged. Its refresh-time scope labels can call staged additions modifications; use Git change types for creation/modification classification."
+}

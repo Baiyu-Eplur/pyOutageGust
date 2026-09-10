@@ -26,7 +26,7 @@ def sha(b):return hashlib.sha256(b).hexdigest()
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('action',choices=['inspect','stage','refresh','verify']);args=parser.parse_args()
     changed=paths('diff','--name-only','--diff-filter=AM','-z')
-    new=paths('ls-files','--others','--exclude-standard','-z')
+    new=sorted(set(paths('ls-files','--others','--exclude-standard','-z')+paths('diff','--cached','--name-only','--diff-filter=A','-z')))
     deleted=paths('ls-files','--deleted','-z')
     selected=sorted(set(changed+new+(paths('diff','--cached','--name-only','--diff-filter=AM','-z') if args.action=='refresh' else [])))
     excluded=[p for p in selected if Path(p).suffix.lower()=='.lnk']

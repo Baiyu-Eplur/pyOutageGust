@@ -34,3 +34,11 @@
 上次发布停在2026-09-09的导师独立复现节点。本次同时纳入9月9日晚尚未同步的PROXY/P03-P04测试、结果审查、DD-AGG01稳定优化与五聚合比较，以及当前权威运行`20260909183317`。它们是本次发布承接范围，不计作9月10日新完成的实验。
 
 原始输入、导师Comments、环境缓存继续遵循现有忽略规则；本地Windows快捷方式不发布。本地已删除的五个旧运行目录不作恢复或进一步删除，也不把删除提交到远程。最终提交、标签、Release及核验状态见同目录milestone发布回执。
+
+### GitHub发布成功（2026-09-10 22:57 BST）
+
+- 关键节点提交：`3bcb8b805a6b2d43f521d425cb8feaa613f5da6b`；本节点纳入1520个文件变更，具体Git增改类型见[提交路径表](docs/milestones/2026-09-10_checkpoint-change-types.csv)。
+- 附注标签：`analysis-appendices-checkpoint-20260910`，固定指向该实现提交，不移动旧标签。
+- [正式GitHub Release](https://github.com/Baiyu-Eplur/pyOutageGust/releases/tag/analysis-appendices-checkpoint-20260910)已发布；API回读确认标签提交和milestone说明一致。
+- [发布回执](docs/milestones/2026-09-10_checkpoint-publication.json)记录Release ID、标签对象、提交与核验时间；本成功日志/回执作为后续文档提交同步，关键标签保持不动。
+- 原暂存清单的内容SHA256准确保留；refresh阶段的辅助scope列可能将已暂存新增写成modification，增改身份以本次Git提交路径表为准，发布脚本已修正该分类。该问题不影响实际提交范围和任何科学产物。

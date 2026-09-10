@@ -994,3 +994,11 @@ docs/、results/、test/
 
 ## 2026-09-10T22:55:20.443323+01:00 — 发布字节属性刷新
 - 首次refresh仍命中三份文件的Git stat缓存，出现相同3项换行差异。按已新增-text规则对这3个路径执行git add --renormalize，强制重新形成blob；工作区文件字节未改。其余1516项一致、无历史删除暂存。后续完整refresh检查改用批量读取，约4秒完成，无科学重算。
+
+
+## 2026-09-10T22:58:34.586450+01:00 — 2026-09-10关键milestone GitHub发布成功
+- 全量字节核验1519项通过、0不一致/0暂存删除，另将核验回执随提交保存；实现提交3bcb8b805a6b2d43f521d425cb8feaa613f5da6b，1520文件变更。
+- 原子推送main及附注标签analysis-appendices-checkpoint-20260910成功；标签对象9718adeee66d549550048710ca2e81c10a9b0003，旧标签与历史运行不改。
+- 正式Release ID 386650349：https://github.com/Baiyu-Eplur/pyOutageGust/releases/tag/analysis-appendices-checkpoint-20260910。API回读验证非draft/prerelease、正文与milestone说明一致、远程main/标签指向该实现提交。
+- 发布回执与dailylog成功段写入本地；新增checkpoint-change-types.csv直接记录该提交1520项Git增改类型。发现原范围清单refresh辅助scope列将已暂存新增归作modification，内容路径/字节/哈希不受影响，原清单保留作为首次检查记录；新增Git类型表为分类权威，修正checkpoint_files.py以计入已暂存A项。脚本AST和Git路径分类计数检查通过，科学文件不变。
+- 接下来仅提交并推送本发布回执、分类说明及日志；不移动关键标签，不运行额外分析。工作区469项原历史删除和1个本地快捷方式按原状保留。
